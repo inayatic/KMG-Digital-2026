@@ -483,7 +483,7 @@
    "type": "order",
    "node": "lat.s03.08-focused-additivity-factors",
    "claim": "lat.s03.08-focused-additivity-factors#lat.s03.08-focused-additivity-factors.c4",
-   "q": "Расставьте среды в том порядке, как их перечисляет автор для БК.",
+   "q": "Расставьте среды для БК от оси скважины наружу (так их перечисляет автор).",
    "items": [
     "скважина",
     "зона проникновения",
@@ -491,7 +491,9 @@
    ],
    "src": "claim",
    "expl": "Автор перечисляет скважину, зону проникновения и пласт.",
-   "basis": []
+   "basis": [
+    "lat.s03.08-focused-additivity-factors.c4"
+   ]
   },
   "basis_claims": [
    {
