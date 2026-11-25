@@ -1,0 +1,146 @@
+[
+ {
+  "node": "bar.ch1d.01-gravity-mass-movements",
+  "format": "карточки",
+  "why": "Типы М/В: сопоставление 4 процессов по уклону и сохранности структуры; критерий — причина и следствие.",
+  "difficulty": {
+   "primary": "М",
+   "secondary": "В"
+  }
+ },
+ {
+  "node": "bar.ch1d.02-debris-grain-fluidized-flows",
+  "format": "карточки",
+  "why": "Сравнение потоков по порогам уклона; контринтуитивно разные пороги.",
+  "difficulty": {
+   "primary": "М",
+   "secondary": "В"
+  }
+ },
+ {
+  "node": "bar.ch1d.03-turbidity-currents",
+  "format": "шортс",
+  "why": "Невидимое становится видимым: автосуспензия переносит осадок на десятки — сотни км; скачок масштаба.",
+  "difficulty": {
+   "primary": "М",
+   "secondary": "Ф"
+  }
+ },
+ {
+  "node": "bar.ch1d.04-bottom-currents",
+  "format": "текст",
+  "why": "Описательный узел без динамики; три вида течений.",
+  "difficulty": {
+   "primary": "М",
+   "secondary": "В"
+  }
+ },
+ {
+  "node": "bar.ch1d.05-pelagic-hemipelagic-deposits",
+  "format": "карточки",
+  "why": "Состав пелагит/гемипелагит; различие по добавке терригена.",
+  "difficulty": {
+   "primary": "М",
+   "secondary": "В"
+  }
+ },
+ {
+  "node": "bar.ch1d.06-slump-facies",
+  "format": "текст",
+  "why": "Короткий узел о выборе трёх фаций и свойствах оползней.",
+  "difficulty": {
+   "primary": "М",
+   "secondary": "Н"
+  }
+ },
+ {
+  "node": "bar.ch1d.07-slump-recognition",
+  "format": "интерактив",
+  "why": "Тип Пр: чек-лист из пяти признаков; пользователь применяет их к описанию керна.",
+  "difficulty": {
+   "primary": "Пр",
+   "secondary": "И"
+  }
+ },
+ {
+  "node": "bar.ch1d.08-debrites",
+  "format": "карточки",
+  "why": "Диагностика текстур и масштабов дебритов; контринтуитивно: пологий склон 1–2° и сотни км.",
+  "difficulty": {
+   "primary": "М",
+   "secondary": "Н"
+  }
+ },
+ {
+  "node": "bar.ch1d.09-coarse-turbidites",
+  "format": "интерактив",
+  "why": "Последовательность текстур как шаблон; сопоставление керна.",
+  "difficulty": {
+   "primary": "М",
+   "secondary": "Н"
+  }
+ },
+ {
+  "node": "bar.ch1d.10-normal-turbidites-bouma",
+  "format": "длинное видео",
+  "why": "Изменение во времени: единое событие откладывает всё более мелкий материал; Боума.",
+  "difficulty": {
+   "primary": "М",
+   "secondary": "Н"
+  }
+ },
+ {
+  "node": "bar.ch1d.11-fine-turbidites",
+  "format": "интерактив",
+  "why": "T0–T8 и сокращённые разрезы (Рис. 1.76–1.77), сопоставление.",
+  "difficulty": {
+   "primary": "М",
+   "secondary": "Н"
+  }
+ },
+ {
+  "node": "bar.ch1d.12-turbidite-interpretation-ichnofacies",
+  "format": "длинное видео",
+  "why": "Причина и следствие: затухание потока → вертикальная смена; контринтуитивно, что полный разрез редок.",
+  "difficulty": {
+   "primary": "В",
+   "secondary": "Пр"
+  }
+ },
+ {
+  "node": "bar.ch1d.13-channel-contourite-facies",
+  "format": "карточки",
+  "why": "Контурит vs турбидит: сходство, риск ошибки.",
+  "difficulty": {
+   "primary": "М",
+   "secondary": "В"
+  }
+ },
+ {
+  "node": "bar.ch1d.14-hemipelagic-pelagic-facies",
+  "format": "карточки",
+  "why": "Пороги 75% и 10%; отличие гемипелагитов.",
+  "difficulty": {
+   "primary": "М",
+   "secondary": "В"
+  }
+ },
+ {
+  "node": "bar.ch1d.15-slope-aprons",
+  "format": "длинное видео",
+  "why": "Скачок масштаба: от 1км до 200км ширины и до 10–12км мощности.",
+  "difficulty": {
+   "primary": "М",
+   "secondary": "В"
+  }
+ },
+ {
+  "node": "bar.ch1d.16-ramp-aprons",
+  "format": "практикум на данных",
+  "why": "Диагностика цикличности и ступенчатого профиля по разрезам.",
+  "difficulty": {
+   "primary": "М",
+   "secondary": "Н"
+  }
+ }
+]
