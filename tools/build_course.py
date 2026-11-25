@@ -367,10 +367,11 @@ class Build:
 
 def main():
     ap = argparse.ArgumentParser(); ap.add_argument("chapter"); ap.add_argument("--prefix", required=True); ap.add_argument("--out", required=True)
+    ap.add_argument("--config", help="путь к обвязке раздела (по умолчанию tools/course_config/<chapter>.json)")
     a = ap.parse_args()
     B = ROOT / "build" / a.chapter
     nodes = [n for n in json.load(open(B / "nodes.json")) if n["id"].startswith(a.prefix)]
-    units = json.load(open(B / "units.json")); cfg = json.load(open(ROOT / "tools/course_config" / f"{a.chapter}.json"))
+    units = json.load(open(B / "units.json")); cfg = json.load(open(Path(a.config) if a.config else ROOT / "tools/course_config" / f"{a.chapter}.json"))
     if not nodes: sys.exit("нет узлов с префиксом " + a.prefix)
     b = Build(nodes, units, cfg, a.chapter); html_ = b.render()
     out = Path(a.out); out.mkdir(parents=True, exist_ok=True); (out / "index.html").write_text(html_, encoding="utf-8")
