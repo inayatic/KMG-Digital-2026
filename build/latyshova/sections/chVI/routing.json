@@ -1,0 +1,74 @@
+[
+ {
+  "id": "lat.chvi.01-goals-residual-gas",
+  "format": "текст",
+  "why": "Тип И: определения и границы метода без динамики.",
+  "difficulty": {
+   "primary": "И",
+   "secondary": "Н"
+  }
+ },
+ {
+  "id": "lat.chvi.02-total-gas-degassing",
+  "format": "карточки",
+  "why": "Тип Ф: определения параметров и одна формула, справочный характер.",
+  "difficulty": {
+   "primary": "Ф",
+   "secondary": "М"
+  }
+ },
+ {
+  "id": "lat.chvi.03-reduced-gas-dilution",
+  "format": "длинное видео",
+  "why": "Тип Ф/Пр: формулы и физика разбавления; причина и следствие, скачок масштаба (объём породы и раствора).",
+  "difficulty": {
+   "primary": "Ф",
+   "secondary": "Пр"
+  }
+ },
+ {
+  "id": "lat.chvi.04-interpretation-scheme-anomaly",
+  "format": "длинное видео",
+  "why": "Тип П/Ф: последовательность шагов; видимо размытие аномалии по глубине и её восстановление (невидимое становится видимым).",
+  "difficulty": {
+   "primary": "П",
+   "secondary": "Ф"
+  }
+ },
+ {
+  "id": "lat.chvi.05-component-analysis",
+  "format": "интерактив",
+  "why": "Тип И/В: чтение графика состава и сравнение с эталонами региона; интерактив с наложением на панель б.",
+  "difficulty": {
+   "primary": "И",
+   "secondary": "В"
+  }
+ },
+ {
+  "id": "lat.chvi.06-residual-content-nomogram",
+  "format": "текст",
+  "why": "Тип Ф/Н: приведение к пластовым условиям, подробности автор не разбирает; достаточно конспекта и справки по рис. 90.",
+  "difficulty": {
+   "primary": "Ф",
+   "secondary": "Н"
+  }
+ },
+ {
+  "id": "lat.chvi.07-distortions-of-gas-logs",
+  "format": "шортс",
+  "why": "Тип Н/Р: контринтуитивно - нефтеносный пласт без аномалии, водоносный с большой аномалией (рис. 91).",
+  "difficulty": {
+   "primary": "Н",
+   "secondary": "Р"
+  }
+ },
+ {
+  "id": "lat.chvi.08-practice-problems",
+  "format": "практикум на данных",
+  "why": "Тип Пр/И: расчёт Γпр по диаграммам рис. 88 и сравнение Fг по зонам.",
+  "difficulty": {
+   "primary": "Пр",
+   "secondary": "И"
+  }
+ }
+]
