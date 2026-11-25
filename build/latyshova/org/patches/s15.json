@@ -1,0 +1,572 @@
+[
+ {
+  "id": "lat.s15.01-scope-and-wave-types",
+  "difficulty": {
+   "primary": "М",
+   "secondary": "Ф"
+  },
+  "threshold": false,
+  "terms_introduced": [
+   "продольные (P) и поперечные (S) волны",
+   "акустический метод",
+   "СПАК"
+  ],
+  "terms_used": [
+   "упругие волны"
+  ],
+  "main": "Акустический метод измеряет скорость и энергию упругих волн; P-волны идут в любой среде, S-волны только в твёрдой, и vp = 1,73 vs.",
+  "breaks": "Условия применимости vp = 1,73 vs книга не оговаривает.",
+  "hypotheses": [],
+  "it_analogy": null,
+  "video_scores": {
+   "time": 0,
+   "invisible": 2,
+   "scale": 0,
+   "counterintuitive": 1,
+   "cause_effect": 1
+  },
+  "secondary_format": "шортс",
+  "route_why": "Главное — что колеблется и в какой среде идёт волна (механизм); короткая анимация смещений частиц, карточки для определений.",
+  "route_format": "шортс"
+ },
+ {
+  "id": "lat.s15.02-three-element-probe-waveform",
+  "difficulty": {
+   "primary": "И",
+   "secondary": "М"
+  },
+  "threshold": false,
+  "terms_introduced": [
+   "трёхэлементный зонд",
+   "волновая картина",
+   "первое вступление"
+  ],
+  "terms_used": [
+   "источник и приёмник ультразвука",
+   "осциллограф"
+  ],
+  "main": "Трёхэлементный зонд даёт две записи на двух приёмниках; по метке первого вступления P и S на каждой берут времена, а их разность — время прохода по базе.",
+  "breaks": "Обозначения зонда (И1И2П, П1П2И) в OCR различаются, проверять по скану рис. 60.",
+  "hypotheses": [],
+  "it_analogy": null,
+  "video_scores": {
+   "time": 1,
+   "invisible": 2,
+   "scale": 0,
+   "counterintuitive": 0,
+   "cause_effect": 2
+  },
+  "secondary_format": "интерактив",
+  "route_why": "Тип И: сигнал → запись → разность времён; анимация рис. 60 делает невидимое видимым, интерактив на разметку вступлений.",
+  "route_format": "длинное видео"
+ },
+ {
+  "id": "lat.s15.03-spak-parameters",
+  "difficulty": {
+   "primary": "Ф",
+   "secondary": "Пр"
+  },
+  "threshold": false,
+  "terms_introduced": [
+   "T1, T2, A1, A2",
+   "ΔT_L",
+   "коэффициент ослабления α"
+  ],
+  "terms_used": [
+   "база зонда L",
+   "первое вступление"
+  ],
+  "main": "СПАК измеряет времена и амплитуды продольной волны на двух приёмниках, из которых получают время на базе ΔT_L = T2 − T1 и коэффициент ослабления α.",
+  "breaks": "Формула (52) содержит натуральный логарифм, а единица α названа дБ/м; автор их не согласует.",
+  "hypotheses": [],
+  "it_analogy": null,
+  "video_scores": {
+   "time": 0,
+   "invisible": 1,
+   "scale": 0,
+   "counterintuitive": 0,
+   "cause_effect": 1
+  },
+  "secondary_format": "интерактив",
+  "route_why": "Тип Ф: смысл двух определений (разность времён, логарифм отношения амплитуд); карточки с единицами и интерактив с ползунками.",
+  "route_format": "карточки"
+ },
+ {
+  "id": "lat.s15.04-interval-time",
+  "difficulty": {
+   "primary": "Ф",
+   "secondary": "И"
+  },
+  "threshold": false,
+  "terms_introduced": [
+   "интервальное время ΔT"
+  ],
+  "terms_used": [
+   "скорость волны",
+   "коэффициент пористости"
+  ],
+  "main": "Метод измеряет интервальное время ΔT = 10^6/v, величину обратную скорости; оно связано с пористостью через свойства скелета и заполнителя пор.",
+  "breaks": "Книга условий не называет.",
+  "hypotheses": [],
+  "it_analogy": null,
+  "video_scores": {
+   "time": 0,
+   "invisible": 1,
+   "scale": 0,
+   "counterintuitive": 2,
+   "cause_effect": 1
+  },
+  "secondary_format": "интерактив",
+  "route_why": "Контринтуитивно: меряют величину, обратную скорости; шортс про смысл ΔT, ползунок скорости ↔ ΔT.",
+  "route_format": "шортс"
+ },
+ {
+  "id": "lat.s15.05-average-time-equation",
+  "difficulty": {
+   "primary": "Ф",
+   "secondary": "М"
+  },
+  "threshold": false,
+  "terms_introduced": [
+   "уравнение среднего времени",
+   "ΔT_ск",
+   "ΔT_фл"
+  ],
+  "terms_used": [
+   "коэффициент пористости k_п"
+  ],
+  "main": "Уравнение среднего времени ΔT = k_п ΔT_фл + (1 − k_п) ΔT_ск представляет породу чередующимися вдоль луча слоями скелета и флюида и позволяет вычислить k_п.",
+  "breaks": "Модель упрощённая: вдоль пробега волны чередуются участки мономинерального скелета и флюида; индексы в формулах набраны разнобойно.",
+  "hypotheses": [],
+  "it_analogy": null,
+  "video_scores": {
+   "time": 0,
+   "invisible": 2,
+   "scale": 1,
+   "counterintuitive": 1,
+   "cause_effect": 2
+  },
+  "secondary_format": "шортс",
+  "route_why": "Тип Ф: смысл уравнения как сумма времён в слоях; шортс плюс ползунки k_п в интерактиве.",
+  "route_format": "длинное видео"
+ },
+ {
+  "id": "lat.s15.06-skeleton-time-and-contact",
+  "difficulty": {
+   "primary": "Ф",
+   "secondary": "Н"
+  },
+  "threshold": false,
+  "terms_introduced": [
+   "акустический контакт зёрен",
+   "табл. 18"
+  ],
+  "terms_used": [
+   "ΔT_ск",
+   "α"
+  ],
+  "main": "ΔT_ск зависит от минерала, но в реальных породах из-за плохого акустического контакта зёрен выше табличного для монолита; плохой контакт также поднимает α.",
+  "breaks": "Табл. 18 даёт значения для монолитного массива при атмосферных условиях; реальный диапазон: песчаники 170-180, известняки 150-160 мкс/м.",
+  "hypotheses": [],
+  "it_analogy": null,
+  "video_scores": {
+   "time": 0,
+   "invisible": 1,
+   "scale": 0,
+   "counterintuitive": 1,
+   "cause_effect": 2
+  },
+  "secondary_format": "интерактив",
+  "route_why": "Главное — почему реальное ΔT_ск не равно табличному (причина и следствие); карточки с значениями и интерактив контакта зёрен.",
+  "route_format": "карточки"
+ },
+ {
+  "id": "lat.s15.07-pore-fluid-time",
+  "difficulty": {
+   "primary": "Пр",
+   "secondary": "Ф"
+  },
+  "threshold": false,
+  "terms_introduced": [
+   "ΔT_фл",
+   "номограмма рис. 61"
+  ],
+  "terms_used": [
+   "минерализация",
+   "термобарические условия"
+  ],
+  "main": "ΔT_фл воды берут по номограмме рис. 61 по минерализации, давлению и температуре, а при нефти и газе оно зависит от их доли в порах.",
+  "breaks": "Для (57) нужно ΔT_н(г) в термобарических условиях пласта; газ сильно отличается от воды.",
+  "hypotheses": [],
+  "it_analogy": null,
+  "video_scores": {
+   "time": 0,
+   "invisible": 1,
+   "scale": 0,
+   "counterintuitive": 1,
+   "cause_effect": 1
+  },
+  "secondary_format": "карточки",
+  "route_why": "Тип Пр: работа по номограмме (исходные данные, перемещение, ответ); интерактив с номограммой.",
+  "route_format": "интерактив"
+ },
+ {
+  "id": "lat.s15.08-clay-reservoirs",
+  "difficulty": {
+   "primary": "Ф",
+   "secondary": "Пр"
+  },
+  "threshold": false,
+  "terms_introduced": [
+   "рассеянная глинистость",
+   "слоистая глинистость",
+   "табл. 19"
+  ],
+  "terms_used": [
+   "эффективная пористость",
+   "глинистый цемент"
+  ],
+  "main": "В глинистых коллекторах уравнение среднего времени усложняется: для рассеянной глинистости берут (58), для слоистой — (59), а ΔT_гл берут по табл. 19 только для слоистой.",
+  "breaks": "Для рассеянной глины нельзя брать ΔT_гл вмещающих глин; в табл. 19 среднее при 3000 м напечатано как 90, вероятно ошибка.",
+  "hypotheses": [],
+  "it_analogy": null,
+  "video_scores": {
+   "time": 0,
+   "invisible": 1,
+   "scale": 0,
+   "counterintuitive": 1,
+   "cause_effect": 1
+  },
+  "secondary_format": "карточки",
+  "route_why": "Тип Ф: две модели глинистости и смысл параметров; текст и карточки, видео не требуется.",
+  "route_format": "текст"
+ },
+ {
+  "id": "lat.s15.09-fractured-cavernous",
+  "difficulty": {
+   "primary": "Н",
+   "secondary": "Ф"
+  },
+  "threshold": false,
+  "terms_introduced": [
+   "трещинный коллектор по ΔT",
+   "кавернозно-карстовая порода"
+  ],
+  "terms_used": [
+   "ΔT блоков",
+   "матрица"
+  ],
+  "main": "В трещинном коллекторе ΔT зависит от направления пробега волны относительно трещин, в кавернозном лежит между пределами общей и межзерновой пористости.",
+  "breaks": "Для общей пористости по (55) нужны хаотичные трещины и небольшие каверны; формула общей пористости искажена OCR.",
+  "hypotheses": [],
+  "it_analogy": null,
+  "video_scores": {
+   "time": 0,
+   "invisible": 1,
+   "scale": 1,
+   "counterintuitive": 2,
+   "cause_effect": 2
+  },
+  "secondary_format": "интерактив",
+  "route_why": "Контринтуитивно: трещины меняют ΔT лишь при волне поперёк них; анимация направлений пробега, диапазон вместо числа (Н).",
+  "route_format": "длинное видео"
+ },
+ {
+  "id": "lat.s15.10-reading-curves-bed-boundaries",
+  "difficulty": {
+   "primary": "Р",
+   "secondary": "Пр"
+  },
+  "threshold": false,
+  "terms_introduced": [
+   "аномалия ΔT",
+   "границы пласта со смещением L/2"
+  ],
+  "terms_used": [
+   "кривая α",
+   "база ΔL"
+  ],
+  "main": "Пористые пласты с высоким ослаблением дают максимумы ΔT и α, а границы пласта берут по точкам, смещённым на L/2 от основания аномалии.",
+  "breaks": "Правило сформулировано для пластов, отмечаемых максимумом ΔT.",
+  "hypotheses": [],
+  "it_analogy": null,
+  "video_scores": {
+   "time": 0,
+   "invisible": 1,
+   "scale": 0,
+   "counterintuitive": 0,
+   "cause_effect": 1
+  },
+  "secondary_format": "практикум на данных",
+  "route_why": "Тип Р: узнать форму аномалии и поставить границу; интерактив с рис. 62 и разными h, затем практикум.",
+  "route_format": "интерактив"
+ },
+ {
+  "id": "lat.s15.11-log-quality-control",
+  "difficulty": {
+   "primary": "Пр",
+   "secondary": "Н"
+  },
+  "threshold": false,
+  "terms_introduced": [
+   "три условия качества",
+   "брак диаграммы",
+   "броски ΔT"
+  ],
+  "terms_used": [
+   "эталонные среды",
+   "табл. 20"
+  ],
+  "main": "Диаграмма ΔT годна только при трёх условиях (согласие T1 и T2, эталонные значения, повторяемость 1,5 % и 3 %); иначе это брак.",
+  "breaks": "Допуски 1,5 % и 3 %; броски связаны с проскальзыванием циклов.",
+  "hypotheses": [],
+  "it_analogy": null,
+  "video_scores": {
+   "time": 0,
+   "invisible": 0,
+   "scale": 0,
+   "counterintuitive": 1,
+   "cause_effect": 1
+  },
+  "secondary_format": "карточки",
+  "route_why": "Тип Пр: проверка по чек-листу на реальной кривой; практикум на данных.",
+  "route_format": "практикум на данных"
+ },
+ {
+  "id": "lat.s15.12-interpretation-limits-alpha-groups",
+  "difficulty": {
+   "primary": "Пр",
+   "secondary": "Н"
+  },
+  "threshold": false,
+  "terms_introduced": [
+   "три группы по α",
+   "условия отсчёта ΔT"
+  ],
+  "terms_used": [
+   "номинальный диаметр",
+   "кавернограмма"
+  ],
+  "main": "ΔT отсчитывают только в пластах с номинальным диаметром, толще базы L, а интервалы делят на три группы по α.",
+  "breaks": "Исключены пласты тоньше L и пласты с d_с > d_н; ограничение скорости подъёма v < 1000 м/ч (по тексту автора).",
+  "hypotheses": [],
+  "it_analogy": null,
+  "video_scores": {
+   "time": 0,
+   "invisible": 0,
+   "scale": 0,
+   "counterintuitive": 0,
+   "cause_effect": 1
+  },
+  "secondary_format": null,
+  "route_why": "Перечень правил отбора и групп; карточки подойдут лучше видео.",
+  "route_format": "карточки"
+ },
+ {
+  "id": "lat.s15.13-porosity-procedure",
+  "difficulty": {
+   "primary": "Пр",
+   "secondary": "Н"
+  },
+  "threshold": false,
+  "terms_introduced": [
+   "процедура определения k_п по ΔT",
+   "поправка на глинистость"
+  ],
+  "terms_used": [
+   "ΔT_ск",
+   "ΔT_фл",
+   "рассеянная и слоистая глинистость"
+  ],
+  "main": "Порядок расчёта k_п по ΔT различается для чистых, глинистых и трещинных коллекторов, а при k_п > 30 % и интенсивной трещиноватости метод неприменим.",
+  "breaks": "Границы применимости: 1,5-3,5 км, не при k_п > 30 %, не при интенсивной трещиноватости.",
+  "hypotheses": [],
+  "it_analogy": null,
+  "video_scores": {
+   "time": 0,
+   "invisible": 0,
+   "scale": 0,
+   "counterintuitive": 1,
+   "cause_effect": 1
+  },
+  "secondary_format": "интерактив",
+  "route_why": "Тип Пр: порядок действий и точки выбора; практикум на данных с блок-схемой.",
+  "route_format": "практикум на данных"
+ },
+ {
+  "id": "lat.s15.14-hydrocarbon-correction",
+  "difficulty": {
+   "primary": "Н",
+   "secondary": "Ф"
+  },
+  "threshold": false,
+  "terms_introduced": [
+   "поправка f на нефтегазонасыщение"
+  ],
+  "terms_used": [
+   "частичное насыщение",
+   "k_п"
+  ],
+  "main": "В продуктивных пластах k_п умножают на f (0,9 для нефти, 0,7-0,8 для газа), но точнее подставить ΔT_фл по (57).",
+  "breaks": "Значения f даны без оговорок о диапазонах пористости.",
+  "hypotheses": [],
+  "it_analogy": null,
+  "video_scores": {
+   "time": 0,
+   "invisible": 0,
+   "scale": 0,
+   "counterintuitive": 1,
+   "cause_effect": 1
+  },
+  "secondary_format": null,
+  "route_why": "Одна поправка и три значения; карточки.",
+  "route_format": "карточки"
+ },
+ {
+  "id": "lat.s15.15-worked-porosity-examples",
+  "difficulty": {
+   "primary": "Пр",
+   "secondary": "И"
+  },
+  "threshold": false,
+  "terms_introduced": [
+   "разобранные примеры 43 и 44"
+  ],
+  "terms_used": [
+   "ΔT_ж",
+   "ΔT_ск",
+   "рис. 63"
+  ],
+  "main": "Два примера автора показывают расчёт k_п по ΔT: 6,7 % для неколлектора и 22 % для коллектора.",
+  "breaks": "В примере 44 автор называет формулу (55), подстановка соответствует (56).",
+  "hypotheses": [],
+  "it_analogy": null,
+  "video_scores": {
+   "time": 0,
+   "invisible": 0,
+   "scale": 0,
+   "counterintuitive": 0,
+   "cause_effect": 1
+  },
+  "secondary_format": null,
+  "route_why": "Тип Пр: пошаговый расчёт на рисунке; практикум на данных по рис. 63.",
+  "route_format": "практикум на данных"
+ },
+ {
+  "id": "lat.s15.16-book-problems-ak",
+  "difficulty": {
+   "primary": "Пр",
+   "secondary": "Н"
+  },
+  "threshold": false,
+  "terms_introduced": [],
+  "terms_used": [
+   "ΔT",
+   "k_п"
+  ],
+  "main": "Задачи 82-84 и одна безномерная требуют построить диаграмму ΔT, определить пределы ΔT и рассчитать k_п по рис. 63.",
+  "breaks": "Ключа ответов нет.",
+  "hypotheses": [],
+  "it_analogy": null,
+  "video_scores": {
+   "time": 0,
+   "invisible": 0,
+   "scale": 0,
+   "counterintuitive": 1,
+   "cause_effect": 0
+  },
+  "secondary_format": null,
+  "route_why": "Тип Пр: самостоятельный расчёт; практикум на данных.",
+  "route_format": "практикум на данных"
+ },
+ {
+  "id": "lat.s15.17-akw-wideband",
+  "difficulty": {
+   "primary": "И",
+   "secondary": "М"
+  },
+  "threshold": false,
+  "terms_introduced": [
+   "АКш",
+   "фазокорреляционная диаграмма (ФКД)",
+   "волна Лэмба"
+  ],
+  "terms_used": [
+   "широкополосная аппаратура",
+   "α_p, α_s, α_L"
+  ],
+  "main": "АКш использует частоты 4-20 кГц, даёт ФКД и записи волновой картины и в нетрещиноватой породе обычно A_L > A_s > A_p.",
+  "breaks": "Работает в обсаженных скважинах только при качественном цементаже.",
+  "hypotheses": [],
+  "it_analogy": null,
+  "video_scores": {
+   "time": 0,
+   "invisible": 2,
+   "scale": 1,
+   "counterintuitive": 1,
+   "cause_effect": 2
+  },
+  "secondary_format": "интерактив",
+  "route_why": "Тип И: больше сигналов (P, S, Лэмба) → свойства; скачок масштаба и невидимые волны, длинное видео.",
+  "route_format": "длинное видео"
+ },
+ {
+  "id": "lat.s15.18-akw-tasks",
+  "difficulty": {
+   "primary": "Н",
+   "secondary": "Ф"
+  },
+  "threshold": false,
+  "terms_introduced": [
+   "коэффициент трещиноватости (62)",
+   "упругие свойства по АКш"
+  ],
+  "terms_used": [
+   "сжимаемость β",
+   "коэффициент Пуассона"
+  ],
+  "main": "АКш решает пять задач (литология, трещины, k_п.т, упругие свойства, цементаж), а k_п.т считают через сжимаемости по (62).",
+  "breaks": "Формула (62) для трещинных и смешанных коллекторов; β трещин берут не из данных АКш; номера задач 2 и 3 восстановлены.",
+  "hypotheses": [],
+  "it_analogy": null,
+  "video_scores": {
+   "time": 0,
+   "invisible": 1,
+   "scale": 0,
+   "counterintuitive": 1,
+   "cause_effect": 2
+  },
+  "secondary_format": "карточки",
+  "route_why": "Причина и следствие: трещины → ослабление → сжимаемость → k_п.т; длинное видео, перечень задач в карточках.",
+  "route_format": "длинное видео"
+ },
+ {
+  "id": "lat.s15.19-akw-fracture-example",
+  "difficulty": {
+   "primary": "Пр",
+   "secondary": "Н"
+  },
+  "threshold": false,
+  "terms_introduced": [
+   "пример 45"
+  ],
+  "terms_used": [
+   "k_п.т",
+   "сжимаемость"
+  ],
+  "main": "Пример 45 по АКш: из β = 0,46·10^-10, β матрицы 0,25·10^-10 и β трещин 0,26·10^-8 Па^-1 по (62) получено k_п.т = 0,8 %.",
+  "breaks": "β матрицы взято по другому интервалу, β трещин — по литературе, не измерено в скважине.",
+  "hypotheses": [],
+  "it_analogy": null,
+  "video_scores": {
+   "time": 0,
+   "invisible": 0,
+   "scale": 0,
+   "counterintuitive": 1,
+   "cause_effect": 1
+  },
+  "secondary_format": null,
+  "route_why": "Тип Пр: шаги расчёта с выбором значений; практикум на данных.",
+  "route_format": "практикум на данных"
+ }
+]

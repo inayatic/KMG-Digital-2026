@@ -1,0 +1,4652 @@
+{
+ "chapter": "latyshova_full",
+ "routes": [
+  {
+   "node_id": "lat.s00p.01-preface-how-to-use",
+   "format": "текст",
+   "video_scores": {
+    "time": 0,
+    "invisible": 0,
+    "scale": 0,
+    "counterintuitive": 0,
+    "cause_effect": 0
+   },
+   "template": null,
+   "why": "Узел — рамка и регламент пособия: порядок подготовки и что держать под рукой (тип Пр). Нет процесса, времени или скачка масштаба, поэтому короткий текст.",
+   "scored": true
+  },
+  {
+   "node_id": "lat.s01.01-water-basics",
+   "format": "шортс",
+   "video_scores": {
+    "time": 0,
+    "invisible": 2,
+    "scale": 1,
+    "counterintuitive": 2,
+    "cause_effect": 2
+   },
+   "template": null,
+   "why": "Тип М: одна идея «проводит вода, а не скелет», контринтуитивная; шортс с током в поре. Карточки закрепляют термины (УЭС, ρв, типы солей).",
+   "scored": true,
+   "secondary_format": "карточки"
+  },
+  {
+   "node_id": "lat.s01.02-ion-form-table1",
+   "format": "карточки",
+   "video_scores": {
+    "time": 0,
+    "invisible": 0,
+    "scale": 0,
+    "counterintuitive": 0,
+    "cause_effect": 0
+   },
+   "template": null,
+   "why": "Основная трудность — чтение таблицы и единиц (больше Пр/чтение справки, чем пространство); динамики нет, хватает карточек и конспекта.",
+   "scored": true,
+   "secondary_format": "текст"
+  },
+  {
+   "node_id": "lat.s01.03-fig1-nomogram",
+   "format": "интерактив",
+   "video_scores": {
+    "time": 0,
+    "invisible": 2,
+    "scale": 0,
+    "counterintuitive": 1,
+    "cause_effect": 1
+   },
+   "template": null,
+   "why": "Тип Пр: умение двигаться по палетке и выбирать кривую по температуре; интерактив с движущейся точкой делает видимой связь трёх величин, затем практикум.",
+   "scored": true,
+   "secondary_format": "практикум на данных"
+  },
+  {
+   "node_id": "lat.s01.04-concentration-formulas",
+   "format": "текст",
+   "video_scores": {
+    "time": 0,
+    "invisible": 0,
+    "scale": 0,
+    "counterintuitive": 1,
+    "cause_effect": 1
+   },
+   "template": null,
+   "why": "Тип Н: важны условие применимости и оценка точности (диапазон вместо числа); динамики нет, хватает текста и карточки «когда NaCl-оценка допустима».",
+   "scored": true,
+   "secondary_format": "карточки"
+  },
+  {
+   "node_id": "lat.s01.05-ex1-ex2-concentration",
+   "format": "практикум на данных",
+   "video_scores": {
+    "time": 0,
+    "invisible": 0,
+    "scale": 0,
+    "counterintuitive": 0,
+    "cause_effect": 1
+   },
+   "template": null,
+   "why": "Тип Пр: порядок вычислений по таблице; студент считает сам и сверяет с итогом автора.",
+   "scored": true,
+   "secondary_format": "карточки"
+  },
+  {
+   "node_id": "lat.s01.06-fig2-lambda",
+   "format": "длинное видео",
+   "video_scores": {
+    "time": 0,
+    "invisible": 2,
+    "scale": 0,
+    "counterintuitive": 2,
+    "cause_effect": 2
+   },
+   "template": null,
+   "why": "Тип Ф: смысл суммирования подвижностей и падения Λ с ростом концентрации; видео показывает причину-следствие, интерактив с ползунком концентрации закрепляет.",
+   "scored": true,
+   "secondary_format": "интерактив"
+  },
+  {
+   "node_id": "lat.s01.07-ex3-water-resistivity",
+   "format": "практикум на данных",
+   "video_scores": {
+    "time": 0,
+    "invisible": 1,
+    "scale": 0,
+    "counterintuitive": 1,
+    "cause_effect": 1
+   },
+   "template": null,
+   "why": "Тип Пр: повторить считывание по палетке на данных табл. 1; свой расчёт даёт навык выбора кривой.",
+   "scored": true,
+   "secondary_format": "карточки"
+  },
+  {
+   "node_id": "lat.s01.08-density-estimate",
+   "format": "практикум на данных",
+   "video_scores": {
+    "time": 0,
+    "invisible": 1,
+    "scale": 0,
+    "counterintuitive": 1,
+    "cause_effect": 1
+   },
+   "template": null,
+   "why": "Тип Пр: два шага считывания, ошибки ловятся только при самостоятельной работе на данных.",
+   "scored": true,
+   "secondary_format": "карточки"
+  },
+  {
+   "node_id": "lat.s01.09-ex6-two-methods",
+   "format": "длинное видео",
+   "video_scores": {
+    "time": 0,
+    "invisible": 1,
+    "scale": 0,
+    "counterintuitive": 1,
+    "cause_effect": 1
+   },
+   "template": null,
+   "why": "Тип Н: разница между приближённым и точным способом — оценка цены упрощения; практикум, где студент считает оба способа.",
+   "scored": true,
+   "secondary_format": "практикум на данных"
+  },
+  {
+   "node_id": "lat.s01.10-mud-resistivity",
+   "format": "длинное видео",
+   "video_scores": {
+    "time": 1,
+    "invisible": 2,
+    "scale": 1,
+    "counterintuitive": 1,
+    "cause_effect": 2
+   },
+   "template": null,
+   "why": "Тип М: невидимый процесс (фильтрат входит в пласт, ρф ≠ ρр) виден на разрезе скважины; карточки для двух графиков.",
+   "scored": true,
+   "secondary_format": "карточки"
+  },
+  {
+   "node_id": "lat.s01.11-ex7-filtrate",
+   "format": "текст",
+   "video_scores": {
+    "time": 0,
+    "invisible": 0,
+    "scale": 0,
+    "counterintuitive": 0,
+    "cause_effect": 0
+   },
+   "template": null,
+   "why": "Тип Пр: одно чтение графика, хватает конспекта.",
+   "scored": true
+  },
+  {
+   "node_id": "lat.s01.12-problems-1-7",
+   "format": "практикум на данных",
+   "video_scores": {
+    "time": 0,
+    "invisible": 0,
+    "scale": 0,
+    "counterintuitive": 0,
+    "cause_effect": 0
+   },
+   "template": null,
+   "why": "Тип Пр: самостоятельный расчёт на данных табл. 1; проверка только вычислением.",
+   "scored": true
+  },
+  {
+   "node_id": "lat.s01.13-rock-matrix",
+   "format": "шортс",
+   "video_scores": {
+    "time": 0,
+    "invisible": 2,
+    "scale": 2,
+    "counterintuitive": 2,
+    "cause_effect": 2
+   },
+   "template": null,
+   "why": "Тип М: контринтуитивная идея, поддержка узла 1; шортс со скачком от шкалы минерала до поры.",
+   "scored": true,
+   "secondary_format": "карточки"
+  },
+  {
+   "node_id": "lat.s01.14-porosity-factor",
+   "format": "длинное видео",
+   "video_scores": {
+    "time": 0,
+    "invisible": 1,
+    "scale": 0,
+    "counterintuitive": 2,
+    "cause_effect": 2
+   },
+   "template": null,
+   "why": "Тип Ф: смысл степенной зависимости и роль m; интерактив с ползунками aₘ и m, видео поддерживает физический смысл.",
+   "scored": true,
+   "secondary_format": "интерактив"
+  },
+  {
+   "node_id": "lat.s01.15-fig4-pn",
+   "format": "интерактив",
+   "video_scores": {
+    "time": 0,
+    "invisible": 1,
+    "scale": 0,
+    "counterintuitive": 0,
+    "cause_effect": 1
+   },
+   "template": null,
+   "why": "Тип Пр: выбор кривой и чтение логарифмического графика; интерактив с выбором типа породы.",
+   "scored": true,
+   "secondary_format": "практикум на данных"
+  },
+  {
+   "node_id": "lat.s01.16-surface-conductivity",
+   "format": "длинное видео",
+   "video_scores": {
+    "time": 0,
+    "invisible": 2,
+    "scale": 1,
+    "counterintuitive": 2,
+    "cause_effect": 2
+   },
+   "template": null,
+   "why": "Тип М: невидимое (ионы на поверхности) становится видимым; причина-следствие «меньше солей — больше вклад поверхности».",
+   "scored": true,
+   "secondary_format": "интерактив"
+  },
+  {
+   "node_id": "lat.s01.17-ex8-sandstone",
+   "format": "практикум на данных",
+   "video_scores": {
+    "time": 0,
+    "invisible": 0,
+    "scale": 0,
+    "counterintuitive": 0,
+    "cause_effect": 1
+   },
+   "template": null,
+   "why": "Тип Пр: порядок шагов и распространение диапазона; практикум на данных, интерактив для проверки цепочки.",
+   "scored": true,
+   "secondary_format": "интерактив"
+  },
+  {
+   "node_id": "lat.s01.18-ex9-weak-sandstone",
+   "format": "текст",
+   "video_scores": {
+    "time": 0,
+    "invisible": 0,
+    "scale": 0,
+    "counterintuitive": 0,
+    "cause_effect": 0
+   },
+   "template": null,
+   "why": "Тип Пр: короткая цепочка, аналогичная примеру 8.",
+   "scored": true
+  },
+  {
+   "node_id": "lat.s01.19-ex10-clayey-invaded",
+   "format": "практикум на данных",
+   "video_scores": {
+    "time": 0,
+    "invisible": 1,
+    "scale": 0,
+    "counterintuitive": 1,
+    "cause_effect": 2
+   },
+   "template": null,
+   "why": "Тип Ф: смысл поправки на поверхностную проводимость; практикум полезен для проверки итога автора.",
+   "scored": true,
+   "secondary_format": "текст"
+  },
+  {
+   "node_id": "lat.s01.20-mixed-porosity",
+   "format": "карточки",
+   "video_scores": {
+    "time": 0,
+    "invisible": 1,
+    "scale": 1,
+    "counterintuitive": 0,
+    "cause_effect": 0
+   },
+   "template": null,
+   "why": "Тип П: образ структуры породы из блоков и вторичных пор; карточки закрепляют термины, схема нужна для образа.",
+   "scored": true,
+   "secondary_format": "текст"
+  },
+  {
+   "node_id": "lat.s01.21-fractured-eq6",
+   "format": "длинное видео",
+   "video_scores": {
+    "time": 0,
+    "invisible": 2,
+    "scale": 1,
+    "counterintuitive": 2,
+    "cause_effect": 2
+   },
+   "template": null,
+   "why": "Тип Ф: смысл A и ориентации относительно тока; анимация трёх схем плюс интерактив с выбором A.",
+   "scored": true,
+   "secondary_format": "интерактив"
+  },
+  {
+   "node_id": "lat.s01.22-vuggy-eq7",
+   "format": "длинное видео",
+   "video_scores": {
+    "time": 0,
+    "invisible": 1,
+    "scale": 1,
+    "counterintuitive": 2,
+    "cause_effect": 2
+   },
+   "template": null,
+   "why": "Тип Ф: контринтуитивность «пористость выросла, сопротивление почти не изменилось»; видео с кавернами в матрице.",
+   "scored": true,
+   "secondary_format": "интерактив"
+  },
+  {
+   "node_id": "lat.s01.23-fig6-curves",
+   "format": "интерактив",
+   "video_scores": {
+    "time": 0,
+    "invisible": 1,
+    "scale": 0,
+    "counterintuitive": 1,
+    "cause_effect": 1
+   },
+   "template": null,
+   "why": "Тип Пр: чтение семейств кривых с переключением панелей; интерактив с выбором шифра.",
+   "scored": true,
+   "secondary_format": "практикум на данных"
+  },
+  {
+   "node_id": "lat.s01.24-fract-vug-eq8",
+   "format": "текст",
+   "video_scores": {
+    "time": 0,
+    "invisible": 1,
+    "scale": 0,
+    "counterintuitive": 2,
+    "cause_effect": 2
+   },
+   "template": null,
+   "why": "Тип Ф: три режима по отношению; конспект с таблицей режимов, интерактивно можно добавить ползунок kп.к/kп.т.",
+   "scored": true,
+   "secondary_format": "карточки"
+  },
+  {
+   "node_id": "lat.s01.25-invaded-fractured-eq9",
+   "format": "длинное видео",
+   "video_scores": {
+    "time": 1,
+    "invisible": 1,
+    "scale": 0,
+    "counterintuitive": 2,
+    "cause_effect": 2
+   },
+   "template": null,
+   "why": "Тип Ф: проникновение фильтрата меняет вывод; видео показывает, как заполнение трещин убирает контраст, интерактив по ρф.",
+   "scored": true,
+   "secondary_format": "интерактив"
+  },
+  {
+   "node_id": "lat.s01.26-ex11-fractured",
+   "format": "практикум на данных",
+   "video_scores": {
+    "time": 0,
+    "invisible": 0,
+    "scale": 1,
+    "counterintuitive": 1,
+    "cause_effect": 2
+   },
+   "template": null,
+   "why": "Тип Пр: сравнительный расчёт «блок против блока с трещинами»; практикум на данных.",
+   "scored": true,
+   "secondary_format": "карточки"
+  },
+  {
+   "node_id": "lat.s01.27-ex12-vuggy",
+   "format": "текст",
+   "video_scores": {
+    "time": 0,
+    "invisible": 0,
+    "scale": 1,
+    "counterintuitive": 1,
+    "cause_effect": 1
+   },
+   "template": null,
+   "why": "Тип Пр: короткий расчёт, смысл — сопоставление с примером 11 (трещины против каверн).",
+   "scored": true,
+   "secondary_format": "карточки"
+  },
+  {
+   "node_id": "lat.s01.28-ex13-invaded-fractured",
+   "format": "шортс",
+   "video_scores": {
+    "time": 0,
+    "invisible": 2,
+    "scale": 0,
+    "counterintuitive": 2,
+    "cause_effect": 2
+   },
+   "template": null,
+   "why": "Тип Н: решение о том, виден ли коллектор, зависит от флюида в трещинах; шортс с заполнением трещин.",
+   "scored": true,
+   "secondary_format": "интерактив"
+  },
+  {
+   "node_id": "lat.s01.29-problems-8-9",
+   "format": "практикум на данных",
+   "video_scores": {
+    "time": 0,
+    "invisible": 0,
+    "scale": 0,
+    "counterintuitive": 0,
+    "cause_effect": 0
+   },
+   "template": null,
+   "why": "Тип Пр: табличный расчёт; студент заполняет графы на данных.",
+   "scored": true
+  },
+  {
+   "node_id": "lat.s01.30-problems-10-15",
+   "format": "практикум на данных",
+   "video_scores": {
+    "time": 0,
+    "invisible": 0,
+    "scale": 0,
+    "counterintuitive": 1,
+    "cause_effect": 1
+   },
+   "template": null,
+   "why": "Тип Пр: комплексный расчёт, задачи 14-15 требуют оценки условий (Н); практикум и обсуждение.",
+   "scored": true,
+   "secondary_format": "карточки"
+  },
+  {
+   "node_id": "lat.s01.31-saturation-param",
+   "format": "длинное видео",
+   "video_scores": {
+    "time": 0,
+    "invisible": 2,
+    "scale": 1,
+    "counterintuitive": 2,
+    "cause_effect": 2
+   },
+   "template": null,
+   "why": "Тип Ф: смысл Pн как множителя к ρвп; видео «вода вытесняется нефтью», интерактив с ползунком kв.",
+   "scored": true,
+   "secondary_format": "интерактив"
+  },
+  {
+   "node_id": "lat.s01.32-n-exponent",
+   "format": "карточки",
+   "video_scores": {
+    "time": 0,
+    "invisible": 1,
+    "scale": 0,
+    "counterintuitive": 1,
+    "cause_effect": 2
+   },
+   "template": null,
+   "why": "Тип М: механизм через смачиваемость; три режима n удобны карточками.",
+   "scored": true,
+   "secondary_format": "текст"
+  },
+  {
+   "node_id": "lat.s01.33-saturation-zones",
+   "format": "длинное видео",
+   "video_scores": {
+    "time": 1,
+    "invisible": 2,
+    "scale": 1,
+    "counterintuitive": 1,
+    "cause_effect": 2
+   },
+   "template": null,
+   "why": "Тип М: изменение kв превращает нефть в смесь и воду; видео и интерактив с движущейся точкой.",
+   "scored": true,
+   "secondary_format": "интерактив"
+  },
+  {
+   "node_id": "lat.s01.34-fig7-curves",
+   "format": "интерактив",
+   "video_scores": {
+    "time": 0,
+    "invisible": 1,
+    "scale": 0,
+    "counterintuitive": 0,
+    "cause_effect": 1
+   },
+   "template": null,
+   "why": "Тип Пр: чтение семейства кривых с выбором типа и зоны; интерактив.",
+   "scored": true,
+   "secondary_format": "практикум на данных"
+  },
+  {
+   "node_id": "lat.s01.35-ex14-oil-saturated",
+   "format": "практикум на данных",
+   "video_scores": {
+    "time": 0,
+    "invisible": 0,
+    "scale": 1,
+    "counterintuitive": 1,
+    "cause_effect": 2
+   },
+   "template": null,
+   "why": "Тип Пр: расчёт с диапазоном kн; практикум на данных, студент строит диапазон ρнп.",
+   "scored": true,
+   "secondary_format": "интерактив"
+  },
+  {
+   "node_id": "lat.s01.36-ex15-flushed-zone",
+   "format": "текст",
+   "video_scores": {
+    "time": 0,
+    "invisible": 0,
+    "scale": 0,
+    "counterintuitive": 1,
+    "cause_effect": 1
+   },
+   "template": null,
+   "why": "Тип Пр: повтор цепочки с заменой ρв на ρф; хватает конспекта.",
+   "scored": true,
+   "secondary_format": "практикум на данных"
+  },
+  {
+   "node_id": "lat.s01.37-problems-16-17",
+   "format": "практикум на данных",
+   "video_scores": {
+    "time": 0,
+    "invisible": 0,
+    "scale": 0,
+    "counterintuitive": 0,
+    "cause_effect": 1
+   },
+   "template": null,
+   "why": "Тип Пр: табличные расчёты с пустыми графами; практикум на данных.",
+   "scored": true
+  },
+  {
+   "node_id": "lat.s02.01-contact-changes",
+   "format": "шортс",
+   "video_scores": {
+    "time": 0,
+    "invisible": 1,
+    "scale": 0,
+    "counterintuitive": 1,
+    "cause_effect": 2
+   },
+   "template": null,
+   "why": "Тип М: что происходит с каждой породой и почему. Причина-следствие и скрытое в стенке скважины делают его годным для шортса; карточки закрепляют соответствие порода-реакция.",
+   "scored": true,
+   "secondary_format": "карточки"
+  },
+  {
+   "node_id": "lat.s02.02-invasion-zones",
+   "format": "длинное видео",
+   "video_scores": {
+    "time": 1,
+    "invisible": 2,
+    "scale": 1,
+    "counterintuitive": 1,
+    "cause_effect": 2
+   },
+   "template": null,
+   "why": "Тип М (процесс фильтрации) с пространственным вторым типом: зоны идут по радиусу. Невидимое становится видимым, а причина и следствие ясны, поэтому длинное видео с анимацией разреза; интерактив позволяет менять D.",
+   "scored": true,
+   "secondary_format": "интерактив"
+  },
+  {
+   "node_id": "lat.s02.03-resistivity-jumps",
+   "format": "текст",
+   "video_scores": {
+    "time": 0,
+    "invisible": 1,
+    "scale": 0,
+    "counterintuitive": 1,
+    "cause_effect": 1
+   },
+   "template": null,
+   "why": "Тип Ф: нужно понять смысл соотношения. Видеоёмкость низкая, подходит текст с разбором выражения; карточки — для условий применимости.",
+   "scored": true,
+   "secondary_format": "карточки"
+  },
+  {
+   "node_id": "lat.s02.04-penetration-types",
+   "format": "интерактив",
+   "video_scores": {
+    "time": 0,
+    "invisible": 1,
+    "scale": 0,
+    "counterintuitive": 1,
+    "cause_effect": 1
+   },
+   "template": null,
+   "why": "Тип Ф: что меняется в отношении и к какому виду приводит. Ползунки параметров в интерактиве показывают переход между видами.",
+   "scored": true,
+   "secondary_format": "карточки"
+  },
+  {
+   "node_id": "lat.s02.05-complications",
+   "format": "карточки",
+   "video_scores": {
+    "time": 1,
+    "invisible": 1,
+    "scale": 0,
+    "counterintuitive": 1,
+    "cause_effect": 1
+   },
+   "template": null,
+   "why": "Тип Н: типичная модель против осложнений. Содержание — перечень отклонений, поэтому карточки «осложнение → признак»; видеоёмкость низкая.",
+   "scored": true
+  },
+  {
+   "node_id": "lat.s02.06-probe-depth",
+   "format": "длинное видео",
+   "video_scores": {
+    "time": 0,
+    "invisible": 1,
+    "scale": 1,
+    "counterintuitive": 1,
+    "cause_effect": 2
+   },
+   "template": null,
+   "why": "Тип Пр: выбор набора зондов под неизвестную глубину. Длинное видео объясняет логику, интерактив даёт перебор зондов и зон.",
+   "scored": true,
+   "secondary_format": "интерактив"
+  },
+  {
+   "node_id": "lat.s02.07-problems",
+   "format": "практикум на данных",
+   "video_scores": {
+    "time": 0,
+    "invisible": 0,
+    "scale": 0,
+    "counterintuitive": 0,
+    "cause_effect": 0
+   },
+   "template": null,
+   "why": "Тип Пр: набор упражнений, лучше всего практикум на данных. Видеоёмкость нулевая.",
+   "scored": true,
+   "secondary_format": "карточки"
+  },
+  {
+   "node_id": "lat.s03.01-radial-axial-heterogeneity",
+   "format": "длинное видео",
+   "video_scores": {
+    "time": 0,
+    "invisible": 2,
+    "scale": 1,
+    "counterintuitive": 0,
+    "cause_effect": 1
+   },
+   "template": null,
+   "why": "Тип П: объём вокруг скважины по радиусу и оси. Невидимое становится видимым на анимации разреза; интерактив позволяет выбрать зонд и увидеть его область.",
+   "scored": true,
+   "secondary_format": "интерактив"
+  },
+  {
+   "node_id": "lat.s03.02-apparent-resistivity-dependence",
+   "format": "текст",
+   "video_scores": {
+    "time": 0,
+    "invisible": 1,
+    "scale": 0,
+    "counterintuitive": 1,
+    "cause_effect": 2
+   },
+   "template": null,
+   "why": "Тип П с косвенным измерением: связь сигнала со средой. Видеоёмкость невысока, достаточно текста с картой связей; карточки для различия ρк и истинного.",
+   "scored": true,
+   "secondary_format": "карточки"
+  },
+  {
+   "node_id": "lat.s03.03-equipment-table",
+   "format": "карточки",
+   "video_scores": {
+    "time": 0,
+    "invisible": 0,
+    "scale": 0,
+    "counterintuitive": 0,
+    "cause_effect": 0
+   },
+   "template": null,
+   "why": "Тип Пр: справочная таблица для выбора аппаратуры под условия скважины. Нет процесса и динамики, поэтому карточки или текст-справочник.",
+   "scored": true
+  },
+  {
+   "node_id": "lat.s03.04-nonfocused-plane-model",
+   "format": "длинное видео",
+   "video_scores": {
+    "time": 0,
+    "invisible": 2,
+    "scale": 0,
+    "counterintuitive": 1,
+    "cause_effect": 2
+   },
+   "template": null,
+   "why": "Тип М: что делает ток у границ и как это формирует кривую. Видео с линиями тока делает невидимое видимым; интерактив — перемещение зонда через границу.",
+   "scored": true,
+   "secondary_format": "интерактив"
+  },
+  {
+   "node_id": "lat.s03.05-bkz-paletki",
+   "format": "практикум на данных",
+   "video_scores": {
+    "time": 0,
+    "invisible": 1,
+    "scale": 0,
+    "counterintuitive": 0,
+    "cause_effect": 1
+   },
+   "template": null,
+   "why": "Тип Пр: порядок работы с палетками и выбор нужной по условиям. Подходит практикум на данных с палетками и интерактив выбора; видеоёмкость низкая.",
+   "scored": true,
+   "secondary_format": "карточки"
+  },
+  {
+   "node_id": "lat.s03.06-problems-24-30",
+   "format": "практикум на данных",
+   "video_scores": {
+    "time": 0,
+    "invisible": 0,
+    "scale": 0,
+    "counterintuitive": 0,
+    "cause_effect": 0
+   },
+   "template": null,
+   "why": "Тип Пр: упражнения на работу по палеткам. Практикум на данных; видеоёмкость нулевая.",
+   "scored": true,
+   "secondary_format": "карточки"
+  },
+  {
+   "node_id": "lat.s03.07-focused-probe-geometry",
+   "format": "длинное видео",
+   "video_scores": {
+    "time": 0,
+    "invisible": 2,
+    "scale": 1,
+    "counterintuitive": 1,
+    "cause_effect": 2
+   },
+   "template": null,
+   "why": "Тип М: картина токов двух зондов. Невидимое становится видимым на анимации колец; интерактив — переключение БК и индукции.",
+   "scored": true,
+   "secondary_format": "интерактив"
+  },
+  {
+   "node_id": "lat.s03.08-focused-additivity-factors",
+   "format": "длинное видео",
+   "video_scores": {
+    "time": 0,
+    "invisible": 2,
+    "scale": 0,
+    "counterintuitive": 2,
+    "cause_effect": 2
+   },
+   "template": null,
+   "why": "Тип М: почему токи не пересекают границы и что из этого следует. Контринтуитивность и причина-следствие дают длинное видео; интерактив с ползунками факторов.",
+   "scored": true,
+   "secondary_format": "интерактив"
+  },
+  {
+   "node_id": "lat.s03.09-geometric-factor-formulas",
+   "format": "шортс",
+   "video_scores": {
+    "time": 0,
+    "invisible": 1,
+    "scale": 0,
+    "counterintuitive": 0,
+    "cause_effect": 2
+   },
+   "template": null,
+   "why": "Тип Ф: смысл взвешенной суммы с суммой весов 1. Шортс про физический смысл; интерактив с ползунками факторов и сопротивлений.",
+   "scored": true,
+   "secondary_format": "интерактив"
+  },
+  {
+   "node_id": "lat.s03.10-axial-vs-radial-factor",
+   "format": "карточки",
+   "video_scores": {
+    "time": 0,
+    "invisible": 1,
+    "scale": 0,
+    "counterintuitive": 1,
+    "cause_effect": 1
+   },
+   "template": null,
+   "why": "Тип М: что делает каждый из двух факторов. Видеоёмкость невысока, годятся карточки различия факторов.",
+   "scored": true
+  },
+  {
+   "node_id": "lat.s03.11-fig9-radial-characteristics",
+   "format": "интерактив",
+   "video_scores": {
+    "time": 0,
+    "invisible": 2,
+    "scale": 1,
+    "counterintuitive": 1,
+    "cause_effect": 1
+   },
+   "template": null,
+   "why": "Тип И: чтение графика и вывод о глубинности. Интерактив с наложением кривых; видео нужно меньше.",
+   "scored": true,
+   "secondary_format": "карточки"
+  },
+  {
+   "node_id": "lat.s03.12-example-16",
+   "format": "практикум на данных",
+   "video_scores": {
+    "time": 0,
+    "invisible": 1,
+    "scale": 0,
+    "counterintuitive": 1,
+    "cause_effect": 2
+   },
+   "template": null,
+   "why": "Тип Пр: порядок разбора примера по шагам. Практикум на данных с пересчётом по факторам; видеоёмкость низкая.",
+   "scored": true,
+   "secondary_format": "интерактив"
+  },
+  {
+   "node_id": "lat.s03.13-problems-31-34",
+   "format": "практикум на данных",
+   "video_scores": {
+    "time": 0,
+    "invisible": 0,
+    "scale": 0,
+    "counterintuitive": 0,
+    "cause_effect": 0
+   },
+   "template": null,
+   "why": "Тип Пр: упражнения по расчёту с факторами. Практикум на данных; видеоёмкость нулевая.",
+   "scored": true,
+   "secondary_format": "карточки"
+  },
+  {
+   "node_id": "lat.s04.01-purpose-scope",
+   "format": "текст",
+   "video_scores": {
+    "time": 0,
+    "invisible": 0,
+    "scale": 0,
+    "counterintuitive": 0,
+    "cause_effect": 1
+   },
+   "template": null,
+   "why": "Тип Пр: рамка процедуры определения границ и толщин. Нет процесса или скачка масштаба, поэтому текст.",
+   "scored": true
+  },
+  {
+   "node_id": "lat.s04.02-potential-rules",
+   "format": "интерактив",
+   "video_scores": {
+    "time": 0,
+    "invisible": 1,
+    "scale": 0,
+    "counterintuitive": 1,
+    "cause_effect": 2
+   },
+   "template": null,
+   "why": "Тип Пр: выбор правила по соотношению ρвм и ρр. Интерактивная блок-схема выбора; длинное видео не нужно.",
+   "scored": true,
+   "secondary_format": "карточки"
+  },
+  {
+   "node_id": "lat.s04.03-example17-potential",
+   "format": "интерактив",
+   "video_scores": {
+    "time": 0,
+    "invisible": 1,
+    "scale": 0,
+    "counterintuitive": 0,
+    "cause_effect": 1
+   },
+   "template": null,
+   "why": "Тип Пр: разбор примера по шагам на рис. 10. Практикум на данных с отметкой границ; видеоёмкость низкая.",
+   "scored": true,
+   "secondary_format": "практикум на данных"
+  },
+  {
+   "node_id": "lat.s04.04-gradient-rules",
+   "format": "длинное видео",
+   "video_scores": {
+    "time": 0,
+    "invisible": 1,
+    "scale": 0,
+    "counterintuitive": 1,
+    "cause_effect": 2
+   },
+   "template": null,
+   "why": "Тип Пр с пространственным вторым: куда сдвигать точку границы. Длинное видео с движением зонда через пласт; интерактив со сменой зонда.",
+   "scored": true,
+   "secondary_format": "интерактив"
+  },
+  {
+   "node_id": "lat.s04.05-limits-screening",
+   "format": "карточки",
+   "video_scores": {
+    "time": 0,
+    "invisible": 1,
+    "scale": 0,
+    "counterintuitive": 1,
+    "cause_effect": 1
+   },
+   "template": null,
+   "why": "Тип Н: где правила перестают работать и чем заменить. Кейсы «когда нельзя верить»; карточки закрепляют признаки.",
+   "scored": true,
+   "secondary_format": "длинное видео"
+  },
+  {
+   "node_id": "lat.s04.06-example18-gradient",
+   "format": "интерактив",
+   "video_scores": {
+    "time": 0,
+    "invisible": 1,
+    "scale": 0,
+    "counterintuitive": 0,
+    "cause_effect": 1
+   },
+   "template": null,
+   "why": "Тип Пр: разбор примера по рис. 11. Практикум на данных с отметкой экстремумов; видеоёмкость низкая.",
+   "scored": true,
+   "secondary_format": "практикум на данных"
+  },
+  {
+   "node_id": "lat.s04.07-example19-gradual",
+   "format": "интерактив",
+   "video_scores": {
+    "time": 0,
+    "invisible": 1,
+    "scale": 0,
+    "counterintuitive": 1,
+    "cause_effect": 1
+   },
+   "template": null,
+   "why": "Тип Пр с неопределённостью выбора границы. Практикум на данных: поставить границу по рис. 12 и сравнить с автором.",
+   "scored": true,
+   "secondary_format": "практикум на данных"
+  },
+  {
+   "node_id": "lat.s04.08-example20-screening",
+   "format": "длинное видео",
+   "video_scores": {
+    "time": 0,
+    "invisible": 2,
+    "scale": 1,
+    "counterintuitive": 2,
+    "cause_effect": 2
+   },
+   "template": null,
+   "why": "Тип Р: узнать экранный эффект на кривых разных зондов. Длинное видео со сменой длины зонда; интерактив для выбора зонда.",
+   "scored": true,
+   "secondary_format": "интерактив"
+  },
+  {
+   "node_id": "lat.s04.09-microprobes",
+   "format": "шортс",
+   "video_scores": {
+    "time": 0,
+    "invisible": 2,
+    "scale": 1,
+    "counterintuitive": 1,
+    "cause_effect": 2
+   },
+   "template": null,
+   "why": "Тип Р: узнать признаки породы по паре кривых. Шортс «кривые → признаки → порода»; карточки повторения.",
+   "scored": true,
+   "secondary_format": "карточки"
+  },
+  {
+   "node_id": "lat.s04.10-shielded-probes",
+   "format": "длинное видео",
+   "video_scores": {
+    "time": 0,
+    "invisible": 2,
+    "scale": 0,
+    "counterintuitive": 1,
+    "cause_effect": 2
+   },
+   "template": null,
+   "why": "Тип П с механизмом: форма пучка определяет границы. Длинное видео с токовыми линиями; интерактив — секции электродов.",
+   "scored": true,
+   "secondary_format": "интерактив"
+  },
+  {
+   "node_id": "lat.s04.11-induction",
+   "format": "шортс",
+   "video_scores": {
+    "time": 0,
+    "invisible": 1,
+    "scale": 0,
+    "counterintuitive": 1,
+    "cause_effect": 1
+   },
+   "template": null,
+   "why": "Тип П: другой критерий границы (перегиб вместо экстремума). Шортс сравнения с БК; карточки условий применимости.",
+   "scored": true,
+   "secondary_format": "карточки"
+  },
+  {
+   "node_id": "lat.s04.12-example21-complex",
+   "format": "практикум на данных",
+   "video_scores": {
+    "time": 0,
+    "invisible": 1,
+    "scale": 0,
+    "counterintuitive": 1,
+    "cause_effect": 2
+   },
+   "template": null,
+   "why": "Тип Пр: сводка по комплексу кривых на рис. 14. Практикум на данных с «интерпретируй сам»; видеоёмкость низкая.",
+   "scored": true,
+   "secondary_format": "интерактив"
+  },
+  {
+   "node_id": "lat.s05.01-bez-setup",
+   "format": "карточки",
+   "video_scores": {
+    "time": 0,
+    "invisible": 1,
+    "scale": 1,
+    "counterintuitive": 0,
+    "cause_effect": 1
+   },
+   "template": null,
+   "why": "Главная трудность - понять, что размер зонда задаёт глубину; это список правил без динамики, поэтому карточки.",
+   "scored": true,
+   "secondary_format": "текст"
+  },
+  {
+   "node_id": "lat.s05.02-primary-processing",
+   "format": "текст",
+   "video_scores": {
+    "time": 0,
+    "invisible": 0,
+    "scale": 0,
+    "counterintuitive": 0,
+    "cause_effect": 1
+   },
+   "template": null,
+   "why": "Это перечень этапов и источников границ без динамики, поэтому текст; тип Пр (порядок действий).",
+   "scored": true,
+   "secondary_format": "карточки"
+  },
+  {
+   "node_id": "lat.s05.03-reading-rho-k",
+   "format": "интерактив",
+   "video_scores": {
+    "time": 0,
+    "invisible": 1,
+    "scale": 0,
+    "counterintuitive": 1,
+    "cause_effect": 1
+   },
+   "template": null,
+   "why": "Правило снятия значения выбирается по трём условиям (тип Пр, точка суждения), поэтому интерактив с переключением условий на рис. 15; практикум на табл. 7 как второй формат.",
+   "scored": true,
+   "secondary_format": "практикум на данных"
+  },
+  {
+   "node_id": "lat.s05.04-table7",
+   "format": "карточки",
+   "video_scores": {
+    "time": 0,
+    "invisible": 0,
+    "scale": 0,
+    "counterintuitive": 0,
+    "cause_effect": 0
+   },
+   "template": null,
+   "why": "Справочная таблица без процесса; карточки со ссылками из примеров. Расхождения лучше показать текстом для ментора.",
+   "scored": true,
+   "secondary_format": "текст"
+  },
+  {
+   "node_id": "lat.s05.05-curve-types-intro",
+   "format": "длинное видео",
+   "video_scores": {
+    "time": 0,
+    "invisible": 1,
+    "scale": 0,
+    "counterintuitive": 0,
+    "cause_effect": 1
+   },
+   "template": null,
+   "why": "Это процедура наложения кривых; наложение на палетку лучше показывать динамически, поэтому длинное видео с интерактивом как дополнение.",
+   "scored": true,
+   "secondary_format": "интерактив"
+  },
+  {
+   "node_id": "lat.s05.06-two-layer-curves",
+   "format": "карточки",
+   "video_scores": {
+    "time": 0,
+    "invisible": 0,
+    "scale": 0,
+    "counterintuitive": 1,
+    "cause_effect": 0
+   },
+   "template": null,
+   "why": "Нужно узнавать тип кривой по согласию с палеткой (распознавание), поэтому карточки с примерами кривых.",
+   "scored": true,
+   "secondary_format": "интерактив"
+  },
+  {
+   "node_id": "lat.s05.07-three-layer-raise",
+   "format": "карточки",
+   "video_scores": {
+    "time": 0,
+    "invisible": 0,
+    "scale": 0,
+    "counterintuitive": 1,
+    "cause_effect": 1
+   },
+   "template": null,
+   "why": "Главное - узнать признак пересечения; карточки с парой кривых, интерактив для сравнения с палеткой.",
+   "scored": true,
+   "secondary_format": "интерактив"
+  },
+  {
+   "node_id": "lat.s05.08-three-layer-lower",
+   "format": "карточки",
+   "video_scores": {
+    "time": 0,
+    "invisible": 0,
+    "scale": 0,
+    "counterintuitive": 1,
+    "cause_effect": 1
+   },
+   "template": null,
+   "why": "Распознавание признака по направлению пересечения, поэтому карточки; пара с узлом 07 удобна для контраста.",
+   "scored": true,
+   "secondary_format": "интерактив"
+  },
+  {
+   "node_id": "lat.s05.09-thin-bed-effects",
+   "format": "длинное видео",
+   "video_scores": {
+    "time": 0,
+    "invisible": 2,
+    "scale": 0,
+    "counterintuitive": 2,
+    "cause_effect": 2
+   },
+   "template": null,
+   "why": "Невидимые токи и причина спада делают узел видеоёмким; длинное видео, а интерактив с h как ползунком закрепляет различение причин.",
+   "scored": true,
+   "secondary_format": "интерактив"
+  },
+  {
+   "node_id": "lat.s05.10-two-layer-method",
+   "format": "интерактив",
+   "video_scores": {
+    "time": 1,
+    "invisible": 1,
+    "scale": 1,
+    "counterintuitive": 1,
+    "cause_effect": 1
+   },
+   "template": null,
+   "why": "Это ручная процедура сдвига бланка; интерактив даёт сдвиг мышью, практикум на данных - повтор на табл. 7.",
+   "scored": true,
+   "secondary_format": "практикум на данных"
+  },
+  {
+   "node_id": "lat.s05.11-example-22",
+   "format": "практикум на данных",
+   "video_scores": {
+    "time": 0,
+    "invisible": 0,
+    "scale": 0,
+    "counterintuitive": 0,
+    "cause_effect": 1
+   },
+   "template": null,
+   "why": "Пример шагов на данных - практикум; интерактив для сдвига бланка уже в узле 10.",
+   "scored": true,
+   "secondary_format": "интерактив"
+  },
+  {
+   "node_id": "lat.s05.12-three-layer-raise-method",
+   "format": "практикум на данных",
+   "video_scores": {
+    "time": 0,
+    "invisible": 1,
+    "scale": 0,
+    "counterintuitive": 2,
+    "cause_effect": 1
+   },
+   "template": null,
+   "why": "Подбор палетки - цепочка шагов с проверкой неоднозначности; практикум на данных, интерактив с порогами как дополнение.",
+   "scored": true,
+   "secondary_format": "интерактив"
+  },
+  {
+   "node_id": "lat.s05.13-u-equivalence",
+   "format": "интерактив",
+   "video_scores": {
+    "time": 0,
+    "invisible": 1,
+    "scale": 0,
+    "counterintuitive": 1,
+    "cause_effect": 1
+   },
+   "template": null,
+   "why": "Смысл формулы (17) - что делает U; интерактив с ползунками D и ρзп, практикум для расчёта.",
+   "scored": true,
+   "secondary_format": "практикум на данных"
+  },
+  {
+   "node_id": "lat.s05.14-example-23",
+   "format": "практикум на данных",
+   "video_scores": {
+    "time": 0,
+    "invisible": 0,
+    "scale": 0,
+    "counterintuitive": 0,
+    "cause_effect": 1
+   },
+   "template": null,
+   "why": "Шаги по данным - практикум; результат с проверкой порогов можно повторять карточками.",
+   "scored": true,
+   "secondary_format": "карточки"
+  },
+  {
+   "node_id": "lat.s05.15-example-24",
+   "format": "практикум на данных",
+   "video_scores": {
+    "time": 0,
+    "invisible": 0,
+    "scale": 0,
+    "counterintuitive": 0,
+    "cause_effect": 1
+   },
+   "template": null,
+   "why": "Интерполяция по крестам - шаги на данных, практикум; расхождения проверяет ментор.",
+   "scored": true,
+   "secondary_format": "карточки"
+  },
+  {
+   "node_id": "lat.s05.16-example-25",
+   "format": "практикум на данных",
+   "video_scores": {
+    "time": 0,
+    "invisible": 0,
+    "scale": 0,
+    "counterintuitive": 1,
+    "cause_effect": 1
+   },
+   "template": null,
+   "why": "Шаги по U-палетке - практикум; независимость ρзп удобно запомнить карточкой.",
+   "scored": true,
+   "secondary_format": "карточки"
+  },
+  {
+   "node_id": "lat.s05.17-three-layer-lower-method",
+   "format": "длинное видео",
+   "video_scores": {
+    "time": 1,
+    "invisible": 2,
+    "scale": 0,
+    "counterintuitive": 2,
+    "cause_effect": 2
+   },
+   "template": null,
+   "why": "Идея замены - трудность модели (Ф), смещение креста - процесс; длинное видео и практикум на ЭК-2.",
+   "scored": true,
+   "secondary_format": "практикум на данных"
+  },
+  {
+   "node_id": "lat.s05.18-example-26",
+   "format": "практикум на данных",
+   "video_scores": {
+    "time": 0,
+    "invisible": 0,
+    "scale": 0,
+    "counterintuitive": 0,
+    "cause_effect": 1
+   },
+   "template": null,
+   "why": "Расчёт по ЭК-2 - практикум на данных.",
+   "scored": true,
+   "secondary_format": "карточки"
+  },
+  {
+   "node_id": "lat.s05.19-thin-bed-method",
+   "format": "длинное видео",
+   "video_scores": {
+    "time": 0,
+    "invisible": 2,
+    "scale": 0,
+    "counterintuitive": 1,
+    "cause_effect": 2
+   },
+   "template": null,
+   "why": "Два совмещения и сравнение ветвей - процесс; длинное видео, затем практикум на примере 27.",
+   "scored": true,
+   "secondary_format": "практикум на данных"
+  },
+  {
+   "node_id": "lat.s05.20-example-27",
+   "format": "практикум на данных",
+   "video_scores": {
+    "time": 0,
+    "invisible": 0,
+    "scale": 0,
+    "counterintuitive": 1,
+    "cause_effect": 1
+   },
+   "template": null,
+   "why": "Два совмещения и сравнение - практикум на данных.",
+   "scored": true,
+   "secondary_format": "карточки"
+  },
+  {
+   "node_id": "lat.s05.21-mud-refine",
+   "format": "интерактив",
+   "video_scores": {
+    "time": 0,
+    "invisible": 1,
+    "scale": 0,
+    "counterintuitive": 0,
+    "cause_effect": 1
+   },
+   "template": null,
+   "why": "Тип Пр: ручной сдвиг бланка по ординате лучше показать интерактивом; практикум закрепит на данных.",
+   "scored": true,
+   "secondary_format": "практикум на данных"
+  },
+  {
+   "node_id": "lat.s05.22-single-probes",
+   "format": "карточки",
+   "video_scores": {
+    "time": 0,
+    "invisible": 0,
+    "scale": 0,
+    "counterintuitive": 0,
+    "cause_effect": 1
+   },
+   "template": null,
+   "why": "Это условия применимости как правила выбора зонда - карточки.",
+   "scored": true,
+   "secondary_format": "практикум на данных"
+  },
+  {
+   "node_id": "lat.s05.23-problems-40-43",
+   "format": "практикум на данных",
+   "video_scores": {
+    "time": 0,
+    "invisible": 0,
+    "scale": 0,
+    "counterintuitive": 0,
+    "cause_effect": 0
+   },
+   "template": null,
+   "why": "Это задачи на данных - практикум.",
+   "scored": true,
+   "secondary_format": "карточки"
+  },
+  {
+   "node_id": "lat.s06.01-complex-three-unknowns",
+   "format": "длинное видео",
+   "video_scores": {
+    "time": 0,
+    "invisible": 1,
+    "scale": 0,
+    "counterintuitive": 1,
+    "cause_effect": 2
+   },
+   "template": null,
+   "why": "Причинная цепочка «три неизвестных -> три уравнения» (Ф) лучше видна в длинном видео, а карточки закрепляют счёт.",
+   "scored": true,
+   "secondary_format": "карточки"
+  },
+  {
+   "node_id": "lat.s06.02-preprocessing-goal",
+   "format": "карточки",
+   "video_scores": {
+    "time": 0,
+    "invisible": 1,
+    "scale": 0,
+    "counterintuitive": 0,
+    "cause_effect": 1
+   },
+   "template": null,
+   "why": "Перечень шагов и целевой величины (Пр) без динамики, поэтому карточки.",
+   "scored": true,
+   "secondary_format": "карточки"
+  },
+  {
+   "node_id": "lat.s06.03-screened-reading-and-scale",
+   "format": "интерактив",
+   "video_scores": {
+    "time": 0,
+    "invisible": 1,
+    "scale": 0,
+    "counterintuitive": 0,
+    "cause_effect": 1
+   },
+   "template": null,
+   "why": "Тип Пр: пользователь двигает отсчёт по номограмме, невидимая поправка становится видимой - интерактив; практикум на данных как второй формат.",
+   "scored": true,
+   "secondary_format": "практикум на данных"
+  },
+  {
+   "node_id": "lat.s06.04-screened-corrections-kd-kh-j",
+   "format": "длинное видео",
+   "video_scores": {
+    "time": 0,
+    "invisible": 1,
+    "scale": 1,
+    "counterintuitive": 1,
+    "cause_effect": 2
+   },
+   "template": null,
+   "why": "Смысл формулы смеси с весом j (Ф); длинное видео объясняет рост зоны, интерактив с ползунком D показывает смену j.",
+   "scored": true,
+   "secondary_format": "интерактив"
+  },
+  {
+   "node_id": "lat.s06.05-induction-scale-limit",
+   "format": "шортс",
+   "video_scores": {
+    "time": 0,
+    "invisible": 2,
+    "scale": 1,
+    "counterintuitive": 2,
+    "cause_effect": 2
+   },
+   "template": null,
+   "why": "Один контринтуитивный факт про обратную шкалу (первый сантиметр шкалы покрывает 50-40 Ом·м до бесконечности) - шортс с гиперболой; текст как запасной формат.",
+   "scored": true,
+   "secondary_format": "текст"
+  },
+  {
+   "node_id": "lat.s06.06-induction-borehole-correction",
+   "format": "длинное видео",
+   "video_scores": {
+    "time": 0,
+    "invisible": 1,
+    "scale": 0,
+    "counterintuitive": 0,
+    "cause_effect": 2
+   },
+   "template": null,
+   "why": "Тип Пр: цепочка шагов с вычитанием вклада - длинное видео, практикум на числах примера.",
+   "scored": true,
+   "secondary_format": "практикум на данных"
+  },
+  {
+   "node_id": "lat.s06.07-induction-skin-effect-scale",
+   "format": "интерактив",
+   "video_scores": {
+    "time": 0,
+    "invisible": 2,
+    "scale": 0,
+    "counterintuitive": 1,
+    "cause_effect": 1
+   },
+   "template": null,
+   "why": "Тип Пр: построение шкалы по кривой делает невидимую нелинейность видимой, интерактив; практикум на примере 28.",
+   "scored": true,
+   "secondary_format": "практикум на данных"
+  },
+  {
+   "node_id": "lat.s06.08-thickness-correction-and-final-mix",
+   "format": "длинное видео",
+   "video_scores": {
+    "time": 1,
+    "invisible": 1,
+    "scale": 1,
+    "counterintuitive": 1,
+    "cause_effect": 2
+   },
+   "template": null,
+   "why": "Смысл формулы смеси и рост зоны во времени - длинное видео; интерактив с ползунком D.",
+   "scored": true,
+   "secondary_format": "интерактив"
+  },
+  {
+   "node_id": "lat.s06.09-second-scheme-e-series",
+   "format": "карточки",
+   "video_scores": {
+    "time": 0,
+    "invisible": 0,
+    "scale": 0,
+    "counterintuitive": 0,
+    "cause_effect": 1
+   },
+   "template": null,
+   "why": "Короткое уточнение порядка шагов без динамики, поэтому карточки.",
+   "scored": true,
+   "secondary_format": "текст"
+  },
+  {
+   "node_id": "lat.s06.10-worked-example-focused-table9",
+   "format": "практикум на данных",
+   "video_scores": {
+    "time": 0,
+    "invisible": 1,
+    "scale": 0,
+    "counterintuitive": 2,
+    "cause_effect": 2
+   },
+   "template": null,
+   "why": "Расчёт по табл. 9 и задачи 44-46 - практикум на данных; интерактив сравнения зондов разной глубины.",
+   "scored": true,
+   "secondary_format": "интерактив"
+  },
+  {
+   "node_id": "lat.s06.11-microprobes-rzp",
+   "format": "длинное видео",
+   "video_scores": {
+    "time": 0,
+    "invisible": 2,
+    "scale": 0,
+    "counterintuitive": 1,
+    "cause_effect": 2
+   },
+   "template": null,
+   "why": "Невидимый путь тока через корку делает узел видеоёмким - длинное видео; интерактив с толщиной корки.",
+   "scored": true,
+   "secondary_format": "интерактив"
+  },
+  {
+   "node_id": "lat.s06.12-single-probe-composite-palettes",
+   "format": "интерактив",
+   "video_scores": {
+    "time": 0,
+    "invisible": 1,
+    "scale": 0,
+    "counterintuitive": 1,
+    "cause_effect": 1
+   },
+   "template": null,
+   "why": "Ручной сдвиг кальки по палетке (Пр) лучше всего показать интерактивом; практикум закрепит на данных.",
+   "scored": true,
+   "secondary_format": "практикум на данных"
+  },
+  {
+   "node_id": "lat.s06.13-example-31-composite",
+   "format": "практикум на данных",
+   "video_scores": {
+    "time": 0,
+    "invisible": 0,
+    "scale": 0,
+    "counterintuitive": 0,
+    "cause_effect": 1
+   },
+   "template": null,
+   "why": "Пример с числами и шагами - практикум на данных; карточки для повтора.",
+   "scored": true,
+   "secondary_format": "карточки"
+  },
+  {
+   "node_id": "lat.s06.14-two-probe-palettes",
+   "format": "интерактив",
+   "video_scores": {
+    "time": 0,
+    "invisible": 1,
+    "scale": 0,
+    "counterintuitive": 0,
+    "cause_effect": 1
+   },
+   "template": null,
+   "why": "Тип Пр: постановка точки на палетку и чтение ρп и D - интерактив; практикум на данных как второй формат.",
+   "scored": true,
+   "secondary_format": "практикум на данных"
+  },
+  {
+   "node_id": "lat.s06.15-three-probe-palettes",
+   "format": "карточки",
+   "video_scores": {
+    "time": 0,
+    "invisible": 0,
+    "scale": 0,
+    "counterintuitive": 1,
+    "cause_effect": 1
+   },
+   "template": null,
+   "why": "Справочный материал о приборах и ограничении (Пр, Н) - карточки; практикум на данных для применения.",
+   "scored": true,
+   "secondary_format": "практикум на данных"
+  },
+  {
+   "node_id": "lat.s06.16-isoresistive-method",
+   "format": "длинное видео",
+   "video_scores": {
+    "time": 0,
+    "invisible": 2,
+    "scale": 0,
+    "counterintuitive": 1,
+    "cause_effect": 1
+   },
+   "template": null,
+   "why": "Тип Пр и И: наложение прямых на палетку - длинное видео, интерактив для построения пересечений.",
+   "scored": true,
+   "secondary_format": "интерактив"
+  },
+  {
+   "node_id": "lat.s06.17-example-32-isoresistive-task48",
+   "format": "практикум на данных",
+   "video_scores": {
+    "time": 0,
+    "invisible": 0,
+    "scale": 0,
+    "counterintuitive": 0,
+    "cause_effect": 1
+   },
+   "template": null,
+   "why": "Расчёт по четырём точкам и табл. 10 - практикум на данных; карточки для повторения шагов.",
+   "scored": true,
+   "secondary_format": "карточки"
+  },
+  {
+   "node_id": "lat.s07.01-dielectric-permittivity",
+   "format": "шортс",
+   "video_scores": {
+    "time": 0,
+    "invisible": 2,
+    "scale": 1,
+    "counterintuitive": 2,
+    "cause_effect": 2
+   },
+   "template": null,
+   "why": "Механизм «вода сильно поляризуется - порода растёт по ε» наглядно подаётся шортсом с сравнением чисел; карточки фиксируют значения ε.",
+   "scored": true,
+   "secondary_format": "карточки"
+  },
+  {
+   "node_id": "lat.s07.02-mixing-model",
+   "format": "интерактив",
+   "video_scores": {
+    "time": 0,
+    "invisible": 1,
+    "scale": 0,
+    "counterintuitive": 1,
+    "cause_effect": 2
+   },
+   "template": null,
+   "why": "Смысл формулы (что меняется при росте k_п и k_в) показывается ползунками в интерактиве; шортс про физический смысл - вторичный.",
+   "scored": true,
+   "secondary_format": "шортс"
+  },
+  {
+   "node_id": "lat.s07.03-fig37-collector-lines",
+   "format": "интерактив",
+   "video_scores": {
+    "time": 0,
+    "invisible": 1,
+    "scale": 0,
+    "counterintuitive": 1,
+    "cause_effect": 2
+   },
+   "template": null,
+   "why": "Тип И: считывание свойства по положению точки на графике; интерактив с движением точки по веера линий, затем практикум на задачах по чтению рисунка.",
+   "scored": true,
+   "secondary_format": "практикум на данных"
+  },
+  {
+   "node_id": "lat.s07.04-dm-tasks-tool",
+   "format": "карточки",
+   "video_scores": {
+    "time": 0,
+    "invisible": 1,
+    "scale": 0,
+    "counterintuitive": 0,
+    "cause_effect": 1
+   },
+   "template": null,
+   "why": "Информационный узел-перечень; карточки подходят для задач и оговорок, шортс со схемой прибора - вторичный (гипотеза).",
+   "scored": true,
+   "secondary_format": "шортс"
+  },
+  {
+   "node_id": "lat.s07.05-vdm-variants",
+   "format": "карточки",
+   "video_scores": {
+    "time": 0,
+    "invisible": 1,
+    "scale": 0,
+    "counterintuitive": 0,
+    "cause_effect": 1
+   },
+   "template": null,
+   "why": "Различия двух аппаратур - справочные; карточки сопоставляют аппаратуру и измеряемые величины.",
+   "scored": true
+  },
+  {
+   "node_id": "lat.s07.06-vdm-conditions",
+   "format": "длинное видео",
+   "video_scores": {
+    "time": 0,
+    "invisible": 2,
+    "scale": 1,
+    "counterintuitive": 1,
+    "cause_effect": 2
+   },
+   "template": null,
+   "why": "Нужно показать невидимую область исследования вокруг скважины и её соотношение с зоной проникновения - масштабный скачок; карточки сохраняют числовые пороги.",
+   "scored": true,
+   "secondary_format": "карточки"
+  },
+  {
+   "node_id": "lat.s07.07-adk-palette",
+   "format": "практикум на данных",
+   "video_scores": {
+    "time": 0,
+    "invisible": 1,
+    "scale": 0,
+    "counterintuitive": 1,
+    "cause_effect": 2
+   },
+   "template": null,
+   "why": "Это процедура по палетке: входные данные, точка выбора; практикум на данных с рисунком 38, интерактив с двумя входами (ρ_п, cosΔφ) - вторичный.",
+   "scored": true,
+   "secondary_format": "интерактив"
+  },
+  {
+   "node_id": "lat.s07.08-example33-terrigenous",
+   "format": "длинное видео",
+   "video_scores": {
+    "time": 0,
+    "invisible": 1,
+    "scale": 0,
+    "counterintuitive": 1,
+    "cause_effect": 2
+   },
+   "template": null,
+   "why": "Тип Р: узнать литологию по виду кривой на рис. 39; длинное видео ведёт по разрезу синхронно с кривыми, карточки с примерами кривых - вторичный (гипотеза).",
+   "scored": true,
+   "secondary_format": "карточки"
+  },
+  {
+   "node_id": "lat.s07.09-example34-owc",
+   "format": "длинное видео",
+   "video_scores": {
+    "time": 1,
+    "invisible": 2,
+    "scale": 1,
+    "counterintuitive": 2,
+    "cause_effect": 2
+   },
+   "template": null,
+   "why": "Причина и следствие (замена раствора - расхождение кривых) и невидимая зона проникновения хорошо показываются в видео; карточки - для условий примера.",
+   "scored": true,
+   "secondary_format": "карточки"
+  },
+  {
+   "node_id": "lat.s07.10-problems-49-50",
+   "format": "практикум на данных",
+   "video_scores": {
+    "time": 0,
+    "invisible": 0,
+    "scale": 0,
+    "counterintuitive": 1,
+    "cause_effect": 1
+   },
+   "template": null,
+   "why": "Расчётные задачи по формулам (19-20) решаются в практикуме на данных; карточки с условиями - вторичный формат.",
+   "scored": true,
+   "secondary_format": "карточки"
+  },
+  {
+   "node_id": "lat.s08.01-diffusion-adsorption-potential",
+   "format": "шортс",
+   "video_scores": {
+    "time": 0,
+    "invisible": 2,
+    "scale": 1,
+    "counterintuitive": 1,
+    "cause_effect": 2
+   },
+   "template": null,
+   "why": "Невидимый ионный механизм и граничные случаи лучше показать анимацией у границы породы; карточки закрепляют формулу и пределы k_да.",
+   "scored": true,
+   "secondary_format": "карточки"
+  },
+  {
+   "node_id": "lat.s08.02-fig41a-curves-q",
+   "format": "карточки",
+   "video_scores": {
+    "time": 0,
+    "invisible": 1,
+    "scale": 0,
+    "counterintuitive": 0,
+    "cause_effect": 1
+   },
+   "template": null,
+   "why": "Это считывание по номограмме; карточки ведут ключи (q и ρф/ρв), практикум на данных тренирует снятие значений.",
+   "scored": true,
+   "secondary_format": "практикум на данных"
+  },
+  {
+   "node_id": "lat.s08.03-static-amplitude-def",
+   "format": "длинное видео",
+   "video_scores": {
+    "time": 0,
+    "invisible": 2,
+    "scale": 0,
+    "counterintuitive": 2,
+    "cause_effect": 2
+   },
+   "template": null,
+   "why": "Невидимое (откуда берётся разность скачков) и контринтуитивность отсутствия нуля - материал для видео; интерактив с q1, q2 вторичный.",
+   "scored": true,
+   "secondary_format": "интерактив"
+  },
+  {
+   "node_id": "lat.s08.04-max-amplitude-clay-line",
+   "format": "интерактив",
+   "video_scores": {
+    "time": 0,
+    "invisible": 1,
+    "scale": 0,
+    "counterintuitive": 1,
+    "cause_effect": 2
+   },
+   "template": null,
+   "why": "Смысл формулы (как меняется амплитуда с ρф/ρв) показывается ползунками; карточки - для выбора линии глин.",
+   "scored": true,
+   "secondary_format": "карточки"
+  },
+  {
+   "node_id": "lat.s08.05-three-characteristics",
+   "format": "карточки",
+   "video_scores": {
+    "time": 0,
+    "invisible": 1,
+    "scale": 0,
+    "counterintuitive": 0,
+    "cause_effect": 1
+   },
+   "template": null,
+   "why": "Это система обозначений: карточки с соответствием «нулевая линия - характеристика», интерактив со сдвигом нулевой линии - вторичный.",
+   "scored": true,
+   "secondary_format": "интерактив"
+  },
+  {
+   "node_id": "lat.s08.06-clay-content-link",
+   "format": "интерактив",
+   "video_scores": {
+    "time": 0,
+    "invisible": 1,
+    "scale": 0,
+    "counterintuitive": 1,
+    "cause_effect": 2
+   },
+   "template": null,
+   "why": "Свойство (глинистость) оценивается по сигналу (амплитуде) через районную кривую; интерактив с кривыми рис. 41б, карточки с определениями - вторичные.",
+   "scored": true,
+   "secondary_format": "карточки"
+  },
+  {
+   "node_id": "lat.s08.07-amplitude-decrease-temperature",
+   "format": "карточки",
+   "video_scores": {
+    "time": 0,
+    "invisible": 0,
+    "scale": 0,
+    "counterintuitive": 1,
+    "cause_effect": 2
+   },
+   "template": null,
+   "why": "Перечень причин и одна формула поправки; карточки - причина-следствие, ползунок температуры вторичный.",
+   "scored": true,
+   "secondary_format": "интерактив"
+  },
+  {
+   "node_id": "lat.s08.08-variable-salinity-derivation",
+   "format": "практикум на данных",
+   "video_scores": {
+    "time": 0,
+    "invisible": 1,
+    "scale": 0,
+    "counterintuitive": 2,
+    "cause_effect": 2
+   },
+   "template": null,
+   "why": "Пошаговое суммирование скачков по рисунку 42в - практикум на данных; интерактив со стрелками диффузии - вторичный.",
+   "scored": true,
+   "secondary_format": "интерактив"
+  },
+  {
+   "node_id": "lat.s08.09-example-35",
+   "format": "практикум на данных",
+   "video_scores": {
+    "time": 0,
+    "invisible": 1,
+    "scale": 0,
+    "counterintuitive": 2,
+    "cause_effect": 2
+   },
+   "template": null,
+   "why": "Разобранный пример с числами автора - практикум на данных по шагам; длинное видео с рис. 43 вторичное.",
+   "scored": true,
+   "secondary_format": "длинное видео"
+  },
+  {
+   "node_id": "lat.s08.10-problems-51-56",
+   "format": "практикум на данных",
+   "video_scores": {
+    "time": 0,
+    "invisible": 0,
+    "scale": 0,
+    "counterintuitive": 0,
+    "cause_effect": 1
+   },
+   "template": null,
+   "why": "Набор заданий на построение по правилам § 8; карточки с условиями - вторичный формат.",
+   "scored": true,
+   "secondary_format": "карточки"
+  },
+  {
+   "node_id": "lat.s08.11-filtration-component",
+   "format": "длинное видео",
+   "video_scores": {
+    "time": 0,
+    "invisible": 2,
+    "scale": 1,
+    "counterintuitive": 1,
+    "cause_effect": 2
+   },
+   "template": null,
+   "why": "Невидимый процесс фильтрации через корку и пласт - видео-механизм; интерактив с Δp и ρв вторичный.",
+   "scored": true,
+   "secondary_format": "интерактив"
+  },
+  {
+   "node_id": "lat.s08.12-delta-ef-estimate",
+   "format": "практикум на данных",
+   "video_scores": {
+    "time": 1,
+    "invisible": 1,
+    "scale": 0,
+    "counterintuitive": 1,
+    "cause_effect": 2
+   },
+   "template": null,
+   "why": "Диапазон вместо числа при разных условиях; практикум с задачей 57 и интерактив с сценариями бурения вторичный.",
+   "scored": true,
+   "secondary_format": "интерактив"
+  },
+  {
+   "node_id": "lat.s09.01-smooth-boundaries",
+   "format": "шортс",
+   "video_scores": {
+    "time": 0,
+    "invisible": 2,
+    "scale": 1,
+    "counterintuitive": 2,
+    "cause_effect": 2
+   },
+   "template": null,
+   "why": "Главная трудность - механизм (почему нет ступеньки); невидимые распределённые источники тока и контринтуитивность плавности дают шортс, карточки закрепляют вывод.",
+   "scored": true,
+   "secondary_format": "карточки"
+  },
+  {
+   "node_id": "lat.s09.02-superposition-curves",
+   "format": "длинное видео",
+   "video_scores": {
+    "time": 0,
+    "invisible": 2,
+    "scale": 1,
+    "counterintuitive": 2,
+    "cause_effect": 2
+   },
+   "template": null,
+   "why": "Смысл суммирования и последовательность шагов лучше показать пошаговой анимацией сложения двух кривых; интерактив с h/dc - вторичный формат (гипотеза).",
+   "scored": true,
+   "secondary_format": "интерактив"
+  },
+  {
+   "node_id": "lat.s09.03-build-curves-problems",
+   "format": "практикум на данных",
+   "video_scores": {
+    "time": 0,
+    "invisible": 1,
+    "scale": 0,
+    "counterintuitive": 0,
+    "cause_effect": 1
+   },
+   "template": null,
+   "why": "Это процедура по заданным условиям и рисунку 44; практикум на данных подходит для самостоятельного построения, карточки с условиями - как вторичный формат.",
+   "scored": true,
+   "secondary_format": "карточки"
+  },
+  {
+   "node_id": "lat.s09.04-boundary-conclusions",
+   "format": "карточки",
+   "video_scores": {
+    "time": 0,
+    "invisible": 1,
+    "scale": 0,
+    "counterintuitive": 1,
+    "cause_effect": 1
+   },
+   "template": null,
+   "why": "Тип Пр: вывод правила из построенных кривых; карточки хранят формулировки задач, практикум на данных даёт кривые для самостоятельного вывода (гипотеза о реализации).",
+   "scored": true,
+   "secondary_format": "практикум на данных"
+  },
+  {
+   "node_id": "lat.s10.01-sp-bed-boundaries",
+   "format": "длинное видео",
+   "video_scores": {
+    "time": 0,
+    "invisible": 1,
+    "scale": 0,
+    "counterintuitive": 1,
+    "cause_effect": 1
+   },
+   "template": null,
+   "why": "Выбор правила зависит от условий: процедура с точкой выбора; длинное видео разбирает случаи по рисунку 44, практикум на данных вторичный.",
+   "scored": true,
+   "secondary_format": "практикум на данных"
+  },
+  {
+   "node_id": "lat.s10.02-fig45-joint-example",
+   "format": "практикум на данных",
+   "video_scores": {
+    "time": 0,
+    "invisible": 1,
+    "scale": 0,
+    "counterintuitive": 0,
+    "cause_effect": 1
+   },
+   "template": null,
+   "why": "Тип Р: узнавание признаков на кривых; практикум на данных на реальном фрагменте, карточки с легендой - вторичные.",
+   "scored": true,
+   "secondary_format": "карточки"
+  },
+  {
+   "node_id": "lat.s10.03-lithology-table-sp-kc",
+   "format": "карточки",
+   "video_scores": {
+    "time": 0,
+    "invisible": 0,
+    "scale": 0,
+    "counterintuitive": 1,
+    "cause_effect": 1
+   },
+   "template": null,
+   "why": "Таблица правил - карточки; практикум на данных тренирует применение и неоднозначные случаи.",
+   "scored": true,
+   "secondary_format": "практикум на данных"
+  },
+  {
+   "node_id": "lat.s10.04-attenuation-coefficient-v",
+   "format": "интерактив",
+   "video_scores": {
+    "time": 0,
+    "invisible": 2,
+    "scale": 0,
+    "counterintuitive": 2,
+    "cause_effect": 2
+   },
+   "template": null,
+   "why": "Контринтуитивно, что измеренный пик ниже истинного; интерактив с кривыми v_СП, видео вторичное.",
+   "scored": true,
+   "secondary_format": "длинное видео"
+  },
+  {
+   "node_id": "lat.s10.05-delta-e-from-delta-u",
+   "format": "практикум на данных",
+   "video_scores": {
+    "time": 0,
+    "invisible": 0,
+    "scale": 0,
+    "counterintuitive": 0,
+    "cause_effect": 2
+   },
+   "template": null,
+   "why": "Порядок действий и выбор формулы - практикум на данных; карточки с формулами вторичные.",
+   "scored": true,
+   "secondary_format": "карточки"
+  },
+  {
+   "node_id": "lat.s10.06-relative-amplitude-alpha",
+   "format": "интерактив",
+   "video_scores": {
+    "time": 0,
+    "invisible": 1,
+    "scale": 0,
+    "counterintuitive": 0,
+    "cause_effect": 1
+   },
+   "template": null,
+   "why": "Построение подвижной шкалы - ручная процедура, её удобно показать интерактивом с перетаскиваемой шкалой; практикум на данных вторичный.",
+   "scored": true,
+   "secondary_format": "практикум на данных"
+  },
+  {
+   "node_id": "lat.s10.07-example-37",
+   "format": "длинное видео",
+   "video_scores": {
+    "time": 0,
+    "invisible": 1,
+    "scale": 0,
+    "counterintuitive": 1,
+    "cause_effect": 2
+   },
+   "template": null,
+   "why": "Разобранная последовательность шагов с числами автора - длинное видео «шаг за шагом», практикум на данных вторичный.",
+   "scored": true,
+   "secondary_format": "практикум на данных"
+  },
+  {
+   "node_id": "lat.s10.08-problems-64-66",
+   "format": "практикум на данных",
+   "video_scores": {
+    "time": 0,
+    "invisible": 0,
+    "scale": 0,
+    "counterintuitive": 1,
+    "cause_effect": 1
+   },
+   "template": null,
+   "why": "Решение с неоднозначностью по реальным кривым - практикум на данных; карточки с условиями вторичные.",
+   "scored": true,
+   "secondary_format": "карточки"
+  },
+  {
+   "node_id": "lat.s11.01-inertia-distortion",
+   "format": "шортс",
+   "video_scores": {
+    "time": 1,
+    "invisible": 2,
+    "scale": 0,
+    "counterintuitive": 1,
+    "cause_effect": 2
+   },
+   "template": null,
+   "why": "Главная трудность — смысл зависимости v=f(h,v,τ), а не расчёт; причина (инерционность) и следствие (искажение) наглядны в коротком ролике.",
+   "scored": true
+  },
+  {
+   "node_id": "lat.s11.02-nomogram-v",
+   "format": "практикум на данных",
+   "video_scores": {
+    "time": 0,
+    "invisible": 1,
+    "scale": 0,
+    "counterintuitive": 0,
+    "cause_effect": 1
+   },
+   "template": null,
+   "why": "Работа по палетке с выбором кривой и интерполяцией — процедура, эффективнее всего отрабатывается на данных, а не в ролике.",
+   "scored": true,
+   "secondary_format": "интерактив"
+  },
+  {
+   "node_id": "lat.s11.03-bed-boundaries",
+   "format": "практикум на данных",
+   "video_scores": {
+    "time": 0,
+    "invisible": 1,
+    "scale": 0,
+    "counterintuitive": 0,
+    "cause_effect": 1
+   },
+   "template": null,
+   "why": "Это правило отсчёта по кривой: его надо применить на нескольких кривых. Карточки дают лишь формулировку, поэтому предлагается практикум.",
+   "scored": true
+  },
+  {
+   "node_id": "lat.s11.04-amplitude-correction",
+   "format": "текст",
+   "video_scores": {
+    "time": 0,
+    "invisible": 0,
+    "scale": 0,
+    "counterintuitive": 1,
+    "cause_effect": 1
+   },
+   "template": null,
+   "why": "Смысл формулы — в том, к чему применяется поправка; для формулы с одним подвохом (амплитуда, не I) достаточно текста, карточки закрепляют.",
+   "scored": true,
+   "secondary_format": "карточки"
+  },
+  {
+   "node_id": "lat.s11.05-example-38",
+   "format": "практикум на данных",
+   "video_scores": {
+    "time": 0,
+    "invisible": 1,
+    "scale": 0,
+    "counterintuitive": 0,
+    "cause_effect": 1
+   },
+   "template": null,
+   "why": "Пошаговый разобранный пример по палетке — процедура на конкретных числах.",
+   "scored": true
+  },
+  {
+   "node_id": "lat.s11.06-statistical-corridor",
+   "format": "шортс",
+   "video_scores": {
+    "time": 0,
+    "invisible": 2,
+    "scale": 0,
+    "counterintuitive": 1,
+    "cause_effect": 1
+   },
+   "template": null,
+   "why": "Критерий «вдвое выше дорожки» — решение по кривой; шортс показывает дорожку и аномалию, закреплять решение стоит практикумом на реальных записях.",
+   "scored": true,
+   "secondary_format": "практикум на данных"
+  },
+  {
+   "node_id": "lat.s12.01-rock-radioactivity",
+   "format": "карточки",
+   "video_scores": {
+    "time": 0,
+    "invisible": 1,
+    "scale": 1,
+    "counterintuitive": 1,
+    "cause_effect": 1
+   },
+   "template": null,
+   "why": "Узел опирается на таблицу диапазонов и их перекрытие; запоминание значений — карточки, видеоёмкость низкая.",
+   "scored": true,
+   "secondary_format": "текст"
+  },
+  {
+   "node_id": "lat.s12.02-mud-radioactivity",
+   "format": "текст",
+   "video_scores": {
+    "time": 0,
+    "invisible": 1,
+    "scale": 0,
+    "counterintuitive": 0,
+    "cause_effect": 1
+   },
+   "template": null,
+   "why": "Короткая мысль без процесса во времени и масштаба; достаточно текста.",
+   "scored": true
+  },
+  {
+   "node_id": "lat.s12.03-intensity-vs-q",
+   "format": "интерактив",
+   "video_scores": {
+    "time": 0,
+    "invisible": 1,
+    "scale": 0,
+    "counterintuitive": 1,
+    "cause_effect": 2
+   },
+   "template": null,
+   "why": "Главная трудность — смысл формулы и условий линейности (Ф); ролик объясняет вывод, а ползунок q и плотности показывает границы применимости.",
+   "scored": true
+  },
+  {
+   "node_id": "lat.s12.04-borehole-sum",
+   "format": "длинное видео",
+   "video_scores": {
+    "time": 0,
+    "invisible": 2,
+    "scale": 1,
+    "counterintuitive": 1,
+    "cause_effect": 2
+   },
+   "template": null,
+   "why": "Невидимое (вклады отдельных сред в сигнал) становится видимым, причина и следствие выражены ясно; подходит для анимации разреза скважины.",
+   "scored": true
+  },
+  {
+   "node_id": "lat.s12.05-corrections-eta",
+   "format": "практикум на данных",
+   "video_scores": {
+    "time": 0,
+    "invisible": 1,
+    "scale": 0,
+    "counterintuitive": 0,
+    "cause_effect": 1
+   },
+   "template": null,
+   "why": "Порядок введения поправок — процедура; ползунки поправок в интерактиве хорошо показывают эффект, но закреплять надо на данных.",
+   "scored": true,
+   "secondary_format": "интерактив"
+  },
+  {
+   "node_id": "lat.s12.06-goal-and-two-approaches",
+   "format": "шортс",
+   "video_scores": {
+    "time": 0,
+    "invisible": 0,
+    "scale": 0,
+    "counterintuitive": 2,
+    "cause_effect": 1
+   },
+   "template": null,
+   "why": "Контринтуитивная мысль: измеряется одно, а нужно другое; коротко и без вычислений.",
+   "scored": true
+  },
+  {
+   "node_id": "lat.s12.07-amplitude-scheme-1-2",
+   "format": "интерактив",
+   "video_scores": {
+    "time": 0,
+    "invisible": 1,
+    "scale": 0,
+    "counterintuitive": 0,
+    "cause_effect": 1
+   },
+   "template": null,
+   "why": "Блок-схема с входными данными и порядком этапов — процедура; интерактивная блок-схема эффективнее длинного видео. Рекомендуется изменить формат.",
+   "scored": true
+  },
+  {
+   "node_id": "lat.s12.08-eta-d-and-step-diagram",
+   "format": "практикум на данных",
+   "video_scores": {
+    "time": 0,
+    "invisible": 1,
+    "scale": 0,
+    "counterintuitive": 1,
+    "cause_effect": 1
+   },
+   "template": null,
+   "why": "Применение поправки по графику с выбором кривой — процедура; ползунки показывают зависимость η от d_c.",
+   "scored": true,
+   "secondary_format": "интерактив"
+  },
+  {
+   "node_id": "lat.s12.09-relative-amplitude",
+   "format": "длинное видео",
+   "video_scores": {
+    "time": 0,
+    "invisible": 2,
+    "scale": 0,
+    "counterintuitive": 1,
+    "cause_effect": 2
+   },
+   "template": null,
+   "why": "Невидимое (две погрешности, исчезающие при нормировке) становится видимым, причина и следствие выражены явно.",
+   "scored": true
+  },
+  {
+   "node_id": "lat.s12.10-dj-to-clay",
+   "format": "практикум на данных",
+   "video_scores": {
+    "time": 0,
+    "invisible": 1,
+    "scale": 0,
+    "counterintuitive": 0,
+    "cause_effect": 1
+   },
+   "template": null,
+   "why": "Построение шкалы и выбор кривой — ручная процедура; интерактив с выбором кривой остаётся вторым форматом.",
+   "scored": true,
+   "secondary_format": "интерактив"
+  },
+  {
+   "node_id": "lat.s12.11-example39-setup",
+   "format": "практикум на данных",
+   "video_scores": {
+    "time": 0,
+    "invisible": 1,
+    "scale": 0,
+    "counterintuitive": 1,
+    "cause_effect": 1
+   },
+   "template": null,
+   "why": "Выбор опорных пластов — точка суждения в процедуре; отрабатывается на данных.",
+   "scored": true
+  },
+  {
+   "node_id": "lat.s12.12-example39-corrections",
+   "format": "практикум на данных",
+   "video_scores": {
+    "time": 0,
+    "invisible": 1,
+    "scale": 0,
+    "counterintuitive": 2,
+    "cause_effect": 2
+   },
+   "template": null,
+   "why": "Числовой разобранный пример с контринтуитивным эффектом поправок; лучше воспроизвести на данных.",
+   "scored": true
+  },
+  {
+   "node_id": "lat.s12.13-example39-clay-scale",
+   "format": "практикум на данных",
+   "video_scores": {
+    "time": 0,
+    "invisible": 1,
+    "scale": 1,
+    "counterintuitive": 0,
+    "cause_effect": 1
+   },
+   "template": null,
+   "why": "Ручное построение шкалы — ручной труд, лучше всего усваивается на данных.",
+   "scored": true
+  },
+  {
+   "node_id": "lat.s12.14-problems-67-71",
+   "format": "практикум на данных",
+   "video_scores": {
+    "time": 0,
+    "invisible": 0,
+    "scale": 0,
+    "counterintuitive": 0,
+    "cause_effect": 0
+   },
+   "template": null,
+   "why": "Это задачи на применение процедуры; нужны данные.",
+   "scored": true
+  },
+  {
+   "node_id": "lat.s13.01-gamma-gamma-principle",
+   "format": "шортс",
+   "video_scores": {
+    "time": 0,
+    "invisible": 2,
+    "scale": 1,
+    "counterintuitive": 1,
+    "cause_effect": 2
+   },
+   "template": null,
+   "why": "Невидимое (рассеяние квантов) становится видимым, причина и следствие просты — шортс.",
+   "scored": true
+  },
+  {
+   "node_id": "lat.s13.02-electron-vs-bulk-density",
+   "format": "интерактив",
+   "video_scores": {
+    "time": 0,
+    "invisible": 1,
+    "scale": 0,
+    "counterintuitive": 2,
+    "cause_effect": 2
+   },
+   "template": null,
+   "why": "Контринтуитивное расхождение плотностей зависит от параметров (2Z/M, пористость); ползунки лучше таблицы, а числа таблицы 13 закрепляются карточками.",
+   "scored": true,
+   "secondary_format": "карточки"
+  },
+  {
+   "node_id": "lat.s13.03-mixing-equations",
+   "format": "интерактив",
+   "video_scores": {
+    "time": 0,
+    "invisible": 0,
+    "scale": 0,
+    "counterintuitive": 0,
+    "cause_effect": 2
+   },
+   "template": null,
+   "why": "Смысл формул смеси лучше видно при изменении долей ползунками; текст остаётся справочным.",
+   "scored": true,
+   "secondary_format": "текст"
+  },
+  {
+   "node_id": "lat.s13.04-two-probe-tools",
+   "format": "шортс",
+   "video_scores": {
+    "time": 0,
+    "invisible": 2,
+    "scale": 1,
+    "counterintuitive": 1,
+    "cause_effect": 2
+   },
+   "template": null,
+   "why": "Геометрия «прибор–корка–порода» — пространственная трудность, видеоёмкость высокая; справочные характеристики приборов — карточки.",
+   "scored": true,
+   "secondary_format": "карточки"
+  },
+  {
+   "node_id": "lat.s13.05-calibration-and-algorithm",
+   "format": "длинное видео",
+   "video_scores": {
+    "time": 0,
+    "invisible": 1,
+    "scale": 0,
+    "counterintuitive": 1,
+    "cause_effect": 1
+   },
+   "template": null,
+   "why": "Смысл формулы F(δ) и нелинейной шкалы объясняется ходом калибровки; видео уместно, но выигрыш умеренный.",
+   "scored": true,
+   "secondary_format": "практикум на данных"
+  },
+  {
+   "node_id": "lat.s13.06-interpretation-uses",
+   "format": "практикум на данных",
+   "video_scores": {
+    "time": 0,
+    "invisible": 1,
+    "scale": 0,
+    "counterintuitive": 1,
+    "cause_effect": 2
+   },
+   "template": null,
+   "why": "Узел о выборе допущений и цене неизвестных; данные позволяют увидеть, как они меняют ответ.",
+   "scored": true,
+   "secondary_format": "интерактив"
+  },
+  {
+   "node_id": "lat.s13.07-example-40-and-task-72",
+   "format": "практикум на данных",
+   "video_scores": {
+    "time": 0,
+    "invisible": 1,
+    "scale": 0,
+    "counterintuitive": 1,
+    "cause_effect": 1
+   },
+   "template": null,
+   "why": "Разобранный пример и задача — расчёт с допущением; нужен практикум с данными.",
+   "scored": true
+  },
+  {
+   "node_id": "lat.s14.01-principle",
+   "format": "длинное видео",
+   "video_scores": {
+    "time": 1,
+    "invisible": 2,
+    "scale": 1,
+    "counterintuitive": 1,
+    "cause_effect": 2
+   },
+   "template": null,
+   "why": "Невидимые процессы замедления и захвата во времени, причина и следствие — подходит анимация.",
+   "scored": true,
+   "secondary_format": "шортс"
+  },
+  {
+   "node_id": "lat.s14.02-probes",
+   "format": "карточки",
+   "video_scores": {
+    "time": 0,
+    "invisible": 1,
+    "scale": 1,
+    "counterintuitive": 0,
+    "cause_effect": 1
+   },
+   "template": null,
+   "why": "Справочные сведения о приборах и терминах — карточки.",
+   "scored": true,
+   "secondary_format": "текст"
+  },
+  {
+   "node_id": "lat.s14.03-neutron-properties",
+   "format": "интерактив",
+   "video_scores": {
+    "time": 0,
+    "invisible": 2,
+    "scale": 1,
+    "counterintuitive": 2,
+    "cause_effect": 2
+   },
+   "template": null,
+   "why": "Контринтуитивная смена знака зависит от длины зонда; ползунок длины показывает инверсию.",
+   "scored": true,
+   "secondary_format": "длинное видео"
+  },
+  {
+   "node_id": "lat.s14.04-hydrogen-index",
+   "format": "интерактив",
+   "video_scores": {
+    "time": 0,
+    "invisible": 1,
+    "scale": 0,
+    "counterintuitive": 2,
+    "cause_effect": 2
+   },
+   "template": null,
+   "why": "Смысл модели «w = пористость + связанная вода» лучше виден при изменении параметров.",
+   "scored": true,
+   "secondary_format": "карточки"
+  },
+  {
+   "node_id": "lat.s14.05-reading-vs-w",
+   "format": "интерактив",
+   "video_scores": {
+    "time": 0,
+    "invisible": 1,
+    "scale": 0,
+    "counterintuitive": 1,
+    "cause_effect": 2
+   },
+   "template": null,
+   "why": "Косвенное измерение с несколькими влияющими факторами; интерактив с палеткой.",
+   "scored": true
+  },
+  {
+   "node_id": "lat.s14.06-influence-factors",
+   "format": "карточки",
+   "video_scores": {
+    "time": 0,
+    "invisible": 1,
+    "scale": 0,
+    "counterintuitive": 1,
+    "cause_effect": 2
+   },
+   "template": null,
+   "why": "Перечень факторов двух групп — классификация, карточки.",
+   "scored": true,
+   "secondary_format": "текст"
+  },
+  {
+   "node_id": "lat.s14.07-prelim-processing",
+   "format": "практикум на данных",
+   "video_scores": {
+    "time": 0,
+    "invisible": 1,
+    "scale": 0,
+    "counterintuitive": 0,
+    "cause_effect": 1
+   },
+   "template": null,
+   "why": "Порядок обработки и выбор k — процедура; отрабатывается на данных.",
+   "scored": true
+  },
+  {
+   "node_id": "lat.s14.08-relative-amplitude",
+   "format": "интерактив",
+   "video_scores": {
+    "time": 0,
+    "invisible": 1,
+    "scale": 0,
+    "counterintuitive": 0,
+    "cause_effect": 1
+   },
+   "template": null,
+   "why": "Смысл нормировки и различие двух подходов; интерактив-схема подходит лучше длинного видео.",
+   "scored": true
+  },
+  {
+   "node_id": "lat.s14.09-reference-beds-corrections",
+   "format": "практикум на данных",
+   "video_scores": {
+    "time": 0,
+    "invisible": 0,
+    "scale": 0,
+    "counterintuitive": 0,
+    "cause_effect": 1
+   },
+   "template": null,
+   "why": "Выбор опорных пластов и правила поправок — точки суждения процедуры; на данных их можно проверить.",
+   "scored": true,
+   "secondary_format": "текст"
+  },
+  {
+   "node_id": "lat.s14.10-example-41",
+   "format": "практикум на данных",
+   "video_scores": {
+    "time": 0,
+    "invisible": 1,
+    "scale": 0,
+    "counterintuitive": 0,
+    "cause_effect": 2
+   },
+   "template": null,
+   "why": "Пошаговый пример с ручными действиями лучше воспроизвести на данных, видео — вторая форма.",
+   "scored": true,
+   "secondary_format": "длинное видео"
+  },
+  {
+   "node_id": "lat.s14.11-two-probe-example-42",
+   "format": "практикум на данных",
+   "video_scores": {
+    "time": 0,
+    "invisible": 1,
+    "scale": 0,
+    "counterintuitive": 1,
+    "cause_effect": 2
+   },
+   "template": null,
+   "why": "Числовой пример перехода по графику — практикум.",
+   "scored": true,
+   "secondary_format": "интерактив"
+  },
+  {
+   "node_id": "lat.s14.12-problems",
+   "format": "практикум на данных",
+   "video_scores": {
+    "time": 0,
+    "invisible": 0,
+    "scale": 0,
+    "counterintuitive": 0,
+    "cause_effect": 0
+   },
+   "template": null,
+   "why": "Задачи на применение метода и оценку недостающей информации, нужны данные.",
+   "scored": true
+  },
+  {
+   "node_id": "lat.s15.01-scope-and-wave-types",
+   "format": "шортс",
+   "video_scores": {
+    "time": 0,
+    "invisible": 2,
+    "scale": 0,
+    "counterintuitive": 1,
+    "cause_effect": 1
+   },
+   "template": null,
+   "why": "Главное — что колеблется и в какой среде идёт волна (механизм); короткая анимация смещений частиц, карточки для определений.",
+   "scored": true,
+   "secondary_format": "шортс"
+  },
+  {
+   "node_id": "lat.s15.02-three-element-probe-waveform",
+   "format": "длинное видео",
+   "video_scores": {
+    "time": 1,
+    "invisible": 2,
+    "scale": 0,
+    "counterintuitive": 0,
+    "cause_effect": 2
+   },
+   "template": null,
+   "why": "Тип И: сигнал → запись → разность времён; анимация рис. 60 делает невидимое видимым, интерактив на разметку вступлений.",
+   "scored": true,
+   "secondary_format": "интерактив"
+  },
+  {
+   "node_id": "lat.s15.03-spak-parameters",
+   "format": "карточки",
+   "video_scores": {
+    "time": 0,
+    "invisible": 1,
+    "scale": 0,
+    "counterintuitive": 0,
+    "cause_effect": 1
+   },
+   "template": null,
+   "why": "Тип Ф: смысл двух определений (разность времён, логарифм отношения амплитуд); карточки с единицами и интерактив с ползунками.",
+   "scored": true,
+   "secondary_format": "интерактив"
+  },
+  {
+   "node_id": "lat.s15.04-interval-time",
+   "format": "шортс",
+   "video_scores": {
+    "time": 0,
+    "invisible": 1,
+    "scale": 0,
+    "counterintuitive": 2,
+    "cause_effect": 1
+   },
+   "template": null,
+   "why": "Контринтуитивно: меряют величину, обратную скорости; шортс про смысл ΔT, ползунок скорости ↔ ΔT.",
+   "scored": true,
+   "secondary_format": "интерактив"
+  },
+  {
+   "node_id": "lat.s15.05-average-time-equation",
+   "format": "длинное видео",
+   "video_scores": {
+    "time": 0,
+    "invisible": 2,
+    "scale": 1,
+    "counterintuitive": 1,
+    "cause_effect": 2
+   },
+   "template": null,
+   "why": "Тип Ф: смысл уравнения как сумма времён в слоях; шортс плюс ползунки k_п в интерактиве.",
+   "scored": true,
+   "secondary_format": "шортс"
+  },
+  {
+   "node_id": "lat.s15.06-skeleton-time-and-contact",
+   "format": "карточки",
+   "video_scores": {
+    "time": 0,
+    "invisible": 1,
+    "scale": 0,
+    "counterintuitive": 1,
+    "cause_effect": 2
+   },
+   "template": null,
+   "why": "Главное — почему реальное ΔT_ск не равно табличному (причина и следствие); карточки с значениями и интерактив контакта зёрен.",
+   "scored": true,
+   "secondary_format": "интерактив"
+  },
+  {
+   "node_id": "lat.s15.07-pore-fluid-time",
+   "format": "интерактив",
+   "video_scores": {
+    "time": 0,
+    "invisible": 1,
+    "scale": 0,
+    "counterintuitive": 1,
+    "cause_effect": 1
+   },
+   "template": null,
+   "why": "Тип Пр: работа по номограмме (исходные данные, перемещение, ответ); интерактив с номограммой.",
+   "scored": true,
+   "secondary_format": "карточки"
+  },
+  {
+   "node_id": "lat.s15.08-clay-reservoirs",
+   "format": "текст",
+   "video_scores": {
+    "time": 0,
+    "invisible": 1,
+    "scale": 0,
+    "counterintuitive": 1,
+    "cause_effect": 1
+   },
+   "template": null,
+   "why": "Тип Ф: две модели глинистости и смысл параметров; текст и карточки, видео не требуется.",
+   "scored": true,
+   "secondary_format": "карточки"
+  },
+  {
+   "node_id": "lat.s15.09-fractured-cavernous",
+   "format": "длинное видео",
+   "video_scores": {
+    "time": 0,
+    "invisible": 1,
+    "scale": 1,
+    "counterintuitive": 2,
+    "cause_effect": 2
+   },
+   "template": null,
+   "why": "Контринтуитивно: трещины меняют ΔT лишь при волне поперёк них; анимация направлений пробега, диапазон вместо числа (Н).",
+   "scored": true,
+   "secondary_format": "интерактив"
+  },
+  {
+   "node_id": "lat.s15.10-reading-curves-bed-boundaries",
+   "format": "интерактив",
+   "video_scores": {
+    "time": 0,
+    "invisible": 1,
+    "scale": 0,
+    "counterintuitive": 0,
+    "cause_effect": 1
+   },
+   "template": null,
+   "why": "Тип Р: узнать форму аномалии и поставить границу; интерактив с рис. 62 и разными h, затем практикум.",
+   "scored": true,
+   "secondary_format": "практикум на данных"
+  },
+  {
+   "node_id": "lat.s15.11-log-quality-control",
+   "format": "практикум на данных",
+   "video_scores": {
+    "time": 0,
+    "invisible": 0,
+    "scale": 0,
+    "counterintuitive": 1,
+    "cause_effect": 1
+   },
+   "template": null,
+   "why": "Тип Пр: проверка по чек-листу на реальной кривой; практикум на данных.",
+   "scored": true,
+   "secondary_format": "карточки"
+  },
+  {
+   "node_id": "lat.s15.12-interpretation-limits-alpha-groups",
+   "format": "карточки",
+   "video_scores": {
+    "time": 0,
+    "invisible": 0,
+    "scale": 0,
+    "counterintuitive": 0,
+    "cause_effect": 1
+   },
+   "template": null,
+   "why": "Перечень правил отбора и групп; карточки подойдут лучше видео.",
+   "scored": true
+  },
+  {
+   "node_id": "lat.s15.13-porosity-procedure",
+   "format": "практикум на данных",
+   "video_scores": {
+    "time": 0,
+    "invisible": 0,
+    "scale": 0,
+    "counterintuitive": 1,
+    "cause_effect": 1
+   },
+   "template": null,
+   "why": "Тип Пр: порядок действий и точки выбора; практикум на данных с блок-схемой.",
+   "scored": true,
+   "secondary_format": "интерактив"
+  },
+  {
+   "node_id": "lat.s15.14-hydrocarbon-correction",
+   "format": "карточки",
+   "video_scores": {
+    "time": 0,
+    "invisible": 0,
+    "scale": 0,
+    "counterintuitive": 1,
+    "cause_effect": 1
+   },
+   "template": null,
+   "why": "Одна поправка и три значения; карточки.",
+   "scored": true
+  },
+  {
+   "node_id": "lat.s15.15-worked-porosity-examples",
+   "format": "практикум на данных",
+   "video_scores": {
+    "time": 0,
+    "invisible": 0,
+    "scale": 0,
+    "counterintuitive": 0,
+    "cause_effect": 1
+   },
+   "template": null,
+   "why": "Тип Пр: пошаговый расчёт на рисунке; практикум на данных по рис. 63.",
+   "scored": true
+  },
+  {
+   "node_id": "lat.s15.16-book-problems-ak",
+   "format": "практикум на данных",
+   "video_scores": {
+    "time": 0,
+    "invisible": 0,
+    "scale": 0,
+    "counterintuitive": 1,
+    "cause_effect": 0
+   },
+   "template": null,
+   "why": "Тип Пр: самостоятельный расчёт; практикум на данных.",
+   "scored": true
+  },
+  {
+   "node_id": "lat.s15.17-akw-wideband",
+   "format": "длинное видео",
+   "video_scores": {
+    "time": 0,
+    "invisible": 2,
+    "scale": 1,
+    "counterintuitive": 1,
+    "cause_effect": 2
+   },
+   "template": null,
+   "why": "Тип И: больше сигналов (P, S, Лэмба) → свойства; скачок масштаба и невидимые волны, длинное видео.",
+   "scored": true,
+   "secondary_format": "интерактив"
+  },
+  {
+   "node_id": "lat.s15.18-akw-tasks",
+   "format": "длинное видео",
+   "video_scores": {
+    "time": 0,
+    "invisible": 1,
+    "scale": 0,
+    "counterintuitive": 1,
+    "cause_effect": 2
+   },
+   "template": null,
+   "why": "Причина и следствие: трещины → ослабление → сжимаемость → k_п.т; длинное видео, перечень задач в карточках.",
+   "scored": true,
+   "secondary_format": "карточки"
+  },
+  {
+   "node_id": "lat.s15.19-akw-fracture-example",
+   "format": "практикум на данных",
+   "video_scores": {
+    "time": 0,
+    "invisible": 0,
+    "scale": 0,
+    "counterintuitive": 1,
+    "cause_effect": 1
+   },
+   "template": null,
+   "why": "Тип Пр: шаги расчёта с выбором значений; практикум на данных.",
+   "scored": true
+  },
+  {
+   "node_id": "lat.s16.01-nmr-phenomenon",
+   "format": "длинное видео",
+   "video_scores": {
+    "time": 1,
+    "invisible": 2,
+    "scale": 0,
+    "counterintuitive": 1,
+    "cause_effect": 2
+   },
+   "template": null,
+   "why": "Главное трудное — механизм резонанса; невидимая прецессия и причина-следствие хорошо показываются анимацией, ведущий формат — длинное видео.",
+   "scored": true,
+   "secondary_format": "интерактив"
+  },
+  {
+   "node_id": "lat.s16.02-ssp-isf-porosity",
+   "format": "длинное видео",
+   "video_scores": {
+    "time": 0,
+    "invisible": 2,
+    "scale": 0,
+    "counterintuitive": 1,
+    "cause_effect": 2
+   },
+   "template": null,
+   "why": "Цепочка сигнал → отклик → свойство (тип И) с невидимым вкладом подвижных и связанных ядер; длинное видео, затем интерактив разбора.",
+   "scored": true,
+   "secondary_format": "интерактив"
+  },
+  {
+   "node_id": "lat.s16.03-ssp-interpretation",
+   "format": "интерактив",
+   "video_scores": {
+    "time": 0,
+    "invisible": 1,
+    "scale": 0,
+    "counterintuitive": 0,
+    "cause_effect": 1
+   },
+   "template": null,
+   "why": "Тип Пр: порядок действий на кривой с точкой выбора (отступ L); пошаговый интерактив, видео мало ёмкое.",
+   "scored": true,
+   "secondary_format": "практикум на данных"
+  },
+  {
+   "node_id": "lat.s16.04-reservoir-picking-fig67",
+   "format": "практикум на данных",
+   "video_scores": {
+    "time": 0,
+    "invisible": 0,
+    "scale": 0,
+    "counterintuitive": 1,
+    "cause_effect": 1
+   },
+   "template": null,
+   "why": "Тип Пр: снятие значений с кривой и применение порога — практикум на данных на рис. 67; порог как решение (Н) закрепляют карточки.",
+   "scored": true,
+   "secondary_format": "карточки"
+  },
+  {
+   "node_id": "lat.s16.05-chv-intro",
+   "format": "карточки",
+   "video_scores": {
+    "time": 0,
+    "invisible": 0,
+    "scale": 0,
+    "counterintuitive": 0,
+    "cause_effect": 1
+   },
+   "template": null,
+   "why": "Перечень задач без динамики и данных; достаточно текста или карточек, видеоёмкость низкая.",
+   "scored": true
+  },
+  {
+   "node_id": "lat.s17.01-optimal-complex-and-muds",
+   "format": "текст",
+   "video_scores": {
+    "time": 0,
+    "invisible": 0,
+    "scale": 0,
+    "counterintuitive": 0,
+    "cause_effect": 1
+   },
+   "template": null,
+   "why": "Перечень видов раствора и общий принцип выбора комплекса без динамики; хватает текста.",
+   "scored": true
+  },
+  {
+   "node_id": "lat.s17.02-borehole-features-clay-mud",
+   "format": "интерактив",
+   "video_scores": {
+    "time": 0,
+    "invisible": 2,
+    "scale": 1,
+    "counterintuitive": 1,
+    "cause_effect": 2
+   },
+   "template": null,
+   "why": "Тип М: невидимый процесс в стенке скважины виден на поперечном сечении по типам пород; интерактив с сечением, связь причины и следствия.",
+   "scored": true,
+   "secondary_format": "карточки"
+  },
+  {
+   "node_id": "lat.s17.03-mud-parameters-filtration-density",
+   "format": "интерактив",
+   "video_scores": {
+    "time": 1,
+    "invisible": 2,
+    "scale": 1,
+    "counterintuitive": 1,
+    "cause_effect": 2
+   },
+   "template": null,
+   "why": "Главное — причинная цепь параметры раствора → проникновение и корка; ползунки водоотдачи и репрессии дают видимый эффект.",
+   "scored": true,
+   "secondary_format": "длинное видео"
+  },
+  {
+   "node_id": "lat.s17.04-filtrate-salinity-resistivity",
+   "format": "интерактив",
+   "video_scores": {
+    "time": 0,
+    "invisible": 1,
+    "scale": 0,
+    "counterintuitive": 2,
+    "cause_effect": 2
+   },
+   "template": null,
+   "why": "Тип И: один и тот же фактор по-разному влияет на разные методы; контринтуитивный эффект удобно разобрать интерактивом со сравнением кривых.",
+   "scored": true,
+   "secondary_format": "карточки"
+  },
+  {
+   "node_id": "lat.s17.05-technical-water",
+   "format": "текст",
+   "video_scores": {
+    "time": 0,
+    "invisible": 0,
+    "scale": 0,
+    "counterintuitive": 1,
+    "cause_effect": 1
+   },
+   "template": null,
+   "why": "Список условий и следствий; цена решения о воде как раствора, но без динамики данных, достаточно текста.",
+   "scored": true
+  },
+  {
+   "node_id": "lat.s17.06-non-filtering-mud",
+   "format": "интерактив",
+   "video_scores": {
+    "time": 0,
+    "invisible": 1,
+    "scale": 0,
+    "counterintuitive": 2,
+    "cause_effect": 2
+   },
+   "template": null,
+   "why": "Контринтуитивно: «идеальный» раствор отключает часть методов и помогает другим; разбор интерактивом по методам, цена выбора раствора (Н).",
+   "scored": true,
+   "secondary_format": "карточки"
+  },
+  {
+   "node_id": "lat.s18.01-section-collector-types",
+   "format": "карточки",
+   "video_scores": {
+    "time": 0,
+    "invisible": 0,
+    "scale": 0,
+    "counterintuitive": 0,
+    "cause_effect": 0
+   },
+   "template": null,
+   "why": "Чистая классификация без динамики; тип мало связан с видео, хватает карточек.",
+   "scored": true,
+   "secondary_format": "текст"
+  },
+  {
+   "node_id": "lat.s18.02-geophysical-collector-classes",
+   "format": "карточки",
+   "video_scores": {
+    "time": 0,
+    "invisible": 1,
+    "scale": 0,
+    "counterintuitive": 0,
+    "cause_effect": 0
+   },
+   "template": null,
+   "why": "Много параллельных классов для запоминания; карточки с повторением.",
+   "scored": true,
+   "secondary_format": "текст"
+  },
+  {
+   "node_id": "lat.s18.03-four-method-groups",
+   "format": "интерактив",
+   "video_scores": {
+    "time": 0,
+    "invisible": 0,
+    "scale": 0,
+    "counterintuitive": 0,
+    "cause_effect": 1
+   },
+   "template": null,
+   "why": "Схема «метод — задача — раствор» лучше показать интерактивной таблицей; процессов во времени нет.",
+   "scored": true,
+   "secondary_format": "текст"
+  },
+  {
+   "node_id": "lat.s18.04-sp-gamma-clay",
+   "format": "интерактив",
+   "video_scores": {
+    "time": 0,
+    "invisible": 1,
+    "scale": 0,
+    "counterintuitive": 0,
+    "cause_effect": 1
+   },
+   "template": null,
+   "why": "Главное — условия применимости двух методов; сравнение по типу раствора делает интерактив.",
+   "scored": true,
+   "secondary_format": "карточки"
+  },
+  {
+   "node_id": "lat.s18.05-productivity-assessment",
+   "format": "длинное видео",
+   "video_scores": {
+    "time": 0,
+    "invisible": 1,
+    "scale": 0,
+    "counterintuitive": 0,
+    "cause_effect": 2
+   },
+   "template": null,
+   "why": "Причина и следствие: сопротивление плюс пористость дают насыщение; смысл зависимости показывает шортс или длинное видео, затем интерактив.",
+   "scored": true,
+   "secondary_format": "интерактив"
+  },
+  {
+   "node_id": "lat.s18.06-wider-scope-reliability",
+   "format": "длинное видео",
+   "video_scores": {
+    "time": 1,
+    "invisible": 1,
+    "scale": 0,
+    "counterintuitive": 1,
+    "cause_effect": 2
+   },
+   "template": null,
+   "why": "Решение о повторном замере и изменение зоны во времени; видеоёмко, но тип Н лучше закрепить кейсом.",
+   "scored": true,
+   "secondary_format": "карточки"
+  },
+  {
+   "node_id": "lat.s18.07-problems-86-89",
+   "format": "практикум на данных",
+   "video_scores": {
+    "time": 0,
+    "invisible": 0,
+    "scale": 0,
+    "counterintuitive": 0,
+    "cause_effect": 0
+   },
+   "template": null,
+   "why": "Тип Пр: подбор методов по рисункам — практикум на данных; видео не нужно.",
+   "scored": true,
+   "secondary_format": "текст"
+  },
+  {
+   "node_id": "lat.s19.01-two-operations",
+   "format": "текст",
+   "video_scores": {
+    "time": 0,
+    "invisible": 0,
+    "scale": 0,
+    "counterintuitive": 0,
+    "cause_effect": 1
+   },
+   "template": null,
+   "why": "Тип Пр: порядок двух операций, точек выбора мало; хватает текста со схемой.",
+   "scored": true
+  },
+  {
+   "node_id": "lat.s19.02-ambiguity-conditional-column",
+   "format": "шортс",
+   "video_scores": {
+    "time": 0,
+    "invisible": 0,
+    "scale": 0,
+    "counterintuitive": 2,
+    "cause_effect": 1
+   },
+   "template": null,
+   "why": "Неоднозначность признаков как контринтуитивная идея (тип Н); короткий шортс или карточка.",
+   "scored": true
+  },
+  {
+   "node_id": "lat.s19.03-table-21-signs",
+   "format": "практикум на данных",
+   "video_scores": {
+    "time": 0,
+    "invisible": 0,
+    "scale": 0,
+    "counterintuitive": 1,
+    "cause_effect": 1
+   },
+   "template": null,
+   "why": "Тип Р: узнавание признаков по набору показаний; крупная таблица плохо для видео, нужен интерактивный поиск строки.",
+   "scored": true,
+   "secondary_format": "карточки"
+  },
+  {
+   "node_id": "lat.s19.04-clay-gypsum-effects",
+   "format": "карточки",
+   "video_scores": {
+    "time": 0,
+    "invisible": 1,
+    "scale": 0,
+    "counterintuitive": 1,
+    "cause_effect": 1
+   },
+   "template": null,
+   "why": "Короткое предупреждение об ограничении; карточки.",
+   "scored": true
+  },
+  {
+   "node_id": "lat.s19.05-sufficient-methods",
+   "format": "длинное видео",
+   "video_scores": {
+    "time": 0,
+    "invisible": 0,
+    "scale": 0,
+    "counterintuitive": 1,
+    "cause_effect": 2
+   },
+   "template": null,
+   "why": "Решение о составе методов зависит от сложности разреза; сравнение простого и сложного случаев показывает длинное видео.",
+   "scored": true,
+   "secondary_format": "карточки"
+  },
+  {
+   "node_id": "lat.s19.06-fig68-problems",
+   "format": "практикум на данных",
+   "video_scores": {
+    "time": 0,
+    "invisible": 0,
+    "scale": 0,
+    "counterintuitive": 1,
+    "cause_effect": 0
+   },
+   "template": null,
+   "why": "Тип Пр: упражнение на реальной диаграмме, нужна работа с данными, а не просмотр.",
+   "scored": true
+  },
+  {
+   "node_id": "lat.s20.01-collector-premise",
+   "format": "карточки",
+   "video_scores": {
+    "time": 0,
+    "invisible": 0,
+    "scale": 0,
+    "counterintuitive": 0,
+    "cause_effect": 1
+   },
+   "template": null,
+   "why": "Узел задаёт словарь и структуру параграфа, процесса или сцены нет; подходят короткие карточки с двумя группами признаков.",
+   "scored": true
+  },
+  {
+   "node_id": "lat.s20.02-direct-signs-mud",
+   "format": "длинное видео",
+   "video_scores": {
+    "time": 1,
+    "invisible": 2,
+    "scale": 1,
+    "counterintuitive": 1,
+    "cause_effect": 2
+   },
+   "template": null,
+   "why": "Цепочка раствор, корка, показания микрозондов и каверномера (причина и следствие), корка и зона проникновения невидимы без диаграмм; подходит длинное видео, а признаки на диаграмме закрепляются карточками (тип И, затем Р).",
+   "scored": true,
+   "secondary_format": "карточки"
+  },
+  {
+   "node_id": "lat.s20.03-radial-gradient",
+   "format": "интерактив",
+   "video_scores": {
+    "time": 0,
+    "invisible": 1,
+    "scale": 0,
+    "counterintuitive": 2,
+    "cause_effect": 2
+   },
+   "template": null,
+   "why": "Контринтуитивный вывод (нет градиента, но коллектор) и зависимость от отношения сопротивлений и насыщения: интерактив с изменением параметров; карточки на признаки повышающего и понижающего проникновения.",
+   "scored": true,
+   "secondary_format": "карточки"
+  },
+  {
+   "node_id": "lat.s20.04-dynamic-methods",
+   "format": "длинное видео",
+   "video_scores": {
+    "time": 2,
+    "invisible": 2,
+    "scale": 0,
+    "counterintuitive": 0,
+    "cause_effect": 1
+   },
+   "template": null,
+   "why": "Изменение зоны проникновения во времени невидимо по одному замеру и становится видимым при сравнении замеров; подходит длинное видео, карточки различают два метода.",
+   "scored": true,
+   "secondary_format": "карточки"
+  },
+  {
+   "node_id": "lat.s20.05-critical-permeability",
+   "format": "карточки",
+   "video_scores": {
+    "time": 0,
+    "invisible": 0,
+    "scale": 0,
+    "counterintuitive": 2,
+    "cause_effect": 1
+   },
+   "template": null,
+   "why": "Тип Н: порог зависит от решения о рентабельности, а не только от физики; нужны диапазоны для нефти и газа и условия района, достаточно карточек и текста без процесса.",
+   "scored": true,
+   "secondary_format": "текст"
+  },
+  {
+   "node_id": "lat.s20.06-from-rentable-flow-to-parameter-level",
+   "format": "длинное видео",
+   "video_scores": {
+    "time": 0,
+    "invisible": 1,
+    "scale": 2,
+    "counterintuitive": 1,
+    "cause_effect": 2
+   },
+   "template": null,
+   "why": "Тип Пр: пять шагов с входными данными и точками выбора пути, причина и следствие от экономики к диаграмме; длинное видео с цепочкой, интерактивная блок-схема для закрепления.",
+   "scored": true,
+   "secondary_format": "интерактив"
+  },
+  {
+   "node_id": "lat.s20.07-effective-thickness-methods-note",
+   "format": "карточки",
+   "video_scores": {
+    "time": 0,
+    "invisible": 0,
+    "scale": 0,
+    "counterintuitive": 0,
+    "cause_effect": 1
+   },
+   "template": null,
+   "why": "Выбор метода по условию, процесса и динамики нет; подходят карточки «условие → метод».",
+   "scored": true
+  },
+  {
+   "node_id": "lat.s20.08-saturation-character-principle",
+   "format": "длинное видео",
+   "video_scores": {
+    "time": 0,
+    "invisible": 2,
+    "scale": 0,
+    "counterintuitive": 1,
+    "cause_effect": 2
+   },
+   "template": null,
+   "why": "Тип И: невидимое насыщение собирается из трёх измерений через косвенное сопротивление водонасыщенного пласта; видео показывает сборку цепочки, карточки фиксируют термины.",
+   "scored": true,
+   "secondary_format": "карточки"
+  },
+  {
+   "node_id": "lat.s20.09-clean-high-porosity",
+   "format": "текст",
+   "video_scores": {
+    "time": 0,
+    "invisible": 0,
+    "scale": 0,
+    "counterintuitive": 0,
+    "cause_effect": 1
+   },
+   "template": null,
+   "why": "Короткое условие применимости простого случая, без процесса; достаточно текста и карточек.",
+   "scored": true
+  },
+  {
+   "node_id": "lat.s20.10-overlapping-ranges-three-ways",
+   "format": "длинное видео",
+   "video_scores": {
+    "time": 0,
+    "invisible": 1,
+    "scale": 1,
+    "counterintuitive": 2,
+    "cause_effect": 2
+   },
+   "template": null,
+   "why": "Контринтуитивно, что высокое сопротивление не гарантирует нефть, а наложение кривых делает расхождение видимым; длинное видео, затем интерактив с кривыми.",
+   "scored": true,
+   "secondary_format": "интерактив"
+  },
+  {
+   "node_id": "lat.s20.11-palette-fig69",
+   "format": "интерактив",
+   "video_scores": {
+    "time": 0,
+    "invisible": 1,
+    "scale": 0,
+    "counterintuitive": 1,
+    "cause_effect": 2
+   },
+   "template": null,
+   "why": "Работа идёт по палетке: точка двигается и меняет область (процедура с палеткой, тип Пр); интерактив, затем практикум на точках.",
+   "scored": true,
+   "secondary_format": "практикум на данных"
+  },
+  {
+   "node_id": "lat.s20.12-examples-46-47",
+   "format": "практикум на данных",
+   "video_scores": {
+    "time": 0,
+    "invisible": 0,
+    "scale": 0,
+    "counterintuitive": 0,
+    "cause_effect": 1
+   },
+   "template": null,
+   "why": "Разобранные примеры автора с готовыми ответами по палетке: учащийся наносит точки сам (практикум на данных), карточки с ответами для проверки.",
+   "scored": true,
+   "secondary_format": "карточки"
+  },
+  {
+   "node_id": "lat.s20.13-critical-pn-kv",
+   "format": "карточки",
+   "video_scores": {
+    "time": 0,
+    "invisible": 0,
+    "scale": 0,
+    "counterintuitive": 1,
+    "cause_effect": 1
+   },
+   "template": null,
+   "why": "Нужно различать два порога с разной ценой решения (тип Н); короткие карточки «звёздочка / кр» и текст.",
+   "scored": true
+  },
+  {
+   "node_id": "lat.s20.14-two-ways-critical",
+   "format": "длинное видео",
+   "video_scores": {
+    "time": 2,
+    "invisible": 0,
+    "scale": 0,
+    "counterintuitive": 1,
+    "cause_effect": 2
+   },
+   "template": null,
+   "why": "Выбор способа определяется стадией разведки и доступными данными (причина и следствие во времени); длинное видео-сравнение, карточки «условие → способ».",
+   "scored": true,
+   "secondary_format": "карточки"
+  },
+  {
+   "node_id": "lat.s20.15-example-48-fig70",
+   "format": "длинное видео",
+   "video_scores": {
+    "time": 0,
+    "invisible": 1,
+    "scale": 0,
+    "counterintuitive": 2,
+    "cause_effect": 2
+   },
+   "template": null,
+   "why": "Контринтуитивна промежуточная область между нефтью и водой; видео по двум панелям рис. 70 объясняет смысл кривых (тип Ф), интерактив с ползунком kв.",
+   "scored": true,
+   "secondary_format": "интерактив"
+  },
+  {
+   "node_id": "lat.s20.16-examples-49-50",
+   "format": "практикум на данных",
+   "video_scores": {
+    "time": 0,
+    "invisible": 0,
+    "scale": 0,
+    "counterintuitive": 1,
+    "cause_effect": 1
+   },
+   "template": null,
+   "why": "Разобранные примеры автора: учащийся определяет пороги по кривым и классифицирует Pн; практикум на данных.",
+   "scored": true
+  },
+  {
+   "node_id": "lat.s20.17-examples-51-53-table22",
+   "format": "практикум на данных",
+   "video_scores": {
+    "time": 0,
+    "invisible": 0,
+    "scale": 0,
+    "counterintuitive": 1,
+    "cause_effect": 2
+   },
+   "template": null,
+   "why": "Работа по таблице 22 и кривым семейства (тип Пр): практикум на данных, где точки (Pн, αСП) относят к областям.",
+   "scored": true
+  },
+  {
+   "node_id": "lat.s20.18-problems-92-95",
+   "format": "практикум на данных",
+   "video_scores": {
+    "time": 0,
+    "invisible": 0,
+    "scale": 0,
+    "counterintuitive": 0,
+    "cause_effect": 0
+   },
+   "template": null,
+   "why": "Задачи книги на реальных диаграммах; практикум на данных, видео не нужно.",
+   "scored": true
+  },
+  {
+   "node_id": "lat.s20.19-hef-homogeneous",
+   "format": "длинное видео",
+   "video_scores": {
+    "time": 0,
+    "invisible": 1,
+    "scale": 1,
+    "counterintuitive": 0,
+    "cause_effect": 2
+   },
+   "template": null,
+   "why": "Определение толщины по контакту на разрезе (интервал, кровля и ВНК); длинное видео с разрезом и положением контакта.",
+   "scored": true
+  },
+  {
+   "node_id": "lat.s20.20-vnk-transition-zone",
+   "format": "длинное видео",
+   "video_scores": {
+    "time": 0,
+    "invisible": 2,
+    "scale": 1,
+    "counterintuitive": 0,
+    "cause_effect": 2
+   },
+   "template": null,
+   "why": "Четырёхшаговая процедура с допущением линейности: видео показывает построение графика и точки ВНК, интерактив позволяет менять критерий.",
+   "scored": true,
+   "secondary_format": "интерактив"
+  },
+  {
+   "node_id": "lat.s20.21-gnk-neutron",
+   "format": "длинное видео",
+   "video_scores": {
+    "time": 2,
+    "invisible": 2,
+    "scale": 0,
+    "counterintuitive": 1,
+    "cause_effect": 2
+   },
+   "template": null,
+   "why": "Изменение показаний во времени при расформировании зоны делает невидимый газ видимым; длинное видео с рис. 71, карточки на условия методов.",
+   "scored": true,
+   "secondary_format": "карточки"
+  },
+  {
+   "node_id": "lat.s20.22-nonreservoir-interlayers",
+   "format": "длинное видео",
+   "video_scores": {
+    "time": 0,
+    "invisible": 2,
+    "scale": 1,
+    "counterintuitive": 1,
+    "cause_effect": 2
+   },
+   "template": null,
+   "why": "Разрешающая способность методов ниже толщины прослоев, невидимое становится видимым при смене метода; длинное видео и карточки «неколлектор → какой метод видит».",
+   "scored": true,
+   "secondary_format": "карточки"
+  },
+  {
+   "node_id": "lat.s20.23-thin-layered-resistivity-method",
+   "format": "длинное видео",
+   "video_scores": {
+    "time": 0,
+    "invisible": 2,
+    "scale": 1,
+    "counterintuitive": 1,
+    "cause_effect": 1
+   },
+   "template": null,
+   "why": "Тип Ф: смысл уравнения (63) как смеси проводимостей; видео объясняет скрытую глинистость, интерактив с ползунками сопротивлений.",
+   "scored": true,
+   "secondary_format": "интерактив"
+  },
+  {
+   "node_id": "lat.s20.24-thin-layered-sp-method-fig72",
+   "format": "интерактив",
+   "video_scores": {
+    "time": 0,
+    "invisible": 1,
+    "scale": 0,
+    "counterintuitive": 0,
+    "cause_effect": 2
+   },
+   "template": null,
+   "why": "Работа по палетке с выбором кривой (тип Пр): интерактив с ползунком αСП, практикум на реальных значениях.",
+   "scored": true,
+   "secondary_format": "практикум на данных"
+  },
+  {
+   "node_id": "lat.s20.25-dense-layers-in-pack",
+   "format": "длинное видео",
+   "video_scores": {
+    "time": 0,
+    "invisible": 2,
+    "scale": 1,
+    "counterintuitive": 1,
+    "cause_effect": 2
+   },
+   "template": null,
+   "why": "Тип Ф: смысл трёх слагаемых и то, что плотные прослои почти не видны по сопротивлению; видео показывает скрытую долю, карточки перечисляют пути учёта.",
+   "scored": true,
+   "secondary_format": "карточки"
+  },
+  {
+   "node_id": "lat.s20.26-problems-96-100",
+   "format": "практикум на данных",
+   "video_scores": {
+    "time": 0,
+    "invisible": 0,
+    "scale": 0,
+    "counterintuitive": 0,
+    "cause_effect": 0
+   },
+   "template": null,
+   "why": "Тренировочные задачи книги на готовых данных; практикум на данных.",
+   "scored": true
+  },
+  {
+   "node_id": "lat.s20.27-problems-101-103",
+   "format": "практикум на данных",
+   "video_scores": {
+    "time": 0,
+    "invisible": 0,
+    "scale": 0,
+    "counterintuitive": 0,
+    "cause_effect": 1
+   },
+   "template": null,
+   "why": "Тренировочные задачи с заданными константами; практикум на данных.",
+   "scored": true
+  },
+  {
+   "node_id": "lat.s20.28-carbonate-features",
+   "format": "длинное видео",
+   "video_scores": {
+    "time": 0,
+    "invisible": 1,
+    "scale": 1,
+    "counterintuitive": 2,
+    "cause_effect": 2
+   },
+   "template": null,
+   "why": "Контринтуитивно: чем ниже пористость, тем глубже проникновение; причинная цепочка особенностей, длинное видео и карточки «особенность → следствие».",
+   "scored": true,
+   "secondary_format": "карточки"
+  },
+  {
+   "node_id": "lat.s20.29-normalization-fig76",
+   "format": "длинное видео",
+   "video_scores": {
+    "time": 0,
+    "invisible": 2,
+    "scale": 0,
+    "counterintuitive": 1,
+    "cause_effect": 2
+   },
+   "template": null,
+   "why": "Расхождение кривых делает невидимое насыщение видимым, а наложение требует выбора масштаба; видео и интерактив с наложением кривых.",
+   "scored": true,
+   "secondary_format": "интерактив"
+  },
+  {
+   "node_id": "lat.s20.30-example-54",
+   "format": "практикум на данных",
+   "video_scores": {
+    "time": 0,
+    "invisible": 1,
+    "scale": 0,
+    "counterintuitive": 0,
+    "cause_effect": 2
+   },
+   "template": null,
+   "why": "Разобранный пример автора с числами и последовательностью шагов; практикум на данных, длинное видео как разбор.",
+   "scored": true,
+   "secondary_format": "длинное видео"
+  },
+  {
+   "node_id": "lat.s20.31-kp-star-carbonate-fig77-table23",
+   "format": "практикум на данных",
+   "video_scores": {
+    "time": 0,
+    "invisible": 0,
+    "scale": 1,
+    "counterintuitive": 1,
+    "cause_effect": 2
+   },
+   "template": null,
+   "why": "Тип Н: широкий диапазон порога и цена неверного выбора; практикум на данных с рис. 77 и табл. 23, карточки по классам коллекторов.",
+   "scored": true,
+   "secondary_format": "карточки"
+  },
+  {
+   "node_id": "lat.s20.32-problems-104-108",
+   "format": "практикум на данных",
+   "video_scores": {
+    "time": 0,
+    "invisible": 0,
+    "scale": 0,
+    "counterintuitive": 0,
+    "cause_effect": 0
+   },
+   "template": null,
+   "why": "Итоговые задачи на реальных диаграммах; практикум на данных.",
+   "scored": true
+  },
+  {
+   "node_id": "lat.s21.01-complex-collectors",
+   "format": "карточки",
+   "video_scores": {
+    "time": 0,
+    "invisible": 0,
+    "scale": 0,
+    "counterintuitive": 1,
+    "cause_effect": 0
+   },
+   "template": null,
+   "why": "Определение и классификация без динамики; достаточно карточек, видеоёмкость низкая.",
+   "scored": true
+  },
+  {
+   "node_id": "lat.s21.02-fracture-collector",
+   "format": "длинное видео",
+   "video_scores": {
+    "time": 0,
+    "invisible": 2,
+    "scale": 1,
+    "counterintuitive": 2,
+    "cause_effect": 2
+   },
+   "template": null,
+   "why": "Контринтуитивно: малая емкость при огромном дебите, раскрытость в микронах невидима; ползунок раскрытости с дебитом согласуется с форматом длинного видео как опорой.",
+   "scored": true,
+   "secondary_format": "интерактив"
+  },
+  {
+   "node_id": "lat.s21.03-fracture-standard-gis",
+   "format": "длинное видео",
+   "video_scores": {
+    "time": 1,
+    "invisible": 2,
+    "scale": 0,
+    "counterintuitive": 2,
+    "cause_effect": 2
+   },
+   "template": null,
+   "why": "Отсутствие признаков не означает отсутствия коллектора: контринтуитивное и невидимое для стандартных кривых, причина и следствие; формат длинного видео подходит.",
+   "scored": true
+  },
+  {
+   "node_id": "lat.s21.04-fracture-resistivity-two-solutions",
+   "format": "интерактив",
+   "video_scores": {
+    "time": 1,
+    "invisible": 2,
+    "scale": 0,
+    "counterintuitive": 1,
+    "cause_effect": 2
+   },
+   "template": null,
+   "why": "Тип И: косвенное измерение через смену раствора; интерактив с ползунком минерализации показывает причинно-следственную связь.",
+   "scored": true
+  },
+  {
+   "node_id": "lat.s21.05-fracture-acoustic-sp",
+   "format": "длинное видео",
+   "video_scores": {
+    "time": 1,
+    "invisible": 2,
+    "scale": 1,
+    "counterintuitive": 1,
+    "cause_effect": 2
+   },
+   "template": null,
+   "why": "Невидимые трещины становятся видимыми на ФКД и в САТ; тип И с элементами распознавания, длинное видео с кадрами диаграмм.",
+   "scored": true
+  },
+  {
+   "node_id": "lat.s21.06-vug-fracture-collector",
+   "format": "длинное видео",
+   "video_scores": {
+    "time": 0,
+    "invisible": 1,
+    "scale": 2,
+    "counterintuitive": 1,
+    "cause_effect": 2
+   },
+   "template": null,
+   "why": "Скачок масштаба от трещин до каверн в десятки метров и признаки при бурении; формат длинного видео подходит.",
+   "scored": true
+  },
+  {
+   "node_id": "lat.s21.07-vug-fracture-standard-gis",
+   "format": "интерактив",
+   "video_scores": {
+    "time": 0,
+    "invisible": 1,
+    "scale": 1,
+    "counterintuitive": 2,
+    "cause_effect": 2
+   },
+   "template": null,
+   "why": "Причина и следствие: ползунок размера пустот и расхождение двух кривых пористости; интерактив подходит.",
+   "scored": true
+  },
+  {
+   "node_id": "lat.s21.08-log-impact-log-variant-a",
+   "format": "длинное видео",
+   "video_scores": {
+    "time": 2,
+    "invisible": 2,
+    "scale": 0,
+    "counterintuitive": 1,
+    "cause_effect": 2
+   },
+   "template": null,
+   "why": "Изменение во времени и невидимое: сравнение первого и второго замеров показывает, куда ушла жидкость; рис. 79 даёт опору для длинного видео.",
+   "scored": true
+  },
+  {
+   "node_id": "lat.s21.09-log-impact-log-variant-b",
+   "format": "длинное видео",
+   "video_scores": {
+    "time": 2,
+    "invisible": 2,
+    "scale": 0,
+    "counterintuitive": 1,
+    "cause_effect": 2
+   },
+   "template": null,
+   "why": "Изменение зоны проникновения и сопротивления до и после испытания; причина и следствие, рис. 80 как основа длинного видео.",
+   "scored": true
+  },
+  {
+   "node_id": "lat.s21.10-nmr",
+   "format": "карточки",
+   "video_scores": {
+    "time": 0,
+    "invisible": 1,
+    "scale": 0,
+    "counterintuitive": 1,
+    "cause_effect": 1
+   },
+   "template": null,
+   "why": "Короткий вывод о границе применимости метода из малой емкости; карточки достаточны.",
+   "scored": true
+  },
+  {
+   "node_id": "lat.s21.11-mixed-type-saturation",
+   "format": "текст",
+   "video_scores": {
+    "time": 0,
+    "invisible": 0,
+    "scale": 0,
+    "counterintuitive": 1,
+    "cause_effect": 1
+   },
+   "template": null,
+   "why": "Определение и правило выбора метода, динамики нет; достаточно текста.",
+   "scored": true
+  },
+  {
+   "node_id": "lat.s21.12-vug-fracture-productivity",
+   "format": "карточки",
+   "video_scores": {
+    "time": 0,
+    "invisible": 0,
+    "scale": 0,
+    "counterintuitive": 0,
+    "cause_effect": 1
+   },
+   "template": null,
+   "why": "Перечень способов с условиями применимости; видеоёмкость низкая, карточки.",
+   "scored": true
+  },
+  {
+   "node_id": "lat.s21.13-problems",
+   "format": "практикум на данных",
+   "video_scores": {
+    "time": 0,
+    "invisible": 0,
+    "scale": 0,
+    "counterintuitive": 0,
+    "cause_effect": 1
+   },
+   "template": null,
+   "why": "Задачи на диаграммах требуют работы с данными, не просмотра.",
+   "scored": true
+  },
+  {
+   "node_id": "lat.s22.01-porosity-kinds-by-method",
+   "format": "карточки",
+   "video_scores": {
+    "time": 0,
+    "invisible": 1,
+    "scale": 0,
+    "counterintuitive": 1,
+    "cause_effect": 1
+   },
+   "template": null,
+   "why": "Сводная таблица метод-вид пористости для быстрой сверки; карточки.",
+   "scored": true
+  },
+  {
+   "node_id": "lat.s22.02-formation-water-resistivity-from-sp",
+   "format": "длинное видео",
+   "video_scores": {
+    "time": 0,
+    "invisible": 1,
+    "scale": 0,
+    "counterintuitive": 1,
+    "cause_effect": 2
+   },
+   "template": null,
+   "why": "Два неизвестных и два замера, графическое пересечение с осью; длинное видео подходит.",
+   "scored": true
+  },
+  {
+   "node_id": "lat.s22.03-porosity-from-undisturbed-resistivity",
+   "format": "длинное видео",
+   "video_scores": {
+    "time": 0,
+    "invisible": 0,
+    "scale": 1,
+    "counterintuitive": 1,
+    "cause_effect": 2
+   },
+   "template": null,
+   "why": "Три шага процедуры с формулой P_п и переходом к k_п; длинное видео.",
+   "scored": true
+  },
+  {
+   "node_id": "lat.s22.04-porosity-from-flushed-zone",
+   "format": "длинное видео",
+   "video_scores": {
+    "time": 0,
+    "invisible": 1,
+    "scale": 0,
+    "counterintuitive": 1,
+    "cause_effect": 2
+   },
+   "template": null,
+   "why": "Каждая поправка меняет P_п; формулу показать пошагово.",
+   "scored": true
+  },
+  {
+   "node_id": "lat.s22.05-q-parameter",
+   "format": "интерактив",
+   "video_scores": {
+    "time": 2,
+    "invisible": 0,
+    "scale": 0,
+    "counterintuitive": 1,
+    "cause_effect": 2
+   },
+   "template": null,
+   "why": "Итерация k_п-q по приближениям удобна как интерактив.",
+   "scored": true
+  },
+  {
+   "node_id": "lat.s22.06-porosity-from-invaded-zone",
+   "format": "длинное видео",
+   "video_scores": {
+    "time": 0,
+    "invisible": 1,
+    "scale": 1,
+    "counterintuitive": 0,
+    "cause_effect": 2
+   },
+   "template": null,
+   "why": "Смесь двух флюидов в порах и формула смеси; длинное видео.",
+   "scored": true
+  },
+  {
+   "node_id": "lat.s22.07-fracture-porosity",
+   "format": "длинное видео",
+   "video_scores": {
+    "time": 1,
+    "invisible": 2,
+    "scale": 0,
+    "counterintuitive": 2,
+    "cause_effect": 2
+   },
+   "template": null,
+   "why": "Две записи и разность сопротивлений открывают скрытую величину; длинное видео.",
+   "scored": true
+  },
+  {
+   "node_id": "lat.s22.08-secondary-porosity",
+   "format": "длинное видео",
+   "video_scores": {
+    "time": 0,
+    "invisible": 2,
+    "scale": 2,
+    "counterintuitive": 2,
+    "cause_effect": 2
+   },
+   "template": null,
+   "why": "Размер полости относительно длины волны решает, видит ли метод вторичную пористость; длинное видео.",
+   "scored": true
+  },
+  {
+   "node_id": "lat.s22.09-crossplot-complex-matrix",
+   "format": "длинное видео",
+   "video_scores": {
+    "time": 0,
+    "invisible": 2,
+    "scale": 1,
+    "counterintuitive": 1,
+    "cause_effect": 2
+   },
+   "template": null,
+   "why": "Две оси разделяют пористость и литологию; построение треугольника глин хорошо показывается анимацией.",
+   "scored": true
+  },
+  {
+   "node_id": "lat.s22.10-example-56-reference-points",
+   "format": "практикум на данных",
+   "video_scores": {
+    "time": 0,
+    "invisible": 0,
+    "scale": 0,
+    "counterintuitive": 0,
+    "cause_effect": 1
+   },
+   "template": null,
+   "why": "Расчёт с опорными точками, который студент пересчитывает; практикум.",
+   "scored": true
+  },
+  {
+   "node_id": "lat.s22.11-porosity-from-sp",
+   "format": "текст",
+   "video_scores": {
+    "time": 0,
+    "invisible": 0,
+    "scale": 0,
+    "counterintuitive": 1,
+    "cause_effect": 1
+   },
+   "template": null,
+   "why": "Короткий метод с одним условием; текст.",
+   "scored": true
+  },
+  {
+   "node_id": "lat.s22.12-problems-112-119",
+   "format": "практикум на данных",
+   "video_scores": {
+    "time": 0,
+    "invisible": 0,
+    "scale": 0,
+    "counterintuitive": 0,
+    "cause_effect": 1
+   },
+   "template": null,
+   "why": "Задачи на расчёт с данными; практикум.",
+   "scored": true
+  },
+  {
+   "node_id": "lat.s22.13-problems-120-123",
+   "format": "практикум на данных",
+   "video_scores": {
+    "time": 0,
+    "invisible": 0,
+    "scale": 0,
+    "counterintuitive": 0,
+    "cause_effect": 1
+   },
+   "template": null,
+   "why": "Расчётные задачи с числами; практикум.",
+   "scored": true
+  },
+  {
+   "node_id": "lat.s23.01-saturation-parameter",
+   "format": "длинное видео",
+   "video_scores": {
+    "time": 0,
+    "invisible": 1,
+    "scale": 0,
+    "counterintuitive": 1,
+    "cause_effect": 2
+   },
+   "template": null,
+   "why": "Тип Ф: смысл отношения сопротивлений и связи с водонасыщением объясняется шаг за шагом; длинное видео оправдано причиной и следствием.",
+   "scored": true
+  },
+  {
+   "node_id": "lat.s23.02-procedure",
+   "format": "практикум на данных",
+   "video_scores": {
+    "time": 0,
+    "invisible": 0,
+    "scale": 0,
+    "counterintuitive": 0,
+    "cause_effect": 2
+   },
+   "template": null,
+   "why": "Тип Пр: порядок действий и входные данные, поэтому нужен практикум на реальных числах.",
+   "scored": true,
+   "secondary_format": "карточки"
+  },
+  {
+   "node_id": "lat.s23.03-layered-clay",
+   "format": "интерактив",
+   "video_scores": {
+    "time": 0,
+    "invisible": 2,
+    "scale": 0,
+    "counterintuitive": 2,
+    "cause_effect": 2
+   },
+   "template": null,
+   "why": "Тип Ф: смысл уравнения через палетку, можно двигать долю глин и шифр кривой; интерактив.",
+   "scored": true,
+   "secondary_format": "текст"
+  },
+  {
+   "node_id": "lat.s23.04-avg-water-resistivity",
+   "format": "карточки",
+   "video_scores": {
+    "time": 0,
+    "invisible": 0,
+    "scale": 0,
+    "counterintuitive": 1,
+    "cause_effect": 0
+   },
+   "template": null,
+   "why": "Короткое правило с условиями применимости; карточки подходят.",
+   "scored": true
+  },
+  {
+   "node_id": "lat.s23.05-neutron-gas-applicability",
+   "format": "шортс",
+   "video_scores": {
+    "time": 0,
+    "invisible": 2,
+    "scale": 0,
+    "counterintuitive": 2,
+    "cause_effect": 2
+   },
+   "template": null,
+   "why": "Контринтуитивный вывод: метод перестаёт работать с глубиной; хорошо подходит шортс.",
+   "scored": true
+  },
+  {
+   "node_id": "lat.s23.06-neutron-gas-formulas",
+   "format": "практикум на данных",
+   "video_scores": {
+    "time": 0,
+    "invisible": 1,
+    "scale": 0,
+    "counterintuitive": 1,
+    "cause_effect": 2
+   },
+   "template": null,
+   "why": "Тип Ф с расчётом: числа подставляются и видна чувствительность; практикум на данных.",
+   "scored": true
+  },
+  {
+   "node_id": "lat.s23.07-three-phase",
+   "format": "длинное видео",
+   "video_scores": {
+    "time": 2,
+    "invisible": 1,
+    "scale": 0,
+    "counterintuitive": 1,
+    "cause_effect": 2
+   },
+   "template": null,
+   "why": "Изменение замеров во времени как опора метода; длинное видео с последовательностью замеров.",
+   "scored": true
+  },
+  {
+   "node_id": "lat.s23.08-problems",
+   "format": "практикум на данных",
+   "video_scores": {
+    "time": 0,
+    "invisible": 0,
+    "scale": 0,
+    "counterintuitive": 0,
+    "cause_effect": 1
+   },
+   "template": null,
+   "why": "Задачи требуют расчёта по числам и диаграммам; практикум на данных.",
+   "scored": true
+  },
+  {
+   "node_id": "lat.s24.01-two-approaches",
+   "format": "текст",
+   "video_scores": {
+    "time": 0,
+    "invisible": 0,
+    "scale": 0,
+    "counterintuitive": 1,
+    "cause_effect": 1
+   },
+   "template": null,
+   "why": "Постановка задачи без динамики; хватает текста.",
+   "scored": true
+  },
+  {
+   "node_id": "lat.s24.02-reference-set",
+   "format": "интерактив",
+   "video_scores": {
+    "time": 0,
+    "invisible": 1,
+    "scale": 1,
+    "counterintuitive": 0,
+    "cause_effect": 1
+   },
+   "template": null,
+   "why": "Схема пласта с контактом, где пересечения окрашиваются по классам; интерактив.",
+   "scored": true
+  },
+  {
+   "node_id": "lat.s24.03-expected-distributions",
+   "format": "длинное видео",
+   "video_scores": {
+    "time": 0,
+    "invisible": 1,
+    "scale": 0,
+    "counterintuitive": 1,
+    "cause_effect": 2
+   },
+   "template": null,
+   "why": "Сближение и расхождение двух распределений по шагам; длинное видео.",
+   "scored": true
+  },
+  {
+   "node_id": "lat.s24.04-variation-coefficient",
+   "format": "карточки",
+   "video_scores": {
+    "time": 0,
+    "invisible": 0,
+    "scale": 0,
+    "counterintuitive": 0,
+    "cause_effect": 0
+   },
+   "template": null,
+   "why": "Короткая формула без динамики.",
+   "scored": true
+  },
+  {
+   "node_id": "lat.s24.05-criteria-table",
+   "format": "карточки",
+   "video_scores": {
+    "time": 0,
+    "invisible": 0,
+    "scale": 0,
+    "counterintuitive": 0,
+    "cause_effect": 1
+   },
+   "template": null,
+   "why": "Сводка критериев удобна как карточка.",
+   "scored": true
+  },
+  {
+   "node_id": "lat.s24.06-efficiency-beta",
+   "format": "интерактив",
+   "video_scores": {
+    "time": 0,
+    "invisible": 1,
+    "scale": 0,
+    "counterintuitive": 1,
+    "cause_effect": 2
+   },
+   "template": null,
+   "why": "Пошаговое построение накопленных кривых; интерактив на примере рис. 86.",
+   "scored": true,
+   "secondary_format": "практикум на данных"
+  },
+  {
+   "node_id": "lat.s24.07-problem-129",
+   "format": "практикум на данных",
+   "video_scores": {
+    "time": 0,
+    "invisible": 0,
+    "scale": 0,
+    "counterintuitive": 0,
+    "cause_effect": 1
+   },
+   "template": null,
+   "why": "Короткий расчёт на числах.",
+   "scored": true
+  },
+  {
+   "node_id": "lat.s24.08-problem-130",
+   "format": "практикум на данных",
+   "video_scores": {
+    "time": 0,
+    "invisible": 0,
+    "scale": 0,
+    "counterintuitive": 0,
+    "cause_effect": 1
+   },
+   "template": null,
+   "why": "Работа с таблицей данных и критериями; практикум.",
+   "scored": true
+  },
+  {
+   "node_id": "lat.s25.01-why-permeability",
+   "format": "текст",
+   "video_scores": {
+    "time": 0,
+    "invisible": 0,
+    "scale": 1,
+    "counterintuitive": 0,
+    "cause_effect": 1
+   },
+   "template": null,
+   "why": "Мотивация без процесса и динамики; достаточно текста.",
+   "scored": true
+  },
+  {
+   "node_id": "lat.s25.02-two-ways",
+   "format": "карточки",
+   "video_scores": {
+    "time": 0,
+    "invisible": 0,
+    "scale": 0,
+    "counterintuitive": 0,
+    "cause_effect": 1
+   },
+   "template": null,
+   "why": "Выбор способа по условиям насыщения; карточки.",
+   "scored": true
+  },
+  {
+   "node_id": "lat.s25.03-resistivity-theory",
+   "format": "длинное видео",
+   "video_scores": {
+    "time": 0,
+    "invisible": 1,
+    "scale": 1,
+    "counterintuitive": 1,
+    "cause_effect": 2
+   },
+   "template": null,
+   "why": "Вывод одной формулы из другой подстановкой; тип Ф, длинное видео.",
+   "scored": true
+  },
+  {
+   "node_id": "lat.s25.04-simplified-and-empirical",
+   "format": "практикум на данных",
+   "video_scores": {
+    "time": 0,
+    "invisible": 0,
+    "scale": 0,
+    "counterintuitive": 1,
+    "cause_effect": 1
+   },
+   "template": null,
+   "why": "Подбор констант объекта и расчёт на числах; практикум.",
+   "scored": true
+  },
+  {
+   "node_id": "lat.s25.05-resistivity-procedure",
+   "format": "интерактив",
+   "video_scores": {
+    "time": 0,
+    "invisible": 0,
+    "scale": 0,
+    "counterintuitive": 2,
+    "cause_effect": 2
+   },
+   "template": null,
+   "why": "Ползунок насыщения показывает занижение kпр; интерактив.",
+   "scored": true
+  },
+  {
+   "node_id": "lat.s25.06-sp-gm-basis",
+   "format": "длинное видео",
+   "video_scores": {
+    "time": 0,
+    "invisible": 1,
+    "scale": 0,
+    "counterintuitive": 2,
+    "cause_effect": 2
+   },
+   "template": null,
+   "why": "Контринтуитивно: связь есть лишь опосредованно, через общий фактор; длинное видео.",
+   "scored": true
+  },
+  {
+   "node_id": "lat.s25.07-sp-gm-procedure",
+   "format": "карточки",
+   "video_scores": {
+    "time": 0,
+    "invisible": 0,
+    "scale": 0,
+    "counterintuitive": 0,
+    "cause_effect": 1
+   },
+   "template": null,
+   "why": "Условия применимости компактно; карточки.",
+   "scored": true
+  },
+  {
+   "node_id": "lat.s25.08-fig87-correlations",
+   "format": "интерактив",
+   "video_scores": {
+    "time": 0,
+    "invisible": 1,
+    "scale": 0,
+    "counterintuitive": 1,
+    "cause_effect": 1
+   },
+   "template": null,
+   "why": "Чтение графика с полосой неопределённости; интерактив.",
+   "scored": true
+  },
+  {
+   "node_id": "lat.s25.09-problems",
+   "format": "практикум на данных",
+   "video_scores": {
+    "time": 0,
+    "invisible": 0,
+    "scale": 0,
+    "counterintuitive": 0,
+    "cause_effect": 1
+   },
+   "template": null,
+   "why": "Расчёт по числам условия; практикум.",
+   "scored": true
+  },
+  {
+   "node_id": "lat.chvi.01-goals-residual-gas",
+   "format": "текст",
+   "video_scores": {
+    "time": 0,
+    "invisible": 2,
+    "scale": 1,
+    "counterintuitive": 2,
+    "cause_effect": 2
+   },
+   "template": null,
+   "why": "Тип М: процесс вытеснения газа фронтом инфильтрации невидим; как текст/карточка допустимо, видеоёмкость средняя.",
+   "scored": true
+  },
+  {
+   "node_id": "lat.chvi.02-total-gas-degassing",
+   "format": "карточки",
+   "video_scores": {
+    "time": 0,
+    "invisible": 1,
+    "scale": 0,
+    "counterintuitive": 1,
+    "cause_effect": 1
+   },
+   "template": null,
+   "why": "Определения параметров без динамики; карточки.",
+   "scored": true
+  },
+  {
+   "node_id": "lat.chvi.03-reduced-gas-dilution",
+   "format": "длинное видео",
+   "video_scores": {
+    "time": 0,
+    "invisible": 1,
+    "scale": 0,
+    "counterintuitive": 1,
+    "cause_effect": 2
+   },
+   "template": null,
+   "why": "Формулы с физическим смыслом разбавления, рис. 88 как данные; длинное видео.",
+   "scored": true
+  },
+  {
+   "node_id": "lat.chvi.04-interpretation-scheme-anomaly",
+   "format": "длинное видео",
+   "video_scores": {
+    "time": 0,
+    "invisible": 1,
+    "scale": 0,
+    "counterintuitive": 1,
+    "cause_effect": 2
+   },
+   "template": null,
+   "why": "Последовательность шагов с поправками, длинное видео уместно.",
+   "scored": true
+  },
+  {
+   "node_id": "lat.chvi.05-component-analysis",
+   "format": "интерактив",
+   "video_scores": {
+    "time": 0,
+    "invisible": 1,
+    "scale": 0,
+    "counterintuitive": 1,
+    "cause_effect": 1
+   },
+   "template": null,
+   "why": "Чтение графика и сравнение с эталонными областями; интерактив.",
+   "scored": true
+  },
+  {
+   "node_id": "lat.chvi.06-residual-content-nomogram",
+   "format": "текст",
+   "video_scores": {
+    "time": 0,
+    "invisible": 0,
+    "scale": 0,
+    "counterintuitive": 0,
+    "cause_effect": 1
+   },
+   "template": null,
+   "why": "Приведение по номограмме; хватает текста.",
+   "scored": true
+  },
+  {
+   "node_id": "lat.chvi.07-distortions-of-gas-logs",
+   "format": "шортс",
+   "video_scores": {
+    "time": 0,
+    "invisible": 2,
+    "scale": 0,
+    "counterintuitive": 2,
+    "cause_effect": 2
+   },
+   "template": null,
+   "why": "Контринтуитивно: нефть без аномалии, вода с большой; шортс.",
+   "scored": true
+  },
+  {
+   "node_id": "lat.chvi.08-practice-problems",
+   "format": "практикум на данных",
+   "video_scores": {
+    "time": 0,
+    "invisible": 0,
+    "scale": 0,
+    "counterintuitive": 0,
+    "cause_effect": 1
+   },
+   "template": null,
+   "why": "Расчёт на диаграмме рис. 88; практикум.",
+   "scored": true
+  }
+ ]
+}

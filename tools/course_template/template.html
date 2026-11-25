@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title><!--TITLE--></title>
+<style>/*STYLE*/</style>
+</head>
+<body>
+<a class="skip" href="#main">К содержанию</a>
+<header class="top">
+  <div class="brand"><b>Курс с доказательствами</b> <span class="meta"><!--BOOK--></span></div>
+  <nav aria-label="Разделы курса" class="nav">
+    <a href="#/path">Путь</a><a href="#/cards">Карточки</a><a href="#/summary">Конспект</a><a href="#/map">Связи</a>
+    <button id="theme" type="button" aria-label="Сменить тему">Тема</button>
+  </nav>
+  <div class="prog" role="progressbar" aria-label="Прогресс курса" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0"><i id="progbar"></i></div>
+  <p class="meta" id="proglbl" aria-live="polite"></p>
+</header>
+<main id="main" tabindex="-1">
+  <section class="view" id="v-path" hidden><h2 tabindex="-1">Путь по главе</h2><div id="pathbox"></div></section>
+  <section class="view" id="v-cards" hidden><h2 tabindex="-1">Карточки</h2>
+    <p class="meta" id="cardinfo"></p>
+    <div id="cardbox"><!--CARDS--></div>
+    <div class="pn"><button id="cflip" type="button">Показать ответ</button><button id="cknow" type="button" disabled>Знаю</button><button id="crep" type="button" disabled>Повторить</button></div>
+    <p><label><input type="checkbox" id="conlyrep"> Только «повторить»</label></p></section>
+  <section class="view" id="v-summary" hidden><h2 tabindex="-1">Конспект</h2><p class="meta noprint">Суть каждого шага и выводы для данных. <button id="print" type="button">Печать / PDF</button></p><!--SUMMARY--></section>
+  <section class="view" id="v-map" hidden><h2 tabindex="-1">Карта связей</h2><p class="meta">Шаг опирается на тех, от кого к нему идёт стрелка. Пунктир: «пример».</p><!--MAP--></section>
+  <!--PAGES-->
+</main>
+<aside id="ev" role="region" aria-label="Источник утверждения" aria-live="polite" hidden></aside>
+<script id="data" type="application/json"><!--DATA--></script>
+<script>/*APP*/</script>
+</body>
+</html>

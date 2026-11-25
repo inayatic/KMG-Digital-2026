@@ -20,3 +20,8 @@ tools/edit-log add <chapter> <минуты> "что"
 ## Чистый эталон (стадия 0)
 `tools/clean_ref.py <chapter>` → `build/<chapter>/clean.md` + `clean-report.json`. Страницы md с OCR-мусором заменяются текстом PDF-слоя (`pdf-text`); у сканов (Кузнецов, Барабошкин) мусорные страницы помечены `FLAG-manual` — сверять вручную. Номера страниц = номера PDF-страниц, не печатные.
 В md есть блоки `---- ━━━ FORMAT n: ...` — это описания рисунков, добавленные моделью, **не текст автора**: цитировать их как книгу нельзя.
+
+## Формат организаторов
+Схемы: `reference/organizers/01_схемы/`. Наш внутренний слой (`build/<ch>/nodes.json`) конвертируется командой `make org CHAPTER=<ch>` в `build/<ch>/org/{layer,coverage,routing}.json`:
+`merge_layer` → `to_organizer_schema` (пробелы пустые, список в `conversion-report.md`) → `apply_patches` (патчи агентов `enrich`: тип трудности по расшифровке организаторов, пороговость, термины, «что ломается», video_scores) → `check_org` (схемы + цитаты на странице исходного md).
+Патчи пишет `tools/prompts/enrich.md` в `build/<ch>/org/patches/<раздел>.json`.
