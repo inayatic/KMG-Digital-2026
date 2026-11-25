@@ -121,7 +121,7 @@ def main():
             seed = ((spec["state_model"].get("parameters") or {}).get("random_seed"))
             if seed is not None: args += ["--seed", str(seed)]
             run(args); model = str(mj)
-        else:
+        elif any(f.get("view_type") == "rock_grid" or f.get("params", {}).get("points") == "model_R" for f in spec["frames"]):
             print(f"ПРЕДУПРЕЖДЕНИЕ: нет модели {sm} в tools/video/models/ (виды с моделью не нарисуются)")
     fr = out / "_frames"; shutil.rmtree(fr, ignore_errors=True)
     if "--preview" in sys.argv:

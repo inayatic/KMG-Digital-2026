@@ -36,3 +36,10 @@ org: arg
 	python3 -I tools/to_organizer_schema.py $(CHAPTER)
 	python3 -I tools/apply_patches.py $(CHAPTER)
 	python3 -I tools/check_org.py $(CHAPTER)
+
+# Ролик: make video CHAPTER=<гл> NODE=<id узла> [FORMAT=short|long]  (стадии с готовым результатом пропускаются; FORCE=1 пересчитывает)
+.PHONY: video
+FORMAT ?= short
+video:
+	@test -n "$(CHAPTER)" -a -n "$(NODE)" || (echo "usage: make video CHAPTER=<name> NODE=<node id> [FORMAT=short|long]"; exit 2)
+	python3 tools/video/pipeline.py $(CHAPTER) $(NODE) --format $(FORMAT)

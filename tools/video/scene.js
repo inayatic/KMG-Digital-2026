@@ -19,8 +19,8 @@ function layout() {
   } else {
     const m = sf.side || 80;
     L = { portrait: false, side: m, x0: m, x1: W - m, chip: { y: 40, h: 56 }, cap: { y: 110, h: 100 },
-      stage: { x: m, y: 230, w: W - 2 * m, h: 500 }, plates: { y: 745, h: 90 },
-      subs: { y: H - 215, h: 170 }, fCap: 54, fSub: 52, fPlate: 36, fChip: 34 };
+      stage: { x: m, y: 225, w: W - 2 * m, h: 560 }, plates: { y: 795, h: 80 },
+      subs: { y: H - 215, h: 170 }, fCap: 54, fSub: 52, fPlate: 32, fChip: 34 };
   }
 }
 
@@ -102,14 +102,14 @@ function drawGrid(stage, p, u, dur) {
   }
   if (p.options) { // вопрос-предсказание: варианты без подсветки
     const oy = y0 + s + 30, ow = (stage.w - 40) / 3;
-    p.options.forEach((t, i) => { rrect(stage.x + i * (ow + 20), oy, ow, 118, 14, '#1A2129', '#4a5560', 3); textBlock(t, stage.x + i * (ow + 20) + 12, oy + 16, ow - 24, 38, col.text, { align: 'center' }); });
+    p.options.forEach((t, i) => { rrect(stage.x + i * (ow + 20), oy, ow, 118, 14, '#1A2129', '#4a5560', 3); textBlock(t, stage.x + i * (ow + 20) + 10, oy + 14, ow - 20, 32, col.text, { align: 'center' }); });
   }
   if (p.timer) { // обратный отсчёт паузы (только таймер, ответа нет)
     const r = 70, cx = stage.x + stage.w - 100, cy = y0 + 70, f = clamp(1 - u / dur, 0, 1);
     ctx.lineWidth = 12; ctx.strokeStyle = '#2d3844'; ctx.beginPath(); ctx.arc(cx, cy, r, 0, Math.PI * 2); ctx.stroke();
     ctx.strokeStyle = col.measurement; ctx.beginPath(); ctx.arc(cx, cy, r, -Math.PI / 2, -Math.PI / 2 + Math.PI * 2 * f); ctx.stroke();
-    rrect(x0 + s / 2 - 220, y0 + s / 2 - 50, 440, 100, 18, 'rgba(15,20,25,0.88)', col.measurement, 4);
-    ctx.fillStyle = col.measurement; ctx.font = `bold 56px ${FONT}`; ctx.textAlign = 'center'; ctx.fillText('Ваш ответ?', x0 + s / 2, y0 + s / 2 + 20);
+    rrect(x0 + s / 2 - 200, y0 + s - 110, 400, 84, 18, 'rgba(15,20,25,0.9)', col.measurement, 4);
+    ctx.fillStyle = col.measurement; ctx.font = `bold 50px ${FONT}`; ctx.textAlign = 'center'; ctx.textBaseline = 'alphabetic'; ctx.fillText('Ваш ответ?', x0 + s / 2, y0 + s - 50);
   }
 }
 
@@ -152,9 +152,9 @@ const VIEWS = {
     ctx.save(); ctx.translate(ax - 70, ay - ah / 2); ctx.rotate(-Math.PI / 2); ctx.fillText(p.ylabel || '', 0, 0); ctx.restore();
     const pts = (p.points === 'model_R' ? MODEL.rho_w.map((r, i) => [r, MODEL.R_rel[i]]) : p.points) || [];
     const X = x => ax + x / xs * aw, Y = y => ay - y / ys * ah;
-    const k = Math.floor(u / 0.5);
+    const k = p.start_progress ? 99 : Math.floor(u / 0.5);
     ctx.strokeStyle = col.measurement; ctx.lineWidth = 6; ctx.beginPath(); pts.forEach((q, i) => { if (i <= k) { i ? ctx.lineTo(X(q[0]), Y(q[1])) : ctx.moveTo(X(q[0]), Y(q[1])); } }); ctx.stroke();
-    pts.forEach((q, i) => { if (i <= k) { ctx.fillStyle = col.measurement; ctx.beginPath(); ctx.arc(X(q[0]), Y(q[1]), 16, 0, 7); ctx.fill(); ctx.fillStyle = col.text; ctx.font = `bold 38px ${FONT}`; ctx.textAlign = 'left'; ctx.textBaseline = 'alphabetic'; ctx.fillText(`${fmt(q[0], 0)}; ${fmt(q[1], 2)}`, X(q[0]) + 24, Y(q[1]) - 18); } });
+    pts.forEach((q, i) => { if (i <= k) { ctx.fillStyle = col.measurement; ctx.beginPath(); ctx.arc(X(q[0]), Y(q[1]), 16, 0, 7); ctx.fill(); ctx.fillStyle = col.text; ctx.font = `bold 38px ${FONT}`; ctx.textAlign = 'left'; ctx.textBaseline = 'alphabetic'; ctx.fillText(`${fmt(q[0], 0)}; ${fmt(q[1], 2)}`, X(q[0]) + 24, Y(q[1]) + 50); } });
     if (p.note) textBlock(p.note, st.x, st.y - 10, st.w, 40, col.muted, { weight: 'normal' });
   },
   ion_surface(st, p, u) {
@@ -167,6 +167,71 @@ const VIEWS = {
     const N = 46; for (let i = 0; i < N; i++) { const rnd = k => { const s = Math.sin(i * 12.9898 + k * 78.233) * 43758.5453; return s - Math.floor(s); }, rx = rnd(1), ry = rnd(2), dens = Math.pow(ry, 3.2), y = wy - 28 - dens * (wy - st.y - 130), x = st.x + 30 + rx * (st.w - 60), a = smooth((u - i * 0.03) / 0.5);
       ctx.globalAlpha = a; ctx.fillStyle = i % 3 === 0 ? '#E8C872' : '#7FB3D5'; ctx.beginPath(); ctx.arc(x, y, 14, 0, 7); ctx.fill(); ctx.fillStyle = '#0F1419'; ctx.font = `bold 22px ${FONT}`; ctx.textAlign = 'center'; ctx.textBaseline = 'middle'; ctx.fillText(i % 3 === 0 ? '−' : '+', x, y + 1); ctx.globalAlpha = 1; }
     if (p.note) textBlock(p.note, st.x, wy + wh + 14, st.w, 38, col.muted, { weight: 'normal' });
+  },
+  split(st, p, u, dur) { // составной кадр: синхронные виды рядом (слева/справа или сверху/снизу)
+    const parts = p.panels || [], gap = 30, horiz = p.direction !== 'vertical', n = parts.length;
+    parts.forEach((q, i) => {
+      const sub = horiz ? { x: st.x + i * (st.w - gap * (n - 1)) / n + i * gap, y: st.y, w: (st.w - gap * (n - 1)) / n, h: st.h }
+                        : { x: st.x, y: st.y + i * (st.h - gap * (n - 1)) / n + i * gap, w: st.w, h: (st.h - gap * (n - 1)) / n };
+      if (q.title) { textBlock(q.title, sub.x, sub.y, sub.w, 34, C().muted, { weight: 'normal', align: 'center' }); sub.y += 44; sub.h -= 44; }
+      ctx.save(); ctx.beginPath(); ctx.rect(sub.x - 4, sub.y - 4, sub.w + 8, sub.h + 8); ctx.clip();
+      const v = VIEWS[q.view_type]; if (v) v(sub, q.params || {}, Math.max(0, u - (q.delay || 0)), dur); ctx.restore();
+    });
+  },
+  plan_bend(st, p, u) { // вид сверху: излучина расширяется — размыв вогнутого (внешнего) берега, отложение на внутреннем (точечная отмель)
+    const col = C(), S = Math.min(st.w / 2 - 20, st.h - 40), cx = st.x + st.w / 2, cy = st.y + st.h - 8, w = 0.2 * S, r0 = 0.6 * S;
+    const k = p.migrate === false ? (p.progress ?? 0) : smooth(u / (p.migrate_s || 4)), dr = k * 0.25 * S;
+    const a0 = Math.PI * 1.02, a1 = Math.PI * 1.98; // дуга в верхней полуплоскости
+    const arc = (r) => { ctx.arc(cx, cy, r, a0, a1); };
+    ctx.fillStyle = '#233326'; ctx.fillRect(st.x, st.y, st.w, st.h); // пойма (условно)
+    const reach = (rin, rout, fill) => { ctx.beginPath(); ctx.arc(cx, cy, rout, a0, a1); ctx.arc(cx, cy, rin, a1, a0, true); ctx.closePath(); ctx.fillStyle = fill; ctx.fill(); };
+    const rin0 = r0 - w / 2, rout0 = r0 + w / 2, rin = rin0 + dr, rout = rout0 + dr;
+    reach(rin0, rin, '#C9A15A'); // отложение на внутреннем берегу (песок, условный цвет)
+    ctx.strokeStyle = '#a9823f'; ctx.lineWidth = 2; for (let r = rin0 + 14; r < rin; r += 22) { ctx.beginPath(); arc(r); ctx.stroke(); }
+    reach(rin, rout, '#2b79b5'); // русло с водой
+    ctx.strokeStyle = '#9fd4ff'; ctx.lineWidth = 5; ctx.setLineDash([26, 26]); ctx.lineDashOffset = -u * 60; ctx.beginPath(); ctx.arc(cx, cy, (rin + rout) / 2, a0, a1); ctx.stroke(); ctx.setLineDash([]);
+    ctx.strokeStyle = '#e57373'; ctx.lineWidth = 4; ctx.setLineDash([12, 10]); ctx.beginPath(); ctx.arc(cx, cy, rout0, a0, a1); ctx.stroke(); ctx.setLineDash([]); // прежний внешний берег
+    if (p.labels !== false) {
+      const al = smooth((u - 0.8) / 0.6), ang = Math.PI * 1.5;
+      ctx.globalAlpha = al; const ox = cx, oy = cy - rout - 8;
+      arrow(ox, oy + 30, ox, oy - 40, '#e57373', 8, 30); textBlock(p.erode_label || 'размыв вогнутого берега', ox + 24, oy - 52, st.w * 0.42, 36, '#e57373', { weight: 'bold' });
+      textBlock(p.deposit_label || 'отложение на внутреннем берегу', cx - rin0 * 0.8, cy - rin0 * 0.55, rin0 * 1.6, 34, '#C9A15A', { weight: 'bold', align: 'center' }); ctx.globalAlpha = 1;
+    }
+    const lx = st.x + 10, ly = st.y + 10; [['#2b79b5', 'русло'], ['#C9A15A', 'отложения'], ['#233326', 'пойма']].forEach(([c, l], i) => { ctx.fillStyle = c; ctx.fillRect(lx, ly + i * 50, 36, 36); ctx.fillStyle = col.text; ctx.font = `34px ${FONT}`; ctx.textAlign = 'left'; ctx.textBaseline = 'middle'; ctx.fillText(l, lx + 50, ly + i * 50 + 20); });
+  },
+  column(st, p, u) { // стратиграфическая колонка снизу вверх; слои из params.layers [{label,color,h,pattern}]
+    const col = C(), L2 = p.layers || [], tot = L2.reduce((s, l) => s + (l.h || 1), 0), cw = Math.min(st.w * 0.38, 380), cx = st.x + (p.left ? 20 : st.w * 0.12), top = st.y + 20, H2 = st.h - 70;
+    let yb = top + H2; const step = p.step || 0.9;
+    L2.forEach((l, i) => {
+      const a = smooth((u - i * step) / 0.6), h = (l.h || 1) / tot * H2 * a; if (a <= 0) { yb -= (l.h || 1) / tot * H2; return; }
+      const y = yb - (l.h || 1) / tot * H2; ctx.fillStyle = l.color || '#888'; ctx.fillRect(cx, y + ((l.h || 1) / tot * H2 - h), cw, h);
+      ctx.save(); ctx.beginPath(); ctx.rect(cx, y + ((l.h || 1) / tot * H2 - h), cw, h); ctx.clip(); ctx.strokeStyle = 'rgba(15,20,25,0.55)'; ctx.fillStyle = 'rgba(15,20,25,0.55)'; ctx.lineWidth = 3;
+      const pat = l.pattern; if (pat === 'gravel') for (let gy = y + 16; gy < y + (l.h || 1) / tot * H2; gy += 30) for (let gx = cx + 16 + ((gy / 30 | 0) % 2) * 14; gx < cx + cw; gx += 32) { ctx.beginPath(); ctx.arc(gx, gy, 9, 0, 7); ctx.stroke(); }
+      if (pat === 'crossbed') for (let gy = y + 8; gy < y + (l.h || 1) / tot * H2; gy += 18) { ctx.beginPath(); ctx.moveTo(cx, gy + 16); ctx.lineTo(cx + cw, gy - 16); ctx.stroke(); }
+      if (pat === 'plane') for (let gy = y + 10; gy < y + (l.h || 1) / tot * H2; gy += 14) { ctx.beginPath(); ctx.moveTo(cx, gy); ctx.lineTo(cx + cw, gy); ctx.stroke(); }
+      if (pat === 'silt') for (let gy = y + 10; gy < y + (l.h || 1) / tot * H2; gy += 16) for (let gx = cx + 8 + ((gy / 16 | 0) % 2) * 8; gx < cx + cw; gx += 16) { ctx.beginPath(); ctx.arc(gx, gy, 2.2, 0, 7); ctx.fill(); }
+      ctx.restore();
+      if (a > 0.9) { ctx.textAlign = 'left'; textBlock(l.label, cx + cw + 30, y + ((l.h || 1) / tot * H2) / 2 - 24, st.x + st.w - (cx + cw + 30), 40, col.text, { weight: 'bold' }); }
+      yb = y;
+    });
+    if (p.axis_label) { const al = smooth((u - L2.length * step) / 0.6); ctx.globalAlpha = al; arrow(cx - 36, top + H2 - 10, cx - 36, top + 20, col.measurement, 8, 30);
+      ctx.save(); ctx.translate(cx - 60, top + H2 / 2); ctx.rotate(-Math.PI / 2); ctx.fillStyle = col.measurement; ctx.font = `bold 30px ${FONT}`; ctx.textAlign = 'center'; ctx.textBaseline = 'middle'; ctx.fillText(p.axis_label, 0, 0); ctx.restore(); ctx.globalAlpha = 1; }
+    if (p.note) textBlock(p.note, st.x, st.y + st.h - 44, st.w, 34, col.muted, { weight: 'normal' });
+  },
+  flood_section(st, p, u) { // разрез долины: русло в центре, поверхность поймы по краям; паводок поднимает воду, осадок оседает из суспензии
+    const col = C(), gy = st.y + st.h * 0.62, bot = st.y + st.h - 10, T = p.period || 8, ph = (u % T) / T, lvl = p.static ? (p.level ?? 0) : Math.sin(Math.PI * Math.min(1, ph / 0.7)) * (ph < 0.7 ? 1 : 0), water = gy - 10 - lvl * st.h * 0.28;
+    ctx.fillStyle = '#16222d'; ctx.fillRect(st.x, st.y, st.w, st.h);
+    const cxm = st.x + st.w / 2, cw = st.w * 0.22, depth = st.h * 0.14;
+    ctx.fillStyle = '#2b79b5'; ctx.beginPath(); ctx.moveTo(st.x, Math.min(water, gy)); ctx.lineTo(st.x + st.w, Math.min(water, gy)); ctx.lineTo(st.x + st.w, gy); ctx.lineTo(st.x, gy); ctx.closePath();
+    if (lvl > 0.02) { ctx.fill(); }
+    const dep = (p.deposit ?? (p.static ? 0 : 0.6 * smooth(u / T))) * 14; // тонкий слой осадка (условно)
+    ctx.fillStyle = '#6b5a45'; ctx.beginPath(); ctx.moveTo(st.x, bot); ctx.lineTo(st.x, gy); ctx.lineTo(cxm - cw / 2, gy); ctx.lineTo(cxm - cw * 0.3, gy + depth); ctx.lineTo(cxm + cw * 0.3, gy + depth); ctx.lineTo(cxm + cw / 2, gy); ctx.lineTo(st.x + st.w, gy); ctx.lineTo(st.x + st.w, bot); ctx.closePath(); ctx.fill();
+    ctx.fillStyle = '#8c7a5e'; ctx.fillRect(st.x, gy - dep, cxm - cw / 2 - st.x, dep); ctx.fillRect(cxm + cw / 2, gy - dep, st.x + st.w - cxm - cw / 2, dep);
+    ctx.fillStyle = '#2b79b5'; ctx.beginPath(); ctx.moveTo(cxm - cw / 2, gy); ctx.lineTo(cxm - cw * 0.3, gy + depth); ctx.lineTo(cxm + cw * 0.3, gy + depth); ctx.lineTo(cxm + cw / 2, gy); ctx.closePath(); ctx.fill();
+    if (lvl > 0.05) for (let i = 0; i < 70; i++) { const rnd = k => { const s = Math.sin(i * 12.9898 + k * 78.233) * 43758.5453; return s - Math.floor(s); }; const x = st.x + rnd(1) * st.w, y0 = water + 8, span = gy - dep - 8 - y0, y = y0 + ((rnd(2) + u * 0.25) % 1) * Math.max(0, span);
+      ctx.fillStyle = 'rgba(210,190,150,0.9)'; ctx.beginPath(); ctx.arc(x, y, 5, 0, 7); ctx.fill(); }
+    ctx.textBaseline = 'top'; textBlock(p.label_flood || 'паводок: осадок оседает из суспензии', st.x + 10, st.y + 10, st.w - 20, 38, col.text, { weight: 'bold' });
+    textBlock('разрез поймы', st.x + 10, st.y + st.h - 50, 400, 34, col.muted, { weight: 'normal' });
   },
   conclusion(st, p, u) {
     const col = C(), a = smooth(u / 0.5), b = smooth((u - 0.4) / 0.5), cy = st.y + 20;
