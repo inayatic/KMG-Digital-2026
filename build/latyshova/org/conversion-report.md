@@ -14,22 +14,14 @@
 - quote_from_unit: 70
 - quote_from_figure_desc: 27
 - data_meaning_missing: 26
+- quote_replaced_by_raw_fragment: 10
 - quote_extended: 7
+- quote_not_in_raw_unfixable: 7
 
-## Цитаты, которых нет в ИСХОДНОМ md (только в нашем clean.md): 16
+## Цитаты, которых нет в ИСХОДНОМ md (только в нашем clean.md): 6
 - lat.s01.30-problems-10-15#c1 (стр. 14)
-- lat.s01.30-problems-10-15#c2 (стр. 14)
 - lat.s01.30-problems-10-15#c3 (стр. 14)
-- lat.s05.11-example-22#c2 (стр. 33)
 - lat.s05.11-example-22#c3 (стр. 33)
-- lat.s05.15-example-24#c2 (стр. 35)
 - lat.s05.15-example-24#c3 (стр. 35)
-- lat.s05.15-example-24#c4 (стр. 35)
-- lat.s05.15-example-24#c5 (стр. 35)
-- lat.s14.10-example-41#c6 (стр. 80)
-- lat.s14.11-two-probe-example-42#c1 (стр. 80)
-- lat.s14.11-two-probe-example-42#c2 (стр. 80)
-- lat.s14.11-two-probe-example-42#c5 (стр. 80)
-- lat.s14.12-problems#c3 (стр. 80)
 - lat.s20.27-problems-101-103#c2 (стр. 104)
 - lat.s20.27-problems-101-103#c3 (стр. 104)

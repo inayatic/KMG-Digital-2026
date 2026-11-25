@@ -107,6 +107,21 @@ for n in nodes:
     r = n.get("route") or route_src.get(n["id"]) or {}
     gaps["routing.video_scores_missing"] += 1
     routes.append({"node_id": n["id"], "format": r.get("format"), "video_scores": {k: 0 for k in ("time", "invisible", "scale", "counterintuitive", "cause_effect")}, "template": None, "why": r.get("why", "")})
+# цитаты, которых нет в ИСХОДНОМ md (страницы, где мы заменили OCR-мусор текстом из PDF): берём наибольший общий кусок из исходного md той же страницы
+from difflib import SequenceMatcher
+rawtxt = next((ROOT / "chapters" / ch).glob("*.md")).read_text(); rp = re.split(r"<!-- page (\d+) -->", rawtxt)
+RP = {int(rp[i]): re.sub(r"\s+", " ", rp[i + 1]) for i in range(1, len(rp), 2)}
+strip = lambda t: re.sub(r"[«»\"'`]", "", t)
+for n in out:
+    for c in n["claims"]:
+        if c["source_kind"] == "figure_description_model": continue
+        page = RP.get(c["page_pdf"], "")
+        if norm(c["quote"]) in norm(page): continue
+        a = strip(re.sub(r"\s+", " ", c["quote"])).lower(); b = strip(page).lower()
+        m = SequenceMatcher(None, a, b, autojunk=False).find_longest_match(0, len(a), 0, len(b))
+        if m.size >= 12:
+            c["quote_original"] = c["quote"]; c["quote"] = strip(page)[m.b:m.b + m.size].strip(); c["needs_scan"] = True; gaps["quote_replaced_by_raw_fragment"] += 1
+        else: c["needs_scan"] = True; gaps["quote_not_in_raw_unfixable"] += 1
 org = B / "org"; org.mkdir(exist_ok=True)
 for name, obj, sch in (("layer", layer, "node"), ("coverage", {"chapter": chap, "rows": cov}, "coverage"), ("routing", {"chapter": chap, "routes": routes}, "routing")):
     json.dump(obj, open(org / f"{name}.json", "w"), ensure_ascii=False, indent=1)

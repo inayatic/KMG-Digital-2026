@@ -24,3 +24,11 @@ $(B)/verify.md: $(B)/nodes.json $(B)/coverage.md $(B)/routing.json
 	$(STAGE_CMD) verify $(CHAPTER)
 out/$(CHAPTER)/index.html: $(B)/verify.md $(B)/routing.json
 	$(STAGE_CMD) course $(CHAPTER)
+
+# Слой в формате организаторов (после стадии nodes/enrich): make org CHAPTER=latyshova
+.PHONY: org
+org: check
+	python3 -I tools/merge_layer.py $(CHAPTER)
+	python3 -I tools/to_organizer_schema.py $(CHAPTER)
+	python3 -I tools/apply_patches.py $(CHAPTER)
+	python3 -I tools/check_org.py $(CHAPTER)
