@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """Видеоконвейер: узел слоя -> паспорт -> сценарий -> верификатор -> озвучка -> кадры -> mp4 -> проверки.
-    python3 tools/video/pipeline.py <chapter> <node_id> [--format short|long] [--max-rounds 3] [--force]
+    python3 tools/video/pipeline.py <chapter> <node_id> [--format short|long] [--max-rounds 3 (или ROUNDS=N)] [--force]
 Каталоги: passports/<video_id>/ (паспорт и сценарий), out/video/<video_id>/ (озвучка, кадры, mp4, checks.json).
 video_id = <node_id c '.'->'-'>-<format>. Стадии с готовым результатом пропускаются (--force или FORCE=1 пересчитывает всё).
 LLM-стадии: claude -p (агенты scenario-writer и verifier), расход пишется в metrics/metrics.csv (стадия video, video_seconds).
@@ -40,7 +40,7 @@ def verdict(report):
 
 
 def main():
-    ch, node = sys.argv[1], sys.argv[2]; fmt = arg("--format", "short"); rounds = int(arg("--max-rounds", 3))
+    ch, node = sys.argv[1], sys.argv[2]; fmt = arg("--format", "short"); rounds = int(arg("--max-rounds", os.environ.get("ROUNDS", 3)))
     vid = node.replace(".", "-") + "-" + fmt
     pd, vd = ROOT / "passports" / vid, ROOT / "out" / "video" / vid; pd.mkdir(parents=True, exist_ok=True); vd.mkdir(parents=True, exist_ok=True)
     tin = tout = 0; usd = 0.0; t0 = time.time()
