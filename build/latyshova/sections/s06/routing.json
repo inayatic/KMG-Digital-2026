@@ -1,0 +1,172 @@
+[
+ {
+  "node": "lat.s06.01-complex-three-unknowns",
+  "format": "длинное видео",
+  "why": "Тип И: причина и следствие (три неизвестных -> три уравнения); короткая сцена с подсчётом уравнений.",
+  "rank": 1,
+  "difficulty": {
+   "primary": "И",
+   "secondary": "Пр"
+  }
+ },
+ {
+  "node": "lat.s06.02-preprocessing-goal",
+  "format": "карточки",
+  "why": "Тип Пр: перечень шагов и целевая величина; шаги затем раскрываются в роликах по узлам 3-9.",
+  "rank": 2,
+  "difficulty": {
+   "primary": "Пр",
+   "secondary": "П"
+  }
+ },
+ {
+  "node": "lat.s06.03-screened-reading-and-scale",
+  "format": "интерактив",
+  "why": "Тип Пр/В: пользователь двигает отсчёт по номограмме; невидимое (поправка) становится видимым.",
+  "rank": 3,
+  "difficulty": {
+   "primary": "Пр",
+   "secondary": "В"
+  }
+ },
+ {
+  "node": "lat.s06.04-screened-corrections-kd-kh-j",
+  "format": "длинное видео",
+  "why": "Тип Ф: причина и следствие, формула смеси с весом j; скачок масштаба от зоны проникновения к показанию.",
+  "rank": 4,
+  "difficulty": {
+   "primary": "Ф",
+   "secondary": "И"
+  }
+ },
+ {
+  "node": "lat.s06.05-induction-scale-limit",
+  "format": "шортс",
+  "why": "Тип М: контринтуитивность (в 1 см шкалы от 50-40 Ом·м до бесконечности); одна картинка с гиперболой.",
+  "rank": 5,
+  "difficulty": {
+   "primary": "М",
+   "secondary": "И"
+  }
+ },
+ {
+  "node": "lat.s06.06-induction-borehole-correction",
+  "format": "длинное видео",
+  "why": "Тип Пр: последовательность шагов с причинно-следственной цепочкой; визуально - вычитание вклада.",
+  "rank": 6,
+  "difficulty": {
+   "primary": "Пр",
+   "secondary": "Ф"
+  }
+ },
+ {
+  "node": "lat.s06.07-induction-skin-effect-scale",
+  "format": "интерактив",
+  "why": "Тип Пр/В: невидимая нелинейная шкала становится видимой; пользователь строит шкалу по кривой.",
+  "rank": 7,
+  "difficulty": {
+   "primary": "Пр",
+   "secondary": "В"
+  }
+ },
+ {
+  "node": "lat.s06.08-thickness-correction-and-final-mix",
+  "format": "длинное видео",
+  "why": "Тип Ф/И: причина и следствие (j и D определяют, на что похож ρ_k0); анимация роста зоны проникновения: ρ_k0 идёт от ρ_n к ρ_m.",
+  "rank": 8,
+  "difficulty": {
+   "primary": "Ф",
+   "secondary": "И"
+  }
+ },
+ {
+  "node": "lat.s06.09-second-scheme-e-series",
+  "format": "карточки",
+  "why": "Тип Пр/Н: короткое уточнение к схеме, отличие в порядке шагов.",
+  "rank": 9,
+  "difficulty": {
+   "primary": "Пр",
+   "secondary": "Н"
+  }
+ },
+ {
+  "node": "lat.s06.10-worked-example-focused-table9",
+  "format": "практикум на данных",
+  "why": "Тип И/Пр: расчёт по табл. 9 и задачи 44-46; сравнение зондов разной глубины даёт флюид.",
+  "rank": 10,
+  "difficulty": {
+   "primary": "И",
+   "secondary": "Пр"
+  }
+ },
+ {
+  "node": "lat.s06.11-microprobes-rzp",
+  "format": "длинное видео",
+  "why": "Тип И: причина и следствие; схема тока через корку в серии и параллельно делает невидимое видимым.",
+  "rank": 11,
+  "difficulty": {
+   "primary": "И",
+   "secondary": "Пр"
+  }
+ },
+ {
+  "node": "lat.s06.12-single-probe-composite-palettes",
+  "format": "интерактив",
+  "why": "Тип Пр/И: пользователь двигает «кальку» по палетке; изменение положения - видимый поиск решения.",
+  "rank": 12,
+  "difficulty": {
+   "primary": "Пр",
+   "secondary": "И"
+  }
+ },
+ {
+  "node": "lat.s06.13-example-31-composite",
+  "format": "практикум на данных",
+  "why": "Тип И/Пр: числа условия и результат; расчёт по шагам.",
+  "rank": 13,
+  "difficulty": {
+   "primary": "И",
+   "secondary": "Пр"
+  }
+ },
+ {
+  "node": "lat.s06.14-two-probe-palettes",
+  "format": "интерактив",
+  "why": "Тип Пр: пользователь ставит точку (ρ_4И1, ρ_БК-3) на палетку и читает ρ_n и D.",
+  "rank": 14,
+  "difficulty": {
+   "primary": "Пр",
+   "secondary": "И"
+  }
+ },
+ {
+  "node": "lat.s06.15-three-probe-palettes",
+  "format": "карточки",
+  "why": "Тип Пр/Н: приборы, составы зондов и ограничение - справочный материал.",
+  "rank": 15,
+  "difficulty": {
+   "primary": "Пр",
+   "secondary": "Н"
+  }
+ },
+ {
+  "node": "lat.s06.16-isoresistive-method",
+  "format": "длинное видео",
+  "why": "Тип Пр: изорезисты - линии, где фокусированный зонд даёт ту же ρ_k, что и градиент-зонд; наложение прямых на палетку.",
+  "rank": 16,
+  "difficulty": {
+   "primary": "Пр",
+   "secondary": "И"
+  }
+ },
+ {
+  "node": "lat.s06.17-example-32-isoresistive-task48",
+  "format": "практикум на данных",
+  "why": "Тип И: расчёт по табл. 10 для 10 интервалов; данные есть, ответов нет.",
+  "rank": 17,
+  "difficulty": {
+   "primary": "И",
+   "secondary": "Пр"
+  }
+ }
+]

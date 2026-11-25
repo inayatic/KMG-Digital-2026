@@ -16,3 +16,4 @@
 9. Не вноси знаний вне книги. Не зашивай названия глав/страниц в логику.
 10. Проверь: python3 -I tools/check_nodes.py build/CHAPTER/sections/KEY/nodes.json build/CHAPTER/sections/KEY/units.json — должно быть errors=0 и uncovered, совпадающий с coverage.md. Исправляй до нуля.
 Верни отчёт ≤10 строк: единиц, узлов, ошибок check_nodes, спорное, что требует ментора.
+11. Рабочие/промежуточные файлы и генераторы клади ТОЛЬКО в свою папку /tmp/claude-0/work-KEY/ (создай её). Общий scratchpad не используй: параллельные агенты затирают файлы друг друга. Пиши только в build/CHAPTER/sections/KEY/.
