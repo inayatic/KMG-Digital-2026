@@ -14,10 +14,10 @@ FORCE = os.environ.get("FORCE") == "1"
 def py(*a):
     subprocess.run(["python3", "-I", *map(str, a)], cwd=ROOT, check=True)
 
-def llm(ch, key, agent, prompt, stage):
+def llm(ch, key, agent, prompt, stage, extra=""):
     """Один вызов агента на раздел. Подстановки CHAPTER/KEY/PREFIX даём строкой перед промптом."""
     text = (ROOT / "tools/prompts" / prompt).read_text()
-    head = f"CHAPTER={ch}; KEY={key}; PREFIX={ch[:3]}.{key}\n\n"
+    head = f"CHAPTER={ch}; KEY={key}; PREFIX={ch[:3]}.{key}\n\n" + extra
     cmd = ["claude", "-p", "--agent", agent, "--output-format", "json", "--permission-mode", "acceptEdits", "--allowedTools", "Read,Write,Edit,Grep,Glob,Bash"]
     if os.environ.get("LLM_MODEL"): cmd += ["--model", os.environ["LLM_MODEL"]]
     r = subprocess.run(cmd, input=head + text, cwd=ROOT, capture_output=True, text=True)
@@ -45,9 +45,25 @@ def metric(ch, stage, nodes, tin, tout, usd):
         if new: w.writerow(HEAD)
         w.writerow([ch, stage, nodes, tin, tout, round(usd, 4), "", "", "", ""])
 
+def repair_cov(ch, rounds=2):
+    """Автоматический ремонт покрытия и целостности: check_cov -> агент по каждому проблемному разделу (до `rounds` раундов)."""
+    tin = tout = 0; usd = 0.0
+    for r in range(rounds):
+        res = subprocess.run(["python3", "-I", "tools/check_cov.py", ch, "--json"], cwd=ROOT, capture_output=True, text=True)
+        bad = json.loads(res.stdout or "{}")
+        if not bad: break
+        print(f"repair_cov раунд {r + 1}: проблемных разделов {len(bad)}: {', '.join(bad)}")
+        def one(k):
+            extra = "ПРОБЛЕМЫ СЕГМЕНТА (check_cov):\n" + "\n".join("- " + x for x in bad[k]) + "\n\n"
+            return llm(ch, k, "layer-extractor", "fix_cov.md", "fix_cov", extra)
+        with ThreadPoolExecutor(int(os.environ.get("JOBS", 4))) as ex: out = list(ex.map(one, bad))
+        tin += sum(o[0] for o in out); tout += sum(o[1] for o in out); usd += sum(o[2] for o in out)
+    return tin, tout, usd
+
 def nodes(ch):
     if not (ROOT / "build" / ch / "sections.json").exists(): py("tools/split_sections.py", ch)
     n, tin, tout, usd = per_section(ch, "layer", "layer-extractor", "extract.md", lambda d: (d / "nodes.json").exists())
+    a, b, c = repair_cov(ch); tin += a; tout += b; usd += c
     py("tools/merge_layer.py", ch)
     cnt = len(json.load(open(ROOT / "build" / ch / "nodes.json")))
     metric(ch, "layer", cnt, tin, tout, usd)

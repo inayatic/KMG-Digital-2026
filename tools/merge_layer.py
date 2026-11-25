@@ -29,7 +29,7 @@ for s in secs:
         routes[r["id"]] = {"format": r["format"], "why": r["why"]}
     for line in (d / "coverage.md").read_text().splitlines():
         c = [x.strip() for x in line.strip().strip("|").split("|")]
-        if len(c) >= 2 and re.fullmatch(r"p\d{3}-\d{2}", c[0]) and not c[-1].startswith("lat."): reasons[c[0]] = c[-1]
+        if len(c) >= 2 and re.fullmatch(r"p\d{3}-\d{2}", c[0]) and not c[-1].lower().startswith(sys.argv[1][:3].lower() + "."): reasons[c[0]] = c[-1]
 ap = root / "adopt.json"  # единицы на границах сегментов: докладываем в узел соседнего сегмента
 for u, a in (json.load(open(ap)).items() if ap.exists() else []):
     tgt = next(n for n in nodes if n["id"] == a["node"])
