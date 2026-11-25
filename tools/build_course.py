@@ -92,8 +92,13 @@ def tex_inline(t):
 SERVICE_SENT = re.compile(r"FORMAT|figure_desc|ocr_note|\bв ролик|\bв ключе|не использовать в (?:роликах|заданиях)|ответы не придум|для ментора|вопрос ментору|узел lat\.", re.I)
 
 
+STEPNUM = {}  # id узла -> номер шага (заполняется в Build.render)
+
+
 def vis(text):
-    """Текст для читателя: без предложений-служебных пометок слоя (в панели источника остаётся оригинал)."""
+    """Текст для читателя: без предложений-служебных пометок слоя (в панели источника остаётся оригинал); ссылки «узел lat.…» -> «шаг N»."""
+    text = re.sub(r"\s*\((?:figure_desc|FORMAT[^)]*)\)", "", text)
+    text = re.sub(r"узел (lat\.[\w.\-]+)", lambda m: f"шаг {STEPNUM[m.group(1)]}" if m.group(1) in STEPNUM else "соответствующий шаг", text)
     parts = re.split(r"(?<=[.!?])\s+", text.strip())
     keep = [x for x in parts if not SERVICE_SENT.search(x)]
     return " ".join(keep) if keep and len(keep) < len(parts) else text
@@ -105,7 +110,7 @@ SERVICE = [(re.compile(r"\s*Не подтверждено книгой,? не и
 def clean_note(t):
     """Служебные формулировки слоя для аудитории: без «не использовать в заданиях и роликах»."""
     for rx, rep in SERVICE: t = rx.sub(rep, t)
-    return t
+    return vis(t)
 
 
 class Build:
@@ -216,7 +221,7 @@ class Build:
         else:  # flow: цепочка утверждений шага
             boxes, y = [], 8
             for i, c in enumerate(n["claims"]):
-                w = " ".join(c["text"].split()[:11]) + ("…" if len(c["text"].split()) > 11 else "")
+                vt = vis(c["text"]); w = " ".join(vt.split()[:11]) + ("…" if len(vt.split()) > 11 else "")
                 ls = textwrap.wrap(w, 40); h = 14 * len(ls) + 12
                 boxes.append(f'<rect x="8" y="{y}" width="344" height="{h}" rx="6" class="box"/>' + "".join(f'<text x="16" y="{y+18+14*j}" class="t">{esc(l)}</text>' for j, l in enumerate(ls))
                              + f'<text x="346" y="{y+h-4}" text-anchor="end" class="t sm">стр. {c["page"]}</text>')
@@ -327,6 +332,7 @@ class Build:
         for n in order:
             steps.append(("node", n))
             if ds and n["id"].split(".")[-1][:2] == ds["after"]: steps.append(("data", ds))
+        STEPNUM.clear(); STEPNUM.update({n["id"]: i for i, (k, n) in enumerate(steps, 1)})
         part_of = {}
         for p in cfg["parts"]:
             for k in p["nodes"]: part_of[s.nid[k]] = p["title"]
