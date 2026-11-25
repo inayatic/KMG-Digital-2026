@@ -43,3 +43,9 @@ FORMAT ?= short
 video:
 	@test -n "$(CHAPTER)" -a -n "$(NODE)" || (echo "usage: make video CHAPTER=<name> NODE=<node id> [FORMAT=short|long]"; exit 2)
 	python3 tools/video/pipeline.py $(CHAPTER) $(NODE) --format $(FORMAT)
+
+# Модуль проверки внешнего пакета (роль C): make review PACKAGE=<путь к package.json> [OUT=<ответ.json>]
+.PHONY: review
+review:
+	@test -n "$(PACKAGE)" || (echo "usage: make review PACKAGE=<package.json> [OUT=<ответ.json>]"; exit 2)
+	python3 -I tools/review_package.py $(PACKAGE) $(OUT)
