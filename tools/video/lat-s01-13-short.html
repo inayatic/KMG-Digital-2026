@@ -1,0 +1,215 @@
+<!doctype html>
+<html><head><meta charset="utf-8"><style>html,body{margin:0;background:#0F1419}canvas{display:block}</style></head>
+<body><canvas id="c" width="1080" height="1920"></canvas>
+<script>
+// Ролик lat-s01-13-short. Кадр = детерминированная функция времени draw(t): только таймлайн (timeline.json) и расчёт модели (sim.json).
+// Данные подставляет render.js через window.DATA = {tl, sim, spec}.
+const W = 1080, H = 1920, SAFE = {top: 220, bottom: 380, side: 70};
+const C = {bg: "#0F1419", panel: "#1A2129", text: "#ECEFF4", muted: "#8A96A3", quartz: "#E8C872", calcite: "#7FB3D5",
+  water: "#3498DB", meas: "#F1C40F", nonwater: "#95A5A6", prov: {"реальные данные": "#27AE60", "симуляция": "#2980B9", "схема": "#8E44AD"}};
+const FONT = "Inter, 'DejaVu Sans', sans-serif";
+const cv = document.getElementById("c"), X = cv.getContext("2d");
+const off = document.createElement("canvas"); off.width = W; off.height = H; const OX = off.getContext("2d");
+let D, GRID, quartzImg, calciteImg;
+
+const clamp = (v, a, b) => Math.max(a, Math.min(b, v));
+const ease = x => { x = clamp(x, 0, 1); return x * x * (3 - 2 * x); };
+const hex = (h, a) => { const n = parseInt(h.slice(1), 16); return `rgba(${n >> 16},${(n >> 8) & 255},${n & 255},${a})`; };
+const mix = (h1, h2, k) => { const a = parseInt(h1.slice(1), 16), b = parseInt(h2.slice(1), 16);
+  const c = s => Math.round(((a >> s) & 255) * (1 - k) + ((b >> s) & 255) * k); return `rgb(${c(16)},${c(8)},${c(0)})`; };
+
+function font(x, px, w = 600) { x.font = `${w} ${px}px ${FONT}`; }
+function wrap(x, text, maxW) { const ws = text.split(" "), lines = []; let cur = "";
+  for (const w of ws) { const t = cur ? cur + " " + w : w; if (x.measureText(t).width > maxW && cur) { lines.push(cur); cur = w; } else cur = t; }
+  if (cur) lines.push(cur); return lines; }
+function textBlock(x, text, cx, y, px, maxW, color = C.text, w = 700, align = "center", lh = 1.18) {
+  font(x, px, w); x.fillStyle = color; x.textAlign = align; x.textBaseline = "top";
+  const ls = wrap(x, text, maxW); ls.forEach((l, i) => x.fillText(l, cx, y + i * px * lh)); return ls.length * px * lh; }
+function pill(x, text, cx, y, px, bg, fg = "#fff", align = "center") {
+  font(x, px, 600); const w = x.measureText(text).width + px * 1.1, h = px * 1.7;
+  const left = align === "left" ? cx : align === "right" ? cx - w : cx - w / 2;
+  x.fillStyle = bg; x.beginPath(); x.roundRect(left, y, w, h, h / 2); x.fill();
+  x.fillStyle = fg; x.textAlign = "left"; x.textBaseline = "middle"; x.fillText(text, left + px * 0.55, y + h / 2 + 1); return w; }
+function panel(x, l, t, w, h, fill = C.panel, stroke = null) { x.fillStyle = fill; x.beginPath(); x.roundRect(l, t, w, h, 22); x.fill();
+  if (stroke) { x.strokeStyle = stroke; x.lineWidth = 4; x.stroke(); } }
+function arrow(x, x0, y0, x1, y1, color, lw = 8) { const a = Math.atan2(y1 - y0, x1 - x0), hs = lw * 3.2;
+  x.strokeStyle = color; x.fillStyle = color; x.lineWidth = lw; x.lineCap = "round";
+  x.beginPath(); x.moveTo(x0, y0); x.lineTo(x1 - Math.cos(a) * hs * 0.8, y1 - Math.sin(a) * hs * 0.8); x.stroke();
+  x.beginPath(); x.moveTo(x1, y1); x.lineTo(x1 - hs * Math.cos(a - 0.45), y1 - hs * Math.sin(a - 0.45));
+  x.lineTo(x1 - hs * Math.cos(a + 0.45), y1 - hs * Math.sin(a + 0.45)); x.closePath(); x.fill(); }
+
+// ---------- сетка породы ----------
+const G = {cell: 10, n: 64}; G.size = G.cell * G.n; G.left = (W - G.size) / 2; G.top = 540;
+function grainLayer(color) { // зёрна как картинка (один раз): светлая кромка у порового канала
+  const c = document.createElement("canvas"); c.width = G.size; c.height = G.size; const x = c.getContext("2d"); const n = G.n, s = G.cell;
+  for (let i = 0; i < n; i++) for (let j = 0; j < n; j++) { if (GRID.pore[i][j]) continue;
+    const shade = 0.82 + 0.18 * ((GRID.owner[i][j] * 37) % 11) / 10; // зёрна чуть разного тона: видно, что это отдельные зёрна
+    x.fillStyle = mix("#000000", color, shade); x.fillRect(j * s, i * s, s + 0.5, s + 0.5); }
+  return c; }
+function drawRock(x, o) { // o: {grainK (0 кварц..1 кальцит), water (0..1), current (0..1), speed, nonwater (0..1), dim}
+  const s = G.cell, n = G.n, L = G.left, T = G.top;
+  x.save(); x.globalAlpha = o.dim ?? 1;
+  x.fillStyle = "#0b1a26"; x.fillRect(L, T, G.size, G.size);
+  for (let i = 0; i < n; i++) for (let j = 0; j < n; j++) { if (!GRID.pore[i][j]) continue;
+    let a = 0.28 + 0.22 * (o.water ?? 1); if (o.current) a += 0.5 * o.current * GRID.jmag[i][j];
+    if (o.nonwater && GRID.dry[i][j]) { x.fillStyle = hex(C.nonwater, 0.35 + 0.4 * o.nonwater); }
+    else x.fillStyle = hex(C.water, clamp(a, 0, 1));
+    x.fillRect(L + j * s, T + i * s, s + 0.5, s + 0.5); }
+  if (o.nonwater) { x.save(); x.beginPath(); for (let i = 0; i < n; i++) for (let j = 0; j < n; j++) if (GRID.pore[i][j] && GRID.dry[i][j]) x.rect(L + j * s, T + i * s, s, s);
+    x.clip(); x.strokeStyle = hex("#ECEFF4", 0.55 * o.nonwater); x.lineWidth = 2;
+    for (let k = -G.size; k < G.size; k += 14) { x.beginPath(); x.moveTo(L + k, T + G.size); x.lineTo(L + k + G.size, T); x.stroke(); } x.restore(); }
+  const k = o.grainK ?? 0; if (k < 1) { x.globalAlpha = (o.dim ?? 1) * 1; x.drawImage(quartzImg, L, T); }
+  if (k > 0) { x.globalAlpha = (o.dim ?? 1) * k; x.drawImage(calciteImg, L, T); }
+  x.globalAlpha = o.dim ?? 1;
+  if (o.current) { // заряды движутся по путям тока; скорость ∝ току I ∝ 1/ρв (расчёт)
+    const lines = GRID.lines; x.fillStyle = hex("#BFE6FF", o.current);
+    lines.forEach((pts, li) => { const len = pts.length, per = 5;
+      for (let q = 0; q < per; q++) { const pos = ((o.phase * o.speed * 9 + li * 7.3 + q * len / per) % len + len) % len;
+        const a = Math.floor(pos), b = Math.min(a + 1, len - 1), f = pos - a;
+        const px = pts[a][0] * (1 - f) + pts[b][0] * f, py = pts[a][1] * (1 - f) + pts[b][1] * f;
+        x.beginPath(); x.arc(L + px * s, T + py * s, 5, 0, 7); x.fill(); } }); }
+  // электроды
+  x.fillStyle = "#C0392B"; x.fillRect(L - 26, T, 18, G.size); x.fillStyle = "#34495E"; x.fillRect(L + G.size + 8, T, 18, G.size);
+  font(x, 34, 700); x.fillStyle = C.text; x.textAlign = "center"; x.textBaseline = "bottom";
+  x.fillText("+", L - 17, T - 6); x.fillText("−", L + G.size + 17, T - 6);
+  x.restore(); }
+function rockLegend(x, y, grainName) {
+  font(x, 32, 500); x.textAlign = "left"; x.textBaseline = "middle"; let cx = SAFE.side + 10;
+  const item = (col, label) => { x.fillStyle = col; x.fillRect(cx, y - 14, 28, 28); x.fillStyle = C.muted; x.fillText(label, cx + 40, y); cx += 40 + x.measureText(label).width + 40; };
+  item(grainName === "кальцит" ? C.calcite : C.quartz, `зёрна (${grainName})`); item(C.water, "вода в порах"); }
+
+// ---------- оформление кадра ----------
+function chrome(x, f, extraPlates) {
+  pill(x, f.label, SAFE.side, SAFE.top - 110, 30, C.prov[f.label], "#fff", "left");
+  font(x, 26, 500); x.fillStyle = C.muted; x.textAlign = "right"; x.textBaseline = "middle";
+  x.fillText("не в масштабе: зёрна и поры схематичны, сетка 64×64", W - SAFE.side, SAFE.top - 84);
+  if (f.class === "B") pill(x, "условные числа", W - SAFE.side, SAFE.top - 50, 26, "#2C3E50", C.text, "right");
+  (extraPlates || []).forEach((p, i) => pill(x, p, SAFE.side, SAFE.top - 50 + i * 50, 26, "#2C3E50", C.text, "left"));
+  textBlock(x, f.caption, W / 2, SAFE.top + 30, 68, W - 2 * SAFE.side, C.text, 800); }
+function subtitles(x, t) {
+  const s = D.tl.subtitles.find(s => t >= s.t0 && t < s.t1); if (!s) return;
+  font(x, 46, 600); const ls = wrap(x, s.text, W - 2 * SAFE.side - 60).slice(0, 2);
+  const y = H - SAFE.bottom - ls.length * 58 - 20; x.fillStyle = "rgba(0,0,0,0.72)";
+  x.beginPath(); x.roundRect(SAFE.side, y - 16, W - 2 * SAFE.side, ls.length * 58 + 28, 18); x.fill();
+  x.fillStyle = "#fff"; x.textAlign = "center"; x.textBaseline = "top"; ls.forEach((l, i) => x.fillText(l, W / 2, y + i * 58)); }
+
+// ---------- виды ----------
+const R_REL = () => D.sim.R_rel;
+const fmtR = v => v.toFixed(2).replace(".", ",");
+const V = {
+  rock_grid_idle(x, f, u) { drawRock(x, {water: 1}); rockLegend(x, G.top + G.size + 36, "кварц"); },
+  mineral_chips(x, f, u) { drawRock(x, {water: 1, dim: 0.35});
+    const names = [["кварц", C.quartz], ["полевой шпат", "#D9A6A0"], ["слюда", "#B8B8C8"], ["кальцит", C.calcite]];
+    names.forEach(([nm, col], i) => { const k = ease((u * 4.2 - i * 0.75)); if (k <= 0) return;
+      const w = 440, h = 150, l = i % 2 ? W / 2 + 10 : W / 2 - w - 10, t = G.top + 120 + Math.floor(i / 2) * (h + 30) + (1 - k) * 40;
+      x.save(); x.globalAlpha = k; panel(x, l, t, w, h, C.panel, col); x.fillStyle = col; x.beginPath(); x.arc(l + 70, t + h / 2, 36, 0, 7); x.fill();
+      textBlock(x, nm, l + 130, t + h / 2 - 24, 44, w - 150, C.text, 700, "left"); x.restore(); });
+    const k = ease(u * 3 - 1.2); x.globalAlpha = k;
+    textBlock(x, "скелет породы — зёрна минералов", W / 2, G.top + 560, 46, 900, C.text, 600);
+    textBlock(x, "цвета условные", W / 2, G.top + 630, 34, 900, C.muted, 500); x.globalAlpha = 1; },
+  log_bar_book_range(x, f, u, occ) {
+    const l = SAFE.side + 40, r = W - SAFE.side - 40, y = G.top + 380, e0 = 0, e1 = 18, X0 = e => l + (e - e0) / (e1 - e0) * (r - l);
+    textBlock(x, "удельное сопротивление: как сильно материал мешает току", W / 2, G.top + 40, 40, 900, C.muted, 500);
+    textBlock(x, "(общее определение, не из книги)", W / 2, G.top + 140, 30, 900, C.muted, 400);
+    x.strokeStyle = C.muted; x.lineWidth = 4; x.beginPath(); x.moveTo(l, y); x.lineTo(r, y); x.stroke();
+    for (let e = 0; e <= 18; e += 3) { const px = X0(e); x.beginPath(); x.moveTo(px, y - 14); x.lineTo(px, y + 14); x.stroke();
+      font(x, 34, 600); x.fillStyle = C.text; x.textAlign = "center"; x.textBaseline = "top"; x.fillText("10", px - 8, y + 64);
+      font(x, 22, 600); x.fillText(String(e), px + 20, y + 58); }
+    textBlock(x, "Ом·м, логарифмическая шкала", W / 2, y + 120, 32, 900, C.muted, 500);
+    const k = occ === 0 ? ease(u * 2.5) : 1, a = X0(7), b = X0(7 + 8 * k);
+    x.fillStyle = hex(C.meas, 0.9); x.beginPath(); x.roundRect(a, y - 48, Math.max(b - a, 1), 96, 12); x.fill();
+    if (k > 0.95) { font(x, 40, 800); x.fillStyle = "#111"; x.textAlign = "center"; x.textBaseline = "middle"; x.fillText("10⁷ … 10¹⁵", (a + b) / 2, y); }
+    textBlock(x, "кварц, полевой шпат, слюда, кальцит (стр. 9)", (a + X0(15)) / 2, y - 130, 32, 560, C.meas, 600);
+    if (occ === 1) { const k2 = ease(u * 3); x.globalAlpha = k2;
+      panel(x, SAFE.side + 60, y + 200, W - 2 * SAFE.side - 120, 170, C.panel, C.meas);
+      textBlock(x, "«хорошие и первоклассные технические изоляторы»", W / 2, y + 230, 42, 820, C.text, 700);
+      textBlock(x, "книга, стр. 9", W / 2, y + 325, 28, 820, C.muted, 500); x.globalAlpha = 1; } },
+  rock_grid_idle_prediction(x, f, u, occ, t) { drawRock(x, {water: 1, dim: 0.55});
+    const opts = ["А. по зёрнам минералов", "Б. по воде в порах", "В. ток не идёт"];
+    opts.forEach((o, i) => { const t0 = G.top + 150 + i * 190; panel(x, SAFE.side + 60, t0, W - 2 * SAFE.side - 120, 150, "rgba(26,33,41,0.94)", "#3B4754");
+      textBlock(x, o, W / 2, t0 + 48, 50, 800, C.text, 700); });
+    if (occ === 1) { const left = clamp(f.t_end - t, 0, 2); const cx = W / 2, cy = G.top + 760;
+      x.strokeStyle = "#3B4754"; x.lineWidth = 16; x.beginPath(); x.arc(cx, cy, 70, 0, 7); x.stroke();
+      x.strokeStyle = C.meas; x.beginPath(); x.arc(cx, cy, 70, -Math.PI / 2, -Math.PI / 2 + 2 * Math.PI * left / 2); x.stroke();
+      font(x, 52, 800); x.fillStyle = C.text; x.textAlign = "center"; x.textBaseline = "middle"; x.fillText(left.toFixed(1).replace(".", ","), cx, cy); } },
+  rock_grid_current(x, f, u, occ, t) {
+    // occ 0: ответ (ρв=1); occ 1: ρв=1 → ρв=2; occ 2: после смены минерала (кальцит, ρв=2)
+    let rw = 1, gk = 0; if (occ === 1) rw = u < 0.45 ? 1 : 2; if (occ === 2) { rw = 2; gk = 1; }
+    const cur = occ === 0 ? ease(u * 2.5) : 1;
+    drawRock(x, {water: 1, current: cur, speed: 1 / rw, phase: t, grainK: gk});
+    rockLegend(x, G.top + G.size + 36, gk ? "кальцит" : "кварц");
+    if (occ === 0) { const k = ease(u * 2 - 0.5); x.globalAlpha = k;
+      pill(x, "в зёрнах ток = 0", W / 2, G.top + G.size + 80, 36, "#2C3E50", C.text); x.globalAlpha = 1; }
+    if (occ >= 1) { const R = R_REL()[String(rw)];
+      panel(x, SAFE.side + 40, G.top + G.size + 80, W - 2 * SAFE.side - 80, 110, C.panel, C.meas);
+      textBlock(x, `ρв = ${rw} усл. ед.   →   R = ${fmtR(R)} усл. ед.`, W / 2, G.top + G.size + 110, 44, 900, C.meas, 800); }
+    if (occ === 2) { const k = ease(u * 2.5);
+      x.globalAlpha = k; textBlock(x, "вход модели: проводимость скелета = 0 (допущение книги), не результат расчёта", W / 2, G.top - 78, 26, 900, C.muted, 500); x.globalAlpha = 1; } },
+  signal_to_conclusion(x, f, u, occ) {
+    const sets = [
+      [["наблюдение", "10⁷–10¹⁵ Ом·м у минералов", C.meas], ["допущение книги", "скелет — изолятор: сопротивление «бесконечно велико»", C.text]],
+      [["сопротивление породы", "водонасыщенной, неглинистой", C.meas], ["определяют", "вода и пористость, а не минералы", C.text]],
+      [["условие", "неглинистая порода; поры полны воды", C.meas], null]][occ];
+    const box = (b, t, k) => { x.globalAlpha = k; panel(x, SAFE.side + 40, t, W - 2 * SAFE.side - 80, 290, C.panel, b[2]);
+      textBlock(x, b[0], W / 2, t + 36, 34, 860, C.muted, 600); textBlock(x, b[1], W / 2, t + 90, 46, 860, C.text, 800); x.globalAlpha = 1; };
+    box(sets[0], G.top + 60, ease(u * 3));
+    if (sets[1]) { const k = ease(u * 3 - 1); x.globalAlpha = k; arrow(x, W / 2, G.top + 370, W / 2, G.top + 470, C.meas); box(sets[1], G.top + 490, k); }
+    else { x.globalAlpha = ease(u * 3 - 0.6); textBlock(x, "условие ролика, из стр. 10 (у глинистых пород существенна адсорбция)", W / 2, G.top + 360, 32, 860, C.muted, 500); x.globalAlpha = 1; }
+    if (occ === 0) { x.globalAlpha = ease(u * 3 - 1.5); textBlock(x, "книга, стр. 9", W / 2, G.top + 800, 30, 860, C.muted, 500); x.globalAlpha = 1; } },
+  proportionality_plot(x, f, u) {
+    const l = SAFE.side + 130, b = G.top + 600, w = 760, h = 540, sx = w / 3.5, sy = h / 3.5;
+    x.strokeStyle = C.muted; x.lineWidth = 4; x.beginPath(); x.moveTo(l, b - h); x.lineTo(l, b); x.lineTo(l + w, b); x.stroke();
+    font(x, 32, 600); x.fillStyle = C.text; x.textAlign = "center"; x.textBaseline = "top";
+    for (let v = 1; v <= 3; v++) { x.fillText(String(v), l + v * sx, b + 14); x.textAlign = "right"; x.textBaseline = "middle"; x.fillText(String(v), l - 16, b - v * sy); x.textAlign = "center"; x.textBaseline = "top"; }
+    x.fillText("ρв воды, усл. ед.", l + w / 2, b + 64); x.save(); x.translate(l - 80, b - h / 2); x.rotate(-Math.PI / 2); x.fillText("R породы, усл. ед.", 0, 0); x.restore();
+    const pts = [1, 2, 3].map(v => [v, R_REL()[String(v)]]); const k = ease(u * 1.6);
+    x.setLineDash([14, 12]); x.strokeStyle = hex(C.meas, 0.6); x.lineWidth = 4; x.beginPath(); x.moveTo(l, b); x.lineTo(l + 3.3 * sx * k, b - 3.3 * sy * k); x.stroke(); x.setLineDash([]);
+    pts.forEach(([v, R], i) => { const kk = ease(u * 4 - i * 0.8); if (kk <= 0) return; x.globalAlpha = kk; x.fillStyle = C.meas;
+      x.beginPath(); x.arc(l + v * sx, b - R * sy, 16, 0, 7); x.fill(); font(x, 30, 700); x.fillStyle = C.text; x.textAlign = "left"; x.textBaseline = "bottom";
+      x.fillText(`R = ${fmtR(R)}`, l + v * sx + 24, b - R * sy - 10); x.globalAlpha = 1; });
+    pill(x, "при 100% заполнении пор водой (стр. 9)", W / 2, b + 120, 30, "#2C3E50", C.text);
+    x.globalAlpha = ease(u * 3 - 1.5); pill(x, "множитель — пористость (следующий ролик)", W / 2, b + 185, 30, "#2C3E50", C.text); x.globalAlpha = 1; },
+  grain_swap(x, f, u, occ, t) { const k = ease((u - 0.15) * 2.2); drawRock(x, {water: 1, current: 1, speed: 0.5, phase: t, grainK: k});
+    rockLegend(x, G.top + G.size + 36, k < 0.5 ? "кварц" : "кальцит");
+    pill(x, "сетка и поры те же; цвета условные", W / 2, G.top + G.size + 80, 32, "#2C3E50", C.text); },
+  pores_saturated(x, f, u) { drawRock(x, {water: 1}); rockLegend(x, G.top + G.size + 36, "кварц");
+    pill(x, "в большинстве случаев (стр. 9)", W / 2, G.top + G.size + 80, 32, "#2C3E50", C.text); },
+  pores_exception(x, f, u) { const k = ease(u * 2.5); drawRock(x, {water: 1, nonwater: k});
+    font(x, 32, 500); x.textAlign = "left"; x.textBaseline = "middle"; x.fillStyle = hex(C.nonwater, 1); x.fillRect(SAFE.side + 10, G.top + G.size + 22, 28, 28);
+    x.fillStyle = C.muted; x.fillText("часть пор не заполнена водой", SAFE.side + 50, G.top + G.size + 36);
+    const k2 = ease(u * 3 - 1); x.globalAlpha = k2;
+    pill(x, "выше уровня грунтовых вод", W / 2, G.top + G.size + 80, 32, "#2C3E50", C.text);
+    pill(x, "нефтяные и газовые коллекторы", W / 2, G.top + G.size + 140, 32, "#2C3E50", C.text); x.globalAlpha = 1; },
+  clay_adsorption_scheme(x, f, u) { // крупно: поверхность твёрдой фазы и ионы у неё; без чисел
+    const t0 = G.top + 20; panel(x, SAFE.side + 20, t0, W - 2 * SAFE.side - 40, 600, "#0b1a26");
+    x.fillStyle = mix("#000000", "#B9A27A", 0.9); x.beginPath(); x.moveTo(SAFE.side + 20, t0 + 600);
+    for (let i = 0; i <= 40; i++) { const px = SAFE.side + 20 + i * (W - 2 * SAFE.side - 40) / 40; x.lineTo(px, t0 + 430 + 18 * Math.sin(i * 0.9)); }
+    x.lineTo(W - SAFE.side - 20, t0 + 600); x.closePath(); x.fill();
+    textBlock(x, "твёрдая фаза (условно)", W / 2, t0 + 520, 34, 800, "#2a2116", 700);
+    x.fillStyle = hex(C.water, 0.35); x.fillRect(SAFE.side + 20, t0, W - 2 * SAFE.side - 40, 380);
+    textBlock(x, "поровая вода", W / 2, t0 + 30, 34, 800, C.text, 600);
+    for (let i = 0; i < 18; i++) { const k = ease(u * 3 - i * 0.08); if (k <= 0) continue; const px = SAFE.side + 70 + i * 50, py = t0 + 395 + 18 * Math.sin((px - SAFE.side - 20) / ((W - 2 * SAFE.side - 40) / 40) * 0.9) - 36 * k;
+      x.globalAlpha = k; x.fillStyle = i % 2 ? "#E74C3C" : "#F1C40F"; x.beginPath(); x.arc(px, py, 15, 0, 7); x.fill();
+      font(x, 22, 800); x.fillStyle = "#111"; x.textAlign = "center"; x.textBaseline = "middle"; x.fillText(i % 2 ? "+" : "−", px, py + 1); x.globalAlpha = 1; }
+    x.globalAlpha = ease(u * 3 - 1.2);
+    textBlock(x, "адсорбция: ионы на поверхности твёрдой фазы (книга, стр. 10)", W / 2, t0 + 640, 38, 900, C.text, 600);
+    textBlock(x, "в модели ролика не учитывается; чисел для глин нет", W / 2, t0 + 750, 30, 900, C.muted, 500); x.globalAlpha = 1; },
+  final_hold(x, f, u, occ, t) { drawRock(x, {water: 1, current: 1, speed: 0.5, phase: t, grainK: 1, dim: 0.8});
+    pill(x, "ρв = 2 усл. ед.", W / 2, G.top + G.size + 30, 32, "#2C3E50", C.text);
+    pill(x, "вопрос на перенос", W / 2, G.top + G.size + 92, 32, C.meas, "#111"); },
+};
+
+function frameAt(t) { const fs = D.tl.frames; let i = fs.findIndex(f => t >= f.t && t < f.t_end); if (i < 0) i = t < fs[0].t ? 0 : fs.length - 1; return i; }
+function occurrence(i) { const v = D.tl.frames[i].view; let k = 0; for (let j = 0; j < i; j++) if (D.tl.frames[j].view === v) k++; return k; }
+function drawFrame(x, i, t) { const f = D.tl.frames[i]; const u = clamp((t - f.t) / (f.t_end - f.t), 0, 1);
+  x.fillStyle = C.bg; x.fillRect(0, 0, W, H); V[f.view](x, f, u, occurrence(i), t); chrome(x, f); }
+window.draw = function (t) {
+  const i = frameAt(t), f = D.tl.frames[i], fade = 0.3;
+  if (i > 0 && t - f.t < fade) { drawFrame(X, i - 1, t); drawFrame(OX, i, t); X.globalAlpha = ease((t - f.t) / fade); X.drawImage(off, 0, 0); X.globalAlpha = 1; }
+  else drawFrame(X, i, t);
+  subtitles(X, t); };
+window.init = function (data) { D = data; GRID = data.sim; const n = GRID.n;
+  // «сухие» поры для кадра-исключения: связные куски верхней части среза (детерминированно по номеру зерна-соседа)
+  GRID.dry = GRID.pore.map((row, i) => row.map((p, j) => p && i < n * 0.55 && (GRID.owner[i][j] % 3 === 0)));
+  quartzImg = grainLayer(C.quartz); calciteImg = grainLayer(C.calcite); return true; };
+</script></body></html>
