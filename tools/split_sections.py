@@ -35,9 +35,9 @@ for i, u in enumerate(U):
     key = None
     if u["type"] == "heading":
         t = u["text"].strip()
-        m = re.match(r"^#+\s*Глава\s+(\S+)", t)
+        m = re.match(r"^#+\s*Глава\s+([IVXLC]+|\d+)\b\.?", t, re.I)  # «Глава 1», «ГЛАВА I.»
         if m and not any(re.match(r"^#+\s*§", v["text"].strip()) for v in U[i + 1:i + 13] if v["type"] == "heading"):
-            key = f"ch{m.group(1)}"
+            key = f"ch{m.group(1)}"  # цифра как в книге (ключи прежних слоёв не меняются)
         for pat, f in KEY:
             mm = re.match(pat, t, re.I)
             if mm: key = f(mm); break
@@ -77,12 +77,13 @@ final = []
 for key, us in segs:
     final += split_big(key, us)
 
-idx = []
+idx = []; DRY = os.environ.get("SPLIT_DRY")  # SPLIT_DRY=1: только напечатать нарезку, ничего не писать
 for k, us in final:
-    d = root / "sections" / k; d.mkdir(parents=True, exist_ok=True)
-    json.dump(us, open(d / "units.json", "w"), ensure_ascii=False, indent=1)
+    if not DRY:
+        d = root / "sections" / k; d.mkdir(parents=True, exist_ok=True)
+        json.dump(us, open(d / "units.json", "w"), ensure_ascii=False, indent=1)
     idx.append({"key": k, "units": len(us), "pages": [us[0]["page"], us[-1]["page"]], "chars": chars(us)})
 assert sum(i["units"] for i in idx) == N, "единицы потеряны или продублированы"
 assert len({i["key"] for i in idx}) == len(idx), "дубль ключа раздела"
-json.dump(idx, open(root / "sections.json", "w"), ensure_ascii=False, indent=1)
+if not DRY: json.dump(idx, open(root / "sections.json", "w"), ensure_ascii=False, indent=1)
 for i in idx: print(i["key"], i["units"], i["pages"], i["chars"])
