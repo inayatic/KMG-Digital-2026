@@ -480,7 +480,7 @@ class Build:
             nid = s.nid.get(t["node"], t["node"]); n = s.byid[nid]; t = dict(t, claim=(t.get("claim") or "").split("#")[-1] or None)  # fix от verifier может прийти с полным id узла и «узел#утв.»
             full = lambda r: next((x["id"] for x in n["claims"] if x["id"] == r or x["id"].endswith(("." + r, "-" + r))), r)  # в слое id утверждений бывает «c1» или «<узел>.c1»
             t = dict(t, claim=full(t["claim"]) if t.get("claim") else None, basis=[full(x) for x in t.get("basis") or []])
-            if t.get("type") == "calc2":  # расчёт с другими числами: формула в утверждении claim, числа новые, ответ пересчитывается сборщиком
+            if t.get("type") == "calc2" or (t.get("type") == "calc" and t.get("expr")):  # расчёт с другими числами: формула в утверждении claim, числа новые, ответ пересчитывается сборщиком
                 ex = t.get("expr", ""); okc = bool(re.fullmatch(r"[0-9.,+\-*/() ]+", ex)) and bool(t.get("claim"))
                 try: val = eval(ex.replace(",", "."), {"__builtins__": {}}) if okc else None
                 except Exception: val = None
