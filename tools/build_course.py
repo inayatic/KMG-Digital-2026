@@ -57,7 +57,8 @@ GREEK = {"rho": "ρ", "Delta": "Δ", "delta": "δ", "phi": "φ", "varphi": "φ",
          "mu": "μ", "alpha": "α", "beta": "β", "gamma": "γ", "eta": "η", "tau": "τ", "nu": "ν", "epsilon": "ε", "varepsilon": "ε", "theta": "θ", "kappa": "κ",
          "xi": "ξ", "omega": "ω", "Omega": "Ω", "psi": "ψ", "chi": "χ", "zeta": "ζ", "cdot": "·", "times": "×", "div": "÷", "le": "≤", "leq": "≤", "ge": "≥", "geq": "≥",
          "approx": "≈", "sim": "∼", "ne": "≠", "pm": "±", "infty": "∞", "to": "→", "rightarrow": "→", "Rightarrow": "⇒", "partial": "∂", "circ": "°", "prime": "′",
-         "ldots": "…", "quad": " ", "qquad": " ", "left": "", "right": ""}
+         "ldots": "…", "quad": " ", "qquad": " ", "left": "", "right": "",
+         **{k: k for k in ("max", "min", "ln", "lg", "log", "exp", "sin", "cos", "tg", "ctg", "arctg", "lim", "const")}, "tan": "tg", "sum": "Σ", "int": "∫", "cdots": "…", "dots": "…", "mathrm": "", "boldsymbol": ""}
 SUP = {"0": "⁰", "1": "¹", "2": "²", "3": "³", "4": "⁴", "5": "⁵", "6": "⁶", "7": "⁷", "8": "⁸", "9": "⁹", "-": "⁻", "+": "⁺"}
 
 
@@ -108,8 +109,12 @@ def vis(text):
     """Текст для читателя: без предложений-служебных пометок слоя (в панели источника остаётся оригинал); ссылки «узел lat.…» -> «шаг N»."""
     text = re.sub(r"\s*\((?:figure_desc|FORMAT[^)]*)\)", "", text)
     text = re.sub(r"\s*\((?:утверждени[еяй]\s*)?c\d+(?:\s*[,и]\s*c\d+)*\)", "", text)
-    text = re.sub(r"\bузл(?:ы|а|ов|е|у)?\s+(\d{2}(?:(?:,\s*|\s+и\s+)\d{2})*)", lambda m: ("шаги " if len(re.findall(r"\d{2}", m.group(1))) > 1 else "шаг ") + ", ".join(str(SHORTNUM.get(k, "?")) for k in re.findall(r"\d{2}", m.group(1))), text)
+    text = re.sub(r"\bуз(?:ел|л(?:ы|а|ов|е|у))\s+(\d{1,2}(?:(?:,\s*|\s+и\s+)\d{1,2})*)", lambda m: ("шаги " if len(re.findall(r"\d+", m.group(1))) > 1 else "шаг ") + ", ".join(str(SHORTNUM.get(k.zfill(2), "?")) for k in re.findall(r"\d+", m.group(1))), text, flags=re.I)
     text = re.sub(r"узел (lat\.[\w.\-]+)", lambda m: f"шаг {STEPNUM[m.group(1)]}" if m.group(1) in STEPNUM else "соответствующий шаг", text)
+    text = re.sub(r"\s*\((?:вывод\s+)?(?:из|по)\s+c\d+(?:\s*[,и–-]\s*c?\d+)*\)", "", text)  # «(вывод из c5)»
+    text = re.sub(r"\b(?:утверждени\w+|из|по)\s+c\d+(?:\s*[,и–-]\s*c?\d+)*", "", text)  # «из c5», «утверждение c3»
+    text = re.sub(r"\bc\d+\b", "", text)  # одиночные ссылки на id утверждений в тексте для читателя не нужны
+    text = tex_loose(re.sub(r"\\(?:text|mathrm)\{([^{}]*)\}", r"\1", text))
     parts = re.split(r"(?<=[.!?])\s+", text.strip())
     keep = [x for x in parts if not SERVICE_SENT.search(x)]
     return " ".join(keep) if keep and len(keep) < len(parts) else text
@@ -182,7 +187,9 @@ class Build:
 
     def cl(s, key, text):
         e = s.EV[key]; cls = {"автор": "ca", "модель": "cm", "гипотеза": "ch"}[e["a"]]
-        ok = '<sup class="vk" title="проверено: цитата найдена на странице">✓</sup>' if e["st"] == "ok" else ""
+        warn = e["st"] == "ok" and re.search(r"не воспроизвод|не исправлен|опечатк|не сходится|не совпада|расхожд|а не \d", e.get("o", ""), re.I)
+        ok = ('<sup class="vk vw" title="цитата найдена на странице, но у автора есть неточность (расчёт или запись): откройте источник">⚠</sup>' if warn else
+              '<sup class="vk" title="проверено: цитата найдена на странице. Расчёты и физику эта отметка не проверяет">✓</sup>') if e["st"] == "ok" else ""
         return f'<span class="cl {cls}" tabindex="0" role="button" data-k="{esc(key)}" aria-label="{esc(e["a"])}: показать источник">{esc(vis(text))}{ok}</span>'
 
     def model_sents(s, n, field, text, author="модель", note=""):

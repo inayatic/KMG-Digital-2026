@@ -12,7 +12,7 @@ function theme(t){if(t)document.documentElement.setAttribute("data-theme",t)}
 theme(S.theme);
 $("#theme").onclick=function(){var dark=document.documentElement.getAttribute("data-theme")==="dark"||(!S.theme&&matchMedia("(prefers-color-scheme:dark)").matches);S.theme=dark?"light":"dark";theme(S.theme);save()};
 /* источник */
-var STX={ok:"проверено: цитата найдена на странице",noquote:"у утверждения автора нет цитаты: не проверено",notfound:"цитата не найдена на странице: не проверено",numbers:"цитата найдена, но числа не сошлись: не проверено",model:"написано моделью: цитаты книги нет"};
+var STX={ok:"цитата найдена на странице (расчёты и физику отметка не проверяет)",noquote:"у утверждения автора нет цитаты: не проверено",notfound:"цитата не найдена на странице: не проверено",numbers:"цитата найдена, но числа не сошлись: не проверено",model:"написано моделью: цитаты книги нет"};
 function showEv(k){
  var e=D.ev[k];if(!e)return;var h='<div class="in"><button type="button" id="evx" style="float:right">Закрыть</button>';
  h+='<p><span class="badge b-'+e.a+'">'+e.a+'</span><span class="meta">'+esc(e.k)+(e.st==="ok"?' · <b style="color:var(--a)">✓ проверено</b>':'')+'</span></p>';
@@ -20,7 +20,7 @@ function showEv(k){
  if(e.a==="автор"){
   h+='<p class="meta">стр. '+e.p+' PDF · '+STX[e.st]+'</p>';
   if(e.q)h+='<p class="meta">Дословная цитата автора:</p><blockquote>'+(e.x&&e.x[1]?esc(e.x[0])+'<mark>'+esc(e.x[1])+'</mark>'+esc(e.x[2]):esc(e.q))+'</blockquote>';
-  if(e.o)h+='<p class="ocr"><b>Правка OCR:</b> '+esc(e.o)+'</p>';
+  if(e.o)h+='<p class="ocr"><b>Примечание к тексту автора:</b> '+esc(e.o)+'</p>';
  }else{
   h+='<p class="meta">'+(e.a==="гипотеза"?'Гипотеза модели: в книге этого нет.':'Это слова модели, а не автора: цитаты нет.')+' '+STX.model+'.</p>';
   if(e.o)h+='<p class="meta">Основа: '+esc(e.o)+'.</p>';
