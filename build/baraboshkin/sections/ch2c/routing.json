@@ -1,0 +1,82 @@
+[
+ {
+  "node": "bar.ch2c.01-clay-definition",
+  "format": "текст",
+  "why": "Н: определения; видеоёмкость низкая."
+ },
+ {
+  "node": "bar.ch2c.02-clay-classification",
+  "format": "карточки",
+  "why": "Н: много терминов-признаков."
+ },
+ {
+  "node": "bar.ch2c.03-macro-slaking-color-structure",
+  "format": "практикум на данных",
+  "why": "П: процедура испытаний; видимое — цвет сухой/влажный."
+ },
+ {
+  "node": "bar.ch2c.04-macro-textures",
+  "format": "карточки",
+  "why": "В: типы текстур."
+ },
+ {
+  "node": "bar.ch2c.05-macro-mineral-composition",
+  "format": "интерактив",
+  "why": "И: дерево решений по признакам; контринтуитивность: общий признак — вода."
+ },
+ {
+  "node": "bar.ch2c.06-thin-section-color",
+  "format": "карточки",
+  "why": "И: цвета по веществам."
+ },
+ {
+  "node": "bar.ch2c.07-thin-section-structure",
+  "format": "карточки",
+  "why": "В: типы структур."
+ },
+ {
+  "node": "bar.ch2c.08-thin-section-textures",
+  "format": "шортс",
+  "why": "В: вращение столика — невидимое становится видимым."
+ },
+ {
+  "node": "bar.ch2c.09-thin-section-mineral-limits",
+  "format": "текст",
+  "why": "И/Р: ограничения метода."
+ },
+ {
+  "node": "bar.ch2c.10-thin-section-mineral-optics",
+  "format": "интерактив",
+  "why": "Ф: диапазоны двупреломления с перекрытием."
+ },
+ {
+  "node": "bar.ch2c.11-thin-section-clastic-organic",
+  "format": "текст",
+  "why": "П: порядок описания."
+ },
+ {
+  "node": "bar.ch2c.12-sedlog-legend",
+  "format": "карточки",
+  "why": "Н: справочник знаков."
+ },
+ {
+  "node": "bar.ch2c.13-sedlog-blanks",
+  "format": "текст",
+  "why": "П: форма бланка."
+ },
+ {
+  "node": "bar.ch2c.14-sedlog-example",
+  "format": "длинное видео",
+  "why": "В: разбор колонки."
+ },
+ {
+  "node": "bar.ch2c.15-core-interpretation-table",
+  "format": "длинное видео",
+  "why": "Р: цепочка описание→процесс→обстановка; причина и следствие."
+ },
+ {
+  "node": "bar.ch2c.16-sedmodel-poroperm",
+  "format": "практикум на данных",
+  "why": "В/Пр: переход от модели к свойствам."
+ }
+]
