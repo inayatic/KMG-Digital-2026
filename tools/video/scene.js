@@ -19,7 +19,7 @@ function layout() {
   } else {
     const m = sf.side || 80;
     L = { portrait: false, side: m, x0: m, x1: W - m, chip: { y: 40, h: 56 }, cap: { y: 110, h: 100 },
-      stage: { x: m, y: 225, w: W - 2 * m, h: 560 }, plates: { y: 795, h: 80 },
+      stage: { x: m, y: 248, w: W - 2 * m, h: 540 }, plates: { y: 795, h: 80 },
       subs: { y: H - 215, h: 170 }, fCap: 54, fSub: 52, fPlate: 32, fChip: 34 };
   }
 }
@@ -201,7 +201,7 @@ const VIEWS = {
     const lx = st.x + 10, ly = st.y + 10; [['#2b79b5', 'русло'], ['#C9A15A', 'отложения'], ['#233326', 'пойма']].forEach(([c, l], i) => { ctx.fillStyle = c; ctx.fillRect(lx, ly + i * 50, 36, 36); ctx.fillStyle = col.text; ctx.font = `34px ${FONT}`; ctx.textAlign = 'left'; ctx.textBaseline = 'middle'; ctx.fillText(l, lx + 50, ly + i * 50 + 20); });
   },
   column(st, p, u) { // стратиграфическая колонка снизу вверх; слои из params.layers [{label,color,h,pattern}]
-    const col = C(), L2 = p.layers || [], tot = L2.reduce((s, l) => s + (l.h || 1), 0), cw = Math.min(st.w * 0.38, 380), cx = st.x + (p.left ? 20 : st.w * 0.12), top = st.y + 20, H2 = st.h - 70;
+    const col = C(), L2 = p.layers || [], tot = L2.reduce((s, l) => s + (l.h || 1), 0), cw = Math.min(st.w * (st.w < 1000 ? 0.34 : 0.38), 380), cx = st.x + (p.left ? 20 : st.w * 0.12), top = st.y + 20, H2 = st.h - 70;
     let yb = top + H2; const step = p.step || 0.9;
     L2.forEach((l, i) => {
       const a = smooth((u - i * step) / 0.6), h = (l.h || 1) / tot * H2 * a; if (a <= 0) { yb -= (l.h || 1) / tot * H2; return; }
@@ -212,12 +212,12 @@ const VIEWS = {
       if (pat === 'plane') for (let gy = y + 10; gy < y + (l.h || 1) / tot * H2; gy += 14) { ctx.beginPath(); ctx.moveTo(cx, gy); ctx.lineTo(cx + cw, gy); ctx.stroke(); }
       if (pat === 'silt') for (let gy = y + 10; gy < y + (l.h || 1) / tot * H2; gy += 16) for (let gx = cx + 8 + ((gy / 16 | 0) % 2) * 8; gx < cx + cw; gx += 16) { ctx.beginPath(); ctx.arc(gx, gy, 2.2, 0, 7); ctx.fill(); }
       ctx.restore();
-      if (a > 0.9) { ctx.textAlign = 'left'; textBlock(l.label, cx + cw + 30, y + ((l.h || 1) / tot * H2) / 2 - 24, st.x + st.w - (cx + cw + 30), 40, col.text, { weight: 'bold' }); }
+      if (a > 0.9) { const lh2 = (l.h || 1) / tot * H2, px2 = st.w < 1000 ? (lh2 < 90 ? 24 : 28) : (lh2 < 90 ? 32 : 40), mw = st.x + st.w - (cx + cw + 24), nl = wrap(l.label, mw, `bold ${px2}px ${FONT}`).length; ctx.textAlign = 'left'; textBlock(l.label, cx + cw + 24, y + lh2 / 2 - nl * px2 * 0.59, mw, px2, col.text, { weight: 'bold' }); }
       yb = y;
     });
     if (p.axis_label) { const al = smooth((u - L2.length * step) / 0.6); ctx.globalAlpha = al; arrow(cx - 36, top + H2 - 10, cx - 36, top + 20, col.measurement, 8, 30);
       ctx.save(); ctx.translate(cx - 60, top + H2 / 2); ctx.rotate(-Math.PI / 2); ctx.fillStyle = col.measurement; ctx.font = `bold 30px ${FONT}`; ctx.textAlign = 'center'; ctx.textBaseline = 'middle'; ctx.fillText(p.axis_label, 0, 0); ctx.restore(); ctx.globalAlpha = 1; }
-    if (p.note) textBlock(p.note, st.x, st.y + st.h - 44, st.w, 34, col.muted, { weight: 'normal' });
+    if (p.note) { const npx = 28, nn = wrap(p.note, st.w, `${npx}px ${FONT}`).length; textBlock(p.note, st.x, st.y + st.h - nn * npx * 1.18 - 2, st.w, npx, col.muted, { weight: 'normal' }); }
   },
   flood_section(st, p, u) { // разрез долины: русло в центре, поверхность поймы по краям; паводок поднимает воду, осадок оседает из суспензии
     const col = C(), gy = st.y + st.h * 0.62, bot = st.y + st.h - 10, T = p.period || 8, ph = (u % T) / T, lvl = p.static ? (p.level ?? 0) : Math.sin(Math.PI * Math.min(1, ph / 0.7)) * (ph < 0.7 ? 1 : 0), water = gy - 10 - lvl * st.h * 0.28;
