@@ -89,6 +89,16 @@ def tex_inline(t):
     return re.sub(r"\\\((.+?)\\\)|\$(.+?)\$", lambda m: tex2txt(m.group(1) or m.group(2)) or m.group(0), t)
 
 
+SERVICE_SENT = re.compile(r"FORMAT|figure_desc|ocr_note|\bв ролик|\bв ключе|не использовать в (?:роликах|заданиях)|ответы не придум|для ментора|вопрос ментору|узел lat\.", re.I)
+
+
+def vis(text):
+    """Текст для читателя: без предложений-служебных пометок слоя (в панели источника остаётся оригинал)."""
+    parts = re.split(r"(?<=[.!?])\s+", text.strip())
+    keep = [x for x in parts if not SERVICE_SENT.search(x)]
+    return " ".join(keep) if keep and len(keep) < len(parts) else text
+
+
 SERVICE = [(re.compile(r"\s*Не подтверждено книгой,? не использовать в заданиях и роликах\.?", re.I), " (в книге не подтверждено)")]
 
 
@@ -136,11 +146,12 @@ class Build:
     def cl(s, key, text):
         e = s.EV[key]; cls = {"автор": "ca", "модель": "cm", "гипотеза": "ch"}[e["a"]]
         ok = '<sup class="vk" title="проверено: цитата найдена на странице">✓</sup>' if e["st"] == "ok" else ""
-        return f'<span class="cl {cls}" tabindex="0" role="button" data-k="{esc(key)}" aria-label="{esc(e["a"])}: показать источник">{esc(text)}{ok}</span>'
+        return f'<span class="cl {cls}" tabindex="0" role="button" data-k="{esc(key)}" aria-label="{esc(e["a"])}: показать источник">{esc(vis(text))}{ok}</span>'
 
     def model_sents(s, n, field, text, author="модель", note=""):
         out = []
-        for i, sent in enumerate(sentences(text)):
+        ss = sentences(text); ks = [x for x in ss if not SERVICE_SENT.search(x)]
+        for i, sent in enumerate(ks if ks and len(ks) < len(ss) else ss):
             au = "гипотеза" if re.search(r"гипотез", sent, re.I) else author
             k = f"{n['id']}@{field}.{i}"
             s.EV[k] = {"a": au, "k": "поле модели", "p": 0, "st": "model", "n": n["id"], "pp": s.pages[n["id"]], "o": note,
