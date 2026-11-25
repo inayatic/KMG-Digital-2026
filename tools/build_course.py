@@ -281,7 +281,7 @@ class Build:
             meta.append({"id": sid, "short": short, "part": part, "min": minutes, "num": i, "kind": kind})
             pages += (f'<article class="view step" id="v-{esc(sid)}" data-step="{esc(sid)}" hidden><p class="crumb">{esc(part)} · шаг {i} из {len(steps)} · {esc(A)}, {esc(sec) or "§ 12"} · <code class="idc">{esc(sid)}</code></p>'
                       f'<h2 tabindex="-1">{esc(short)}</h2><p class="meta">{esc(A)}, «{esc(T)}», 1991 · ≈{minutes} мин (оценка)</p>'
-                      f'<p class="legend" aria-label="Легенда">Нажмите на предложение, чтобы увидеть источник: <span class="cl ca">автор</span> <span class="cl cm">модель</span> <span class="cl ch">гипотеза</span> <sup class="vk">✓</sup> проверено.</p>'
+                      f'<p class="legend" aria-label="Легенда">Нажмите на предложение, чтобы увидеть источник: <span class="lg ca">автор</span> <span class="lg cm">модель</span> <span class="lg ch">гипотеза</span> <sup class="vk">✓</sup> проверено.</p>'
                       f'<nav class="toc" aria-label="Оглавление страницы"><b>На странице</b><ul>{toc}</ul></nav>{body}'
                       f'<div class="pn"><button data-prev>← Назад</button><button data-done>Отметить пройденным</button><button data-next>Дальше →</button></div></article>')
         # карта связей
