@@ -470,8 +470,8 @@ class Build:
     def tasks(s):
         out = []
         for t in s.cfg["tasks"]:
-            nid = s.nid[t["node"]]; n = s.byid[nid]
-            full = lambda r: next((x["id"] for x in n["claims"] if x["id"] == r or x["id"].endswith("." + r)), r)  # в слое id утверждений бывает «c1» или «<узел>.c1»
+            nid = s.nid.get(t["node"], t["node"]); n = s.byid[nid]; t = dict(t, claim=(t.get("claim") or "").split("#")[-1] or None)  # fix от verifier может прийти с полным id узла и «узел#утв.»
+            full = lambda r: next((x["id"] for x in n["claims"] if x["id"] == r or x["id"].endswith(("." + r, "-" + r))), r)  # в слое id утверждений бывает «c1» или «<узел>.c1»
             t = dict(t, claim=full(t["claim"]) if t.get("claim") else None, basis=[full(x) for x in t.get("basis") or []])
             if t.get("kind") in ("predict", "transfer"):  # рассуждение: ответ выведен из утверждений basis, дословной цитаты нет
                 cl = {c["id"]: c for c in n["claims"]}; b = t.get("basis") or []
