@@ -1,0 +1,94 @@
+# Покрытие s14
+
+Составной юнит p080-01 (конец примера 41, задачи 73–80, двухзондовый метод, начало примера 42) принадлежит узлу 11; задачи 73–80 раскрыты в поле problems узла 12, пример 41 (хвост) — в узле 10.
+
+| unit | тип | стр | узел / причина |
+|---|---|---|---|
+| p074-05 | heading | 74 | lat.s14.01-principle |
+| p074-06 | paragraph | 74 | lat.s14.01-principle |
+| p074-07 | paragraph | 74 | lat.s14.01-principle |
+| p074-08 | paragraph | 74 | lat.s14.01-principle |
+| p074-09 | paragraph | 74 | lat.s14.02-probes |
+| p074-10 | paragraph | 74 | lat.s14.03-neutron-properties |
+| p074-11 | paragraph | 74 | lat.s14.03-neutron-properties |
+| p075-01 | caption | 75 | lat.s14.02-probes |
+| p075-02 | paragraph | 75 | lat.s14.02-probes |
+| p075-03 | table | 75 | lat.s14.02-probes |
+| p075-04 | paragraph | 75 | lat.s14.02-probes |
+| p075-05 | heading | 75 | lat.s14.04-hydrogen-index |
+| p075-06 | paragraph | 75 | lat.s14.04-hydrogen-index |
+| p075-07 | paragraph | 75 | lat.s14.04-hydrogen-index |
+| p075-08 | formula | 75 | lat.s14.04-hydrogen-index |
+| p075-09 | paragraph | 75 | lat.s14.04-hydrogen-index |
+| p075-10 | formula | 75 | lat.s14.04-hydrogen-index |
+| p075-11 | paragraph | 75 | lat.s14.04-hydrogen-index |
+| p075-12 | paragraph | 75 | lat.s14.04-hydrogen-index |
+| p075-13 | formula | 75 | lat.s14.04-hydrogen-index |
+| p075-14 | paragraph | 75 | lat.s14.04-hydrogen-index |
+| p075-15 | caption | 75 | lat.s14.04-hydrogen-index |
+| p075-16 | paragraph | 75 | lat.s14.04-hydrogen-index |
+| p075-17 | table | 75 | lat.s14.04-hydrogen-index |
+| p075-18 | paragraph | 75 | lat.s14.02-probes |
+| p076-01 | heading | 76 | lat.s14.05-reading-vs-w |
+| p076-02 | paragraph | 76 | lat.s14.05-reading-vs-w |
+| p076-03 | paragraph | 76 | lat.s14.05-reading-vs-w |
+| p076-04 | figure_desc | 76 | lat.s14.05-reading-vs-w |
+| p076-05 | caption | 76 | lat.s14.05-reading-vs-w |
+| p076-06 | paragraph | 76 | lat.s14.05-reading-vs-w |
+| p077-01 | paragraph | 77 | lat.s14.05-reading-vs-w |
+| p077-02 | paragraph | 77 | lat.s14.06-influence-factors |
+| p077-03 | paragraph | 77 | lat.s14.06-influence-factors |
+| p077-04 | paragraph | 77 | lat.s14.06-influence-factors |
+| p077-05 | paragraph | 77 | lat.s14.07-prelim-processing |
+| p077-06 | figure_desc | 77 | lat.s14.07-prelim-processing |
+| p077-07 | caption | 77 | lat.s14.07-prelim-processing |
+| p077-08 | paragraph | 77 | lat.s14.07-prelim-processing |
+| p077-09 | paragraph | 77 | lat.s14.07-prelim-processing |
+| p077-10 | paragraph | 77 | lat.s14.08-relative-amplitude |
+| p077-11 | paragraph | 77 | lat.s14.08-relative-amplitude |
+| p077-12 | paragraph | 77 | lat.s14.08-relative-amplitude |
+| p077-13 | paragraph | 77 | lat.s14.08-relative-amplitude |
+| p077-14 | paragraph | 77 | lat.s14.07-prelim-processing |
+| p077-15 | paragraph | 77 | lat.s14.07-prelim-processing |
+| p078-01 | paragraph | 78 | lat.s14.09-reference-beds-corrections |
+| p078-02 | paragraph | 78 | lat.s14.09-reference-beds-corrections |
+| p078-03 | paragraph | 78 | lat.s14.09-reference-beds-corrections |
+| p078-04 | paragraph | 78 | lat.s14.09-reference-beds-corrections |
+| p078-05 | paragraph | 78 | lat.s14.09-reference-beds-corrections |
+| p078-06 | paragraph | 78 | lat.s14.09-reference-beds-corrections |
+| p078-07 | paragraph | 78 | lat.s14.09-reference-beds-corrections |
+| p078-08 | paragraph | 78 | lat.s14.09-reference-beds-corrections |
+| p078-09 | paragraph | 78 | lat.s14.09-reference-beds-corrections |
+| p078-10 | paragraph | 78 | lat.s14.09-reference-beds-corrections |
+| p078-11 | paragraph | 78 | lat.s14.09-reference-beds-corrections |
+| p078-12 | paragraph | 78 | lat.s14.09-reference-beds-corrections |
+| p078-13 | paragraph | 78 | lat.s14.09-reference-beds-corrections |
+| p078-14 | paragraph | 78 | lat.s14.09-reference-beds-corrections |
+| p078-15 | paragraph | 78 | lat.s14.09-reference-beds-corrections |
+| p078-16 | paragraph | 78 | lat.s14.09-reference-beds-corrections |
+| p078-17 | example | 78 | lat.s14.10-example-41 |
+| p078-18 | paragraph | 78 | lat.s14.10-example-41 |
+| p078-19 | paragraph | 78 | lat.s14.10-example-41 |
+| p078-20 | paragraph | 78 | lat.s14.10-example-41 |
+| p078-21 | paragraph | 78 | lat.s14.10-example-41 |
+| p079-01 | paragraph | 79 | lat.s14.10-example-41 |
+| p079-02 | paragraph | 79 | lat.s14.10-example-41 |
+| p079-03 | paragraph | 79 | lat.s14.10-example-41 |
+| p079-04 | paragraph | 79 | lat.s14.10-example-41 |
+| p079-05 | paragraph | 79 | lat.s14.10-example-41 |
+| p079-06 | paragraph | 79 | lat.s14.10-example-41 |
+| p079-07 | paragraph | 79 | lat.s14.10-example-41 |
+| p079-08 | figure_desc | 79 | lat.s14.10-example-41 |
+| p079-09 | caption | 79 | lat.s14.10-example-41 |
+| p080-01 | paragraph | 80 | lat.s14.11-two-probe-example-42 |
+| p080-02 | paragraph | 80 | lat.s14.10-example-41 |
+| p081-01 | paragraph | 81 | lat.s14.11-two-probe-example-42 |
+| p081-02 | paragraph | 81 | lat.s14.12-problems |
+| p081-03 | figure_desc | 81 | lat.s14.12-problems |
+| p081-04 | caption | 81 | lat.s14.12-problems |
+| p081-05 | paragraph | 81 | lat.s14.12-problems |
+| p081-06 | figure_desc | 81 | lat.s14.11-two-probe-example-42 |
+| p081-07 | caption | 81 | lat.s14.11-two-probe-example-42 |
+| p081-08 | paragraph | 81 | lat.s14.11-two-probe-example-42 |
+| p081-09 | heading | 81 | ПРИЧИНА: заголовок следующей главы (Глава IV) вне сегмента |
+| p081-10 | heading | 81 | ПРИЧИНА: заголовок следующей главы (Глава IV) вне сегмента |
