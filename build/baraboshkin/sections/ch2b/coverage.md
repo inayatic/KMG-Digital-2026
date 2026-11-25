@@ -37,7 +37,7 @@
 | p129-03 | paragraph | 129 | bar.ch2b.06-binocular-study |
 | p129-04 | paragraph | 129 | bar.ch2b.06-binocular-study |
 | p129-05 | heading | 129 | bar.ch2b.07-clastic-intro-ocular-scale |
-| p129-06 | paragraph | 129 | bar.ch2b.07-clastic-intro-ocular-scale, bar.ch2b.12-clastic-composition-macro |
+| p129-06 | paragraph | 129 | bar.ch2b.07-clastic-intro-ocular-scale |
 | p129-07 | caption | 129 | bar.ch2b.07-clastic-intro-ocular-scale |
 | p129-08 | paragraph | 129 | bar.ch2b.07-clastic-intro-ocular-scale |
 | p129-09 | table | 129 | bar.ch2b.07-clastic-intro-ocular-scale |

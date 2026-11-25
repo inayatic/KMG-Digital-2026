@@ -1,3 +1,5 @@
 chapter,stage,nodes,llm_tokens_in,llm_tokens_out,money_usd,person_minutes,mentor_minutes,video_seconds,manual_share
 baraboshkin,layer,145,0,0,0,,,,
 baraboshkin,review,,4513858,113598,4.0795,,,,
+baraboshkin,layer,145,116450,3250,0.1121,,,,
+baraboshkin,routing,,300857,11035,0.2705,,,,
