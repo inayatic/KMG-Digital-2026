@@ -3,74 +3,309 @@
   "$comment": "DRAFT: собственная схема, пока нет схемы организаторов. Заменить файлом организаторов при получении.",
   "title": "node",
   "type": "object",
-  "required": ["id", "title", "difficulty", "claims", "unit_ids", "links"],
+  "required": [
+    "id",
+    "title",
+    "difficulty",
+    "claims",
+    "unit_ids",
+    "links"
+  ],
   "properties": {
-    "id": {"type": "string", "pattern": "^[a-z0-9._-]+$"},
-    "title": {"type": "string"},
-    "section": {"type": "string", "description": "раздел главы (§)"},
+    "id": {
+      "type": "string",
+      "pattern": "^[a-z0-9._-]+$"
+    },
+    "title": {
+      "type": "string"
+    },
+    "section": {
+      "type": "string",
+      "description": "раздел главы (§)"
+    },
     "difficulty": {
-      "type": "object", "required": ["primary"],
+      "type": "object",
+      "required": [
+        "primary"
+      ],
       "properties": {
-        "primary": {"enum": ["М", "В", "И", "Ф", "П", "Пр", "Н", "Р"]},
-        "secondary": {"enum": ["М", "В", "И", "Ф", "П", "Пр", "Н", "Р", null]}
+        "primary": {
+          "enum": [
+            "М",
+            "В",
+            "И",
+            "Ф",
+            "П",
+            "Пр",
+            "Н",
+            "Р"
+          ]
+        },
+        "secondary": {
+          "enum": [
+            "М",
+            "В",
+            "И",
+            "Ф",
+            "П",
+            "Пр",
+            "Н",
+            "Р",
+            null
+          ]
+        }
       }
     },
     "claims": {
-      "type": "array", "minItems": 1,
+      "type": "array",
+      "minItems": 1,
       "items": {
-        "type": "object", "required": ["id", "text", "kind", "author", "page", "unit_ids"],
+        "type": "object",
+        "required": [
+          "id",
+          "text",
+          "kind",
+          "author",
+          "page",
+          "unit_ids"
+        ],
         "properties": {
-          "id": {"type": "string"},
-          "text": {"type": "string"},
-          "kind": {"enum": ["наблюдение", "вывод", "допущение"]},
-          "author": {"enum": ["автор", "модель", "гипотеза"]},
-          "page": {"type": "integer", "description": "номер PDF-страницы"},
-          "quote": {"type": "string", "description": "дословная цитата автора, не из блока FORMAT; обязательна при author=автор"},
-          "unit_ids": {"type": "array", "items": {"type": "string"}, "minItems": 1},
-          "ocr_note": {"type": "string"}
+          "id": {
+            "type": "string"
+          },
+          "text": {
+            "type": "string"
+          },
+          "kind": {
+            "enum": [
+              "наблюдение",
+              "вывод",
+              "допущение"
+            ]
+          },
+          "author": {
+            "enum": [
+              "автор",
+              "модель",
+              "гипотеза"
+            ]
+          },
+          "page": {
+            "type": "integer",
+            "description": "номер PDF-страницы"
+          },
+          "quote": {
+            "type": "string",
+            "description": "дословная цитата автора, не из блока FORMAT; обязательна при author=автор"
+          },
+          "unit_ids": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "minItems": 1
+          },
+          "ocr_note": {
+            "type": "string"
+          }
         }
       }
     },
     "layers": {
       "type": "object",
       "properties": {
-        "mechanism": {"type": "string"}, "practice": {"type": "string"}, "nuances": {"type": "string"},
-        "deeper": {"type": "array", "items": {"type": "string"}}
+        "mechanism": {
+          "type": "string"
+        },
+        "practice": {
+          "type": "string"
+        },
+        "nuances": {
+          "type": "string"
+        },
+        "deeper": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
       }
     },
-    "misconception": {"type": "string"},
-    "data_implication": {"type": "object", "properties": {"text": {"type": "string"}, "author": {"enum": ["автор", "модель", "гипотеза"]}}},
-    "it_analogy": {"type": "object", "properties": {"text": {"type": "string"}, "breaks_when": {"type": "string"}}},
-    "how_now": {"type": "string", "description": "как это делается сейчас, если техника устарела"},
+    "misconception": {
+      "type": "string"
+    },
+    "data_implication": {
+      "type": "object",
+      "properties": {
+        "text": {
+          "type": "string"
+        },
+        "author": {
+          "enum": [
+            "автор",
+            "модель",
+            "гипотеза"
+          ]
+        }
+      }
+    },
+    "it_analogy": {
+      "type": "object",
+      "properties": {
+        "text": {
+          "type": "string"
+        },
+        "breaks_when": {
+          "type": "string"
+        }
+      }
+    },
+    "how_now": {
+      "type": "string",
+      "description": "как это делается сейчас, если техника устарела"
+    },
     "inefficiency_lens": {
       "type": "object",
       "properties": {
-        "inputs": {"type": "string"}, "manual_steps": {"type": "string"}, "judgment_points": {"type": "string"},
-        "time": {"type": "string"}, "typical_errors": {"type": "string"}
+        "inputs": {
+          "type": "string"
+        },
+        "manual_steps": {
+          "type": "string"
+        },
+        "judgment_points": {
+          "type": "string"
+        },
+        "time": {
+          "type": "string"
+        },
+        "typical_errors": {
+          "type": "string"
+        }
       }
     },
     "worked_examples": {
       "type": "array",
-      "items": {"type": "object", "required": ["unit_id", "page"], "properties": {
-        "unit_id": {"type": "string"}, "page": {"type": "integer"}, "condition": {"type": "string"},
-        "steps": {"type": "array", "items": {"type": "string"}}, "result": {"type": "string"}}}
+      "items": {
+        "type": "object",
+        "required": [
+          "unit_id",
+          "page"
+        ],
+        "properties": {
+          "unit_id": {
+            "type": "string"
+          },
+          "page": {
+            "type": "integer"
+          },
+          "condition": {
+            "type": "string"
+          },
+          "steps": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "result": {
+            "type": "string"
+          }
+        }
+      }
     },
     "problems": {
       "type": "array",
-      "items": {"type": "object", "required": ["unit_id", "page"], "properties": {
-        "unit_id": {"type": "string"}, "page": {"type": "integer"}, "number": {"type": "string"},
-        "statement": {"type": "string"}, "figure_unit_id": {"type": "string"}}}
+      "items": {
+        "type": "object",
+        "required": [
+          "unit_id",
+          "page"
+        ],
+        "properties": {
+          "unit_id": {
+            "type": "string"
+          },
+          "page": {
+            "type": "integer"
+          },
+          "number": {
+            "type": "string"
+          },
+          "statement": {
+            "type": "string"
+          },
+          "figure_unit_id": {
+            "type": "string"
+          }
+        }
+      }
     },
     "links": {
       "type": "array",
-      "items": {"type": "object", "required": ["to", "type"], "properties": {
-        "to": {"type": "string"},
-        "type": {"enum": ["предпосылка", "пример", "опровергает заблуждение", "переход к данным"]}}}
+      "items": {
+        "type": "object",
+        "required": [
+          "to",
+          "type"
+        ],
+        "properties": {
+          "to": {
+            "type": "string"
+          },
+          "type": {
+            "enum": [
+              "предпосылка",
+              "пример",
+              "опровергает заблуждение",
+              "переход к данным"
+            ]
+          }
+        }
+      }
     },
-    "order": {"type": "object", "properties": {"rank": {"type": "integer"}, "why_before_next": {"type": "string"}}},
-    "route": {"type": "object", "properties": {
-      "format": {"enum": ["шортс", "длинное видео", "интерактив", "практикум на данных", "карточки", "текст"]},
-      "why": {"type": "string"}}},
-    "unit_ids": {"type": "array", "items": {"type": "string"}, "minItems": 1}
+    "order": {
+      "type": "object",
+      "properties": {
+        "rank": {
+          "type": "integer"
+        },
+        "why_before_next": {
+          "type": "string"
+        }
+      }
+    },
+    "route": {
+      "type": "object",
+      "properties": {
+        "format": {
+          "enum": [
+            "шортс",
+            "длинное видео",
+            "интерактив",
+            "практикум на данных",
+            "карточки",
+            "текст"
+          ]
+        },
+        "why": {
+          "type": "string"
+        }
+      }
+    },
+    "unit_ids": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "minItems": 1
+    },
+    "external_prereqs": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "description": "предпосылки из других разделов книги: 'sNN: что нужно'"
+    }
   }
 }

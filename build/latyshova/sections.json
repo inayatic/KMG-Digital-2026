@@ -1,0 +1,263 @@
+[
+ {
+  "key": "s00-front",
+  "units": 5,
+  "pages": [
+   1,
+   2
+  ],
+  "chars": 374
+ },
+ {
+  "key": "s00-preface",
+  "units": 6,
+  "pages": [
+   3,
+   4
+  ],
+  "chars": 1256
+ },
+ {
+  "key": "s01",
+  "units": 186,
+  "pages": [
+   4,
+   16
+  ],
+  "chars": 51908
+ },
+ {
+  "key": "s02",
+  "units": 23,
+  "pages": [
+   16,
+   18
+  ],
+  "chars": 12243
+ },
+ {
+  "key": "s03",
+  "units": 71,
+  "pages": [
+   18,
+   22
+  ],
+  "chars": 18163
+ },
+ {
+  "key": "s04",
+  "units": 83,
+  "pages": [
+   23,
+   29
+  ],
+  "chars": 29715
+ },
+ {
+  "key": "s05",
+  "units": 116,
+  "pages": [
+   29,
+   41
+  ],
+  "chars": 48636
+ },
+ {
+  "key": "s06",
+  "units": 104,
+  "pages": [
+   41,
+   50
+  ],
+  "chars": 43698
+ },
+ {
+  "key": "s07",
+  "units": 57,
+  "pages": [
+   50,
+   55
+  ],
+  "chars": 18861
+ },
+ {
+  "key": "s08",
+  "units": 88,
+  "pages": [
+   56,
+   60
+  ],
+  "chars": 26409
+ },
+ {
+  "key": "s09",
+  "units": 13,
+  "pages": [
+   60,
+   60
+  ],
+  "chars": 2672
+ },
+ {
+  "key": "s10",
+  "units": 57,
+  "pages": [
+   60,
+   64
+  ],
+  "chars": 21297
+ },
+ {
+  "key": "s11",
+  "units": 16,
+  "pages": [
+   64,
+   65
+  ],
+  "chars": 6918
+ },
+ {
+  "key": "s12",
+  "units": 71,
+  "pages": [
+   65,
+   69
+  ],
+  "chars": 24502
+ },
+ {
+  "key": "s13",
+  "units": 47,
+  "pages": [
+   69,
+   74
+  ],
+  "chars": 10435
+ },
+ {
+  "key": "s14",
+  "units": 88,
+  "pages": [
+   74,
+   81
+  ],
+  "chars": 36258
+ },
+ {
+  "key": "s15",
+  "units": 116,
+  "pages": [
+   81,
+   89
+  ],
+  "chars": 41893
+ },
+ {
+  "key": "s16",
+  "units": 18,
+  "pages": [
+   89,
+   90
+  ],
+  "chars": 7599
+ },
+ {
+  "key": "s17",
+  "units": 12,
+  "pages": [
+   90,
+   91
+  ],
+  "chars": 6560
+ },
+ {
+  "key": "s18",
+  "units": 12,
+  "pages": [
+   91,
+   92
+  ],
+  "chars": 5968
+ },
+ {
+  "key": "s19",
+  "units": 17,
+  "pages": [
+   92,
+   95
+  ],
+  "chars": 8724
+ },
+ {
+  "key": "s20",
+  "units": 139,
+  "pages": [
+   96,
+   108
+  ],
+  "chars": 57451
+ },
+ {
+  "key": "s21",
+  "units": 66,
+  "pages": [
+   108,
+   112
+  ],
+  "chars": 21381
+ },
+ {
+  "key": "s22",
+  "units": 94,
+  "pages": [
+   113,
+   118
+  ],
+  "chars": 28452
+ },
+ {
+  "key": "s23",
+  "units": 55,
+  "pages": [
+   118,
+   121
+  ],
+  "chars": 11924
+ },
+ {
+  "key": "s24",
+  "units": 30,
+  "pages": [
+   121,
+   125
+  ],
+  "chars": 15004
+ },
+ {
+  "key": "s25",
+  "units": 36,
+  "pages": [
+   125,
+   127
+  ],
+  "chars": 8728
+ },
+ {
+  "key": "chVI",
+  "units": 61,
+  "pages": [
+   127,
+   130
+  ],
+  "chars": 21754
+ },
+ {
+  "key": "s99-tail",
+  "units": 10,
+  "pages": [
+   131,
+   133
+  ],
+  "chars": 5245
+ }
+]
