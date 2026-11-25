@@ -25,7 +25,8 @@ def main(ch):
         ids = {n["id"] for n in ns}
         for n in ns: n["links"] = [l for l in n.get("links", []) if l["to"] in ids]
         title = ns[0].get("section") or key
-        tf = B / "course" / f"tasks-{key}.json"
+        tf = B / "course" / f"tasks2-{key}.json"
+        if not tf.exists(): tf = B / "course" / f"tasks-{key}.json"  # v2 (применение правила к новой ситуации) приоритетнее v1
         tasks = json.load(open(tf)) if tf.exists() else []
         rf = B / "course" / f"review-out-{key}.json"  # решения verifier по заданиям: reject снимает, fix заменяет по id
         if rf.exists():
@@ -41,6 +42,7 @@ def main(ch):
         cl = {(n["id"], c["id"]): c for n in ns for c in n["claims"]}; w0, d0 = list(b.warn), getattr(b, 'dropped', 0); b.warn.clear(); good = b.tasks(); b.warn[:] = w0; b.dropped = d0
         rv = [{"task": t, "basis_claims": [{"id": x, "page": cl[(t["claim"].split("#")[0], x)]["page"], "text": cl[(t["claim"].split("#")[0], x)]["text"], "quote": cl[(t["claim"].split("#")[0], x)].get("quote", "")} for x in (t.get("basis") or [t["claim"].split("#")[1]])]} for t in good]
         (B / "course" / f"review-in-{key}.json").write_text(json.dumps(rv, ensure_ascii=False, indent=1))
+        (B / "course" / f"final-{key}.json").write_text(json.dumps(b.tasks(), ensure_ascii=False, indent=1)); b.warn[:] = w0; b.dropped = d0  # итоговые задания (после проверки и решений verifier)
         for w in b.warn: print(f"WARN {key}: {w}")
         drop = getattr(b, "dropped", 0); warn_total += len(b.warn) - drop; dropped += drop  # отброшенные задания не ломают сборку, но считаются
         rows.append((key, title, len(ns), len(tasks) - drop, len(page.encode()) // 1024))

@@ -480,11 +480,21 @@ class Build:
             nid = s.nid.get(t["node"], t["node"]); n = s.byid[nid]; t = dict(t, claim=(t.get("claim") or "").split("#")[-1] or None)  # fix от verifier может прийти с полным id узла и «узел#утв.»
             full = lambda r: next((x["id"] for x in n["claims"] if x["id"] == r or x["id"].endswith(("." + r, "-" + r))), r)  # в слое id утверждений бывает «c1» или «<узел>.c1»
             t = dict(t, claim=full(t["claim"]) if t.get("claim") else None, basis=[full(x) for x in t.get("basis") or []])
-            if t.get("kind") in ("predict", "transfer"):  # рассуждение: ответ выведен из утверждений basis, дословной цитаты нет
+            if t.get("type") == "calc2":  # расчёт с другими числами: формула в утверждении claim, числа новые, ответ пересчитывается сборщиком
+                ex = t.get("expr", ""); okc = bool(re.fullmatch(r"[0-9.,+\-*/() ]+", ex)) and bool(t.get("claim"))
+                try: val = eval(ex.replace(",", "."), {"__builtins__": {}}) if okc else None
+                except Exception: val = None
+                if val is None or abs(val - t["answer"]) > t.get("tol", 0.01): s.warn.append(f"ЗАДАНИЕ {t['id']}: расчёт expr не сходится с ответом"); s.dropped = getattr(s, "dropped", 0) + 1; continue
+                out.append(dict(t, type="calc", node=nid, claim=f"{nid}#{t['claim']}")); continue
+            if t.get("kind") in ("predict", "transfer", "diagnose"):  # рассуждение: ответ выведен из утверждений basis, дословной цитаты нет
                 cl = {c["id"]: c for c in n["claims"]}; b = t.get("basis") or []
                 ok = bool(b) and all(x in cl and cl[x]["author"] == "автор" for x in b) and t["type"] in ("single", "multi") and len(t["options"]) >= 3
                 ok = ok and all(a in t["options"] for a in (t.get("answers") or [t.get("answer")]))
                 if t["type"] == "single" and nrm(t["answer"]) in nrm(t["q"]): ok = False
+                if t.get("v") == 2 and t["type"] == "single":  # v2: правильный вариант не должен дословно лежать в тексте шага (5 слов подряд)
+                    W = lambda x: re.findall(r"[а-яёa-z0-9]+", x.lower()); aw = W(t["answer"])
+                    txt = " ".join(W(" ".join([c["text"] for c in n["claims"]] + [v if isinstance(v, str) else " ".join(v) for v in (n.get("layers") or {}).values()])))
+                    if any(" ".join(aw[i:i + 5]) in txt for i in range(max(1, len(aw) - 4))) and len(aw) >= 5: ok = False; s.warn.append(f"ЗАДАНИЕ {t['id']}: ответ дословно в тексте шага")
                 if not ok: s.warn.append(f"ЗАДАНИЕ {t['id']}: рассуждение без опоры basis или с утечкой ответа"); s.dropped = getattr(s, "dropped", 0) + 1
                 if ok or not s.cfg.get("drop_bad"): out.append(dict(t, node=nid, claim=f"{nid}#{b[0] if b else t['claim']}")); continue
             if not t.get("claim"): s.warn.append(f"ЗАДАНИЕ {t['id']}: нет поля claim, пропущено"); s.dropped = getattr(s, "dropped", 0) + 1; continue
