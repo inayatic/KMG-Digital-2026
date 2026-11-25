@@ -364,7 +364,16 @@ class Build:
     def tasks(s):
         out = []
         for t in s.cfg["tasks"]:
-            nid = s.nid[t["node"]]; key = f"{nid}#{t['claim']}"; c = s.claim(key); txt = nrm(c["text"]); n = s.byid[nid]
+            nid = s.nid[t["node"]]; n = s.byid[nid]
+            if t.get("kind") in ("predict", "transfer"):  # рассуждение: ответ выведен из утверждений basis, дословной цитаты нет
+                cl = {c["id"]: c for c in n["claims"]}; b = t.get("basis") or []
+                ok = bool(b) and all(x in cl and cl[x]["author"] == "автор" for x in b) and t["type"] in ("single", "multi") and len(t["options"]) >= 3
+                ok = ok and all(a in t["options"] for a in (t.get("answers") or [t.get("answer")]))
+                if t["type"] == "single" and nrm(t["answer"]) in nrm(t["q"]): ok = False
+                if not ok: s.warn.append(f"ЗАДАНИЕ {t['id']}: рассуждение без опоры basis или с утечкой ответа"); s.dropped = getattr(s, "dropped", 0) + 1
+                if ok or not s.cfg.get("drop_bad"): out.append(dict(t, node=nid, claim=f"{nid}#{b[0] if b else t['claim']}")); continue
+            if not t.get("claim"): s.warn.append(f"ЗАДАНИЕ {t['id']}: нет поля claim, пропущено"); s.dropped = getattr(s, "dropped", 0) + 1; continue
+            key = f"{nid}#{t['claim']}"; c = s.claim(key); txt = nrm(c["text"])
             src = txt if t.get("src", "claim") == "claim" else nrm(" ".join(sum((w.get("steps", []) for w in n.get("worked_examples", [])), [])))
             ok = True
             if t["type"] == "single": ok = nrm(t.get("ev", t["answer"])) in txt and t["answer"] in t["options"]
@@ -379,8 +388,8 @@ class Build:
             elif t["type"] == "calc": ok = all(x in c["text"] for x in t["nums"])
             ans = t.get("answer") if isinstance(t.get("answer"), str) else None
             if ans and len(ans) > 3 and t["type"] in ("single", "blank") and nrm(ans) in nrm(t["q"]): ok = False
-            if not ok: s.warn.append(f"ЗАДАНИЕ {t['id']}: ответ не найден в {key}")
-            out.append(dict(t, node=nid, claim=key))
+            if not ok: s.warn.append(f"ЗАДАНИЕ {t['id']}: ответ не найден в {key}"); s.dropped = getattr(s, "dropped", 0) + 1
+            if ok or not s.cfg.get("drop_bad"): out.append(dict(t, node=nid, claim=key))
         return out
 
 

@@ -83,7 +83,7 @@ var shuf=function(a,seed){var r=a.slice(),x=0;for(var i=0;i<seed.length;i++)x=(x
 var nz=function(s){return String(s).toLowerCase().replace(/\s+/g,"").replace(/[−–—]/g,"-").replace(/,/g,".")};
 var TN={single:"один ответ",multi:"несколько ответов",order:"порядок",blank:"пропуск",calc:"расчёт"};
 function taskEl(t){
- var d=document.createElement("div");d.className="task";var h='<p><b>'+esc(t.q)+'</b> <span class="meta">('+TN[t.type]+')</span></p><div class="in"></div><button type="button" class="chk">Проверить</button><div class="fb" hidden aria-live="polite"></div>';d.innerHTML=h;
+ var d=document.createElement("div");d.className="task";var h='<p><b>'+esc(t.q)+'</b> <span class="meta">('+TN[t.type]+(t.kind?' · на рассуждение':'')+')</span></p><div class="in"></div><button type="button" class="chk">Проверить</button><div class="fb" hidden aria-live="polite"></div>';d.innerHTML=h;
  var inn=$(".in",d),getv,show;
  if(t.type==="single"||t.type==="multi"){
   var ty=t.type==="single"?"radio":"checkbox";inn.innerHTML=t.options.map(function(o,i){return '<label><input type="'+ty+'" name="'+t.id+'" value="'+i+'"> '+esc(o)+'</label>'}).join("");
