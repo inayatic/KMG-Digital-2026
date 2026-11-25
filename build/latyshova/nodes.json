@@ -4942,12 +4942,7 @@
    "practice": "В коллекторах (и глинах) зона вокруг скважины изменена; в плотных монолитных породах - не изменена.",
    "nuances": "Условия: оговорки автора «как правило», «обычно», «может». Термин «коллектор» и зоны проникновения раскрываются в узле 02."
   },
-  "links": [
-   {
-    "to": "lat.s02.02-invasion-zones",
-    "type": "предпосылка"
-   }
-  ],
+  "links": [],
   "order": {
    "rank": 39,
    "why_before_next": "Узел 02 использует понятия коллектора и фильтрации, которые вводятся после общего контакта раствора с породой.",
@@ -5176,15 +5171,7 @@
   },
   "links": [
    {
-    "to": "lat.s02.03-resistivity-jumps",
-    "type": "предпосылка"
-   },
-   {
-    "to": "lat.s02.04-penetration-types",
-    "type": "предпосылка"
-   },
-   {
-    "to": "lat.s02.06-probe-depth",
+    "to": "lat.s02.01-contact-changes",
     "type": "предпосылка"
    }
   ],
@@ -5303,7 +5290,7 @@
   },
   "links": [
    {
-    "to": "lat.s02.04-penetration-types",
+    "to": "lat.s02.02-invasion-zones",
     "type": "предпосылка"
    }
   ],
@@ -5466,12 +5453,16 @@
   },
   "links": [
    {
-    "to": "lat.s02.05-complications",
+    "to": "lat.s02.07-problems",
+    "type": "переход к данным"
+   },
+   {
+    "to": "lat.s02.02-invasion-zones",
     "type": "предпосылка"
    },
    {
-    "to": "lat.s02.07-problems",
-    "type": "переход к данным"
+    "to": "lat.s02.03-resistivity-jumps",
+    "type": "предпосылка"
    }
   ],
   "order": {
@@ -5572,7 +5563,12 @@
    "practice": "Упрощённая модель узлов 02-04 является типичным, а не универсальным случаем.",
    "nuances": "Термин «кольматация» в главе не определён (в главе нет объяснения)."
   },
-  "links": [],
+  "links": [
+   {
+    "to": "lat.s02.04-penetration-types",
+    "type": "предпосылка"
+   }
+  ],
   "order": {
    "rank": 43,
    "why_before_next": "Узел 06 опирается на понимание типичной картины зон и её оговорок.",
@@ -5705,6 +5701,10 @@
    {
     "to": "lat.s02.07-problems",
     "type": "переход к данным"
+   },
+   {
+    "to": "lat.s02.02-invasion-zones",
+    "type": "предпосылка"
    }
   ],
   "order": {
@@ -12902,12 +12902,7 @@
     "quote": "К настоящему времени разработано много методик использования разноглубинных разнотипных и однотипных зондов для определения удельного сопротивления коллекторов."
    }
   ],
-  "links": [
-   {
-    "to": "lat.s06.02-preprocessing-goal",
-    "type": "предпосылка"
-   }
-  ],
+  "links": [],
   "layers": {
    "mechanism": "Показание каждого зонда зависит от ρ_п, ρ_зп и D; одно показание даёт одно уравнение, поэтому для трёх неизвестных нужен комплекс зондов разной глубины.",
    "practice": "В комплекс входят нефокусированные (градиент-, потенциал-зонды) и фокусированные (экранированные БК, индукционные) зонды.",
@@ -13016,11 +13011,7 @@
   ],
   "links": [
    {
-    "to": "lat.s06.03-screened-reading-and-scale",
-    "type": "предпосылка"
-   },
-   {
-    "to": "lat.s06.05-induction-scale-limit",
+    "to": "lat.s06.01-complex-three-unknowns",
     "type": "предпосылка"
    }
   ],
@@ -13143,7 +13134,7 @@
   ],
   "links": [
    {
-    "to": "lat.s06.04-screened-corrections-kd-kh-j",
+    "to": "lat.s06.02-preprocessing-goal",
     "type": "предпосылка"
    }
   ],
@@ -13284,12 +13275,12 @@
   ],
   "links": [
    {
-    "to": "lat.s06.08-thickness-correction-and-final-mix",
-    "type": "предпосылка"
-   },
-   {
     "to": "lat.s06.10-worked-example-focused-table9",
     "type": "пример"
+   },
+   {
+    "to": "lat.s06.03-screened-reading-and-scale",
+    "type": "предпосылка"
    }
   ],
   "layers": {
@@ -13409,7 +13400,7 @@
   ],
   "links": [
    {
-    "to": "lat.s06.06-induction-borehole-correction",
+    "to": "lat.s06.02-preprocessing-goal",
     "type": "предпосылка"
    }
   ],
@@ -13531,7 +13522,7 @@
   ],
   "links": [
    {
-    "to": "lat.s06.07-induction-skin-effect-scale",
+    "to": "lat.s06.05-induction-scale-limit",
     "type": "предпосылка"
    }
   ],
@@ -13636,7 +13627,7 @@
   ],
   "links": [
    {
-    "to": "lat.s06.08-thickness-correction-and-final-mix",
+    "to": "lat.s06.06-induction-borehole-correction",
     "type": "предпосылка"
    }
   ],
@@ -13782,7 +13773,11 @@
     "type": "пример"
    },
    {
-    "to": "lat.s06.09-second-scheme-e-series",
+    "to": "lat.s06.04-screened-corrections-kd-kh-j",
+    "type": "предпосылка"
+   },
+   {
+    "to": "lat.s06.07-induction-skin-effect-scale",
     "type": "предпосылка"
    }
   ],
@@ -13879,7 +13874,7 @@
   ],
   "links": [
    {
-    "to": "lat.s06.10-worked-example-focused-table9",
+    "to": "lat.s06.08-thickness-correction-and-final-mix",
     "type": "предпосылка"
    }
   ],
@@ -14007,6 +14002,10 @@
    {
     "to": "lat.s06.12-single-probe-composite-palettes",
     "type": "переход к данным"
+   },
+   {
+    "to": "lat.s06.09-second-scheme-e-series",
+    "type": "предпосылка"
    }
   ],
   "layers": {
@@ -14208,12 +14207,7 @@
     "ocr_note": "Предложение переходит со стр. 46 на стр. 47 (обрыв по слову «каверно-/граммы»)."
    }
   ],
-  "links": [
-   {
-    "to": "lat.s06.12-single-probe-composite-palettes",
-    "type": "предпосылка"
-   }
-  ],
+  "links": [],
   "layers": {
    "mechanism": "Малый зонд «видит» в основном промытую зону, поэтому её ρ выделяется из комплекса; в экранированном микрозонде корка включена последовательно с пластом, и ошибка корки меньше.",
    "practice": "Малые зонды - по двухслойной палетке (μ); экранированный микрозонд - по рис. 32 с известной толщиной корки.",
@@ -14371,6 +14365,10 @@
    {
     "to": "lat.s06.13-example-31-composite",
     "type": "пример"
+   },
+   {
+    "to": "lat.s06.11-microprobes-rzp",
+    "type": "предпосылка"
    }
   ],
   "layers": {
@@ -14620,12 +14618,7 @@
     "quote": "не точно соответствует палеточному значению, всю процедуру определений делают в относительных координатах"
    }
   ],
-  "links": [
-   {
-    "to": "lat.s06.15-three-probe-palettes",
-    "type": "предпосылка"
-   }
-  ],
+  "links": [],
   "layers": {
    "mechanism": "Две неизвестные (ρ_п, D) определяются двумя показаниями при известном ρ_зп.",
    "practice": "Обработка -> ρ_зп -> палетка -> точка -> интерполяция.",
@@ -14752,7 +14745,7 @@
   ],
   "links": [
    {
-    "to": "lat.s06.16-isoresistive-method",
+    "to": "lat.s06.14-two-probe-palettes",
     "type": "предпосылка"
    }
   ],
@@ -14885,6 +14878,10 @@
    {
     "to": "lat.s06.17-example-32-isoresistive-task48",
     "type": "пример"
+   },
+   {
+    "to": "lat.s06.15-three-probe-palettes",
+    "type": "предпосылка"
    }
   ],
   "layers": {
@@ -18628,12 +18625,7 @@
    "time": "в главе не оценивается",
    "typical_errors": "гипотеза: принять точку наибольшего градиента без учёта толщины пласта"
   },
-  "links": [
-   {
-    "to": "lat.s09.02-superposition-curves",
-    "type": "предпосылка"
-   }
-  ],
+  "links": [],
   "order": {
    "rank": 133,
    "why_before_next": "Объясняет, почему кривая плавная; без этого суммирование кривых границ (узел 02) выглядит произвольным.",
@@ -18779,10 +18771,6 @@
    {
     "to": "lat.s09.01-smooth-boundaries",
     "type": "предпосылка"
-   },
-   {
-    "to": "lat.s09.03-build-curves-problems",
-    "type": "предпосылка"
    }
   ],
   "order": {
@@ -18920,10 +18908,6 @@
   "links": [
    {
     "to": "lat.s09.02-superposition-curves",
-    "type": "предпосылка"
-   },
-   {
-    "to": "lat.s09.04-boundary-conclusions",
     "type": "предпосылка"
    }
   ],
@@ -25454,12 +25438,7 @@
    "time": "не описано",
    "typical_errors": "не описано"
   },
-  "links": [
-   {
-    "to": "lat.s15.02-three-element-probe-waveform",
-    "type": "предпосылка"
-   }
-  ],
+  "links": [],
   "external_prereqs": [],
   "route": {
    "format": "карточки",
@@ -25604,10 +25583,6 @@
   "links": [
    {
     "to": "lat.s15.01-scope-and-wave-types",
-    "type": "предпосылка"
-   },
-   {
-    "to": "lat.s15.03-spak-parameters",
     "type": "предпосылка"
    }
   ],
@@ -25893,10 +25868,6 @@
   "links": [
    {
     "to": "lat.s15.03-spak-parameters",
-    "type": "предпосылка"
-   },
-   {
-    "to": "lat.s15.05-average-time-equation",
     "type": "предпосылка"
    }
   ],
@@ -30655,12 +30626,7 @@
    "time": "В книге не указано.",
    "typical_errors": "Опора на малое число признаков (по логике утверждения c3, вывод модели)."
   },
-  "links": [
-   {
-    "to": "lat.s19.02-ambiguity-conditional-column",
-    "type": "предпосылка"
-   }
-  ],
+  "links": [],
   "order": {
    "rank": 221,
    "why_before_next": "Задаёт две операции и принцип «сумма признаков»; без него непонятно, зачем условная колонка и таблица признаков.",
@@ -30748,7 +30714,7 @@
   },
   "links": [
    {
-    "to": "lat.s19.03-table-21-signs",
+    "to": "lat.s19.01-two-operations",
     "type": "предпосылка"
    }
   ],
@@ -35771,20 +35737,7 @@
    "nuances": "Термины «межзерновой коллектор», «ГИС» заданы в предыдущих параграфах (external_prereqs).",
    "deeper": []
   },
-  "links": [
-   {
-    "to": "lat.s21.02-fracture-collector",
-    "type": "предпосылка"
-   },
-   {
-    "to": "lat.s21.06-vug-fracture-collector",
-    "type": "предпосылка"
-   },
-   {
-    "to": "lat.s21.11-mixed-type-saturation",
-    "type": "предпосылка"
-   }
-  ],
+  "links": [],
   "order": {
    "rank": 259,
    "why_before_next": "Задаёт определение и список типов, по которым строятся следующие узлы.",
@@ -35924,11 +35877,7 @@
   },
   "links": [
    {
-    "to": "lat.s21.03-fracture-standard-gis",
-    "type": "предпосылка"
-   },
-   {
-    "to": "lat.s21.06-vug-fracture-collector",
+    "to": "lat.s21.01-complex-collectors",
     "type": "предпосылка"
    }
   ],
@@ -36096,11 +36045,7 @@
   },
   "links": [
    {
-    "to": "lat.s21.04-fracture-resistivity-two-solutions",
-    "type": "предпосылка"
-   },
-   {
-    "to": "lat.s21.05-fracture-acoustic-sp",
+    "to": "lat.s21.02-fracture-collector",
     "type": "предпосылка"
    }
   ],
@@ -36251,11 +36196,7 @@
   },
   "links": [
    {
-    "to": "lat.s21.05-fracture-acoustic-sp",
-    "type": "предпосылка"
-   },
-   {
-    "to": "lat.s21.08-log-impact-log-variant-a",
+    "to": "lat.s21.03-fracture-standard-gis",
     "type": "предпосылка"
    }
   ],
@@ -36397,7 +36338,11 @@
   },
   "links": [
    {
-    "to": "lat.s21.06-vug-fracture-collector",
+    "to": "lat.s21.03-fracture-standard-gis",
+    "type": "предпосылка"
+   },
+   {
+    "to": "lat.s21.04-fracture-resistivity-two-solutions",
     "type": "предпосылка"
    }
   ],
@@ -36563,11 +36508,15 @@
   },
   "links": [
    {
-    "to": "lat.s21.07-vug-fracture-standard-gis",
+    "to": "lat.s21.01-complex-collectors",
     "type": "предпосылка"
    },
    {
-    "to": "lat.s21.08-log-impact-log-variant-a",
+    "to": "lat.s21.02-fracture-collector",
+    "type": "предпосылка"
+   },
+   {
+    "to": "lat.s21.05-fracture-acoustic-sp",
     "type": "предпосылка"
    }
   ],
@@ -36697,11 +36646,7 @@
   },
   "links": [
    {
-    "to": "lat.s21.08-log-impact-log-variant-a",
-    "type": "предпосылка"
-   },
-   {
-    "to": "lat.s21.13-problems",
+    "to": "lat.s21.06-vug-fracture-collector",
     "type": "предпосылка"
    }
   ],
@@ -36886,11 +36831,15 @@
   },
   "links": [
    {
-    "to": "lat.s21.09-log-impact-log-variant-b",
+    "to": "lat.s21.04-fracture-resistivity-two-solutions",
     "type": "предпосылка"
    },
    {
-    "to": "lat.s21.13-problems",
+    "to": "lat.s21.06-vug-fracture-collector",
+    "type": "предпосылка"
+   },
+   {
+    "to": "lat.s21.07-vug-fracture-standard-gis",
     "type": "предпосылка"
    }
   ],
@@ -37052,11 +37001,7 @@
   },
   "links": [
    {
-    "to": "lat.s21.12-vug-fracture-productivity",
-    "type": "предпосылка"
-   },
-   {
-    "to": "lat.s21.13-problems",
+    "to": "lat.s21.08-log-impact-log-variant-a",
     "type": "предпосылка"
    }
   ],
@@ -37131,12 +37076,7 @@
    "nuances": "Условие применимости: емкость больше уровня помех. ИСФ - термин из другого раздела.",
    "deeper": []
   },
-  "links": [
-   {
-    "to": "lat.s21.12-vug-fracture-productivity",
-    "type": "предпосылка"
-   }
-  ],
+  "links": [],
   "order": {
    "rank": 268,
    "why_before_next": "Метод применим к кавернозно-трещинному, поэтому следует после 06-09.",
@@ -37225,7 +37165,7 @@
   },
   "links": [
    {
-    "to": "lat.s21.12-vug-fracture-productivity",
+    "to": "lat.s21.01-complex-collectors",
     "type": "предпосылка"
    }
   ],
@@ -37336,7 +37276,15 @@
   },
   "links": [
    {
-    "to": "lat.s21.13-problems",
+    "to": "lat.s21.09-log-impact-log-variant-b",
+    "type": "предпосылка"
+   },
+   {
+    "to": "lat.s21.10-nmr",
+    "type": "предпосылка"
+   },
+   {
+    "to": "lat.s21.11-mixed-type-saturation",
     "type": "предпосылка"
    }
   ],
@@ -37421,7 +37369,24 @@
    "nuances": "Для 109 - сопоставление k_п.общ и k_пАК (узел 07); для 110 - расхождение при двух растворах (узлы 04, 08); для 111 - рост ρк после испытания (узлы 09, 12). Сопоставление - модель.",
    "deeper": []
   },
-  "links": [],
+  "links": [
+   {
+    "to": "lat.s21.07-vug-fracture-standard-gis",
+    "type": "предпосылка"
+   },
+   {
+    "to": "lat.s21.08-log-impact-log-variant-a",
+    "type": "предпосылка"
+   },
+   {
+    "to": "lat.s21.09-log-impact-log-variant-b",
+    "type": "предпосылка"
+   },
+   {
+    "to": "lat.s21.12-vug-fracture-productivity",
+    "type": "предпосылка"
+   }
+  ],
   "order": {
    "rank": 271,
    "why_before_next": "Завершающий узел сегмента.",
@@ -41468,12 +41433,7 @@
    "p125-02",
    "p125-03"
   ],
-  "links": [
-   {
-    "to": "lat.s25.02-two-ways",
-    "type": "предпосылка"
-   }
-  ],
+  "links": [],
   "order": {
    "rank": 301,
    "why_before_next": "Сначала зачем величина нужна, затем как её оценивают геофизикой.",
@@ -41565,14 +41525,6 @@
   "links": [
    {
     "to": "lat.s25.01-why-permeability",
-    "type": "предпосылка"
-   },
-   {
-    "to": "lat.s25.03-resistivity-theory",
-    "type": "предпосылка"
-   },
-   {
-    "to": "lat.s25.06-sp-gm-basis",
     "type": "предпосылка"
    }
   ],
@@ -41674,10 +41626,6 @@
   "links": [
    {
     "to": "lat.s25.02-two-ways",
-    "type": "предпосылка"
-   },
-   {
-    "to": "lat.s25.04-simplified-and-empirical",
     "type": "предпосылка"
    }
   ],
@@ -41818,10 +41766,6 @@
   "links": [
    {
     "to": "lat.s25.03-resistivity-theory",
-    "type": "предпосылка"
-   },
-   {
-    "to": "lat.s25.05-resistivity-procedure",
     "type": "предпосылка"
    }
   ],
@@ -42014,10 +41958,6 @@
     "type": "предпосылка"
    },
    {
-    "to": "lat.s25.07-sp-gm-procedure",
-    "type": "предпосылка"
-   },
-   {
     "to": "lat.s25.08-fig87-correlations",
     "type": "пример"
    }
@@ -42114,10 +42054,6 @@
   "links": [
    {
     "to": "lat.s25.06-sp-gm-basis",
-    "type": "предпосылка"
-   },
-   {
-    "to": "lat.s25.08-fig87-correlations",
     "type": "предпосылка"
    }
   ],

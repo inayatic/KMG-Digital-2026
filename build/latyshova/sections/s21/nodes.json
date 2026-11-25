@@ -64,20 +64,7 @@
    "nuances": "Термины «межзерновой коллектор», «ГИС» заданы в предыдущих параграфах (external_prereqs).",
    "deeper": []
   },
-  "links": [
-   {
-    "to": "lat.s21.02-fracture-collector",
-    "type": "предпосылка"
-   },
-   {
-    "to": "lat.s21.06-vug-fracture-collector",
-    "type": "предпосылка"
-   },
-   {
-    "to": "lat.s21.11-mixed-type-saturation",
-    "type": "предпосылка"
-   }
-  ],
+  "links": [],
   "order": {
    "rank": 1,
    "why_before_next": "Задаёт определение и список типов, по которым строятся следующие узлы."
@@ -212,11 +199,7 @@
   },
   "links": [
    {
-    "to": "lat.s21.03-fracture-standard-gis",
-    "type": "предпосылка"
-   },
-   {
-    "to": "lat.s21.06-vug-fracture-collector",
+    "to": "lat.s21.01-complex-collectors",
     "type": "предпосылка"
    }
   ],
@@ -377,11 +360,7 @@
   },
   "links": [
    {
-    "to": "lat.s21.04-fracture-resistivity-two-solutions",
-    "type": "предпосылка"
-   },
-   {
-    "to": "lat.s21.05-fracture-acoustic-sp",
+    "to": "lat.s21.02-fracture-collector",
     "type": "предпосылка"
    }
   ],
@@ -525,11 +504,7 @@
   },
   "links": [
    {
-    "to": "lat.s21.05-fracture-acoustic-sp",
-    "type": "предпосылка"
-   },
-   {
-    "to": "lat.s21.08-log-impact-log-variant-a",
+    "to": "lat.s21.03-fracture-standard-gis",
     "type": "предпосылка"
    }
   ],
@@ -665,7 +640,11 @@
   },
   "links": [
    {
-    "to": "lat.s21.06-vug-fracture-collector",
+    "to": "lat.s21.03-fracture-standard-gis",
+    "type": "предпосылка"
+   },
+   {
+    "to": "lat.s21.04-fracture-resistivity-two-solutions",
     "type": "предпосылка"
    }
   ],
@@ -826,11 +805,15 @@
   },
   "links": [
    {
-    "to": "lat.s21.07-vug-fracture-standard-gis",
+    "to": "lat.s21.01-complex-collectors",
     "type": "предпосылка"
    },
    {
-    "to": "lat.s21.08-log-impact-log-variant-a",
+    "to": "lat.s21.02-fracture-collector",
+    "type": "предпосылка"
+   },
+   {
+    "to": "lat.s21.05-fracture-acoustic-sp",
     "type": "предпосылка"
    }
   ],
@@ -954,11 +937,7 @@
   },
   "links": [
    {
-    "to": "lat.s21.08-log-impact-log-variant-a",
-    "type": "предпосылка"
-   },
-   {
-    "to": "lat.s21.13-problems",
+    "to": "lat.s21.06-vug-fracture-collector",
     "type": "предпосылка"
    }
   ],
@@ -1137,11 +1116,15 @@
   },
   "links": [
    {
-    "to": "lat.s21.09-log-impact-log-variant-b",
+    "to": "lat.s21.04-fracture-resistivity-two-solutions",
     "type": "предпосылка"
    },
    {
-    "to": "lat.s21.13-problems",
+    "to": "lat.s21.06-vug-fracture-collector",
+    "type": "предпосылка"
+   },
+   {
+    "to": "lat.s21.07-vug-fracture-standard-gis",
     "type": "предпосылка"
    }
   ],
@@ -1297,11 +1280,7 @@
   },
   "links": [
    {
-    "to": "lat.s21.12-vug-fracture-productivity",
-    "type": "предпосылка"
-   },
-   {
-    "to": "lat.s21.13-problems",
+    "to": "lat.s21.08-log-impact-log-variant-a",
     "type": "предпосылка"
    }
   ],
@@ -1371,12 +1350,7 @@
    "nuances": "Условие применимости: емкость больше уровня помех. ИСФ - термин из другого раздела.",
    "deeper": []
   },
-  "links": [
-   {
-    "to": "lat.s21.12-vug-fracture-productivity",
-    "type": "предпосылка"
-   }
-  ],
+  "links": [],
   "order": {
    "rank": 10,
    "why_before_next": "Метод применим к кавернозно-трещинному, поэтому следует после 06-09."
@@ -1461,7 +1435,7 @@
   },
   "links": [
    {
-    "to": "lat.s21.12-vug-fracture-productivity",
+    "to": "lat.s21.01-complex-collectors",
     "type": "предпосылка"
    }
   ],
@@ -1567,7 +1541,15 @@
   },
   "links": [
    {
-    "to": "lat.s21.13-problems",
+    "to": "lat.s21.09-log-impact-log-variant-b",
+    "type": "предпосылка"
+   },
+   {
+    "to": "lat.s21.10-nmr",
+    "type": "предпосылка"
+   },
+   {
+    "to": "lat.s21.11-mixed-type-saturation",
     "type": "предпосылка"
    }
   ],
@@ -1647,7 +1629,24 @@
    "nuances": "Для 109 - сопоставление k_п.общ и k_пАК (узел 07); для 110 - расхождение при двух растворах (узлы 04, 08); для 111 - рост ρк после испытания (узлы 09, 12). Сопоставление - модель.",
    "deeper": []
   },
-  "links": [],
+  "links": [
+   {
+    "to": "lat.s21.07-vug-fracture-standard-gis",
+    "type": "предпосылка"
+   },
+   {
+    "to": "lat.s21.08-log-impact-log-variant-a",
+    "type": "предпосылка"
+   },
+   {
+    "to": "lat.s21.09-log-impact-log-variant-b",
+    "type": "предпосылка"
+   },
+   {
+    "to": "lat.s21.12-vug-fracture-productivity",
+    "type": "предпосылка"
+   }
+  ],
   "order": {
    "rank": 13,
    "why_before_next": "Завершающий узел сегмента."

@@ -7293,12 +7293,7 @@
      ]
     }
    ],
-   "links": [
-    {
-     "type": "prerequisite",
-     "target": "lat.s02.02-invasion-zones"
-    }
-   ],
+   "links": [],
    "misconception": {
     "ref": null,
     "text": "Каротаж в скважине измеряет невозмущённую породу (гипотеза: книга прямо этого не формулирует, но противопоставляет «не изменены» и «изменяются неодинаково»).",
@@ -7606,15 +7601,7 @@
    "links": [
     {
      "type": "prerequisite",
-     "target": "lat.s02.03-resistivity-jumps"
-    },
-    {
-     "type": "prerequisite",
-     "target": "lat.s02.04-penetration-types"
-    },
-    {
-     "type": "prerequisite",
-     "target": "lat.s02.06-probe-depth"
+     "target": "lat.s02.01-contact-changes"
     }
    ],
    "misconception": {
@@ -7804,7 +7791,7 @@
    "links": [
     {
      "type": "prerequisite",
-     "target": "lat.s02.04-penetration-types"
+     "target": "lat.s02.02-invasion-zones"
     }
    ],
    "misconception": {
@@ -8042,12 +8029,16 @@
    ],
    "links": [
     {
-     "type": "prerequisite",
-     "target": "lat.s02.05-complications"
-    },
-    {
      "type": "to_data",
      "target": "lat.s02.07-problems"
+    },
+    {
+     "type": "prerequisite",
+     "target": "lat.s02.02-invasion-zones"
+    },
+    {
+     "type": "prerequisite",
+     "target": "lat.s02.03-resistivity-jumps"
     }
    ],
    "misconception": {
@@ -8232,7 +8223,12 @@
      ]
     }
    ],
-   "links": [],
+   "links": [
+    {
+     "type": "prerequisite",
+     "target": "lat.s02.04-penetration-types"
+    }
+   ],
    "misconception": {
     "ref": null,
     "text": "в книге отсутствует",
@@ -8423,6 +8419,10 @@
     {
      "type": "to_data",
      "target": "lat.s02.07-problems"
+    },
+    {
+     "type": "prerequisite",
+     "target": "lat.s02.02-invasion-zones"
     }
    ],
    "misconception": {
@@ -18644,12 +18644,7 @@
      ]
     }
    ],
-   "links": [
-    {
-     "type": "prerequisite",
-     "target": "lat.s06.02-preprocessing-goal"
-    }
-   ],
+   "links": [],
    "misconception": {
     "ref": null,
     "text": "[гипотеза, модель] Можно получить ρ пласта из одной диаграммы одного зонда.",
@@ -18814,11 +18809,7 @@
    "links": [
     {
      "type": "prerequisite",
-     "target": "lat.s06.03-screened-reading-and-scale"
-    },
-    {
-     "type": "prerequisite",
-     "target": "lat.s06.05-induction-scale-limit"
+     "target": "lat.s06.01-complex-three-unknowns"
     }
    ],
    "misconception": null,
@@ -18994,7 +18985,7 @@
    "links": [
     {
      "type": "prerequisite",
-     "target": "lat.s06.04-screened-corrections-kd-kh-j"
+     "target": "lat.s06.02-preprocessing-goal"
     }
    ],
    "misconception": null,
@@ -19204,12 +19195,12 @@
    ],
    "links": [
     {
-     "type": "prerequisite",
-     "target": "lat.s06.08-thickness-correction-and-final-mix"
-    },
-    {
      "type": "example_of",
      "target": "lat.s06.10-worked-example-focused-table9"
+    },
+    {
+     "type": "prerequisite",
+     "target": "lat.s06.03-screened-reading-and-scale"
     }
    ],
    "misconception": null,
@@ -19390,7 +19381,7 @@
    "links": [
     {
      "type": "prerequisite",
-     "target": "lat.s06.06-induction-borehole-correction"
+     "target": "lat.s06.02-preprocessing-goal"
     }
    ],
    "misconception": {
@@ -19570,7 +19561,7 @@
    "links": [
     {
      "type": "prerequisite",
-     "target": "lat.s06.07-induction-skin-effect-scale"
+     "target": "lat.s06.05-induction-scale-limit"
     }
    ],
    "misconception": null,
@@ -19735,7 +19726,7 @@
    "links": [
     {
      "type": "prerequisite",
-     "target": "lat.s06.08-thickness-correction-and-final-mix"
+     "target": "lat.s06.06-induction-borehole-correction"
     }
    ],
    "misconception": null,
@@ -19943,7 +19934,11 @@
     },
     {
      "type": "prerequisite",
-     "target": "lat.s06.09-second-scheme-e-series"
+     "target": "lat.s06.04-screened-corrections-kd-kh-j"
+    },
+    {
+     "type": "prerequisite",
+     "target": "lat.s06.07-induction-skin-effect-scale"
     }
    ],
    "misconception": null,
@@ -20097,7 +20092,7 @@
    "links": [
     {
      "type": "prerequisite",
-     "target": "lat.s06.10-worked-example-focused-table9"
+     "target": "lat.s06.08-thickness-correction-and-final-mix"
     }
    ],
    "misconception": null,
@@ -20275,6 +20270,10 @@
     {
      "type": "to_data",
      "target": "lat.s06.12-single-probe-composite-palettes"
+    },
+    {
+     "type": "prerequisite",
+     "target": "lat.s06.09-second-scheme-e-series"
     }
    ],
    "misconception": null,
@@ -20542,12 +20541,7 @@
      "ocr_note": "Предложение переходит со стр. 46 на стр. 47 (обрыв по слову «каверно-/граммы»)."
     }
    ],
-   "links": [
-    {
-     "type": "prerequisite",
-     "target": "lat.s06.12-single-probe-composite-palettes"
-    }
-   ],
+   "links": [],
    "misconception": {
     "ref": null,
     "text": "[гипотеза, модель] Микрозонд сам по себе даёт ρ_зп независимо от корки.",
@@ -20774,6 +20768,10 @@
     {
      "type": "example_of",
      "target": "lat.s06.13-example-31-composite"
+    },
+    {
+     "type": "prerequisite",
+     "target": "lat.s06.11-microprobes-rzp"
     }
    ],
    "misconception": null,
@@ -21137,12 +21135,7 @@
      ]
     }
    ],
-   "links": [
-    {
-     "type": "prerequisite",
-     "target": "lat.s06.15-three-probe-palettes"
-    }
-   ],
+   "links": [],
    "misconception": null,
    "data_meaning": {
     "from_chapter": {
@@ -21323,7 +21316,7 @@
    "links": [
     {
      "type": "prerequisite",
-     "target": "lat.s06.16-isoresistive-method"
+     "target": "lat.s06.14-two-probe-palettes"
     }
    ],
    "misconception": null,
@@ -21513,6 +21506,10 @@
     {
      "type": "example_of",
      "target": "lat.s06.17-example-32-isoresistive-task48"
+    },
+    {
+     "type": "prerequisite",
+     "target": "lat.s06.15-three-probe-palettes"
     }
    ],
    "misconception": null,
@@ -26905,12 +26902,7 @@
      ]
     }
    ],
-   "links": [
-    {
-     "type": "prerequisite",
-     "target": "lat.s09.02-superposition-curves"
-    }
-   ],
+   "links": [],
    "misconception": {
     "ref": null,
     "text": "Кривая СП повторяет ступенчатый разрез: на границе пласта потенциал скачет на величину статической амплитуды (гипотеза: типичное ожидание новичка, в книге не сформулировано).",
@@ -27103,10 +27095,6 @@
     {
      "type": "prerequisite",
      "target": "lat.s09.01-smooth-boundaries"
-    },
-    {
-     "type": "prerequisite",
-     "target": "lat.s09.03-build-curves-problems"
     }
    ],
    "misconception": {
@@ -27295,10 +27283,6 @@
     {
      "type": "prerequisite",
      "target": "lat.s09.02-superposition-curves"
-    },
-    {
-     "type": "prerequisite",
-     "target": "lat.s09.04-boundary-conclusions"
     }
    ],
    "misconception": null,
@@ -36924,12 +36908,7 @@
      ]
     }
    ],
-   "links": [
-    {
-     "type": "prerequisite",
-     "target": "lat.s15.02-three-element-probe-waveform"
-    }
-   ],
+   "links": [],
    "misconception": {
     "ref": null,
     "text": "Волны в скважине одинаковы во всех средах: на деле S-волна существует только в твёрдом.",
@@ -37137,10 +37116,6 @@
     {
      "type": "prerequisite",
      "target": "lat.s15.01-scope-and-wave-types"
-    },
-    {
-     "type": "prerequisite",
-     "target": "lat.s15.03-spak-parameters"
     }
    ],
    "misconception": null,
@@ -37545,10 +37520,6 @@
     {
      "type": "prerequisite",
      "target": "lat.s15.03-spak-parameters"
-    },
-    {
-     "type": "prerequisite",
-     "target": "lat.s15.05-average-time-equation"
     }
    ],
    "misconception": {
@@ -44395,12 +44366,7 @@
      ]
     }
    ],
-   "links": [
-    {
-     "type": "prerequisite",
-     "target": "lat.s19.02-ambiguity-conditional-column"
-    }
-   ],
+   "links": [],
    "misconception": null,
    "data_meaning": {
     "from_chapter": {
@@ -44537,7 +44503,7 @@
    "links": [
     {
      "type": "prerequisite",
-     "target": "lat.s19.03-table-21-signs"
+     "target": "lat.s19.01-two-operations"
     }
    ],
    "misconception": {
@@ -51978,20 +51944,7 @@
      ]
     }
    ],
-   "links": [
-    {
-     "type": "prerequisite",
-     "target": "lat.s21.02-fracture-collector"
-    },
-    {
-     "type": "prerequisite",
-     "target": "lat.s21.06-vug-fracture-collector"
-    },
-    {
-     "type": "prerequisite",
-     "target": "lat.s21.11-mixed-type-saturation"
-    }
-   ],
+   "links": [],
    "misconception": {
     "ref": null,
     "text": "Гипотеза (модель): сложный коллектор можно выделять теми же признаками, что и межзерновой.",
@@ -52201,11 +52154,7 @@
    "links": [
     {
      "type": "prerequisite",
-     "target": "lat.s21.03-fracture-standard-gis"
-    },
-    {
-     "type": "prerequisite",
-     "target": "lat.s21.06-vug-fracture-collector"
+     "target": "lat.s21.01-complex-collectors"
     }
    ],
    "misconception": {
@@ -52449,11 +52398,7 @@
    "links": [
     {
      "type": "prerequisite",
-     "target": "lat.s21.04-fracture-resistivity-two-solutions"
-    },
-    {
-     "type": "prerequisite",
-     "target": "lat.s21.05-fracture-acoustic-sp"
+     "target": "lat.s21.02-fracture-collector"
     }
    ],
    "misconception": {
@@ -52678,11 +52623,7 @@
    "links": [
     {
      "type": "prerequisite",
-     "target": "lat.s21.05-fracture-acoustic-sp"
-    },
-    {
-     "type": "prerequisite",
-     "target": "lat.s21.08-log-impact-log-variant-a"
+     "target": "lat.s21.03-fracture-standard-gis"
     }
    ],
    "misconception": null,
@@ -52883,7 +52824,11 @@
    "links": [
     {
      "type": "prerequisite",
-     "target": "lat.s21.06-vug-fracture-collector"
+     "target": "lat.s21.03-fracture-standard-gis"
+    },
+    {
+     "type": "prerequisite",
+     "target": "lat.s21.04-fracture-resistivity-two-solutions"
     }
    ],
    "misconception": null,
@@ -53122,11 +53067,15 @@
    "links": [
     {
      "type": "prerequisite",
-     "target": "lat.s21.07-vug-fracture-standard-gis"
+     "target": "lat.s21.01-complex-collectors"
     },
     {
      "type": "prerequisite",
-     "target": "lat.s21.08-log-impact-log-variant-a"
+     "target": "lat.s21.02-fracture-collector"
+    },
+    {
+     "type": "prerequisite",
+     "target": "lat.s21.05-fracture-acoustic-sp"
     }
    ],
    "misconception": {
@@ -53334,11 +53283,7 @@
    "links": [
     {
      "type": "prerequisite",
-     "target": "lat.s21.08-log-impact-log-variant-a"
-    },
-    {
-     "type": "prerequisite",
-     "target": "lat.s21.13-problems"
+     "target": "lat.s21.06-vug-fracture-collector"
     }
    ],
    "misconception": {
@@ -53600,11 +53545,15 @@
    "links": [
     {
      "type": "prerequisite",
-     "target": "lat.s21.09-log-impact-log-variant-b"
+     "target": "lat.s21.04-fracture-resistivity-two-solutions"
     },
     {
      "type": "prerequisite",
-     "target": "lat.s21.13-problems"
+     "target": "lat.s21.06-vug-fracture-collector"
+    },
+    {
+     "type": "prerequisite",
+     "target": "lat.s21.07-vug-fracture-standard-gis"
     }
    ],
    "misconception": {
@@ -53842,11 +53791,7 @@
    "links": [
     {
      "type": "prerequisite",
-     "target": "lat.s21.12-vug-fracture-productivity"
-    },
-    {
-     "type": "prerequisite",
-     "target": "lat.s21.13-problems"
+     "target": "lat.s21.08-log-impact-log-variant-a"
     }
    ],
    "misconception": null,
@@ -53986,12 +53931,7 @@
      "needs_scan": true
     }
    ],
-   "links": [
-    {
-     "type": "prerequisite",
-     "target": "lat.s21.12-vug-fracture-productivity"
-    }
-   ],
+   "links": [],
    "misconception": null,
    "data_meaning": {
     "from_chapter": {
@@ -54139,7 +54079,7 @@
    "links": [
     {
      "type": "prerequisite",
-     "target": "lat.s21.12-vug-fracture-productivity"
+     "target": "lat.s21.01-complex-collectors"
     }
    ],
    "misconception": {
@@ -54305,7 +54245,15 @@
    "links": [
     {
      "type": "prerequisite",
-     "target": "lat.s21.13-problems"
+     "target": "lat.s21.09-log-impact-log-variant-b"
+    },
+    {
+     "type": "prerequisite",
+     "target": "lat.s21.10-nmr"
+    },
+    {
+     "type": "prerequisite",
+     "target": "lat.s21.11-mixed-type-saturation"
     }
    ],
    "misconception": null,
@@ -54451,7 +54399,24 @@
      ]
     }
    ],
-   "links": [],
+   "links": [
+    {
+     "type": "prerequisite",
+     "target": "lat.s21.07-vug-fracture-standard-gis"
+    },
+    {
+     "type": "prerequisite",
+     "target": "lat.s21.08-log-impact-log-variant-a"
+    },
+    {
+     "type": "prerequisite",
+     "target": "lat.s21.09-log-impact-log-variant-b"
+    },
+    {
+     "type": "prerequisite",
+     "target": "lat.s21.12-vug-fracture-productivity"
+    }
+   ],
    "misconception": null,
    "data_meaning": {
     "from_chapter": {
@@ -60420,12 +60385,7 @@
      "needs_scan": true
     }
    ],
-   "links": [
-    {
-     "type": "prerequisite",
-     "target": "lat.s25.02-two-ways"
-    }
-   ],
+   "links": [],
    "misconception": null,
    "data_meaning": {
     "from_chapter": {
@@ -60570,14 +60530,6 @@
     {
      "type": "prerequisite",
      "target": "lat.s25.01-why-permeability"
-    },
-    {
-     "type": "prerequisite",
-     "target": "lat.s25.03-resistivity-theory"
-    },
-    {
-     "type": "prerequisite",
-     "target": "lat.s25.06-sp-gm-basis"
     }
    ],
    "misconception": null,
@@ -60725,10 +60677,6 @@
     {
      "type": "prerequisite",
      "target": "lat.s25.02-two-ways"
-    },
-    {
-     "type": "prerequisite",
-     "target": "lat.s25.04-simplified-and-empirical"
     }
    ],
    "misconception": null,
@@ -60926,10 +60874,6 @@
     {
      "type": "prerequisite",
      "target": "lat.s25.03-resistivity-theory"
-    },
-    {
-     "type": "prerequisite",
-     "target": "lat.s25.05-resistivity-procedure"
     }
    ],
    "misconception": {
@@ -61235,10 +61179,6 @@
      "target": "lat.s25.02-two-ways"
     },
     {
-     "type": "prerequisite",
-     "target": "lat.s25.07-sp-gm-procedure"
-    },
-    {
      "type": "example_of",
      "target": "lat.s25.08-fig87-correlations"
     }
@@ -61386,10 +61326,6 @@
     {
      "type": "prerequisite",
      "target": "lat.s25.06-sp-gm-basis"
-    },
-    {
-     "type": "prerequisite",
-     "target": "lat.s25.08-fig87-correlations"
     }
    ],
    "misconception": null,

@@ -70,12 +70,7 @@
     "quote": "К настоящему времени разработано много методик использования разноглубинных разнотипных и однотипных зондов для определения удельного сопротивления коллекторов."
    }
   ],
-  "links": [
-   {
-    "to": "lat.s06.02-preprocessing-goal",
-    "type": "предпосылка"
-   }
-  ],
+  "links": [],
   "layers": {
    "mechanism": "Показание каждого зонда зависит от ρ_п, ρ_зп и D; одно показание даёт одно уравнение, поэтому для трёх неизвестных нужен комплекс зондов разной глубины.",
    "practice": "В комплекс входят нефокусированные (градиент-, потенциал-зонды) и фокусированные (экранированные БК, индукционные) зонды.",
@@ -183,11 +178,7 @@
   ],
   "links": [
    {
-    "to": "lat.s06.03-screened-reading-and-scale",
-    "type": "предпосылка"
-   },
-   {
-    "to": "lat.s06.05-induction-scale-limit",
+    "to": "lat.s06.01-complex-three-unknowns",
     "type": "предпосылка"
    }
   ],
@@ -307,7 +298,7 @@
   ],
   "links": [
    {
-    "to": "lat.s06.04-screened-corrections-kd-kh-j",
+    "to": "lat.s06.02-preprocessing-goal",
     "type": "предпосылка"
    }
   ],
@@ -445,12 +436,12 @@
   ],
   "links": [
    {
-    "to": "lat.s06.08-thickness-correction-and-final-mix",
-    "type": "предпосылка"
-   },
-   {
     "to": "lat.s06.10-worked-example-focused-table9",
     "type": "пример"
+   },
+   {
+    "to": "lat.s06.03-screened-reading-and-scale",
+    "type": "предпосылка"
    }
   ],
   "layers": {
@@ -567,7 +558,7 @@
   ],
   "links": [
    {
-    "to": "lat.s06.06-induction-borehole-correction",
+    "to": "lat.s06.02-preprocessing-goal",
     "type": "предпосылка"
    }
   ],
@@ -687,7 +678,7 @@
   ],
   "links": [
    {
-    "to": "lat.s06.07-induction-skin-effect-scale",
+    "to": "lat.s06.05-induction-scale-limit",
     "type": "предпосылка"
    }
   ],
@@ -789,7 +780,7 @@
   ],
   "links": [
    {
-    "to": "lat.s06.08-thickness-correction-and-final-mix",
+    "to": "lat.s06.06-induction-borehole-correction",
     "type": "предпосылка"
    }
   ],
@@ -932,7 +923,11 @@
     "type": "пример"
    },
    {
-    "to": "lat.s06.09-second-scheme-e-series",
+    "to": "lat.s06.04-screened-corrections-kd-kh-j",
+    "type": "предпосылка"
+   },
+   {
+    "to": "lat.s06.07-induction-skin-effect-scale",
     "type": "предпосылка"
    }
   ],
@@ -1026,7 +1021,7 @@
   ],
   "links": [
    {
-    "to": "lat.s06.10-worked-example-focused-table9",
+    "to": "lat.s06.08-thickness-correction-and-final-mix",
     "type": "предпосылка"
    }
   ],
@@ -1151,6 +1146,10 @@
    {
     "to": "lat.s06.12-single-probe-composite-palettes",
     "type": "переход к данным"
+   },
+   {
+    "to": "lat.s06.09-second-scheme-e-series",
+    "type": "предпосылка"
    }
   ],
   "layers": {
@@ -1349,12 +1348,7 @@
     "ocr_note": "Предложение переходит со стр. 46 на стр. 47 (обрыв по слову «каверно-/граммы»)."
    }
   ],
-  "links": [
-   {
-    "to": "lat.s06.12-single-probe-composite-palettes",
-    "type": "предпосылка"
-   }
-  ],
+  "links": [],
   "layers": {
    "mechanism": "Малый зонд «видит» в основном промытую зону, поэтому её ρ выделяется из комплекса; в экранированном микрозонде корка включена последовательно с пластом, и ошибка корки меньше.",
    "practice": "Малые зонды - по двухслойной палетке (μ); экранированный микрозонд - по рис. 32 с известной толщиной корки.",
@@ -1510,6 +1504,10 @@
    {
     "to": "lat.s06.13-example-31-composite",
     "type": "пример"
+   },
+   {
+    "to": "lat.s06.11-microprobes-rzp",
+    "type": "предпосылка"
    }
   ],
   "layers": {
@@ -1753,12 +1751,7 @@
     "quote": "не точно соответствует палеточному значению, всю процедуру определений делают в относительных координатах"
    }
   ],
-  "links": [
-   {
-    "to": "lat.s06.15-three-probe-palettes",
-    "type": "предпосылка"
-   }
-  ],
+  "links": [],
   "layers": {
    "mechanism": "Две неизвестные (ρ_п, D) определяются двумя показаниями при известном ρ_зп.",
    "practice": "Обработка -> ρ_зп -> палетка -> точка -> интерполяция.",
@@ -1882,7 +1875,7 @@
   ],
   "links": [
    {
-    "to": "lat.s06.16-isoresistive-method",
+    "to": "lat.s06.14-two-probe-palettes",
     "type": "предпосылка"
    }
   ],
@@ -2012,6 +2005,10 @@
    {
     "to": "lat.s06.17-example-32-isoresistive-task48",
     "type": "пример"
+   },
+   {
+    "to": "lat.s06.15-three-probe-palettes",
+    "type": "предпосылка"
    }
   ],
   "layers": {

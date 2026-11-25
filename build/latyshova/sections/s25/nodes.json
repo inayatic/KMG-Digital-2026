@@ -47,12 +47,7 @@
    "p125-02",
    "p125-03"
   ],
-  "links": [
-   {
-    "to": "lat.s25.02-two-ways",
-    "type": "предпосылка"
-   }
-  ],
+  "links": [],
   "order": {
    "rank": 1,
    "why_before_next": "Сначала зачем величина нужна, затем как её оценивают геофизикой."
@@ -137,14 +132,6 @@
   "links": [
    {
     "to": "lat.s25.01-why-permeability",
-    "type": "предпосылка"
-   },
-   {
-    "to": "lat.s25.03-resistivity-theory",
-    "type": "предпосылка"
-   },
-   {
-    "to": "lat.s25.06-sp-gm-basis",
     "type": "предпосылка"
    }
   ],
@@ -239,10 +226,6 @@
   "links": [
    {
     "to": "lat.s25.02-two-ways",
-    "type": "предпосылка"
-   },
-   {
-    "to": "lat.s25.04-simplified-and-empirical",
     "type": "предпосылка"
    }
   ],
@@ -376,10 +359,6 @@
   "links": [
    {
     "to": "lat.s25.03-resistivity-theory",
-    "type": "предпосылка"
-   },
-   {
-    "to": "lat.s25.05-resistivity-procedure",
     "type": "предпосылка"
    }
   ],
@@ -558,10 +537,6 @@
     "type": "предпосылка"
    },
    {
-    "to": "lat.s25.07-sp-gm-procedure",
-    "type": "предпосылка"
-   },
-   {
     "to": "lat.s25.08-fig87-correlations",
     "type": "пример"
    }
@@ -651,10 +626,6 @@
   "links": [
    {
     "to": "lat.s25.06-sp-gm-basis",
-    "type": "предпосылка"
-   },
-   {
-    "to": "lat.s25.08-fig87-correlations",
     "type": "предпосылка"
    }
   ],
