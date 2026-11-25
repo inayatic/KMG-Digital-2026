@@ -1,0 +1,82 @@
+[
+ {
+  "node": "ven.ch_s00frontm.01-kompleksnost",
+  "format": "текст",
+  "why": "базовая идея без динамики"
+ },
+ {
+  "node": "ven.ch_s00frontm.02-evm-sistemy",
+  "format": "текст",
+  "why": "принцип, без визуальной динамики"
+ },
+ {
+  "node": "ven.ch_s00frontm.03-terrigen-sistema",
+  "format": "карточки",
+  "why": "перечень компонентов и обозначений"
+ },
+ {
+  "node": "ven.ch_s00frontm.04-karbonat-sistema",
+  "format": "карточки",
+  "why": "перечень компонентов и допущений"
+ },
+ {
+  "node": "ven.ch_s00frontm.05-svoystva-sistem",
+  "format": "интерактив",
+  "why": "контринтуитивно: неизвестных больше уравнений"
+ },
+ {
+  "node": "ven.ch_s00frontm.06-nepreryvnaya-obrabotka",
+  "format": "длинное видео",
+  "why": "невидимое видимо: сплошные кривые по разрезу"
+ },
+ {
+  "node": "ven.ch_s00frontm.07-sovetskie-programmy",
+  "format": "текст",
+  "why": "историческая справка"
+ },
+ {
+  "node": "ven.ch_s00frontm.08-petrofiz-obosnovanie",
+  "format": "карточки",
+  "why": "типичные ошибки подбора модели"
+ },
+ {
+  "node": "ven.ch_s00frontm.09-regressiya",
+  "format": "шортс",
+  "why": "контринтуитивность регрессии"
+ },
+ {
+  "node": "ven.ch_s00frontm.10-primer-21",
+  "format": "практикум на данных",
+  "why": "разбор по диаграмме"
+ },
+ {
+  "node": "ven.ch_s00frontm.11-primer-22",
+  "format": "практикум на данных",
+  "why": "разбор по диаграмме"
+ },
+ {
+  "node": "ven.ch_s00frontm.12-primer-23",
+  "format": "практикум на данных",
+  "why": "разбор, но данные шумные"
+ },
+ {
+  "node": "ven.ch_s00frontm.13-primer-24",
+  "format": "практикум на данных",
+  "why": "сравнение с керном"
+ },
+ {
+  "node": "ven.ch_s00frontm.14-obemnyj-metod",
+  "format": "текст",
+  "why": "формулы"
+ },
+ {
+  "node": "ven.ch_s00frontm.15-karta-soderzhaniya",
+  "format": "длинное видео",
+  "why": "изменение во времени: от скважин к карте"
+ },
+ {
+  "node": "ven.ch_s00frontm.16-neodnorodnye-plasty",
+  "format": "шортс",
+  "why": "контринтуитивность завышения"
+ }
+]

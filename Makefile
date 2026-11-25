@@ -6,11 +6,15 @@ B = build/$(CHAPTER)
 SRC = $(wildcard chapters/$(CHAPTER)/*)
 PACK = $(wildcard domain-pack/*) $(wildcard schema/*.json)
 
-.PHONY: course check
-check:
+.PHONY: course check arg
+arg:
 	@test -n "$(CHAPTER)" || (echo "usage: make course CHAPTER=<name>"; exit 2)
 
-course: check out/$(CHAPTER)/index.html
+# быстрые проверки без LLM: make check [CHAPTER=<name>] (окружение, синтаксис, check_cov, check_org)
+check:
+	python3 -I tools/check_all.py $(CHAPTER)
+
+course: arg out/$(CHAPTER)/index.html
 
 $(B)/clean.md $(B)/clean-report.json: $(SRC) tools/clean_ref.py
 	python3 -I tools/clean_ref.py $(CHAPTER)
@@ -27,7 +31,7 @@ out/$(CHAPTER)/index.html: $(B)/org/layer.json
 
 # Слой в формате организаторов (после стадии nodes/enrich): make org CHAPTER=latyshova
 .PHONY: org
-org: check
+org: arg
 	python3 -I tools/merge_layer.py $(CHAPTER)
 	python3 -I tools/to_organizer_schema.py $(CHAPTER)
 	python3 -I tools/apply_patches.py $(CHAPTER)

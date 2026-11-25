@@ -1,0 +1,87 @@
+[
+ {
+  "node": "ven.ch_s00frontk.01-oil-saturation-grid-apparent-porosity",
+  "format": "интерактив",
+  "why": "Построение сетки и сдвиг точек на поправку — пошаговая графическая процедура"
+ },
+ {
+  "node": "ven.ch_s00frontk.02-cement-salting-correction",
+  "format": "текст",
+  "why": "Формулировка правил и условий лучше читается текстом"
+ },
+ {
+  "node": "ven.ch_s00frontk.03-gas-saturation-by-pulsed-neutron",
+  "format": "длинное видео",
+  "why": "Невидимое различие декрементов газа и воды и роль давления с минерализацией"
+ },
+ {
+  "node": "ven.ch_s00frontk.04-gas-apparent-porosity-corrections",
+  "format": "интерактив",
+  "why": "Сдвиг точек влево/вправо по знаку трёх поправок — вычислительная процедура"
+ },
+ {
+  "node": "ven.ch_s00frontk.05-pulsed-and-stationary-complexing-limits",
+  "format": "текст",
+  "why": "Формулировка правил и условий лучше читается текстом"
+ },
+ {
+  "node": "ven.ch_s00frontk.06-stationary-neutron-basis",
+  "format": "длинное видео",
+  "why": "Причина-следствие: давление → плотность газа → водородосодержание → точность"
+ },
+ {
+  "node": "ven.ch_s00frontk.07-reference-layers-same-porosity",
+  "format": "интерактив",
+  "why": "Графическая процедура нормировки показаний на опорный пласт"
+ },
+ {
+  "node": "ven.ch_s00frontk.08-gas-and-clay-reference-layers",
+  "format": "практикум на данных",
+  "why": "Палетки рис. 85 дают точное чтение по параметрам и условиям"
+ },
+ {
+  "node": "ven.ch_s00frontk.09-clay-correction-fictitious-porosity",
+  "format": "текст",
+  "why": "Формулировка правил и условий лучше читается текстом"
+ },
+ {
+  "node": "ven.ch_s00frontk.10-hydrogen-index-method",
+  "format": "текст",
+  "why": "Формулировка правил и условий лучше читается текстом"
+ },
+ {
+  "node": "ven.ch_s00frontk.11-effective-moisture-method",
+  "format": "интерактив",
+  "why": "Итерационный цикл: приближение → плотностной эффект → уточнение; удобно для пошагового просмотра"
+ },
+ {
+  "node": "ven.ch_s00frontk.12-temperature-correction-gas",
+  "format": "текст",
+  "why": "Формулировка правил и условий лучше читается текстом"
+ },
+ {
+  "node": "ven.ch_s00frontk.13-implicit-porosity-clay-method",
+  "format": "карточки",
+  "why": "Условия применимости и ограничения — набор правил для запоминания"
+ },
+ {
+  "node": "ven.ch_s00frontk.14-implicit-method-from-core",
+  "format": "текст",
+  "why": "Формулировка правил и условий лучше читается текстом"
+ },
+ {
+  "node": "ven.ch_s00frontk.15-medvezhye-gas-palette",
+  "format": "практикум на данных",
+  "why": "Пошаговое построение палетки и чтение по примеру рис. 89"
+ },
+ {
+  "node": "ven.ch_s00frontk.16-example-15-gas-saturation-clean-sandstone",
+  "format": "практикум на данных",
+  "why": "Разобранный пример с числами, можно повторить расчёт самому"
+ },
+ {
+  "node": "ven.ch_s00frontk.17-example-16-gas-saturation-clayey-iterations",
+  "format": "практикум на данных",
+  "why": "Длинная вычислительная цепочка, лучше как повторяемый расчёт"
+ }
+]
