@@ -80,7 +80,10 @@ function initStep(id){
 var shuf=function(a,seed){var r=a.slice(),x=0;for(var i=0;i<seed.length;i++)x=(x*31+seed.charCodeAt(i))>>>0;
  for(var n=0;n<5;n++){for(var i=r.length-1;i>0;i--){x=(x*1103515245+12345)>>>0;var j=x%(i+1);var t=r[i];r[i]=r[j];r[j]=t}}
  if(r.join()===a.join())r.push(r.shift());return r};
-var nz=function(s){return String(s).toLowerCase().replace(/\s+/g,"").replace(/[−–—]/g,"-").replace(/,/g,".")};
+var SUBS={"₀":"0","₁":"1","₂":"2","₃":"3","₄":"4","₅":"5","₆":"6","₇":"7","₈":"8","₉":"9","ₐ":"a","ₑ":"e","ₒ":"o","ₓ":"x","ₕ":"h","ₖ":"k","ₗ":"l","ₘ":"m","ₙ":"n","ₚ":"p","ₛ":"s","ₜ":"t"};
+var LOOK={"а":"a","е":"e","о":"o","р":"p","с":"c","х":"x","к":"k","м":"m","т":"t","π":"п","ρ":"p"};
+var nz=function(s){var t=String(s).toLowerCase().replace(/[₀-₉ₐₑₒₓₕₖₗₘₙₚₛₜ]/g,function(c){return SUBS[c]}).replace(/\s+/g,"").replace(/[−–—]/g,"-").replace(/,/g,".").replace(/[_{}]/g,"").replace(/[·⋅×*]/g,"*").replace(/[арескомтхπ]/g,function(c){return LOOK[c]});
+ if(t.indexOf("*")>=0)t=t.split("*").sort().join("*");return t};
 var TN={single:"один ответ",multi:"несколько ответов",order:"порядок",blank:"пропуск",calc:"расчёт"};
 function taskEl(t){
  var d=document.createElement("div");d.className="task";var h='<p><b>'+esc(t.q)+'</b> <span class="meta">('+TN[t.type]+')</span></p><div class="in"></div><button type="button" class="chk">Проверить</button><div class="fb" hidden aria-live="polite"></div>';d.innerHTML=h;
@@ -93,7 +96,7 @@ function taskEl(t){
   d._ev=function(){var v=getv();return{ok:ok(v),right:ans.join("; ")}};
  }else if(t.type==="blank"){
   var parts=t.text.split(/\[\[.+?\]\]/);inn.innerHTML='<p>'+esc(parts[0])+'<input type="text" aria-label="пропуск" autocomplete="off" size="8">'+esc(parts[1]||"")+'</p>';
-  d._ev=function(){return{ok:nz($("input",inn).value)===nz(t.answer),right:t.answer}};
+  d._ev=function(){var v=nz($("input",inn).value);return{ok:[t.answer].concat(t.alt||[]).some(function(a){return nz(a)===v}),right:t.answer}};
  }else if(t.type==="calc"){
   inn.innerHTML='<input type="text" inputmode="decimal" aria-label="ответ" autocomplete="off">';
   d._ev=function(){var v=parseFloat($("input",inn).value.replace(",","."));return{ok:isFinite(v)&&Math.abs(v-t.answer)<=t.tol,right:String(t.answer).replace(".",",")}};
@@ -134,8 +137,8 @@ function widget(w){
   h+='<div id="dout"></div>';w.innerHTML=h;
   var run=function(){var vals={};$$("input",w).forEach(function(i){vals[i.dataset.k]=parseFloat(i.value.replace(",","."))});
    var o="";c.outputs.forEach(function(q){var v;try{v=new Function(Object.keys(vals).join(","),"return "+q.expr).apply(null,Object.keys(vals).map(function(k){return vals[k]}))}catch(e){v=NaN}
-    var s=isFinite(v)?v.toFixed(q.digits).replace(".",","):"—";var diff=isFinite(v)&&s!==q.book;
-    o+='<p><b>'+esc(q.label)+' = '+s+'</b><br><span class="meta">В книге: '+esc(q.book)+(diff?'. Расхождение с книгой: считайте это спорным местом (причина — в источнике утверждения).':'. Совпадает.')+' <a href="#" data-ev="'+esc(q.claim)+'">источник</a></span></p>'});
+    var s=isFinite(v)?v.toFixed(q.digits).replace(".",","):"—";var diff=isFinite(v)&&s!==q.book;var def=c.inputs.every(function(x){return vals[x.k]===parseFloat(String(x.v).replace(",","."))});var lab=q.label.replace(/\{(\w+)\}/g,function(_,k){return isFinite(vals[k])?String(vals[k]).replace(".",","):"?"});var st=!isFinite(v)?". Введите числа во все поля.":!def?". Числа изменены, поэтому сравнение с книгой не проводится.":diff?". Расхождение с книгой: считайте это спорным местом (причина — в источнике утверждения).":". Совпадает.";
+    o+='<p><b>'+esc(lab)+' = '+s+'</b><br><span class="meta">В книге: '+esc(q.book)+st+' <a href="#" data-ev="'+esc(q.claim)+'">источник</a></span></p>'});
    $("#dout",w).innerHTML=o};
   $$("input",w).forEach(function(i){i.oninput=run});run();
  }

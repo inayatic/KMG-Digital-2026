@@ -252,7 +252,7 @@ class Build:
         P = lambda txt: f"<p>{txt}</p>"
         blocks = []  # (id, title, html)
         cs = sorted(n["claims"], key=lambda c: c["kind"] != "вывод")[:3]
-        blocks.append(("sut", "Суть", "".join(P(s.cl(f"{n['id']}#{c['id']}", c["text"])) for c in sorted(cs, key=lambda c: c["id"]))))
+        blocks.append(("sut", "Суть", "".join(P(s.cl(f"{n['id']}#{c['id']}", c["text"]) + f" <span class='pg'>[PDF-стр. {c['page']}]</span>") for c in sorted(cs, key=lambda c: c["id"]))))
         L = n.get("layers", {})
         if L.get("mechanism"): blocks.append(("how", "Как это работает", P(s.model_sents(n, "mechanism", L["mechanism"], note="пересказ текста автора"))))
         if n.get("how_now"): blocks.append(("now", "Как делают сейчас", P(s.model_sents(n, "how_now", n["how_now"]))))
@@ -340,7 +340,7 @@ class Build:
             meta.append({"id": sid, "short": short, "part": part, "min": minutes, "num": i, "kind": kind})
             pages += (f'<article class="view step" id="v-{esc(sid)}" data-step="{esc(sid)}" hidden><p class="crumb">{esc(part)} · шаг {i} из {len(steps)} · {esc(A)}{(", " + esc(sec or cfg["book"].get("section_label", ""))) if (sec or cfg["book"].get("section_label")) else ""} · <code class="idc">{esc(sid)}</code></p>'
                       f'<h2 tabindex="-1">{esc(short)}</h2><p class="meta">{esc(A)}, «{esc(T)}»{(", " + esc(cfg["book"]["year"])) if cfg["book"].get("year") else ""} · ≈{minutes} мин (оценка)</p>'
-                      f'<p class="legend" aria-label="Легенда">Нажмите на предложение, чтобы увидеть источник: <span class="lg ca">автор</span> <span class="lg cm">модель</span> <span class="lg ch">гипотеза</span> <sup class="vk">✓</sup> проверено.</p>'
+                      f'<p class="legend" aria-label="Легенда">Нажмите на предложение, чтобы увидеть источник (стр. = номер страницы PDF-скана книги): <span class="lg ca">автор</span> <span class="lg cm">модель</span> <span class="lg ch">гипотеза</span> <sup class="vk">✓</sup> проверено.</p>'
                       f'<nav class="toc" aria-label="Оглавление страницы"><b>На странице</b><ul>{toc}</ul></nav>{body}'
                       f'<div class="pn"><button data-prev>← Назад</button><button data-done>Отметить пройденным</button><button data-next>Дальше →</button></div></article>')
         # карта связей

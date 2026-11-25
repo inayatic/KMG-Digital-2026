@@ -70,3 +70,5 @@ code{font-size:.95rem;background:color-mix(in srgb,var(--line) 40%,transparent);
  .view.printing{display:block!important}main{max-width:none;padding:0}
  .cl{border-bottom:none}.sumstep{break-inside:avoid}
 }
+
+.pg{font-size:.8em;color:var(--mut);white-space:nowrap}
