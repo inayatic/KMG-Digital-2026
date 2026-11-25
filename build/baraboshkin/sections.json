@@ -1,0 +1,92 @@
+[
+ {
+  "key": "s00-front",
+  "units": 57,
+  "pages": [
+   1,
+   19
+  ],
+  "chars": 37869
+ },
+ {
+  "key": "ch1a",
+  "units": 139,
+  "pages": [
+   20,
+   40
+  ],
+  "chars": 28173
+ },
+ {
+  "key": "ch1b",
+  "units": 153,
+  "pages": [
+   40,
+   61
+  ],
+  "chars": 33218
+ },
+ {
+  "key": "ch1c",
+  "units": 166,
+  "pages": [
+   61,
+   84
+  ],
+  "chars": 37072
+ },
+ {
+  "key": "ch1d",
+  "units": 130,
+  "pages": [
+   84,
+   100
+  ],
+  "chars": 22346
+ },
+ {
+  "key": "ch1e",
+  "units": 68,
+  "pages": [
+   100,
+   107
+  ],
+  "chars": 12682
+ },
+ {
+  "key": "ch2a",
+  "units": 135,
+  "pages": [
+   108,
+   125
+  ],
+  "chars": 22324
+ },
+ {
+  "key": "ch2b",
+  "units": 144,
+  "pages": [
+   125,
+   141
+  ],
+  "chars": 30256
+ },
+ {
+  "key": "ch2c",
+  "units": 101,
+  "pages": [
+   141,
+   153
+  ],
+  "chars": 21469
+ },
+ {
+  "key": "s99-tail",
+  "units": 7,
+  "pages": [
+   154,
+   155
+  ],
+  "chars": 2467
+ }
+]

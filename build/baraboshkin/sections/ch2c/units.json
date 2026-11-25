@@ -1,0 +1,709 @@
+[
+ {
+  "id": "p141-07",
+  "type": "heading",
+  "page": 141,
+  "section": "2.4 Глинистые породы",
+  "text": "## 2.4 Глинистые породы"
+ },
+ {
+  "id": "p141-08",
+  "type": "heading",
+  "page": 141,
+  "section": "2.4.1 Классификация",
+  "text": "### 2.4.1 Классификация"
+ },
+ {
+  "id": "p141-09",
+  "type": "paragraph",
+  "page": 141,
+  "section": "2.4.1 Классификация",
+  "text": "Глинистыми называются породы, которые более чем наполовину слагаются глинистыми минералами. Эти породы наиболее распространены: на их долю приходится от 50% до 70% всех осадочных пород."
+ },
+ {
+  "id": "p141-10",
+  "type": "paragraph",
+  "page": 141,
+  "section": "2.4.1 Классификация",
+  "text": "В нефтяной геологии изучение глинистых пород важно с нескольких позиций:"
+ },
+ {
+  "id": "p141-11",
+  "type": "paragraph",
+  "page": 141,
+  "section": "2.4.1 Классификация",
+  "text": "- присутствие глинистой примеси прямо влияет на качество коллекторов;\n- глинистые породы являются, как правило, основными флюидоупорами;\n- многие глинистые толщи являются нефтематеринскими и, следовательно, без их изучения невозможно понять происхождение нефти."
+ },
+ {
+  "id": "p141-12",
+  "type": "paragraph",
+  "page": 141,
+  "section": "2.4.1 Классификация",
+  "text": "Основные свойства глинистых пород обусловливаются их минералогическим составом, по которому они подразделяются. Состав, кроме того, отражает их генезис."
+ },
+ {
+  "id": "p141-13",
+  "type": "paragraph",
+  "page": 141,
+  "section": "2.4.1 Классификация",
+  "text": "140"
+ },
+ {
+  "id": "p141-14",
+  "type": "paragraph",
+  "page": 141,
+  "section": "2.4.1 Классификация",
+  "text": "© Центр профессиональной переподготовки специалистов нефтегазового дела ТПУ"
+ },
+ {
+  "id": "p142-01",
+  "type": "paragraph",
+  "page": 142,
+  "section": "2.4.1 Классификация",
+  "text": "2.4. Глинистые породы"
+ },
+ {
+  "id": "p142-02",
+  "type": "paragraph",
+  "page": 142,
+  "section": "2.4.1 Классификация",
+  "text": "Глинистые минералы подразделяют по типу кристаллической структуры, выявляющейся рентгеноструктурным и электронографическим анализом, форме кристаллов, и химическому составу. Упрощенная классификация глин приведена в ?? и Таблица 2.7."
+ },
+ {
+  "id": "p142-03",
+  "type": "paragraph",
+  "page": 142,
+  "section": "2.4.1 Классификация",
+  "text": "Разделять глины можно по степени их литифицированности, структурам и гранулометрическому составу, примесям неглинистых компонентов."
+ },
+ {
+  "id": "p142-04",
+  "type": "paragraph",
+  "page": 142,
+  "section": "2.4.1 Классификация",
+  "text": "По степени литифицированности они делятся на размокающие глины и неразмокающие аргиллиты, связанные постепенными переходами."
+ },
+ {
+  "id": "p142-05",
+  "type": "paragraph",
+  "page": 142,
+  "section": "2.4.1 Классификация",
+  "text": "По структуре и гранулометрическому составу выделяют *тонкодисперсные* (мелкопелитовые), состоящие в основном из частиц мельче 0,001мм, и *крупнодисперсные* (*крупнопелитовые*), в которых преобладают частицы 0,01–0,001мм. В первых при растирании в пальцах, пробе на зуб или резании ножом не ощущается примесь *алевритовых* и *песчаных* частиц. При скатывании в сыром виде они дают длинные шнуры толщиной менее 0,5см, а *крупнодисперсные* — более короткие и толстые."
+ },
+ {
+  "id": "p142-06",
+  "type": "paragraph",
+  "page": 142,
+  "section": "2.4.1 Классификация",
+  "text": "При наличии обломочной примеси выделяются глины алевритистые, алевритовые, песчанистые, песчаные. Помимо этого, они могут быть известковистыми (известковыми), кремнистыми, углистыми, битуминозными."
+ },
+ {
+  "id": "p142-07",
+  "type": "heading",
+  "page": 142,
+  "section": "2.4.2 Изучение в образце и макроскопическое описание",
+  "text": "## 2.4.2 Изучение в образце и макроскопическое описание"
+ },
+ {
+  "id": "p142-08",
+  "type": "paragraph",
+  "page": 142,
+  "section": "2.4.2 Изучение в образце и макроскопическое описание",
+  "text": "Существуют некоторые особенности изучения глинистых пород. Для того чтобы назвать породу глиной или аргиллитом, необходимо исследовать ее на размокаемость: небольшой кусок породы помещают в воду или смачивают поверхность образца водой."
+ },
+ {
+  "id": "p142-09",
+  "type": "paragraph",
+  "page": 142,
+  "section": "2.4.2 Изучение в образце и макроскопическое описание",
+  "text": "**Окраски** глин разнообразны и зависят от состава глинистых минералов, примесей и влажности. При высыхании цвета тускнеют, поэтому цвет предпочтительно определять в сухом и влажном состоянии."
+ },
+ {
+  "id": "p142-10",
+  "type": "paragraph",
+  "page": 142,
+  "section": "2.4.2 Изучение в образце и макроскопическое описание",
+  "text": "**Чистые глины** чаще имеют белый или светло-серый цвет, только глауконитовые и хлоритовые глины — зеленый, темно-зеленый, и голубоватый. Зеленоватые и голубоватые окраски наблюдаются и у нонтронитовых и бейделлитовых глин, а более светлые зеленые и зеленовато-желтые — у монтмориллонитовых. Примеси меняют окраску глины: окислы железа окрашивают в желтые, красные и фиолетовые тона разной интенсивности, закисные соединения — в сизые, зеленоватые и серые; окислы марганца — в бурый и черный цвет; битумы — в светлые палевые (при содержании в доли процента) или коричневые тона; гуминовые соединения и углистый детрит обусловливают серый и черный (при содержании 2–4%) цвет. Нередко окраска глин неоднородная, что вызвано неравномерным распределением красящих веществ."
+ },
+ {
+  "id": "p142-11",
+  "type": "paragraph",
+  "page": 142,
+  "section": "2.4.2 Изучение в образце и макроскопическое описание",
+  "text": "**Структура** чистых глинистых пород пелитовая (размер частиц меньше 0,01мм), что выражается в однородном ровном или раковистом изломе и незернистом пелитоморфном виде. Когда глины оказываются гранулометрически неоднородными, т.е. содержат алевритовую или песчаную примесь, их структура называется соответственно алевропелитовой или алевритистой, алевритовой, и т.д. Примесь алевритового и песчаного материала заметна, когда его сравнительно много, или устанавливается при помощи лупы, при растирании пальцами, резании ножом (по «хрусту»)"
+ },
+ {
+  "id": "p142-12",
+  "type": "paragraph",
+  "page": 142,
+  "section": "2.4.2 Изучение в образце и макроскопическое описание",
+  "text": "© Центр профессиональной переподготовки специалистов нефтегазового дела ТПУ"
+ },
+ {
+  "id": "p142-13",
+  "type": "paragraph",
+  "page": 142,
+  "section": "2.4.2 Изучение в образце и макроскопическое описание",
+  "text": "141"
+ },
+ {
+  "id": "p143-01",
+  "type": "paragraph",
+  "page": 143,
+  "section": "2.4.2 Изучение в образце и макроскопическое описание",
+  "text": "2.4. Глинистые породы---"
+ },
+ {
+  "id": "p143-02",
+  "type": "paragraph",
+  "page": 143,
+  "section": "2.4.2 Изучение в образце и макроскопическое описание",
+  "text": "и пробе на зуб. Гранулометрический тип глины также определяется при скатывании во влажном виде шнура. Наиболее трудно различить алевритовые глины и сильно глинистые алевролиты."
+ },
+ {
+  "id": "p143-03",
+  "type": "paragraph",
+  "page": 143,
+  "section": "2.4.2 Изучение в образце и макроскопическое описание",
+  "text": "**Текстуры** глин разнообразны: помимо неслоистых массивных текстур наблюдается слоистость и ее нарушения: оползневые, биотурбации и др. Слоистость часто выражается различиями окраски, структуры, линзочками и прослойками пород иной размерности, а также параллельным расположением удлиненных растительных остатков, раковин и др. В глинах и аргиллитах нередко развивается скорлуповатая отдельность, характерная для неслоистых пород. При позднем эпигенезе может развиваться сланцеватая текстура, нередко не совпадающая со слоистостью."
+ },
+ {
+  "id": "p143-04",
+  "type": "paragraph",
+  "page": 143,
+  "section": "2.4.2 Изучение в образце и макроскопическое описание",
+  "text": "**Минералогический состав** глинистого вещества макроскопически устанавливается большей частью предположительно. Основным критерием здесь является реакция на воду, дополнительными — окраска и др."
+ },
+ {
+  "id": "p143-05",
+  "type": "paragraph",
+  "page": 143,
+  "section": "2.4.2 Изучение в образце и макроскопическое описание",
+  "text": "**Каолиновые глины** в воде не разбухают, имеют белый или светло-серый цвет, жирны на ощупь, нередко ассоциируются с углистым веществом."
+ },
+ {
+  "id": "p143-06",
+  "type": "paragraph",
+  "page": 143,
+  "section": "2.4.2 Изучение в образце и макроскопическое описание",
+  "text": "**Монтмориллонитовые глины** имеют светло-серый цвет с желтовато-зеленоватыми оттенками, на ощупь тощие или жирные, имеют раковистый излом. В воде они сильно разбухают, быстро впитывают воду, иногда с повышением температуры увеличиваются в объеме и превращаются в гель. Киловые глины в воде не разбухают, но хорошо мылятся. Нередко они восковидны, просвечивают в краях."
+ },
+ {
+  "id": "p143-07",
+  "type": "paragraph",
+  "page": 143,
+  "section": "2.4.2 Изучение в образце и макроскопическое описание",
+  "text": "**Бейделлитовые глины** сходны с монтмориллонитами; окраска их имеет желтовато-зеленый оттенок, в воде разбухают, но слабее монтмориллонитовых глин."
+ },
+ {
+  "id": "p143-08",
+  "type": "paragraph",
+  "page": 143,
+  "section": "2.4.2 Изучение в образце и макроскопическое описание",
+  "text": "**Гидрослюдистые глины** (большая часть глинистых пород) в воде не разбухают, особых визуально-отличительных признаков не имеют, за исключением глауконитовых глин темно-зеленого цвета, которые можно спутать с хлоритовыми."
+ },
+ {
+  "id": "p143-09",
+  "type": "paragraph",
+  "page": 143,
+  "section": "2.4.2 Изучение в образце и макроскопическое описание",
+  "text": "**Аргиллиты**, за исключением каолинитовых, — гидрослюдистые, часто содержат хлорит."
+ },
+ {
+  "id": "p143-10",
+  "type": "paragraph",
+  "page": 143,
+  "section": "2.4.2 Изучение в образце и макроскопическое описание",
+  "text": "Известковистость глин определяется по бурному вскипанию с HCl, белесой окраске поверхности выветривания, низкой пластичности. Также проявляют себя другие карбонаты, гипс, кремнезем. Доломит выявляется по слабому вскипанию с HCl, а анкерит и сидерит — по красноватой окраске поверхности."
+ },
+ {
+  "id": "p143-11",
+  "type": "heading",
+  "page": 143,
+  "section": "2.4.3 Изучение в шлифах",
+  "text": "### 2.4.3 Изучение в шлифах"
+ },
+ {
+  "id": "p143-12",
+  "type": "paragraph",
+  "page": 143,
+  "section": "2.4.3 Изучение в шлифах",
+  "text": "Изучение глин в шлифах малоинформативно. Можно, однако, отметить следующее. Цвет и степень прозрачности глин в шлифах свидетельствуют о составе породообразующих компонентов и примесей. Железистое вещество придает породе красноватый"
+ },
+ {
+  "id": "p143-13",
+  "type": "paragraph",
+  "page": 143,
+  "section": "2.4.3 Изучение в шлифах",
+  "text": "---142"
+ },
+ {
+  "id": "p143-14",
+  "type": "paragraph",
+  "page": 143,
+  "section": "2.4.3 Изучение в шлифах",
+  "text": "© Центр профессиональной переподготовки специалистов нефтегазового дела ТПУ"
+ },
+ {
+  "id": "p144-01",
+  "type": "paragraph",
+  "page": 144,
+  "section": "2.4.3 Изучение в шлифах",
+  "text": "2.4. Глинистые породы"
+ },
+ {
+  "id": "p144-02",
+  "type": "paragraph",
+  "page": 144,
+  "section": "2.4.3 Изучение в шлифах",
+  "text": "оттенок, хорошо видимый в отраженном свете; в проходящем свете оно имеет темно-серый цвет. Гумусовое вещество даёт бурый оттенок, а углистый растительный детрит — серый и темно-серый цвет, не меняющийся в отраженном свете. Коричневатыми становятся участки с фосфатным веществом. Глауконит и хлорит вызывают зеленую окраску."
+ },
+ {
+  "id": "p144-03",
+  "type": "paragraph",
+  "page": 144,
+  "section": "2.4.3 Изучение в шлифах",
+  "text": "**Структура глин** пелитовая. Форма глинистых частиц бывает листоватой (чешуйчатой), волокнистой, игольчатой, зернистой. Подавляющая масса глин имеет чешуйчатые структуры: равномерно-, разночешуйчатые и порфиробластовые, когда на общем однородном фоне резко выделяются более крупные чешуйки или их агрегаты. Глинистые частицы часто образуют агрегаты, которые воспринимаются как частицы, различимые при скрещенных николях по одновременному погасанию."
+ },
+ {
+  "id": "p144-04",
+  "type": "paragraph",
+  "page": 144,
+  "section": "2.4.3 Изучение в шлифах",
+  "text": "Колломорфные ооидно-оолитовые структуры характеризуются наличием значительного количества округлых или почковидных ооидов, имеющих иногда концентрическое оолитовое строение. Они образуются в результате выпадения и кристаллизации коллоидов и чаще всего наблюдаются в корах выветривания."
+ },
+ {
+  "id": "p144-05",
+  "type": "paragraph",
+  "page": 144,
+  "section": "2.4.3 Изучение в шлифах",
+  "text": "Фитопелитовые структуры характеризуются наличием значительной примеси растительных остатков, в том числе спор, пыльцы и водорослей."
+ },
+ {
+  "id": "p144-06",
+  "type": "paragraph",
+  "page": 144,
+  "section": "2.4.3 Изучение в шлифах",
+  "text": "Обломочные структуры образуются в результате перемыва глинистого осадка, оползания, внедрения корней растений и при диагенезе — растрескивании и перекристаллизации. В зависимости от их размера и формы обломков, они называются брекчиевыми, конгломератовыми, гравийными и песчаными."
+ },
+ {
+  "id": "p144-07",
+  "type": "paragraph",
+  "page": 144,
+  "section": "2.4.3 Изучение в шлифах",
+  "text": "Иногда наблюдаются реликтовые структуры — обломочная (псаммитовая, алевритовая и др.), пепловая — образующиеся при замещении обломочных пород (песчаников, алевролитов) и пепловых туфов — глинистым веществом."
+ },
+ {
+  "id": "p144-08",
+  "type": "paragraph",
+  "page": 144,
+  "section": "2.4.3 Изучение в шлифах",
+  "text": "**Текстуры** глин бывают слоистыми, беспорядочными и другими."
+ },
+ {
+  "id": "p144-09",
+  "type": "paragraph",
+  "page": 144,
+  "section": "2.4.3 Изучение в шлифах",
+  "text": "Первичная слоистость глин почти всегда горизонтальная, непрерывная линзовидная. Слоистость проявляется в одинаковой ориентировке глинистых частиц, что видно в скрещенных николях: поле зрения одновременно погасает."
+ },
+ {
+  "id": "p144-10",
+  "type": "paragraph",
+  "page": 144,
+  "section": "2.4.3 Изучение в шлифах",
+  "text": "Неслоистые текстуры характеризуются неориентированным расположением материала, агрегатной поляризацией: при вращении столика микроскопа поле зрения не меняется. Эти текстуры являются как первичными, так и вторичными, диагенетическими"
+ },
+ {
+  "id": "p144-11",
+  "type": "paragraph",
+  "page": 144,
+  "section": "2.4.3 Изучение в шлифах",
+  "text": "Из других текстур в глинах встречаются петельчатая, образующаяся из-за включений; гнездовидная, характеризующаяся неравномерным скоплением песка, алеврита или аутигенных компонентов; пятнистая, обусловленная неравномерной окраской; струйчатая, спутанная и др."
+ },
+ {
+  "id": "p144-12",
+  "type": "paragraph",
+  "page": 144,
+  "section": "2.4.3 Изучение в шлифах",
+  "text": "**Минералогический состав глин в шлифе** определяется приблизительно по показателю преломления и двупреломлению. На качественном уровне это позволяет:"
+ },
+ {
+  "id": "p144-13",
+  "type": "paragraph",
+  "page": 144,
+  "section": "2.4.3 Изучение в шлифах",
+  "text": "1. установить однородность или полиминеральность глинистого вещества;\n2. наметить основные и второстепенные глинистые минералы."
+ },
+ {
+  "id": "p144-14",
+  "type": "paragraph",
+  "page": 144,
+  "section": "2.4.3 Изучение в шлифах",
+  "text": "Вследствие низкого преломления, невысоких цветов интерференции и мелких размеров глинистых кристаллов, определить минералы не всегда возможно. В этом"
+ },
+ {
+  "id": "p144-15",
+  "type": "paragraph",
+  "page": 144,
+  "section": "2.4.3 Изучение в шлифах",
+  "text": "© Центр профессиональной переподготовки специалистов нефтегазового дела ТПУ"
+ },
+ {
+  "id": "p144-16",
+  "type": "paragraph",
+  "page": 144,
+  "section": "2.4.3 Изучение в шлифах",
+  "text": "143"
+ },
+ {
+  "id": "p145-01",
+  "type": "paragraph",
+  "page": 145,
+  "section": "2.4.3 Изучение в шлифах",
+  "text": "2.4. Глинистые породы---"
+ },
+ {
+  "id": "p145-02",
+  "type": "paragraph",
+  "page": 145,
+  "section": "2.4.3 Изучение в шлифах",
+  "text": "случае даются условные (например, «минерал типа каолинита» и т.д.) или описательные («бесцветный минерал» и т.п.) названия."
+ },
+ {
+  "id": "p145-03",
+  "type": "paragraph",
+  "page": 145,
+  "section": "2.4.3 Изучение в шлифах",
+  "text": "Каолинитовые глины определяются по низкому двупреломлению порядка 0,007 (серые интерференционные окраски), по показателю преломления немного большему, чем у кварца. Если встречаются вермикулитоподобные сростки, определение облегчается. Цвет не является существенным, так как бесцветный каолинит очень часто бывает окрашен примесями. Сходные галлуазитовые глины отличаются почти полной изотропностью и более низким (меньше кварцевого) показателем преломления."
+ },
+ {
+  "id": "p145-04",
+  "type": "paragraph",
+  "page": 145,
+  "section": "2.4.3 Изучение в шлифах",
+  "text": "Монтмориллонитовые глины имеют низкие показатели преломления (меньшими, чем у канадского бальзама и калиевого полевого шпата) и высоким (0,02–0,04) двупреломлением, выражающимся в ярких цветах интерференции — желтых, красноватых конца первого порядка. По этому свойству они не отличаются от гидрослюд. Окраска в шлифе часто бывает желтовато-зеленоватой."
+ },
+ {
+  "id": "p145-05",
+  "type": "paragraph",
+  "page": 145,
+  "section": "2.4.3 Изучение в шлифах",
+  "text": "Гидрослюдистые (гидромусковитовые, иллитовые) глины отличаются более высоким, чем у кварца, показателем преломления и яркими цветами интерференции (желтые, красные, синие конца первого и начала второго порядка), свидетельствующими о высоком двупреломлении (порядка 0,02–0,03 до 0,04). Если зеленый минерал имеет такой же или несколько более высокий показатель преломления и низкие (серые) цвета интерференции, его следует отнести к хлоритам."
+ },
+ {
+  "id": "p145-06",
+  "type": "paragraph",
+  "page": 145,
+  "section": "2.4.3 Изучение в шлифах",
+  "text": "Бейделлитовые глины неотчетливо определяются по невысокому показателю преломления (близкого к канадскому бальзаму) и высокому двупреломлению (0,02–0,03), а монотермитовые — при таком же преломлении — более низкому двупреломлению (0,015–0,020)."
+ },
+ {
+  "id": "p145-07",
+  "type": "paragraph",
+  "page": 145,
+  "section": "2.4.3 Изучение в шлифах",
+  "text": "Обломочные компоненты описывают как в обломочных породах: форма, размер, состав, вторичные изменения (растворение, замещение, перекристаллизация и т.д.), содержание, распределение в породе. Кварц в глинах часто растворяется, корродируется сидеритом, кальцитом, гидроокислами железа, глауконитом. Полевые шпаты обычно несвежие, мутные, замещенные каолинитом, хлоритом, гидромусковитом. Свежие полевые шпаты (вместе со свежим биотитом) встречаются в монтмориллонитовых глинах пеплового происхождения. Слюды, как правило, гидратированы, расщеплены, изогнуты и превращены в сноповидные агрегаты с отдельными участками, сохраняющими высокое двупреломление. Претерпевают изменения и постепенно сливаются с глинистой массой и обломки пород, особенно эффузивы."
+ },
+ {
+  "id": "p145-08",
+  "type": "paragraph",
+  "page": 145,
+  "section": "2.4.3 Изучение в шлифах",
+  "text": "Растительные остатки придают глинам темно-серую и черную окраску и разделяются на углистый детрит и гелефицированное бесструктурное вещество. Растительный детрит непрозрачный. Гелефицированное вещество просвечивает коричневым цветом, бесформенно, хотя иногда сохраняет структуру первичной ткани."
+ },
+ {
+  "id": "p145-09",
+  "type": "paragraph",
+  "page": 145,
+  "section": "2.4.3 Изучение в шлифах",
+  "text": "Фаунистические остатки представлены раковинами разных организмов, часто бывают замещены пиритом, фосфатами и другими аутигенными минералами."
+ },
+ {
+  "id": "p145-10",
+  "type": "paragraph",
+  "page": 145,
+  "section": "2.4.3 Изучение в шлифах",
+  "text": "В заключение могут быть отмечены вторичные изменения и прочие признаки, не вошедшие в описание, дано название глинистой породы."
+ },
+ {
+  "id": "p145-11",
+  "type": "paragraph",
+  "page": 145,
+  "section": "2.4.3 Изучение в шлифах",
+  "text": "---144"
+ },
+ {
+  "id": "p145-12",
+  "type": "paragraph",
+  "page": 145,
+  "section": "2.4.3 Изучение в шлифах",
+  "text": "© Центр профессиональной переподготовки специалистов нефтегазового дела ТПУ"
+ },
+ {
+  "id": "p146-01",
+  "type": "heading",
+  "page": 146,
+  "section": "Приложения",
+  "text": "# Приложения"
+ },
+ {
+  "id": "p146-02",
+  "type": "paragraph",
+  "page": 146,
+  "section": "Приложения",
+  "text": "Условные обозначения для составления седиментологической колонки\nLegends"
+ },
+ {
+  "id": "p146-03",
+  "type": "paragraph",
+  "page": 146,
+  "section": "Приложения",
+  "text": "LEGEND"
+ },
+ {
+  "id": "p146-04",
+  "type": "table",
+  "page": 146,
+  "section": "Приложения",
+  "text": "|  **STRUCTURES** |   | **LITHOLOGICAL SYMBOLS**  |   |\n| --- | --- | --- | --- |\n|  **Sedimentary** |  | **Rock types** | **Qualifiers**  |\n|  Massive (structureless) |  | Oligotone | Argillaceous  |\n|  Planar/horizontal lamination |  | Shale/mudstone | Limestone  |\n|  Trough cross stratification |  | Silty shale | Dolomite  |\n|  Tabular cross stratification |  | Siltstone | Silty/sandy  |\n|  Graded bedding |  | Sand/sandstone | Coarse sand grains  |\n|  Bimodal lamination |  | Conglomerate (matrix supported) | Pallet  |\n|  Current ripples |  | Conglomerate (clast supported) | Chalky  |\n|  Wave ripples |  | Coal/Lignite | Calcareous  |\n|  Adhesion ripples |  | Breccia | Dolomitic  |\n|  Sand lenses and scattered sand grains in shale |  | Limestone | Tufficacous  |\n|  Camrolote lamination |  | Dolomite | Anhydrite  |\n|  Sand dykes and injection structures |  | Cheri | Calcite  |\n|  Water escape structures, dishes and pillars |  | Anhydrite, gypsum | Cheri/chalcedony  |\n|  Deaization cracks |  | Salt (halite) | Dolomite  |\n|  Ruptured laminae |  | Pocassium salts | Selenite  |\n|  Gutter casts |  | Volcanics, tuffs and lavas | Glaucite  |\n|  Slump structures |  | Concretions/nodules | Kaolinite  |\n|  Loading/ball, pillow and flame structures |  | Basement (granitic) | Mica  |\n|  Sedimentary faults |  | Basement (undifferentiated) | Pyrite  |\n|  Badded interformational clasts |  | Laminate and streaks | Quartz  |\n|  Interformational muddams |  | Shale | Volcanic grains  |\n|  Mossing |  | Siltstone | Red sedimentary rocks  |\n|  Burrows (simple cylindrical) |  | Sandstone | Cement  |\n|  Burrows (U-shaped and meniscus fill) |  |  |   |\n|  Bioturbation |  |  |   |\n|  **Tectonic** |  | **FOSSILS** |   |\n|  Fault breccia |  | Reptile bones | Corals and stromatoporoids  |\n|  Fractures |  | Fish and fish debris | Oncoids  |\n|  Slckensides |  | Ammonites | Bioclastic debris  |\n|  Styloites |  | Belemnites | Roots  |\n|  Tectonic faults |  | Gasuropoids | Wood fragments (large branches, trunks etc.)  |\n|  Vains |  | Paleozoids (bivalves) | Wood fragments (small branches, twigs etc.)  |\n|   |  | Echinoderms and echinoderm debris | Leaves  |\n|   |  | Crinolids | Indeterminate plant debris  |"
+ },
+ {
+  "id": "p146-05",
+  "type": "paragraph",
+  "page": 146,
+  "section": "Приложения",
+  "text": "145"
+ },
+ {
+  "id": "p147-01",
+  "type": "paragraph",
+  "page": 147,
+  "section": "Приложения",
+  "text": "2.4. Глинистые породы"
+ },
+ {
+  "id": "p147-02",
+  "type": "heading",
+  "page": 147,
+  "section": "**Бланковка 1 для составления седиментологической колонки**",
+  "text": "# **Бланковка 1 для составления седиментологической колонки**"
+ },
+ {
+  "id": "p147-03",
+  "type": "paragraph",
+  "page": 147,
+  "section": "**Бланковка 1 для составления седиментологической колонки**",
+  "text": "Sedimentary log - blanks"
+ },
+ {
+  "id": "p147-04",
+  "type": "paragraph",
+  "page": 147,
+  "section": "**Бланковка 1 для составления седиментологической колонки**",
+  "text": "146"
+ },
+ {
+  "id": "p147-05",
+  "type": "paragraph",
+  "page": 147,
+  "section": "**Бланковка 1 для составления седиментологической колонки**",
+  "text": "© Центр профессиональной переподготовки специалистов нефтегазового дела ТПУ"
+ },
+ {
+  "id": "p148-01",
+  "type": "paragraph",
+  "page": 148,
+  "section": "**Бланковка 1 для составления седиментологической колонки**",
+  "text": "2.4. Глинистые породы"
+ },
+ {
+  "id": "p148-02",
+  "type": "heading",
+  "page": 148,
+  "section": "Бланковка 2 для составления седиментологической колонки посsection № 3.\nБланковка 2 для составления седиментологической колонки Blank 2",
+  "text": "# Бланковка 2 для составления седиментологической колонки посsection № 3.\nБланковка 2 для составления седиментологической колонки Blank 2"
+ },
+ {
+  "id": "p148-03",
+  "type": "table",
+  "page": 148,
+  "section": "Бланковка 2 для составления седиментологической колонки посsection № 3.\nБланковка 2 для составления седиментологической колонки Blank 2",
+  "text": "|  Formation: |   | Country: |   | Date:  |\n| --- | --- | --- | --- | --- |\n|  DRILLERS DEPTH IN METRES | CORES | LITHOLOGY | GRAIN SIZE AND SEDIMENTARY STRUCTURES | Author:  |\n|  DEPTH IN METRES | DEPTH IN METRES |  |  | DESCRIPTION  |\n|  |   |   |   |   |\n|  |   |   |   |   |\n|  |   |   |   |   |\n|  |   |   |   |   |\n|  |   |   |   |   |\n|  |   |   |   |   |\n|  |   |   |   |   |\n|  |   |   |   |   |\n|  |   |   |   |   |\n|  |   |   |   |   |\n|  |   |   |   |   |\n|  |   |   |   |   |\n|  |   |   |   |   |\n|  |   |   |   |   |\n|  |   |   |   |   |"
+ },
+ {
+  "id": "p148-04",
+  "type": "paragraph",
+  "page": 148,
+  "section": "Бланковка 2 для составления седиментологической колонки посsection № 3.\nБланковка 2 для составления седиментологической колонки Blank 2",
+  "text": "© Центр профессиональной переподготовки специалистов нефтегазового дела ТПУ"
+ },
+ {
+  "id": "p148-05",
+  "type": "paragraph",
+  "page": 148,
+  "section": "Бланковка 2 для составления седиментологической колонки посsection № 3.\nБланковка 2 для составления седиментологической колонки Blank 2",
+  "text": "147"
+ },
+ {
+  "id": "p149-01",
+  "type": "paragraph",
+  "page": 149,
+  "section": "Бланковка 2 для составления седиментологической колонки посsection № 3.\nБланковка 2 для составления седиментологической колонки Blank 2",
+  "text": "2.4. Глинистые породы"
+ },
+ {
+  "id": "p149-02",
+  "type": "heading",
+  "page": 149,
+  "section": "Пример составления седиментологической колонки",
+  "text": "# Пример составления седиментологической колонки"
+ },
+ {
+  "id": "p149-03",
+  "type": "paragraph",
+  "page": 149,
+  "section": "Пример составления седиментологической колонки",
+  "text": "Sedimentary log - example"
+ },
+ {
+  "id": "p149-04",
+  "type": "paragraph",
+  "page": 149,
+  "section": "Пример составления седиментологической колонки",
+  "text": "148"
+ },
+ {
+  "id": "p149-05",
+  "type": "paragraph",
+  "page": 149,
+  "section": "Пример составления седиментологической колонки",
+  "text": "© Центр профессиональной переподготовки специалистов нефтегазового дела ТПУ"
+ },
+ {
+  "id": "p150-01",
+  "type": "paragraph",
+  "page": 150,
+  "section": "Пример составления седиментологической колонки",
+  "text": "2.4. Глинистые породы"
+ },
+ {
+  "id": "p150-02",
+  "type": "heading",
+  "page": 150,
+  "section": "Пример интерпретации седиментологической колонки",
+  "text": "# Пример интерпретации седиментологической колонки"
+ },
+ {
+  "id": "p150-03",
+  "type": "paragraph",
+  "page": 150,
+  "section": "Пример интерпретации седиментологической колонки",
+  "text": "Sedlogs - Example"
+ },
+ {
+  "id": "p150-04",
+  "type": "paragraph",
+  "page": 150,
+  "section": "Пример интерпретации седиментологической колонки",
+  "text": "Table 1: Core description of the interval between 1633m to 1643m"
+ },
+ {
+  "id": "p150-05",
+  "type": "table",
+  "page": 150,
+  "section": "Пример интерпретации седиментологической колонки",
+  "text": "|   | Core Description | Process Interpretation | Environment Interpretation  |\n| --- | --- | --- | --- |\n|   | 1. Massive brown oil bearing sandstone with little visible structure, medium fining upwards into fine, moderately well sorted, sub angular, calcareous sandstone. Mud intraclasts and calcareous nodules at base. Oil bearing bed, cemented zones locally. | Erosion of underlying layer (? Cores preserved at bottom) Clasts brought from underlying silts or upstream. Or the low maturity of the sediment suggests short transport, but these clasts are probably reworked deposits from the bank of a channel. Indicative of high flow regimes. Decrease in energy observed from decrease in grain size and rarefaction of mud clasts and calcite concretions. Little structure suggests rapid deposition from high influx of large sediment supply, and possibly gravity flow deposition. Calcite cementation from diagenesis | High energy flux rapidly depositing massive structureless sands. We retain various possibilities in decreasing order of probability: - Large sheet flood carrying then rapidly depositing a high-suspended sediment load, filling a wadii or river valley then availing with stream taking another path. - Amalgamation of sheet floods forming a thick sand layer from several temporary flood streams - Distal alluvial fan deposits rapidly deposited as gravity flows but relatively free from large clasts deposited in proximal regions, near the catchments - Reworked sand in aeolian dune  |\n|   | 2.a. Silty very fine brown, moderately well sorted s/ angular sandstone with some silt clasts and cemented zones. 2.b. Dark red silty mudstone with isolated calcite cemented sand lenses. | Low energy environment with sediments deposited from bedload alternating with suspension of silts. Clasts carried away and deposited from slightly higher fluxes of energy. Silty clasts originating from underlying layer or upstream. Low energy sediments deposited from suspension with some load structures and little influx leading to sand lenses deposits. Diagenetic cementation | Deposition of mud from suspension may suggest floodplain or abandoned channel facies A stream bringing fine sediments in a higher influx of energy above follows this. The silty fine sand maybe also deposited as overbank fines.  |\n|   | 3. Brown medium to coarse, poorly sorted s/angular, fining upwards sandstone with red lithic fragments at the base, mud clasts and calcite concretions aligned with bedding. Trough cross bedding and planar laminations at the top. The intraclasts are coarse grain sized and poorly sorted Erosive base. | The low maturity of the sediment suggests short transport. Clasts are probably reworked deposits from the bank of a channel indicative of high flow regimes at the base. Sedimentary structures include trough cross bedding, indicative of migration of 3-d mega ripples and laminations higher up. Reworked calcrete clasts and mudstone, sandstone intraclasts suggesting a high level of flow. Their alignment with bedding indicates the stream rework and transport finer sediments away. | Processes of deposition are indicative of a fluvial environment with high energy water streams decreasing into low energy current finishing into mud deposition from suspension. A braided stream is a possible system here due to the high energy at the base with erosion of underlying sediments, or a large sheet flood. Cross bedding indicates downstream or lateral accretion whereas laminations result from gradual abandonment of the channel in lower energy water.  |\n|   | 4. Brown to red v. coarse sandstone w/ large dark red intraclasts. Large quartz grains up to pebble size in a poorly sorted fining upwards sandstone, with clay laminations at the top. Current ripples and clay laminations overlain by calcite cemented top. | High flow regimes at the base with quartz mud clasts, and calcretes. Vaxing flow energy upwards with current ripples and clay laminations deposited in decreasing energy flow. Calcite concentration of cementation at the top possibly from evaporation of CaCo3 rich waters or diagenetic. | Sheet flood facies represented by an erosive base with gravelly clast supported bottom of the layer Calcrete top could be indicative of a paleosol.  |\n|   | 5. Brown moderately well sorted s/angular micaceous medium to fine sandstone. Planar laminations. Fining upwards, current ripples and clay laminations at the top. Some clay flakes and burrows though the clay. Base not visible. Calcite cemented top. | High flow regimes at the base with upper flow regime deposition of medium sand. Vaxing flow energy upwards with current ripples and clay laminations deposited in decreasing energy flow. Calcite cementation from phrenic water evaporation or diagenetic. | Sheet flood facies represented by high energy current, planar upper flow regime. Calcrete top could be indicative of a paleosol or could be diagenetic, with fine pores preferentially cemented.  |"
+ },
+ {
+  "id": "p150-06",
+  "type": "paragraph",
+  "page": 150,
+  "section": "Пример интерпретации седиментологической колонки",
+  "text": "© Центр профессиональной переподготовки специалистов нефтегазового дела ТПУ"
+ },
+ {
+  "id": "p150-07",
+  "type": "paragraph",
+  "page": 150,
+  "section": "Пример интерпретации седиментологической колонки",
+  "text": "149"
+ },
+ {
+  "id": "p151-01",
+  "type": "paragraph",
+  "page": 151,
+  "section": "Пример интерпретации седиментологической колонки",
+  "text": "2.4. Глинистые породы"
+ },
+ {
+  "id": "p151-02",
+  "type": "heading",
+  "page": 151,
+  "section": "Пример трехмерной седиментологической модели,\nвыполненной на основе интерпретации седиментологических данных",
+  "text": "# Пример трехмерной седиментологической модели,\nвыполненной на основе интерпретации седиментологических данных"
+ },
+ {
+  "id": "p151-03",
+  "type": "paragraph",
+  "page": 151,
+  "section": "Пример трехмерной седиментологической модели,\nвыполненной на основе интерпретации седиментологических данных",
+  "text": "SedModel"
+ },
+ {
+  "id": "p151-04",
+  "type": "paragraph",
+  "page": 151,
+  "section": "Пример трехмерной седиментологической модели,\nвыполненной на основе интерпретации седиментологических данных",
+  "text": "150"
+ },
+ {
+  "id": "p151-05",
+  "type": "paragraph",
+  "page": 151,
+  "section": "Пример трехмерной седиментологической модели,\nвыполненной на основе интерпретации седиментологических данных",
+  "text": "© Центр профессиональной переподготовки специалистов нефтегазового дела ТПУ"
+ },
+ {
+  "id": "p152-01",
+  "type": "heading",
+  "page": 152,
+  "section": "Пример оценки коллекторских свойств разреза\nна основе созданной седиментационной модели",
+  "text": "# Пример оценки коллекторских свойств разреза\nна основе созданной седиментационной модели"
+ },
+ {
+  "id": "p152-02",
+  "type": "heading",
+  "page": 152,
+  "section": "Poroperms Example",
+  "text": "# Poroperms Example"
+ },
+ {
+  "id": "p152-03",
+  "type": "paragraph",
+  "page": 152,
+  "section": "Poroperms Example",
+  "text": "© Центр профессиональной переподготовки специалистов нефтегазового дела ТПУ"
+ },
+ {
+  "id": "p152-04",
+  "type": "paragraph",
+  "page": 152,
+  "section": "Poroperms Example",
+  "text": "151"
+ },
+ {
+  "id": "p153-01",
+  "type": "paragraph",
+  "page": 153,
+  "section": "Poroperms Example",
+  "text": "152"
+ },
+ {
+  "id": "p153-02",
+  "type": "paragraph",
+  "page": 153,
+  "section": "Poroperms Example",
+  "text": "© Центр профессиональной переподготовки специалистов нефтегазового дела ТПУ"
+ }
+]
