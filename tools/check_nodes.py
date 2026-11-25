@@ -21,6 +21,11 @@ for n in nodes:
             pool = [norm(u["text"]) for u in units if u["page"] == c["page"] and u["type"] != "figure_desc"]
             if not q: err.append(f"{c['id']}: author=автор без цитаты")
             elif not any(q in p for p in pool): err.append(f"{c['id']}: цитата не найдена на стр. {c['page']}")
+        if c["author"] == "автор":  # числа утверждения должны быть в тексте автора той же страницы, не в figure_desc
+            page_txt = norm(" ".join(u["text"] for u in units if u["page"] == c["page"] and u["type"] != "figure_desc"))
+            page_txt = re.sub(r"(?<=\d) (?=\d)", "", page_txt)
+            for x in re.findall(r"\d+(?:,\d+)?", c["text"]):
+                if x not in page_txt and x not in (c.get("ocr_note") or ""): err.append(f"{c['id']}: число {x} нет в тексте автора на стр. {c['page']}")
         for u in c["unit_ids"]:
             if u in U and U[u]["type"] == "figure_desc" and c["author"] == "автор": err.append(f"{c['id']}: автор ссылается на figure_desc {u}")
     for l in n["links"]:
