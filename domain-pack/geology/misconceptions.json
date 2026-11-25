@@ -1,0 +1,1378 @@
+[
+ {
+  "id": "misc.oil_lake",
+  "text": "Нефть лежит подземным озером или в пещерах.",
+  "source": "organizers",
+  "tier": "core",
+  "tier_basis": "organizers"
+ },
+ {
+  "id": "misc.dinosaurs",
+  "text": "Нефть образовалась из динозавров.",
+  "source": "organizers",
+  "tier": "core",
+  "tier_basis": "organizers"
+ },
+ {
+  "id": "misc.reservoir_void",
+  "text": "Пласт — пустота, а не порода с порами.",
+  "source": "organizers",
+  "tier": "core",
+  "tier_basis": "organizers"
+ },
+ {
+  "id": "misc.porosity_eq_perm",
+  "text": "Пористость и проницаемость — одно и то же.",
+  "source": "organizers",
+  "tier": "core",
+  "tier_basis": "organizers"
+ },
+ {
+  "id": "misc.seismic_sees_oil",
+  "text": "Сейсмика «видит нефть» напрямую.",
+  "source": "organizers",
+  "tier": "core",
+  "tier_basis": "organizers"
+ },
+ {
+  "id": "misc.high_res_oil",
+  "text": "Высокое сопротивление всегда означает нефть.",
+  "source": "organizers",
+  "tier": "core",
+  "tier_basis": "organizers"
+ },
+ {
+  "id": "misc.gr_reflects",
+  "text": "ГК «отражается» от породы.",
+  "source": "organizers",
+  "tier": "core",
+  "tier_basis": "organizers"
+ },
+ {
+  "id": "misc.owc_sharp",
+  "text": "Водонефтяной контакт всегда резкая плоская граница.",
+  "source": "organizers",
+  "tier": "core",
+  "tier_basis": "organizers"
+ },
+ {
+  "id": "misc.reserves_exact",
+  "text": "Запасы — одно точное число, а не диапазон с вероятностями.",
+  "source": "organizers",
+  "tier": "core",
+  "tier_basis": "organizers"
+ },
+ {
+  "id": "misc.core_eq_cuttings",
+  "text": "Керн и шлам дают одинаковую информацию.",
+  "source": "organizers",
+  "tier": "core",
+  "tier_basis": "organizers"
+ },
+ {
+  "id": "misc.casing_flows",
+  "text": "Обсаженная скважина сама пропускает нефть без перфорации.",
+  "source": "organizers",
+  "tier": "core",
+  "tier_basis": "organizers"
+ },
+ {
+  "id": "misc.rig_stays",
+  "text": "Буровая вышка остаётся над добывающей скважиной.",
+  "source": "organizers",
+  "tier": "core",
+  "tier_basis": "organizers"
+ },
+ {
+  "id": "misc.log_is_rock",
+  "text": "Каротажная кривая — это и есть порода, а не косвенное измерение.",
+  "source": "organizers",
+  "tier": "core",
+  "tier_basis": "organizers"
+ },
+ {
+  "id": "misc.model_knows",
+  "text": "Модель пласта точно знает, что под землёй.",
+  "source": "organizers",
+  "tier": "core",
+  "tier_basis": "organizers"
+ },
+ {
+  "id": "misc.thin_bed_absent",
+  "text": "Тонкий пласт, который не виден отдельным отражением, на сейсмике «не существует».",
+  "source": "organizers",
+  "tier": "core",
+  "tier_basis": "organizers"
+ },
+ {
+  "id": "misc.pressure_sound_speed",
+  "text": "Давление в пласте расходится с постоянной скоростью, как звук.",
+  "source": "organizers",
+  "tier": "core",
+  "tier_basis": "organizers"
+ },
+ {
+  "id": "misc.amplitude_hc",
+  "text": "Высокая амплитуда на сейсмике всегда означает углеводороды.",
+  "source": "organizers",
+  "tier": "core",
+  "tier_basis": "organizers"
+ },
+ {
+  "id": "misc.gr_measures_clay",
+  "text": "Гамма-каротаж измеряет глинистость напрямую.",
+  "source": "organizers",
+  "tier": "core",
+  "tier_basis": "organizers"
+ },
+ {
+  "id": "misc.gas_kick_constant",
+  "text": "Газовая пачка в закрытой скважине расширяется, и давление не меняется.",
+  "source": "organizers",
+  "tier": "core",
+  "tier_basis": "organizers"
+ },
+ {
+  "id": "misc.reef_porosity_preserved",
+  "text": "Пористость рифовых известняков сохраняется такой, какой была при образовании.",
+  "source": "organizers",
+  "tier": "core",
+  "tier_basis": "organizers"
+ },
+ {
+  "id": "misc.manual_is_full_course",
+  "text": "Учебное пособие по интерпретации ГИС — полный курс, охватывающий всё.",
+  "source": "book",
+  "pages": [
+   "Лат 3"
+  ],
+  "book_quote": "Пособие не претендует на полное изложение курса интерпретации данных геофизических исследований скважин (ГИС); оно посвящено",
+  "status": "в_книге",
+  "tier": "reference",
+  "tier_basis": "model_judgment"
+ },
+ {
+  "id": "misc.matrix_controls_resistivity",
+  "text": "Сопротивление породы определяется минералами скелета, а не поровой водой.",
+  "source": "book",
+  "pages": [
+   "Лат 9"
+  ],
+  "book_quote": "основную роль играет поровая вода, содержащая растворенные соли",
+  "status": "в_книге",
+  "tier": "core",
+  "tier_basis": "model_judgment"
+ },
+ {
+  "id": "misc.water_is_nacl",
+  "text": "Любую пластовую воду можно оценить как раствор NaCl.",
+  "source": "book",
+  "pages": [
+   "Лат 4"
+  ],
+  "book_quote": "Если в воде преобладает соль NaCl (до 90 %), оценка осуществляется по общей концентрации солей",
+  "status": "в_книге",
+  "tier": "reference",
+  "tier_basis": "model_judgment"
+ },
+ {
+  "id": "misc.conductivity_prop_concentration",
+  "text": "Проводимость раствора пропорциональна его концентрации.",
+  "source": "book",
+  "pages": [
+   "Лат 4"
+  ],
+  "book_quote": "Величины Λ, u, v зависят от суммарной концентрации раствора, поэтому значения Λц определяются по экспериментальным",
+  "status": "в_книге",
+  "tier": "core",
+  "tier_basis": "model_judgment"
+ },
+ {
+  "id": "misc.filtrate_eq_mud",
+  "text": "Удельное сопротивление фильтрата бурового раствора равно сопротивлению самого раствора.",
+  "source": "book",
+  "pages": [
+   "Лат 8"
+  ],
+  "book_quote": "Обычно удельное сопротивление последнего отличается от сопротивления раствора.",
+  "status": "в_книге",
+  "tier": "core",
+  "tier_basis": "model_judgment"
+ },
+ {
+  "id": "misc.resistivity_linear_porosity",
+  "text": "Сопротивление породы линейно зависит от пористости.",
+  "source": "book",
+  "pages": [
+   "Лат 9"
+  ],
+  "book_quote": "изменяется в пределах 0,4—1,0, m = 1,3+2,2.",
+  "status": "в_книге",
+  "tier": "core",
+  "tier_basis": "model_judgment"
+ },
+ {
+  "id": "misc.clay_insulator_no_effect",
+  "text": "Глинистость не влияет на сопротивление, потому что глины — изолятор.",
+  "source": "book",
+  "pages": [
+   "Лат 10"
+  ],
+  "book_quote": "На удельное сопротивление глинистых пород существенно влияет их адсорбционная способность.",
+  "status": "в_книге",
+  "tier": "core",
+  "tier_basis": "model_judgment"
+ },
+ {
+  "id": "misc.fracture_vug_same_effect",
+  "text": "Трещины и каверны одинаково снижают сопротивление породы.",
+  "source": "book",
+  "pages": [
+   "Лат 11"
+  ],
+  "book_quote": "A — коэффициент, величина которого зависит от ориентации трещин относительно направления, в котором измеряется",
+  "status": "в_книге",
+  "tier": "core",
+  "tier_basis": "model_judgment"
+ },
+ {
+  "id": "misc.fractures_always_mark_reservoir",
+  "text": "Трещины всегда отличают коллектор от плотной породы по сопротивлению.",
+  "source": "book",
+  "pages": [
+   "Лат 12"
+  ],
+  "book_quote": "При образовании в трещинной породе зоны проникновения фильтрата промывочной жидкости с удель- ным сопротивлением ρф,",
+  "status": "в_книге",
+  "tier": "core",
+  "tier_basis": "model_judgment"
+ },
+ {
+  "id": "misc.oil_differs_by_salinity",
+  "text": "Нефтяной пласт отличается от водяного только другой минерализацией воды.",
+  "source": "book",
+  "pages": [
+   "Лат 15"
+  ],
+  "book_quote": "Поскольку нефть и газ практически не проводят электрический ток",
+  "status": "в_книге",
+  "tier": "core",
+  "tier_basis": "model_judgment"
+ },
+ {
+  "id": "misc.any_oil_saturation_pure_oil",
+  "text": "Любая нефтенасыщенность означает приток чистой нефти.",
+  "source": "book",
+  "pages": [
+   "Лат 99"
+  ],
+  "book_quote": "разделяющие области коллекторов, дающих при испытании промышленный приток нефти (газа), в том числе с некоторым",
+  "status": "в_книге",
+  "tier": "core",
+  "tier_basis": "model_judgment"
+ },
+ {
+  "id": "misc.logging_measures_undisturbed",
+  "text": "Каротаж измеряет невозмущённую породу, а зона проникновения — одна резкая граница.",
+  "source": "book",
+  "pages": [
+   "Лат 16"
+  ],
+  "book_quote": "различные горные породы изменяются на контакте с буровым раствором (промывочной жидкостью) неодинаково",
+  "status": "в_книге",
+  "tier": "core",
+  "tier_basis": "model_judgment"
+ },
+ {
+  "id": "misc.invasion_always_lowers",
+  "text": "Зона проникновения в нефтеносном пласте всегда понижает сопротивление.",
+  "source": "book",
+  "pages": [
+   "Лат 18"
+  ],
+  "book_quote": "что также очень часто наблюдается в нефтегазоносных пластах",
+  "status": "в_книге",
+  "tier": "core",
+  "tier_basis": "model_judgment"
+ },
+ {
+  "id": "misc.one_probe_true_resistivity",
+  "text": "Одно показание одного зонда равно истинному сопротивлению пласта.",
+  "source": "book",
+  "pages": [
+   "Лат 18"
+  ],
+  "book_quote": "но часто не свободны от влияния зоны проникновения",
+  "status": "в_книге",
+  "tier": "core",
+  "tier_basis": "model_judgment"
+ },
+ {
+  "id": "misc.nonfocused_repeats_profile",
+  "text": "Кривая нефокусированного зонда повторяет профиль истинного сопротивления, а фокусировка сохраняет экранные эффекты.",
+  "source": "book",
+  "pages": [
+   "Лат 21"
+  ],
+  "book_quote": "геометрические факторы разных зондов различны и являются главной их характеристикой",
+  "status": "в_книге",
+  "tier": "core",
+  "tier_basis": "model_judgment"
+ },
+ {
+  "id": "misc.boundary_at_extremum",
+  "text": "Граница пласта на кривой всегда лежит в максимуме или минимуме аномалии.",
+  "source": "book",
+  "pages": [
+   "Лат 23"
+  ],
+  "book_quote": "Рассмотрим лишь правила определения границ пластов высокого сопротивления",
+  "status": "в_книге",
+  "tier": "core",
+  "tier_basis": "model_judgment"
+ },
+ {
+  "id": "misc.microprobe_gives_rho",
+  "text": "Показание микрозонда — это сопротивление породы независимо от корки и прилегания башмака.",
+  "source": "book",
+  "pages": [
+   "Лат 27"
+  ],
+  "book_quote": "определяются удельным сопротивлением глинистой корки",
+  "status": "в_книге",
+  "tier": "core",
+  "tier_basis": "model_judgment"
+ },
+ {
+  "id": "misc.shielded_probe_eq_screening",
+  "text": "«Экранированный зонд» и «экранирование пласта» — одно и то же.",
+  "source": "book",
+  "pages": [
+   "Лат 27"
+  ],
+  "book_quote": "Этим в значительной мере исключается влияние на результаты измерений промывочной жидкости в скважине",
+  "status": "в_книге",
+  "tier": "reference",
+  "tier_basis": "model_judgment"
+ },
+ {
+  "id": "misc.induction_any_well",
+  "text": "Индукционные зонды применимы в любой скважине и читаются линейно.",
+  "source": "book",
+  "pages": [
+   "Лат 28"
+  ],
+  "book_quote": "предназначенных для исследования сухих скважин, скважин, заполненных нефтью, раствором на нефтяной основе или раствором низкой",
+  "status": "в_книге",
+  "tier": "core",
+  "tier_basis": "model_judgment"
+ },
+ {
+  "id": "misc.interpret_any_bed",
+  "text": "Интерпретировать можно любой пласт подряд без отбора и первичной обработки.",
+  "source": "book",
+  "pages": [
+   "Лат 29"
+  ],
+  "book_quote": "заключается в выделении наиболее однородных пластов, для которых возможна количественная интерпретация",
+  "status": "в_книге",
+  "tier": "reference",
+  "tier_basis": "model_judgment"
+ },
+ {
+  "id": "misc.two_layer_no_invasion",
+  "text": "Двухслойная кривая означает отсутствие зоны проникновения.",
+  "source": "book",
+  "pages": [
+   "Лат 31"
+  ],
+  "book_quote": "Двухслойные кривые наблюдаются в плотных породах, в коллекторах с глубокой зоной проникновения",
+  "status": "в_книге",
+  "tier": "reference",
+  "tier_basis": "model_judgment"
+ },
+ {
+  "id": "misc.right_branch_drop_invasion",
+  "text": "Спад ρк справа на кривой всегда означает проникновение.",
+  "source": "book",
+  "pages": [
+   "Лат 36"
+  ],
+  "book_quote": "зависит от диаметра зоны проникновения",
+  "status": "в_книге",
+  "tier": "reference",
+  "tier_basis": "model_judgment"
+ },
+ {
+  "id": "misc.mud_resistivity_any",
+  "text": "Сопротивление бурового раствора при интерпретации можно взять любым.",
+  "source": "book",
+  "pages": [
+   "Лат 38"
+  ],
+  "book_quote": "должно измеряться с помощью скважинного резистивиметра в исследуемом интервале глубин",
+  "status": "в_книге",
+  "tier": "reference",
+  "tier_basis": "model_judgment"
+ },
+ {
+  "id": "misc.eps_like_rho",
+  "text": "Диэлектрическая проницаемость породы реагирует на нефть и воду так же, как сопротивление.",
+  "source": "book",
+  "pages": [
+   "Лат 52"
+  ],
+  "book_quote": "для воды на порядок выше, чем для минерального скелета",
+  "status": "в_книге",
+  "tier": "core",
+  "tier_basis": "model_judgment"
+ },
+ {
+  "id": "misc.mixing_model_any_rock",
+  "text": "Модель смеси диэлектрических проницаемостей верна для любой породы.",
+  "source": "book",
+  "pages": [
+   "Лат 52"
+  ],
+  "book_quote": "Для мономинеральной полностью водонасыщенной осадочной породы",
+  "status": "в_книге",
+  "tier": "reference",
+  "tier_basis": "model_judgment"
+ },
+ {
+  "id": "misc.reservoir_limit_porosity_only",
+  "text": "Граница коллектор/неколлектор определяется только пористостью независимо от насыщения.",
+  "source": "book",
+  "pages": [
+   "Лат 52"
+  ],
+  "book_quote": "Область между графиками 1, 2 соответствует породам-коллекторам с различным содержанием нефти (газа)",
+  "status": "в_книге",
+  "tier": "reference",
+  "tier_basis": "model_judgment"
+ },
+ {
+  "id": "misc.dm_measures_only_eps",
+  "text": "Диэлектрический метод измеряет только ε, а cosΔφ и шкала ADK — это ε.",
+  "source": "book",
+  "pages": [
+   "Лат 52"
+  ],
+  "book_quote": "измеренные приемными катушками, несут информацию о диэлектрической",
+  "status": "в_книге",
+  "tier": "core",
+  "tier_basis": "model_judgment"
+ },
+ {
+  "id": "misc.vdm_sees_undisturbed",
+  "text": "ВДМ всегда видит неизменённую часть пласта за зоной проникновения.",
+  "source": "book",
+  "pages": [
+   "Лат 54"
+  ],
+  "book_quote": "При D > 0,6÷0,8 м зона проникновения влияет на результаты исследований ВДМ тем интенсивнее, чем",
+  "status": "в_книге",
+  "tier": "core",
+  "tier_basis": "model_judgment"
+ },
+ {
+  "id": "misc.low_eps_means_water",
+  "text": "Низкие значения ε означают воду.",
+  "source": "book",
+  "pages": [
+   "Лат 55"
+  ],
+  "book_quote": "относятся к наименее глинистым газоносным коллекторам",
+  "status": "в_книге",
+  "tier": "core",
+  "tier_basis": "model_judgment"
+ },
+ {
+  "id": "misc.sp_has_true_zero",
+  "text": "На диаграмме СП есть действительный нуль потенциала.",
+  "source": "book",
+  "pages": [
+   "Лат 56"
+  ],
+  "book_quote": "Поскольку на диаграмме СП невозможно провести действительную нулевую линию",
+  "status": "в_книге",
+  "tier": "core",
+  "tier_basis": "model_judgment"
+ },
+ {
+  "id": "misc.sp_amplitude_equals_static",
+  "text": "Амплитуда СП против пласта равна статической амплитуде ΔE и скачет на его границе.",
+  "source": "book",
+  "pages": [
+   "Лат 62"
+  ],
+  "book_quote": "В пластах ограниченной толщины и особенно при высоком их сопротивлении",
+  "status": "в_книге",
+  "tier": "core",
+  "tier_basis": "model_judgment"
+ },
+ {
+  "id": "misc.sp_boundary_half_always",
+  "text": "Правило границы пласта по ΔU/2 верно для любых условий.",
+  "source": "book",
+  "pages": [
+   "Лат 60"
+  ],
+  "book_quote": "Когда среда по сопротивлению близка к однородной, точки кривой СП, соответствующие границам пластов, определяются амплитудой",
+  "status": "в_книге",
+  "tier": "core",
+  "tier_basis": "model_judgment"
+ },
+ {
+  "id": "misc.table_lithology_any_rock",
+  "text": "Таблица литологических признаков описывает любые породы, включая промежуточные.",
+  "source": "book",
+  "pages": [
+   "Лат 61"
+  ],
+  "book_quote": "В разрезах же могут быть встречены литологические разности с промежуточными физическими свойствами",
+  "status": "в_книге",
+  "tier": "reference",
+  "tier_basis": "model_judgment"
+ },
+ {
+  "id": "misc.boundary_at_half_height",
+  "text": "Границу пласта на диаграмме надо проводить по середине аномалии.",
+  "source": "book",
+  "pages": [
+   "Лат 84"
+  ],
+  "book_quote": "находят по точкам, смещенным на L/2 от основания аномалии к середине пласта",
+  "status": "в_книге",
+  "tier": "reference",
+  "tier_basis": "model_judgment"
+ },
+ {
+  "id": "misc.divide_full_reading_by_v",
+  "text": "Поправку v применяют к полному показанию, а не к амплитуде над уровнем.",
+  "source": "book",
+  "pages": [
+   "Лат 64"
+  ],
+  "book_quote": "Поправка v, позволяющая привести показания против пласта к условиям бесконечной толщины (или бесконечно малой скорости",
+  "status": "в_книге",
+  "tier": "reference",
+  "tier_basis": "model_judgment"
+ },
+ {
+  "id": "misc.ggm_measures_bulk_density",
+  "text": "Гамма-гамма-метод напрямую измеряет объёмную плотность, равную электронной.",
+  "source": "book",
+  "pages": [
+   "Лат 69"
+  ],
+  "book_quote": "Регистрируемое значение рассеянного γ-излучения определяется электронной плотностью породы",
+  "status": "в_книге",
+  "tier": "core",
+  "tier_basis": "model_judgment"
+ },
+ {
+  "id": "misc.pad_removes_mudcake",
+  "text": "Прижимное устройство прибора полностью убирает влияние скважины и корки.",
+  "source": "book",
+  "pages": [
+   "Лат 70"
+  ],
+  "book_quote": "Такое устройство прибора не снимает влияние промежуточного слоя низкой плотности",
+  "status": "в_книге",
+  "tier": "core",
+  "tier_basis": "model_judgment"
+ },
+ {
+  "id": "misc.neutron_measures_fluid_type",
+  "text": "Нейтронный метод напрямую измеряет нефть или газ.",
+  "source": "book",
+  "pages": [
+   "Лат 74"
+  ],
+  "book_quote": "Наиболее интенсивный замедлитель в породах — водород.",
+  "status": "в_книге",
+  "tier": "core",
+  "tier_basis": "model_judgment"
+ },
+ {
+  "id": "misc.neutron_more_h_higher",
+  "text": "Чем больше водорода, тем выше показания нейтронного прибора.",
+  "source": "book",
+  "pages": [
+   "Лат 74"
+  ],
+  "book_quote": "плотность тепловых нейтронов в среде, окружающей индикатор, убывает с увеличением водородсодержания",
+  "status": "в_книге",
+  "tier": "core",
+  "tier_basis": "model_judgment"
+ },
+ {
+  "id": "misc.neutron_porosity_true",
+  "text": "Нейтронная пористость всегда равна истинной и читается прямо из показаний.",
+  "source": "book",
+  "pages": [
+   "Лат 75"
+  ],
+  "book_quote": "Поэтому водородный индекс (эквивалентная влажность) чистых пород численно равен их пористости.",
+  "status": "в_книге",
+  "tier": "core",
+  "tier_basis": "model_judgment"
+ },
+ {
+  "id": "misc.ngm_pure_neutron",
+  "text": "Кривая НГМ — чистый нейтронный сигнал без вклада естественного гамма-излучения.",
+  "source": "book",
+  "pages": [
+   "Лат 77"
+  ],
+  "book_quote": "Первым предварительным этапом обработки, отличающим нейтронный гамма-метод от остальных нейтронных методов, является вычитание гамма-фона из",
+  "status": "в_книге",
+  "tier": "core",
+  "tier_basis": "model_judgment"
+ },
+ {
+  "id": "misc.absolute_count_reading",
+  "text": "Нейтронную кривую интерпретируют по абсолютному счёту.",
+  "source": "book",
+  "pages": [
+   "Лат 77"
+  ],
+  "book_quote": "В практике используется только метод относительных амплитуд, основанный на вычислении относительной амплитуды",
+  "status": "в_книге",
+  "tier": "reference",
+  "tier_basis": "model_judgment"
+ },
+ {
+  "id": "misc.corrections_always",
+  "text": "Поправки нужно вводить всегда, а не только при отличии условий опорных и изучаемых пластов.",
+  "source": "book",
+  "pages": [
+   "Лат 78"
+  ],
+  "book_quote": "вводят только в том случае, когда для опорных и исследуемых пластов эти параметры существенно различаются.",
+  "status": "в_книге",
+  "tier": "reference",
+  "tier_basis": "model_judgment"
+ },
+ {
+  "id": "misc.same_waves_all_media",
+  "text": "Волны в скважине одинаковы во всех средах, включая жидкость.",
+  "source": "book",
+  "pages": [
+   "Лат 81"
+  ],
+  "book_quote": "поперечные — только в твердых",
+  "status": "в_книге",
+  "tier": "core",
+  "tier_basis": "model_judgment"
+ },
+ {
+  "id": "misc.dt_independent_of_velocity",
+  "text": "Интервальное время ΔT и скорость — независимые свойства.",
+  "source": "book",
+  "pages": [
+   "Лат 82"
+  ],
+  "book_quote": "связана со скоростью распространения упругой волны v (в м/с)",
+  "status": "в_книге",
+  "tier": "core",
+  "tier_basis": "model_judgment"
+ },
+ {
+  "id": "misc.skeleton_dt_table_as_is",
+  "text": "Табличное ΔT скелета минерала подставляют в реальную породу без поправки.",
+  "source": "book",
+  "pages": [
+   "Лат 83"
+  ],
+  "book_quote": "Они соответствуют условиям распространения волны в монолитном массиве при атмосферных условиях.",
+  "status": "в_книге",
+  "tier": "reference",
+  "tier_basis": "model_judgment"
+ },
+ {
+  "id": "misc.acoustic_total_porosity",
+  "text": "Акустика всегда даёт общую пористость, в том числе при трещинах и кавернах.",
+  "source": "book",
+  "pages": [
+   "Лат 115"
+  ],
+  "book_quote": "Последний дает наиболее правильный результат при наличии в породе достаточно крупных полостей выщелачивания, размер которых",
+  "status": "в_книге",
+  "tier": "core",
+  "tier_basis": "model_judgment"
+ },
+ {
+  "id": "misc.any_dt_curve_valid",
+  "text": "Любая записанная кривая ΔT годна для интерпретации.",
+  "source": "book",
+  "pages": [
+   "Лат 85"
+  ],
+  "book_quote": "являются браком и интерпретации не подлежат",
+  "status": "в_книге",
+  "tier": "reference",
+  "tier_basis": "model_judgment"
+ },
+ {
+  "id": "misc.nmr_measures_all_water",
+  "text": "ЯМР-каротаж измеряет всю воду в породе и даёт полную пористость.",
+  "source": "book",
+  "pages": [
+   "Лат 89"
+  ],
+  "book_quote": "входящие в состав неподвижных молекул физически и химически связанной воды, не оказывают никакого влияния",
+  "status": "в_книге",
+  "tier": "core",
+  "tier_basis": "model_judgment"
+ },
+ {
+  "id": "misc.any_nonzero_nmr_reservoir",
+  "text": "Любое ненулевое показание ЯМР означает коллектор.",
+  "source": "book",
+  "pages": [
+   "Лат 90"
+  ],
+  "book_quote": "могут соответствовать отклонениям кривых U, обусловленным аппаратурными помехами",
+  "status": "в_книге",
+  "tier": "core",
+  "tier_basis": "model_judgment"
+ },
+ {
+  "id": "misc.same_complex_any_well",
+  "text": "Один и тот же комплекс методов ГИС подходит для любой скважины и разреза.",
+  "source": "book",
+  "pages": [
+   "Лат 90"
+  ],
+  "book_quote": "должен применяться оптимальный, соответствующий условиям района комплекс геофизических исследований",
+  "status": "в_книге",
+  "tier": "reference",
+  "tier_basis": "model_judgment"
+ },
+ {
+  "id": "misc.hole_equals_bit",
+  "text": "Диаметр скважины равен диаметру долота на всём интервале.",
+  "source": "book",
+  "pages": [
+   "Лат 90"
+  ],
+  "book_quote": "В плотных, сцементированных породах диаметр скважины остается равным номинальному",
+  "status": "в_книге",
+  "tier": "reference",
+  "tier_basis": "model_judgment"
+ },
+ {
+  "id": "misc.heavy_mud_harmless",
+  "text": "Плотность раствора и техническая вода безвредны для ГИС.",
+  "source": "book",
+  "pages": [
+   "Лат 90"
+  ],
+  "book_quote": "Водоотдача - основной показатель качества глинистого раствора; чем ниже водоотдача, тем лучше раствор.",
+  "status": "в_книге",
+  "tier": "reference",
+  "tier_basis": "model_judgment"
+ },
+ {
+  "id": "misc.close_filtrate_always_bad",
+  "text": "Чем ближе сопротивление фильтрата к пластовому, тем хуже для всех методов.",
+  "source": "book",
+  "pages": [
+   "Лат 91"
+  ],
+  "book_quote": "неоднозначно влияет на эффективность различных геофизических методов",
+  "status": "в_книге",
+  "tier": "reference",
+  "tier_basis": "model_judgment"
+ },
+ {
+  "id": "misc.no_invasion_always_better",
+  "text": "Отсутствие проникновения всегда улучшает качество ГИС.",
+  "source": "book",
+  "pages": [
+   "Лат 91"
+  ],
+  "book_quote": "Наиболее широкое применение получили растворы на непроводящей — углеводородной — основе: известково-битумные (ИБР) и инвертные",
+  "status": "в_книге",
+  "tier": "reference",
+  "tier_basis": "model_judgment"
+ },
+ {
+  "id": "misc.carbonates_only_fractured",
+  "text": "Карбонатный разрез целиком состоит из трещинных коллекторов.",
+  "source": "book",
+  "pages": [
+   "Лат 91"
+  ],
+  "book_quote": "По морфологии порового пространства коллекторы разделяют на межзерновые, трещинные, кавернозно-трещинные и смешанные типы.",
+  "status": "в_книге",
+  "tier": "reference",
+  "tier_basis": "model_judgment"
+ },
+ {
+  "id": "misc.terrigenous_all_alike",
+  "text": "Все терригенные коллекторы одинаково глинистые.",
+  "source": "book",
+  "pages": [
+   "Лат 91"
+  ],
+  "book_quote": "в терригенном разрезе среди межзерновых коллекторов выделяют высокопористые и низкопористые; чистые (слабоглинистые) и глинистые",
+  "status": "в_книге",
+  "tier": "reference",
+  "tier_basis": "model_judgment"
+ },
+ {
+  "id": "misc.sp_gm_interchangeable",
+  "text": "Методы СП и ГМ взаимозаменяемы во всех скважинах.",
+  "source": "book",
+  "pages": [
+   "Лат 92"
+  ],
+  "book_quote": "Гамма-метод дифференцирует терригенный разрез по объемной глинистости",
+  "status": "в_книге",
+  "tier": "reference",
+  "tier_basis": "model_judgment"
+ },
+ {
+  "id": "misc.productivity_one_method",
+  "text": "Продуктивность и характер насыщения определяются одним методом сопротивления.",
+  "source": "book",
+  "pages": [
+   "Лат 97"
+  ],
+  "book_quote": "для оценки характера насыщения требуется комплекс, включающий метод сопротивления",
+  "status": "в_книге",
+  "tier": "reference",
+  "tier_basis": "model_judgment"
+ },
+ {
+  "id": "misc.log_unique_lithology",
+  "text": "Кривая каротажа однозначно указывает литологию, а породе соответствует один набор признаков.",
+  "source": "book",
+  "pages": [
+   "Лат 92"
+  ],
+  "book_quote": "существующие методы дают физические признаки пород, часто являющиеся общими для разных отложений.",
+  "status": "в_книге",
+  "tier": "core",
+  "tier_basis": "model_judgment"
+ },
+ {
+  "id": "misc.collector_one_measurement",
+  "text": "Коллектор определяется одним измерением или одним признаком.",
+  "source": "book",
+  "pages": [
+   "Лат 96"
+  ],
+  "book_quote": "Предпосылкой выделения коллектора геофизическими методами [3, 5] является его отличие от вмещающих пород-неколлекторов по проницаемости,",
+  "status": "в_книге",
+  "tier": "reference",
+  "tier_basis": "model_judgment"
+ },
+ {
+  "id": "misc.thick_mudcake_better",
+  "text": "Чем толще глинистая корка, тем лучше виден коллектор.",
+  "source": "book",
+  "pages": [
+   "Лат 96"
+  ],
+  "book_quote": "разница в показаниях микрозондов сначала возрастает, а потом убывает",
+  "status": "в_книге",
+  "tier": "reference",
+  "tier_basis": "model_judgment"
+ },
+ {
+  "id": "misc.no_gradient_no_reservoir",
+  "text": "Отсутствие радиального градиента сопротивления означает, что коллектора нет.",
+  "source": "book",
+  "pages": [
+   "Лат 96"
+  ],
+  "book_quote": "Отсутствие заметного градиента сопротивления не является признаком, отрицающим коллектор",
+  "status": "в_книге",
+  "tier": "core",
+  "tier_basis": "model_judgment"
+ },
+ {
+  "id": "misc.reservoir_limit_universal",
+  "text": "Граница коллектор/неколлектор — универсальное свойство породы, одинаковое для всех районов.",
+  "source": "book",
+  "pages": [
+   "Лат 96"
+  ],
+  "book_quote": "Кроме прямых качественных, используются также косвенные количественные признаки коллекторов",
+  "status": "в_книге",
+  "tier": "reference",
+  "tier_basis": "model_judgment"
+ },
+ {
+  "id": "misc.cutoff_by_eye",
+  "text": "Граничное значение параметра на диаграмме выбирается «на глаз».",
+  "source": "book",
+  "pages": [
+   "Лат 97"
+  ],
+  "book_quote": "получают уровень критических значений параметра, который разделяет распознаваемые пласты в разрезе на классы",
+  "status": "в_книге",
+  "tier": "reference",
+  "tier_basis": "model_judgment"
+ },
+ {
+  "id": "misc.sp_gm_any_terrigenous",
+  "text": "СП и ГМ подходят для эффективной толщины в любом терригенном разрезе.",
+  "source": "book",
+  "pages": [
+   "Лат 97"
+  ],
+  "book_quote": "В терригенном разрезе, где пористость и проницаемость коллекторов зависят от глинистости, для определения",
+  "status": "в_книге",
+  "tier": "reference",
+  "tier_basis": "model_judgment"
+ },
+ {
+  "id": "misc.apparent_resistivity_decides",
+  "text": "По кажущемуся сопротивлению характер насыщения определяется всегда.",
+  "source": "book",
+  "pages": [
+   "Лат 97"
+  ],
+  "book_quote": "Чистые, высокопористые межзерновые коллекторы характеризуются высокими значениями коэффициентов нефте-, газонасыщения",
+  "status": "в_книге",
+  "tier": "core",
+  "tier_basis": "model_judgment"
+ },
+ {
+  "id": "misc.thresholds_from_tests_only",
+  "text": "Критические значения параметров можно получить только из испытаний.",
+  "source": "book",
+  "pages": [
+   "Лат 99"
+  ],
+  "book_quote": "Существуют два способа установления критических значений",
+  "status": "в_книге",
+  "tier": "reference",
+  "tier_basis": "model_judgment"
+ },
+ {
+  "id": "misc.single_pn_threshold",
+  "text": "Порог параметра насыщения один и тот же для всех коллекторов, чистых и глинистых.",
+  "source": "book",
+  "pages": [
+   "Лат 100"
+  ],
+  "book_quote": "необходимо иметь для каждого класса коллекторов, в результате чего будет получено семейство зависимостей",
+  "status": "в_книге",
+  "tier": "reference",
+  "tier_basis": "model_judgment"
+ },
+ {
+  "id": "misc.hef_equals_reservoir_thickness",
+  "text": "Эффективная толщина совпадает с толщиной коллектора.",
+  "source": "book",
+  "pages": [
+   "Лат 101"
+  ],
+  "book_quote": "Эффективная толщина таких объектов определяется интервалом между кровлей коллектора и уровнем ВНК или ГВК",
+  "status": "в_книге",
+  "tier": "reference",
+  "tier_basis": "model_judgment"
+ },
+ {
+  "id": "misc.single_gas_contact_measurement",
+  "text": "Один замер после обсадки достаточен для газонефтяного контакта.",
+  "source": "book",
+  "pages": [
+   "Лат 101"
+  ],
+  "book_quote": "Пример определения газонефтяного контакта по диаграммам НГМ в комплексе с данными других геофизических методов",
+  "status": "в_книге",
+  "tier": "reference",
+  "tier_basis": "model_judgment"
+ },
+ {
+  "id": "misc.every_interlayer_visible",
+  "text": "Любой прослой неколлектора виден на диаграмме.",
+  "source": "book",
+  "pages": [
+   "Лат 101"
+  ],
+  "book_quote": "определяется как разность толщин всего пласта h и суммы толщин прослоев неколлектора",
+  "status": "в_книге",
+  "tier": "reference",
+  "tier_basis": "model_judgment"
+ },
+ {
+  "id": "misc.thin_bed_thickness_read",
+  "text": "В тонкослоистой пачке толщину коллектора можно прочесть прямо по диаграмме.",
+  "source": "book",
+  "pages": [
+   "Лат 102"
+  ],
+  "book_quote": "по диаграммам БЭЗ или комплекса фокусированных методов, задают удельные сопротивления прослоев продуктивного коллектора",
+  "status": "в_книге",
+  "tier": "reference",
+  "tier_basis": "model_judgment"
+ },
+ {
+  "id": "misc.alpha_sp_equals_share",
+  "text": "αСП прямо равно доле коллектора в пачке.",
+  "source": "book",
+  "pages": [
+   "Лат 102"
+  ],
+  "book_quote": "берут отношение среднего значения аномалии СП в пачке",
+  "status": "в_книге",
+  "tier": "reference",
+  "tier_basis": "model_judgment"
+ },
+ {
+  "id": "misc.dense_layers_all_counted",
+  "text": "Способы по сопротивлению и СП/ГМ учитывают все плотные прослои.",
+  "source": "book",
+  "pages": [
+   "Лат 102"
+  ],
+  "book_quote": "В пачке, где присутствуют тонкие прослои неколлектора двух типов (глинистые и плотные с неактивным цементом)",
+  "status": "в_книге",
+  "tier": "reference",
+  "tier_basis": "model_judgment"
+ },
+ {
+  "id": "misc.terrigenous_methods_to_carbonates",
+  "text": "Методы терригенного разреза переносятся на карбонаты без изменений.",
+  "source": "book",
+  "pages": [
+   "Лат 105"
+  ],
+  "book_quote": "Основные принципы выделения и оценки характера насыщения межзерновых карбонатных коллекторов те же, что и для",
+  "status": "в_книге",
+  "tier": "reference",
+  "tier_basis": "model_judgment"
+ },
+ {
+  "id": "misc.kp_star_universal",
+  "text": "Нижний предел пористости (критическое kп*) един для всех карбонатов.",
+  "source": "book",
+  "pages": [
+   "Лат 107"
+  ],
+  "book_quote": "для карбонатных коллекторов разных районов",
+  "status": "в_книге",
+  "tier": "reference",
+  "tier_basis": "model_judgment"
+ },
+ {
+  "id": "misc.complex_reservoir_as_intergranular",
+  "text": "Сложный коллектор выделяют теми же признаками, что и межзерновой.",
+  "source": "book",
+  "pages": [
+   "Лат 108"
+  ],
+  "book_quote": "Стандартный комплекс ГИС не позволяет обнаружить трещинный коллектор, поскольку признаки межзернового коллектора, используемые при выделении",
+  "status": "в_книге",
+  "tier": "reference",
+  "tier_basis": "model_judgment"
+ },
+ {
+  "id": "misc.one_porosity_all_methods",
+  "text": "«Пористость по каротажу» одинакова для всех методов.",
+  "source": "book",
+  "pages": [
+   "Лат 113"
+  ],
+  "book_quote": "По данным комплекса методов можно установить компоненты пористости.",
+  "status": "в_книге",
+  "tier": "reference",
+  "tier_basis": "model_judgment"
+ },
+ {
+  "id": "misc.water_resistivity_only_analysis",
+  "text": "Сопротивление пластовой воды можно получить только из анализа воды.",
+  "source": "book",
+  "pages": [
+   "Лат 115"
+  ],
+  "book_quote": "интерпретатору должно быть известно удельное электрическое сопротивление пластовой воды",
+  "status": "в_книге",
+  "tier": "reference",
+  "tier_basis": "model_judgment"
+ },
+ {
+  "id": "misc.resistivity_transfers_to_deposit",
+  "text": "Сопротивление по законтурной скважине можно переносить на всю залежь.",
+  "source": "book",
+  "pages": [
+   "Лат 113"
+  ],
+  "book_quote": "Определение пористости по удельному сопротивлению коллектора за контуром состоит из следующих операций.",
+  "status": "в_книге",
+  "tier": "reference",
+  "tier_basis": "model_judgment"
+ },
+ {
+  "id": "misc.no_residual_oil_in_water_bed",
+  "text": "В водоносном пласте остаточной нефти нет.",
+  "source": "book",
+  "pages": [
+   "Лат 113"
+  ],
+  "book_quote": "Последнее не вполне справедливо, поскольку под водонефтяным контактом имеется зона, где нефтенасыщение равно остаточному и",
+  "status": "в_книге",
+  "tier": "core",
+  "tier_basis": "model_judgment"
+ },
+ {
+  "id": "misc.q_is_bed_property",
+  "text": "Параметр q — свойство отдельного пласта, а не района.",
+  "source": "book",
+  "pages": [
+   "Лат 113"
+  ],
+  "book_quote": "но пористость некоторых пластовых пересечений коллекторов установлена по данным какого-либо другого геофизического метода или по",
+  "status": "в_книге",
+  "tier": "reference",
+  "tier_basis": "model_judgment"
+ },
+ {
+  "id": "misc.invaded_zone_pure_filtrate",
+  "text": "Зона проникновения заполнена только чистым фильтратом.",
+  "source": "book",
+  "pages": [
+   "Лат 114"
+  ],
+  "book_quote": "где z = доля остаточной пластовой воды в порах коллектора в зоне проникновения.",
+  "status": "в_книге",
+  "tier": "core",
+  "tier_basis": "model_judgment"
+ },
+ {
+  "id": "misc.fracture_one_measurement",
+  "text": "Для трещинного коллектора достаточно одного замера.",
+  "source": "book",
+  "pages": [
+   "Лат 114"
+  ],
+  "book_quote": "Способ двух растворов. В этом случае используются две диаграммы метода сопротивления, обычно экранированного зонда (БК-3),",
+  "status": "в_книге",
+  "tier": "reference",
+  "tier_basis": "model_judgment"
+ },
+ {
+  "id": "misc.one_porosity_method_enough",
+  "text": "Одного метода пористости достаточно при любом составе скелета.",
+  "source": "book",
+  "pages": [
+   "Лат 116"
+  ],
+  "book_quote": "Для определения коэффициента общей пористости при сложном минеральном составе коллекторов должен использоваться комплекс методов, показания",
+  "status": "в_книге",
+  "tier": "reference",
+  "tier_basis": "model_judgment"
+ },
+ {
+  "id": "misc.reference_points_by_guess",
+  "text": "Опорные точки на палетке берутся «из головы».",
+  "source": "book",
+  "pages": [
+   "Лат 116"
+  ],
+  "book_quote": "Пример 56. Вычислить координаты опорных точек для кросс-плотов на рис.82, a, б при",
+  "status": "в_книге",
+  "tier": "reference",
+  "tier_basis": "model_judgment"
+ },
+ {
+  "id": "misc.sp_measures_porosity",
+  "text": "СП измеряет пористость напрямую.",
+  "source": "book",
+  "pages": [
+   "Лат 117"
+  ],
+  "book_quote": "В ряде районов, где пористость коллекторов связана со степенью заполнения пор глинистым цементом, определение пористости",
+  "status": "в_книге",
+  "tier": "core",
+  "tier_basis": "model_judgment"
+ },
+ {
+  "id": "misc.saturation_from_one_log",
+  "text": "Нефтегазонасыщение измеряется напрямую по одному каротажу.",
+  "source": "book",
+  "pages": [
+   "Лат 118"
+  ],
+  "book_quote": "используется весь комплекс методов, включающий методы определения сопротивления неизмененной части коллектора",
+  "status": "в_книге",
+  "tier": "core",
+  "tier_basis": "model_judgment"
+ },
+ {
+  "id": "misc.layered_clay_resistivity_equal",
+  "text": "Сопротивление пласта равно сопротивлению коллектора и при слоистой глинистости.",
+  "source": "book",
+  "pages": [
+   "Лат 118"
+  ],
+  "book_quote": "не являются истинными, поскольку удельное сопротивление слоистого коллектора в действительности является продольным сопротивлением",
+  "status": "в_книге",
+  "tier": "reference",
+  "tier_basis": "model_judgment"
+ },
+ {
+  "id": "misc.reliability_only_by_core",
+  "text": "Достоверность определения kнг и метки классов можно получить только по керну.",
+  "source": "book",
+  "pages": [
+   "Лат 121"
+  ],
+  "book_quote": "существуют два подхода, первый из которых — непосредственное сравнение",
+  "status": "в_книге",
+  "tier": "reference",
+  "tier_basis": "model_judgment"
+ },
+ {
+  "id": "misc.complex_processing_better",
+  "text": "Чем сложнее обработка, тем лучше результат.",
+  "source": "book",
+  "pages": [
+   "Лат 122"
+  ],
+  "book_quote": "зона пересечения распределений должна уменьшиться, а эффективность деления на классы увеличиться",
+  "status": "в_книге",
+  "tier": "reference",
+  "tier_basis": "model_judgment"
+ },
+ {
+  "id": "misc.resistivity_method_any_saturation",
+  "text": "Способ по сопротивлению годится для любого насыщения.",
+  "source": "book",
+  "pages": [
+   "Лат 114"
+  ],
+  "book_quote": "выполняют следующие операции",
+  "status": "в_книге",
+  "tier": "reference",
+  "tier_basis": "model_judgment"
+ },
+ {
+  "id": "misc.sp_gm_permeability_any",
+  "text": "Амплитуды СП и ГМ связаны с проницаемостью в любом коллекторе.",
+  "source": "book",
+  "pages": [
+   "Лат 125"
+  ],
+  "book_quote": "практически не связаны с параметром",
+  "status": "в_книге",
+  "tier": "reference",
+  "tier_basis": "model_judgment"
+ },
+ {
+  "id": "misc.gas_log_gives_saturation",
+  "text": "Газометрия измеряет газонасыщенность пласта, а показание равно содержанию газа в породе.",
+  "source": "book",
+  "pages": [
+   "Лат 127"
+  ],
+  "book_quote": "может быть определено лишь остаточное содержание углеводородов в пласте",
+  "status": "в_книге",
+  "tier": "core",
+  "tier_basis": "model_judgment"
+ },
+ {
+  "id": "misc.high_total_gas_much_gas",
+  "text": "Высокий суммарный газ всегда означает много газа в пласте.",
+  "source": "book",
+  "pages": [
+   "Лат 128"
+  ],
+  "book_quote": "определяются приведенные газопоказания, характеризующие объем газа при нормальных условиях, содержащийся в единице объема выбуренной из",
+  "status": "в_книге",
+  "tier": "core",
+  "tier_basis": "model_judgment"
+ },
+ {
+  "id": "misc.gas_anomaly_productive",
+  "text": "Газовая аномалия означает продуктивный пласт, её отсутствие — непродуктивный.",
+  "source": "book",
+  "pages": [
+   "Лат 128"
+  ],
+  "book_quote": "газовая аномалия размывается по глубине и за счет этого уменьшается по величине",
+  "status": "в_книге",
+  "tier": "core",
+  "tier_basis": "model_judgment"
+ },
+ {
+  "id": "misc.components_tell_water",
+  "text": "Компонентный состав газа отличает воду от нефти и газа.",
+  "source": "book",
+  "pages": [
+   "Лат 129"
+  ],
+  "book_quote": "определяют средний компонентный состав и строят график, аналогичный рис. 89",
+  "status": "в_книге",
+  "tier": "core",
+  "tier_basis": "model_judgment"
+ },
+ {
+  "id": "misc.universal_nomogram",
+  "text": "Одна универсальная номограмма подходит для любого района.",
+  "source": "book",
+  "pages": [
+   "Лат 129"
+  ],
+  "book_quote": "путем приведения объема газа, выделившегося из пласта, к пластовым условиям",
+  "status": "в_книге",
+  "tier": "reference",
+  "tier_basis": "model_judgment"
+ },
+ {
+  "id": "misc.problems_by_formulas_only",
+  "text": "Задачи по газометрии решаются одними формулами без номограммы.",
+  "source": "book",
+  "pages": [
+   "Лат 130"
+  ],
+  "book_quote": "получить диаграмму приведенных газопоказаний",
+  "status": "в_книге",
+  "tier": "reference",
+  "tier_basis": "model_judgment"
+ },
+ {
+  "id": "misc.darcy_deviation_turbulence",
+  "text": "Отклонение от закона Дарси при высоких скоростях вызвано турбулентностью.",
+  "source": "book",
+  "pages": [
+   "Бас 369"
+  ],
+  "book_quote": "не следует связывать с турбулизацией течения",
+  "status": "в_книге",
+  "tier": "core",
+  "tier_basis": "model_judgment"
+ },
+ {
+  "id": "misc.porosity_eq_open_area",
+  "text": "Пористость и просветность — одно и то же понятие.",
+  "source": "book",
+  "pages": [
+   "Бас 359"
+  ],
+  "book_quote": "обычное отождествление этих понятий является ошибочным",
+  "status": "в_книге",
+  "tier": "reference",
+  "tier_basis": "model_judgment"
+ },
+ {
+  "id": "misc.reservoir_limit_is_rock_property",
+  "text": "Граница коллектор/неколлектор — чисто природное свойство породы.",
+  "source": "book",
+  "pages": [
+   "Куз 49"
+  ],
+  "book_quote": "граница коллектор – неколлектор – понятие во многом условное, технологическое и экономическое",
+  "status": "в_книге",
+  "tier": "reference",
+  "tier_basis": "model_judgment"
+ }
+]

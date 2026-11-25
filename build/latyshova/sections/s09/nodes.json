@@ -62,12 +62,7 @@
    "time": "в главе не оценивается",
    "typical_errors": "гипотеза: принять точку наибольшего градиента без учёта толщины пласта"
   },
-  "links": [
-   {
-    "to": "lat.s09.02-superposition-curves",
-    "type": "предпосылка"
-   }
-  ],
+  "links": [],
   "order": {
    "rank": 1,
    "why_before_next": "Объясняет, почему кривая плавная; без этого суммирование кривых границ (узел 02) выглядит произвольным."
@@ -206,10 +201,6 @@
    {
     "to": "lat.s09.01-smooth-boundaries",
     "type": "предпосылка"
-   },
-   {
-    "to": "lat.s09.03-build-curves-problems",
-    "type": "предпосылка"
    }
   ],
   "order": {
@@ -339,10 +330,6 @@
   "links": [
    {
     "to": "lat.s09.02-superposition-curves",
-    "type": "предпосылка"
-   },
-   {
-    "to": "lat.s09.04-boundary-conclusions",
     "type": "предпосылка"
    }
   ],

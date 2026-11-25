@@ -14,21 +14,6 @@ NUM = re.compile(r"\d+(?:,\d+)?")
 ABBR = ("рис", "табл", "стр", "см", "т", "п")
 
 
-GREEK = {"alpha": "α", "beta": "β", "gamma": "γ", "delta": "δ", "Delta": "Δ", "eta": "η", "theta": "θ", "lambda": "λ", "mu": "μ", "pi": "π", "rho": "ρ", "sigma": "σ", "tau": "τ", "phi": "φ", "varphi": "φ", "chi": "χ", "omega": "ω", "Omega": "Ω", "xi": "ξ", "kappa": "κ", "varepsilon": "ε", "epsilon": "ε", "psi": "ψ", "nu": "ν", "Sigma": "Σ", "cdot": "·", "times": "×", "approx": "≈", "leq": "≤", "geq": "≥", "le": "≤", "ge": "≥", "neq": "≠", "pm": "±", "infty": "∞", "partial": "∂", "sum": "Σ", "int": "∫", "to": "→", "rightarrow": "→", "ln": "ln", "lg": "lg", "log": "log", "sin": "sin", "cos": "cos", "exp": "exp", "min": "min", "max": "max", "circ": "°"}
-SUP = str.maketrans("0123456789+-n", "⁰¹²³⁴⁵⁶⁷⁸⁹⁺⁻ⁿ"); SUB = str.maketrans("0123456789+-", "₀₁₂₃₄₅₆₇₈₉₊₋")
-
-
-def tex2text(t):
-    """Лёгкий перевод TeX слоя в читаемый текст без внешних библиотек (греческие, индексы, дроби). Сложное остаётся как есть."""
-    t = re.sub(r"\\(?:text|mathrm|mathit|mathbf|operatorname|rm)\{([^{}]*)\}", r"\1", t.replace("$$", "").replace("$", ""))
-    t = re.sub(r"\\([A-Za-z]+)", lambda m: (m.group(0) if m.group(1) in ("frac","dfrac","tfrac","sqrt") else GREEK.get(m.group(1), m.group(1))), t)
-    t = re.sub(r"\^\{([^{}]*)\}|\^(\S)", lambda m: (m.group(1) or m.group(2)).translate(SUP) if (m.group(1) or m.group(2)).translate(SUP) != (m.group(1) or m.group(2)) else "^(" + (m.group(1) or m.group(2)) + ")", t)
-    t = re.sub(r"_\{([^{}]*)\}|_(\S)", lambda m: (m.group(1) or m.group(2)).translate(SUB) if (m.group(1) or m.group(2)).translate(SUB) != (m.group(1) or m.group(2)) else "_" + (m.group(1) or m.group(2)), t)
-    for _ in range(3): t = re.sub(r"\\[dt]?frac\{([^{}]*)\}\{([^{}]*)\}", r"(\1)/(\2)", t)
-    t = re.sub(r"\\sqrt\{([^{}]*)\}", r"√(\1)", t)
-    return re.sub(r"[{}]", "", re.sub(r"\s+", " ", t)).strip()
-
-
 def sentences(t):
     """Делит на предложения, не режет «рис. 51», «табл. 12»."""
     out, cur = [], ""
@@ -67,6 +52,97 @@ def ctx_parts(hit, quote):
     else: shift = 0
     if m: return [t[:m.start() + shift], t[m.start() + shift:m.end() + shift], t[m.end() + shift:]]
     return [t[:900], "", ""]
+
+GREEK = {"rho": "ρ", "Delta": "Δ", "delta": "δ", "phi": "φ", "varphi": "φ", "Lambda": "Λ", "lambda": "λ", "Sigma": "Σ", "sigma": "σ", "Pi": "Π", "pi": "π",
+         "mu": "μ", "alpha": "α", "beta": "β", "gamma": "γ", "eta": "η", "tau": "τ", "nu": "ν", "epsilon": "ε", "varepsilon": "ε", "theta": "θ", "kappa": "κ",
+         "xi": "ξ", "omega": "ω", "Omega": "Ω", "psi": "ψ", "chi": "χ", "zeta": "ζ", "cdot": "·", "times": "×", "div": "÷", "le": "≤", "leq": "≤", "ge": "≥", "geq": "≥",
+         "approx": "≈", "sim": "∼", "ne": "≠", "pm": "±", "infty": "∞", "to": "→", "rightarrow": "→", "Rightarrow": "⇒", "partial": "∂", "circ": "°", "prime": "′",
+         "ldots": "…", "quad": " ", "qquad": " ", "left": "", "right": ""}
+SUP = {"0": "⁰", "1": "¹", "2": "²", "3": "³", "4": "⁴", "5": "⁵", "6": "⁶", "7": "⁷", "8": "⁸", "9": "⁹", "-": "⁻", "+": "⁺"}
+
+
+def tex2txt(t):
+    """Читаемая запись формулы из TeX слоя (индексы как в тексте слоя: ρ_вп). Если остаются неизвестные команды, вернёт None."""
+    t = t.strip()
+    t = re.sub(r"^\$\$|\$\$$|^\\\(|\\\)$|^\\\[|\\\]$", "", t).strip()
+    t = re.sub(r"\$\$|\\\(|\\\)", " ", t)
+    tag = re.search(r"\\tag\{([^}]*)\}", t); t = re.sub(r"\\tag\{[^}]*\}", "", t)
+    t = re.sub(r"\\begin\{[^}]*\}(\{[^}]*\})?|\\end\{[^}]*\}", "", t).replace("\\\\", "; ").replace("&", " ")
+    for _ in range(6):
+        t = re.sub(r"\\(?:text|mathrm|mathbf|mathit|operatorname)\{([^{}]*)\}", r"\1", t)
+        t = re.sub(r"\\frac\{([^{}]*)\}\{([^{}]*)\}", r"(\1)/(\2)", t)
+    t = re.sub(r"\\([A-Za-z]+)", lambda m: GREEK.get(m.group(1), m.group(0)), t)
+    t = re.sub(r"\\[,;:!]", " ", t)
+    t = t.replace("\\%", "%").replace("\\_", "_")
+    t = re.sub(r"\^\{([0-9+\-]+)\}", lambda m: "".join(SUP[c] for c in m.group(1)), t)
+    t = re.sub(r"\^([0-9])", lambda m: SUP[m.group(1)], t)
+    t = re.sub(r"\^\{([^{}]*)\}", r"^(\1)", t)
+    t = re.sub(r"_\{([^{}]*)\}", r"_\1", t)
+    t = t.replace("{}", "")
+    t = re.sub(r"\^\{′\}", "′", t)
+    t = re.sub(r"\s+", " ", t).strip()
+    if tag: t += f"  ({tag.group(1)})"
+    return None if re.search(r"\\[A-Za-z]|[{}]", t) else t
+
+
+def tex_loose(t):
+    """Одиночные индексы и степени TeX вне формул: 10^{3} -> 10³, k_{п} -> k_п, \\% -> %."""
+    t = t.replace("\\%", "%")
+    t = re.sub(r"\^\{([0-9+\-]+)\}", lambda m: "".join(SUP[c] for c in m.group(1)), t)
+    return re.sub(r"_\{([^{}]*)\}", r"_\1", t)
+
+
+def tex_inline(t):
+    r"""Формулы внутри текста/ячеек: \( ... \) и $...$ -> читаемая запись; если не получилось, оставляет как есть."""
+    return tex_loose(re.sub(r"\\\((.+?)\\\)|\$(.+?)\$", lambda m: tex2txt(m.group(1) or m.group(2)) or m.group(0), t))
+
+
+SERVICE_SENT = re.compile(r"FORMAT|figure_desc|ocr_note|\bв ролик|\bв ключе|не использовать в (?:роликах|заданиях)|ответы не придум|для ментора|вопрос ментору|узел lat\.", re.I)
+
+
+STEPNUM = {}  # id узла -> номер шага (заполняется в Build.render)
+SHORTNUM = {}  # две цифры номера узла -> номер шага
+
+
+def vis(text):
+    """Текст для читателя: без предложений-служебных пометок слоя (в панели источника остаётся оригинал); ссылки «узел lat.…» -> «шаг N»."""
+    text = re.sub(r"\s*\((?:figure_desc|FORMAT[^)]*)\)", "", text)
+    text = re.sub(r"\s*\((?:утверждени[еяй]\s*)?c\d+(?:\s*[,и]\s*c\d+)*\)", "", text)
+    text = re.sub(r"\bузл(?:ы|а|ов|е|у)?\s+(\d{2}(?:(?:,\s*|\s+и\s+)\d{2})*)", lambda m: ("шаги " if len(re.findall(r"\d{2}", m.group(1))) > 1 else "шаг ") + ", ".join(str(SHORTNUM.get(k, "?")) for k in re.findall(r"\d{2}", m.group(1))), text)
+    text = re.sub(r"узел (lat\.[\w.\-]+)", lambda m: f"шаг {STEPNUM[m.group(1)]}" if m.group(1) in STEPNUM else "соответствующий шаг", text)
+    parts = re.split(r"(?<=[.!?])\s+", text.strip())
+    keep = [x for x in parts if not SERVICE_SENT.search(x)]
+    return " ".join(keep) if keep and len(keep) < len(parts) else text
+
+
+SERVICE = [(re.compile(r"\s*Не подтверждено книгой,? не использовать в заданиях и роликах\.?", re.I), " (в книге не подтверждено)")]
+
+
+def clean_note(t):
+    """Служебные формулировки слоя для аудитории: без «не использовать в заданиях и роликах»."""
+    for rx, rep in SERVICE: t = rx.sub(rep, t)
+    return vis(t)
+
+
+GLOSS_NOISE = re.compile(r"clean\.md|draft|куратор|\bOCR\b|\bocr|вопрос ментору|ментор|черновик|\b(?:Куз|Бас|Бар|Вен)\s*\d", re.I)
+
+
+def gloss_clean(t):
+    parts = re.split(r"(?<=[.;!?])\s+", t.strip())
+    keep = [x for x in parts if not GLOSS_NOISE.search(x)]
+    return " ".join(keep) if keep else t
+
+
+def glossary_rows(path, maxpage, book="Лат"):
+    """Строки глоссария доменного пакета: термины данной книги, определённые на страницах не позже maxpage (PDF)."""
+    rows = []
+    if not Path(path).exists(): return rows
+    for line in Path(path).read_text().splitlines():
+        c = [x.strip() for x in line.strip().strip("|").split("|")]
+        if not line.startswith("|") or len(c) < 5 or c[0].startswith(("термин", "---", ":--")) or set(c[0]) <= set("-: "): continue
+        pg = [int(x) for m in re.finditer(book + r"\s*([0-9][0-9,\s;–\-]*)", c[3]) for x in re.findall(r"\d+", m.group(1))]
+        if pg and min(pg) <= maxpage: rows.append((c[0], gloss_clean(c[2]), c[3], min(pg)))
+    return sorted(rows, key=lambda r: (r[3], r[0].lower()))
 
 
 class Build:
@@ -107,11 +183,12 @@ class Build:
     def cl(s, key, text):
         e = s.EV[key]; cls = {"автор": "ca", "модель": "cm", "гипотеза": "ch"}[e["a"]]
         ok = '<sup class="vk" title="проверено: цитата найдена на странице">✓</sup>' if e["st"] == "ok" else ""
-        return f'<span class="cl {cls}" tabindex="0" role="button" data-k="{esc(key)}" aria-label="{esc(e["a"])}: показать источник">{esc(text)}{ok}</span>'
+        return f'<span class="cl {cls}" tabindex="0" role="button" data-k="{esc(key)}" aria-label="{esc(e["a"])}: показать источник">{esc(vis(text))}{ok}</span>'
 
     def model_sents(s, n, field, text, author="модель", note=""):
         out = []
-        for i, sent in enumerate(sentences(text)):
+        ss = sentences(text); ks = [x for x in ss if not SERVICE_SENT.search(x)]
+        for i, sent in enumerate(ks if ks and len(ks) < len(ss) else ss):
             au = "гипотеза" if re.search(r"гипотез", sent, re.I) else author
             k = f"{n['id']}@{field}.{i}"
             s.EV[k] = {"a": au, "k": "поле модели", "p": 0, "st": "model", "n": n["id"], "pp": s.pages[n["id"]], "o": note,
@@ -143,6 +220,19 @@ class Build:
             cap = "Модель состояния: I = C·q + I_ф с условными числами (не из книги); двигайте ползунки." + (" ΔJ по формуле (40) не меняется от C и I_ф." if sp.get("show_dj") else "")
         elif kind in ("redraw_eta", "redraw_dj"):
             body = s.redraw(kind, n, sp); cap = f"перерисовано по рис. {sp['fig']}, стр. {sp['page']} PDF; схематично, значения кривых не воспроизведены."
+        elif kind == "redraw_axes":
+            c = s.claim(sp["claim"].replace("#", "#") if "#" in sp["claim"] else f"{n['id']}#{sp['claim']}"); g = ""; k = len(sp["panels"]); W = 360
+            for i, pn in enumerate(sp["panels"]):
+                for need in (pn["lo"], pn["hi"]):
+                    if need not in c["text"]: s.warn.append(f"{n['id']}: {need} нет в {sp['claim']}")
+                x = 40 + i * (W - 60) / k + (W - 60) / k / 2; down = pn["dir"] == "down"; ya, yb = 40, 170
+                top, bot = (pn["lo"], pn["hi"]) if down else (pn["hi"], pn["lo"])
+                ah = f'M{x} {ya} V{yb} m-5 -8 l5 8 l5 -8' if down else f'M{x} {yb} V{ya} m-5 8 l5 -8 l5 8'
+                g += (f'<path d="{ah}" class="ax" fill="none"/><text x="{x}" y="{ya-10}" text-anchor="middle" class="t">{esc(top)}</text>'
+                      f'<text x="{x}" y="{yb+22}" text-anchor="middle" class="t">{esc(bot)}</text><text x="{x}" y="{yb+40}" text-anchor="middle" class="t sm">{esc(pn["label"])}</text>'
+                      f'<text x="{x+8}" y="105" class="t sm">{"растёт вниз" if down else "растёт вверх"}</text>')
+            body = f'<svg viewBox="0 0 {W} 230" role="img" aria-label="Шкалы рисунка {esc(sp["fig"])}: {esc("; ".join(p["label"] + " от " + p["lo"] + " до " + p["hi"] + ", растёт " + ("вниз" if p["dir"] == "down" else "вверх") for p in sp["panels"]))}">{g}</svg>'
+            cap = f"перерисовано по рис. {sp['fig']}, стр. {sp['page']} PDF: только оси, диапазоны и направление шкал из текста шага; кривые не воспроизведены."
         elif kind == "numbers":
             c = s.claim(f"{n['id']}#{sp['claim']}"); bars = []
             for lab, v in sp["bars"]:
@@ -163,14 +253,14 @@ class Build:
         else:  # flow: цепочка утверждений шага
             boxes, y = [], 8
             for i, c in enumerate(n["claims"]):
-                w = " ".join(c["text"].split()[:11]) + ("…" if len(c["text"].split()) > 11 else "")
+                vt = vis(c["text"]); w = " ".join(vt.split()[:11]) + ("…" if len(vt.split()) > 11 else "")
                 ls = textwrap.wrap(w, 40); h = 14 * len(ls) + 12
                 boxes.append(f'<rect x="8" y="{y}" width="344" height="{h}" rx="6" class="box"/>' + "".join(f'<text x="16" y="{y+18+14*j}" class="t">{esc(l)}</text>' for j, l in enumerate(ls))
                              + f'<text x="346" y="{y+h-4}" text-anchor="end" class="t sm">стр. {c["page"]}</text>')
                 if i < len(n["claims"]) - 1: boxes.append(f'<path d="M180 {y+h} v10 m-4 -5 l4 5 l4 -5" class="ax" fill="none"/>')
                 y += h + 12
             body = f'<svg viewBox="0 0 360 {y}" role="img" aria-label="Цепочка утверждений шага «{esc(short)}»">{"".join(boxes)}</svg>'
-            cap = "Схема из слоя: утверждения шага по порядку (начало каждого)."
+            cap = "Схема шага: утверждения по порядку (начало каждого)."
         alt = alt or cap
         return f'<figure class="fig">{body}<figcaption>{esc(cap)}</figcaption></figure>'
 
@@ -200,8 +290,8 @@ class Build:
     # ---- таблицы, формулы
     def table_html(s, u):
         rows = [[c.strip() for c in r.strip().strip("|").split("|")] for r in u["text"].splitlines() if not re.match(r"^\|\s*-", r)]
-        h = "".join(f"<th scope='col'>{esc(c)}</th>" for c in rows[0])
-        b = "".join("<tr>" + "".join(f"<td>{esc(c)}</td>" for c in r) + "</tr>" for r in rows[1:])
+        h = "".join(f"<th scope='col'>{esc(tex_inline(c))}</th>" for c in rows[0])
+        b = "".join("<tr>" + "".join(f"<td>{esc(tex_inline(c))}</td>" for c in r) + "</tr>" for r in rows[1:])
         return f'<div class="tw" tabindex="0" role="region" aria-label="Таблица книги, прокрутка"><table><thead><tr>{h}</tr></thead><tbody>{b}</tbody></table></div>'
 
     # ---- страница шага
@@ -210,7 +300,7 @@ class Build:
         P = lambda txt: f"<p>{txt}</p>"
         blocks = []  # (id, title, html)
         cs = sorted(n["claims"], key=lambda c: c["kind"] != "вывод")[:3]
-        blocks.append(("sut", "Суть", "".join(P(s.cl(f"{n['id']}#{c['id']}", c["text"])) for c in sorted(cs, key=lambda c: c["id"]))))
+        blocks.append(("sut", "Суть", "".join(P(s.cl(f"{n['id']}#{c['id']}", c["text"]) + f" <span class='pg'>[PDF-стр. {c['page']}]</span>") for c in sorted(cs, key=lambda c: c["id"]))))
         L = n.get("layers", {})
         if L.get("mechanism"): blocks.append(("how", "Как это работает", P(s.model_sents(n, "mechanism", L["mechanism"], note="пересказ текста автора"))))
         if n.get("how_now"): blocks.append(("now", "Как делают сейчас", P(s.model_sents(n, "how_now", n["how_now"]))))
@@ -222,21 +312,26 @@ class Build:
                 if w.get("condition"): h += P("<b>Условие.</b> " + esc(w["condition"]))
                 if w.get("steps"): h += "<ol class='steps'>" + "".join(f"<li>{esc(x)}</li>" for x in w["steps"]) + "</ol>"
                 if w.get("result"): h += P("<b>Результат.</b> " + esc(w["result"]))
-            blocks.append(("ex", "Разбор примера из главы (по шагам)", h + "<p class='meta'>Шаги и результат взяты из слоя (поле worked_examples).</p>"))
+            blocks.append(("ex", "Разбор примера из главы (по шагам)", h))
         if L.get("practice"): blocks.append(("num", "Цифры и условия", P(s.model_sents(n, "practice", L["practice"], note="пересказ текста автора"))))
         if L.get("nuances"): blocks.append(("nu", "Оговорки", P(s.model_sents(n, "nuances", L["nuances"], note="пересказ текста автора"))))
         fh = ""
         for u in n["unit_ids"]:
             U = s.U[u]
-            if U["type"] == "formula": fh += f"<p class='fm'><code>{esc(tex2text(U['text']))}</code> <span class='meta'>формула книги, стр. {U['page']} PDF</span></p>"
-        if fh: blocks.append(("fm", "Формулы главы", fh + "<p class='meta'>Расшифровка символов и единиц есть в утверждениях шага (блок «Источник»); отдельного поля в слое нет.</p>"))
+            if U["type"] == "formula":
+                rd = tex2txt(U["text"]); raw = esc(U["text"].replace("$$", "").strip())
+                fh += (f"<p class='fm'><code>{esc(rd)}</code> <span class='meta'>стр. {U['page']} PDF</span></p>" + (f"<details class='meta'><summary>исходная запись формулы</summary><code>{raw}</code></details>" if rd != U["text"].replace("$$", "").strip() else "")) if rd else f"<p class='fm'><code>{raw}</code> <span class='meta'>стр. {U['page']} PDF</span></p>"
+        for c in n["claims"]:
+            if re.match(r"^(Формул[аы]|Уравнени[ея])\s*\(\d+", c["text"]):
+                fh += P(s.cl(f"{n['id']}#{c['id']}", c["text"]) + f" <span class='pg'>[PDF-стр. {c['page']}]</span>")
+        if fh: blocks.append(("fm", "Формулы главы", fh + "<p class='meta'>Расшифровка символов и единиц: в утверждениях шага (блок «Источник»).</p>"))
         th = ""
         for u in n["unit_ids"]:
             U = s.U[u]
             if U["type"] == "table":
                 th += s.table_html(U) + f"<p class='meta'>Таблица книги целиком, стр. {U['page']} PDF.</p>"
                 for c in n["claims"]:
-                    if c.get("ocr_note") and u in c["unit_ids"]: th += f"<p class='ocr'><b>Правка OCR:</b> {esc(c['ocr_note'])}</p>"
+                    if c.get("ocr_note") and u in c["unit_ids"]: th += f"<p class='ocr'><b>Правка OCR:</b> {esc(clean_note(c['ocr_note']))}</p>"
         if th: blocks.append(("tb", "Таблица книги", th))
         te = (n.get("inefficiency_lens") or {}).get("typical_errors")
         if n.get("misconception"): blocks.append(("er", "Частая ошибка", P(s.model_sents(n, "misconception", n["misconception"]))))
@@ -252,10 +347,10 @@ class Build:
         if n.get("external_prereqs"): blocks.append(("pre", "Опирается на материал вне раздела", "<ul>" + "".join(f"<li>{esc(x)}</li>" for x in n["external_prereqs"]) + "</ul>"))
         if n.get("problems"):
             blocks.append(("pb", "Задачи из книги (ключей в книге нет)", "<ol class='pl'>" + "".join(
-                f"<li value='{esc(p.get('number', ''))}'>{esc(p['statement'])} <span class='meta'>стр. {p['page']} PDF" + (f"; OCR: {esc(p['ocr_note'])}" if p.get("ocr_note") else "") + (f"; {esc(p['figure_note'])}" if p.get("figure_note") else "") + "</span></li>" for p in n["problems"]) + "</ol>"))
+                f"<li value='{esc(p.get('number', ''))}'>{esc(p['statement'])} <span class='meta'>стр. {p['page']} PDF" + (f"; OCR: {esc(clean_note(p['ocr_note']))}" if p.get("ocr_note") else "") + (f"; {esc(clean_note(p['figure_note']))}" if p.get("figure_note") else "") + "</span></li>" for p in n["problems"]) + "</ol>"))
         if not s.cfg.get("no_default_fig") or n["id"].split(".")[-1][:2] in s.cfg["illustrations"]:
             fgh = s.fig(n, short)
-            if n.get("figure_note") and not s.cfg.get("public"): fgh += f"<p class='meta'>Заметка слоя о рисунке (для проверяющего): {esc(n['figure_note'])}</p>"
+            if n.get("figure_note") and not s.cfg.get("public"): fgh += f"<details class='meta'><summary>Примечание к рисунку книги</summary>{esc(clean_note(n['figure_note']))}</details>"
             blocks.append(("fg", "Иллюстрации", fgh))
         allc = "".join(P(s.cl(f"{n['id']}#{c['id']}", c["text"]) + f" <span class='meta'>стр. {c['page']} PDF, {esc(c['author'])}</span>") for c in n["claims"])
         blocks.append(("src", "Источник: все утверждения шага", allc))
@@ -273,6 +368,8 @@ class Build:
         for n in order:
             steps.append(("node", n))
             if ds and n["id"].split(".")[-1][:2] == ds["after"]: steps.append(("data", ds))
+        STEPNUM.clear(); STEPNUM.update({n["id"]: i for i, (k, n) in enumerate(steps, 1)})
+        SHORTNUM.clear(); SHORTNUM.update({n["id"].split(".")[-1][:2]: i for i, (k, n) in enumerate(steps, 1) if k == "node"})
         part_of = {}
         for p in cfg["parts"]:
             for k in p["nodes"]: part_of[s.nid[k]] = p["title"]
@@ -295,9 +392,9 @@ class Build:
                 words = len(re.sub(r"<[^>]+>", " ", body).split())
             minutes = max(1, math.ceil(words / 140)) + ntasks.get(sid, 0)
             meta.append({"id": sid, "short": short, "part": part, "min": minutes, "num": i, "kind": kind})
-            pages += (f'<article class="view step" id="v-{esc(sid)}" data-step="{esc(sid)}" hidden><p class="crumb">{esc(part)} · шаг {i} из {len(steps)} · {esc(A)}, {esc(sec) or "§ 12"} · <code class="idc">{esc(sid)}</code></p>'
-                      f'<h2 tabindex="-1">{esc(short)}</h2><p class="meta">{esc(A)}, «{esc(T)}», 1991 · ≈{minutes} мин (оценка)</p>'
-                      f'<p class="legend" aria-label="Легенда">Нажмите на предложение, чтобы увидеть источник: <span class="lg ca">автор</span> <span class="lg cm">модель</span> <span class="lg ch">гипотеза</span> <sup class="vk">✓</sup> проверено.</p>'
+            pages += (f'<article class="view step" id="v-{esc(sid)}" data-step="{esc(sid)}" hidden><p class="crumb">{esc(part)} · шаг {i} из {len(steps)} · {esc(A)}{(", " + esc(sec or cfg["book"].get("section_label", ""))) if (sec or cfg["book"].get("section_label")) else ""} · <code class="idc">{esc(sid)}</code></p>'
+                      f'<h2 tabindex="-1">{esc(short)}</h2><p class="meta">{esc(A)}, «{esc(T)}»{(", " + esc(cfg["book"]["year"])) if cfg["book"].get("year") else ""} · ≈{minutes} мин (оценка)</p>'
+                      f'<p class="legend" aria-label="Легенда">Нажмите на предложение, чтобы увидеть источник (стр. = номер страницы PDF-скана книги; незнакомый термин: <a href="#/glossary">Словарь</a>): <span class="lg ca">автор</span> <span class="lg cm">модель</span> <span class="lg ch">гипотеза</span> <sup class="vk">✓</sup> проверено.</p>'
                       f'<nav class="toc" aria-label="Оглавление страницы"><b>На странице</b><ul>{toc}</ul></nav>{body}'
                       f'<div class="pn"><button data-prev>← Назад</button><button data-done>Отметить пройденным</button><button data-next>Дальше →</button></div></article>')
         # карта связей
@@ -310,34 +407,43 @@ class Build:
         for n in s.nodes: dp(n["id"])
         cols = {}
         for n in order: cols.setdefault(depth[n["id"]], []).append(n["id"])
-        pos = {i: (20 + d * 170, 20 + r * 52) for d, ids in cols.items() for r, i in enumerate(ids)}
+        pos = {i: (20 + d * 230, 20 + r * 52) for d, ids in cols.items() for r, i in enumerate(ids)}
         sh = {m["id"]: m for m in meta}
         edges, items = "", ""
         for n in order:
             for l in n["links"]:
                 (x1, y1), (x2, y2) = pos[l["to"]], pos[n["id"]]
-                edges += f'<path d="M{x1+150} {y1+18} C{x1+165} {y1+18} {x2-15} {y2+18} {x2} {y2+18}" class="edge {"ex" if l["type"]!="предпосылка" else ""}"/>'
+                edges += f'<path d="M{x1+200} {y1+18} C{x1+215} {y1+18} {x2-15} {y2+18} {x2} {y2+18}" class="edge {"ex" if l["type"]!="предпосылка" else ""}"/>'
             x, y = pos[n["id"]]
-            items += f'<a href="#/step/{esc(n["id"])}"><rect x="{x}" y="{y}" width="150" height="36" rx="6" class="box"/><text x="{x+8}" y="{y+22}" class="t">{sh[n["id"]]["num"]}. {esc(textwrap.shorten(sh[n["id"]]["short"], 20, placeholder="…"))}</text></a>'
-        W = 20 + (max(cols) + 1) * 170; H = 40 + max(len(v) for v in cols.values()) * 52
+            items += f'<a href="#/step/{esc(n["id"])}"><rect x="{x}" y="{y}" width="200" height="36" rx="6" class="box"/><text x="{x+8}" y="{y+22}" class="t">{sh[n["id"]]["num"]}. {esc(textwrap.shorten(sh[n["id"]]["short"], 28, placeholder="…"))}</text></a>'
+        W = 20 + (max(cols) + 1) * 230; H = 40 + max(len(v) for v in cols.values()) * 52
         mapsvg = f'<div class="tw" tabindex="0" role="region" aria-label="Карта связей, прокрутка"><svg viewBox="0 0 {W} {H}" width="{W}" height="{H}" role="img" aria-label="Карта связей: стрелка идёт от шага-предпосылки к шагу, который на него опирается">{edges}{items}</svg></div>'
         maplist = "<ul class='maplist'>" + "".join(
             f'<li><a href="#/step/{esc(n["id"])}">{sh[n["id"]]["num"]}. {esc(sh[n["id"]]["short"])}</a> опирается на: ' +
             (", ".join(f'<a href="#/step/{esc(l["to"])}">{sh[l["to"]]["num"]}</a>' for l in n["links"] if l["type"] == "предпосылка") or "ничего в разделе") +
             (" · примеры: " + ", ".join(f'<a href="#/step/{esc(l["to"])}">{sh[l["to"]]["num"]}</a>' for l in n["links"] if l["type"] == "пример") if any(l["type"] == "пример" for l in n["links"]) else "") + "</li>" for n in order) + "</ul>"
+        maxp = max(c["page"] for n in s.nodes for c in n["claims"])
+        gl = glossary_rows(ROOT / cfg["book"].get("glossary", "domain-pack/geology/glossary.md"), maxp)
+        if gl:
+            glh = ("<p class='meta'>Термины и обозначения книги, определённые до конца этого раздела (по глоссарию доменного пакета; определения по книге, стр. = PDF-страница). "
+                   f"Терминов: {len(gl)}.</p><p><label>Поиск: <input id='gsearch' type='search' autocomplete='off' aria-label='Поиск по словарю'></label></p>"
+                   "<div class='tw' tabindex='0' role='region' aria-label='Словарь, прокрутка'><table><thead><tr><th scope='col'>Термин</th><th scope='col'>Определение по книге</th><th scope='col'>Стр.</th></tr></thead><tbody>"
+                   + "".join(f"<tr><td>{esc(tex_inline(a))}</td><td>{esc(tex_inline(b))}</td><td>{esc(c)}</td></tr>" for a, b, c, _ in gl) + "</tbody></table></div>")
+        else:
+            glh = "<p class='meta'>Словарь для этого раздела не собран.</p>"
         data = {"id": s.chapter, "steps": meta, "parts": [p["title"] for p in cfg["parts"]], "ev": s.EV, "tasks": tasks, "dstep": s.dcalc}
         dj = json.dumps(data, ensure_ascii=False).replace("</", "<\\/")
         tpl = (TPL / "template.html").read_text()
         out = (tpl.replace("/*STYLE*/", (TPL / "style.css").read_text()).replace("/*APP*/", (TPL / "app.js").read_text())
                .replace("<!--DATA-->", dj).replace("<!--PAGES-->", pages).replace("<!--CARDS-->", cards).replace("<!--SUMMARY-->", summary)
-               .replace("<!--MAP-->", mapsvg + maplist).replace("<!--HOME-->", cfg.get("home", "")).replace("<!--BOOK-->", esc(A))
-               .replace("<!--TITLE-->", esc(cfg.get("title") or f"Курс: {A}, §12 (пилот)")))
+               .replace("<!--MAP-->", mapsvg + maplist).replace("<!--GLOSSARY-->", glh).replace("<!--HOME-->", cfg.get("home", "")).replace("<!--BOOK-->", esc(A))
+               .replace("<!--TITLE-->", esc(cfg.get("title") or f"Курс: {A}" + (f", {cfg['book']['title_suffix']}" if cfg["book"].get("title_suffix") else ""))))
         return out
 
     # ---- шаг «решение на данных»
     def data_step(s, d):
         s.dcalc = None; blocks = []; toc = ""
-        intro = "<p>Задача: из диаграммы ГМ получить глинистость пласта. Три действия: признаки, правило, вывод. Все предложения взяты из утверждений слоя (пример 39).</p>"
+        intro = "<p>" + esc(d.get("intro") or "Три действия: признаки, правило, вывод. Все предложения шага взяты из утверждений слоя; нажмите на предложение, чтобы увидеть источник.") + "</p>"
         blocks.append(("in", "Задача", intro))
         for i, sec in enumerate(d["sections"]):
             h = ""
@@ -395,10 +501,11 @@ class Build:
 
 def main():
     ap = argparse.ArgumentParser(); ap.add_argument("chapter"); ap.add_argument("--prefix", required=True); ap.add_argument("--out", required=True)
+    ap.add_argument("--config", help="путь к обвязке раздела (по умолчанию tools/course_config/<chapter>.json)")
     a = ap.parse_args()
     B = ROOT / "build" / a.chapter
     nodes = [n for n in json.load(open(B / "nodes.json")) if n["id"].startswith(a.prefix)]
-    units = json.load(open(B / "units.json")); cfg = json.load(open(ROOT / "tools/course_config" / f"{a.chapter}.json"))
+    units = json.load(open(B / "units.json")); cfg = json.load(open(Path(a.config) if a.config else ROOT / "tools/course_config" / f"{a.chapter}.json"))
     if not nodes: sys.exit("нет узлов с префиксом " + a.prefix)
     b = Build(nodes, units, cfg, a.chapter); html_ = b.render()
     out = Path(a.out); out.mkdir(parents=True, exist_ok=True); (out / "index.html").write_text(html_, encoding="utf-8")

@@ -1,3 +1,4 @@
 # chapters/ в git: репозиторий приватный (проверено), главы допускаются; сканы/PDF не коммитим без решения
 .edit-log.state
 __pycache__/
+out/latyshova/

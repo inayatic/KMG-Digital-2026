@@ -114,12 +114,7 @@
    "time": "не описано",
    "typical_errors": "не описано"
   },
-  "links": [
-   {
-    "to": "lat.s15.02-three-element-probe-waveform",
-    "type": "предпосылка"
-   }
-  ],
+  "links": [],
   "external_prereqs": [],
   "route": {
    "format": "карточки",
@@ -263,10 +258,6 @@
   "links": [
    {
     "to": "lat.s15.01-scope-and-wave-types",
-    "type": "предпосылка"
-   },
-   {
-    "to": "lat.s15.03-spak-parameters",
     "type": "предпосылка"
    }
   ],
@@ -550,10 +541,6 @@
   "links": [
    {
     "to": "lat.s15.03-spak-parameters",
-    "type": "предпосылка"
-   },
-   {
-    "to": "lat.s15.05-average-time-equation",
     "type": "предпосылка"
    }
   ],
