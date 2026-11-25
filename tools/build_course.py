@@ -73,6 +73,7 @@ def tex2txt(t):
         t = re.sub(r"\\frac\{([^{}]*)\}\{([^{}]*)\}", r"(\1)/(\2)", t)
     t = re.sub(r"\\([A-Za-z]+)", lambda m: GREEK.get(m.group(1), m.group(0)), t)
     t = re.sub(r"\\[,;:!]", " ", t)
+    t = t.replace("\\%", "%").replace("\\_", "_")
     t = re.sub(r"\^\{([0-9+\-]+)\}", lambda m: "".join(SUP[c] for c in m.group(1)), t)
     t = re.sub(r"\^([0-9])", lambda m: SUP[m.group(1)], t)
     t = re.sub(r"\^\{([^{}]*)\}", r"^(\1)", t)
@@ -84,9 +85,16 @@ def tex2txt(t):
     return None if re.search(r"\\[A-Za-z]|[{}]", t) else t
 
 
+def tex_loose(t):
+    """Одиночные индексы и степени TeX вне формул: 10^{3} -> 10³, k_{п} -> k_п, \\% -> %."""
+    t = t.replace("\\%", "%")
+    t = re.sub(r"\^\{([0-9+\-]+)\}", lambda m: "".join(SUP[c] for c in m.group(1)), t)
+    return re.sub(r"_\{([^{}]*)\}", r"_\1", t)
+
+
 def tex_inline(t):
     r"""Формулы внутри текста/ячеек: \( ... \) и $...$ -> читаемая запись; если не получилось, оставляет как есть."""
-    return re.sub(r"\\\((.+?)\\\)|\$(.+?)\$", lambda m: tex2txt(m.group(1) or m.group(2)) or m.group(0), t)
+    return tex_loose(re.sub(r"\\\((.+?)\\\)|\$(.+?)\$", lambda m: tex2txt(m.group(1) or m.group(2)) or m.group(0), t))
 
 
 SERVICE_SENT = re.compile(r"FORMAT|figure_desc|ocr_note|\bв ролик|\bв ключе|не использовать в (?:роликах|заданиях)|ответы не придум|для ментора|вопрос ментору|узел lat\.", re.I)
@@ -99,6 +107,7 @@ SHORTNUM = {}  # две цифры номера узла -> номер шага
 def vis(text):
     """Текст для читателя: без предложений-служебных пометок слоя (в панели источника остаётся оригинал); ссылки «узел lat.…» -> «шаг N»."""
     text = re.sub(r"\s*\((?:figure_desc|FORMAT[^)]*)\)", "", text)
+    text = re.sub(r"\s*\((?:утверждени[еяй]\s*)?c\d+(?:\s*[,и]\s*c\d+)*\)", "", text)
     text = re.sub(r"\bузл(?:ы|а|ов|е|у)?\s+(\d{2}(?:(?:,\s*|\s+и\s+)\d{2})*)", lambda m: ("шаги " if len(re.findall(r"\d{2}", m.group(1))) > 1 else "шаг ") + ", ".join(str(SHORTNUM.get(k, "?")) for k in re.findall(r"\d{2}", m.group(1))), text)
     text = re.sub(r"узел (lat\.[\w.\-]+)", lambda m: f"шаг {STEPNUM[m.group(1)]}" if m.group(1) in STEPNUM else "соответствующий шаг", text)
     parts = re.split(r"(?<=[.!?])\s+", text.strip())
@@ -115,7 +124,7 @@ def clean_note(t):
     return vis(t)
 
 
-GLOSS_NOISE = re.compile(r"clean\.md|draft|куратор|\bOCR\b|\bocr|вопрос ментору|ментор|черновик", re.I)
+GLOSS_NOISE = re.compile(r"clean\.md|draft|куратор|\bOCR\b|\bocr|вопрос ментору|ментор|черновик|\b(?:Куз|Бас|Бар|Вен)\s*\d", re.I)
 
 
 def gloss_clean(t):
@@ -223,7 +232,7 @@ class Build:
                       f'<text x="{x}" y="{yb+22}" text-anchor="middle" class="t">{esc(bot)}</text><text x="{x}" y="{yb+40}" text-anchor="middle" class="t sm">{esc(pn["label"])}</text>'
                       f'<text x="{x+8}" y="105" class="t sm">{"растёт вниз" if down else "растёт вверх"}</text>')
             body = f'<svg viewBox="0 0 {W} 230" role="img" aria-label="Шкалы рисунка {esc(sp["fig"])}: {esc("; ".join(p["label"] + " от " + p["lo"] + " до " + p["hi"] + ", растёт " + ("вниз" if p["dir"] == "down" else "вверх") for p in sp["panels"]))}">{g}</svg>'
-            cap = f"перерисовано по рис. {sp['fig']}, стр. {sp['page']} PDF: только оси, диапазоны и направление шкал из утверждения {sp['claim'].split('.')[-1]}; кривые не воспроизведены."
+            cap = f"перерисовано по рис. {sp['fig']}, стр. {sp['page']} PDF: только оси, диапазоны и направление шкал из текста шага; кривые не воспроизведены."
         elif kind == "numbers":
             c = s.claim(f"{n['id']}#{sp['claim']}"); bars = []
             for lab, v in sp["bars"]:
@@ -251,7 +260,7 @@ class Build:
                 if i < len(n["claims"]) - 1: boxes.append(f'<path d="M180 {y+h} v10 m-4 -5 l4 5 l4 -5" class="ax" fill="none"/>')
                 y += h + 12
             body = f'<svg viewBox="0 0 360 {y}" role="img" aria-label="Цепочка утверждений шага «{esc(short)}»">{"".join(boxes)}</svg>'
-            cap = "Схема из слоя: утверждения шага по порядку (начало каждого)."
+            cap = "Схема шага: утверждения по порядку (начало каждого)."
         alt = alt or cap
         return f'<figure class="fig">{body}<figcaption>{esc(cap)}</figcaption></figure>'
 
@@ -311,7 +320,7 @@ class Build:
             U = s.U[u]
             if U["type"] == "formula":
                 rd = tex2txt(U["text"]); raw = esc(U["text"].replace("$$", "").strip())
-                fh += (f"<p class='fm'><code>{esc(rd)}</code> <span class='meta'>стр. {U['page']} PDF</span></p>" + (f"<details class='meta'><summary>запись TeX</summary><code>{raw}</code></details>" if rd != U["text"].replace("$$", "").strip() else "")) if rd else f"<p class='fm'><code>{raw}</code> <span class='meta'>стр. {U['page']} PDF; запись TeX</span></p>"
+                fh += (f"<p class='fm'><code>{esc(rd)}</code> <span class='meta'>стр. {U['page']} PDF</span></p>" + (f"<details class='meta'><summary>исходная запись формулы</summary><code>{raw}</code></details>" if rd != U["text"].replace("$$", "").strip() else "")) if rd else f"<p class='fm'><code>{raw}</code> <span class='meta'>стр. {U['page']} PDF</span></p>"
         for c in n["claims"]:
             if re.match(r"^(Формул[аы]|Уравнени[ея])\s*\(\d+", c["text"]):
                 fh += P(s.cl(f"{n['id']}#{c['id']}", c["text"]) + f" <span class='pg'>[PDF-стр. {c['page']}]</span>")

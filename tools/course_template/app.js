@@ -97,7 +97,7 @@ function taskEl(t){
   d._ev=function(){var v=getv();return{ok:ok(v),right:ans.join("; ")}};
  }else if(t.type==="blank"){
   var parts=t.text.split(/\[\[.+?\]\]/);inn.innerHTML='<p>'+esc(parts[0])+'<input type="text" aria-label="пропуск" autocomplete="off" size="8">'+esc(parts[1]||"")+'</p>';
-  d._ev=function(){var raw=$("input",inn).value,v=nz(raw),vs=[v];if(raw.indexOf("=")>=0)vs.push(nz(raw.split("=").pop()));var num=function(x){var f=parseFloat(String(x).replace(",","."));return /^-?[\d.,\s]+$/.test(String(x).trim())&&isFinite(f)?f:null};return{ok:[t.answer].concat(t.alt||[]).some(function(a){var na=num(a);return vs.some(function(u){return nz(a)===u||(na!==null&&num(u)===na)})}),right:t.answer}};
+  d._ev=function(){var raw=$("input",inn).value,v=nz(raw),vs=[v];if(raw.indexOf("=")>=0)vs.push(nz(raw.split("=").pop()));var num=function(x){var m=String(x).trim().match(/^(-?\d[\d\s]*(?:[.,]\d+)?)\s*(?:%|‰|[A-Za-zА-Яа-яЁё\/²³·\.\s]*)$/);if(!m)return null;var f=parseFloat(m[1].replace(/\s+/g,"").replace(",","."));return isFinite(f)?f:null};return{ok:[t.answer].concat(t.alt||[]).some(function(a){var na=num(a);return vs.some(function(u){return nz(a)===u||(na!==null&&num(u)===na)})}),right:t.answer}};
  }else if(t.type==="calc"){
   inn.innerHTML='<input type="text" inputmode="decimal" aria-label="ответ" autocomplete="off">';
   d._ev=function(){var v=parseFloat($("input",inn).value.replace(",","."));return{ok:isFinite(v)&&Math.abs(v-t.answer)<=t.tol,right:String(t.answer).replace(".",",")}};
