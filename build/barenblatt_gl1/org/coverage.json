@@ -1,0 +1,1577 @@
+{
+ "chapter": "barenblatt_gl1_full",
+ "rows": [
+  {
+   "unit_id": "p005.01",
+   "kind": "paragraph",
+   "page_pdf": 5,
+   "excerpt": "ГЛАВА",
+   "node_ids": [],
+   "reason": "нет узла: титул главы, слово «ГЛАВА», содержания нет"
+  },
+  {
+   "unit_id": "p005.02",
+   "kind": "paragraph",
+   "page_pdf": 5,
+   "excerpt": "1",
+   "node_ids": [],
+   "reason": "нет узла: титул главы, номер главы «1»"
+  },
+  {
+   "unit_id": "p005.03",
+   "kind": "paragraph",
+   "page_pdf": 5,
+   "excerpt": "ОСНОВНЫЕ ПОНЯТИЯ^{}[] ПОДЗЕМНОЙ^{}[] ^{}[] ГИДРОГАЗОДИНАМИКИ",
+   "node_ids": [],
+   "reason": "нет узла: титул главы, название «Основные понятия подземной гидрогазодинамики». Это заголовок, а не утверждение автора; темы раскрываются в сегментах s01–s04. OCR-артефакты `^{}[]` в тексте единицы оставлены без исправления"
+  },
+  {
+   "unit_id": "p005.04",
+   "kind": "heading",
+   "page_pdf": 5,
+   "excerpt": "§ 1. Особенности теории движения жидкости и газа в природных пластах",
+   "node_ids": [],
+   "reason": "вне узлов: заголовок раздела (структура, не содержание; название § 1 записано в поле section каждого узла)"
+  },
+  {
+   "unit_id": "p005.05",
+   "kind": "paragraph",
+   "page_pdf": 5,
+   "excerpt": "Месторождения нефти и природного газа чаще всего приурочены к поднятиям или складкам пластов терригенных и",
+   "node_ids": [
+    "bar.s01.01-reservoir-rocks-pores"
+   ],
+   "reason": null
+  },
+  {
+   "unit_id": "p005.06",
+   "kind": "paragraph",
+   "page_pdf": 5,
+   "excerpt": "Поровое пространство терригенных пород — сложная нерегулярная система сообщающихся (иногда — изолированных) межзеренных пустот с",
+   "node_ids": [
+    "bar.s01.01-reservoir-rocks-pores"
+   ],
+   "reason": null
+  },
+  {
+   "unit_id": "p005.07",
+   "kind": "paragraph",
+   "page_pdf": 5,
+   "excerpt": "В карбонатных породах (известняках, доломитах) система пор более неоднородна, кроме того, гораздо более развита система",
+   "node_ids": [
+    "bar.s01.02-carbonate-secondary-voids"
+   ],
+   "reason": null
+  },
+  {
+   "unit_id": "p005.08",
+   "kind": "paragraph",
+   "page_pdf": 5,
+   "excerpt": "Жидкие или газообразные углеводороды, плотность которых меньше плотности воды, скапливаются в поднятиях («ловушках») пород, вытесняя",
+   "node_ids": [
+    "bar.s01.03-traps-and-seals"
+   ],
+   "reason": null
+  },
+  {
+   "unit_id": "p005.09",
+   "kind": "paragraph",
+   "page_pdf": 5,
+   "excerpt": "Строение нефтяных и газовых залежей осложняется значительной неоднородностью и прежде всего многослойностью слагающих их пород.",
+   "node_ids": [
+    "bar.s01.04-heterogeneity-wells"
+   ],
+   "reason": null
+  },
+  {
+   "unit_id": "p005.10",
+   "kind": "paragraph",
+   "page_pdf": 5,
+   "excerpt": "Мы напомнили эти общеизвестные факты, чтобы подчеркнуть вытекающие из них особенности теории фильтрации нефти и",
+   "node_ids": [
+    "bar.s01.05-scale-span"
+   ],
+   "reason": null
+  },
+  {
+   "unit_id": "p005.11",
+   "kind": "paragraph",
+   "page_pdf": 5,
+   "excerpt": "5",
+   "node_ids": [],
+   "reason": "вне узлов: колонтитул — печатный номер страницы «5»"
+  },
+  {
+   "unit_id": "p006.01",
+   "kind": "paragraph",
+   "page_pdf": 6,
+   "excerpt": "одновременно рассматривать процессы в областях, характерные размеры которых различаются на порядки: размер пор (единицы и",
+   "node_ids": [
+    "bar.s01.05-scale-span"
+   ],
+   "reason": null
+  },
+  {
+   "unit_id": "p006.02",
+   "kind": "paragraph",
+   "page_pdf": 6,
+   "excerpt": "Сведения о пласте при всем их разнообразии всегда ограничены. Они складываются из геологической и геофизической",
+   "node_ids": [
+    "bar.s01.06-limited-information"
+   ],
+   "reason": null
+  },
+  {
+   "unit_id": "p006.03",
+   "kind": "figure",
+   "page_pdf": 6,
+   "excerpt": "РИС. 1. Шлиф нефтяного песчаника",
+   "node_ids": [
+    "bar.s01.01-reservoir-rocks-pores"
+   ],
+   "reason": null
+  },
+  {
+   "unit_id": "p006.04",
+   "kind": "figure",
+   "page_pdf": 6,
+   "excerpt": "━━━ FORMAT 15: PHOTOGRAPH / ФОТОГРАФИЯ ━━━ Субъект: штриховой рисунок, изображающий структуру породы в виде",
+   "node_ids": [
+    "bar.s01.01-reservoir-rocks-pores"
+   ],
+   "reason": null
+  },
+  {
+   "unit_id": "p006.05",
+   "kind": "paragraph",
+   "page_pdf": 6,
+   "excerpt": "коррективы и уточнить принятую модель.",
+   "node_ids": [
+    "bar.s01.06-limited-information"
+   ],
+   "reason": null
+  },
+  {
+   "unit_id": "p006.06",
+   "kind": "paragraph",
+   "page_pdf": 6,
+   "excerpt": "Все это сближает подземную гидродинамику с теоретической физикой. Решающую роль играет постановка задачи и такой",
+   "node_ids": [
+    "bar.s01.07-qualitative-analysis-computers"
+   ],
+   "reason": null
+  },
+  {
+   "unit_id": "p006.07",
+   "kind": "paragraph",
+   "page_pdf": 6,
+   "excerpt": "Такое положение дел существовало всегда, и появление и широкое распространение вычислительных",
+   "node_ids": [
+    "bar.s01.07-qualitative-analysis-computers"
+   ],
+   "reason": null
+  },
+  {
+   "unit_id": "p006.08",
+   "kind": "paragraph",
+   "page_pdf": 6,
+   "excerpt": "6",
+   "node_ids": [],
+   "reason": "вне узлов: колонтитул — печатный номер страницы «6»"
+  },
+  {
+   "unit_id": "p007.01",
+   "kind": "paragraph",
+   "page_pdf": 7,
+   "excerpt": "**РИС. 2.** Схема залежи нефти и газа: 1 — глины; 2 — глинистые песчаники; 3",
+   "node_ids": [
+    "bar.s01.03-traps-and-seals"
+   ],
+   "reason": null
+  },
+  {
+   "unit_id": "p007.02",
+   "kind": "figure",
+   "page_pdf": 7,
+   "excerpt": "━━━ FORMAT 4: CROSS-SECTION / РАЗРЕЗ ━━━ Геологический разрез антиклинальной структуры (свод) по линии скважин,",
+   "node_ids": [
+    "bar.s01.03-traps-and-seals"
+   ],
+   "reason": null
+  },
+  {
+   "unit_id": "p007.03",
+   "kind": "paragraph",
+   "page_pdf": 7,
+   "excerpt": "машин лишь усугубило его. С помощью машинной математики многие технические трудности были преодолены, в результате",
+   "node_ids": [
+    "bar.s01.07-qualitative-analysis-computers"
+   ],
+   "reason": null
+  },
+  {
+   "unit_id": "p007.04",
+   "kind": "heading",
+   "page_pdf": 7,
+   "excerpt": "§ 2. Пористые среды",
+   "node_ids": [],
+   "reason": "нет узла: заголовок раздела «§ 2. Пористые среды», отражён в поле section узлов"
+  },
+  {
+   "unit_id": "p007.05",
+   "kind": "paragraph",
+   "page_pdf": 7,
+   "excerpt": "Движение жидкостей, газов и их смесей в пористых средах составляет предмет изучения особого раздела гидродинамики",
+   "node_ids": [
+    "bar.s02.01-why-continuum"
+   ],
+   "reason": null
+  },
+  {
+   "unit_id": "p007.06",
+   "kind": "paragraph",
+   "page_pdf": 7,
+   "excerpt": "Сложный и нерегулярный характер структуры порового пространства не позволяет изучать движение жидкости и газов в",
+   "node_ids": [
+    "bar.s02.01-why-continuum"
+   ],
+   "reason": null
+  },
+  {
+   "unit_id": "p007.07",
+   "kind": "paragraph",
+   "page_pdf": 7,
+   "excerpt": "7",
+   "node_ids": [],
+   "reason": "нет узла: колонтитул, печатный номер страницы «7»"
+  },
+  {
+   "unit_id": "p008.01",
+   "kind": "paragraph",
+   "page_pdf": 8,
+   "excerpt": "собой. Такие системы могут быть описаны как некоторые сплошные среды, свойства которых не выражаются непосредственно",
+   "node_ids": [
+    "bar.s02.01-why-continuum"
+   ],
+   "reason": null
+  },
+  {
+   "unit_id": "p008.02",
+   "kind": "paragraph",
+   "page_pdf": 8,
+   "excerpt": "Так, в гидродинамике не изучается движение отдельных молекул, а вводятся некоторые осредненные динамические характеристики жидкости",
+   "node_ids": [
+    "bar.s02.01-why-continuum"
+   ],
+   "reason": null
+  },
+  {
+   "unit_id": "p008.03",
+   "kind": "paragraph",
+   "page_pdf": 8,
+   "excerpt": "Аналогично этому теория фильтрации строится на представлении о том, что пористая среда и заполняющая ее",
+   "node_ids": [
+    "bar.s02.02-continuum-element"
+   ],
+   "reason": null
+  },
+  {
+   "unit_id": "p008.04",
+   "kind": "paragraph",
+   "page_pdf": 8,
+   "excerpt": "С точки зрения теории фильтрации значение твердого скелета пористой среды прежде всего геометрическое, он ограничивает",
+   "node_ids": [
+    "bar.s02.03-porosity"
+   ],
+   "reason": null
+  },
+  {
+   "unit_id": "p008.05",
+   "kind": "paragraph",
+   "page_pdf": 8,
+   "excerpt": "Важнейшая характеристика элемента пористой среды — ее пористость $m$, равная отношению объема $V_п$, занятого в",
+   "node_ids": [
+    "bar.s02.03-porosity"
+   ],
+   "reason": null
+  },
+  {
+   "unit_id": "p008.06",
+   "kind": "formula",
+   "page_pdf": 8,
+   "excerpt": "$$m = V_п/V. \\quad (1.1)$$",
+   "node_ids": [
+    "bar.s02.03-porosity"
+   ],
+   "reason": null
+  },
+  {
+   "unit_id": "p008.07",
+   "kind": "paragraph",
+   "page_pdf": 8,
+   "excerpt": "Соотношением (1.1) определяется средняя пористость данного элемента. Выбрав некоторую точку пористой среды, окружая ее элементами",
+   "node_ids": [
+    "bar.s02.03-porosity"
+   ],
+   "reason": null
+  },
+  {
+   "unit_id": "p008.08",
+   "kind": "paragraph",
+   "page_pdf": 8,
+   "excerpt": "$^{1}$ Как известно из теории вероятностей, чем больше число одинаково распределенных случайных величин, образующих некоторую",
+   "node_ids": [
+    "bar.s02.01-why-continuum"
+   ],
+   "reason": null
+  },
+  {
+   "unit_id": "p008.09",
+   "kind": "paragraph",
+   "page_pdf": 8,
+   "excerpt": "8",
+   "node_ids": [],
+   "reason": "нет узла: колонтитул, печатный номер страницы «8»"
+  },
+  {
+   "unit_id": "p009.01",
+   "kind": "paragraph",
+   "page_pdf": 9,
+   "excerpt": "Обычно различают полную пористость, когда учитываются все поры, и активную, когда учитываются лишь те, которые",
+   "node_ids": [
+    "bar.s02.04-active-porosity"
+   ],
+   "reason": null
+  },
+  {
+   "unit_id": "p009.02",
+   "kind": "paragraph",
+   "page_pdf": 9,
+   "excerpt": "Пористость одинакова для геометрически подобных сред и не характеризует размеров пор. Поэтому для описания пористой",
+   "node_ids": [
+    "bar.s02.05-pore-size-distribution"
+   ],
+   "reason": null
+  },
+  {
+   "unit_id": "p009.03",
+   "kind": "paragraph",
+   "page_pdf": 9,
+   "excerpt": "Кривые распределения размеров пор или зерен содержат значительно больше информации о микроструктуре пористой среды, чем",
+   "node_ids": [
+    "bar.s02.05-pore-size-distribution"
+   ],
+   "reason": null
+  },
+  {
+   "unit_id": "p009.04",
+   "kind": "heading",
+   "page_pdf": 9,
+   "excerpt": "§ 3. Закон Дарси, пределы его применимости и уточнения",
+   "node_ids": [
+    "bar.s03.01-filtration-velocity"
+   ],
+   "reason": null
+  },
+  {
+   "unit_id": "p009.05",
+   "kind": "paragraph",
+   "page_pdf": 9,
+   "excerpt": "Основная характеристика фильтрационного движения — вектор скорости фильтрации $u$ — определяется следующим образом. Выберем точку",
+   "node_ids": [
+    "bar.s03.01-filtration-velocity"
+   ],
+   "reason": null
+  },
+  {
+   "unit_id": "p009.06",
+   "kind": "paragraph",
+   "page_pdf": 9,
+   "excerpt": "9",
+   "node_ids": [],
+   "reason": "не покрыто: колонтитул — печатный номер страницы «9»"
+  },
+  {
+   "unit_id": "p010.01",
+   "kind": "paragraph",
+   "page_pdf": 10,
+   "excerpt": "Подчеркнем, что предел понимается в указанном выше «промежуточном» смысле и что масса жидкости делится на",
+   "node_ids": [
+    "bar.s03.01-filtration-velocity"
+   ],
+   "reason": null
+  },
+  {
+   "unit_id": "p010.02",
+   "kind": "paragraph",
+   "page_pdf": 10,
+   "excerpt": "Основное соотношение теории фильтрации — закон фильтрации — устанавливает связь между вектором скорости фильтрации и",
+   "node_ids": [
+    "bar.s03.02-local-law"
+   ],
+   "reason": null
+  },
+  {
+   "unit_id": "p010.03",
+   "kind": "paragraph",
+   "page_pdf": 10,
+   "excerpt": "Именно поэтому, в отличие от уравнений обычной гидродинамики, в теории фильтрации существует локальная зависимость между",
+   "node_ids": [
+    "bar.s03.02-local-law"
+   ],
+   "reason": null
+  },
+  {
+   "unit_id": "p010.04",
+   "kind": "paragraph",
+   "page_pdf": 10,
+   "excerpt": "Некоторые сведения о форме закона фильтрации, связывающего скорость фильтрации и градиент давления, можно получить, исходя",
+   "node_ids": [
+    "bar.s03.03-isotropy-collinearity"
+   ],
+   "reason": null
+  },
+  {
+   "unit_id": "p010.05",
+   "kind": "paragraph",
+   "page_pdf": 10,
+   "excerpt": "10",
+   "node_ids": [],
+   "reason": "не покрыто: колонтитул — печатный номер страницы «10»"
+  },
+  {
+   "unit_id": "p011.01",
+   "kind": "paragraph",
+   "page_pdf": 11,
+   "excerpt": "относительно координатных осей обязательно должно измениться. Отсюда вытекает, что направления векторов $u$ и grad $p$",
+   "node_ids": [
+    "bar.s03.03-isotropy-collinearity"
+   ],
+   "reason": null
+  },
+  {
+   "unit_id": "p011.02",
+   "kind": "formula",
+   "page_pdf": 11,
+   "excerpt": "$$\\operatorname {grad} p = - c u, \\tag {I.2}$$",
+   "node_ids": [
+    "bar.s03.03-isotropy-collinearity"
+   ],
+   "reason": null
+  },
+  {
+   "unit_id": "p011.03",
+   "kind": "paragraph",
+   "page_pdf": 11,
+   "excerpt": "где $c$ — некоторая скалярная величина, зависящая от модуля вектора скорости $u$, а также величин",
+   "node_ids": [
+    "bar.s03.03-isotropy-collinearity"
+   ],
+   "reason": null
+  },
+  {
+   "unit_id": "p011.04",
+   "kind": "paragraph",
+   "page_pdf": 11,
+   "excerpt": "Рассмотрим фильтрационные движения, когда несущественны силы инерции. К числу подобных безынерционных движений принадлежит большинство фильтрационных",
+   "node_ids": [
+    "bar.s03.04-darcy-dimensional"
+   ],
+   "reason": null
+  },
+  {
+   "unit_id": "p011.05",
+   "kind": "formula",
+   "page_pdf": 11,
+   "excerpt": "$$[ m ] = 1; [ c ] = M L ^ { - 3",
+   "node_ids": [
+    "bar.s03.04-darcy-dimensional"
+   ],
+   "reason": null
+  },
+  {
+   "unit_id": "p011.06",
+   "kind": "paragraph",
+   "page_pdf": 11,
+   "excerpt": "Из четырех определяющих параметров три ($u$, $d$ и $\\mu$) имеют независимые размерности. Тогда, согласно анализу",
+   "node_ids": [
+    "bar.s03.04-darcy-dimensional"
+   ],
+   "reason": null
+  },
+  {
+   "unit_id": "p011.07",
+   "kind": "formula",
+   "page_pdf": 11,
+   "excerpt": "$$c d ^ { 2 } / \\mu = f ( m ) ; \\quad",
+   "node_ids": [
+    "bar.s03.04-darcy-dimensional"
+   ],
+   "reason": null
+  },
+  {
+   "unit_id": "p011.08",
+   "kind": "paragraph",
+   "page_pdf": 11,
+   "excerpt": "После этого уравнение (I.2) можно представить в виде",
+   "node_ids": [
+    "bar.s03.04-darcy-dimensional"
+   ],
+   "reason": null
+  },
+  {
+   "unit_id": "p011.09",
+   "kind": "formula",
+   "page_pdf": 11,
+   "excerpt": "$$\\operatorname {grad} p = - \\mu d ^ { - 2 } f ( m",
+   "node_ids": [
+    "bar.s03.04-darcy-dimensional"
+   ],
+   "reason": null
+  },
+  {
+   "unit_id": "p011.10",
+   "kind": "paragraph",
+   "page_pdf": 11,
+   "excerpt": "Соотношение (I.5) описывает закон фильтрации Дарси (по имени французского инженера А. Дарси, установившего его экспериментально",
+   "node_ids": [
+    "bar.s03.04-darcy-dimensional"
+   ],
+   "reason": null
+  },
+  {
+   "unit_id": "p011.11",
+   "kind": "paragraph",
+   "page_pdf": 11,
+   "excerpt": "Если вместо $p$ рассматривать истинное давление в жидкости $P = p - \\rho gz$, где",
+   "node_ids": [
+    "bar.s03.05-darcy-head-forms"
+   ],
+   "reason": null
+  },
+  {
+   "unit_id": "p011.12",
+   "kind": "formula",
+   "page_pdf": 11,
+   "excerpt": "$$u = - ( k / \\mu ) \\operatorname {grad} ( P + \\rho g",
+   "node_ids": [
+    "bar.s03.05-darcy-head-forms"
+   ],
+   "reason": null
+  },
+  {
+   "unit_id": "p011.13",
+   "kind": "paragraph",
+   "page_pdf": 11,
+   "excerpt": "В гидротехнических расчетах обычно используется напор $H = p / \\rho g$, тогда имеем",
+   "node_ids": [
+    "bar.s03.05-darcy-head-forms"
+   ],
+   "reason": null
+  },
+  {
+   "unit_id": "p011.14",
+   "kind": "formula",
+   "page_pdf": 11,
+   "excerpt": "$$u = - C \\operatorname {grad} H , C = k \\rho g / \\mu",
+   "node_ids": [
+    "bar.s03.05-darcy-head-forms"
+   ],
+   "reason": null
+  },
+  {
+   "unit_id": "p011.15",
+   "kind": "paragraph",
+   "page_pdf": 11,
+   "excerpt": "где $C$ — коэффициент фильтрации, имеет размерность скорости.",
+   "node_ids": [
+    "bar.s03.05-darcy-head-forms"
+   ],
+   "reason": null
+  },
+  {
+   "unit_id": "p011.16",
+   "kind": "paragraph",
+   "page_pdf": 11,
+   "excerpt": "Как видно из приведенного вывода, закон Дарси — следствие предположения о безынерционности движения жидкости. Фильтрационное",
+   "node_ids": [
+    "bar.s03.04-darcy-dimensional"
+   ],
+   "reason": null
+  },
+  {
+   "unit_id": "p011.17",
+   "kind": "paragraph",
+   "page_pdf": 11,
+   "excerpt": "11",
+   "node_ids": [],
+   "reason": "не покрыто: колонтитул — печатный номер страницы «11»"
+  },
+  {
+   "unit_id": "p012.01",
+   "kind": "paragraph",
+   "page_pdf": 12,
+   "excerpt": "осреднения уравнений гидродинамики сводятся к вычислению проницаемости по задаваемой геометрической структуре пористой среды.",
+   "node_ids": [
+    "bar.s03.04-darcy-dimensional"
+   ],
+   "reason": null
+  },
+  {
+   "unit_id": "p012.02",
+   "kind": "paragraph",
+   "page_pdf": 12,
+   "excerpt": "Чаще всего из формул этого типа используется уравнение Козени — Кармана, полученное на основе аналогии",
+   "node_ids": [
+    "bar.s03.06-kozeny-carman"
+   ],
+   "reason": null
+  },
+  {
+   "unit_id": "p012.03",
+   "kind": "formula",
+   "page_pdf": 12,
+   "excerpt": "$$k = K m^3 \\Sigma^{-2}. \\tag{I.8}$$",
+   "node_ids": [
+    "bar.s03.06-kozeny-carman"
+   ],
+   "reason": null
+  },
+  {
+   "unit_id": "p012.04",
+   "kind": "paragraph",
+   "page_pdf": 12,
+   "excerpt": "Постоянная K определяется по опытным данным и оказывается разной для пористых сред различной структуры. Формулу",
+   "node_ids": [
+    "bar.s03.06-kozeny-carman"
+   ],
+   "reason": null
+  },
+  {
+   "unit_id": "p012.05",
+   "kind": "paragraph",
+   "page_pdf": 12,
+   "excerpt": "До сих пор предполагалось, что пористая среда изотропна. Для природных пластов часто характерна анизотропия, связанная",
+   "node_ids": [
+    "bar.s03.07-anisotropy-tensor"
+   ],
+   "reason": null
+  },
+  {
+   "unit_id": "p012.06",
+   "kind": "formula",
+   "page_pdf": 12,
+   "excerpt": "$$\\partial p / \\partial x_i = - c_{ia} u_a, \\tag{I.9}$$",
+   "node_ids": [
+    "bar.s03.07-anisotropy-tensor"
+   ],
+   "reason": null
+  },
+  {
+   "unit_id": "p012.07",
+   "kind": "paragraph",
+   "page_pdf": 12,
+   "excerpt": "где cᵢⱼ — некоторый тензор (предполагается суммирование по всем значениям повторяющихся греческих индексов, так что",
+   "node_ids": [
+    "bar.s03.07-anisotropy-tensor"
+   ],
+   "reason": null
+  },
+  {
+   "unit_id": "p012.08",
+   "kind": "paragraph",
+   "page_pdf": 12,
+   "excerpt": "Аналогично выводу формулы (I.9) можно показать, что cᵢⱼ = μrᵢⱼ, где rᵢⱼ — тензор удельных",
+   "node_ids": [
+    "bar.s03.07-anisotropy-tensor"
+   ],
+   "reason": null
+  },
+  {
+   "unit_id": "p012.09",
+   "kind": "formula",
+   "page_pdf": 12,
+   "excerpt": "$$u_i = - (k_{ia} / \\mu) \\partial p / \\partial x_a, \\tag{I.10}$$",
+   "node_ids": [
+    "bar.s03.07-anisotropy-tensor"
+   ],
+   "reason": null
+  },
+  {
+   "unit_id": "p012.10",
+   "kind": "paragraph",
+   "page_pdf": 12,
+   "excerpt": "где kᵢⱼ — тензор проницаемости, обратный тензору rᵢⱼ, зависит только от геометрических характеристик пористой среды",
+   "node_ids": [
+    "bar.s03.07-anisotropy-tensor"
+   ],
+   "reason": null
+  },
+  {
+   "unit_id": "p012.11",
+   "kind": "paragraph",
+   "page_pdf": 12,
+   "excerpt": "Тензоры сопротивлений rᵢⱼ и проницаемости kᵢⱼ симметричны¹.",
+   "node_ids": [
+    "bar.s03.07-anisotropy-tensor"
+   ],
+   "reason": null
+  },
+  {
+   "unit_id": "p012.12",
+   "kind": "paragraph",
+   "page_pdf": 12,
+   "excerpt": "Если анизотропия пористой среды связана с естественной слоистостью, проницаемость вдоль слоев имеет одно значение, а",
+   "node_ids": [
+    "bar.s03.07-anisotropy-tensor"
+   ],
+   "reason": null
+  },
+  {
+   "unit_id": "p012.13",
+   "kind": "paragraph",
+   "page_pdf": 12,
+   "excerpt": "¹ Это следует из того, что квадратичная форма rβa uβuₐ, пропорциональная удельной работе сил взаимодействия",
+   "node_ids": [
+    "bar.s03.07-anisotropy-tensor"
+   ],
+   "reason": null
+  },
+  {
+   "unit_id": "p012.14",
+   "kind": "paragraph",
+   "page_pdf": 12,
+   "excerpt": "12",
+   "node_ids": [],
+   "reason": "не покрыто: колонтитул — печатный номер страницы «12»"
+  },
+  {
+   "unit_id": "p013.01",
+   "kind": "paragraph",
+   "page_pdf": 13,
+   "excerpt": "меньшее. Поэтому одна из главных осей теизора проницаемости — $x_3$ перпендикулярна плоскости напластования, а две",
+   "node_ids": [
+    "bar.s03.07-anisotropy-tensor"
+   ],
+   "reason": null
+  },
+  {
+   "unit_id": "p013.02",
+   "kind": "formula",
+   "page_pdf": 13,
+   "excerpt": "$$k_{11} = k_{22} = k; \\quad k_{33} = k_0; \\quad k_{ij} = 0 \\quad (i",
+   "node_ids": [
+    "bar.s03.07-anisotropy-tensor"
+   ],
+   "reason": null
+  },
+  {
+   "unit_id": "p013.03",
+   "kind": "paragraph",
+   "page_pdf": 13,
+   "excerpt": "Закон Дарси в выбранной системе координат записывается в силу соотношений (I.11) следующим образом:",
+   "node_ids": [
+    "bar.s03.07-anisotropy-tensor"
+   ],
+   "reason": null
+  },
+  {
+   "unit_id": "p013.04",
+   "kind": "formula",
+   "page_pdf": 13,
+   "excerpt": "$$u_1 = - (k/\\mu) \\partial p / \\partial x_1; \\quad u_2 = - (k/\\mu) \\partial",
+   "node_ids": [
+    "bar.s03.07-anisotropy-tensor"
+   ],
+   "reason": null
+  },
+  {
+   "unit_id": "p013.05",
+   "kind": "paragraph",
+   "page_pdf": 13,
+   "excerpt": "При значительных скоростях, когда уже нельзя не учитывать инерционной составляющей сопротивления движению жидкости, предпосылки, заложенные",
+   "node_ids": [
+    "bar.s03.08-forchheimer"
+   ],
+   "reason": null
+  },
+  {
+   "unit_id": "p013.06",
+   "kind": "formula",
+   "page_pdf": 13,
+   "excerpt": "$$\\text{grad } p = - (\\mu/k) u g (u \\rho d / \\mu, m). \\tag{I.12}$$",
+   "node_ids": [
+    "bar.s03.08-forchheimer"
+   ],
+   "reason": null
+  },
+  {
+   "unit_id": "p013.07",
+   "kind": "paragraph",
+   "page_pdf": 13,
+   "excerpt": "Комбинация $u \\rho d / \\mu = Re$ представляет собой число Рейнольдса для фильтрационного микродвижения.",
+   "node_ids": [
+    "bar.s03.08-forchheimer"
+   ],
+   "reason": null
+  },
+  {
+   "unit_id": "p013.08",
+   "kind": "formula",
+   "page_pdf": 13,
+   "excerpt": "$$- (k/\\mu) \\text{grad } p = u + \\beta k^{1/2} \\mu^{-1} \\rho u u. \\tag{I.13}$$",
+   "node_ids": [
+    "bar.s03.08-forchheimer"
+   ],
+   "reason": null
+  },
+  {
+   "unit_id": "p013.09",
+   "kind": "paragraph",
+   "page_pdf": 13,
+   "excerpt": "Здесь в качестве характерного размера $d$ принята величина $k^{1/2}$ и учтено, что при $u \\to",
+   "node_ids": [
+    "bar.s03.08-forchheimer"
+   ],
+   "reason": null
+  },
+  {
+   "unit_id": "p013.10",
+   "kind": "paragraph",
+   "page_pdf": 13,
+   "excerpt": "При этом удается единообразно описать закон фильтрации во многих средах различной проницаемости. Для несцементированных пористых",
+   "node_ids": [
+    "bar.s03.08-forchheimer"
+   ],
+   "reason": null
+  },
+  {
+   "unit_id": "p013.11",
+   "kind": "formula",
+   "page_pdf": 13,
+   "excerpt": "$$\\alpha = A (1 - m)^3 m^{-3} / D, \\quad \\beta = B (1 -",
+   "node_ids": [
+    "bar.s03.08-forchheimer"
+   ],
+   "reason": null
+  },
+  {
+   "unit_id": "p013.12",
+   "kind": "paragraph",
+   "page_pdf": 13,
+   "excerpt": "Здесь $D$ — средний размер зерен породы, $A$ и $B$ — значения коэффициентов, близкие к",
+   "node_ids": [
+    "bar.s03.08-forchheimer"
+   ],
+   "reason": null
+  },
+  {
+   "unit_id": "p013.13",
+   "kind": "paragraph",
+   "page_pdf": 13,
+   "excerpt": "13",
+   "node_ids": [],
+   "reason": "не покрыто: колонтитул — печатный номер страницы «13»"
+  },
+  {
+   "unit_id": "p014.01",
+   "kind": "paragraph",
+   "page_pdf": 14,
+   "excerpt": "Поэтому и такая форма записи двучленного закона не является универсальной.",
+   "node_ids": [
+    "bar.s03.08-forchheimer"
+   ],
+   "reason": null
+  },
+  {
+   "unit_id": "p014.02",
+   "kind": "paragraph",
+   "page_pdf": 14,
+   "excerpt": "Появление квадратичного члена в уравнении закона фильтрации до сих пор иногда объясняют турбулизацией течения. Однако",
+   "node_ids": [
+    "bar.s03.09-not-turbulence"
+   ],
+   "reason": null
+  },
+  {
+   "unit_id": "p014.03",
+   "kind": "paragraph",
+   "page_pdf": 14,
+   "excerpt": "В задачах теории фильтрации нефти и газа в природных пластах применение двучленного закона ограничено движением",
+   "node_ids": [
+    "bar.s03.10-limits-of-darcy"
+   ],
+   "reason": null
+  },
+  {
+   "unit_id": "p014.04",
+   "kind": "heading",
+   "page_pdf": 14,
+   "excerpt": "§ 4. Уравнение неразрывности и основные уравнения теории фильтрации",
+   "node_ids": [
+    "bar.s04.01-governing-system"
+   ],
+   "reason": null
+  },
+  {
+   "unit_id": "p014.05",
+   "kind": "paragraph",
+   "page_pdf": 14,
+   "excerpt": "Система уравнений общей гидродинамики состоит из уравнений сохранения массы, импульса и энергии и уравнений состояния.",
+   "node_ids": [
+    "bar.s04.01-governing-system"
+   ],
+   "reason": null
+  },
+  {
+   "unit_id": "p014.06",
+   "kind": "paragraph",
+   "page_pdf": 14,
+   "excerpt": "Рассмотрим баланс массы жидкости в произвольном элементе объема пористой среды $V$, ограниченном поверхностью $S$, предполагая,",
+   "node_ids": [
+    "bar.s04.02-continuity-equation"
+   ],
+   "reason": null
+  },
+  {
+   "unit_id": "p014.07",
+   "kind": "paragraph",
+   "page_pdf": 14,
+   "excerpt": "Приравнивая приращение массы жидкости в элементе $V$ за время $dt$",
+   "node_ids": [
+    "bar.s04.02-continuity-equation"
+   ],
+   "reason": null
+  },
+  {
+   "unit_id": "p014.08",
+   "kind": "formula",
+   "page_pdf": 14,
+   "excerpt": "$$\\left[ \\frac{\\partial}{\\partial t} \\int_V m \\rho dV \\right] dt \\tag{I.14}$$",
+   "node_ids": [
+    "bar.s04.02-continuity-equation"
+   ],
+   "reason": null
+  },
+  {
+   "unit_id": "p014.09",
+   "kind": "paragraph",
+   "page_pdf": 14,
+   "excerpt": "14",
+   "node_ids": [],
+   "reason": "не в узле: колонтитул — номер страницы «14»"
+  },
+  {
+   "unit_id": "p015.01",
+   "kind": "paragraph",
+   "page_pdf": 15,
+   "excerpt": "притоку массы жидкости через поверхность элемента за то же время",
+   "node_ids": [
+    "bar.s04.02-continuity-equation"
+   ],
+   "reason": null
+  },
+  {
+   "unit_id": "p015.02",
+   "kind": "formula",
+   "page_pdf": 15,
+   "excerpt": "$$-dt \\int_S \\rho u n dS \\quad (I.15)$$",
+   "node_ids": [
+    "bar.s04.02-continuity-equation"
+   ],
+   "reason": null
+  },
+  {
+   "unit_id": "p015.03",
+   "kind": "paragraph",
+   "page_pdf": 15,
+   "excerpt": "и преобразуя поверхностный интеграл в объемный, получаем интегральное соотношение",
+   "node_ids": [
+    "bar.s04.02-continuity-equation"
+   ],
+   "reason": null
+  },
+  {
+   "unit_id": "p015.04",
+   "kind": "formula",
+   "page_pdf": 15,
+   "excerpt": "$$\\int_V \\left( \\frac{\\partial m\\rho}{\\partial t} + \\text{div}(\\rho u) \\right) dV = 0,$$",
+   "node_ids": [
+    "bar.s04.02-continuity-equation"
+   ],
+   "reason": null
+  },
+  {
+   "unit_id": "p015.05",
+   "kind": "paragraph",
+   "page_pdf": 15,
+   "excerpt": "откуда в силу произвольности элемента $V$ и непрерывности всех полей вытекает дифференциальное уравнение неразрывности",
+   "node_ids": [
+    "bar.s04.02-continuity-equation"
+   ],
+   "reason": null
+  },
+  {
+   "unit_id": "p015.06",
+   "kind": "formula",
+   "page_pdf": 15,
+   "excerpt": "$$(m\\rho)_{\\cdot\\cdot\\cdot\\cdot\\cdot} + \\text{div}(\\rho u) = 0. \\quad (I.16)$$",
+   "node_ids": [
+    "bar.s04.02-continuity-equation"
+   ],
+   "reason": null
+  },
+  {
+   "unit_id": "p015.07",
+   "kind": "paragraph",
+   "page_pdf": 15,
+   "excerpt": "Окончательная формулировка большинства задач теории фильтрации заключается в составлении на основе уравнения неразрывности и закона",
+   "node_ids": [
+    "bar.s04.02-continuity-equation"
+   ],
+   "reason": null
+  },
+  {
+   "unit_id": "p015.08",
+   "kind": "paragraph",
+   "page_pdf": 15,
+   "excerpt": "Рассмотрим прежде всего влияние давления на свойства жидкости — плотность $\\rho$ и вязкость $\\mu$.",
+   "node_ids": [
+    "bar.s04.03-liquid-compressibility"
+   ],
+   "reason": null
+  },
+  {
+   "unit_id": "p015.09",
+   "kind": "paragraph",
+   "page_pdf": 15,
+   "excerpt": "Для однородных капельных жидкостей — воды и нефти — изменения плотности в пластовых условиях обычно",
+   "node_ids": [
+    "bar.s04.03-liquid-compressibility"
+   ],
+   "reason": null
+  },
+  {
+   "unit_id": "p015.10",
+   "kind": "formula",
+   "page_pdf": 15,
+   "excerpt": "$$\\rho(p) = \\rho_0 [1 - (p - p_0)/K_p]. \\quad (I.17)$$",
+   "node_ids": [
+    "bar.s04.03-liquid-compressibility"
+   ],
+   "reason": null
+  },
+  {
+   "unit_id": "p015.11",
+   "kind": "paragraph",
+   "page_pdf": 15,
+   "excerpt": "Хотя сжимаемость капельных жидкостей мала, она играет значительную роль в тех случаях, когда возмущения давления",
+   "node_ids": [
+    "bar.s04.03-liquid-compressibility"
+   ],
+   "reason": null
+  },
+  {
+   "unit_id": "p015.12",
+   "kind": "paragraph",
+   "page_pdf": 15,
+   "excerpt": "Фильтрационные движения газа характеризуются тем, что ввиду больших абсолютных значений давления и перепадов газ часто",
+   "node_ids": [
+    "bar.s04.04-gas-state"
+   ],
+   "reason": null
+  },
+  {
+   "unit_id": "p015.13",
+   "kind": "formula",
+   "page_pdf": 15,
+   "excerpt": "$$\\rho = p/z(p, T)RT. \\quad (I.18)$$",
+   "node_ids": [
+    "bar.s04.04-gas-state"
+   ],
+   "reason": null
+  },
+  {
+   "unit_id": "p015.14",
+   "kind": "paragraph",
+   "page_pdf": 15,
+   "excerpt": "Здесь $R = 8,314$ Дж/(моль·К) — универсальная газовая постоянная.",
+   "node_ids": [
+    "bar.s04.04-gas-state"
+   ],
+   "reason": null
+  },
+  {
+   "unit_id": "p015.15",
+   "kind": "paragraph",
+   "page_pdf": 15,
+   "excerpt": "$^1$ Сказанное не относится к нефти, находящейся в контакте с природным газом. В этом случае",
+   "node_ids": [
+    "bar.s04.03-liquid-compressibility"
+   ],
+   "reason": null
+  },
+  {
+   "unit_id": "p015.16",
+   "kind": "paragraph",
+   "page_pdf": 15,
+   "excerpt": "15",
+   "node_ids": [],
+   "reason": "не в узле: колонтитул — номер страницы «15»"
+  },
+  {
+   "unit_id": "p016.01",
+   "kind": "paragraph",
+   "page_pdf": 16,
+   "excerpt": "Преимущества такой записи связаны с тем, что для коэффициента сверхсжимаемости $z$ ($p$, $T$) составлены таблицы",
+   "node_ids": [
+    "bar.s04.04-gas-state"
+   ],
+   "reason": null
+  },
+  {
+   "unit_id": "p016.02",
+   "kind": "paragraph",
+   "page_pdf": 16,
+   "excerpt": "Согласно кинетической теории газов, вязкость их не должна зависеть от давления. Это утверждение также неприменимо",
+   "node_ids": [
+    "bar.s04.04-gas-state"
+   ],
+   "reason": null
+  },
+  {
+   "unit_id": "p016.03",
+   "kind": "paragraph",
+   "page_pdf": 16,
+   "excerpt": "Чтобы проанализировать зависимость от давления свойств пористой среды — пористости и проницаемости, рассмотрим поведение насыщенного",
+   "node_ids": [
+    "bar.s04.05-effective-stress-uniaxial"
+   ],
+   "reason": null
+  },
+  {
+   "unit_id": "p016.04",
+   "kind": "formula",
+   "page_pdf": 16,
+   "excerpt": "$$F = pS + F_1. \\quad (I.19)$$",
+   "node_ids": [
+    "bar.s04.05-effective-stress-uniaxial"
+   ],
+   "reason": null
+  },
+  {
+   "unit_id": "p016.05",
+   "kind": "paragraph",
+   "page_pdf": 16,
+   "excerpt": "Здесь $F_1$ — сила, действующая на проницаемое основание. Очевидно, $F = \\sigma S$, где $\\sigma$",
+   "node_ids": [
+    "bar.s04.05-effective-stress-uniaxial"
+   ],
+   "reason": null
+  },
+  {
+   "unit_id": "p016.06",
+   "kind": "formula",
+   "page_pdf": 16,
+   "excerpt": "$$\\sigma^I = \\sigma - p, \\quad (I.20)$$",
+   "node_ids": [
+    "bar.s04.05-effective-stress-uniaxial"
+   ],
+   "reason": null
+  },
+  {
+   "unit_id": "p016.07",
+   "kind": "figure",
+   "page_pdf": 16,
+   "excerpt": "РИС. 3. Схема насыщенного образца пористой среды под нагрузкой",
+   "node_ids": [
+    "bar.s04.05-effective-stress-uniaxial"
+   ],
+   "reason": null
+  },
+  {
+   "unit_id": "p016.08",
+   "kind": "figure",
+   "page_pdf": 16,
+   "excerpt": "━━━ FORMAT 9: TECHNICAL SCHEMATIC / ТЕХНИЧЕСКАЯ СХЕМА ━━━ Описание схемы: вертикальный цилиндрический сосуд (труба/колонна)",
+   "node_ids": [
+    "bar.s04.05-effective-stress-uniaxial"
+   ],
+   "reason": null
+  },
+  {
+   "unit_id": "p016.09",
+   "kind": "paragraph",
+   "page_pdf": 16,
+   "excerpt": "где $\\sigma^I$ — эффективное напряжение. Изменение пористости в условиях одноосного нагружения происходит под действием этого",
+   "node_ids": [
+    "bar.s04.05-effective-stress-uniaxial"
+   ],
+   "reason": null
+  },
+  {
+   "unit_id": "p016.10",
+   "kind": "paragraph",
+   "page_pdf": 16,
+   "excerpt": "Аналогичные соображения применимы и в более общих случаях. Опытные данные, полученные в условиях произвольного нагружения",
+   "node_ids": [
+    "bar.s04.06-effective-stress-tensor"
+   ],
+   "reason": null
+  },
+  {
+   "unit_id": "p016.11",
+   "kind": "paragraph",
+   "page_pdf": 16,
+   "excerpt": "16",
+   "node_ids": [],
+   "reason": "не в узле: колонтитул — номер страницы «16»"
+  },
+  {
+   "unit_id": "p017.01",
+   "kind": "paragraph",
+   "page_pdf": 17,
+   "excerpt": "ния не возникают, касательные компоненты тензора истинных напряжений и тензора эффективных напряжений совпадают, а нормальные",
+   "node_ids": [
+    "bar.s04.06-effective-stress-tensor"
+   ],
+   "reason": null
+  },
+  {
+   "unit_id": "p017.02",
+   "kind": "formula",
+   "page_pdf": 17,
+   "excerpt": "$$\\sigma_{ij}^f = \\sigma_{ij} - p\\delta_{ij}, \\quad (1.21)$$",
+   "node_ids": [
+    "bar.s04.06-effective-stress-tensor"
+   ],
+   "reason": null
+  },
+  {
+   "unit_id": "p017.03",
+   "kind": "paragraph",
+   "page_pdf": 17,
+   "excerpt": "где $\\sigma_{ij}^f$, $\\sigma_{ij}$ — соответственно компоненты тензора эффективных напряжений и тензора истинных напряжений ($\\delta_{ij} =",
+   "node_ids": [
+    "bar.s04.06-effective-stress-tensor"
+   ],
+   "reason": null
+  },
+  {
+   "unit_id": "p017.04",
+   "kind": "paragraph",
+   "page_pdf": 17,
+   "excerpt": "Пористость и проницаемость как скалярные величины могут зависеть только от инвариантов тензора эффективных напряжений.",
+   "node_ids": [
+    "bar.s04.06-effective-stress-tensor"
+   ],
+   "reason": null
+  },
+  {
+   "unit_id": "p017.05",
+   "kind": "paragraph",
+   "page_pdf": 17,
+   "excerpt": "В линейном приближении зависимостью от второго и третьего инвариантов обычно пренебрегают, так что",
+   "node_ids": [
+    "bar.s04.06-effective-stress-tensor"
+   ],
+   "reason": null
+  },
+  {
+   "unit_id": "p017.06",
+   "kind": "formula",
+   "page_pdf": 17,
+   "excerpt": "$$m = m(\\theta, p); \\quad k = k(\\theta, p); \\quad \\theta = (1/3)\\sigma_{aa}^f. \\quad (1.22)$$",
+   "node_ids": [
+    "bar.s04.06-effective-stress-tensor"
+   ],
+   "reason": null
+  },
+  {
+   "unit_id": "p017.07",
+   "kind": "paragraph",
+   "page_pdf": 17,
+   "excerpt": "Можно установить связь между средним нормальным эффективным напряжением $\\theta$ и давлением, если рассмотреть напряженное состояние",
+   "node_ids": [
+    "bar.s04.07-total-stress-time-invariant"
+   ],
+   "reason": null
+  },
+  {
+   "unit_id": "p017.08",
+   "kind": "formula",
+   "page_pdf": 17,
+   "excerpt": "$$\\sigma_{ij} = \\sigma_{ij}^f + p\\delta_{ij}, \\quad (1.23)$$",
+   "node_ids": [
+    "bar.s04.07-total-stress-time-invariant"
+   ],
+   "reason": null
+  },
+  {
+   "unit_id": "p017.09",
+   "kind": "paragraph",
+   "page_pdf": 17,
+   "excerpt": "где $\\delta_{ij}$ — единичный тензор.",
+   "node_ids": [
+    "bar.s04.07-total-stress-time-invariant"
+   ],
+   "reason": null
+  },
+  {
+   "unit_id": "p017.10",
+   "kind": "paragraph",
+   "page_pdf": 17,
+   "excerpt": "Запишем уравнение равновесия системы жидкость — пористая среда с учетом силы тяжести в виде:",
+   "node_ids": [
+    "bar.s04.07-total-stress-time-invariant"
+   ],
+   "reason": null
+  },
+  {
+   "unit_id": "p017.11",
+   "kind": "formula",
+   "page_pdf": 17,
+   "excerpt": "$$\\partial\\sigma_{ia}/\\partial x_a + \\rho g_i = \\partial\\sigma_{ia}^f/\\partial x_a + \\partial p/\\partial x_i + \\rho g_i",
+   "node_ids": [
+    "bar.s04.07-total-stress-time-invariant"
+   ],
+   "reason": null
+  },
+  {
+   "unit_id": "p017.12",
+   "kind": "paragraph",
+   "page_pdf": 17,
+   "excerpt": "где $\\rho$ — суммарная плотность системы жидкость — пористая среда. Учитывая, что плотность слабосжимаемых горных",
+   "node_ids": [
+    "bar.s04.07-total-stress-time-invariant"
+   ],
+   "reason": null
+  },
+  {
+   "unit_id": "p017.13",
+   "kind": "paragraph",
+   "page_pdf": 17,
+   "excerpt": "17",
+   "node_ids": [],
+   "reason": "не в узле: колонтитул — номер страницы «17»"
+  },
+  {
+   "unit_id": "p018.01",
+   "kind": "paragraph",
+   "page_pdf": 18,
+   "excerpt": "массива горных пород. Поэтому соответствующие относительные деформации в этом массиве малы и, следовательно, малы возникающие",
+   "node_ids": [
+    "bar.s04.07-total-stress-time-invariant"
+   ],
+   "reason": null
+  },
+  {
+   "unit_id": "p018.02",
+   "kind": "paragraph",
+   "page_pdf": 18,
+   "excerpt": "Поскольку уравнения равновесия системы жидкость — пористая среда и напряжения на кровле и подошве пласта",
+   "node_ids": [
+    "bar.s04.07-total-stress-time-invariant"
+   ],
+   "reason": null
+  },
+  {
+   "unit_id": "p018.03",
+   "kind": "paragraph",
+   "page_pdf": 18,
+   "excerpt": "Поэтому",
+   "node_ids": [
+    "bar.s04.08-theta-plus-p-const"
+   ],
+   "reason": null
+  },
+  {
+   "unit_id": "p018.04",
+   "kind": "formula",
+   "page_pdf": 18,
+   "excerpt": "$$\\partial (\\sigma_{ij}^f + p\\delta_{ij})/\\partial t = 0. \\quad (I.25)$$",
+   "node_ids": [
+    "bar.s04.08-theta-plus-p-const"
+   ],
+   "reason": null
+  },
+  {
+   "unit_id": "p018.05",
+   "kind": "paragraph",
+   "page_pdf": 18,
+   "excerpt": "Полагая $i = j = 1, 2, 3$, имеем",
+   "node_ids": [
+    "bar.s04.08-theta-plus-p-const"
+   ],
+   "reason": null
+  },
+  {
+   "unit_id": "p018.06",
+   "kind": "formula",
+   "page_pdf": 18,
+   "excerpt": "$$\\partial (\\sigma_{11}^f + \\sigma_{22}^f + \\sigma_{33}^f + 3p)/\\partial t = 0,$$",
+   "node_ids": [
+    "bar.s04.08-theta-plus-p-const"
+   ],
+   "reason": null
+  },
+  {
+   "unit_id": "p018.07",
+   "kind": "paragraph",
+   "page_pdf": 18,
+   "excerpt": "откуда вытекает важное соотношение",
+   "node_ids": [
+    "bar.s04.08-theta-plus-p-const"
+   ],
+   "reason": null
+  },
+  {
+   "unit_id": "p018.08",
+   "kind": "formula",
+   "page_pdf": 18,
+   "excerpt": "$$(\\theta + p)_{,t} = 0, \\ \\theta_{,t} = -p_{,t}. \\quad (I.26)$$",
+   "node_ids": [
+    "bar.s04.08-theta-plus-p-const"
+   ],
+   "reason": null
+  },
+  {
+   "unit_id": "p018.09",
+   "kind": "paragraph",
+   "page_pdf": 18,
+   "excerpt": "Если первоначальное напряженное состояние, как это обычно можно предполагать для нефтяных и газовых пластов, и",
+   "node_ids": [
+    "bar.s04.08-theta-plus-p-const"
+   ],
+   "reason": null
+  },
+  {
+   "unit_id": "p018.10",
+   "kind": "formula",
+   "page_pdf": 18,
+   "excerpt": "$$\\theta + p = \\text{const.} \\quad (I.27)$$",
+   "node_ids": [
+    "bar.s04.08-theta-plus-p-const"
+   ],
+   "reason": null
+  },
+  {
+   "unit_id": "p018.11",
+   "kind": "paragraph",
+   "page_pdf": 18,
+   "excerpt": "Зависимость пористости и проницаемости пород-коллекторов от среднего нормального напряжения обычно определяется на приборах одноосного или",
+   "node_ids": [
+    "bar.s04.09-porosity-permeability-vs-stress"
+   ],
+   "reason": null
+  },
+  {
+   "unit_id": "p018.12",
+   "kind": "formula",
+   "page_pdf": 18,
+   "excerpt": "$$m_0^{-1} m_{,0} = -\\varphi_1(\\theta), \\ k_0^{-1} k_{,0} = -\\varphi_2(\\theta). \\quad (I.28)$$",
+   "node_ids": [
+    "bar.s04.09-porosity-permeability-vs-stress"
+   ],
+   "reason": null
+  },
+  {
+   "unit_id": "p018.13",
+   "kind": "paragraph",
+   "page_pdf": 18,
+   "excerpt": "Таким образом, в условиях, когда справедливо соотношение (I.27), приращения пористости и проницаемости выражаются через приращения",
+   "node_ids": [
+    "bar.s04.09-porosity-permeability-vs-stress"
+   ],
+   "reason": null
+  },
+  {
+   "unit_id": "p018.14",
+   "kind": "paragraph",
+   "page_pdf": 18,
+   "excerpt": "Рассмотрим случай фильтрации слабосжимаемой жидкости в упругодеформируемой однородной пористой среде, когда относительные изменения параметров этой",
+   "node_ids": [
+    "bar.s04.10-piezoconductivity-equation"
+   ],
+   "reason": null
+  },
+  {
+   "unit_id": "p018.15",
+   "kind": "formula",
+   "page_pdf": 18,
+   "excerpt": "$$d_p/dp = K_p^{-1} \\rho_0; \\ dm/dp = K_m^{-1} m_0; \\quad (I.29)$$",
+   "node_ids": [
+    "bar.s04.10-piezoconductivity-equation"
+   ],
+   "reason": null
+  },
+  {
+   "unit_id": "p018.16",
+   "kind": "paragraph",
+   "page_pdf": 18,
+   "excerpt": "причем $(p - p_0)/K_m \\ll 1$; $(p - p_0)/K_p \\ll 1$ во всем диапазоне изменения",
+   "node_ids": [
+    "bar.s04.10-piezoconductivity-equation"
+   ],
+   "reason": null
+  },
+  {
+   "unit_id": "p018.17",
+   "kind": "paragraph",
+   "page_pdf": 18,
+   "excerpt": "18",
+   "node_ids": [],
+   "reason": "не в узле: колонтитул — номер страницы «18»"
+  },
+  {
+   "unit_id": "p019.01",
+   "kind": "paragraph",
+   "page_pdf": 19,
+   "excerpt": "от 0 до 20 МПа. Тогда из (I.16), пренебрегая малыми величинами, находим",
+   "node_ids": [
+    "bar.s04.10-piezoconductivity-equation"
+   ],
+   "reason": null
+  },
+  {
+   "unit_id": "p019.02",
+   "kind": "formula",
+   "page_pdf": 19,
+   "excerpt": "$$m _ { 0 } \\left( \\frac { 1 } { K _ { p",
+   "node_ids": [
+    "bar.s04.10-piezoconductivity-equation"
+   ],
+   "reason": null
+  },
+  {
+   "unit_id": "p019.03",
+   "kind": "paragraph",
+   "page_pdf": 19,
+   "excerpt": "Если $\\partial p$ — характерное изменение давления, а $L$ — характерная длина, то первый член",
+   "node_ids": [
+    "bar.s04.10-piezoconductivity-equation"
+   ],
+   "reason": null
+  },
+  {
+   "unit_id": "p019.04",
+   "kind": "formula",
+   "page_pdf": 19,
+   "excerpt": "$$p _ { . t } = \\varkappa \\Delta p , \\varkappa = ( k",
+   "node_ids": [
+    "bar.s04.10-piezoconductivity-equation"
+   ],
+   "reason": null
+  },
+  {
+   "unit_id": "p019.05",
+   "kind": "paragraph",
+   "page_pdf": 19,
+   "excerpt": "где $\\Delta$ — символ оператора Лапласа; $\\varkappa$ — коэффициент пьезопроводности. Заметим, что в формулу для",
+   "node_ids": [
+    "bar.s04.11-why-no-dk-dp"
+   ],
+   "reason": null
+  }
+ ]
+}

@@ -1,0 +1,492 @@
+{
+ "chapter": "barenblatt_gl1_full",
+ "routes": [
+  {
+   "node_id": "bar.s01.01-reservoir-rocks-pores",
+   "format": "шортс",
+   "video_scores": {
+    "time": 0,
+    "invisible": 2,
+    "scale": 2,
+    "counterintuitive": 0,
+    "cause_effect": 0
+   },
+   "template": null,
+   "why": "Тип Р (узнать поры и зёрна на шлифе) и П (пустоты в объёме породы): шортс «шлиф → признаки → схема» с наездом от пласта к микрометрам даёт невидимое и скачок масштаба; закрепить можно фото-карточками.",
+   "scored": true,
+   "secondary_format": "карточки"
+  },
+  {
+   "node_id": "bar.s01.02-carbonate-secondary-voids",
+   "format": "карточки",
+   "video_scores": {
+    "time": 1,
+    "invisible": 1,
+    "scale": 1,
+    "counterintuitive": 0,
+    "cause_effect": 2
+   },
+   "template": null,
+   "why": "Карточки подходят для номенклатуры: тип пустоты → причина. Механизм образования (напряжения, растворение) даёт причину и следствие, поэтому вторым форматом подходит короткий шортс.",
+   "scored": true,
+   "secondary_format": "шортс"
+  },
+  {
+   "node_id": "bar.s01.03-traps-and-seals",
+   "format": "шортс",
+   "video_scores": {
+    "time": 2,
+    "invisible": 1,
+    "scale": 0,
+    "counterintuitive": 0,
+    "cause_effect": 2
+   },
+   "template": null,
+   "why": "Тип М: на анимации разреза видно, как всплывают лёгкие флюиды, как вытесняется вода и как работает покрышка, то есть процесс во времени с причиной и следствием. Это шортс. Чтобы прочитать объём по разрезу рис. 2, во втором формате нужен интерактив.",
+   "scored": true,
+   "secondary_format": "интерактив"
+  },
+  {
+   "node_id": "bar.s01.04-heterogeneity-wells",
+   "format": "карточки",
+   "video_scores": {
+    "time": 0,
+    "invisible": 2,
+    "scale": 2,
+    "counterintuitive": 1,
+    "cause_effect": 0
+   },
+   "template": null,
+   "why": "Тип П: человеку надо собрать в голове объём многослойного разорванного пласта, в котором есть только редкие точки-скважины. Карточки годятся для фактов, но вторым форматом лучше интерактив с разрезом: в нём видно, какую малую долю объёма вскрывают скважины.",
+   "scored": true,
+   "secondary_format": "интерактив"
+  },
+  {
+   "node_id": "bar.s01.05-scale-span",
+   "format": "длинное видео",
+   "video_scores": {
+    "time": 0,
+    "invisible": 1,
+    "scale": 2,
+    "counterintuitive": 1,
+    "cause_effect": 1
+   },
+   "template": null,
+   "why": "Тип П: из-за скачка масштаба на много порядков подходит длинное видео с непрерывным зумом от поры до месторождения. Пороговая идея: после неё пласт видится как многомасштабная задача. Вторым форматом подойдёт интерактивная шкала масштабов.",
+   "scored": true,
+   "secondary_format": "интерактив"
+  },
+  {
+   "node_id": "bar.s01.06-limited-information",
+   "format": "интерактив",
+   "video_scores": {
+    "time": 1,
+    "invisible": 1,
+    "scale": 0,
+    "counterintuitive": 2,
+    "cause_effect": 1
+   },
+   "template": null,
+   "why": "Тип Н: учащийся должен перейти от одного числа к диапазону моделей и устойчивым выводам. Для этого лучше всего интерактив, в котором через одни и те же скважины строятся разные интерполяции. Контринтуитивность («больше данных ≠ однозначность») можно подать коротким шортсом. Пороговая идея: модель становится рабочей гипотезой, а не истиной.",
+   "scored": true,
+   "secondary_format": "шортс"
+  },
+  {
+   "node_id": "bar.s01.07-qualitative-analysis-computers",
+   "format": "текст",
+   "video_scores": {
+    "time": 1,
+    "invisible": 0,
+    "scale": 0,
+    "counterintuitive": 2,
+    "cause_effect": 1
+   },
+   "template": null,
+   "why": "Тип Н/Ф: это методологический тезис о том, как обращаться с результатом, а не процесс, поэтому видеоёмкость низкая и основной формат — текст. Контринтуитивный тезис «точность не нужна» можно закрепить карточками.",
+   "scored": true,
+   "secondary_format": "карточки"
+  },
+  {
+   "node_id": "bar.s02.01-why-continuum",
+   "format": "длинное видео",
+   "video_scores": {
+    "time": 0,
+    "invisible": 1,
+    "scale": 2,
+    "counterintuitive": 2,
+    "cause_effect": 1
+   },
+   "template": null,
+   "why": "Тип Ф: смысл перехода к модели сплошной среды. Контринтуитивно (точное решение по порам не нужно) и со скачком масштаба от пор к месторождению, поэтому длинное видео. Интерактив «растёт число каналов — стабилизируется среднее» показывает сноску автора о больших числах.",
+   "scored": true,
+   "secondary_format": "интерактив"
+  },
+  {
+   "node_id": "bar.s02.02-continuum-element",
+   "format": "интерактив",
+   "video_scores": {
+    "time": 0,
+    "invisible": 2,
+    "scale": 2,
+    "counterintuitive": 1,
+    "cause_effect": 1
+   },
+   "template": null,
+   "why": "Тип Ф со вторым П: условие применимости модели осваивают, сами меняя размер объёма и видя, где среднее становится устойчивым. Поэтому основной формат — интерактив, а шортс даёт короткий образ «мал для задачи, велик для пор».",
+   "scored": true,
+   "secondary_format": "шортс"
+  },
+  {
+   "node_id": "bar.s02.03-porosity",
+   "format": "шортс",
+   "video_scores": {
+    "time": 0,
+    "invisible": 1,
+    "scale": 2,
+    "counterintuitive": 1,
+    "cause_effect": 0
+   },
+   "template": null,
+   "why": "Тип Ф: смысл определения m и предельного перехода. Шортс со скачком масштаба (окно стягивается и останавливается раньше масштаба пор), затем интерактив со стягиванием окна.",
+   "scored": true,
+   "secondary_format": "интерактив"
+  },
+  {
+   "node_id": "bar.s02.04-active-porosity",
+   "format": "карточки",
+   "video_scores": {
+    "time": 0,
+    "invisible": 1,
+    "scale": 0,
+    "counterintuitive": 1,
+    "cause_effect": 0
+   },
+   "template": null,
+   "why": "Тип П: нужно увидеть в объёме, какие поры связаны, и как площадная доля в сечении соотносится с объёмной. Определения закрепляют карточки, а интерактив с сечениями разных направлений показывает n = m. Видеоёмкость низкая.",
+   "scored": true,
+   "secondary_format": "интерактив"
+  },
+  {
+   "node_id": "bar.s02.05-pore-size-distribution",
+   "format": "длинное видео",
+   "video_scores": {
+    "time": 0,
+    "invisible": 2,
+    "scale": 1,
+    "counterintuitive": 2,
+    "cause_effect": 2
+   },
+   "template": null,
+   "why": "Тип И: по косвенному признаку (кривой распределения) свойство течения однозначно не восстанавливается, одной кривой отвечают разные среды. Довод с перегородками контринтуитивен и причинен, поэтому длинное видео. Интерактив: добавить перегородку и увидеть, что кривая почти не изменилась.",
+   "scored": true,
+   "secondary_format": "интерактив"
+  },
+  {
+   "node_id": "bar.s03.01-filtration-velocity",
+   "format": "текст",
+   "video_scores": {
+    "time": 0,
+    "invisible": 1,
+    "scale": 1,
+    "counterintuitive": 1,
+    "cause_effect": 0
+   },
+   "template": null,
+   "why": "Тип Ф: смысл определения-соглашения (деление на полную площадь). Динамики мало, поэтому подойдёт текст со схемой площадки, а карточка закрепит различие «полная площадь / поры».",
+   "scored": true,
+   "secondary_format": "карточки"
+  },
+  {
+   "node_id": "bar.s03.02-local-law",
+   "format": "шортс",
+   "video_scores": {
+    "time": 0,
+    "invisible": 2,
+    "scale": 1,
+    "counterintuitive": 1,
+    "cause_effect": 2
+   },
+   "template": null,
+   "why": "Тип М: цепочка «жидкость прилипла к скелету → связка труб → локальный закон» — чистая причина и следствие, а невидимое течение в порах можно показать. Это шортс, к нему текстовая справка о соглашении про давление.",
+   "scored": true,
+   "secondary_format": "текст"
+  },
+  {
+   "node_id": "bar.s03.03-isotropy-collinearity",
+   "format": "шортс",
+   "video_scores": {
+    "time": 0,
+    "invisible": 1,
+    "scale": 0,
+    "counterintuitive": 2,
+    "cause_effect": 1
+   },
+   "template": null,
+   "why": "Тип Ф: смысл симметрийного довода. Поворот системы координат вокруг u наглядно и неожиданно показывает, почему наклонный вектор невозможен, — коротко для шортса; интерактив с вращением векторов дополнит.",
+   "scored": true,
+   "secondary_format": "интерактив"
+  },
+  {
+   "node_id": "bar.s03.04-darcy-dimensional",
+   "format": "длинное видео",
+   "video_scores": {
+    "time": 0,
+    "invisible": 1,
+    "scale": 0,
+    "counterintuitive": 2,
+    "cause_effect": 2
+   },
+   "template": null,
+   "why": "Тип Ф: пошаговый вывод закона из размерностей требует времени и формул, поэтому длинное видео. Неожиданно, что закон получается без решения уравнений; интерактив с таблицей размерностей поможет проверить шаги.",
+   "scored": true,
+   "secondary_format": "интерактив"
+  },
+  {
+   "node_id": "bar.s03.05-darcy-head-forms",
+   "format": "карточки",
+   "video_scores": {
+    "time": 0,
+    "invisible": 0,
+    "scale": 0,
+    "counterintuitive": 1,
+    "cause_effect": 0
+   },
+   "template": null,
+   "why": "Тип Ф: соответствие форм записи и переменных (p, P, H, k, C). Видеоёмкость низкая; карточки для запоминания пересчётов и путаницы C/k.",
+   "scored": true,
+   "secondary_format": "текст"
+  },
+  {
+   "node_id": "bar.s03.06-kozeny-carman",
+   "format": "текст",
+   "video_scores": {
+    "time": 0,
+    "invisible": 0,
+    "scale": 0,
+    "counterintuitive": 1,
+    "cause_effect": 1
+   },
+   "template": null,
+   "why": "Тип Ф со стороной Н: смысл полуэмпирической формулы и границы её применения. Видеоёмкость низкая — текст; карточка для формулы и ограничений.",
+   "scored": true,
+   "secondary_format": "карточки"
+  },
+  {
+   "node_id": "bar.s03.07-anisotropy-tensor",
+   "format": "интерактив",
+   "video_scores": {
+    "time": 0,
+    "invisible": 2,
+    "scale": 1,
+    "counterintuitive": 2,
+    "cause_effect": 1
+   },
+   "template": null,
+   "why": "Тип Ф (смысл тензора) с пространственной стороной П (ориентация слоёв). Невидимое становится видимым: интерактив с поворотом градиента относительно слоёв показывает, как отклоняется поток; объяснение тензора — в длинном видео.",
+   "scored": true,
+   "secondary_format": "длинное видео"
+  },
+  {
+   "node_id": "bar.s03.08-forchheimer",
+   "format": "практикум на данных",
+   "video_scores": {
+    "time": 0,
+    "invisible": 1,
+    "scale": 1,
+    "counterintuitive": 1,
+    "cause_effect": 2
+   },
+   "template": null,
+   "why": "Тип Ф с Н (диапазоны Re, неуниверсальные коэффициенты). Лучше всего прочувствовать, подбирая линейный и квадратичный члены к данным «перепад — расход», — практикум; вывод через Re — в длинном видео.",
+   "scored": true,
+   "secondary_format": "длинное видео"
+  },
+  {
+   "node_id": "bar.s03.09-not-turbulence",
+   "format": "шортс",
+   "video_scores": {
+    "time": 1,
+    "invisible": 1,
+    "scale": 0,
+    "counterintuitive": 2,
+    "cause_effect": 2
+   },
+   "template": null,
+   "why": "Тип М: настоящий механизм нелинейности — инерция в ламинарном течении, а не турбулентность. Опровержение распространённого мнения неожиданно и укладывается в шортс; текстовая справка с доводами автора.",
+   "scored": true,
+   "secondary_format": "текст"
+  },
+  {
+   "node_id": "bar.s03.10-limits-of-darcy",
+   "format": "карточки",
+   "video_scores": {
+    "time": 0,
+    "invisible": 0,
+    "scale": 1,
+    "counterintuitive": 1,
+    "cause_effect": 1
+   },
+   "template": null,
+   "why": "Тип Н: решить, где какой закон применим. Перечень условий удобно повторять на карточках, текст — справка.",
+   "scored": true,
+   "secondary_format": "текст"
+  },
+  {
+   "node_id": "bar.s04.01-governing-system",
+   "format": "карточки",
+   "video_scores": {
+    "time": 0,
+    "invisible": 0,
+    "scale": 0,
+    "counterintuitive": 0,
+    "cause_effect": 1
+   },
+   "template": null,
+   "why": "Тип Ф: состав модели и одно допущение, динамики нет, видеоёмкость низкая. Карточки «уравнение → чем заменено/почему выпало».",
+   "scored": true
+  },
+  {
+   "node_id": "bar.s04.02-continuity-equation",
+   "format": "длинное видео",
+   "video_scores": {
+    "time": 1,
+    "invisible": 2,
+    "scale": 1,
+    "counterintuitive": 0,
+    "cause_effect": 2
+   },
+   "template": null,
+   "why": "Тип Ф с механизмом: смысл уравнения баланса. Анимация, где невидимый поток через поверхность заполняет поры, и переход от интеграла к дифференциальной форме — материал для длинного видео.",
+   "scored": true
+  },
+  {
+   "node_id": "bar.s04.03-liquid-compressibility",
+   "format": "шортс",
+   "video_scores": {
+    "time": 1,
+    "invisible": 1,
+    "scale": 2,
+    "counterintuitive": 2,
+    "cause_effect": 2
+   },
+   "template": null,
+   "why": "Тип М: механизм, при котором малая сжимаемость на большом объёме компенсирует добычу. Контринтуитивно, со скачком масштаба от единицы объёма к водоносной области, поэтому шортс.",
+   "scored": true
+  },
+  {
+   "node_id": "bar.s04.04-gas-state",
+   "format": "карточки",
+   "video_scores": {
+    "time": 0,
+    "invisible": 0,
+    "scale": 0,
+    "counterintuitive": 1,
+    "cause_effect": 0
+   },
+   "template": null,
+   "why": "Тип Ф с процедурной частью (z из таблиц): набор фактов для сравнения газа и жидкости. Видеоёмкость низкая, поэтому карточки.",
+   "scored": true
+  },
+  {
+   "node_id": "bar.s04.05-effective-stress-uniaxial",
+   "format": "интерактив",
+   "video_scores": {
+    "time": 0,
+    "invisible": 2,
+    "scale": 1,
+    "counterintuitive": 2,
+    "cause_effect": 2
+   },
+   "template": null,
+   "why": "Тип М: невидимый раздел нагрузки между жидкостью и скелетом. Интерактив по рис. 3 (двигать F и p, смотреть σ − p) делает его видимым. Шортс — для контринтуитивной формулы σ' = σ − p.",
+   "scored": true,
+   "secondary_format": "шортс"
+  },
+  {
+   "node_id": "bar.s04.06-effective-stress-tensor",
+   "format": "текст",
+   "video_scores": {
+    "time": 0,
+    "invisible": 1,
+    "scale": 0,
+    "counterintuitive": 1,
+    "cause_effect": 1
+   },
+   "template": null,
+   "why": "Тип Ф: тензорная запись и инварианты — формальный материал без динамики, его лучше читать вместе с формулами.",
+   "scored": true
+  },
+  {
+   "node_id": "bar.s04.07-total-stress-time-invariant",
+   "format": "длинное видео",
+   "video_scores": {
+    "time": 1,
+    "invisible": 2,
+    "scale": 2,
+    "counterintuitive": 1,
+    "cause_effect": 2
+   },
+   "template": null,
+   "why": "Тип М с пространственной частью: причина и следствие (вес толщи, распределение смещения), скачок масштаба от пласта к массиву и исключение со сводами — материал для длинного видео с разрезом.",
+   "scored": true
+  },
+  {
+   "node_id": "bar.s04.08-theta-plus-p-const",
+   "format": "шортс",
+   "video_scores": {
+    "time": 1,
+    "invisible": 1,
+    "scale": 0,
+    "counterintuitive": 2,
+    "cause_effect": 2
+   },
+   "template": null,
+   "why": "Тип Ф: одно ключевое соотношение с контринтуитивным следствием «падает давление — растёт эффективное напряжение», поэтому шортс.",
+   "scored": true
+  },
+  {
+   "node_id": "bar.s04.09-porosity-permeability-vs-stress",
+   "format": "практикум на данных",
+   "video_scores": {
+    "time": 0,
+    "invisible": 0,
+    "scale": 0,
+    "counterintuitive": 1,
+    "cause_effect": 1
+   },
+   "template": null,
+   "why": "Тип Пр: шаги от лабораторной кривой m(θ), k(θ) к m(p), k(p) — упражнение на данных. Данных в книге нет, поэтому опорный текст с формулой (I.28).",
+   "scored": true,
+   "secondary_format": "текст"
+  },
+  {
+   "node_id": "bar.s04.10-piezoconductivity-equation",
+   "format": "длинное видео",
+   "video_scores": {
+    "time": 2,
+    "invisible": 2,
+    "scale": 1,
+    "counterintuitive": 1,
+    "cause_effect": 2
+   },
+   "template": null,
+   "why": "Тип Ф: смысл уравнения и коэффициента ϰ. Длинное видео показывает изменение давления во времени и оценку порядков, интерактив с ползунками k, μ, m, K показывает, как меняется ϰ.",
+   "scored": true,
+   "secondary_format": "интерактив"
+  },
+  {
+   "node_id": "bar.s04.11-why-no-dk-dp",
+   "format": "шортс",
+   "video_scores": {
+    "time": 0,
+    "invisible": 1,
+    "scale": 0,
+    "counterintuitive": 2,
+    "cause_effect": 2
+   },
+   "template": null,
+   "why": "Тип Ф: контринтуитивный парадокс с одной ясной причиной (порядок малости члена) — формат шортса.",
+   "scored": true
+  }
+ ]
+}

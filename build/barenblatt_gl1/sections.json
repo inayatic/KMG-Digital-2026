@@ -1,0 +1,47 @@
+[
+ {
+  "key": "s00-front",
+  "units": 3,
+  "pages": [
+   5,
+   5
+  ],
+  "chars": 66
+ },
+ {
+  "key": "s01",
+  "units": 19,
+  "pages": [
+   5,
+   7
+  ],
+  "chars": 8446
+ },
+ {
+  "key": "s02",
+  "units": 16,
+  "pages": [
+   7,
+   9
+  ],
+  "chars": 6014
+ },
+ {
+  "key": "s03",
+  "units": 55,
+  "pages": [
+   9,
+   14
+  ],
+  "chars": 12600
+ },
+ {
+  "key": "s04",
+  "units": 68,
+  "pages": [
+   14,
+   19
+  ],
+  "chars": 14329
+ }
+]
