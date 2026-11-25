@@ -14,8 +14,8 @@ course: check out/$(CHAPTER)/index.html
 
 $(B)/clean.md $(B)/clean-report.json: $(SRC) tools/clean_ref.py
 	python3 -I tools/clean_ref.py $(CHAPTER)
-$(B)/units.json: $(B)/clean.md
-	$(STAGE_CMD) units $(CHAPTER)
+$(B)/units.json: $(B)/clean.md tools/make_units.py
+	python3 -I tools/make_units.py $(CHAPTER)
 $(B)/nodes.json $(B)/coverage.md: $(B)/units.json $(PACK)
 	$(STAGE_CMD) nodes $(CHAPTER)
 $(B)/routing.json: $(B)/nodes.json
