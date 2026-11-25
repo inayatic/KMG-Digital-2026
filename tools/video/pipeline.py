@@ -57,7 +57,9 @@ def main():
     ok = False
     for n in range(1, rounds + 1):
         rep = pd / f"verify-v{n}.md"
-        if rep.exists() and not FORCE and newer(rep, *files):
+        if rep.exists() and not FORCE and not newer(rep, *files):
+            continue  # отчёт устарел (паспорт исправлен после него): его заменяет следующий круг
+        if rep.exists() and not FORCE:
             v = verdict(rep)
         else:
             print(f"[2/6] verifier, круг {n} …")
