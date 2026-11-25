@@ -36,13 +36,19 @@ def main(ch):
     pdf = pdf_pages(pdfs) if pdfs else []
     head, *rest = re.split(r"(<!-- page \d+ -->)", md)
     pages = {int(re.search(r"\d+", rest[i]).group()): rest[i + 1] for i in range(0, len(rest), 2)}
-    if pdf and len(pdf) != len(pages):
-        sys.exit(f"{ch}: {len(pdf)} PDF pages vs {len(pages)} md pages")
+    # метки = номера PDF-страниц. Глава-выдержка: md содержит часть страниц, PDF вся книга (индекс по метке)
+    # или только глава (столько же страниц, сколько в md: по порядку); иначе PDF-текст не используется.
+    if pdf and max(pages) > len(pdf):
+        if len(pdf) == len(pages): pdf = {n: pdf[i] for i, n in enumerate(sorted(pages))}
+        else:
+            print(f"{ch}: {len(pdf)} PDF pages vs {len(pages)} md pages (max {max(pages)}): PDF-текст не используется")
+            pdf = {}
+    else: pdf = {i + 1: t for i, t in enumerate(pdf)}
     rep, out = {}, [head]
     for n, t in pages.items():
         src = "md"
         if garbled(t):
-            p = pdf[n - 1] if pdf else ""
+            p = pdf.get(n, "")
             if len(p.strip()) >= 40 and not garbled(p) and latin_share(p) <= latin_share(t):
                 t, src = f"\n{p.strip()}\n\n", "pdf-text"
             else:
