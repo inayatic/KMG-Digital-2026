@@ -150,6 +150,7 @@ const VIEWS = {
     ctx.strokeStyle = col.muted; ctx.lineWidth = 4; ctx.beginPath(); ctx.moveTo(ax, ay - ah); ctx.lineTo(ax, ay); ctx.lineTo(ax + aw, ay); ctx.stroke();
     ctx.fillStyle = col.muted; ctx.font = `38px ${FONT}`; ctx.textAlign = 'center'; ctx.textBaseline = 'top'; ctx.fillText(p.xlabel || '', ax + aw / 2, ay + 24);
     ctx.save(); ctx.translate(ax - 70, ay - ah / 2); ctx.rotate(-Math.PI / 2); ctx.fillText(p.ylabel || '', 0, 0); ctx.restore();
+    if (p.ticks !== false) { ctx.fillStyle = col.muted; ctx.font = `34px ${FONT}`; for (let v = 0; v <= Math.floor(Math.min(xs, ys)); v++) { ctx.textAlign = 'center'; ctx.textBaseline = 'top'; ctx.fillText(String(v), ax + v / xs * aw, ay + 6); ctx.strokeStyle = col.muted; ctx.lineWidth = 3; ctx.beginPath(); ctx.moveTo(ax + v / xs * aw, ay); ctx.lineTo(ax + v / xs * aw, ay - 12); ctx.stroke(); if (v > 0) { ctx.textAlign = 'right'; ctx.textBaseline = 'middle'; ctx.fillText(String(v), ax - 10, ay - v / ys * ah); } } }
     const pts = (p.points === 'model_R' ? MODEL.rho_w.map((r, i) => [r, MODEL.R_rel[i]]) : p.points) || [];
     const X = x => ax + x / xs * aw, Y = y => ay - y / ys * ah;
     const k = p.start_progress ? 99 : Math.floor(u / 0.5);
