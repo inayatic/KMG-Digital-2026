@@ -38,12 +38,12 @@ def per_section(ch, stage, agent, prompt, done, keys=None):
         res = list(ex.map(lambda k: llm(ch, k, agent, prompt, stage), todo))
     return len(todo), sum(r[0] for r in res), sum(r[1] for r in res), sum(r[2] for r in res)
 
-def metric(ch, stage, nodes, tin, tout, usd):
+def metric(ch, stage, nodes, tin, tout, usd, video_seconds=""):
     new = not MET.exists(); MET.parent.mkdir(exist_ok=True)
     with MET.open("a", newline="") as f:
         w = csv.writer(f)
         if new: w.writerow(HEAD)
-        w.writerow([ch, stage, nodes, tin, tout, round(usd, 4), "", "", "", ""])
+        w.writerow([ch, stage, nodes, tin, tout, round(usd, 4), "", "", video_seconds, ""])
 
 def repair_cov(ch, rounds=2):
     """Автоматический ремонт покрытия и целостности: check_cov -> агент по каждому проблемному разделу (до `rounds` раундов)."""
