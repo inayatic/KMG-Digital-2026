@@ -4,6 +4,20 @@
 Сквозной order.rank по порядку книги; field_authors по умолчанию; проверка: id уникальны, каждая единица ровно в одном узле либо с причиной."""
 import json, re, sys
 from pathlib import Path
+
+
+def norm_routes(raw):
+    """routing.json разных агентов -> список {id, format, why}. Принимает список или словарь-обёртку {nodes|routes: [...]}, ключ id: id | node | node_id;
+    если why нет, пустая строка. Записи без id или format пропускаются (маршрут узла тогда берётся из запасного значения)."""
+    if isinstance(raw, dict):
+        raw = raw.get("routes") or raw.get("nodes") or list(raw.values())[0] if raw else []
+    out = []
+    for r in raw or []:
+        if not isinstance(r, dict): continue
+        i = r.get("id") or r.get("node") or r.get("node_id")
+        if i and r.get("format"): out.append({"id": i, "format": r["format"], "why": r.get("why", "")})
+    return out
+
 root = Path(__file__).resolve().parent.parent / "build" / sys.argv[1]
 units = json.load(open(root / "units.json")); U = {u["id"]: u for u in units}
 secs = sorted(json.load(open(root / "sections.json")), key=lambda s: (s["pages"][0], s["key"]))
@@ -11,8 +25,8 @@ nodes, routes, reasons, errs = [], {}, {}, []
 for s in secs:
     d = root / "sections" / s["key"]
     for n in json.load(open(d / "nodes.json")): n["_sec"] = s["key"]; nodes.append(n)
-    for r in json.load(open(d / "routing.json")):
-        routes[r.get("id") or r.get("node")] = {"format": r["format"], "why": r["why"]}
+    for r in norm_routes(json.load(open(d / "routing.json"))):
+        routes[r["id"]] = {"format": r["format"], "why": r["why"]}
     for line in (d / "coverage.md").read_text().splitlines():
         c = [x.strip() for x in line.strip().strip("|").split("|")]
         if len(c) >= 2 and re.fullmatch(r"p\d{3}-\d{2}", c[0]) and not c[-1].startswith("lat."): reasons[c[0]] = c[-1]
