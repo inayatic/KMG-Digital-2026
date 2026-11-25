@@ -135,7 +135,7 @@ function widget(w){
   var run=function(){var vals={};$$("input",w).forEach(function(i){vals[i.dataset.k]=parseFloat(i.value.replace(",","."))});
    var o="";c.outputs.forEach(function(q){var v;try{v=new Function(Object.keys(vals).join(","),"return "+q.expr).apply(null,Object.keys(vals).map(function(k){return vals[k]}))}catch(e){v=NaN}
     var s=isFinite(v)?v.toFixed(q.digits).replace(".",","):"—";var diff=isFinite(v)&&s!==q.book;
-    o+='<p><b>'+esc(q.label)+' = '+s+'</b><br><span class="meta">В книге: '+esc(q.book)+(diff?'. Расхождение с книгой: считайте это спорным местом, отмечено для ментора.':'. Совпадает.')+' <a href="#" data-ev="'+esc(q.claim)+'">источник</a></span></p>'});
+    o+='<p><b>'+esc(q.label)+' = '+s+'</b><br><span class="meta">В книге: '+esc(q.book)+(diff?'. Расхождение с книгой: считайте это спорным местом (причина — в источнике утверждения).':'. Совпадает.')+' <a href="#" data-ev="'+esc(q.claim)+'">источник</a></span></p>'});
    $("#dout",w).innerHTML=o};
   $$("input",w).forEach(function(i){i.oninput=run});run();
  }
