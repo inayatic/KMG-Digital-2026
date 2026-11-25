@@ -471,6 +471,8 @@ class Build:
         out = []
         for t in s.cfg["tasks"]:
             nid = s.nid[t["node"]]; n = s.byid[nid]
+            full = lambda r: next((x["id"] for x in n["claims"] if x["id"] == r or x["id"].endswith("." + r)), r)  # в слое id утверждений бывает «c1» или «<узел>.c1»
+            t = dict(t, claim=full(t["claim"]) if t.get("claim") else None, basis=[full(x) for x in t.get("basis") or []])
             if t.get("kind") in ("predict", "transfer"):  # рассуждение: ответ выведен из утверждений basis, дословной цитаты нет
                 cl = {c["id"]: c for c in n["claims"]}; b = t.get("basis") or []
                 ok = bool(b) and all(x in cl and cl[x]["author"] == "автор" for x in b) and t["type"] in ("single", "multi") and len(t["options"]) >= 3
@@ -479,6 +481,7 @@ class Build:
                 if not ok: s.warn.append(f"ЗАДАНИЕ {t['id']}: рассуждение без опоры basis или с утечкой ответа"); s.dropped = getattr(s, "dropped", 0) + 1
                 if ok or not s.cfg.get("drop_bad"): out.append(dict(t, node=nid, claim=f"{nid}#{b[0] if b else t['claim']}")); continue
             if not t.get("claim"): s.warn.append(f"ЗАДАНИЕ {t['id']}: нет поля claim, пропущено"); s.dropped = getattr(s, "dropped", 0) + 1; continue
+            if t["claim"] not in {x["id"] for x in n["claims"]}: s.warn.append(f"ЗАДАНИЕ {t['id']}: нет утверждения {t['claim']}, пропущено"); s.dropped = getattr(s, "dropped", 0) + 1; continue
             key = f"{nid}#{t['claim']}"; c = s.claim(key); txt = nrm(c["text"])
             src = txt if t.get("src", "claim") == "claim" else nrm(" ".join(sum((w.get("steps", []) for w in n.get("worked_examples", [])), [])))
             ok = True
