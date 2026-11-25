@@ -1,0 +1,82 @@
+[
+ {
+  "node": "ven.ch_s00fronta.01-geofizika-podschetnye-parametry",
+  "format": "карточки",
+  "why": "Перечень параметров с оговорками — список для запоминания."
+ },
+ {
+  "node": "ven.ch_s00fronta.02-geofizika-vs-kern",
+  "format": "шортс",
+  "why": "Контринтуитивный тезис с оговорками: геофизика представительнее керна."
+ },
+ {
+  "node": "ven.ch_s00fronta.03-rol-kerna",
+  "format": "карточки",
+  "why": "Шесть условий — перечень."
+ },
+ {
+  "node": "ven.ch_s00fronta.04-usloviya-gis-metodiki",
+  "format": "шортс",
+  "why": "Причина-следствие: условия ГИС и модель определяют ошибку."
+ },
+ {
+  "node": "ven.ch_s00fronta.05-avtory-istoriya",
+  "format": "текст",
+  "why": "Историческая справка без механизма."
+ },
+ {
+  "node": "ven.ch_s00fronta.06-effektivnaya-moschnost-zadacha",
+  "format": "длинное видео",
+  "why": "Причинная цепочка от мощности до запасов, обзор плана главы."
+ },
+ {
+  "node": "ven.ch_s00fronta.07-terrigennyj-razrez-priznaki",
+  "format": "карточки",
+  "why": "Классификация признаков."
+ },
+ {
+  "node": "ven.ch_s00fronta.08-glinistaya-korka",
+  "format": "длинное видео",
+  "why": "Невидимое процесс фильтрации становится видимым; причина и следствие."
+ },
+ {
+  "node": "ven.ch_s00fronta.09-mikrozondy-prirascheniya",
+  "format": "интерактив",
+  "why": "Сравнение кривых микрозондов с переключением условий (корка, проницаемость)."
+ },
+ {
+  "node": "ven.ch_s00fronta.10-radialnyj-gradient",
+  "format": "длинное видео",
+  "why": "Невидимая радиальная структура пласта; три типа кривых."
+ },
+ {
+  "node": "ven.ch_s00fronta.11-sopostavlenie-zondov",
+  "format": "интерактив",
+  "why": "Кросс-плот ρ1–ρ2 с биссектрисой и областью неоднозначности."
+ },
+ {
+  "node": "ven.ch_s00fronta.12-masshtab-i-etalonirovka",
+  "format": "шортс",
+  "why": "Контринтуитивная ловушка: расхождение кривых может быть артефактом масштаба."
+ },
+ {
+  "node": "ven.ch_s00fronta.13-povtornye-izmereniya",
+  "format": "длинное видео",
+  "why": "Изменение во времени: зона проникновения формируется и расходятся кривые."
+ },
+ {
+  "node": "ven.ch_s00fronta.14-kosvennye-kolichestvennye-kriterii",
+  "format": "текст",
+  "why": "Определения и логика критерия."
+ },
+ {
+  "node": "ven.ch_s00fronta.15-raschet-granichnogo-kpr",
+  "format": "практикум на данных",
+  "why": "Расчёт по формулам с подстановкой чисел книги."
+ },
+ {
+  "node": "ven.ch_s00fronta.16-granichnye-geofizicheskie-parametry",
+  "format": "практикум на данных",
+  "why": "Построение регрессии и определение порога на кросс-плоте."
+ }
+]

@@ -1,0 +1,82 @@
+[
+ {
+  "node": "ven.ch_s00fronth.01-nk-lifetime-porosity",
+  "format": "текст",
+  "why": "Процедурное правило с условиями применимости, визуальной динамики нет."
+ },
+ {
+  "node": "ven.ch_s00fronth.02-ggm-basics",
+  "format": "шортс",
+  "why": "Контринтуитивно: сигнал растёт при уменьшении плотности; удобная анимация."
+ },
+ {
+  "node": "ven.ch_s00fronth.03-electron-density",
+  "format": "карточки",
+  "why": "Формула и таблица значений, удобны карточки-справочник."
+ },
+ {
+  "node": "ven.ch_s00fronth.04-ggm-porosity-formulas",
+  "format": "текст",
+  "why": "Выводы и условия применимости, мало визуального."
+ },
+ {
+  "node": "ven.ch_s00fronth.05-ggm-skeleton-variability",
+  "format": "интерактив",
+  "why": "Можно показать чувствительность kп к доле минерала."
+ },
+ {
+  "node": "ven.ch_s00fronth.06-ggm-calibration",
+  "format": "карточки",
+  "why": "Список процедур и эталонов."
+ },
+ {
+  "node": "ven.ch_s00fronth.07-ggm-palette-density",
+  "format": "практикум на данных",
+  "why": "Ручная палетка с бланком — задача на практике, наложение точек."
+ },
+ {
+  "node": "ven.ch_s00fronth.08-ggm-porosity-calc",
+  "format": "текст",
+  "why": "Формулы и условия, мало визуальных эффектов."
+ },
+ {
+  "node": "ven.ch_s00fronth.09-ggm-example8",
+  "format": "текст",
+  "why": "Рабочий пример с числами автора."
+ },
+ {
+  "node": "ven.ch_s00fronth.10-acoustic-intro",
+  "format": "шортс",
+  "why": "ΔT=10^6/v и рост ΔT с пористостью — короткий контринтуитивный факт."
+ },
+ {
+  "node": "ven.ch_s00fronth.11-time-average",
+  "format": "интерактив",
+  "why": "Можно крутить kп и видеть ΔT."
+ },
+ {
+  "node": "ven.ch_s00fronth.12-dtsk-table-caution",
+  "format": "карточки",
+  "why": "Контринтуитивный вывод: табличная константа неприменима."
+ },
+ {
+  "node": "ven.ch_s00fronth.13-dtzh-applicability",
+  "format": "текст",
+  "why": "Значения и условия применимости."
+ },
+ {
+  "node": "ven.ch_s00fronth.14-thermobaric",
+  "format": "длинное видео",
+  "why": "Причина и следствие: глубина → давление/температура → ΔT."
+ },
+ {
+  "node": "ven.ch_s00fronth.15-clay-correction",
+  "format": "текст",
+  "why": "Серия формул с оговорками, малый визуальный эффект."
+ },
+ {
+  "node": "ven.ch_s00fronth.16-dtgl-values",
+  "format": "практикум на данных",
+  "why": "Подбор ΔTгл по таблице глубин — расчётное упражнение."
+ }
+]
