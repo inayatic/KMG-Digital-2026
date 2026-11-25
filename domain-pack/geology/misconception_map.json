@@ -1,0 +1,633 @@
+{
+ "lat.s00p.01-preface-how-to-use": [
+  "misc.manual_is_full_course"
+ ],
+ "lat.s01.01-water-basics": [
+  "misc.matrix_controls_resistivity"
+ ],
+ "lat.s01.02-ion-form-table1": [],
+ "lat.s01.03-fig1-nomogram": [],
+ "lat.s01.04-concentration-formulas": [
+  "misc.water_is_nacl"
+ ],
+ "lat.s01.05-ex1-ex2-concentration": [],
+ "lat.s01.06-fig2-lambda": [
+  "misc.conductivity_prop_concentration"
+ ],
+ "lat.s01.07-ex3-water-resistivity": [],
+ "lat.s01.08-density-estimate": [],
+ "lat.s01.09-ex6-two-methods": [],
+ "lat.s01.10-mud-resistivity": [
+  "misc.filtrate_eq_mud"
+ ],
+ "lat.s01.11-ex7-filtrate": [],
+ "lat.s01.12-problems-1-7": [],
+ "lat.s01.13-rock-matrix": [
+  "misc.matrix_controls_resistivity"
+ ],
+ "lat.s01.14-porosity-factor": [
+  "misc.resistivity_linear_porosity"
+ ],
+ "lat.s01.15-fig4-pn": [],
+ "lat.s01.16-surface-conductivity": [
+  "misc.clay_insulator_no_effect"
+ ],
+ "lat.s01.17-ex8-sandstone": [],
+ "lat.s01.18-ex9-weak-sandstone": [],
+ "lat.s01.19-ex10-clayey-invaded": [],
+ "lat.s01.20-mixed-porosity": [],
+ "lat.s01.21-fractured-eq6": [
+  "misc.fracture_vug_same_effect"
+ ],
+ "lat.s01.22-vuggy-eq7": [
+  "misc.fracture_vug_same_effect"
+ ],
+ "lat.s01.23-fig6-curves": [],
+ "lat.s01.24-fract-vug-eq8": [],
+ "lat.s01.25-invaded-fractured-eq9": [
+  "misc.fractures_always_mark_reservoir"
+ ],
+ "lat.s01.26-ex11-fractured": [],
+ "lat.s01.27-ex12-vuggy": [],
+ "lat.s01.28-ex13-invaded-fractured": [],
+ "lat.s01.29-problems-8-9": [],
+ "lat.s01.30-problems-10-15": [],
+ "lat.s01.31-saturation-param": [
+  "misc.oil_differs_by_salinity"
+ ],
+ "lat.s01.32-n-exponent": [],
+ "lat.s01.33-saturation-zones": [
+  "misc.any_oil_saturation_pure_oil"
+ ],
+ "lat.s01.34-fig7-curves": [],
+ "lat.s01.35-ex14-oil-saturated": [],
+ "lat.s01.36-ex15-flushed-zone": [],
+ "lat.s01.37-problems-16-17": [],
+ "lat.s02.01-contact-changes": [
+  "misc.logging_measures_undisturbed"
+ ],
+ "lat.s02.02-invasion-zones": [
+  "misc.logging_measures_undisturbed"
+ ],
+ "lat.s02.03-resistivity-jumps": [],
+ "lat.s02.04-penetration-types": [
+  "misc.invasion_always_lowers"
+ ],
+ "lat.s02.05-complications": [],
+ "lat.s02.06-probe-depth": [
+  "misc.one_probe_true_resistivity"
+ ],
+ "lat.s02.07-problems": [],
+ "lat.s03.01-radial-axial-heterogeneity": [
+  "misc.one_probe_true_resistivity"
+ ],
+ "lat.s03.02-apparent-resistivity-dependence": [],
+ "lat.s03.03-equipment-table": [],
+ "lat.s03.04-nonfocused-plane-model": [
+  "misc.nonfocused_repeats_profile"
+ ],
+ "lat.s03.05-bkz-paletki": [],
+ "lat.s03.06-problems-24-30": [],
+ "lat.s03.07-focused-probe-geometry": [],
+ "lat.s03.08-focused-additivity-factors": [
+  "misc.nonfocused_repeats_profile"
+ ],
+ "lat.s03.09-geometric-factor-formulas": [],
+ "lat.s03.10-axial-vs-radial-factor": [],
+ "lat.s03.11-fig9-radial-characteristics": [],
+ "lat.s03.12-example-16": [],
+ "lat.s03.13-problems-31-34": [],
+ "lat.s04.01-purpose-scope": [
+  "misc.boundary_at_extremum"
+ ],
+ "lat.s04.02-potential-rules": [
+  "misc.boundary_at_extremum"
+ ],
+ "lat.s04.03-example17-potential": [],
+ "lat.s04.04-gradient-rules": [
+  "misc.boundary_at_extremum"
+ ],
+ "lat.s04.05-limits-screening": [
+  "misc.one_probe_true_resistivity"
+ ],
+ "lat.s04.06-example18-gradient": [],
+ "lat.s04.07-example19-gradual": [],
+ "lat.s04.08-example20-screening": [],
+ "lat.s04.09-microprobes": [
+  "misc.microprobe_gives_rho"
+ ],
+ "lat.s04.10-shielded-probes": [
+  "misc.shielded_probe_eq_screening"
+ ],
+ "lat.s04.11-induction": [
+  "misc.induction_any_well"
+ ],
+ "lat.s04.12-example21-complex": [],
+ "lat.s05.01-bez-setup": [
+  "misc.one_probe_true_resistivity"
+ ],
+ "lat.s05.02-primary-processing": [
+  "misc.interpret_any_bed"
+ ],
+ "lat.s05.03-reading-rho-k": [
+  "misc.one_probe_true_resistivity"
+ ],
+ "lat.s05.04-table7": [],
+ "lat.s05.05-curve-types-intro": [],
+ "lat.s05.06-two-layer-curves": [
+  "misc.two_layer_no_invasion"
+ ],
+ "lat.s05.07-three-layer-raise": [],
+ "lat.s05.08-three-layer-lower": [],
+ "lat.s05.09-thin-bed-effects": [
+  "misc.right_branch_drop_invasion"
+ ],
+ "lat.s05.10-two-layer-method": [],
+ "lat.s05.11-example-22": [],
+ "lat.s05.12-three-layer-raise-method": [
+  "misc.model_knows"
+ ],
+ "lat.s05.13-u-equivalence": [],
+ "lat.s05.14-example-23": [],
+ "lat.s05.15-example-24": [],
+ "lat.s05.16-example-25": [],
+ "lat.s05.17-three-layer-lower-method": [
+  "misc.right_branch_drop_invasion"
+ ],
+ "lat.s05.18-example-26": [],
+ "lat.s05.19-thin-bed-method": [],
+ "lat.s05.20-example-27": [],
+ "lat.s05.21-mud-refine": [
+  "misc.mud_resistivity_any"
+ ],
+ "lat.s05.22-single-probes": [],
+ "lat.s05.23-problems-40-43": [],
+ "lat.s06.01-complex-three-unknowns": [
+  "misc.one_probe_true_resistivity"
+ ],
+ "lat.s06.02-preprocessing-goal": [],
+ "lat.s06.03-screened-reading-and-scale": [],
+ "lat.s06.04-screened-corrections-kd-kh-j": [],
+ "lat.s06.05-induction-scale-limit": [
+  "misc.induction_any_well"
+ ],
+ "lat.s06.06-induction-borehole-correction": [],
+ "lat.s06.07-induction-skin-effect-scale": [],
+ "lat.s06.08-thickness-correction-and-final-mix": [],
+ "lat.s06.09-second-scheme-e-series": [],
+ "lat.s06.10-worked-example-focused-table9": [],
+ "lat.s06.11-microprobes-rzp": [
+  "misc.microprobe_gives_rho"
+ ],
+ "lat.s06.12-single-probe-composite-palettes": [],
+ "lat.s06.13-example-31-composite": [],
+ "lat.s06.14-two-probe-palettes": [],
+ "lat.s06.15-three-probe-palettes": [],
+ "lat.s06.16-isoresistive-method": [],
+ "lat.s06.17-example-32-isoresistive-task48": [],
+ "lat.s07.01-dielectric-permittivity": [
+  "misc.eps_like_rho"
+ ],
+ "lat.s07.02-mixing-model": [
+  "misc.mixing_model_any_rock"
+ ],
+ "lat.s07.03-fig37-collector-lines": [
+  "misc.reservoir_limit_porosity_only"
+ ],
+ "lat.s07.04-dm-tasks-tool": [
+  "misc.dm_measures_only_eps"
+ ],
+ "lat.s07.05-vdm-variants": [
+  "misc.dm_measures_only_eps"
+ ],
+ "lat.s07.06-vdm-conditions": [
+  "misc.vdm_sees_undisturbed"
+ ],
+ "lat.s07.07-adk-palette": [
+  "misc.dm_measures_only_eps"
+ ],
+ "lat.s07.08-example33-terrigenous": [
+  "misc.low_eps_means_water"
+ ],
+ "lat.s07.09-example34-owc": [
+  "misc.vdm_sees_undisturbed"
+ ],
+ "lat.s07.10-problems-49-50": [],
+ "lat.s08.01-diffusion-adsorption-potential": [],
+ "lat.s08.02-fig41a-curves-q": [],
+ "lat.s08.03-static-amplitude-def": [
+  "misc.sp_has_true_zero"
+ ],
+ "lat.s08.04-max-amplitude-clay-line": [],
+ "lat.s08.05-three-characteristics": [],
+ "lat.s08.06-clay-content-link": [],
+ "lat.s08.07-amplitude-decrease-temperature": [],
+ "lat.s08.08-variable-salinity-derivation": [],
+ "lat.s08.09-example-35": [],
+ "lat.s08.10-problems-51-56": [],
+ "lat.s08.11-filtration-component": [],
+ "lat.s08.12-delta-ef-estimate": [],
+ "lat.s09.01-smooth-boundaries": [
+  "misc.sp_amplitude_equals_static"
+ ],
+ "lat.s09.02-superposition-curves": [
+  "misc.sp_amplitude_equals_static"
+ ],
+ "lat.s09.03-build-curves-problems": [],
+ "lat.s09.04-boundary-conclusions": [],
+ "lat.s10.01-sp-bed-boundaries": [
+  "misc.sp_boundary_half_always"
+ ],
+ "lat.s10.02-fig45-joint-example": [],
+ "lat.s10.03-lithology-table-sp-kc": [
+  "misc.table_lithology_any_rock"
+ ],
+ "lat.s10.04-attenuation-coefficient-v": [
+  "misc.sp_amplitude_equals_static"
+ ],
+ "lat.s10.05-delta-e-from-delta-u": [],
+ "lat.s10.06-relative-amplitude-alpha": [],
+ "lat.s10.07-example-37": [],
+ "lat.s10.08-problems-64-66": [],
+ "lat.s11.01-inertia-distortion": [
+  "misc.log_is_rock"
+ ],
+ "lat.s11.02-nomogram-v": [],
+ "lat.s11.03-bed-boundaries": [
+  "misc.boundary_at_half_height"
+ ],
+ "lat.s11.04-amplitude-correction": [
+  "misc.divide_full_reading_by_v"
+ ],
+ "lat.s11.05-example-38": [],
+ "lat.s11.06-statistical-corridor": [
+  "misc.log_is_rock"
+ ],
+ "lat.s12.01-rock-radioactivity": [],
+ "lat.s12.02-mud-radioactivity": [],
+ "lat.s12.03-intensity-vs-q": [],
+ "lat.s12.04-borehole-sum": [],
+ "lat.s12.05-corrections-eta": [],
+ "lat.s12.06-goal-and-two-approaches": [],
+ "lat.s12.07-amplitude-scheme-1-2": [],
+ "lat.s12.08-eta-d-and-step-diagram": [],
+ "lat.s12.09-relative-amplitude": [],
+ "lat.s12.10-dj-to-clay": [],
+ "lat.s12.11-example39-setup": [],
+ "lat.s12.12-example39-corrections": [],
+ "lat.s12.13-example39-clay-scale": [],
+ "lat.s12.14-problems-67-71": [],
+ "lat.s13.01-gamma-gamma-principle": [
+  "misc.ggm_measures_bulk_density"
+ ],
+ "lat.s13.02-electron-vs-bulk-density": [
+  "misc.ggm_measures_bulk_density"
+ ],
+ "lat.s13.03-mixing-equations": [],
+ "lat.s13.04-two-probe-tools": [
+  "misc.pad_removes_mudcake"
+ ],
+ "lat.s13.05-calibration-and-algorithm": [],
+ "lat.s13.06-interpretation-uses": [],
+ "lat.s13.07-example-40-and-task-72": [],
+ "lat.s14.01-principle": [
+  "misc.neutron_measures_fluid_type"
+ ],
+ "lat.s14.02-probes": [],
+ "lat.s14.03-neutron-properties": [
+  "misc.neutron_more_h_higher"
+ ],
+ "lat.s14.04-hydrogen-index": [
+  "misc.neutron_porosity_true"
+ ],
+ "lat.s14.05-reading-vs-w": [
+  "misc.neutron_porosity_true"
+ ],
+ "lat.s14.06-influence-factors": [],
+ "lat.s14.07-prelim-processing": [
+  "misc.ngm_pure_neutron"
+ ],
+ "lat.s14.08-relative-amplitude": [
+  "misc.absolute_count_reading"
+ ],
+ "lat.s14.09-reference-beds-corrections": [
+  "misc.corrections_always"
+ ],
+ "lat.s14.10-example-41": [],
+ "lat.s14.11-two-probe-example-42": [],
+ "lat.s14.12-problems": [],
+ "lat.s15.01-scope-and-wave-types": [
+  "misc.same_waves_all_media"
+ ],
+ "lat.s15.02-three-element-probe-waveform": [],
+ "lat.s15.03-spak-parameters": [],
+ "lat.s15.04-interval-time": [
+  "misc.dt_independent_of_velocity"
+ ],
+ "lat.s15.05-average-time-equation": [],
+ "lat.s15.06-skeleton-time-and-contact": [
+  "misc.skeleton_dt_table_as_is"
+ ],
+ "lat.s15.07-pore-fluid-time": [],
+ "lat.s15.08-clay-reservoirs": [
+  "misc.skeleton_dt_table_as_is"
+ ],
+ "lat.s15.09-fractured-cavernous": [
+  "misc.acoustic_total_porosity"
+ ],
+ "lat.s15.10-reading-curves-bed-boundaries": [
+  "misc.boundary_at_half_height"
+ ],
+ "lat.s15.11-log-quality-control": [
+  "misc.any_dt_curve_valid"
+ ],
+ "lat.s15.12-interpretation-limits-alpha-groups": [],
+ "lat.s15.13-porosity-procedure": [
+  "misc.acoustic_total_porosity"
+ ],
+ "lat.s15.14-hydrocarbon-correction": [],
+ "lat.s15.15-worked-porosity-examples": [],
+ "lat.s15.16-book-problems-ak": [],
+ "lat.s15.17-akw-wideband": [],
+ "lat.s15.18-akw-tasks": [],
+ "lat.s15.19-akw-fracture-example": [],
+ "lat.s16.01-nmr-phenomenon": [
+  "misc.nmr_measures_all_water"
+ ],
+ "lat.s16.02-ssp-isf-porosity": [
+  "misc.nmr_measures_all_water"
+ ],
+ "lat.s16.03-ssp-interpretation": [
+  "misc.boundary_at_half_height"
+ ],
+ "lat.s16.04-reservoir-picking-fig67": [
+  "misc.any_nonzero_nmr_reservoir"
+ ],
+ "lat.s16.05-chv-intro": [],
+ "lat.s17.01-optimal-complex-and-muds": [
+  "misc.same_complex_any_well"
+ ],
+ "lat.s17.02-borehole-features-clay-mud": [
+  "misc.hole_equals_bit"
+ ],
+ "lat.s17.03-mud-parameters-filtration-density": [
+  "misc.heavy_mud_harmless"
+ ],
+ "lat.s17.04-filtrate-salinity-resistivity": [
+  "misc.close_filtrate_always_bad"
+ ],
+ "lat.s17.05-technical-water": [
+  "misc.heavy_mud_harmless"
+ ],
+ "lat.s17.06-non-filtering-mud": [
+  "misc.no_invasion_always_better"
+ ],
+ "lat.s18.01-section-collector-types": [
+  "misc.carbonates_only_fractured"
+ ],
+ "lat.s18.02-geophysical-collector-classes": [
+  "misc.terrigenous_all_alike"
+ ],
+ "lat.s18.03-four-method-groups": [
+  "misc.same_complex_any_well"
+ ],
+ "lat.s18.04-sp-gamma-clay": [
+  "misc.sp_gm_interchangeable"
+ ],
+ "lat.s18.05-productivity-assessment": [
+  "misc.productivity_one_method"
+ ],
+ "lat.s18.06-wider-scope-reliability": [
+  "misc.same_complex_any_well"
+ ],
+ "lat.s18.07-problems-86-89": [],
+ "lat.s19.01-two-operations": [],
+ "lat.s19.02-ambiguity-conditional-column": [
+  "misc.log_unique_lithology"
+ ],
+ "lat.s19.03-table-21-signs": [
+  "misc.log_unique_lithology"
+ ],
+ "lat.s19.04-clay-gypsum-effects": [],
+ "lat.s19.05-sufficient-methods": [
+  "misc.same_complex_any_well"
+ ],
+ "lat.s19.06-fig68-problems": [],
+ "lat.s20.01-collector-premise": [
+  "misc.collector_one_measurement"
+ ],
+ "lat.s20.02-direct-signs-mud": [
+  "misc.thick_mudcake_better"
+ ],
+ "lat.s20.03-radial-gradient": [
+  "misc.no_gradient_no_reservoir"
+ ],
+ "lat.s20.04-dynamic-methods": [
+  "misc.collector_one_measurement"
+ ],
+ "lat.s20.05-critical-permeability": [
+  "misc.reservoir_limit_universal"
+ ],
+ "lat.s20.06-from-rentable-flow-to-parameter-level": [
+  "misc.cutoff_by_eye"
+ ],
+ "lat.s20.07-effective-thickness-methods-note": [
+  "misc.sp_gm_any_terrigenous"
+ ],
+ "lat.s20.08-saturation-character-principle": [
+  "misc.productivity_one_method"
+ ],
+ "lat.s20.09-clean-high-porosity": [
+  "misc.apparent_resistivity_decides"
+ ],
+ "lat.s20.10-overlapping-ranges-three-ways": [
+  "misc.high_res_oil"
+ ],
+ "lat.s20.11-palette-fig69": [
+  "misc.high_res_oil"
+ ],
+ "lat.s20.12-examples-46-47": [
+  "misc.high_res_oil"
+ ],
+ "lat.s20.13-critical-pn-kv": [
+  "misc.any_oil_saturation_pure_oil"
+ ],
+ "lat.s20.14-two-ways-critical": [
+  "misc.thresholds_from_tests_only"
+ ],
+ "lat.s20.15-example-48-fig70": [
+  "misc.owc_sharp"
+ ],
+ "lat.s20.16-examples-49-50": [
+  "misc.single_pn_threshold"
+ ],
+ "lat.s20.17-examples-51-53-table22": [
+  "misc.single_pn_threshold"
+ ],
+ "lat.s20.18-problems-92-95": [
+  "misc.model_knows"
+ ],
+ "lat.s20.19-hef-homogeneous": [
+  "misc.hef_equals_reservoir_thickness"
+ ],
+ "lat.s20.20-vnk-transition-zone": [
+  "misc.owc_sharp"
+ ],
+ "lat.s20.21-gnk-neutron": [
+  "misc.single_gas_contact_measurement"
+ ],
+ "lat.s20.22-nonreservoir-interlayers": [
+  "misc.every_interlayer_visible"
+ ],
+ "lat.s20.23-thin-layered-resistivity-method": [
+  "misc.thin_bed_thickness_read"
+ ],
+ "lat.s20.24-thin-layered-sp-method-fig72": [
+  "misc.alpha_sp_equals_share"
+ ],
+ "lat.s20.25-dense-layers-in-pack": [
+  "misc.dense_layers_all_counted"
+ ],
+ "lat.s20.26-problems-96-100": [],
+ "lat.s20.27-problems-101-103": [],
+ "lat.s20.28-carbonate-features": [
+  "misc.terrigenous_methods_to_carbonates"
+ ],
+ "lat.s20.29-normalization-fig76": [
+  "misc.high_res_oil"
+ ],
+ "lat.s20.30-example-54": [],
+ "lat.s20.31-kp-star-carbonate-fig77-table23": [
+  "misc.kp_star_universal"
+ ],
+ "lat.s20.32-problems-104-108": [],
+ "lat.s21.01-complex-collectors": [
+  "misc.complex_reservoir_as_intergranular"
+ ],
+ "lat.s21.02-fracture-collector": [
+  "misc.complex_reservoir_as_intergranular"
+ ],
+ "lat.s21.03-fracture-standard-gis": [
+  "misc.complex_reservoir_as_intergranular"
+ ],
+ "lat.s21.04-fracture-resistivity-two-solutions": [],
+ "lat.s21.05-fracture-acoustic-sp": [],
+ "lat.s21.06-vug-fracture-collector": [
+  "misc.fracture_vug_same_effect"
+ ],
+ "lat.s21.07-vug-fracture-standard-gis": [
+  "misc.complex_reservoir_as_intergranular"
+ ],
+ "lat.s21.08-log-impact-log-variant-a": [
+  "misc.fracture_one_measurement"
+ ],
+ "lat.s21.09-log-impact-log-variant-b": [],
+ "lat.s21.10-nmr": [],
+ "lat.s21.11-mixed-type-saturation": [
+  "misc.complex_reservoir_as_intergranular"
+ ],
+ "lat.s21.12-vug-fracture-productivity": [],
+ "lat.s21.13-problems": [],
+ "lat.s22.01-porosity-kinds-by-method": [
+  "misc.one_porosity_all_methods"
+ ],
+ "lat.s22.02-formation-water-resistivity-from-sp": [
+  "misc.water_resistivity_only_analysis"
+ ],
+ "lat.s22.03-porosity-from-undisturbed-resistivity": [
+  "misc.resistivity_transfers_to_deposit"
+ ],
+ "lat.s22.04-porosity-from-flushed-zone": [
+  "misc.no_residual_oil_in_water_bed"
+ ],
+ "lat.s22.05-q-parameter": [
+  "misc.q_is_bed_property"
+ ],
+ "lat.s22.06-porosity-from-invaded-zone": [
+  "misc.invaded_zone_pure_filtrate"
+ ],
+ "lat.s22.07-fracture-porosity": [
+  "misc.fracture_one_measurement"
+ ],
+ "lat.s22.08-secondary-porosity": [
+  "misc.acoustic_total_porosity"
+ ],
+ "lat.s22.09-crossplot-complex-matrix": [
+  "misc.one_porosity_method_enough"
+ ],
+ "lat.s22.10-example-56-reference-points": [
+  "misc.reference_points_by_guess"
+ ],
+ "lat.s22.11-porosity-from-sp": [
+  "misc.sp_measures_porosity"
+ ],
+ "lat.s22.12-problems-112-119": [],
+ "lat.s22.13-problems-120-123": [],
+ "lat.s23.01-saturation-parameter": [
+  "misc.saturation_from_one_log"
+ ],
+ "lat.s23.02-procedure": [],
+ "lat.s23.03-layered-clay": [
+  "misc.layered_clay_resistivity_equal"
+ ],
+ "lat.s23.04-avg-water-resistivity": [],
+ "lat.s23.05-neutron-gas-applicability": [],
+ "lat.s23.06-neutron-gas-formulas": [],
+ "lat.s23.07-three-phase": [],
+ "lat.s23.08-problems": [],
+ "lat.s24.01-two-approaches": [
+  "misc.reliability_only_by_core"
+ ],
+ "lat.s24.02-reference-set": [
+  "misc.reliability_only_by_core"
+ ],
+ "lat.s24.03-expected-distributions": [
+  "misc.complex_processing_better"
+ ],
+ "lat.s24.04-variation-coefficient": [],
+ "lat.s24.05-criteria-table": [],
+ "lat.s24.06-efficiency-beta": [],
+ "lat.s24.07-problem-129": [],
+ "lat.s24.08-problem-130": [],
+ "lat.s25.01-why-permeability": [],
+ "lat.s25.02-two-ways": [],
+ "lat.s25.03-resistivity-theory": [],
+ "lat.s25.04-simplified-and-empirical": [
+  "misc.single_pn_threshold"
+ ],
+ "lat.s25.05-resistivity-procedure": [
+  "misc.resistivity_method_any_saturation"
+ ],
+ "lat.s25.06-sp-gm-basis": [
+  "misc.sp_gm_permeability_any"
+ ],
+ "lat.s25.07-sp-gm-procedure": [],
+ "lat.s25.08-fig87-correlations": [
+  "misc.model_knows"
+ ],
+ "lat.s25.09-problems": [],
+ "lat.chvi.01-goals-residual-gas": [
+  "misc.gas_log_gives_saturation"
+ ],
+ "lat.chvi.02-total-gas-degassing": [
+  "misc.gas_log_gives_saturation"
+ ],
+ "lat.chvi.03-reduced-gas-dilution": [
+  "misc.high_total_gas_much_gas"
+ ],
+ "lat.chvi.04-interpretation-scheme-anomaly": [
+  "misc.gas_anomaly_productive"
+ ],
+ "lat.chvi.05-component-analysis": [
+  "misc.components_tell_water"
+ ],
+ "lat.chvi.06-residual-content-nomogram": [
+  "misc.universal_nomogram"
+ ],
+ "lat.chvi.07-distortions-of-gas-logs": [
+  "misc.gas_anomaly_productive"
+ ],
+ "lat.chvi.08-practice-problems": [
+  "misc.problems_by_formulas_only"
+ ]
+}
