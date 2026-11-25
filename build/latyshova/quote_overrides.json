@@ -1,0 +1,12 @@
+{
+ "_comment": "claim id -> дословный фрагмент ИСХОДНОГО md той же страницы (там OCR-транслитерация); читаемая цитата остаётся в quote_original. Применяется tools/to_organizer_schema.py",
+ "overrides": {
+  "lat.s01.30-problems-10-15#c1": "rpaCTbopa IIpoHHkaet B IIaCT.",
+  "lat.s01.30-problems-10-15#c3": "HaII6OJIee cyIeCTBeHHO pa3JIuHne MeJy IIOT-HbIMN HIN TpeIHHbIMN (KaBepHOBbIMN) IIOPOdAMN.",
+  "lat.s05.11-example-22#c3": "= 40\\cdot 2,2 = 88\\mathrm{OM}\\cdot \\mathrm{M}",
+  "lat.s05.15-example-24#c3": "HN C OJHO H3 HMeIOUHXcR YeTbIpx IaTeTOK KpHBaR He COBMeIaETcR, HO paCIOJIaRaTeC MeKdy KpHBbIMn IaTeTOK MoJyIeN D/dc = 4 n D/dc = 8.",
+  "lat.s20.27-problems-101-103#c2": "BbUHcJIHTb, KaKa OIIb6a B OIIpeJIeHHN 3ΦΦeKTHBHO TOnIIHHb NaKH 6yIeT dOnyIeHa",
+  "lat.s20.27-problems-101-103#c3": "\\Delta T_{\\mathrm{ex}} = 170\\mathrm{MKC / M}",
+  "lat.s20.29-normalization-fig76#c9": "\\rho_{\\mathrm{n}} = 0,05 \\mathrm{OM} \\cdot \\mathrm{M}; t^{0} = 20^{\\circ} \\mathrm{C}"
+ }
+}

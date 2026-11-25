@@ -112,10 +112,17 @@ from difflib import SequenceMatcher
 rawtxt = next((ROOT / "chapters" / ch).glob("*.md")).read_text(); rp = re.split(r"<!-- page (\d+) -->", rawtxt)
 RP = {int(rp[i]): re.sub(r"\s+", " ", rp[i + 1]) for i in range(1, len(rp), 2)}
 strip = lambda t: re.sub(r"[«»\"'`]", "", t)
+# ручные замены цитат (build/<ch>/quote_overrides.json): для утверждений, где автоподбор общего фрагмента не сработал (исходный md страницы = OCR-транслитерация)
+_ovp = B / "quote_overrides.json"
+OV = json.load(open(_ovp))["overrides"] if _ovp.exists() else {}
 for n in out:
     for c in n["claims"]:
         if c["source_kind"] == "figure_description_model": continue
         page = RP.get(c["page_pdf"], "")
+        if c["id"] in OV:
+            assert norm(OV[c["id"]]) in norm(page), f"override {c['id']}: фрагмента нет на стр. {c['page_pdf']} исходного md"
+            c["quote_original"] = c["quote"]; c["quote"] = OV[c["id"]]; c["needs_scan"] = True; gaps["quote_manual_override"] += 1
+            continue
         if norm(c["quote"]) in norm(page): continue
         a = strip(re.sub(r"\s+", " ", c["quote"])).lower(); b = strip(page).lower()
         m = SequenceMatcher(None, a, b, autojunk=False).find_longest_match(0, len(a), 0, len(b))

@@ -5787,14 +5787,15 @@
      "kind": "observation",
      "page_pdf": 14,
      "page_print": null,
-     "quote": "Фильтрат глинистого раствора проникает в пласт.",
+     "quote": "rpaCTbopa IIpoHHkaet B IIaCT.",
      "source_kind": "task",
      "by_model": false,
      "unit_ids": [
       "p014-44"
      ],
      "ocr_note": "Числа задачи 10 (0,04; 20; 3; 1,2; 8) прочитаны по скану стр. 14.",
-     "needs_scan": true
+     "needs_scan": true,
+     "quote_original": "Фильтрат глинистого раствора проникает в пласт."
     },
     {
      "id": "lat.s01.30-problems-10-15#c2",
@@ -5817,12 +5818,13 @@
      "kind": "observation",
      "page_pdf": 14,
      "page_print": null,
-     "quote": "Определить условия вскрытия коллекторов, при которых наиболее существенно различие между плотными или трещинными (каверновыми) породами.",
+     "quote": "HaII6OJIee cyIeCTBeHHO pa3JIuHne MeJy IIOT-HbIMN HIN TpeIHHbIMN (KaBepHOBbIMN) IIOPOdAMN.",
      "source_kind": "task",
      "by_model": false,
      "unit_ids": [
       "p014-44"
      ],
+     "quote_original": "Определить условия вскрытия коллекторов, при которых наиболее существенно различие между плотными или трещинными (каверновыми) породами.",
      "needs_scan": true
     }
    ],
@@ -15722,13 +15724,14 @@
      "kind": "observation",
      "page_pdf": 33,
      "page_print": null,
-     "quote": "40∙2,2 = 88 Ом∙м",
+     "quote": "= 40\\cdot 2,2 = 88\\mathrm{OM}\\cdot \\mathrm{M}",
      "source_kind": "figure_caption",
      "by_model": false,
      "unit_ids": [
       "p033-01"
      ],
      "ocr_note": "Арифметика автора верна: 40*2,2=88.",
+     "quote_original": "40∙2,2 = 88 Ом∙м",
      "needs_scan": true
     }
    ],
@@ -16462,12 +16465,13 @@
      "kind": "observation",
      "page_pdf": 35,
      "page_print": null,
-     "quote": "Устанавливают, что ни с одной из имеющихся четырех палеток кривая не совмещается, но располагается",
+     "quote": "HN C OJHO H3 HMeIOUHXcR YeTbIpx IaTeTOK KpHBaR He COBMeIaETcR, HO paCIOJIaRaTeC MeKdy KpHBbIMn IaTeTOK MoJyIeN D/dc = 4 n D/dc = 8.",
      "source_kind": "figure_caption",
      "by_model": false,
      "unit_ids": [
       "p035-01"
      ],
+     "quote_original": "Устанавливают, что ни с одной из имеющихся четырех палеток кривая не совмещается, но располагается",
      "needs_scan": true
     },
     {
@@ -50606,12 +50610,13 @@
      "kind": "observation",
      "page_pdf": 104,
      "page_print": null,
-     "quote": "какая ошибка в определении эффективной толщины пачки будет допущена",
+     "quote": "BbUHcJIHTb, KaKa OIIb6a B OIIpeJIeHHN 3ΦΦeKTHBHO TOnIIHHb NaKH 6yIeT dOnyIeHa",
      "source_kind": "figure_caption",
      "by_model": false,
      "unit_ids": [
       "p104-03"
      ],
+     "quote_original": "какая ошибка в определении эффективной толщины пачки будет допущена",
      "needs_scan": true
     },
     {
@@ -50620,12 +50625,13 @@
      "kind": "observation",
      "page_pdf": 104,
      "page_print": null,
-     "quote": "ΔТ ск = 170мкс/м",
+     "quote": "\\Delta T_{\\mathrm{ex}} = 170\\mathrm{MKC / M}",
      "source_kind": "figure_caption",
      "by_model": false,
      "unit_ids": [
       "p104-03"
      ],
+     "quote_original": "ΔТ ск = 170мкс/м",
      "needs_scan": true
     },
     {
@@ -51108,7 +51114,7 @@
      "kind": "observation",
      "page_pdf": 106,
      "page_print": null,
-     "quote": "Рис.76. Комплекс диаграмм ГИС по участку скважины карбонатного разреза:",
+     "quote": "\\rho_{\\mathrm{n}} = 0,05 \\mathrm{OM} \\cdot \\mathrm{M}; t^{0} = 20^{\\circ} \\mathrm{C}",
      "source_kind": "figure_caption",
      "by_model": true,
      "unit_ids": [
@@ -51116,7 +51122,8 @@
       "p106-01"
      ],
      "ocr_note": "Подпись на стр. 106 прочитана по скану: ρв = 0,05 Ом·м (индекс неразборчив), t = 20 °C, ρр = 1,2÷1,3 Ом·м, δр = 1,2 г/см³; в OCR единицы плотности «т/см³», по скану г/см³. Сам рисунок на стр. 105 (блоки FORMAT 2, p105-07 и p105-08) содержит нечитаемые шкалы; числа из блоков не используются.",
-     "needs_scan": true
+     "needs_scan": true,
+     "quote_original": "Рис.76. Комплекс диаграмм ГИС по участку скважины карбонатного разреза:"
     }
    ],
    "links": [
