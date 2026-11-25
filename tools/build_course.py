@@ -494,9 +494,10 @@ class Build:
                 if t.get("v") == 2 and t["type"] == "single":  # v2: правильный вариант не должен дословно лежать в тексте шага (5 слов подряд)
                     W = lambda x: re.findall(r"[а-яёa-z0-9]+", x.lower()); aw = W(t["answer"])
                     txt = " ".join(W(" ".join([c["text"] for c in n["claims"]] + [v if isinstance(v, str) else " ".join(v) for v in (n.get("layers") or {}).values()])))
-                    if any(" ".join(aw[i:i + 5]) in txt for i in range(max(1, len(aw) - 4))) and len(aw) >= 5: ok = False; s.warn.append(f"ЗАДАНИЕ {t['id']}: ответ дословно в тексте шага")
+                    if any(" ".join(aw[i:i + 5]) in txt for i in range(max(1, len(aw) - 4))) and len(aw) >= 5: ok = False  # ответ дословно в тексте шага: задание снимается ниже
                 if not ok: s.warn.append(f"ЗАДАНИЕ {t['id']}: рассуждение без опоры basis или с утечкой ответа"); s.dropped = getattr(s, "dropped", 0) + 1
-                if ok or not s.cfg.get("drop_bad"): out.append(dict(t, node=nid, claim=f"{nid}#{b[0] if b else t['claim']}")); continue
+                if ok or not s.cfg.get("drop_bad"): out.append(dict(t, node=nid, claim=f"{nid}#{b[0] if b else t['claim']}"))
+                continue
             if not t.get("claim"): s.warn.append(f"ЗАДАНИЕ {t['id']}: нет поля claim, пропущено"); s.dropped = getattr(s, "dropped", 0) + 1; continue
             if t["claim"] not in {x["id"] for x in n["claims"]}: s.warn.append(f"ЗАДАНИЕ {t['id']}: нет утверждения {t['claim']}, пропущено"); s.dropped = getattr(s, "dropped", 0) + 1; continue
             key = f"{nid}#{t['claim']}"; c = s.claim(key); txt = nrm(c["text"])
