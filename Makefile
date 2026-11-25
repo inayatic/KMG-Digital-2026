@@ -12,7 +12,9 @@ check:
 
 course: check out/$(CHAPTER)/index.html
 
-$(B)/units.json: $(SRC)
+$(B)/clean.md $(B)/clean-report.json: $(SRC) tools/clean_ref.py
+	python3 -I tools/clean_ref.py $(CHAPTER)
+$(B)/units.json: $(B)/clean.md
 	$(STAGE_CMD) units $(CHAPTER)
 $(B)/nodes.json $(B)/coverage.md: $(B)/units.json $(PACK)
 	$(STAGE_CMD) nodes $(CHAPTER)
