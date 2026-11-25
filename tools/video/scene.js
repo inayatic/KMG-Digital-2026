@@ -201,7 +201,7 @@ const VIEWS = {
     const lx = st.x + 10, ly = st.y + 10; [['#2b79b5', 'русло'], ['#C9A15A', 'отложения'], ['#233326', 'пойма']].forEach(([c, l], i) => { ctx.fillStyle = c; ctx.fillRect(lx, ly + i * 50, 36, 36); ctx.fillStyle = col.text; ctx.font = `34px ${FONT}`; ctx.textAlign = 'left'; ctx.textBaseline = 'middle'; ctx.fillText(l, lx + 50, ly + i * 50 + 20); });
   },
   column(st, p, u) { // стратиграфическая колонка снизу вверх; слои из params.layers [{label,color,h,pattern}]
-    const col = C(), L2 = p.layers || [], tot = L2.reduce((s, l) => s + (l.h || 1), 0), cw = Math.min(st.w * (st.w < 1000 ? 0.34 : 0.38), 380), cx = st.x + (p.left ? 20 : st.w * 0.12), top = st.y + 20, H2 = st.h - 70;
+    const col = C(), L2 = p.layers || [], tot = L2.reduce((s, l) => s + (l.h || 1), 0), cw = Math.min(st.w * (st.w < 1000 ? 0.34 : 0.38), 380), cx = st.x + (p.left ? 20 : st.w * 0.12), top = st.y + 20, H2 = st.h - (p.note ? 110 : 70);
     let yb = top + H2; const step = p.step || 0.9;
     L2.forEach((l, i) => {
       const a = smooth((u - i * step) / 0.6), h = (l.h || 1) / tot * H2 * a; if (a <= 0) { yb -= (l.h || 1) / tot * H2; return; }
