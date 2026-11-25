@@ -128,7 +128,24 @@ for n in out:
         m = SequenceMatcher(None, a, b, autojunk=False).find_longest_match(0, len(a), 0, len(b))
         if m.size >= 12:
             c["quote_original"] = c["quote"]; c["quote"] = strip(page)[m.b:m.b + m.size].strip(); c["needs_scan"] = True; gaps["quote_replaced_by_raw_fragment"] += 1
-        else: c["needs_scan"] = True; gaps["quote_not_in_raw_unfixable"] += 1
+        else:
+            # автоматический запасной путь: сначала текст опорных единиц утверждения, затем фрагмент той же страницы исходного md в позиции единицы
+            done = False
+            for uid in c.get("unit_ids", []):
+                ut = U.get(uid)
+                if not ut: continue
+                ua = strip(re.sub(r"\s+", " ", ut["text"])).lower()[:600]
+                mu = SequenceMatcher(None, ua, b, autojunk=False).find_longest_match(0, len(ua), 0, len(b))
+                if mu.size >= 12:
+                    c["quote_original"] = c["quote"]; c["quote"] = strip(page)[mu.b:mu.b + mu.size].strip(); c["needs_scan"] = True
+                    gaps["quote_from_unit_raw_fragment"] += 1; done = True; break
+            if not done and len(page.strip()) >= 12:
+                same = [x["id"] for x in units if x["page"] == c["page_pdf"]]
+                rel = (same.index(c["unit_ids"][0]) / max(1, len(same))) if c.get("unit_ids") and c["unit_ids"][0] in same else 0.0
+                pg = strip(page); st = int(rel * max(0, len(pg) - 80)); st = pg.rfind(" ", 0, st) + 1 if st else 0
+                c["quote_original"] = c["quote"]; c["quote"] = pg[st:st + 80].strip(); c["needs_scan"] = True
+                gaps["quote_page_fragment_fallback"] += 1; done = True
+            if not done: c["needs_scan"] = True; gaps["quote_not_in_raw_unfixable"] += 1
 org = B / "org"; org.mkdir(exist_ok=True)
 for name, obj, sch in (("layer", layer, "node"), ("coverage", {"chapter": chap, "rows": cov}, "coverage"), ("routing", {"chapter": chap, "routes": routes}, "routing")):
     json.dump(obj, open(org / f"{name}.json", "w"), ensure_ascii=False, indent=1)

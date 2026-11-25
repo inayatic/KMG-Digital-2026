@@ -14,8 +14,7 @@
 - quote_from_unit: 28
 - data_meaning_missing: 21
 - quote_extended: 5
-- quote_not_in_raw_unfixable: 2
+- quote_from_unit_raw_fragment: 2
 
-## Цитаты, которых нет в ИСХОДНОМ md (только в нашем clean.md): 2
-- bar.ch2b.03-porosity-thinsection#c6 (стр. 125)
-- bar.ch2b.12-clastic-composition-macro#c10 (стр. 132)
+## Цитаты, которых нет в ИСХОДНОМ md (только в нашем clean.md): 0
+

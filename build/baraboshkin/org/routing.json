@@ -9,10 +9,11 @@
     "invisible": 0,
     "scale": 0,
     "counterintuitive": 0,
-    "cause_effect": 0
+    "cause_effect": 1
    },
    "template": null,
-   "why": "Одна тезисная мысль без процесса и визуальной динамики."
+   "why": "Один тезис о цепочке керн → описание → предсказание, без процесса и визуальной динамики; формат «карточки» подходит. Мотивацию можно позже использовать как крючок для шортса.",
+   "scored": true
   },
   {
    "node_id": "bar.s00-front.02-manual-audience-goal",
@@ -22,10 +23,12 @@
     "invisible": 0,
     "scale": 0,
     "counterintuitive": 0,
-    "cause_effect": 0
+    "cause_effect": 1
    },
    "template": null,
-   "why": "Организационная информация, визуальной динамики нет."
+   "why": "Организационная информация о входах и выходах работы, динамики нет; тип Пр (порядок и входные данные) закрывает короткий текст. «Карточки» были бы допустимы как второй формат.",
+   "scored": true,
+   "secondary_format": "текст"
   },
   {
    "node_id": "bar.s00-front.03-manual-structure",
@@ -38,7 +41,9 @@
     "cause_effect": 0
    },
    "template": null,
-   "why": "Навигационная схема: можно показать как дерево."
+   "why": "Это навигационная схема, а не процесс. Тип Пр: порядок действий в пособии. Видеоёмкости нет, подходят карточки в виде дерева.",
+   "scored": true,
+   "secondary_format": "текст"
   },
   {
    "node_id": "bar.s00-front.04-figure-table-index",
@@ -51,7 +56,9 @@
     "cause_effect": 0
    },
    "template": null,
-   "why": "Справочный материал, не видеоёмкий."
+   "why": "Справочная навигация без данных. Тип по определению организаторов ближе всего к Пр (использовать перечень для поиска), а не к Р: признаков на фото или кривых здесь нет. Видеоёмкости нет, формат «карточки».",
+   "scored": true,
+   "secondary_format": "текст"
   },
   {
    "node_id": "bar.ch1a.01-scope",
@@ -61,10 +68,11 @@
     "invisible": 0,
     "scale": 0,
     "counterintuitive": 0,
-    "cause_effect": 0
+    "cause_effect": 1
    },
    "template": null,
-   "why": "Вводная рамка без процесса и без визуального образа: достаточно текста/карточки."
+   "why": "Вводная рамка без процесса и образа: тип Н (границы выбора), видеоёмкость почти нулевая, хватает текста.",
+   "scored": true
   },
   {
    "node_id": "bar.ch1a.02-river-morphology",
@@ -74,309 +82,350 @@
     "invisible": 0,
     "scale": 0,
     "counterintuitive": 0,
-    "cause_effect": 0
+    "cause_effect": 2
    },
    "template": null,
-   "why": "Классификация (тип трудности Н): четыре типа с признаками; лучше всего карточки с рис. 1.1."
+   "why": "Короткая классификация «причина → тип», нужен рис. 1.1 для узнавания типов: карточки с повторением; видеоёмкость низкая.",
+   "scored": true
   },
   {
    "node_id": "bar.ch1a.03-meander-setting",
    "format": "длинное видео",
    "video_scores": {
-    "time": 0,
-    "invisible": 0,
-    "scale": 0,
+    "time": 1,
+    "invisible": 1,
+    "scale": 1,
     "counterintuitive": 0,
-    "cause_effect": 0
+    "cause_effect": 2
    },
    "template": null,
-   "why": "Невидимое становится видимым: блок-диаграмма реки и разреза; причина (уклон, растительность) → следствие (низкая аккумуляция)."
+   "why": "Тип М: условия → процесс на блок-диаграмме (рис. 1.4); причина и следствие и скачок от блока к разрезу делают длинное видео с анимацией уместным.",
+   "scored": true,
+   "secondary_format": "интерактив"
   },
   {
    "node_id": "bar.ch1a.04-meander-flood-channel",
    "format": "длинное видео",
    "video_scores": {
-    "time": 0,
-    "invisible": 0,
-    "scale": 0,
+    "time": 2,
+    "invisible": 2,
+    "scale": 1,
     "counterintuitive": 0,
-    "cause_effect": 0
+    "cause_effect": 2
    },
    "template": null,
-   "why": "Изменение во времени: миграция русла и вертикальная последовательность; визуальные фото керна (В)."
+   "why": "Невидимая во времени миграция русла превращается в последовательность разреза: ключ — анимация, затем карточки признаков (фото рис. 1.2–1.6).",
+   "scored": true,
+   "secondary_format": "карточки"
   },
   {
    "node_id": "bar.ch1a.05-meander-bar-oxbow",
    "format": "карточки",
    "video_scores": {
-    "time": 0,
-    "invisible": 0,
-    "scale": 0,
-    "counterintuitive": 0,
-    "cause_effect": 0
+    "time": 1,
+    "invisible": 1,
+    "scale": 1,
+    "counterintuitive": 1,
+    "cause_effect": 2
    },
    "template": null,
-   "why": "Различение двух похожих фаций (В/И): карточки «признак → фация» с фото рис. 1.7."
+   "why": "Тип М/Р: процесс простой, главное — отличить старичную фацию от пойменной по признакам; подходят карточки, видео вторично.",
+   "scored": true
   },
   {
    "node_id": "bar.ch1a.06-meander-diagnostics",
    "format": "практикум на данных",
    "video_scores": {
     "time": 0,
-    "invisible": 0,
-    "scale": 0,
+    "invisible": 1,
+    "scale": 1,
     "counterintuitive": 0,
-    "cause_effect": 0
+    "cause_effect": 1
    },
    "template": null,
-   "why": "Признаки Пр/И: сопоставить разрез и срез куба 3D; причина→следствие (эрозионная подошва → отражение)."
+   "why": "Тип Р (набор признаков) с И (сейсмика): практикум по признакам на керне и карте 3D-сейсмики; видеоёмкость низкая.",
+   "scored": true,
+   "secondary_format": "карточки"
   },
   {
    "node_id": "bar.ch1a.07-braided-channel",
    "format": "длинное видео",
    "video_scores": {
-    "time": 0,
-    "invisible": 0,
-    "scale": 0,
-    "counterintuitive": 0,
-    "cause_effect": 0
+    "time": 2,
+    "invisible": 1,
+    "scale": 1,
+    "counterintuitive": 1,
+    "cause_effect": 2
    },
    "template": null,
-   "why": "Изменение во времени: забивание русла и рождение новых; контринтуитивность (бессистемный размер)."
+   "why": "Тип М: перегрузка → забивание → новые русла хорошо показывается анимацией во времени (рис. 1.9, 1.12); длинное видео.",
+   "scored": true
   },
   {
    "node_id": "bar.ch1a.08-braided-abandoned",
    "format": "шортс",
    "video_scores": {
-    "time": 0,
-    "invisible": 0,
+    "time": 2,
+    "invisible": 1,
     "scale": 0,
-    "counterintuitive": 0,
-    "cause_effect": 0
+    "counterintuitive": 1,
+    "cause_effect": 2
    },
    "template": null,
-   "why": "Контринтуитивность и сравнение двух типов (пласт vs шнур) в одном кадре."
+   "why": "Короткая цепочка причина → следствие с образом шнура; умещается в шортс с анимацией разреза (рис. 1.13).",
+   "scored": true
   },
   {
    "node_id": "bar.ch1a.09-braided-diagnostics",
    "format": "практикум на данных",
    "video_scores": {
     "time": 0,
-    "invisible": 0,
-    "scale": 0,
-    "counterintuitive": 0,
-    "cause_effect": 0
+    "invisible": 1,
+    "scale": 1,
+    "counterintuitive": 1,
+    "cause_effect": 1
    },
    "template": null,
-   "why": "Пр/И: на разрезе и каротаже искать двойную эрозионную поверхность; причина→следствие для миграции флюидов."
+   "why": "Тип Р: признаки надо узнавать на керне и кривой — практикум на данных с проверкой; видео второстепенно.",
+   "scored": true,
+   "secondary_format": "карточки"
   },
   {
    "node_id": "bar.ch1a.10-delta-basics",
    "format": "длинное видео",
    "video_scores": {
     "time": 0,
-    "invisible": 0,
-    "scale": 0,
+    "invisible": 2,
+    "scale": 2,
     "counterintuitive": 0,
-    "cause_effect": 0
+    "cause_effect": 2
    },
    "template": null,
-   "why": "Скачок масштаба (конус → части) и невидимое становится видимым: подводные части; рис. 1.16 как интерактив."
+   "why": "Главное — пространственное строение конуса и положение частей: разрез и блок-диаграмма (рис. 1.14, 1.16); длинное видео со скачком масштаба, интерактив для сечений.",
+   "scored": true,
+   "secondary_format": "интерактив"
   },
   {
    "node_id": "bar.ch1a.11-delta-general",
    "format": "текст",
    "video_scores": {
-    "time": 0,
+    "time": 2,
     "invisible": 0,
-    "scale": 0,
+    "scale": 1,
     "counterintuitive": 0,
-    "cause_effect": 0
+    "cause_effect": 1
    },
    "template": null,
-   "why": "Перечни и определения (И/Н) без процесса; поддерживают карточки; рис. 1.15 — иллюстрация."
+   "why": "Тип В: цикличность во времени, но узел обзорный и терминологический; текст с картой парагенезов, при желании анимация стадий.",
+   "scored": true,
+   "secondary_format": "карточки"
   },
   {
    "node_id": "bar.ch1a.12-delta-abandonment-general",
    "format": "карточки",
    "video_scores": {
     "time": 0,
-    "invisible": 0,
-    "scale": 0,
+    "invisible": 1,
+    "scale": 1,
     "counterintuitive": 0,
-    "cause_effect": 0
+    "cause_effect": 1
    },
    "template": null,
-   "why": "Четыре роли слоя — перечень для запоминания (Пр)."
+   "why": "Тип И (слой → условия бассейна) без выраженной динамики: короткие карточки; видеоёмкость низкая.",
+   "scored": true
   },
   {
    "node_id": "bar.ch1a.13-delta-bay-fill",
    "format": "длинное видео",
    "video_scores": {
-    "time": 0,
-    "invisible": 0,
-    "scale": 0,
+    "time": 2,
+    "invisible": 1,
+    "scale": 1,
     "counterintuitive": 0,
-    "cause_effect": 0
+    "cause_effect": 2
    },
    "template": null,
-   "why": "Изменение во времени: заполнение залива снизу вверх; причина (паводок) → следствие."
+   "why": "Тип В: заполнение залива во времени с изменением разреза снизу вверх — анимация эволюции подходит для длинного видео, карточки закрепляют признаки.",
+   "scored": true,
+   "secondary_format": "карточки"
   },
   {
    "node_id": "bar.ch1a.14-delta-washover-mouth",
    "format": "карточки",
    "video_scores": {
-    "time": 0,
-    "invisible": 0,
-    "scale": 0,
-    "counterintuitive": 0,
-    "cause_effect": 0
+    "time": 1,
+    "invisible": 1,
+    "scale": 1,
+    "counterintuitive": 1,
+    "cause_effect": 1
    },
    "template": null,
-   "why": "Четыре типа тел по профилю зернистости (В/И): карточки «профиль → тело»."
+   "why": "Тип Р: четыре подтипа различаются признаками, нужен справочный набор карточек; видеоёмкость средняя.",
+   "scored": true,
+   "secondary_format": "шортс"
   },
   {
    "node_id": "bar.ch1a.15-delta-channel",
    "format": "длинное видео",
    "video_scores": {
-    "time": 0,
-    "invisible": 0,
-    "scale": 0,
+    "time": 2,
+    "invisible": 1,
+    "scale": 1,
     "counterintuitive": 0,
-    "cause_effect": 0
+    "cause_effect": 2
    },
    "template": null,
-   "why": "Изменение во времени: авульсия и отмирание рукава; контринтуитивность «малая ширина»."
+   "why": "Тип Р с механизмом авульсии: длинное видео показывает рождение и отмирание рукава, карточки — признаки разреза.",
+   "scored": true,
+   "secondary_format": "карточки"
   },
   {
    "node_id": "bar.ch1a.16-delta-channel-log",
    "format": "интерактив",
    "video_scores": {
-    "time": 0,
-    "invisible": 0,
+    "time": 1,
+    "invisible": 1,
     "scale": 0,
-    "counterintuitive": 0,
-    "cause_effect": 0
+    "counterintuitive": 1,
+    "cause_effect": 2
    },
    "template": null,
-   "why": "П/И: пошаговый разбор лога с разворачиванием «факт → интерпретация»; невидимое становится видимым."
+   "why": "Тип И: учиться выводить интерпретацию из фактов по разрезу, интерактив «интерпретируй сам» с раскрытием авторской трактовки.",
+   "scored": true,
+   "secondary_format": "практикум на данных"
   },
   {
    "node_id": "bar.ch1a.17-delta-front-section",
    "format": "длинное видео",
    "video_scores": {
-    "time": 0,
-    "invisible": 0,
-    "scale": 0,
+    "time": 2,
+    "invisible": 1,
+    "scale": 1,
     "counterintuitive": 0,
-    "cause_effect": 0
+    "cause_effect": 2
    },
    "template": null,
-   "why": "Изменение во времени (progradation вверх) и пространство от основания фронта."
+   "why": "Тип Р/М: последовательность по мере приближения к устью удобно показать анимацией разреза; признаки закрепляются карточками.",
+   "scored": true,
+   "secondary_format": "карточки"
   },
   {
    "node_id": "bar.ch1a.18-delta-abandonment-section",
    "format": "практикум на данных",
    "video_scores": {
-    "time": 0,
-    "invisible": 0,
+    "time": 1,
+    "invisible": 1,
     "scale": 0,
     "counterintuitive": 0,
-    "cause_effect": 0
+    "cause_effect": 2
    },
    "template": null,
-   "why": "Пр: найти маркирующий горизонт на разрезе скважин и коррелировать."
+   "why": "Тип Р: признаки отмирания в разных зонах распознаются по керну и кривой; практикум на данных с подбором признака по зоне.",
+   "scored": true
   },
   {
    "node_id": "bar.ch1b.01-wave-delta-sections",
    "format": "шортс",
    "video_scores": {
-    "time": 0,
-    "invisible": 0,
+    "time": 2,
+    "invisible": 1,
     "scale": 0,
-    "counterintuitive": 0,
-    "cause_effect": 0
+    "counterintuitive": 1,
+    "cause_effect": 2
    },
    "template": null,
-   "why": "Три стадии разреза во времени (Рис. 1.23): изменение во времени, причина -> следствие."
+   "why": "Ведущий тип М: цепочка причина→следствие по стадиям (Рис. 1.23) хорошо ложится на короткую анимацию; признаки разреза закрепляются карточками.",
+   "scored": true,
+   "secondary_format": "карточки"
   },
   {
    "node_id": "bar.ch1b.02-tide-delta-channels",
    "format": "длинное видео",
    "video_scores": {
-    "time": 0,
-    "invisible": 0,
-    "scale": 0,
-    "counterintuitive": 0,
-    "cause_effect": 0
+    "time": 1,
+    "invisible": 1,
+    "scale": 1,
+    "counterintuitive": 1,
+    "cause_effect": 1
    },
    "template": null,
-   "why": "Рис. 1.24 и 1.25 — разрез и 3D-модель: невидимое становится видимым; причина (приливное течение) -> следствие."
+   "why": "Главное — узнать признаки разреза (Р) и связать их с приливными течениями; много разнородных рисунков и размеров удобно разбирать длинным видео.",
+   "scored": true,
+   "secondary_format": "карточки"
   },
   {
    "node_id": "bar.ch1b.03-tide-delta-plain-front",
    "format": "карточки",
    "video_scores": {
     "time": 0,
-    "invisible": 0,
-    "scale": 0,
+    "invisible": 1,
+    "scale": 1,
     "counterintuitive": 0,
-    "cause_effect": 0
+    "cause_effect": 1
    },
    "template": null,
-   "why": "Перечень фаций и размеров; сравнение климатических вариантов."
+   "why": "Распознавание набора признаков (Р) без динамики — карточки подходят лучше видео.",
+   "scored": true,
+   "secondary_format": "текст"
   },
   {
    "node_id": "bar.ch1b.04-lakes-intro",
    "format": "текст",
    "video_scores": {
     "time": 0,
-    "invisible": 0,
+    "invisible": 1,
     "scale": 0,
-    "counterintuitive": 0,
-    "cause_effect": 0
+    "counterintuitive": 1,
+    "cause_effect": 1
    },
    "template": null,
-   "why": "Обзорный узел с перечнем; видеоёмкость низкая."
+   "why": "Обзорный узел-классификация без одной процедуры или процесса; достаточно текста со ссылкой на рисунок модели.",
+   "scored": true
   },
   {
    "node_id": "bar.ch1b.05-lake-nearshore",
    "format": "карточки",
    "video_scores": {
     "time": 0,
-    "invisible": 0,
+    "invisible": 1,
     "scale": 0,
     "counterintuitive": 0,
-    "cause_effect": 0
+    "cause_effect": 1
    },
    "template": null,
-   "why": "Список фаций с признаками; сопоставление с фото керна (Рис. 1.27)."
+   "why": "Тип Р: узнавание фаций по описаниям и фото; карточки с признаками достаточны.",
+   "scored": true,
+   "secondary_format": "текст"
   },
   {
    "node_id": "bar.ch1b.06-lake-offshore-varves",
    "format": "шортс",
    "video_scores": {
-    "time": 0,
-    "invisible": 0,
+    "time": 2,
+    "invisible": 2,
     "scale": 0,
-    "counterintuitive": 0,
-    "cause_effect": 0
+    "counterintuitive": 1,
+    "cause_effect": 2
    },
    "template": null,
-   "why": "Годичный цикл варвы: изменение во времени, невидимое становится видимым."
+   "why": "Годовой цикл накопления ламин (изменение во времени, невидимое видно в срезе) — сильная идея для шортса.",
+   "scored": true,
+   "secondary_format": "карточки"
   },
   {
    "node_id": "bar.ch1b.07-lake-diagnostics",
    "format": "интерактив",
    "video_scores": {
     "time": 0,
-    "invisible": 0,
+    "invisible": 1,
     "scale": 0,
-    "counterintuitive": 0,
-    "cause_effect": 0
+    "counterintuitive": 1,
+    "cause_effect": 1
    },
    "template": null,
-   "why": "Чек-лист диагностики: решение «озеро/море» по набору признаков."
+   "why": "Распознавание по набору главных и второстепенных признаков (Р, Н) — интерактивная диагностика с выбором признаков.",
+   "scored": true,
+   "secondary_format": "карточки"
   },
   {
    "node_id": "bar.ch1b.08-coast-classification",
@@ -386,153 +435,177 @@
     "invisible": 0,
     "scale": 0,
     "counterintuitive": 0,
-    "cause_effect": 0
+    "cause_effect": 1
    },
    "template": null,
-   "why": "Три группы и пороги амплитуды приливов — компактная классификация."
+   "why": "Тип Ф: классификационная схема (Рис. 1.32), хорошо закрепляется карточками.",
+   "scored": true,
+   "secondary_format": "текст"
   },
   {
    "node_id": "bar.ch1b.09-wave-coast-offshore",
    "format": "длинное видео",
    "video_scores": {
-    "time": 0,
-    "invisible": 0,
-    "scale": 0,
-    "counterintuitive": 0,
-    "cause_effect": 0
+    "time": 1,
+    "invisible": 1,
+    "scale": 1,
+    "counterintuitive": 1,
+    "cause_effect": 2
    },
    "template": null,
-   "why": "Ряд фото керна Рис. 1.35–1.38: изменение сохранности текстуры, причина -> следствие."
+   "why": "Типы Р и М: по четырём фото (Рис. 1.34–1.38) виден ряд от неперемешанных до полностью биотурбированных слоёв.",
+   "scored": true,
+   "secondary_format": "интерактив"
   },
   {
    "node_id": "bar.ch1b.10-shoreface-foreshore",
    "format": "длинное видео",
    "video_scores": {
-    "time": 0,
-    "invisible": 0,
-    "scale": 0,
+    "time": 1,
+    "invisible": 1,
+    "scale": 1,
     "counterintuitive": 0,
-    "cause_effect": 0
+    "cause_effect": 1
    },
    "template": null,
-   "why": "Профиль «от моря к суше» — скачок масштаба, причина -> следствие."
+   "why": "Поперечный профиль зон (П) с переходом от одной фации к другой — удобен как схема в длинном видео.",
+   "scored": true,
+   "secondary_format": "карточки"
   },
   {
    "node_id": "bar.ch1b.11-tempestites",
    "format": "шортс",
    "video_scores": {
-    "time": 0,
-    "invisible": 0,
+    "time": 2,
+    "invisible": 1,
     "scale": 0,
     "counterintuitive": 0,
-    "cause_effect": 0
+    "cause_effect": 2
    },
    "template": null,
-   "why": "Событийный слой: шторм -> слой -> биотурбация; изменение во времени."
+   "why": "Последовательность шторм→спокойствие в одном слое хорошо показать шортсом.",
+   "scored": true,
+   "secondary_format": "карточки"
   },
   {
    "node_id": "bar.ch1b.12-nonbarred-barred-coasts",
    "format": "интерактив",
    "video_scores": {
     "time": 0,
-    "invisible": 0,
+    "invisible": 1,
     "scale": 0,
-    "counterintuitive": 0,
-    "cause_effect": 0
+    "counterintuitive": 1,
+    "cause_effect": 2
    },
    "template": null,
-   "why": "Сравнение трёх типов побережий по признакам (зернистость, биотурбация, течения)."
+   "why": "Сравнение типов по параметрам (энергия → разрез) — интерактивная таблица выбора.",
+   "scored": true,
+   "secondary_format": "карточки"
   },
   {
    "node_id": "bar.ch1b.13-barrier-islands-lagoons",
    "format": "длинное видео",
    "video_scores": {
-    "time": 0,
-    "invisible": 0,
-    "scale": 0,
-    "counterintuitive": 0,
-    "cause_effect": 0
+    "time": 2,
+    "invisible": 1,
+    "scale": 1,
+    "counterintuitive": 1,
+    "cause_effect": 2
    },
    "template": null,
-   "why": "Климатическое ветвление (гумидный/семиаридный): причина -> следствие; нужен ряд рисунков."
+   "why": "Эволюция лагуны от открытой к изолированной — изменение во времени, длинное видео.",
+   "scored": true,
+   "secondary_format": "карточки"
   },
   {
    "node_id": "bar.ch1b.14-washover",
    "format": "шортс",
    "video_scores": {
-    "time": 0,
-    "invisible": 0,
-    "scale": 0,
-    "counterintuitive": 0,
-    "cause_effect": 0
+    "time": 2,
+    "invisible": 1,
+    "scale": 1,
+    "counterintuitive": 1,
+    "cause_effect": 2
    },
    "template": null,
-   "why": "Прорыв барьера штормом: причина -> следствие, изменение во времени."
+   "why": "Событие прорыва и перенос осадка — короткий шортс причина→следствие.",
+   "scored": true,
+   "secondary_format": "карточки"
   },
   {
    "node_id": "bar.ch1b.15-cheniers-strandplains",
    "format": "практикум на данных",
    "video_scores": {
-    "time": 0,
-    "invisible": 0,
-    "scale": 0,
-    "counterintuitive": 0,
-    "cause_effect": 0
+    "time": 1,
+    "invisible": 2,
+    "scale": 1,
+    "counterintuitive": 1,
+    "cause_effect": 1
    },
    "template": null,
-   "why": "Поиск вытянутых песчаных тел в данных бурения (критерий автора)."
+   "why": "Выявить шеньер по скважинным данным — задача на пространство и распознавание, практикум.",
+   "scored": true,
+   "secondary_format": "интерактив"
   },
   {
    "node_id": "bar.ch1c.01-beach-far-transition-zone",
    "format": "карточки",
    "video_scores": {
     "time": 0,
-    "invisible": 0,
+    "invisible": 1,
     "scale": 0,
     "counterintuitive": 0,
-    "cause_effect": 0
+    "cause_effect": 1
    },
    "template": null,
-   "why": "Набор признаков по зонам: узнавание признаков, а не процесс во времени."
+   "why": "Основной тип Р: узнавание признаков по текстурам, карточки «признак → зона» подходят. Видеоёмкость низкая, процесса во времени почти нет.",
+   "scored": true,
+   "secondary_format": "интерактив"
   },
   {
    "node_id": "bar.ch1c.02-beach-shoreface-upper",
    "format": "карточки",
    "video_scores": {
-    "time": 0,
+    "time": 1,
     "invisible": 0,
     "scale": 0,
     "counterintuitive": 0,
-    "cause_effect": 0
+    "cause_effect": 1
    },
    "template": null,
-   "why": "Таблица признаков зон; рисунок со разрезом можно подать как иллюстрацию."
+   "why": "Тип Р: набор диагностических признаков по зонам, карточки с легендой Рис. 1.47. Движения и скачка масштаба мало.",
+   "scored": true,
+   "secondary_format": "текст"
   },
   {
    "node_id": "bar.ch1c.03-mixed-coast-tidal-inlet",
    "format": "интерактив",
    "video_scores": {
-    "time": 0,
-    "invisible": 0,
-    "scale": 0,
+    "time": 1,
+    "invisible": 1,
+    "scale": 1,
     "counterintuitive": 0,
-    "cause_effect": 0
+    "cause_effect": 2
    },
    "template": null,
-   "why": "Блок-диаграмма с обстановками I–IV: невидимая связь «протока → тело песка» становится видимой; можно показать миграцию протоки."
+   "why": "Главное трудно увидеть пространственно (блок-диаграмма, разрез через протоку), интерактив с секущим разрезом подходит; признаки закрепить карточками.",
+   "scored": true,
+   "secondary_format": "карточки"
   },
   {
    "node_id": "bar.ch1c.04-mixed-lagoon-tidal-deltas",
    "format": "интерактив",
    "video_scores": {
-    "time": 0,
-    "invisible": 0,
-    "scale": 0,
-    "counterintuitive": 0,
-    "cause_effect": 0
+    "time": 1,
+    "invisible": 1,
+    "scale": 1,
+    "counterintuitive": 1,
+    "cause_effect": 2
    },
    "template": null,
-   "why": "Схема: протока с дельтой с двух сторон; переключатель «русло фиксировано / мигрирует» показывает разные геометрии (причина и следствие)."
+   "why": "Объёмная геометрия двух дельт и миграция русла — задача на пространство, ведёт интерактив; динамика роста даёт запас для видео.",
+   "scored": true,
+   "secondary_format": "карточки"
   },
   {
    "node_id": "bar.ch1c.05-tide-coast-flats",
@@ -540,51 +613,59 @@
    "video_scores": {
     "time": 0,
     "invisible": 0,
-    "scale": 0,
-    "counterintuitive": 0,
-    "cause_effect": 0
+    "scale": 1,
+    "counterintuitive": 1,
+    "cause_effect": 1
    },
    "template": null,
-   "why": "Сравнение «умеренный климат vs аридный» и ряд фаций; не процесс во времени."
+   "why": "Тип Р: последовательность признаков по зонам, карточки. Контринтуитивное — эвапориты и отсутствие биотурбации в аридной зоне.",
+   "scored": true,
+   "secondary_format": "интерактив"
   },
   {
    "node_id": "bar.ch1c.06-tide-channels-subtidal",
    "format": "интерактив",
    "video_scores": {
-    "time": 0,
+    "time": 2,
     "invisible": 0,
-    "scale": 0,
-    "counterintuitive": 0,
-    "cause_effect": 0
+    "scale": 1,
+    "counterintuitive": 1,
+    "cause_effect": 2
    },
    "template": null,
-   "why": "Наступающая отмель: смена зернистости вверх, срез каналом — изменение во времени и «невидимое становится видимым»."
+   "why": "Главное — как каналы и наступающие отмели соотносятся в разрезе, это пространство и смена во времени; интерактивный разрез ведёт, видео вторично.",
+   "scored": true,
+   "secondary_format": "длинное видео"
   },
   {
    "node_id": "bar.ch1c.07-estuary-definition-types",
    "format": "длинное видео",
    "video_scores": {
-    "time": 0,
-    "invisible": 0,
-    "scale": 0,
-    "counterintuitive": 0,
-    "cause_effect": 0
+    "time": 2,
+    "invisible": 1,
+    "scale": 1,
+    "counterintuitive": 1,
+    "cause_effect": 2
    },
    "template": null,
-   "why": "Подтопление устья (изменение во времени, причина и следствие) и разветвление на два типа."
+   "why": "Механизм образования и заполнения эстуария развёрнут во времени; длинное видео с анимацией разреза подходит.",
+   "scored": true,
+   "secondary_format": "интерактив"
   },
   {
    "node_id": "bar.ch1c.08-tide-estuary-facies",
    "format": "длинное видео",
    "video_scores": {
-    "time": 0,
-    "invisible": 0,
-    "scale": 0,
+    "time": 2,
+    "invisible": 1,
+    "scale": 1,
     "counterintuitive": 0,
-    "cause_effect": 0
+    "cause_effect": 2
    },
    "template": null,
-   "why": "Проградация эстуария и вертикальная смена зернистости: изменение во времени."
+   "why": "Пространственная картина эстуария в разрезе и её смена при проградации; видео с анимацией ведёт, интерактив добавляет сечения.",
+   "scored": true,
+   "secondary_format": "интерактив"
   },
   {
    "node_id": "bar.ch1c.09-tide-estuary-channel-facies",
@@ -592,25 +673,29 @@
    "video_scores": {
     "time": 0,
     "invisible": 0,
-    "scale": 0,
-    "counterintuitive": 0,
-    "cause_effect": 0
+    "scale": 1,
+    "counterintuitive": 1,
+    "cause_effect": 1
    },
    "template": null,
-   "why": "Набор диагностических признаков с английскими терминами."
+   "why": "Тип Р: перечень признаков (формы, слоистость, норы), карточки. Видеоёмкость низкая.",
+   "scored": true,
+   "secondary_format": "текст"
   },
   {
    "node_id": "bar.ch1c.10-wave-estuary-facies",
    "format": "интерактив",
    "video_scores": {
-    "time": 0,
+    "time": 1,
     "invisible": 0,
-    "scale": 0,
+    "scale": 1,
     "counterintuitive": 0,
-    "cause_effect": 0
+    "cause_effect": 1
    },
    "template": null,
-   "why": "Линейный профиль «море → суша» с щелчком по зонам: смена обстановки вдоль направления."
+   "why": "Главное — последовательность фаций вдоль профиля (пространство); интерактивный разрез с подписями зон, карточки как закрепление.",
+   "scored": true,
+   "secondary_format": "карточки"
   },
   {
    "node_id": "bar.ch1c.11-shelf-analog-caution",
@@ -619,11 +704,13 @@
     "time": 0,
     "invisible": 0,
     "scale": 0,
-    "counterintuitive": 0,
-    "cause_effect": 0
+    "counterintuitive": 2,
+    "cause_effect": 1
    },
    "template": null,
-   "why": "Контринтуитивно: «современное море — не прямой аналог древнего»."
+   "why": "Тип Н: граница применимости современных аналогов. Короткий шортс-тезис о контринтуитивности («современное ≠ прошлое»).",
+   "scored": true,
+   "secondary_format": "текст"
   },
   {
    "node_id": "bar.ch1c.12-shelf-four-regimes",
@@ -631,12 +718,14 @@
    "video_scores": {
     "time": 0,
     "invisible": 0,
-    "scale": 0,
-    "counterintuitive": 0,
-    "cause_effect": 0
+    "scale": 1,
+    "counterintuitive": 1,
+    "cause_effect": 2
    },
    "template": null,
-   "why": "Четыре типа и признаки: сопоставление, а не процесс."
+   "why": "Тип М: какой процесс ведёт и что откладывается; карточки «режим → осадок → формы». Видео не обязательно.",
+   "scored": true,
+   "secondary_format": "интерактив"
   },
   {
    "node_id": "bar.ch1c.13-shelf-facies-legend",
@@ -649,7 +738,9 @@
     "cause_effect": 0
    },
    "template": null,
-   "why": "Плотная справочная легенда с римскими номерами; лучше как таблица-справочник."
+   "why": "Справочная легенда к рисунку; формат — текст как справочник, видео не нужно.",
+   "scored": true,
+   "secondary_format": "карточки"
   },
   {
    "node_id": "bar.ch1c.14-shelf-latitude-grain",
@@ -657,25 +748,29 @@
    "video_scores": {
     "time": 0,
     "invisible": 0,
-    "scale": 0,
-    "counterintuitive": 0,
-    "cause_effect": 0
+    "scale": 1,
+    "counterintuitive": 1,
+    "cause_effect": 1
    },
    "template": null,
-   "why": "Контринтуитивный факт: режим не единственный фактор; графика Рис. 1.55 как визуальный якорь."
+   "why": "Единичный факт с условием применимости; тип Н, шортс как короткий тезис, видеоёмкость низкая.",
+   "scored": true,
+   "secondary_format": "текст"
   },
   {
    "node_id": "bar.ch1c.15-tempestites",
    "format": "длинное видео",
    "video_scores": {
-    "time": 0,
-    "invisible": 0,
-    "scale": 0,
-    "counterintuitive": 0,
-    "cause_effect": 0
+    "time": 2,
+    "invisible": 1,
+    "scale": 1,
+    "counterintuitive": 2,
+    "cause_effect": 2
    },
    "template": null,
-   "why": "Затухание штормового потока: изменение во времени → слоистая последовательность; причина → следствие."
+   "why": "Главное — распознать последовательность и отличить от турбидита; ведёт видео с наложением признаков на разрез, карточки как закрепление.",
+   "scored": true,
+   "secondary_format": "карточки"
   },
   {
    "node_id": "bar.ch1c.16-wave-shelf-sequence",
@@ -683,77 +778,89 @@
    "video_scores": {
     "time": 0,
     "invisible": 0,
-    "scale": 0,
+    "scale": 1,
     "counterintuitive": 0,
-    "cause_effect": 0
+    "cause_effect": 1
    },
    "template": null,
-   "why": "Набор признаков бугорчатой слоистости (6 пунктов) — удобная карточка."
+   "why": "Тип Р: признаки и размеры бугорчатой слоистости, карточки. Видео малоэффективно.",
+   "scored": true,
+   "secondary_format": "текст"
   },
   {
    "node_id": "bar.ch1c.17-shelf-sand-forms",
    "format": "интерактив",
    "video_scores": {
-    "time": 0,
-    "invisible": 0,
-    "scale": 0,
+    "time": 1,
+    "invisible": 1,
+    "scale": 2,
     "counterintuitive": 0,
-    "cause_effect": 0
+    "cause_effect": 1
    },
    "template": null,
-   "why": "Скачок масштаба: размеры от метров до километров; можно визуализировать геометрию в плане."
+   "why": "Главное — формы и размеры в плане и разрезе (пространство); интерактив с картой/разрезом ведёт.",
+   "scored": true,
+   "secondary_format": "карточки"
   },
   {
    "node_id": "bar.ch1c.18-shelf-bar-deposits",
    "format": "карточки",
    "video_scores": {
-    "time": 0,
+    "time": 1,
     "invisible": 0,
-    "scale": 0,
+    "scale": 1,
     "counterintuitive": 0,
-    "cause_effect": 0
+    "cause_effect": 2
    },
    "template": null,
-   "why": "Набор признаков и размеров; фаций смешанных/иловых."
+   "why": "Размеры тел (до 160 км) и разное строение при регрессии и трансгрессии — задача на пространство; карточки для признаков.",
+   "scored": true,
+   "secondary_format": "интерактив"
   },
   {
    "node_id": "bar.ch1c.19-tide-shelf-furrows-erosion",
    "format": "длинное видео",
    "video_scores": {
-    "time": 0,
-    "invisible": 0,
-    "scale": 0,
-    "counterintuitive": 0,
-    "cause_effect": 0
+    "time": 1,
+    "invisible": 1,
+    "scale": 2,
+    "counterintuitive": 1,
+    "cause_effect": 2
    },
    "template": null,
-   "why": "Путь течения: от быстрых зон к илам — «невидимое становится видимым» (форма ложа по скорости)."
+   "why": "Механизм цепочки «скорость течения → форма ложа» вдоль пути; анимация последовательности зон, интерактив со скоростью как дополнение.",
+   "scored": true,
+   "secondary_format": "интерактив"
   },
   {
    "node_id": "bar.ch1c.20-tide-shelf-ribbons-ridges-waves",
    "format": "интерактив",
    "video_scores": {
-    "time": 0,
-    "invisible": 0,
-    "scale": 0,
-    "counterintuitive": 0,
-    "cause_effect": 0
+    "time": 1,
+    "invisible": 1,
+    "scale": 1,
+    "counterintuitive": 1,
+    "cause_effect": 2
    },
    "template": null,
-   "why": "Ползунок «скорость течения → форма ложа»: причина и следствие, невидимое становится видимым."
+   "why": "Тип М: зависимость формы от скорости; интерактив с ползунком скорости, карточки для признаков.",
+   "scored": true,
+   "secondary_format": "карточки"
   },
   {
    "node_id": "bar.ch1c.21-tide-shelf-sand-banks",
    "format": "длинное видео",
    "video_scores": {
-    "time": 0,
+    "time": 1,
     "invisible": 0,
-    "scale": 0,
+    "scale": 2,
     "counterintuitive": 0,
-    "cause_effect": 0
+    "cause_effect": 1
    },
    "template": null,
-   "why": "Разрез Норвегии с зонами I–III: масштаб (300м, 200км) — скачок масштаба."
+   "why": "Тип Р: набор условий распознавания на разрезе; видео — вторично, для масштаба (300 м, 200 км на Рис. 1.65).",
+   "scored": true,
+   "secondary_format": "карточки"
   },
   {
    "node_id": "bar.ch1c.22-tide-shelf-patches-mud",
@@ -762,232 +869,268 @@
     "time": 0,
     "invisible": 0,
     "scale": 0,
-    "counterintuitive": 0,
-    "cause_effect": 0
+    "counterintuitive": 1,
+    "cause_effect": 1
    },
    "template": null,
-   "why": "Сводная лестница скоростей → форм. Подаётся как карточка-шпаргалка."
+   "why": "Тип Н: диапазоны вместо точных границ, карточки для сводки порогов. Видеоёмкость низкая.",
+   "scored": true,
+   "secondary_format": "текст"
   },
   {
    "node_id": "bar.ch1c.23-condensed-sections",
    "format": "длинное видео",
    "video_scores": {
-    "time": 0,
-    "invisible": 0,
-    "scale": 0,
-    "counterintuitive": 0,
-    "cause_effect": 0
+    "time": 2,
+    "invisible": 1,
+    "scale": 1,
+    "counterintuitive": 2,
+    "cause_effect": 2
    },
    "template": null,
-   "why": "Изменение во времени (трансгрессия → прекращение сноса → конденсация), скачок масштаба (сантиметры — метры на огромный интервал времени)."
+   "why": "Механизм во времени: подъём уровня моря → потеря сноса → уплотнение разреза; видео с шкалой времени ведёт.",
+   "scored": true,
+   "secondary_format": "карточки"
   },
   {
    "node_id": "bar.ch1d.01-gravity-mass-movements",
    "format": "карточки",
    "video_scores": {
-    "time": 0,
-    "invisible": 0,
-    "scale": 0,
-    "counterintuitive": 0,
-    "cause_effect": 0
+    "time": 2,
+    "invisible": 1,
+    "scale": 1,
+    "counterintuitive": 1,
+    "cause_effect": 2
    },
    "template": null,
-   "why": "Типы М/В: сопоставление 4 процессов по уклону и сохранности структуры; критерий — причина и следствие."
+   "why": "Тип М: процессы различаются по механике движения; карточки хорошо сравнивают четыре процесса. Видеоёмкость умеренная (движение массы, но без количественного ядра).",
+   "scored": true,
+   "secondary_format": "текст"
   },
   {
    "node_id": "bar.ch1d.02-debris-grain-fluidized-flows",
    "format": "карточки",
    "video_scores": {
-    "time": 0,
-    "invisible": 0,
-    "scale": 0,
-    "counterintuitive": 0,
-    "cause_effect": 0
+    "time": 2,
+    "invisible": 1,
+    "scale": 1,
+    "counterintuitive": 1,
+    "cause_effect": 2
    },
    "template": null,
-   "why": "Сравнение потоков по порогам уклона; контринтуитивно разные пороги."
+   "why": "Тип М: сравнение механизмов потоков; карточки с различиями по типам. Видео не ведущее — нет количественного ядра.",
+   "scored": true,
+   "secondary_format": "текст"
   },
   {
    "node_id": "bar.ch1d.03-turbidity-currents",
    "format": "шортс",
    "video_scores": {
-    "time": 0,
-    "invisible": 0,
-    "scale": 0,
-    "counterintuitive": 0,
-    "cause_effect": 0
+    "time": 2,
+    "invisible": 2,
+    "scale": 2,
+    "counterintuitive": 2,
+    "cause_effect": 2
    },
    "template": null,
-   "why": "Невидимое становится видимым: автосуспензия переносит осадок на десятки — сотни км; скачок масштаба."
+   "why": "Тип М с видимым ходом процесса: невидимый поток, скачок масштаба до сотен км, причина (наклон) и следствие (отложение). Шортс подходит; карточки закрепляют термины.",
+   "scored": true,
+   "secondary_format": "карточки"
   },
   {
    "node_id": "bar.ch1d.04-bottom-currents",
    "format": "текст",
    "video_scores": {
-    "time": 0,
-    "invisible": 0,
-    "scale": 0,
-    "counterintuitive": 0,
-    "cause_effect": 0
+    "time": 2,
+    "invisible": 2,
+    "scale": 1,
+    "counterintuitive": 1,
+    "cause_effect": 2
    },
    "template": null,
-   "why": "Описательный узел без динамики; три вида течений."
+   "why": "Тип М: три вида течений с разными причинами; текст даёт основу, карточки сравнивают виды. Видеоёмкость умеренная (невидимое движение воды).",
+   "scored": true,
+   "secondary_format": "карточки"
   },
   {
    "node_id": "bar.ch1d.05-pelagic-hemipelagic-deposits",
    "format": "карточки",
    "video_scores": {
-    "time": 0,
-    "invisible": 0,
+    "time": 1,
+    "invisible": 1,
     "scale": 0,
     "counterintuitive": 0,
-    "cause_effect": 0
+    "cause_effect": 1
    },
    "template": null,
-   "why": "Состав пелагит/гемипелагит; различие по добавке терригена."
+   "why": "Тип М: простой механизм накопления из взвеси; видеоёмкость низкая. Карточки закрепляют различие пелагических и гемипелагических отложений; текст достаточен.",
+   "scored": true,
+   "secondary_format": "текст"
   },
   {
    "node_id": "bar.ch1d.06-slump-facies",
    "format": "текст",
    "video_scores": {
-    "time": 0,
-    "invisible": 0,
-    "scale": 0,
-    "counterintuitive": 0,
-    "cause_effect": 0
+    "time": 1,
+    "invisible": 1,
+    "scale": 1,
+    "counterintuitive": 2,
+    "cause_effect": 1
    },
    "template": null,
-   "why": "Короткий узел о выборе трёх фаций и свойствах оползней."
+   "why": "Тип М с элементом Н: идея «нет стандартного разреза» контринтуитивна, но носит описательный характер. Текст — основной; карточки для сравнения блока и оползня.",
+   "scored": true,
+   "secondary_format": "карточки"
   },
   {
    "node_id": "bar.ch1d.07-slump-recognition",
    "format": "интерактив",
    "video_scores": {
     "time": 0,
-    "invisible": 0,
+    "invisible": 1,
     "scale": 0,
-    "counterintuitive": 0,
-    "cause_effect": 0
+    "counterintuitive": 1,
+    "cause_effect": 1
    },
    "template": null,
-   "why": "Тип Пр: чек-лист из пяти признаков; пользователь применяет их к описанию керна."
+   "why": "Тип Р: нужно узнавать признаки на керне и рисунках 1.73–1.74. Интерактивная фото-задача на классификацию лучше видео; практикум на данных — вторичный формат с реальными фото.",
+   "scored": true,
+   "secondary_format": "практикум на данных"
   },
   {
    "node_id": "bar.ch1d.08-debrites",
    "format": "карточки",
    "video_scores": {
-    "time": 0,
-    "invisible": 0,
-    "scale": 0,
-    "counterintuitive": 0,
-    "cause_effect": 0
+    "time": 1,
+    "invisible": 1,
+    "scale": 2,
+    "counterintuitive": 2,
+    "cause_effect": 1
    },
    "template": null,
-   "why": "Диагностика текстур и масштабов дебритов; контринтуитивно: пологий склон 1–2° и сотни км."
+   "why": "Тип М: механизм обломочного потока определяет строение отложения; масштаб (сотни км на 1–2°) контринтуитивен. Карточки дают признаки, текст — детали.",
+   "scored": true,
+   "secondary_format": "текст"
   },
   {
    "node_id": "bar.ch1d.09-coarse-turbidites",
    "format": "интерактив",
    "video_scores": {
-    "time": 0,
-    "invisible": 0,
-    "scale": 0,
-    "counterintuitive": 0,
-    "cause_effect": 0
+    "time": 1,
+    "invisible": 2,
+    "scale": 1,
+    "counterintuitive": 1,
+    "cause_effect": 2
    },
    "template": null,
-   "why": "Последовательность текстур как шаблон; сопоставление керна."
+   "why": "Тип М: последовательность отражает ослабление потока; интерактивная колонка, где ступень переключает вверх, показывает причину и следствие. Карточки — для закрепления индексов.",
+   "scored": true,
+   "secondary_format": "карточки"
   },
   {
    "node_id": "bar.ch1d.10-normal-turbidites-bouma",
    "format": "длинное видео",
    "video_scores": {
-    "time": 0,
-    "invisible": 0,
-    "scale": 0,
-    "counterintuitive": 0,
-    "cause_effect": 0
+    "time": 2,
+    "invisible": 2,
+    "scale": 1,
+    "counterintuitive": 1,
+    "cause_effect": 2
    },
    "template": null,
-   "why": "Изменение во времени: единое событие откладывает всё более мелкий материал; Боума."
+   "why": "Тип М с распознаванием: изменение потока во времени превращается в вертикальную колонку. Длинное видео с анимацией оседания; интерактив — вторичный для сборки колонки.",
+   "scored": true,
+   "secondary_format": "интерактив"
   },
   {
    "node_id": "bar.ch1d.11-fine-turbidites",
    "format": "интерактив",
    "video_scores": {
-    "time": 0,
-    "invisible": 0,
-    "scale": 0,
-    "counterintuitive": 0,
-    "cause_effect": 0
+    "time": 1,
+    "invisible": 1,
+    "scale": 1,
+    "counterintuitive": 1,
+    "cause_effect": 1
    },
    "template": null,
-   "why": "T0–T8 и сокращённые разрезы (Рис. 1.76–1.77), сопоставление."
+   "why": "Тип М с распознаванием: нужно прочитать колонку на примерах. Интерактив с выбором слоёв; карточки — на словарь T0–T8.",
+   "scored": true,
+   "secondary_format": "карточки"
   },
   {
    "node_id": "bar.ch1d.12-turbidite-interpretation-ichnofacies",
    "format": "длинное видео",
    "video_scores": {
-    "time": 0,
-    "invisible": 0,
-    "scale": 0,
-    "counterintuitive": 0,
-    "cause_effect": 0
+    "time": 2,
+    "invisible": 2,
+    "scale": 1,
+    "counterintuitive": 1,
+    "cause_effect": 2
    },
    "template": null,
-   "why": "Причина и следствие: затухание потока → вертикальная смена; контринтуитивно, что полный разрез редок."
+   "why": "Тип М с распознаванием: как поток замедляется и что остаётся в разрезе. Длинное видео (запись во времени); карточки на ихнофации.",
+   "scored": true,
+   "secondary_format": "карточки"
   },
   {
    "node_id": "bar.ch1d.13-channel-contourite-facies",
    "format": "карточки",
    "video_scores": {
-    "time": 0,
-    "invisible": 0,
+    "time": 1,
+    "invisible": 1,
     "scale": 0,
-    "counterintuitive": 0,
-    "cause_effect": 0
+    "counterintuitive": 1,
+    "cause_effect": 1
    },
    "template": null,
-   "why": "Контурит vs турбидит: сходство, риск ошибки."
+   "why": "Тип М с распознаванием и неопределённостью: сходство с турбидитами делает признаки спорными. Карточки сравнивают типы; текст даёт условия.",
+   "scored": true,
+   "secondary_format": "текст"
   },
   {
    "node_id": "bar.ch1d.14-hemipelagic-pelagic-facies",
    "format": "карточки",
    "video_scores": {
     "time": 0,
-    "invisible": 0,
+    "invisible": 1,
     "scale": 0,
-    "counterintuitive": 0,
-    "cause_effect": 0
+    "counterintuitive": 1,
+    "cause_effect": 1
    },
    "template": null,
-   "why": "Пороги 75% и 10%; отличие гемипелагитов."
+   "why": "Тип М: состав и процесс накопления; видеоёмкость низкая. Карточки сравнивают типы; текст достаточен.",
+   "scored": true,
+   "secondary_format": "текст"
   },
   {
    "node_id": "bar.ch1d.15-slope-aprons",
    "format": "длинное видео",
    "video_scores": {
-    "time": 0,
-    "invisible": 0,
-    "scale": 0,
-    "counterintuitive": 0,
-    "cause_effect": 0
+    "time": 2,
+    "invisible": 1,
+    "scale": 2,
+    "counterintuitive": 1,
+    "cause_effect": 2
    },
    "template": null,
-   "why": "Скачок масштаба: от 1км до 200км ширины и до 10–12км мощности."
+   "why": "Тип М: геометрия шлейфа определяется энергетикой; скачок масштаба (1–200 км). Длинное видео с разрезом, интерактив с изменяемой энергетикой — вторичный.",
+   "scored": true,
+   "secondary_format": "интерактив"
   },
   {
    "node_id": "bar.ch1d.16-ramp-aprons",
    "format": "практикум на данных",
    "video_scores": {
-    "time": 0,
-    "invisible": 0,
-    "scale": 0,
-    "counterintuitive": 0,
-    "cause_effect": 0
+    "time": 2,
+    "invisible": 1,
+    "scale": 1,
+    "counterintuitive": 1,
+    "cause_effect": 2
    },
    "template": null,
-   "why": "Диагностика цикличности и ступенчатого профиля по разрезам."
+   "why": "Тип М с пространством: разломная активность во времени даёт цикличность и боковую изменчивость. Практикум на данных по разрезу — основной; интерактив — вторичный, видео открывает тему.",
+   "scored": true,
+   "secondary_format": "интерактив"
   },
   {
    "node_id": "bar.ch1e.01-slope-facies",
@@ -1000,46 +1143,53 @@
     "cause_effect": 0
    },
    "template": null,
-   "why": "Набор признаков для сопоставления двух зон; динамики и скачка масштаба нет."
+   "why": "Распознавание набора признаков двух зон; динамики и скачка масштаба нет, подходят карточки.",
+   "scored": true
   },
   {
    "node_id": "bar.ch1e.02-fans-general",
    "format": "длинное видео",
    "video_scores": {
     "time": 0,
-    "invisible": 0,
-    "scale": 0,
-    "counterintuitive": 0,
+    "invisible": 1,
+    "scale": 2,
+    "counterintuitive": 1,
     "cause_effect": 0
    },
    "template": null,
-   "why": "Скачок масштаба: от тела радиусом около 1 км до длины более 2000 км; схема конуса с элементами."
+   "why": "Скачок масштаба от ~1 км до >2000 км и схема элементов дают видеоёмкость; карточки закрепят термины.",
+   "scored": true,
+   "secondary_format": "карточки"
   },
   {
    "node_id": "bar.ch1e.03-radial-fans",
    "format": "длинное видео",
    "video_scores": {
     "time": 0,
-    "invisible": 0,
-    "scale": 0,
+    "invisible": 2,
+    "scale": 1,
     "counterintuitive": 0,
-    "cause_effect": 0
+    "cause_effect": 1
    },
    "template": null,
-   "why": "Продольный разрез конуса: смена профиля вогнутый–выпуклый–вогнутый и распределение песка/ила вниз по конусу — невидимое становится видимым."
+   "why": "Продольный разрез делает невидимое распределение фаций видимым; интерактив с разрезом помогает пространственно закрепить зоны.",
+   "scored": true,
+   "secondary_format": "интерактив"
   },
   {
    "node_id": "bar.ch1e.04-stretched-fans",
    "format": "длинное видео",
    "video_scores": {
     "time": 0,
-    "invisible": 0,
-    "scale": 0,
-    "counterintuitive": 0,
+    "invisible": 1,
+    "scale": 2,
+    "counterintuitive": 2,
     "cause_effect": 0
    },
    "template": null,
-   "why": "Сравнение с радиальным конусом по размеру и числу русел; контринтуитивно, что мощность может превышать 10 км при длине от 5 до 1000 км."
+   "why": "Сравнение с радиальным конусом по размеру и числу русел; контринтуитивны масштабы, поэтому видео, карточки для сравнения.",
+   "scored": true,
+   "secondary_format": "карточки"
   },
   {
    "node_id": "bar.ch1e.05-deltaic-fans",
@@ -1047,25 +1197,29 @@
    "video_scores": {
     "time": 0,
     "invisible": 0,
-    "scale": 0,
+    "scale": 1,
     "counterintuitive": 0,
     "cause_effect": 0
    },
    "template": null,
-   "why": "Таблица сравнения параметров трёх типов; динамики нет."
+   "why": "Основное — сравнение параметров трёх типов конусов; динамики нет, ведут карточки.",
+   "scored": true,
+   "secondary_format": "текст"
   },
   {
    "node_id": "bar.ch1e.06-fan-diagnostics",
    "format": "практикум на данных",
    "video_scores": {
     "time": 0,
-    "invisible": 0,
+    "invisible": 1,
     "scale": 0,
     "counterintuitive": 0,
     "cause_effect": 0
    },
    "template": null,
-   "why": "Практическое сопоставление признаков по описанию разреза (полярность зернистости, палеотечения)."
+   "why": "Распознавание признаков по описанию разреза — практикум на данных; карточки как справочный набор признаков.",
+   "scored": true,
+   "secondary_format": "карточки"
   },
   {
    "node_id": "bar.ch1e.07-basin-plains",
@@ -1073,51 +1227,58 @@
    "video_scores": {
     "time": 0,
     "invisible": 0,
-    "scale": 0,
-    "counterintuitive": 0,
+    "scale": 1,
+    "counterintuitive": 1,
     "cause_effect": 0
    },
    "template": null,
-   "why": "Список типов и признаков; единственная контринтуитивность — «монотонность» как диагностика."
+   "why": "Список типов и признаков для распознавания; видеоёмкость низкая, подходят карточки.",
+   "scored": true,
+   "secondary_format": "текст"
   },
   {
    "node_id": "bar.ch1e.08-black-shales-setting",
    "format": "длинное видео",
    "video_scores": {
     "time": 0,
-    "invisible": 0,
+    "invisible": 1,
     "scale": 0,
-    "counterintuitive": 0,
-    "cause_effect": 0
+    "counterintuitive": 1,
+    "cause_effect": 2
    },
    "template": null,
-   "why": "Причина → следствие: отсутствие свободного кислорода → восстановительные условия (стагнация) → органика не окисляется и может захорониться; 4 модели и баженовская свита как пример."
+   "why": "Причина → следствие (нет кислорода → консервация органики) подходит видео; четыре модели удобно свести в карточки.",
+   "scored": true,
+   "secondary_format": "карточки"
   },
   {
    "node_id": "bar.ch1e.09-anoxic-diagnostics",
    "format": "интерактив",
    "video_scores": {
     "time": 0,
-    "invisible": 0,
+    "invisible": 1,
     "scale": 0,
     "counterintuitive": 0,
-    "cause_effect": 0
+    "cause_effect": 1
    },
    "template": null,
-   "why": "Чек-лист из пяти признаков: пользователь сопоставляет описание керна с признаками."
+   "why": "Распознавание пяти признаков по описанию керна — интерактив-чек-лист; карточки как опора.",
+   "scored": true,
+   "secondary_format": "карточки"
   },
   {
    "node_id": "bar.ch1e.10-anoxic-figures",
    "format": "карточки",
    "video_scores": {
     "time": 0,
-    "invisible": 0,
+    "invisible": 1,
     "scale": 0,
     "counterintuitive": 0,
     "cause_effect": 0
    },
    "template": null,
-   "why": "Фото/подписи; смысл — в сопоставлении признака и рисунка. Сами изображения в тексте отсутствуют, нужны сканы."
+   "why": "Сопоставление признака с изображением и подписью — распознавание; динамики нет, ведут карточки.",
+   "scored": true
   },
   {
    "node_id": "bar.ch2a.01-core-work-goals",
@@ -1127,10 +1288,11 @@
     "invisible": 0,
     "scale": 0,
     "counterintuitive": 0,
-    "cause_effect": 0
+    "cause_effect": 1
    },
    "template": null,
-   "why": "Вводный список целей без процесса во времени и без визуального образа; достаточно текста/карточки с картой навыков."
+   "why": "Вводный список целей без процесса и образа; хватает текста или карточки с картой навыков.",
+   "scored": true
   },
   {
    "node_id": "bar.ch2a.02-core-layout-scale",
@@ -1138,25 +1300,28 @@
    "video_scores": {
     "time": 0,
     "invisible": 0,
-    "scale": 0,
-    "counterintuitive": 0,
-    "cause_effect": 0
+    "scale": 1,
+    "counterintuitive": 1,
+    "cause_effect": 1
    },
    "template": null,
-   "why": "Короткая процедура из трёх шагов и двух критериев; удобно карточкой/чек-листом, видеоёмкость низкая."
+   "why": "Короткая процедура из трёх шагов с точкой выбора; удобна как чек-лист, видеоёмкость низкая.",
+   "scored": true
   },
   {
    "node_id": "bar.ch2a.03-sed-column",
    "format": "интерактив",
    "video_scores": {
     "time": 0,
-    "invisible": 0,
-    "scale": 0,
-    "counterintuitive": 0,
-    "cause_effect": 0
+    "invisible": 1,
+    "scale": 1,
+    "counterintuitive": 1,
+    "cause_effect": 1
    },
    "template": null,
-   "why": "Колонка — наглядная кодировка (ширина = крупность, линия границы = контакт): интерактивная сборка колонки по данным слоёв показывает невидимое (литология → график)."
+   "why": "Тип Пр: порядок построения и выбор шкалы лучше отработать руками; интерактивная сборка колонки по слоям.",
+   "scored": true,
+   "secondary_format": "практикум на данных"
   },
   {
    "node_id": "bar.ch2a.04-macro-then-lab",
@@ -1164,12 +1329,13 @@
    "video_scores": {
     "time": 0,
     "invisible": 0,
-    "scale": 0,
+    "scale": 1,
     "counterintuitive": 0,
-    "cause_effect": 0
+    "cause_effect": 1
    },
    "template": null,
-   "why": "Статичный принцип «сначала быстро, потом точно»; перечень методов — карточки."
+   "why": "Порядок действий из двух этапов; перечень методов компактно ложится на карточки.",
+   "scored": true
   },
   {
    "node_id": "bar.ch2a.05-description-scheme",
@@ -1179,49 +1345,53 @@
     "invisible": 0,
     "scale": 0,
     "counterintuitive": 0,
-    "cause_effect": 0
+    "cause_effect": 1
    },
    "template": null,
-   "why": "Список-шаблон; карточки на пункты схемы."
+   "why": "Список пунктов и порядок заполнения — процедура без динамики; карточки-чек-лист.",
+   "scored": true
   },
   {
    "node_id": "bar.ch2a.06-color",
    "format": "карточки",
    "video_scores": {
     "time": 0,
-    "invisible": 0,
+    "invisible": 1,
     "scale": 0,
-    "counterintuitive": 0,
-    "cause_effect": 0
+    "counterintuitive": 1,
+    "cause_effect": 1
    },
    "template": null,
-   "why": "Мало динамики; правило формулировки цвета — карточка."
+   "why": "Тип Р: узнавание цвета по образцам; карточки с примерами и правилом названия.",
+   "scored": true
   },
   {
    "node_id": "bar.ch2a.07-structure-components",
    "format": "карточки",
    "video_scores": {
     "time": 0,
-    "invisible": 0,
+    "invisible": 1,
     "scale": 0,
     "counterintuitive": 0,
-    "cause_effect": 0
+    "cause_effect": 1
    },
    "template": null,
-   "why": "Определение и три подпризнака; низкая видеоёмкость."
+   "why": "Структура — порядок признаков (Пр) с узнаванием на образцах; карточки-перечень.",
+   "scored": true
   },
   {
    "node_id": "bar.ch2a.08-grain-size-scale",
    "format": "интерактив",
    "video_scores": {
     "time": 0,
-    "invisible": 0,
-    "scale": 0,
-    "counterintuitive": 0,
-    "cause_effect": 0
+    "invisible": 1,
+    "scale": 2,
+    "counterintuitive": 2,
+    "cause_effect": 1
    },
    "template": null,
-   "why": "Скачок масштаба (от валунов 4096 мм до глины 0,00006 мм) и перевод мм ↔ Ф; интерактивный линейка-конвертер."
+   "why": "Тип Ф: смысл логарифмической шкалы Ф удобнее прощупать интерактивно (ползунок мм↔Ф); скачок масштабов размера даёт видеоёмкость.",
+   "scored": true
   },
   {
    "node_id": "bar.ch2a.09-clastic-classification",
@@ -1229,38 +1399,41 @@
    "video_scores": {
     "time": 0,
     "invisible": 0,
-    "scale": 0,
+    "scale": 1,
     "counterintuitive": 0,
-    "cause_effect": 0
+    "cause_effect": 1
    },
    "template": null,
-   "why": "Таблица-определитель; интерактивный «определитель» по размеру/окатанности/цементу."
+   "why": "Выбор названия по трём признакам — навигация по таблице; интерактивный подбор по входам.",
+   "scored": true
   },
   {
    "node_id": "bar.ch2a.10-sorting",
    "format": "интерактив",
    "video_scores": {
     "time": 0,
-    "invisible": 0,
-    "scale": 0,
-    "counterintuitive": 0,
-    "cause_effect": 0
+    "invisible": 1,
+    "scale": 1,
+    "counterintuitive": 1,
+    "cause_effect": 2
    },
    "template": null,
-   "why": "Контринтуитивно-визуальный: ползунок σ меняет «облако» зёрен от Well Sorted к Very Poorly Sorted; соответствие картинки и словесных категорий."
+   "why": "Тип Р: узнавать степень сортировки по эталонам и связывать σ со словом; интерактив с образцами.",
+   "scored": true
   },
   {
    "node_id": "bar.ch2a.11-roundness-packing",
    "format": "интерактив",
    "video_scores": {
     "time": 0,
-    "invisible": 0,
+    "invisible": 1,
     "scale": 0,
     "counterintuitive": 0,
-    "cause_effect": 0
+    "cause_effect": 1
    },
    "template": null,
-   "why": "Визуальная классификация формы: сетка эталонных зёрен, на которой пользователь размещает образец."
+   "why": "Тип Р: сравнение с эталонами на рисунках; интерактивный тренажёр сопоставления.",
+   "scored": true
   },
   {
    "node_id": "bar.ch2a.12-texture-definition",
@@ -1270,62 +1443,70 @@
     "invisible": 0,
     "scale": 0,
     "counterintuitive": 0,
-    "cause_effect": 0
+    "cause_effect": 1
    },
    "template": null,
-   "why": "Определение + различие структура/текстура."
+   "why": "Определительный узел с отсылкой к рис. 2.4–2.17; карточки.",
+   "scored": true
   },
   {
    "node_id": "bar.ch2a.13-bioturbation",
    "format": "длинное видео",
    "video_scores": {
-    "time": 0,
-    "invisible": 0,
+    "time": 1,
+    "invisible": 2,
     "scale": 0,
-    "counterintuitive": 0,
-    "cause_effect": 0
+    "counterintuitive": 1,
+    "cause_effect": 2
    },
    "template": null,
-   "why": "Связь «причина → следствие» (биотурбация → условия среды), показ скрытого признака в керне."
+   "why": "Тип Р: узнавание следов по рисункам; невидимая деятельность организмов становится видимой, поэтому длинное видео.",
+   "scored": true,
+   "secondary_format": "карточки"
   },
   {
    "node_id": "bar.ch2a.14-flow-bedding-types",
    "format": "интерактив",
    "video_scores": {
-    "time": 0,
-    "invisible": 0,
+    "time": 1,
+    "invisible": 1,
     "scale": 0,
     "counterintuitive": 0,
-    "cause_effect": 0
+    "cause_effect": 2
    },
    "template": null,
-   "why": "Скорость потока и размер зерна → тип текстуры: интерактивная диаграмма «изменение условий → смена слоистости» (причина-следствие, невидимое видимым)."
+   "why": "Связь поток→тип слоистости и классификация типов; интерактив «параметры потока → текстура».",
+   "scored": true
   },
   {
    "node_id": "bar.ch2a.15-ripple-cross-bedding",
    "format": "длинное видео",
    "video_scores": {
-    "time": 0,
-    "invisible": 0,
+    "time": 2,
+    "invisible": 2,
     "scale": 0,
-    "counterintuitive": 0,
-    "cause_effect": 0
+    "counterintuitive": 1,
+    "cause_effect": 2
    },
    "template": null,
-   "why": "Изменение во времени (миграция ряби строит слойки) и невидимое → видимое (блок-диаграмма): анимация миграции ряби и накопления косой слоистости."
+   "why": "Тип М: рябь мигрирует во времени и оставляет разрез; анимация делает невидимое видимым.",
+   "scored": true,
+   "secondary_format": "интерактив"
   },
   {
    "node_id": "bar.ch2a.16-flaser-wavy-lenticular",
    "format": "длинное видео",
    "video_scores": {
-    "time": 0,
-    "invisible": 0,
+    "time": 1,
+    "invisible": 1,
     "scale": 0,
     "counterintuitive": 0,
-    "cause_effect": 0
+    "cause_effect": 2
    },
    "template": null,
-   "why": "Чередование потока и осаждения ила во времени даёт типы слоистости; сравнение трёх типов на одной шкале."
+   "why": "Тип М с узнаванием (Р): формирование слоистости во времени удобно показать видео, эталоны закрепить карточками.",
+   "scored": true,
+   "secondary_format": "карточки"
   },
   {
    "node_id": "bar.ch2a.17-composition",
@@ -1335,23 +1516,26 @@
     "invisible": 0,
     "scale": 0,
     "counterintuitive": 0,
-    "cause_effect": 0
+    "cause_effect": 1
    },
    "template": null,
-   "why": "Правило записи; низкая видеоёмкость."
+   "why": "Правила описания состава — процедура; карточки.",
+   "scored": true
   },
   {
    "node_id": "bar.ch2a.18-porosity",
    "format": "длинное видео",
    "video_scores": {
     "time": 0,
-    "invisible": 0,
-    "scale": 0,
-    "counterintuitive": 0,
-    "cause_effect": 0
+    "invisible": 2,
+    "scale": 1,
+    "counterintuitive": 2,
+    "cause_effect": 2
    },
    "template": null,
-   "why": "Причина и следствие (упаковка/сортировка → пористость), контринтуитивность «мелкозернистее — пористее»."
+   "why": "Тип И: косвенная оценка свойства по признакам; контринтуитивное правило и невидимые поры подходят для видео.",
+   "scored": true,
+   "secondary_format": "карточки"
   },
   {
    "node_id": "bar.ch2a.19-inclusions",
@@ -1361,10 +1545,11 @@
     "invisible": 0,
     "scale": 0,
     "counterintuitive": 0,
-    "cause_effect": 0
+    "cause_effect": 1
    },
    "template": null,
-   "why": "Перечень полей."
+   "why": "Перечень параметров и примеров; карточки.",
+   "scored": true
   },
   {
    "node_id": "bar.ch2a.20-secondary-name",
@@ -1374,10 +1559,11 @@
     "invisible": 0,
     "scale": 0,
     "counterintuitive": 0,
-    "cause_effect": 0
+    "cause_effect": 1
    },
    "template": null,
-   "why": "Правила записи."
+   "why": "Короткие правила порядка записи; карточки.",
+   "scored": true
   },
   {
    "node_id": "bar.ch2a.21-contacts",
@@ -1390,59 +1576,68 @@
     "cause_effect": 0
    },
    "template": null,
-   "why": "Один короткий пункт."
+   "why": "Одно утверждение без процесса; карточка.",
+   "scored": true
   },
   {
    "node_id": "bar.ch2a.22-oil-shows",
    "format": "длинное видео",
    "video_scores": {
     "time": 0,
-    "invisible": 0,
+    "invisible": 2,
     "scale": 0,
-    "counterintuitive": 0,
-    "cause_effect": 0
+    "counterintuitive": 1,
+    "cause_effect": 2
    },
    "template": null,
-   "why": "Невидимое → видимое: признаки пропитки в обычном свете и в ультрафиолете."
+   "why": "Тип Р: узнавание признаков; невидимая слабая пропитка раскрывается запахом, видео с примерами.",
+   "scored": true,
+   "secondary_format": "карточки"
   },
   {
    "node_id": "bar.ch2a.23-luminescence",
    "format": "длинное видео",
    "video_scores": {
     "time": 0,
-    "invisible": 0,
+    "invisible": 2,
     "scale": 0,
-    "counterintuitive": 0,
-    "cause_effect": 0
+    "counterintuitive": 2,
+    "cause_effect": 2
    },
    "template": null,
-   "why": "Невидимое становится видимым: тот же керн при дневном свете и в ультрафиолете; сравнение цвета свечения разных нефтей."
+   "why": "Тип И: сигнал (УФ) → отклик (свечение) → свойство нефти; невидимое становится видимым.",
+   "scored": true,
+   "secondary_format": "карточки"
   },
   {
    "node_id": "bar.ch2a.24-thin-section",
    "format": "практикум на данных",
    "video_scores": {
     "time": 0,
-    "invisible": 0,
-    "scale": 0,
-    "counterintuitive": 0,
-    "cause_effect": 0
+    "invisible": 2,
+    "scale": 2,
+    "counterintuitive": 1,
+    "cause_effect": 1
    },
    "template": null,
-   "why": "Перенос практики из макро в микро: сопоставление макро и шлиф данных (пористость, диагенез) на одном образце."
+   "why": "Тип Пр: порядок описания и измерений; скачок масштаба до микро даёт видеоёмкость, но навык отрабатывается на данных.",
+   "scored": true,
+   "secondary_format": "интерактив"
   },
   {
    "node_id": "bar.ch2a.25-core-to-model",
    "format": "длинное видео",
    "video_scores": {
     "time": 0,
-    "invisible": 0,
-    "scale": 0,
-    "counterintuitive": 0,
-    "cause_effect": 0
+    "invisible": 1,
+    "scale": 2,
+    "counterintuitive": 1,
+    "cause_effect": 2
    },
    "template": null,
-   "why": "Скачок масштаба: от образца керна к модели резервуара; причина → следствие по цепочке."
+   "why": "Тип П: от точечных данных к объёму; скачок масштаба от керна к модели делает видео уместным.",
+   "scored": true,
+   "secondary_format": "интерактив"
   },
   {
    "node_id": "bar.ch2b.01-thinsection-composition",
@@ -1452,36 +1647,41 @@
     "invisible": 0,
     "scale": 0,
     "counterintuitive": 0,
-    "cause_effect": 0
+    "cause_effect": 1
    },
    "template": null,
-   "why": "П: перечень и группировка; изменения во времени нет, видеоёмкость низкая"
+   "why": "Это перечень и порядок описания (процедура), видеоёмкость низкая; текст подходит.",
+   "scored": true
   },
   {
    "node_id": "bar.ch2b.02-percent-estimation",
    "format": "интерактив",
    "video_scores": {
     "time": 0,
-    "invisible": 0,
+    "invisible": 1,
     "scale": 0,
-    "counterintuitive": 0,
-    "cause_effect": 0
+    "counterintuitive": 2,
+    "cause_effect": 1
    },
    "template": null,
-   "why": "М: глазомер завышен — контринтуитивность; интерактив: оценить процент на картинке против подсчёта"
+   "why": "Порядок оценки с палетками — процедура, а завышение глазомера контринтуитивно: интерактив «оцени на глаз против подсчёта».",
+   "scored": true,
+   "secondary_format": "практикум на данных"
   },
   {
    "node_id": "bar.ch2b.03-porosity-thinsection",
-   "format": "длинное видео",
+   "format": "интерактив",
    "video_scores": {
     "time": 0,
-    "invisible": 0,
-    "scale": 0,
+    "invisible": 1,
+    "scale": 1,
     "counterintuitive": 0,
-    "cause_effect": 0
+    "cause_effect": 1
    },
    "template": null,
-   "why": "В: невидимое становится видимым — поры в шлифе; рис. 2.18 связывает зерно, сортировку и пористость"
+   "why": "Рис. 2.18 — график зависимости (Ф) и признаки пор (Р); интерактив с чтением изолиний пористости полезнее длинного видео.",
+   "scored": true,
+   "secondary_format": "текст"
   },
   {
    "node_id": "bar.ch2b.04-inclusions-secondary-other",
@@ -1494,33 +1694,36 @@
     "cause_effect": 0
    },
    "template": null,
-   "why": "П/Н: список разделов и обозначения николей"
+   "why": "Перечень пунктов и обозначений — материал для карточек, видеоёмкость нулевая.",
+   "scored": true
   },
   {
    "node_id": "bar.ch2b.05-luminescence-table",
    "format": "карточки",
    "video_scores": {
     "time": 0,
-    "invisible": 0,
+    "invisible": 1,
     "scale": 0,
-    "counterintuitive": 0,
-    "cause_effect": 0
+    "counterintuitive": 1,
+    "cause_effect": 1
    },
    "template": null,
-   "why": "Н: справочная таблица цвет→вещество, лучше карточки-справочник"
+   "why": "Справочное соответствие «цвет свечения → вещество» (Р); карточки для повторения.",
+   "scored": true
   },
   {
    "node_id": "bar.ch2b.06-binocular-study",
    "format": "шортс",
    "video_scores": {
     "time": 0,
-    "invisible": 0,
-    "scale": 0,
-    "counterintuitive": 0,
-    "cause_effect": 0
+    "invisible": 2,
+    "scale": 1,
+    "counterintuitive": 1,
+    "cause_effect": 1
    },
    "template": null,
-   "why": "М: шлиф даёт плоский срез против целого зерна — скачок размерности, контринтуитивность"
+   "why": "Различие «целое зерно против плоского среза» — скачок размерности, наглядно в коротком ролике.",
+   "scored": true
   },
   {
    "node_id": "bar.ch2b.07-clastic-intro-ocular-scale",
@@ -1529,11 +1732,12 @@
     "time": 0,
     "invisible": 0,
     "scale": 0,
-    "counterintuitive": 0,
-    "cause_effect": 0
+    "counterintuitive": 1,
+    "cause_effect": 1
    },
    "template": null,
-   "why": "Н/Р: справочные числа и калибровка; можно короткий практикум пересчёта делений"
+   "why": "Справочные числа и перевод делений в мм — процедура калибровки; текста достаточно.",
+   "scored": true
   },
   {
    "node_id": "bar.ch2b.08-clastic-macro-color-structure",
@@ -1543,49 +1747,54 @@
     "invisible": 0,
     "scale": 0,
     "counterintuitive": 0,
-    "cause_effect": 0
+    "cause_effect": 1
    },
    "template": null,
-   "why": "П: цвет и значение структуры; малая видеоёмкость"
+   "why": "Признаки для узнавания и правила описания, малая видеоёмкость; карточки.",
+   "scored": true
   },
   {
    "node_id": "bar.ch2b.09-grain-size-sorting",
    "format": "практикум на данных",
    "video_scores": {
     "time": 0,
-    "invisible": 0,
+    "invisible": 1,
     "scale": 0,
-    "counterintuitive": 0,
-    "cause_effect": 0
+    "counterintuitive": 2,
+    "cause_effect": 2
    },
    "template": null,
-   "why": "М/П: измерение зёрен и ложная точность узкой фракции — причина и следствие; практикум с набором измерений"
+   "why": "Процедура с точками выбора и типичными ошибками — практикум на данных на наборе зёрен.",
+   "scored": true
   },
   {
    "node_id": "bar.ch2b.10-shape-roundness-isometry",
    "format": "интерактив",
    "video_scores": {
     "time": 0,
-    "invisible": 0,
+    "invisible": 1,
     "scale": 0,
-    "counterintuitive": 0,
-    "cause_effect": 0
+    "counterintuitive": 1,
+    "cause_effect": 2
    },
    "template": null,
-   "why": "И: классы окатанности и порог 1,5; вывод об источнике материала по связи формы и размера"
+   "why": "Распознавание классов формы и порога 1,5 — интерактив с сортировкой обломков по классам.",
+   "scored": true
   },
   {
    "node_id": "bar.ch2b.11-clastic-textures",
-   "format": "длинное видео",
+   "format": "карточки",
    "video_scores": {
     "time": 0,
-    "invisible": 0,
+    "invisible": 1,
     "scale": 0,
     "counterintuitive": 0,
-    "cause_effect": 0
+    "cause_effect": 1
    },
    "template": null,
-   "why": "В: типы слоистости видны только как картинки; терминология мощности слоёв (рис. 2.19)"
+   "why": "Это узнавание типов слоистости по картинкам; фото-квиз и карточки эффективнее длинного видео.",
+   "scored": true,
+   "secondary_format": "шортс"
   },
   {
    "node_id": "bar.ch2b.12-clastic-composition-macro",
@@ -1595,36 +1804,40 @@
     "invisible": 0,
     "scale": 0,
     "counterintuitive": 0,
-    "cause_effect": 0
+    "cause_effect": 1
    },
    "template": null,
-   "why": "Н: порядок описания компонентов; рис. 2.21 разбирать с ментором"
+   "why": "Порядок описания и классификация (рис. 2.21) — процедура; текста достаточно.",
+   "scored": true
   },
   {
    "node_id": "bar.ch2b.13-cement-types",
    "format": "длинное видео",
    "video_scores": {
     "time": 0,
-    "invisible": 0,
-    "scale": 0,
-    "counterintuitive": 0,
-    "cause_effect": 0
+    "invisible": 2,
+    "scale": 1,
+    "counterintuitive": 2,
+    "cause_effect": 2
    },
    "template": null,
-   "why": "М: четыре типа цемента — различие расположения в порах (невидимое → видимое); ошибка «>50%» — контринтуитивность"
+   "why": "Невидимое расположение цемента в порах и ошибка «>50%» контринтуитивны; видео с разрезом поры.",
+   "scored": true
   },
   {
    "node_id": "bar.ch2b.14-cement-structure-composition",
    "format": "карточки",
    "video_scores": {
     "time": 0,
-    "invisible": 0,
+    "invisible": 1,
     "scale": 0,
-    "counterintuitive": 0,
-    "cause_effect": 0
+    "counterintuitive": 1,
+    "cause_effect": 2
    },
    "template": null,
-   "why": "Н: тесты на состав цемента как дерево решений"
+   "why": "Цепочка «проба → отклик → тип цемента» как дерево решений; карточки подходят.",
+   "scored": true,
+   "secondary_format": "практикум на данных"
   },
   {
    "node_id": "bar.ch2b.15-clay-mineral-tables",
@@ -1637,7 +1850,8 @@
     "cause_effect": 0
    },
    "template": null,
-   "why": "Н: справочные таблицы; автор не комментирует"
+   "why": "Справочная классификация без объяснения автора; карточки для запоминания.",
+   "scored": true
   },
   {
    "node_id": "bar.ch2b.16-thinsection-scheme-clastic",
@@ -1647,36 +1861,39 @@
     "invisible": 0,
     "scale": 0,
     "counterintuitive": 0,
-    "cause_effect": 0
+    "cause_effect": 1
    },
    "template": null,
-   "why": "П: чек-лист из 9 пунктов"
+   "why": "Чек-лист порядка действий; текст, видеоёмкость низкая.",
+   "scored": true
   },
   {
    "node_id": "bar.ch2b.17-thinsection-cement",
    "format": "длинное видео",
    "video_scores": {
     "time": 0,
-    "invisible": 0,
-    "scale": 0,
-    "counterintuitive": 0,
-    "cause_effect": 0
+    "invisible": 2,
+    "scale": 1,
+    "counterintuitive": 1,
+    "cause_effect": 1
    },
    "template": null,
-   "why": "М: ориентировка кристаллов цемента относительно зерна и одновременное погасание — невидимое становится видимым"
+   "why": "Невидимая в обычном свете ориентировка кристаллов становится видимой; длинное видео с анимацией.",
+   "scored": true
   },
   {
    "node_id": "bar.ch2b.18-thinsection-porosity",
    "format": "практикум на данных",
    "video_scores": {
     "time": 0,
-    "invisible": 0,
+    "invisible": 1,
     "scale": 0,
-    "counterintuitive": 0,
-    "cause_effect": 0
+    "counterintuitive": 1,
+    "cause_effect": 1
    },
    "template": null,
-   "why": "И: оценка пористости по шлифу и сравнение с каротажем и ФЕС — переход к данным"
+   "why": "Оценка пористости и сравнение с данными — процедура с переходом к данным; практикум.",
+   "scored": true
   },
   {
    "node_id": "bar.ch2c.01-clay-definition",
@@ -1685,11 +1902,12 @@
     "time": 0,
     "invisible": 0,
     "scale": 0,
-    "counterintuitive": 0,
-    "cause_effect": 0
+    "counterintuitive": 1,
+    "cause_effect": 1
    },
    "template": null,
-   "why": "Н: определения; видеоёмкость низкая."
+   "why": "Определение и мотивация без процесса и наглядного изменения; текст подходит, видеоёмкость низкая.",
+   "scored": true
   },
   {
    "node_id": "bar.ch2c.02-clay-classification",
@@ -1702,124 +1920,140 @@
     "cause_effect": 0
    },
    "template": null,
-   "why": "Н: много терминов-признаков."
+   "why": "Много терминов-признаков для запоминания: карточки подходят; процесса и визуальной динамики нет.",
+   "scored": true,
+   "secondary_format": "текст"
   },
   {
    "node_id": "bar.ch2c.03-macro-slaking-color-structure",
    "format": "практикум на данных",
    "video_scores": {
     "time": 0,
-    "invisible": 0,
+    "invisible": 1,
     "scale": 0,
-    "counterintuitive": 0,
-    "cause_effect": 0
+    "counterintuitive": 1,
+    "cause_effect": 1
    },
    "template": null,
-   "why": "П: процедура испытаний; видимое — цвет сухой/влажный."
+   "why": "Пр: порядок испытаний и точки выбора (практикум на данных); цветовые признаки можно закрепить карточками.",
+   "scored": true,
+   "secondary_format": "карточки"
   },
   {
    "node_id": "bar.ch2c.04-macro-textures",
    "format": "карточки",
    "video_scores": {
     "time": 0,
-    "invisible": 0,
+    "invisible": 1,
     "scale": 0,
-    "counterintuitive": 0,
+    "counterintuitive": 1,
     "cause_effect": 0
    },
    "template": null,
-   "why": "В: типы текстур."
+   "why": "Р: узнавание признаков по образцу; карточки с фото-признаками уместны, динамики нет.",
+   "scored": true
   },
   {
    "node_id": "bar.ch2c.05-macro-mineral-composition",
    "format": "интерактив",
    "video_scores": {
-    "time": 0,
-    "invisible": 0,
+    "time": 1,
+    "invisible": 2,
     "scale": 0,
-    "counterintuitive": 0,
-    "cause_effect": 0
+    "counterintuitive": 1,
+    "cause_effect": 2
    },
    "template": null,
-   "why": "И: дерево решений по признакам; контринтуитивность: общий признак — вода."
+   "why": "И: сигнал (вода, HCl, цвет) → отклик → минерал, ответ не единственный; интерактив с выбором пробы, карточки для закрепления.",
+   "scored": true,
+   "secondary_format": "карточки"
   },
   {
    "node_id": "bar.ch2c.06-thin-section-color",
    "format": "карточки",
    "video_scores": {
     "time": 0,
-    "invisible": 0,
+    "invisible": 1,
     "scale": 0,
     "counterintuitive": 0,
-    "cause_effect": 0
+    "cause_effect": 1
    },
    "template": null,
-   "why": "И: цвета по веществам."
+   "why": "Короткое соответствие «цвет → вещество»: карточки; визуальной динамики мало.",
+   "scored": true
   },
   {
    "node_id": "bar.ch2c.07-thin-section-structure",
    "format": "карточки",
    "video_scores": {
     "time": 0,
-    "invisible": 0,
+    "invisible": 1,
     "scale": 0,
     "counterintuitive": 0,
-    "cause_effect": 0
+    "cause_effect": 1
    },
    "template": null,
-   "why": "В: типы структур."
+   "why": "Р: узнавание типов структур по виду шлифа; карточки с изображениями, механизмы образования даны кратко.",
+   "scored": true
   },
   {
    "node_id": "bar.ch2c.08-thin-section-textures",
    "format": "шортс",
    "video_scores": {
     "time": 0,
-    "invisible": 0,
+    "invisible": 2,
     "scale": 0,
-    "counterintuitive": 0,
-    "cause_effect": 0
+    "counterintuitive": 1,
+    "cause_effect": 1
    },
    "template": null,
-   "why": "В: вращение столика — невидимое становится видимым."
+   "why": "Невидимая ориентировка частиц проявляется при вращении столика: короткий шортс-показ; интерактив с вращением как вторая форма.",
+   "scored": true,
+   "secondary_format": "интерактив"
   },
   {
    "node_id": "bar.ch2c.09-thin-section-mineral-limits",
    "format": "текст",
    "video_scores": {
     "time": 0,
-    "invisible": 0,
+    "invisible": 1,
     "scale": 0,
-    "counterintuitive": 0,
-    "cause_effect": 0
+    "counterintuitive": 1,
+    "cause_effect": 1
    },
    "template": null,
-   "why": "И/Р: ограничения метода."
+   "why": "Н: важно принять границу метода и формулировку неопределённости; короткий текст достаточен.",
+   "scored": true
   },
   {
    "node_id": "bar.ch2c.10-thin-section-mineral-optics",
    "format": "интерактив",
    "video_scores": {
     "time": 0,
-    "invisible": 0,
+    "invisible": 2,
     "scale": 0,
-    "counterintuitive": 0,
-    "cause_effect": 0
+    "counterintuitive": 1,
+    "cause_effect": 1
    },
    "template": null,
-   "why": "Ф: диапазоны двупреломления с перекрытием."
+   "why": "И: сигнал оптики → свойство минерала, ответов несколько; интерактив-таблица признаков, карточки для закрепления.",
+   "scored": true,
+   "secondary_format": "карточки"
   },
   {
    "node_id": "bar.ch2c.11-thin-section-clastic-organic",
    "format": "текст",
    "video_scores": {
     "time": 0,
-    "invisible": 0,
+    "invisible": 1,
     "scale": 0,
     "counterintuitive": 0,
-    "cause_effect": 0
+    "cause_effect": 1
    },
    "template": null,
-   "why": "П: порядок описания."
+   "why": "Основное — перечень признаков и порядок завершения описания; текст с карточками-признаками.",
+   "scored": true,
+   "secondary_format": "карточки"
   },
   {
    "node_id": "bar.ch2c.12-sedlog-legend",
@@ -1832,7 +2066,8 @@
     "cause_effect": 0
    },
    "template": null,
-   "why": "Н: справочник знаков."
+   "why": "Р: узнавание символов; карточки «символ — значение».",
+   "scored": true
   },
   {
    "node_id": "bar.ch2c.13-sedlog-blanks",
@@ -1845,46 +2080,53 @@
     "cause_effect": 0
    },
    "template": null,
-   "why": "П: форма бланка."
+   "why": "Пр: структура записи; достаточно текста с изображением бланка.",
+   "scored": true
   },
   {
    "node_id": "bar.ch2c.14-sedlog-example",
    "format": "длинное видео",
    "video_scores": {
     "time": 0,
-    "invisible": 0,
-    "scale": 0,
+    "invisible": 1,
+    "scale": 1,
     "counterintuitive": 0,
     "cause_effect": 0
    },
    "template": null,
-   "why": "В: разбор колонки."
+   "why": "Пр: порядок построения и чтения колонки, лучше разбор по шагам; видеопоказ рукописного листа помогает увидеть строение.",
+   "scored": true,
+   "secondary_format": "практикум на данных"
   },
   {
    "node_id": "bar.ch2c.15-core-interpretation-table",
    "format": "длинное видео",
    "video_scores": {
     "time": 0,
-    "invisible": 0,
-    "scale": 0,
-    "counterintuitive": 0,
-    "cause_effect": 0
+    "invisible": 1,
+    "scale": 1,
+    "counterintuitive": 2,
+    "cause_effect": 2
    },
    "template": null,
-   "why": "Р: цепочка описание→процесс→обстановка; причина и следствие."
+   "why": "Н: несколько обстановок вместо одной; видео прослеживает цепочку признак → процесс → обстановка, практикум даёт разбор слоёв.",
+   "scored": true,
+   "secondary_format": "практикум на данных"
   },
   {
    "node_id": "bar.ch2c.16-sedmodel-poroperm",
    "format": "практикум на данных",
    "video_scores": {
     "time": 0,
-    "invisible": 0,
-    "scale": 0,
+    "invisible": 1,
+    "scale": 2,
     "counterintuitive": 0,
-    "cause_effect": 0
+    "cause_effect": 1
    },
    "template": null,
-   "why": "В/Пр: переход от модели к свойствам."
+   "why": "П: объёмная модель и привязка к скважине; скачок от керна к объёму показывает видео, привязку к данным отрабатывает практикум.",
+   "scored": true,
+   "secondary_format": "практикум на данных"
   }
  ]
 }
