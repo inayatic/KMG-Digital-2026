@@ -1,0 +1,164 @@
+[
+ {
+  "key": "ch_s00fronta",
+  "units": 98,
+  "pages": [
+   1,
+   10
+  ],
+  "chars": 52911
+ },
+ {
+  "key": "ch_s00frontb",
+  "units": 98,
+  "pages": [
+   11,
+   20
+  ],
+  "chars": 53174
+ },
+ {
+  "key": "ch_s00frontc",
+  "units": 111,
+  "pages": [
+   20,
+   29
+  ],
+  "chars": 54665
+ },
+ {
+  "key": "ch_s00frontd",
+  "units": 146,
+  "pages": [
+   30,
+   44
+  ],
+  "chars": 53608
+ },
+ {
+  "key": "ch_s00fronte",
+  "units": 94,
+  "pages": [
+   45,
+   53
+  ],
+  "chars": 61931
+ },
+ {
+  "key": "ch_s00frontf",
+  "units": 149,
+  "pages": [
+   54,
+   67
+  ],
+  "chars": 53691
+ },
+ {
+  "key": "ch_s00frontg",
+  "units": 166,
+  "pages": [
+   68,
+   81
+  ],
+  "chars": 53984
+ },
+ {
+  "key": "ch_s00fronth",
+  "units": 155,
+  "pages": [
+   82,
+   97
+  ],
+  "chars": 54791
+ },
+ {
+  "key": "ch_s00fronti",
+  "units": 174,
+  "pages": [
+   98,
+   113
+  ],
+  "chars": 53765
+ },
+ {
+  "key": "ch_s00frontj",
+  "units": 222,
+  "pages": [
+   114,
+   127
+  ],
+  "chars": 57708
+ },
+ {
+  "key": "ch_s00frontk",
+  "units": 192,
+  "pages": [
+   128,
+   138
+  ],
+  "chars": 35016
+ },
+ {
+  "key": "ch_s00frontl",
+  "units": 193,
+  "pages": [
+   138,
+   151
+  ],
+  "chars": 48278
+ },
+ {
+  "key": "ch_s00frontm",
+  "units": 98,
+  "pages": [
+   151,
+   167
+  ],
+  "chars": 38869
+ },
+ {
+  "key": "ch_s00frontn",
+  "units": 143,
+  "pages": [
+   167,
+   183
+  ],
+  "chars": 47667
+ },
+ {
+  "key": "ch_s00fronto",
+  "units": 155,
+  "pages": [
+   184,
+   193
+  ],
+  "chars": 42551
+ },
+ {
+  "key": "ch_s00frontp",
+  "units": 125,
+  "pages": [
+   193,
+   205
+  ],
+  "chars": 54621
+ },
+ {
+  "key": "ch_s00frontq",
+  "units": 112,
+  "pages": [
+   206,
+   217
+  ],
+  "chars": 43136
+ },
+ {
+  "key": "ch_s00frontr",
+  "units": 68,
+  "pages": [
+   217,
+   227
+  ],
+  "chars": 31212
+ }
+]
