@@ -113,6 +113,18 @@ def clean_note(t):
     return vis(t)
 
 
+def glossary_rows(path, maxpage, book="Лат"):
+    """Строки глоссария доменного пакета: термины данной книги, определённые на страницах не позже maxpage (PDF)."""
+    rows = []
+    if not Path(path).exists(): return rows
+    for line in Path(path).read_text().splitlines():
+        c = [x.strip() for x in line.strip().strip("|").split("|")]
+        if not line.startswith("|") or len(c) < 5 or c[0].startswith(("термин", "---", ":--")) or set(c[0]) <= set("-: "): continue
+        pg = [int(x) for m in re.finditer(book + r"\s*([0-9][0-9,\s;–\-]*)", c[3]) for x in re.findall(r"\d+", m.group(1))]
+        if pg and min(pg) <= maxpage: rows.append((c[0], c[2], c[3], min(pg)))
+    return sorted(rows, key=lambda r: (r[3], r[0].lower()))
+
+
 class Build:
     def __init__(s, nodes, units, cfg, chapter):
         s.nodes, s.units, s.cfg, s.chapter = nodes, units, cfg, chapter
@@ -357,7 +369,7 @@ class Build:
             meta.append({"id": sid, "short": short, "part": part, "min": minutes, "num": i, "kind": kind})
             pages += (f'<article class="view step" id="v-{esc(sid)}" data-step="{esc(sid)}" hidden><p class="crumb">{esc(part)} · шаг {i} из {len(steps)} · {esc(A)}{(", " + esc(sec or cfg["book"].get("section_label", ""))) if (sec or cfg["book"].get("section_label")) else ""} · <code class="idc">{esc(sid)}</code></p>'
                       f'<h2 tabindex="-1">{esc(short)}</h2><p class="meta">{esc(A)}, «{esc(T)}»{(", " + esc(cfg["book"]["year"])) if cfg["book"].get("year") else ""} · ≈{minutes} мин (оценка)</p>'
-                      f'<p class="legend" aria-label="Легенда">Нажмите на предложение, чтобы увидеть источник (стр. = номер страницы PDF-скана книги): <span class="lg ca">автор</span> <span class="lg cm">модель</span> <span class="lg ch">гипотеза</span> <sup class="vk">✓</sup> проверено.</p>'
+                      f'<p class="legend" aria-label="Легенда">Нажмите на предложение, чтобы увидеть источник (стр. = номер страницы PDF-скана книги; незнакомый термин: <a href="#/glossary">Словарь</a>): <span class="lg ca">автор</span> <span class="lg cm">модель</span> <span class="lg ch">гипотеза</span> <sup class="vk">✓</sup> проверено.</p>'
                       f'<nav class="toc" aria-label="Оглавление страницы"><b>На странице</b><ul>{toc}</ul></nav>{body}'
                       f'<div class="pn"><button data-prev>← Назад</button><button data-done>Отметить пройденным</button><button data-next>Дальше →</button></div></article>')
         # карта связей
@@ -384,12 +396,21 @@ class Build:
             f'<li><a href="#/step/{esc(n["id"])}">{sh[n["id"]]["num"]}. {esc(sh[n["id"]]["short"])}</a> опирается на: ' +
             (", ".join(f'<a href="#/step/{esc(l["to"])}">{sh[l["to"]]["num"]}</a>' for l in n["links"] if l["type"] == "предпосылка") or "ничего в разделе") +
             (" · примеры: " + ", ".join(f'<a href="#/step/{esc(l["to"])}">{sh[l["to"]]["num"]}</a>' for l in n["links"] if l["type"] == "пример") if any(l["type"] == "пример" for l in n["links"]) else "") + "</li>" for n in order) + "</ul>"
+        maxp = max(c["page"] for n in s.nodes for c in n["claims"])
+        gl = glossary_rows(ROOT / cfg["book"].get("glossary", "domain-pack/geology/glossary.md"), maxp)
+        if gl:
+            glh = ("<p class='meta'>Термины и обозначения книги, определённые до конца этого раздела (по глоссарию доменного пакета; определения по книге, стр. = PDF-страница). "
+                   f"Терминов: {len(gl)}.</p><p><label>Поиск: <input id='gsearch' type='search' autocomplete='off' aria-label='Поиск по словарю'></label></p>"
+                   "<div class='tw' tabindex='0' role='region' aria-label='Словарь, прокрутка'><table><thead><tr><th scope='col'>Термин</th><th scope='col'>Определение по книге</th><th scope='col'>Стр.</th></tr></thead><tbody>"
+                   + "".join(f"<tr><td>{esc(tex_inline(a))}</td><td>{esc(tex_inline(b))}</td><td>{esc(c)}</td></tr>" for a, b, c, _ in gl) + "</tbody></table></div>")
+        else:
+            glh = "<p class='meta'>Словарь для этого раздела не собран.</p>"
         data = {"id": s.chapter, "steps": meta, "parts": [p["title"] for p in cfg["parts"]], "ev": s.EV, "tasks": tasks, "dstep": s.dcalc}
         dj = json.dumps(data, ensure_ascii=False).replace("</", "<\\/")
         tpl = (TPL / "template.html").read_text()
         out = (tpl.replace("/*STYLE*/", (TPL / "style.css").read_text()).replace("/*APP*/", (TPL / "app.js").read_text())
                .replace("<!--DATA-->", dj).replace("<!--PAGES-->", pages).replace("<!--CARDS-->", cards).replace("<!--SUMMARY-->", summary)
-               .replace("<!--MAP-->", mapsvg + maplist).replace("<!--BOOK-->", esc(A))
+               .replace("<!--MAP-->", mapsvg + maplist).replace("<!--GLOSSARY-->", glh).replace("<!--BOOK-->", esc(A))
                .replace("<!--TITLE-->", esc(f"Курс: {A}" + (f", {cfg['book']['title_suffix']}" if cfg["book"].get("title_suffix") else ""))))
         return out
 

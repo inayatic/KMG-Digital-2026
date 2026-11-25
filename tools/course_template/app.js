@@ -58,11 +58,12 @@ function route(){
  if(m&&idx[m[1]]!==undefined){view=document.getElementById("v-"+m[1]);S.last=m[1];save();initStep(m[1])}
  else if(hs==="#/cards"){view=$("#v-cards");cards()}
  else if(hs==="#/summary")view=$("#v-summary");
- else if(hs==="#/map")view=$("#v-map");
+ else if(hs==="#/map")view=$("#v-map");else if(hs==="#/glossary")view=$("#v-glossary");
  else{view=$("#v-path");path()}
  view.hidden=false;view.classList.add("printing");$("#ev").hidden=true;window.scrollTo(0,0);prog();
  var h=$("h2",view);if(h)h.focus({preventScroll:true});
 }
+var gs=document.getElementById("gsearch");if(gs)gs.oninput=function(){var q=gs.value.toLowerCase().trim();$$("#v-glossary tbody tr").forEach(function(r){r.hidden=q&&r.textContent.toLowerCase().indexOf(q)<0})};
 window.addEventListener("hashchange",route);
 $("#print").onclick=function(){window.print()};
 /* страница шага */
