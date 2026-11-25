@@ -1,0 +1,57 @@
+[
+ {
+  "node": "ven.ch_s00frontl.01-clay-params",
+  "format": "карточки",
+  "why": "определения параметров"
+ },
+ {
+  "node": "ven.ch_s00frontl.02-clay-types",
+  "format": "карточки",
+  "why": "терминологическая классификация"
+ },
+ {
+  "node": "ven.ch_s00frontl.03-why-clay",
+  "format": "длинное видео",
+  "why": "невидимое: адсорбционная вода и физика влияния"
+ },
+ {
+  "node": "ven.ch_s00frontl.04-lab-limits",
+  "format": "текст",
+  "why": "критика метода"
+ },
+ {
+  "node": "ven.ch_s00frontl.05-geo-params-scope",
+  "format": "текст",
+  "why": "границы применимости"
+ },
+ {
+  "node": "ven.ch_s00frontl.06-sp-dispersed",
+  "format": "практикум на данных",
+  "why": "пошаговый расчёт по СП и пример 17"
+ },
+ {
+  "node": "ven.ch_s00frontl.07-sp-carbonate",
+  "format": "практикум на данных",
+  "why": "пример 18"
+ },
+ {
+  "node": "ven.ch_s00frontl.08-sp-layered",
+  "format": "интерактив",
+  "why": "палетка Доля, интерполяция"
+ },
+ {
+  "node": "ven.ch_s00frontl.09-gamma-basis",
+  "format": "длинное видео",
+  "why": "физика гамма-активности глин"
+ },
+ {
+  "node": "ven.ch_s00frontl.10-gamma-corrections",
+  "format": "интерактив",
+  "why": "поправки по палеткам, итерация"
+ },
+ {
+  "node": "ven.ch_s00frontl.11-gamma-procedure",
+  "format": "практикум на данных",
+  "why": "порядок обработки и опорные пласты"
+ }
+]

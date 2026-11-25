@@ -1,0 +1,196 @@
+# Покрытие
+Все единицы сегмента отнесены к узлам; не покрытых нет. Номера страниц/OCR-обрывки лежат в узле соответствующего диапазона.
+
+- p138-13 (heading) → ven.ch_s00frontl.01-clay-params
+- p138-14 (paragraph) → ven.ch_s00frontl.01-clay-params
+- p138-15 (paragraph) → ven.ch_s00frontl.01-clay-params
+- p138-16 (paragraph) → ven.ch_s00frontl.01-clay-params
+- p138-17 (paragraph) → ven.ch_s00frontl.01-clay-params
+- p138-18 (paragraph) → ven.ch_s00frontl.01-clay-params
+- p138-19 (paragraph) → ven.ch_s00frontl.01-clay-params [колонтитул/обрывок OCR]
+- p138-20 (paragraph) → ven.ch_s00frontl.01-clay-params [колонтитул/обрывок OCR]
+- p138-21 (paragraph) → ven.ch_s00frontl.01-clay-params [колонтитул/обрывок OCR]
+- p138-22 (paragraph) → ven.ch_s00frontl.01-clay-params
+- p138-23 (paragraph) → ven.ch_s00frontl.01-clay-params [колонтитул/обрывок OCR]
+- p138-24 (paragraph) → ven.ch_s00frontl.01-clay-params
+- p138-25 (paragraph) → ven.ch_s00frontl.01-clay-params
+- p138-26 (paragraph) → ven.ch_s00frontl.01-clay-params
+- p138-27 (paragraph) → ven.ch_s00frontl.01-clay-params [колонтитул/обрывок OCR]
+- p138-28 (paragraph) → ven.ch_s00frontl.01-clay-params
+- p138-29 (paragraph) → ven.ch_s00frontl.01-clay-params [колонтитул/обрывок OCR]
+- p138-30 (paragraph) → ven.ch_s00frontl.01-clay-params [колонтитул/обрывок OCR]
+- p138-31 (paragraph) → ven.ch_s00frontl.01-clay-params
+- p138-32 (paragraph) → ven.ch_s00frontl.01-clay-params
+- p138-33 (paragraph) → ven.ch_s00frontl.01-clay-params
+- p138-34 (paragraph) → ven.ch_s00frontl.01-clay-params [колонтитул/обрывок OCR]
+- p139-01 (paragraph) → ven.ch_s00frontl.02-clay-types
+- p139-02 (paragraph) → ven.ch_s00frontl.02-clay-types
+- p139-03 (formula) → ven.ch_s00frontl.02-clay-types
+- p139-04 (paragraph) → ven.ch_s00frontl.02-clay-types
+- p139-05 (paragraph) → ven.ch_s00frontl.03-why-clay
+- p139-06 (paragraph) → ven.ch_s00frontl.03-why-clay
+- p139-07 (paragraph) → ven.ch_s00frontl.03-why-clay [колонтитул/обрывок OCR]
+- p139-08 (paragraph) → ven.ch_s00frontl.03-why-clay
+- p139-09 (paragraph) → ven.ch_s00frontl.03-why-clay
+- p139-10 (paragraph) → ven.ch_s00frontl.03-why-clay
+- p139-11 (paragraph) → ven.ch_s00frontl.03-why-clay
+- p139-12 (paragraph) → ven.ch_s00frontl.03-why-clay
+- p139-13 (paragraph) → ven.ch_s00frontl.04-lab-limits
+- p139-14 (paragraph) → ven.ch_s00frontl.04-lab-limits
+- p140-01 (paragraph) → ven.ch_s00frontl.04-lab-limits
+- p140-02 (paragraph) → ven.ch_s00frontl.04-lab-limits
+- p140-03 (paragraph) → ven.ch_s00frontl.04-lab-limits
+- p140-04 (paragraph) → ven.ch_s00frontl.04-lab-limits
+- p140-05 (paragraph) → ven.ch_s00frontl.04-lab-limits
+- p140-06 (paragraph) → ven.ch_s00frontl.05-geo-params-scope
+- p140-07 (paragraph) → ven.ch_s00frontl.05-geo-params-scope
+- p140-08 (paragraph) → ven.ch_s00frontl.05-geo-params-scope
+- p140-09 (paragraph) → ven.ch_s00frontl.05-geo-params-scope
+- p140-10 (paragraph) → ven.ch_s00frontl.05-geo-params-scope
+- p140-11 (paragraph) → ven.ch_s00frontl.05-geo-params-scope
+- p141-01 (paragraph) → ven.ch_s00frontl.06-sp-dispersed
+- p141-02 (paragraph) → ven.ch_s00frontl.06-sp-dispersed
+- p141-03 (paragraph) → ven.ch_s00frontl.06-sp-dispersed
+- p141-04 (paragraph) → ven.ch_s00frontl.06-sp-dispersed
+- p141-05 (paragraph) → ven.ch_s00frontl.06-sp-dispersed
+- p141-06 (paragraph) → ven.ch_s00frontl.06-sp-dispersed
+- p141-07 (paragraph) → ven.ch_s00frontl.06-sp-dispersed
+- p141-08 (paragraph) → ven.ch_s00frontl.06-sp-dispersed [колонтитул/обрывок OCR]
+- p141-09 (paragraph) → ven.ch_s00frontl.06-sp-dispersed
+- p141-10 (paragraph) → ven.ch_s00frontl.06-sp-dispersed
+- p141-11 (paragraph) → ven.ch_s00frontl.06-sp-dispersed
+- p141-12 (figure_desc) → ven.ch_s00frontl.06-sp-dispersed
+- p142-01 (paragraph) → ven.ch_s00frontl.06-sp-dispersed
+- p142-02 (paragraph) → ven.ch_s00frontl.06-sp-dispersed
+- p142-03 (paragraph) → ven.ch_s00frontl.06-sp-dispersed
+- p142-04 (paragraph) → ven.ch_s00frontl.06-sp-dispersed [колонтитул/обрывок OCR]
+- p142-05 (paragraph) → ven.ch_s00frontl.06-sp-dispersed
+- p142-06 (paragraph) → ven.ch_s00frontl.06-sp-dispersed
+- p142-07 (paragraph) → ven.ch_s00frontl.06-sp-dispersed
+- p142-08 (paragraph) → ven.ch_s00frontl.06-sp-dispersed
+- p142-09 (paragraph) → ven.ch_s00frontl.06-sp-dispersed
+- p142-10 (paragraph) → ven.ch_s00frontl.06-sp-dispersed
+- p142-11 (paragraph) → ven.ch_s00frontl.06-sp-dispersed
+- p142-12 (paragraph) → ven.ch_s00frontl.06-sp-dispersed
+- p142-13 (paragraph) → ven.ch_s00frontl.06-sp-dispersed [колонтитул/обрывок OCR]
+- p143-01 (paragraph) → ven.ch_s00frontl.06-sp-dispersed
+- p143-02 (paragraph) → ven.ch_s00frontl.06-sp-dispersed
+- p143-03 (paragraph) → ven.ch_s00frontl.06-sp-dispersed
+- p143-04 (paragraph) → ven.ch_s00frontl.06-sp-dispersed
+- p143-05 (paragraph) → ven.ch_s00frontl.06-sp-dispersed
+- p143-06 (paragraph) → ven.ch_s00frontl.06-sp-dispersed
+- p143-07 (paragraph) → ven.ch_s00frontl.06-sp-dispersed
+- p143-08 (paragraph) → ven.ch_s00frontl.06-sp-dispersed
+- p143-09 (paragraph) → ven.ch_s00frontl.07-sp-carbonate
+- p143-10 (paragraph) → ven.ch_s00frontl.07-sp-carbonate
+- p143-11 (paragraph) → ven.ch_s00frontl.07-sp-carbonate
+- p143-12 (paragraph) → ven.ch_s00frontl.07-sp-carbonate
+- p144-01 (paragraph) → ven.ch_s00frontl.07-sp-carbonate
+- p144-02 (paragraph) → ven.ch_s00frontl.08-sp-layered
+- p144-03 (paragraph) → ven.ch_s00frontl.08-sp-layered
+- p144-04 (paragraph) → ven.ch_s00frontl.08-sp-layered [колонтитул/обрывок OCR]
+- p144-05 (paragraph) → ven.ch_s00frontl.08-sp-layered
+- p144-06 (caption) → ven.ch_s00frontl.08-sp-layered
+- p144-07 (formula) → ven.ch_s00frontl.08-sp-layered
+- p144-08 (paragraph) → ven.ch_s00frontl.08-sp-layered
+- p144-09 (paragraph) → ven.ch_s00frontl.08-sp-layered [колонтитул/обрывок OCR]
+- p144-10 (paragraph) → ven.ch_s00frontl.08-sp-layered [колонтитул/обрывок OCR]
+- p144-11 (paragraph) → ven.ch_s00frontl.08-sp-layered [колонтитул/обрывок OCR]
+- p144-12 (paragraph) → ven.ch_s00frontl.08-sp-layered [колонтитул/обрывок OCR]
+- p144-13 (paragraph) → ven.ch_s00frontl.08-sp-layered [колонтитул/обрывок OCR]
+- p144-14 (paragraph) → ven.ch_s00frontl.08-sp-layered
+- p144-15 (paragraph) → ven.ch_s00frontl.08-sp-layered
+- p144-16 (paragraph) → ven.ch_s00frontl.08-sp-layered [колонтитул/обрывок OCR]
+- p144-17 (paragraph) → ven.ch_s00frontl.08-sp-layered
+- p144-18 (paragraph) → ven.ch_s00frontl.08-sp-layered
+- p144-19 (paragraph) → ven.ch_s00frontl.08-sp-layered
+- p144-20 (paragraph) → ven.ch_s00frontl.08-sp-layered
+- p144-21 (paragraph) → ven.ch_s00frontl.08-sp-layered
+- p144-22 (paragraph) → ven.ch_s00frontl.08-sp-layered
+- p145-01 (paragraph) → ven.ch_s00frontl.08-sp-layered
+- p145-02 (paragraph) → ven.ch_s00frontl.08-sp-layered
+- p145-03 (paragraph) → ven.ch_s00frontl.06-sp-dispersed
+- p145-04 (paragraph) → ven.ch_s00frontl.07-sp-carbonate
+- p145-05 (paragraph) → ven.ch_s00frontl.08-sp-layered
+- p145-06 (paragraph) → ven.ch_s00frontl.08-sp-layered
+- p145-07 (heading) → ven.ch_s00frontl.09-gamma-basis
+- p145-08 (paragraph) → ven.ch_s00frontl.09-gamma-basis
+- p145-09 (paragraph) → ven.ch_s00frontl.09-gamma-basis [колонтитул/обрывок OCR]
+- p145-10 (paragraph) → ven.ch_s00frontl.09-gamma-basis
+- p145-11 (paragraph) → ven.ch_s00frontl.09-gamma-basis
+- p145-12 (paragraph) → ven.ch_s00frontl.09-gamma-basis
+- p145-13 (paragraph) → ven.ch_s00frontl.09-gamma-basis
+- p145-14 (paragraph) → ven.ch_s00frontl.09-gamma-basis [колонтитул/обрывок OCR]
+- p146-01 (paragraph) → ven.ch_s00frontl.09-gamma-basis
+- p146-02 (paragraph) → ven.ch_s00frontl.09-gamma-basis [колонтитул/обрывок OCR]
+- p146-03 (paragraph) → ven.ch_s00frontl.09-gamma-basis
+- p146-04 (paragraph) → ven.ch_s00frontl.09-gamma-basis [колонтитул/обрывок OCR]
+- p146-05 (paragraph) → ven.ch_s00frontl.09-gamma-basis
+- p146-06 (paragraph) → ven.ch_s00frontl.09-gamma-basis
+- p146-07 (paragraph) → ven.ch_s00frontl.09-gamma-basis [колонтитул/обрывок OCR]
+- p146-08 (paragraph) → ven.ch_s00frontl.09-gamma-basis
+- p146-09 (paragraph) → ven.ch_s00frontl.09-gamma-basis
+- p146-10 (paragraph) → ven.ch_s00frontl.09-gamma-basis [колонтитул/обрывок OCR]
+- p146-11 (paragraph) → ven.ch_s00frontl.09-gamma-basis
+- p146-12 (paragraph) → ven.ch_s00frontl.09-gamma-basis [колонтитул/обрывок OCR]
+- p146-13 (paragraph) → ven.ch_s00frontl.09-gamma-basis
+- p146-14 (paragraph) → ven.ch_s00frontl.09-gamma-basis
+- p146-15 (paragraph) → ven.ch_s00frontl.09-gamma-basis
+- p147-01 (paragraph) → ven.ch_s00frontl.10-gamma-corrections [колонтитул/обрывок OCR]
+- p147-02 (paragraph) → ven.ch_s00frontl.10-gamma-corrections
+- p147-03 (paragraph) → ven.ch_s00frontl.10-gamma-corrections
+- p147-04 (paragraph) → ven.ch_s00frontl.10-gamma-corrections
+- p147-05 (formula) → ven.ch_s00frontl.10-gamma-corrections
+- p147-06 (paragraph) → ven.ch_s00frontl.10-gamma-corrections
+- p147-07 (paragraph) → ven.ch_s00frontl.10-gamma-corrections
+- p147-08 (paragraph) → ven.ch_s00frontl.10-gamma-corrections
+- p147-09 (paragraph) → ven.ch_s00frontl.10-gamma-corrections
+- p147-10 (paragraph) → ven.ch_s00frontl.10-gamma-corrections
+- p147-11 (paragraph) → ven.ch_s00frontl.10-gamma-corrections
+- p147-12 (paragraph) → ven.ch_s00frontl.10-gamma-corrections [колонтитул/обрывок OCR]
+- p147-13 (paragraph) → ven.ch_s00frontl.10-gamma-corrections [колонтитул/обрывок OCR]
+- p147-14 (paragraph) → ven.ch_s00frontl.10-gamma-corrections
+- p147-15 (paragraph) → ven.ch_s00frontl.10-gamma-corrections
+- p147-16 (formula) → ven.ch_s00frontl.10-gamma-corrections
+- p147-17 (paragraph) → ven.ch_s00frontl.10-gamma-corrections
+- p147-18 (paragraph) → ven.ch_s00frontl.10-gamma-corrections
+- p147-19 (paragraph) → ven.ch_s00frontl.10-gamma-corrections
+- p147-20 (paragraph) → ven.ch_s00frontl.10-gamma-corrections
+- p147-21 (paragraph) → ven.ch_s00frontl.10-gamma-corrections [колонтитул/обрывок OCR]
+- p148-01 (paragraph) → ven.ch_s00frontl.10-gamma-corrections
+- p148-02 (paragraph) → ven.ch_s00frontl.10-gamma-corrections
+- p148-03 (caption) → ven.ch_s00frontl.10-gamma-corrections
+- p148-04 (figure_desc) → ven.ch_s00frontl.10-gamma-corrections
+- p148-05 (figure_desc) → ven.ch_s00frontl.10-gamma-corrections
+- p148-06 (paragraph) → ven.ch_s00frontl.10-gamma-corrections
+- p148-07 (paragraph) → ven.ch_s00frontl.10-gamma-corrections
+- p148-08 (paragraph) → ven.ch_s00frontl.10-gamma-corrections
+- p148-09 (paragraph) → ven.ch_s00frontl.10-gamma-corrections
+- p148-10 (paragraph) → ven.ch_s00frontl.10-gamma-corrections
+- p148-11 (paragraph) → ven.ch_s00frontl.10-gamma-corrections
+- p148-12 (caption) → ven.ch_s00frontl.10-gamma-corrections
+- p148-13 (paragraph) → ven.ch_s00frontl.10-gamma-corrections
+- p148-14 (paragraph) → ven.ch_s00frontl.10-gamma-corrections
+- p148-15 (paragraph) → ven.ch_s00frontl.10-gamma-corrections
+- p148-16 (paragraph) → ven.ch_s00frontl.10-gamma-corrections [колонтитул/обрывок OCR]
+- p149-01 (paragraph) → ven.ch_s00frontl.10-gamma-corrections
+- p149-02 (paragraph) → ven.ch_s00frontl.10-gamma-corrections
+- p149-03 (paragraph) → ven.ch_s00frontl.10-gamma-corrections
+- p149-04 (paragraph) → ven.ch_s00frontl.11-gamma-procedure
+- p149-05 (paragraph) → ven.ch_s00frontl.11-gamma-procedure
+- p149-06 (paragraph) → ven.ch_s00frontl.11-gamma-procedure
+- p149-07 (paragraph) → ven.ch_s00frontl.11-gamma-procedure
+- p149-08 (paragraph) → ven.ch_s00frontl.11-gamma-procedure
+- p149-09 (paragraph) → ven.ch_s00frontl.11-gamma-procedure
+- p149-10 (paragraph) → ven.ch_s00frontl.11-gamma-procedure [колонтитул/обрывок OCR]
+- p149-11 (figure_desc) → ven.ch_s00frontl.10-gamma-corrections
+- p150-01 (paragraph) → ven.ch_s00frontl.10-gamma-corrections
+- p150-02 (paragraph) → ven.ch_s00frontl.11-gamma-procedure
+- p150-03 (paragraph) → ven.ch_s00frontl.11-gamma-procedure [колонтитул/обрывок OCR]
+- p151-01 (formula) → ven.ch_s00frontl.11-gamma-procedure
+- p151-02 (paragraph) → ven.ch_s00frontl.11-gamma-procedure
+- p151-03 (paragraph) → ven.ch_s00frontl.11-gamma-procedure
+- p151-04 (formula) → ven.ch_s00frontl.11-gamma-procedure
+- p151-05 (paragraph) → ven.ch_s00frontl.11-gamma-procedure [колонтитул/обрывок OCR]
+- p151-06 (paragraph) → ven.ch_s00frontl.11-gamma-procedure
+- p151-07 (paragraph) → ven.ch_s00frontl.11-gamma-procedure
