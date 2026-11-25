@@ -1,0 +1,34 @@
+#!/usr/bin/env python3
+"""Журнал ручных правок -> metrics/edit-log.csv (связан с git по хэшу HEAD).
+  edit-log start <chapter> "что правлю"   засечь время
+  edit-log stop                           записать минуты
+  edit-log add <chapter> <minutes> "что"  записать задним числом"""
+import csv, json, subprocess, sys, time
+from pathlib import Path
+ROOT = Path(__file__).resolve().parent.parent
+LOG, STATE = ROOT / "metrics/edit-log.csv", ROOT / ".edit-log.state"
+
+def head():
+    r = subprocess.run(["git", "-C", str(ROOT), "rev-parse", "--short", "HEAD"], capture_output=True, text=True)
+    return r.stdout.strip() or "none"
+
+def write(chapter, minutes, note):
+    new = not LOG.exists()
+    with LOG.open("a", newline="") as f:
+        w = csv.writer(f)
+        if new: w.writerow(["timestamp", "chapter", "minutes", "note", "git_head"])
+        w.writerow([time.strftime("%Y-%m-%dT%H:%M:%S"), chapter, round(minutes, 1), note, head()])
+    print(f"logged {minutes:.1f} min for {chapter}")
+
+a = sys.argv[1:]
+if a[:1] == ["start"] and len(a) == 3:
+    STATE.write_text(json.dumps({"chapter": a[1], "note": a[2], "t": time.time()}))
+    print("timer started")
+elif a[:1] == ["stop"]:
+    if not STATE.exists(): sys.exit("no timer running")
+    s = json.loads(STATE.read_text()); STATE.unlink()
+    write(s["chapter"], (time.time() - s["t"]) / 60, s["note"])
+elif a[:1] == ["add"] and len(a) == 4:
+    write(a[1], float(a[2]), a[3])
+else:
+    sys.exit(__doc__)

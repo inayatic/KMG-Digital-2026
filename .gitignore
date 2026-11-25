@@ -1,0 +1,5 @@
+# исходные главы и сканы не публикуем
+chapters/*
+!chapters/.gitkeep
+.edit-log.state
+__pycache__/
