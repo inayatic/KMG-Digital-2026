@@ -63,7 +63,7 @@ function route(){
  view.hidden=false;view.classList.add("printing");$("#ev").hidden=true;window.scrollTo(0,0);prog();
  var h=$("h2",view);if(h)h.focus({preventScroll:true});
 }
-var gs=document.getElementById("gsearch");if(gs)gs.oninput=function(){var q=gs.value.toLowerCase().trim();$$("#v-glossary tbody tr").forEach(function(r){r.hidden=q&&r.textContent.toLowerCase().indexOf(q)<0})};
+var gs=document.getElementById("gsearch");if(gs)gs.oninput=function(){var gn=function(x){return x.toLowerCase().replace(/[_\s]/g,"")};var q=gn(gs.value);$$("#v-glossary tbody tr").forEach(function(r){var tx=q.length<=2?gn(r.cells[0].textContent):gn(r.textContent);r.hidden=q&&tx.indexOf(q)<0})};
 window.addEventListener("hashchange",route);
 $("#print").onclick=function(){window.print()};
 /* страница шага */
@@ -97,7 +97,7 @@ function taskEl(t){
   d._ev=function(){var v=getv();return{ok:ok(v),right:ans.join("; ")}};
  }else if(t.type==="blank"){
   var parts=t.text.split(/\[\[.+?\]\]/);inn.innerHTML='<p>'+esc(parts[0])+'<input type="text" aria-label="пропуск" autocomplete="off" size="8">'+esc(parts[1]||"")+'</p>';
-  d._ev=function(){var v=nz($("input",inn).value);return{ok:[t.answer].concat(t.alt||[]).some(function(a){return nz(a)===v}),right:t.answer}};
+  d._ev=function(){var raw=$("input",inn).value,v=nz(raw),vs=[v];if(raw.indexOf("=")>=0)vs.push(nz(raw.split("=").pop()));var num=function(x){var f=parseFloat(String(x).replace(",","."));return /^-?[\d.,\s]+$/.test(String(x).trim())&&isFinite(f)?f:null};return{ok:[t.answer].concat(t.alt||[]).some(function(a){var na=num(a);return vs.some(function(u){return nz(a)===u||(na!==null&&num(u)===na)})}),right:t.answer}};
  }else if(t.type==="calc"){
   inn.innerHTML='<input type="text" inputmode="decimal" aria-label="ответ" autocomplete="off">';
   d._ev=function(){var v=parseFloat($("input",inn).value.replace(",","."));return{ok:isFinite(v)&&Math.abs(v-t.answer)<=t.tol,right:String(t.answer).replace(".",",")}};

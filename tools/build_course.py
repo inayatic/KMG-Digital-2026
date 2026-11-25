@@ -93,11 +93,13 @@ SERVICE_SENT = re.compile(r"FORMAT|figure_desc|ocr_note|\bв ролик|\bв к�
 
 
 STEPNUM = {}  # id узла -> номер шага (заполняется в Build.render)
+SHORTNUM = {}  # две цифры номера узла -> номер шага
 
 
 def vis(text):
     """Текст для читателя: без предложений-служебных пометок слоя (в панели источника остаётся оригинал); ссылки «узел lat.…» -> «шаг N»."""
     text = re.sub(r"\s*\((?:figure_desc|FORMAT[^)]*)\)", "", text)
+    text = re.sub(r"\bузл(?:ы|а|ов|е|у)?\s+(\d{2}(?:(?:,\s*|\s+и\s+)\d{2})*)", lambda m: ("шаги " if len(re.findall(r"\d{2}", m.group(1))) > 1 else "шаг ") + ", ".join(str(SHORTNUM.get(k, "?")) for k in re.findall(r"\d{2}", m.group(1))), text)
     text = re.sub(r"узел (lat\.[\w.\-]+)", lambda m: f"шаг {STEPNUM[m.group(1)]}" if m.group(1) in STEPNUM else "соответствующий шаг", text)
     parts = re.split(r"(?<=[.!?])\s+", text.strip())
     keep = [x for x in parts if not SERVICE_SENT.search(x)]
@@ -113,6 +115,15 @@ def clean_note(t):
     return vis(t)
 
 
+GLOSS_NOISE = re.compile(r"clean\.md|draft|куратор|\bOCR\b|\bocr|вопрос ментору|ментор|черновик", re.I)
+
+
+def gloss_clean(t):
+    parts = re.split(r"(?<=[.;!?])\s+", t.strip())
+    keep = [x for x in parts if not GLOSS_NOISE.search(x)]
+    return " ".join(keep) if keep else t
+
+
 def glossary_rows(path, maxpage, book="Лат"):
     """Строки глоссария доменного пакета: термины данной книги, определённые на страницах не позже maxpage (PDF)."""
     rows = []
@@ -121,7 +132,7 @@ def glossary_rows(path, maxpage, book="Лат"):
         c = [x.strip() for x in line.strip().strip("|").split("|")]
         if not line.startswith("|") or len(c) < 5 or c[0].startswith(("термин", "---", ":--")) or set(c[0]) <= set("-: "): continue
         pg = [int(x) for m in re.finditer(book + r"\s*([0-9][0-9,\s;–\-]*)", c[3]) for x in re.findall(r"\d+", m.group(1))]
-        if pg and min(pg) <= maxpage: rows.append((c[0], c[2], c[3], min(pg)))
+        if pg and min(pg) <= maxpage: rows.append((c[0], gloss_clean(c[2]), c[3], min(pg)))
     return sorted(rows, key=lambda r: (r[3], r[0].lower()))
 
 
@@ -301,6 +312,9 @@ class Build:
             if U["type"] == "formula":
                 rd = tex2txt(U["text"]); raw = esc(U["text"].replace("$$", "").strip())
                 fh += (f"<p class='fm'><code>{esc(rd)}</code> <span class='meta'>стр. {U['page']} PDF</span></p>" + (f"<details class='meta'><summary>запись TeX</summary><code>{raw}</code></details>" if rd != U["text"].replace("$$", "").strip() else "")) if rd else f"<p class='fm'><code>{raw}</code> <span class='meta'>стр. {U['page']} PDF; запись TeX</span></p>"
+        for c in n["claims"]:
+            if re.match(r"^(Формул[аы]|Уравнени[ея])\s*\(\d+", c["text"]):
+                fh += P(s.cl(f"{n['id']}#{c['id']}", c["text"]) + f" <span class='pg'>[PDF-стр. {c['page']}]</span>")
         if fh: blocks.append(("fm", "Формулы главы", fh + "<p class='meta'>Расшифровка символов и единиц: в утверждениях шага (блок «Источник»).</p>"))
         th = ""
         for u in n["unit_ids"]:
@@ -345,6 +359,7 @@ class Build:
             steps.append(("node", n))
             if ds and n["id"].split(".")[-1][:2] == ds["after"]: steps.append(("data", ds))
         STEPNUM.clear(); STEPNUM.update({n["id"]: i for i, (k, n) in enumerate(steps, 1)})
+        SHORTNUM.clear(); SHORTNUM.update({n["id"].split(".")[-1][:2]: i for i, (k, n) in enumerate(steps, 1) if k == "node"})
         part_of = {}
         for p in cfg["parts"]:
             for k in p["nodes"]: part_of[s.nid[k]] = p["title"]
