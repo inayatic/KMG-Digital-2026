@@ -1,0 +1,117 @@
+[
+ {
+  "node": "ven.ch_s00frontf.01-fracture-vug-kpt",
+  "format": "текст",
+  "why": "формульные ограничения без динамики"
+ },
+ {
+  "node": "ven.ch_s00frontf.02-ex4-fracture-porosity",
+  "format": "практикум на данных",
+  "why": "числовой разбор с рисунком 50 — пересчитать на своих данных"
+ },
+ {
+  "node": "ven.ch_s00frontf.03-ex5-two-solutions",
+  "format": "практикум на данных",
+  "why": "короткий расчёт по формуле (II.33)"
+ },
+ {
+  "node": "ven.ch_s00frontf.04-sp-conditions",
+  "format": "карточки",
+  "why": "перечень условий применимости"
+ },
+ {
+  "node": "ven.ch_s00frontf.05-sp-procedure",
+  "format": "длинное видео",
+  "why": "пошаговая процедура на диаграмме СП: линии глин и чистых пород, причина и следствие"
+ },
+ {
+  "node": "ven.ch_s00frontf.06-sp-correlation-limits",
+  "format": "интерактив",
+  "why": "выполаживание связи: контринтуитивно, невидимое становится видимым"
+ },
+ {
+  "node": "ven.ch_s00frontf.07-sp-status",
+  "format": "шортс",
+  "why": "контраст «широко применялось — сейчас сокращено»"
+ },
+ {
+  "node": "ven.ch_s00frontf.08-neutron-intro",
+  "format": "карточки",
+  "why": "номенклатура методов"
+ },
+ {
+  "node": "ven.ch_s00frontf.09-hi-water",
+  "format": "шортс",
+  "why": "невидимое становится видимым: водород как мера"
+ },
+ {
+  "node": "ven.ch_s00frontf.10-hi-hydrocarbons",
+  "format": "текст",
+  "why": "набор формул без текстового механизма"
+ },
+ {
+  "node": "ven.ch_s00frontf.11-hi-formation",
+  "format": "карточки",
+  "why": "формулы ВИ пласта по случаям"
+ },
+ {
+  "node": "ven.ch_s00frontf.12-apparent-hi-corrections",
+  "format": "карточки",
+  "why": "список поправок"
+ },
+ {
+  "node": "ven.ch_s00frontf.13-neutron-measure-features",
+  "format": "шортс",
+  "why": "скачок масштаба: радиус 15—20 см и неоднородности"
+ },
+ {
+  "node": "ven.ch_s00frontf.14-neutron-pros-cons",
+  "format": "карточки",
+  "why": "преимущества/недостатки"
+ },
+ {
+  "node": "ven.ch_s00frontf.15-basic-paletki",
+  "format": "интерактив",
+  "why": "чтение палетки в логарифмической шкале"
+ },
+ {
+  "node": "ven.ch_s00frontf.16-delta-j",
+  "format": "длинное видео",
+  "why": "двойное эталонирование: причина и следствие"
+ },
+ {
+  "node": "ven.ch_s00frontf.17-diameter-correction",
+  "format": "практикум на данных",
+  "why": "расчёт по формулам (II.53)–(II.55)"
+ },
+ {
+  "node": "ven.ch_s00frontf.18-paletki-180",
+  "format": "текст",
+  "why": "уточнение к рис. 54"
+ },
+ {
+  "node": "ven.ch_s00frontf.19-mud-cake",
+  "format": "интерактив",
+  "why": "чтение палетки поправки"
+ },
+ {
+  "node": "ven.ch_s00frontf.20-salinity-correction",
+  "format": "интерактив",
+  "why": "смена знака поправки около k*пп — контринтуитивно"
+ },
+ {
+  "node": "ven.ch_s00frontf.21-mud-density",
+  "format": "текст",
+  "why": "формула с коэффициентами"
+ },
+ {
+  "node": "ven.ch_s00frontf.22-clay-correction",
+  "format": "длинное видео",
+  "why": "два механизма: невидимое становится видимым"
+ },
+ {
+  "node": "ven.ch_s00frontf.23-bound-water-consistency",
+  "format": "карточки",
+  "why": "согласование определений"
+ }
+]

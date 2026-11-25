@@ -2,7 +2,7 @@
 """Курс из учебного слоя: python3 -I tools/build_course.py <chapter> --prefix lat.s12. --out out/<dir>
 Читает build/<chapter>/{nodes,units}.json и tools/course_config/<chapter>.json, пишет один index.html
 (данные, стили и скрипт вшиты; без fetch и внешних запросов). Правила «проверено» те же, что в tools/check_nodes.py."""
-import argparse, html, json, math, re, sys, textwrap
+import argparse, os, html, json, math, re, sys, textwrap
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
@@ -110,7 +110,7 @@ def vis(text):
     text = re.sub(r"\s*\((?:figure_desc|FORMAT[^)]*)\)", "", text)
     text = re.sub(r"\s*\((?:утверждени[еяй]\s*)?c\d+(?:\s*[,и]\s*c\d+)*\)", "", text)
     text = re.sub(r"\bуз(?:ел|л(?:ы|а|ов|е|у))\s+(\d{1,2}(?:(?:,\s*|\s+и\s+)\d{1,2})*)", lambda m: ("шаги " if len(re.findall(r"\d+", m.group(1))) > 1 else "шаг ") + ", ".join(str(SHORTNUM.get(k.zfill(2), "?")) for k in re.findall(r"\d+", m.group(1))), text, flags=re.I)
-    text = re.sub(r"узел (lat\.[\w.\-]+)", lambda m: f"шаг {STEPNUM[m.group(1)]}" if m.group(1) in STEPNUM else "соответствующий шаг", text)
+    text = re.sub(r"узел ([a-z]{2,}\.[\w.\-]+)", lambda m: f"шаг {STEPNUM[m.group(1)]}" if m.group(1) in STEPNUM else "соответствующий шаг", text)
     text = re.sub(r"\s*\((?:вывод\s+)?(?:из|по)\s+c\d+(?:\s*[,и–-]\s*c?\d+)*\)", "", text)  # «(вывод из c5)»
     text = re.sub(r"\b(?:утверждени\w+|из|по)\s+c\d+(?:\s*[,и–-]\s*c?\d+)*", "", text)  # «из c5», «утверждение c3»
     text = re.sub(r"\bc\d+\b", "", text)  # одиночные ссылки на id утверждений в тексте для читателя не нужны
@@ -430,7 +430,7 @@ class Build:
             (", ".join(f'<a href="#/step/{esc(l["to"])}">{sh[l["to"]]["num"]}</a>' for l in n["links"] if l["type"] == "предпосылка") or "ничего в разделе") +
             (" · примеры: " + ", ".join(f'<a href="#/step/{esc(l["to"])}">{sh[l["to"]]["num"]}</a>' for l in n["links"] if l["type"] == "пример") if any(l["type"] == "пример" for l in n["links"]) else "") + "</li>" for n in order) + "</ul>"
         maxp = max(c["page"] for n in s.nodes for c in n["claims"])
-        gl = glossary_rows(ROOT / cfg["book"].get("glossary", "domain-pack/geology/glossary.md"), maxp)
+        gl = glossary_rows(ROOT / cfg["book"].get("glossary", f"domain-pack/{os.environ.get('DOMAIN', 'geology')}/glossary.md"), maxp)
         if gl:
             glh = ("<p class='meta'>Термины и обозначения книги, определённые до конца этого раздела (по глоссарию доменного пакета; определения по книге, стр. = PDF-страница). "
                    f"Терминов: {len(gl)}.</p><p><label>Поиск: <input id='gsearch' type='search' autocomplete='off' aria-label='Поиск по словарю'></label></p>"

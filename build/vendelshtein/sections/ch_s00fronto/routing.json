@@ -1,0 +1,92 @@
+[
+ {
+  "node": "ven.ch_s00fronto.01-why-permeability",
+  "format": "текст",
+  "why": "вводный контекст, без визуальной динамики"
+ },
+ {
+  "node": "ven.ch_s00fronto.02-darcy-definition",
+  "format": "карточки",
+  "why": "определение и формула — карточки"
+ },
+ {
+  "node": "ven.ch_s00fronto.03-kozeny-ideal",
+  "format": "длинное видео",
+  "why": "скачок от идеальной модели к реальной: поправки f и T"
+ },
+ {
+  "node": "ven.ch_s00fronto.04-real-rock-kozeny",
+  "format": "текст",
+  "why": "терминологический нюанс, достаточно текста"
+ },
+ {
+  "node": "ven.ch_s00fronto.05-kozeny-karman-sands",
+  "format": "карточки",
+  "why": "цепочка формул и подстановок — карточки"
+ },
+ {
+  "node": "ven.ch_s00fronto.06-pn-theory",
+  "format": "длинное видео",
+  "why": "причина и следствие: от (VI.9) к P_п, показывается как вывод"
+ },
+ {
+  "node": "ven.ch_s00fronto.07-clay-collectors",
+  "format": "карточки",
+  "why": "выбор метода по классу коллектора — карточки"
+ },
+ {
+  "node": "ven.ch_s00fronto.08-nmr-vp-carbonates",
+  "format": "текст",
+  "why": "обзор непромышленных методов — текст"
+ },
+ {
+  "node": "ven.ch_s00fronto.09-phase-permeability",
+  "format": "карточки",
+  "why": "определения и формулы — карточки"
+ },
+ {
+  "node": "ven.ch_s00fronto.10-resistivity-empirical",
+  "format": "практикум на данных",
+  "why": "подбор a, b на графике в двойном логарифмическом масштабе"
+ },
+ {
+  "node": "ven.ch_s00fronto.11-complex-formulas",
+  "format": "карточки",
+  "why": "сравнение формул — карточки"
+ },
+ {
+  "node": "ven.ch_s00fronto.12-example-25",
+  "format": "практикум на данных",
+  "why": "расчёт по шагам с числами автора на данных"
+ },
+ {
+  "node": "ven.ch_s00fronto.13-class-method",
+  "format": "текст",
+  "why": "описание методики по шагам — текст"
+ },
+ {
+  "node": "ven.ch_s00fronto.14-resistivity-limits",
+  "format": "шортс",
+  "why": "контринтуитивно: связь от другого объекта даёт систематическую ошибку"
+ },
+ {
+  "node": "ven.ch_s00fronto.15-sp-clay-model",
+  "format": "длинное видео",
+  "why": "невидимое становится видимым: глинистый слой в поровом канале"
+ },
+ {
+  "node": "ven.ch_s00fronto.16-sp-correlation",
+  "format": "практикум на данных",
+  "why": "корреляция с данными по таблице 15"
+ },
+ {
+  "node": "ven.ch_s00fronto.17-sp-calibration",
+  "format": "интерактив",
+  "why": "выбор способа калибровки как интерактивное дерево решений"
+ },
+ {
+  "node": "ven.ch_s00fronto.18-sp-applicability",
+  "format": "шортс",
+  "why": "контринтуитивная погрешность 20–100%"
+ }
+]

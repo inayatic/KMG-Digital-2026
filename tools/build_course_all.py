@@ -13,7 +13,7 @@ esc = html.escape
 def main(ch):
     B = ROOT / "build" / ch
     nodes = json.load(open(B / "nodes.json")); units = json.load(open(B / "units.json"))
-    secs = [s for s in json.load(open(B / "sections.json")) if re.fullmatch(r"s\d\d|ch\w+", s["key"])]
+    secs = [s for s in json.load(open(B / "sections.json")) if not re.match(r"s00|s99", s["key"])]
     base = json.load(open(ROOT / f"tools/course_config/{ch}.json")) if (ROOT / f"tools/course_config/{ch}.json").exists() else {}
     book = base.get("book") or {"author_unit": units[0]["id"], "title_unit": units[1]["id"]}
     out = ROOT / "out" / ch; out.mkdir(parents=True, exist_ok=True)

@@ -17,7 +17,7 @@ def py(*a):
 def llm(ch, key, agent, prompt, stage, extra=""):
     """Один вызов агента на раздел. Подстановки CHAPTER/KEY/PREFIX даём строкой перед промптом."""
     text = (ROOT / "tools/prompts" / prompt).read_text()
-    head = f"CHAPTER={ch}; KEY={key}; PREFIX={ch[:3]}.{key}\n\n" + extra
+    head = f"CHAPTER={ch}; KEY={key}; PREFIX={ch[:3]}.{key}; DOMAIN={os.environ.get('DOMAIN', 'geology')}\n(доменный пакет: domain-pack/DOMAIN/)\n\n" + extra
     cmd = ["claude", "-p", "--agent", agent, "--output-format", "json", "--permission-mode", "acceptEdits", "--allowedTools", "Read,Write,Edit,Grep,Glob,Bash"]
     if os.environ.get("LLM_MODEL"): cmd += ["--model", os.environ["LLM_MODEL"]]
     r = subprocess.run(cmd, input=head + text, cwd=ROOT, capture_output=True, text=True)
@@ -86,7 +86,7 @@ def org(ch):
 def course(ch):
     """задания по разделам (агент, course_tasks.md) -> детерминированная сборка build_course_all.py с проверкой ответов по утверждениям."""
     import re
-    keys = [k["key"] for k in json.load(open(ROOT / "build" / ch / "sections.json")) if re.fullmatch(r"s\d\d|ch\w+", k["key"])]
+    keys = [k["key"] for k in json.load(open(ROOT / "build" / ch / "sections.json")) if not re.match(r"s00|s99", k["key"])]
     (ROOT / "build" / ch / "course").mkdir(exist_ok=True)
     prompt, pre = ("course_tasks2.md", "tasks2-") if os.environ.get("TASKS_V") != "1" else ("course_tasks.md", "tasks-")  # v2 по умолчанию
     n, tin, tout, usd = per_section(ch, "course", "course-builder", prompt, lambda d: (d.parent.parent / "course" / f"{pre}{d.name}.json").exists(), keys=keys)

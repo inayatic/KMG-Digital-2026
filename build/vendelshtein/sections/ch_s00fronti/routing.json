@@ -1,0 +1,92 @@
+[
+ {
+  "node": "ven.ch_s00fronti.01-acoustic-clay-correction",
+  "format": "текст",
+  "why": "формульный разбор с условиями применимости, ролик не нужен"
+ },
+ {
+  "node": "ven.ch_s00fronti.02-acoustic-saturation-and-pore-geometry",
+  "format": "длинное видео",
+  "why": "скачок масштаба (пустоты vs длина волны) и контринтуитивность: ΔT не равен ни k_n, ни k_nмз"
+ },
+ {
+  "node": "ven.ch_s00fronti.03-acoustic-quality-control",
+  "format": "практикум на данных",
+  "why": "правила валидации легко проверить на реальной записи ΔT с порогами 1,5% и 3%"
+ },
+ {
+  "node": "ven.ch_s00fronti.04-acoustic-bed-selection-ap-groups",
+  "format": "карточки",
+  "why": "набор правил-исключений и признаков групп, без процесса во времени"
+ },
+ {
+  "node": "ven.ch_s00fronti.05-acoustic-kp-procedure",
+  "format": "практикум на данных",
+  "why": "регрессия ΔT против 1/ρ_эф и экстраполяция к k_n=0 хорошо делается на реальных парах кривых"
+ },
+ {
+  "node": "ven.ch_s00fronti.06-acoustic-pros-cons",
+  "format": "карточки",
+  "why": "короткий перечень «за/против» с оговорками"
+ },
+ {
+  "node": "ven.ch_s00fronti.07-effective-porosity-concepts",
+  "format": "длинное видео",
+  "why": "причина и следствие: как положение под ВНК меняет эффективную пористость"
+ },
+ {
+  "node": "ven.ch_s00fronti.08-effective-porosity-terrigenous-dispersed",
+  "format": "текст",
+  "why": "перечень альтернативных методов с условиями; формулы искажены OCR — ментору проверить"
+ },
+ {
+  "node": "ven.ch_s00fronti.09-effective-porosity-layered-clay",
+  "format": "карточки",
+  "why": "короткая последовательность шагов"
+ },
+ {
+  "node": "ven.ch_s00fronti.10-effective-porosity-fracture-cavern",
+  "format": "текст",
+  "why": "условия применимости формул (II.104)-(II.105) лучше читать, а не смотреть"
+ },
+ {
+  "node": "ven.ch_s00fronti.11-saturation-basics",
+  "format": "длинное видео",
+  "why": "невидимое становится видимым: что реально находится в порах и как делится вода"
+ },
+ {
+  "node": "ven.ch_s00fronti.12-resistivity-saturation-parameter",
+  "format": "интерактив",
+  "why": "меняя n (1,3…5), видно, как K_в «уезжает» при одном P_н — контринтуитивно"
+ },
+ {
+  "node": "ven.ch_s00fronti.13-pn-kv-dependences",
+  "format": "длинное видео",
+  "why": "видимое построение семейства кривых и огибающей (рис. 70–71)"
+ },
+ {
+  "node": "ven.ch_s00fronti.14-productivity-criteria",
+  "format": "интерактив",
+  "why": "пороговый классификатор «нефть/нефть+вода/вода» с ползунками P_н и K_в"
+ },
+ {
+  "node": "ven.ch_s00fronti.15-productivity-example-bashkiria",
+  "format": "практикум на данных",
+  "why": "расчёт порогов по двум опорным точкам и сверка с известными диапазонами"
+ },
+ {
+  "node": "ven.ch_s00fronti.16-relative-resistance-po",
+  "format": "длинное видео",
+  "why": "причина и следствие: исключение шага пористости сокращает цепочку и ошибки"
+ },
+ {
+  "node": "ven.ch_s00fronti.17-salinity-and-carbonates",
+  "format": "текст",
+  "why": "условия «когда влияет/не влияет» и несколько диапазонов n; визуальный процесс не выражен"
+ },
+ {
+  "node": "ven.ch_s00fronti.18-fracture-cavern-resistivity",
+  "format": "длинное видео",
+  "why": "контринтуитивно: нефть в трещинах не даёт бесконечного сопротивления; предельные случаи ориентации"
+ }
+]

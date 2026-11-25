@@ -1,0 +1,97 @@
+[
+ {
+  "node": "ven.ch_s00frontd.01-neutron-gjk-correction",
+  "format": "текст",
+  "why": "формулы I.10–I.12 и процедурные поправки без визуального процесса"
+ },
+ {
+  "node": "ven.ch_s00frontd.02-porosity-types-definition",
+  "format": "карточки",
+  "why": "определения трёх видов пористости и формула II.1"
+ },
+ {
+  "node": "ven.ch_s00frontd.03-lab-porosity-kp-vs-kpo",
+  "format": "шортс",
+  "why": "контринтуитивно: k_п > k_по объясняется недонасыщением образца, а не закрытыми порами"
+ },
+ {
+  "node": "ven.ch_s00frontd.04-geophys-porosity-ways",
+  "format": "карточки",
+  "why": "перечень методов и видов пористости, которые они дают"
+ },
+ {
+  "node": "ven.ch_s00frontd.05-void-shape-components",
+  "format": "карточки",
+  "why": "классификация пустот по форме и типу коллектора"
+ },
+ {
+  "node": "ven.ch_s00frontd.06-effective-porosity",
+  "format": "карточки",
+  "why": "определение и формула эффективной пористости"
+ },
+ {
+  "node": "ven.ch_s00frontd.07-resistivity-porosity-parameter",
+  "format": "интерактив",
+  "why": "P_п = a/k_п^m: слайдер m показывает рост наклона в двойном логарифмическом масштабе"
+ },
+ {
+  "node": "ven.ch_s00frontd.08-clay-surface-conductivity-pi",
+  "format": "интерактив",
+  "why": "П(ρ_ф) для разных α_сп: невидимая зависимость от минерализации становится видимой"
+ },
+ {
+  "node": "ven.ch_s00frontd.09-clay-channel-resistivity",
+  "format": "длинное видео",
+  "why": "причина и следствие: аномальный слой в канале, смена знака влияния около 0,4–0,6 Ом·м"
+ },
+ {
+  "node": "ven.ch_s00frontd.10-thermobaric-conditions",
+  "format": "шортс",
+  "why": "контринтуитивно: кривая образца под давлением уходит выше и круче"
+ },
+ {
+  "node": "ven.ch_s00frontd.11-kp-from-resistivity-algorithm",
+  "format": "текст",
+  "why": "последовательность из трёх операций и трёх вариантов ρ"
+ },
+ {
+  "node": "ven.ch_s00frontd.12-choose-pp-kp-dependence",
+  "format": "практикум на данных",
+  "why": "выбор зависимости, расчёт k_п по табл. 1 и поправке f на примерах"
+ },
+ {
+  "node": "ven.ch_s00frontd.13-beyond-contour-overview",
+  "format": "текст",
+  "why": "схема шагов I–II способа за контуром"
+ },
+ {
+  "node": "ven.ch_s00frontd.14-brine-resistivity-from-chemistry",
+  "format": "практикум на данных",
+  "why": "расчёт ρ_в по составу воды (пример 1) с формулой II.13"
+ },
+ {
+  "node": "ven.ch_s00frontd.15-filtrate-resistivity-from-mud",
+  "format": "текст",
+  "why": "чтение графиков и палеток для ρ_ф; визуального процесса нет"
+ },
+ {
+  "node": "ven.ch_s00frontd.16-brine-resistivity-from-sp",
+  "format": "практикум на данных",
+  "why": "решение (II.14)–(II.16), оценка E_sф по палеткам; ошибки занижения и завышения"
+ },
+ {
+  "node": "ven.ch_s00frontd.17-beyond-contour-finish-errors",
+  "format": "карточки",
+  "why": "перечень ошибок и их направления (завышение ρ_вп → занижение k_п)"
+ },
+ {
+  "node": "ven.ch_s00frontd.18-washed-zone-method",
+  "format": "длинное видео",
+  "why": "цепочка: промытая зона → ρ_пп → ρ_ф → P_п → k_п; допущения и условия"
+ },
+ {
+  "node": "ven.ch_s00frontd.19-pi-by-palette-and-simplified",
+  "format": "практикум на данных",
+  "why": "пример 2: пересчёт ρ_ф на 25 °C и снятие П с палетки"
+ }
+]

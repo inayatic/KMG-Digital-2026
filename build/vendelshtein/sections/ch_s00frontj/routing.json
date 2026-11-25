@@ -1,0 +1,107 @@
+[
+ {
+  "node": "ven.ch_s00frontj.01-carbonate-fracture",
+  "format": "текст",
+  "why": "граница применимости, без динамики; нужен читаемый разбор"
+ },
+ {
+  "node": "ven.ch_s00frontj.02-thermobaric",
+  "format": "карточки",
+  "why": "короткие правила по типам коллекторов"
+ },
+ {
+  "node": "ven.ch_s00frontj.03-kng-procedure",
+  "format": "длинное видео",
+  "why": "процедура с причиной и следствием, три шага и три условия"
+ },
+ {
+  "node": "ven.ch_s00frontj.04-invasion-errors",
+  "format": "длинное видео",
+  "why": "невидимая зона проникновения становится видимой, четыре контринтуитивные ошибки"
+ },
+ {
+  "node": "ven.ch_s00frontj.05-thin-beds-calibration",
+  "format": "карточки",
+  "why": "набор условий и вывод об обязательности БЭЗ"
+ },
+ {
+  "node": "ven.ch_s00frontj.06-pn-curve-choice",
+  "format": "практикум на данных",
+  "why": "расчёт по шагам с выбором графика, нужны числа и номограммы"
+ },
+ {
+  "node": "ven.ch_s00frontj.07-forecast-test",
+  "format": "интерактив",
+  "why": "сравнение kв с порогами и исход опробования"
+ },
+ {
+  "node": "ven.ch_s00frontj.08-oil-gas-mix",
+  "format": "длинное видео",
+  "why": "раздельное определение kн и kг — причина и следствие по шагам"
+ },
+ {
+  "node": "ven.ch_s00frontj.09-examples-oil-gas",
+  "format": "практикум на данных",
+  "why": "числа автора для воспроизведения расчёта"
+ },
+ {
+  "node": "ven.ch_s00frontj.10-layered-clay",
+  "format": "интерактив",
+  "why": "изменение сопротивления пачки от доли глин, шунтирование"
+ },
+ {
+  "node": "ven.ch_s00frontj.11-layered-dense",
+  "format": "практикум на данных",
+  "why": "примеры 13 и 14 с числами; проверка арифметики"
+ },
+ {
+  "node": "ven.ch_s00frontj.12-inm-basics",
+  "format": "длинное видео",
+  "why": "затухание во времени, невидимое становится видимым"
+ },
+ {
+  "node": "ven.ch_s00frontj.13-decrement-physics",
+  "format": "текст",
+  "why": "формулы, нужен точный текст"
+ },
+ {
+  "node": "ven.ch_s00frontj.14-decrement-fluids-tables",
+  "format": "карточки",
+  "why": "формулы и справочные значения"
+ },
+ {
+  "node": "ven.ch_s00frontj.15-decrement-rocks",
+  "format": "текст",
+  "why": "формулы взвешенной суммы"
+ },
+ {
+  "node": "ven.ch_s00frontj.16-apparent-corrections",
+  "format": "интерактив",
+  "why": "влияние длины зонда и времени задержки на поправку"
+ },
+ {
+  "node": "ven.ch_s00frontj.17-apparent-calibration",
+  "format": "практикум на данных",
+  "why": "построение прямой по водоносным пластам"
+ },
+ {
+  "node": "ven.ch_s00frontj.18-kn-by-innm",
+  "format": "шортс",
+  "why": "контринтуитивное ограничение метода по минерализации"
+ },
+ {
+  "node": "ven.ch_s00frontj.19-true-vs-apparent",
+  "format": "карточки",
+  "why": "сравнение двух способов"
+ },
+ {
+  "node": "ven.ch_s00frontj.20-clay-correction",
+  "format": "практикум на данных",
+  "why": "построение графика поправки по пластам"
+ },
+ {
+  "node": "ven.ch_s00frontj.21-graphic-palette",
+  "format": "практикум на данных",
+  "why": "построение палетки по опорным пластам"
+ }
+]
