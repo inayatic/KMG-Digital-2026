@@ -14,6 +14,21 @@ NUM = re.compile(r"\d+(?:,\d+)?")
 ABBR = ("рис", "табл", "стр", "см", "т", "п")
 
 
+GREEK = {"alpha": "α", "beta": "β", "gamma": "γ", "delta": "δ", "Delta": "Δ", "eta": "η", "theta": "θ", "lambda": "λ", "mu": "μ", "pi": "π", "rho": "ρ", "sigma": "σ", "tau": "τ", "phi": "φ", "varphi": "φ", "chi": "χ", "omega": "ω", "Omega": "Ω", "xi": "ξ", "kappa": "κ", "varepsilon": "ε", "epsilon": "ε", "psi": "ψ", "nu": "ν", "Sigma": "Σ", "cdot": "·", "times": "×", "approx": "≈", "leq": "≤", "geq": "≥", "le": "≤", "ge": "≥", "neq": "≠", "pm": "±", "infty": "∞", "partial": "∂", "sum": "Σ", "int": "∫", "to": "→", "rightarrow": "→", "ln": "ln", "lg": "lg", "log": "log", "sin": "sin", "cos": "cos", "exp": "exp", "min": "min", "max": "max", "circ": "°"}
+SUP = str.maketrans("0123456789+-n", "⁰¹²³⁴⁵⁶⁷⁸⁹⁺⁻ⁿ"); SUB = str.maketrans("0123456789+-", "₀₁₂₃₄₅₆₇₈₉₊₋")
+
+
+def tex2text(t):
+    """Лёгкий перевод TeX слоя в читаемый текст без внешних библиотек (греческие, индексы, дроби). Сложное остаётся как есть."""
+    t = re.sub(r"\\(?:text|mathrm|mathit|mathbf|operatorname|rm)\{([^{}]*)\}", r"\1", t.replace("$$", "").replace("$", ""))
+    t = re.sub(r"\\([A-Za-z]+)", lambda m: (m.group(0) if m.group(1) in ("frac","dfrac","tfrac","sqrt") else GREEK.get(m.group(1), m.group(1))), t)
+    t = re.sub(r"\^\{([^{}]*)\}|\^(\S)", lambda m: (m.group(1) or m.group(2)).translate(SUP) if (m.group(1) or m.group(2)).translate(SUP) != (m.group(1) or m.group(2)) else "^(" + (m.group(1) or m.group(2)) + ")", t)
+    t = re.sub(r"_\{([^{}]*)\}|_(\S)", lambda m: (m.group(1) or m.group(2)).translate(SUB) if (m.group(1) or m.group(2)).translate(SUB) != (m.group(1) or m.group(2)) else "_" + (m.group(1) or m.group(2)), t)
+    for _ in range(3): t = re.sub(r"\\[dt]?frac\{([^{}]*)\}\{([^{}]*)\}", r"(\1)/(\2)", t)
+    t = re.sub(r"\\sqrt\{([^{}]*)\}", r"√(\1)", t)
+    return re.sub(r"[{}]", "", re.sub(r"\s+", " ", t)).strip()
+
+
 def sentences(t):
     """Делит на предложения, не режет «рис. 51», «табл. 12»."""
     out, cur = [], ""
@@ -213,7 +228,7 @@ class Build:
         fh = ""
         for u in n["unit_ids"]:
             U = s.U[u]
-            if U["type"] == "formula": fh += f"<p class='fm'><code>{esc(U['text'].replace('$$','').strip())}</code> <span class='meta'>запись TeX как в слое, стр. {U['page']} PDF</span></p>"
+            if U["type"] == "formula": fh += f"<p class='fm'><code>{esc(tex2text(U['text']))}</code> <span class='meta'>формула книги, стр. {U['page']} PDF</span></p>"
         if fh: blocks.append(("fm", "Формулы главы", fh + "<p class='meta'>Расшифровка символов и единиц есть в утверждениях шага (блок «Источник»); отдельного поля в слое нет.</p>"))
         th = ""
         for u in n["unit_ids"]:
@@ -238,9 +253,10 @@ class Build:
         if n.get("problems"):
             blocks.append(("pb", "Задачи из книги (ключей в книге нет)", "<ol class='pl'>" + "".join(
                 f"<li value='{esc(p.get('number', ''))}'>{esc(p['statement'])} <span class='meta'>стр. {p['page']} PDF" + (f"; OCR: {esc(p['ocr_note'])}" if p.get("ocr_note") else "") + (f"; {esc(p['figure_note'])}" if p.get("figure_note") else "") + "</span></li>" for p in n["problems"]) + "</ol>"))
-        fgh = s.fig(n, short)
-        if n.get("figure_note"): fgh += f"<p class='meta'>Заметка слоя о рисунке (для проверяющего): {esc(n['figure_note'])}</p>"
-        blocks.append(("fg", "Иллюстрации", fgh))
+        if not s.cfg.get("no_default_fig") or n["id"].split(".")[-1][:2] in s.cfg["illustrations"]:
+            fgh = s.fig(n, short)
+            if n.get("figure_note") and not s.cfg.get("public"): fgh += f"<p class='meta'>Заметка слоя о рисунке (для проверяющего): {esc(n['figure_note'])}</p>"
+            blocks.append(("fg", "Иллюстрации", fgh))
         allc = "".join(P(s.cl(f"{n['id']}#{c['id']}", c["text"]) + f" <span class='meta'>стр. {c['page']} PDF, {esc(c['author'])}</span>") for c in n["claims"])
         blocks.append(("src", "Источник: все утверждения шага", allc))
         blocks.append(("tk", "Проверьте себя", f'<div class="tasks" data-node="{esc(n["id"])}"></div>'))
@@ -288,6 +304,7 @@ class Build:
         depth = {}
         def dp(i):
             if i in depth: return depth[i]
+            depth[i] = 0  # защита от циклов в предпосылках: обратное ребро считается глубиной 0
             pre = [l["to"] for l in s.byid[i]["links"] if l["type"] == "предпосылка"]
             depth[i] = 0 if not pre else 1 + max(dp(p) for p in pre); return depth[i]
         for n in s.nodes: dp(n["id"])
@@ -313,8 +330,8 @@ class Build:
         tpl = (TPL / "template.html").read_text()
         out = (tpl.replace("/*STYLE*/", (TPL / "style.css").read_text()).replace("/*APP*/", (TPL / "app.js").read_text())
                .replace("<!--DATA-->", dj).replace("<!--PAGES-->", pages).replace("<!--CARDS-->", cards).replace("<!--SUMMARY-->", summary)
-               .replace("<!--MAP-->", mapsvg + maplist).replace("<!--BOOK-->", esc(A))
-               .replace("<!--TITLE-->", esc(f"Курс: {A}, §12 (пилот)")))
+               .replace("<!--MAP-->", mapsvg + maplist).replace("<!--HOME-->", cfg.get("home", "")).replace("<!--BOOK-->", esc(A))
+               .replace("<!--TITLE-->", esc(cfg.get("title") or f"Курс: {A}, §12 (пилот)")))
         return out
 
     # ---- шаг «решение на данных»
@@ -360,6 +377,8 @@ class Build:
                     pos = p
             elif t["type"] == "blank": ok = nrm(t["text"].replace("[[", "").replace("]]", "")) in txt and re.search(r"\[\[(.+?)\]\]", t["text"]).group(1) == t["answer"]
             elif t["type"] == "calc": ok = all(x in c["text"] for x in t["nums"])
+            ans = t.get("answer") if isinstance(t.get("answer"), str) else None
+            if ans and len(ans) > 3 and t["type"] in ("single", "blank") and nrm(ans) in nrm(t["q"]): ok = False
             if not ok: s.warn.append(f"ЗАДАНИЕ {t['id']}: ответ не найден в {key}")
             out.append(dict(t, node=nid, claim=key))
         return out

@@ -68,8 +68,12 @@ def org(ch):
     metric(ch, "routing", "", tin, tout, usd)
 
 def course(ch):
-    """НЕ ПРОВЕРЕНО на целой главе: build_course.py пока шаблон-пилот (§12), обвязку курса пишет агент по образцу."""
-    n, tin, tout, usd = per_section(ch, "course", "course-builder", "course.md", lambda d: False, keys=["_all"])
+    """задания по разделам (агент, course_tasks.md) -> детерминированная сборка build_course_all.py с проверкой ответов по утверждениям."""
+    import re
+    keys = [k["key"] for k in json.load(open(ROOT / "build" / ch / "sections.json")) if re.fullmatch(r"s\d\d|ch\w+", k["key"])]
+    (ROOT / "build" / ch / "course").mkdir(exist_ok=True)
+    n, tin, tout, usd = per_section(ch, "course", "course-builder", "course_tasks.md", lambda d: (d.parent.parent / "course" / f"tasks-{d.name}.json").exists(), keys=keys)
+    py("tools/build_course_all.py", ch)
     metric(ch, "course", "", tin, tout, usd)
 
 if __name__ == "__main__":
