@@ -178,8 +178,8 @@ class Build:
         cv = ""
         for p, nm in ((2.2, "1"), (3.0, "2")):
             cv += f'<path class="cv" d="M{X(0)} {Y(0)} ' + " ".join(f"L{X(t/20):.1f} {Y(1-(1-t/20)**p):.1f}" for t in range(1, 21)) + f'"/><text x="{X(.5)+(8 if nm=="2" else 20)}" y="{Y(1-(0.5)**p)+(-6 if nm=="2" else 14)}" class="t">{nm}</text>'
-        lab = ('<text x="44" y="16" class="t">ΔJ</text><text x="338" y="206" text-anchor="end" class="t">C_гл, % (0–90)</text>'
-               f'<line x1="40" x2="340" y1="{Y(1)}" y2="{Y(1)}" class="grid"/><text x="36" y="{Y(1)+4}" text-anchor="end" class="t">1,0</text><text x="{X(1)}" y="206" text-anchor="middle" class="t">90</text><text x="40" y="206" text-anchor="middle" class="t">0</text>')
+        lab = ('<text x="44" y="16" class="t">ΔJ</text><text x="190" y="212" text-anchor="middle" class="t">C_гл, % (0–90)</text>'
+               f'<line x1="40" x2="340" y1="{Y(1)}" y2="{Y(1)}" class="grid"/><text x="36" y="{Y(1)+4}" text-anchor="end" class="t">1,0</text><text x="{X(1)}" y="203" text-anchor="middle" class="t">90</text><text x="40" y="203" text-anchor="middle" class="t">0</text>')
         return f'<svg viewBox="0 0 360 214" role="img" aria-label="Две возрастающие кривые ΔJ от C_гл из точки 0;0 до 1,0 при 90 %; кривая 2 выше кривой 1">{ax}{cv}{lab}</svg>'
 
     # ---- таблицы, формулы
@@ -239,7 +239,7 @@ class Build:
             blocks.append(("pb", "Задачи из книги (ключей в книге нет)", "<ol class='pl'>" + "".join(
                 f"<li value='{esc(p.get('number', ''))}'>{esc(p['statement'])} <span class='meta'>стр. {p['page']} PDF" + (f"; OCR: {esc(p['ocr_note'])}" if p.get("ocr_note") else "") + (f"; {esc(p['figure_note'])}" if p.get("figure_note") else "") + "</span></li>" for p in n["problems"]) + "</ol>"))
         fgh = s.fig(n, short)
-        if n.get("figure_note"): fgh += f"<p class='meta'>Заметка слоя о рисунке: {esc(n['figure_note'])}</p>"
+        if n.get("figure_note"): fgh += f"<p class='meta'>Заметка слоя о рисунке (для проверяющего): {esc(n['figure_note'])}</p>"
         blocks.append(("fg", "Иллюстрации", fgh))
         allc = "".join(P(s.cl(f"{n['id']}#{c['id']}", c["text"]) + f" <span class='meta'>стр. {c['page']} PDF, {esc(c['author'])}</span>") for c in n["claims"])
         blocks.append(("src", "Источник: все утверждения шага", allc))
@@ -250,7 +250,7 @@ class Build:
 
     def render(s):
         s.register(); cfg = s.cfg
-        A = s.U[cfg["book"]["author_unit"]]["text"]; T = re.sub(r"-\s", "", s.U[cfg["book"]["title_unit"]]["text"].lstrip("# ")).title()
+        A = s.U[cfg["book"]["author_unit"]]["text"]; T = re.sub(r"(?<=\w)-\s?(?=\w)", "", s.U[cfg["book"]["title_unit"]]["text"].lstrip("# ")).lower().capitalize()
         order = sorted(s.nodes, key=lambda n: n.get("order", {}).get("rank", 0))
         steps = []
         ds = cfg.get("data_step")
@@ -313,7 +313,7 @@ class Build:
         tpl = (TPL / "template.html").read_text()
         out = (tpl.replace("/*STYLE*/", (TPL / "style.css").read_text()).replace("/*APP*/", (TPL / "app.js").read_text())
                .replace("<!--DATA-->", dj).replace("<!--PAGES-->", pages).replace("<!--CARDS-->", cards).replace("<!--SUMMARY-->", summary)
-               .replace("<!--MAP-->", mapsvg + maplist).replace("<!--BOOK-->", esc(f"{A}, «{T}»"))
+               .replace("<!--MAP-->", mapsvg + maplist).replace("<!--BOOK-->", esc(A))
                .replace("<!--TITLE-->", esc(f"Курс: {A}, §12 (пилот)")))
         return out
 
