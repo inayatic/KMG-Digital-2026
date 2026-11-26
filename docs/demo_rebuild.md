@@ -72,6 +72,53 @@ git status --short
 ```
 Последняя команда должна ничего не вывести.
 
+## Windows (PowerShell): весь показ по шагам
+Проверено на Linux: без `pdfinfo` и без PDF страница курса получается побайтно той же. На Windows сам показ не прогонялся.
+
+**Один раз заранее:**
+1. Установите Python 3 с python.org (при установке отметьте «Add python.exe to PATH») и Git с git-scm.com. Удобный редактор для правки — VS Code, подойдёт и Блокнот.
+2. Откройте PowerShell (Пуск → PowerShell) и введите команды по одной:
+```bash
+git config --global core.longpaths true
+```
+```bash
+git clone https://github.com/inayatic/KMG-Digital-2026.git
+```
+```bash
+cd KMG-Digital-2026
+```
+```bash
+git checkout claude/epic-brahmagupta-q5s0v5
+```
+   Репозиторий закрытый и весит около 0,7 ГБ. Вместо пароля git попросит токен GitHub (Settings → Developer settings → Personal access tokens). Проще скачать через GitHub Desktop: Clone, затем выбрать ветку `claude/epic-brahmagupta-q5s0v5`.
+3. **Важно для Windows.** Уберите файл-ссылку на PDF книги. На Windows это не PDF, а текстовая заглушка, и без утилиты `pdfinfo` сборка падает с `FileNotFoundError: pdfinfo`. Без этого файла сборка берёт готовые картинки страниц из `build/barenblatt_gl1/course/pages/`, и страница выходит той же.
+```bash
+Remove-Item chapters\barenblatt_gl1\barenblatt.pdf
+```
+4. Пробная сборка:
+```bash
+py -I -X utf8 tools/build_course_all.py barenblatt_gl1
+```
+   Вывод должен заканчиваться так: `sections=4 nodes=33 tasks=98 warnings=0 …`. Флаг `-X utf8` обязателен: без него Windows читает файлы в кодировке cp1251 и падает на русском тексте. Если команды `py` нет, пишите `python`.
+5. Откройте в проводнике `out\barenblatt_gl1\s03\index.html` (двойной щелчок) → «Путь» → «4. Закон Дарси из анализа размерностей; проницаемость». Найдите предложение «…экспериментально в 1856 г. ✓».
+
+**На защите:**
+1. В VS Code или Блокноте откройте `build\barenblatt_gl1\nodes.json`. Через Ctrl+F найдите `экспериментально в 1856`. В строке `"text": …` замените 1856 на 1857, строку `"quote": …` не трогайте. Сохраните файл (Ctrl+S).
+2. В PowerShell:
+```bash
+py -I -X utf8 tools/build_course_all.py barenblatt_gl1
+```
+3. В браузере нажмите F5: стоит 1857, галочки ✓ нет. Нажмите на предложение: в «Источнике» цитата книги с 1856.
+
+**После показа** вернуть всё как было, включая заглушку PDF:
+```bash
+git checkout -- .
+```
+```bash
+git status --short
+```
+Вторая команда должна ничего не вывести. Если она показывает изменённые файлы в `out/` или `build/` только из-за концов строк, это не страшно: содержимое то же.
+
 ## Чего не делать
 - **Не запускать `make course` после правки.** Make сравнивает время файлов: `nodes.json` станет новее `verify.md`, и make заново запустит проверку и сборку моделью. Это минуты, деньги, нужен ключ API и интернет. Для показа нужна только `tools/build_course_all.py`.
 - **Не править `build/<глава>/org/layer.json`.** Это слой в формате организаторов для сдачи, страницы курса берутся из `nodes.json`. Из `layer.json` в курс попадает только запасной словарь.
