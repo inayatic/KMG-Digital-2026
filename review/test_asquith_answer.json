@@ -1,0 +1,176 @@
+{
+ "package_id": "test_asquith",
+ "remarks": [
+  {
+   "target": "C008",
+   "category": "wrong_scaling",
+   "severity": "significant",
+   "problem": "Отношение возводится в степень 1/n, а не n.",
+   "fix": "Sw = (a·Rw/(Rt·φ^m))^(1/n)",
+   "page_pdf": 126,
+   "quote": "S_w = \\left( \\frac{a \\times R_w}{R_t \\times \\phi^m} \\right)^{\\frac{1}{n}}"
+  },
+  {
+   "target": "C015",
+   "category": "overgeneralization",
+   "severity": "significant",
+   "problem": "Книга говорит «вероятно вытеснены из ближней зоны», а не «доказывает подвижность и приток нефти».",
+   "fix": "Если Sxo много больше Sw, углеводороды в промытой зоне, вероятно, вытеснены фильтратом (признак подвижности, не доказательство притока).",
+   "page_pdf": 127,
+   "quote": "hydrocarbons in the flushed zone have probably been moved or flushed out of the zone nearest the borehole"
+  },
+  {
+   "target": "C020",
+   "category": "other",
+   "severity": "significant",
+   "problem": "Показатель 1/5 не согласуется с выводом 5/8; в Eq 7.5 показатель 1/2 (в книге 1/5 выглядит как опечатка), утверждение о согласованности неверно",
+   "fix": "Eq 7.5 даёт Sxo = Sw^(1/2); ссылка на 1/5 в тексте не согласуется с 7.5 и 7.6",
+   "page_pdf": 128,
+   "quote": "$S_{xo} = (S_w)^{\\frac{1}{2}} \\tag{7.5}$"
+  },
+  {
+   "target": "C025",
+   "category": "overgeneralization",
+   "severity": "significant",
+   "problem": "Книга говорит 'might be' (возможно), и это один из вариантов наряду с влиянием соседних пластов и кольцевым профилем; 'других объяснений нет' неверно",
+   "fix": "Если Swa < Swr, коллектор может быть карбонатом с молдовой пористостью и низкой проницаемостью (наряду с другими причинами)",
+   "page_pdf": 128,
+   "quote": "the reservoir might be a carbonate with moldic (i.e., oomoldic, fossil-moldic, etc.) porosity and low permeability."
+  },
+  {
+   "target": "C027",
+   "category": "sign_flip",
+   "severity": "significant",
+   "problem": "В углеводородных зонах глубокое сопротивление выше Ro, а не ниже",
+   "fix": "Глубокое сопротивление выше Ro, отрыв растёт с насыщенностью УВ",
+   "page_pdf": 131,
+   "quote": "the deep resistivity is higher than $R_o$, with the separation increasing with increasing hydrocarbon saturation."
+  },
+  {
+   "target": "C030",
+   "category": "measured_vs_inferred",
+   "severity": "significant",
+   "problem": "Минимум Rwa — лишь наилучшее приближение к Rw (допущение), а не измеренное Rw",
+   "fix": "Минимальное Rwa принимается за наилучшее приближение к истинному Rw; значения выше указывают на УВ",
+   "page_pdf": 129,
+   "quote": "this lowest value of $R_{wa}$ is the closest approximation to the true formation water resistivity ($R_w$)"
+  },
+  {
+   "target": "C034",
+   "category": "outdated_as_current",
+   "severity": "significant",
+   "problem": "Кривая проводимости сегодня редко выводится на планшет; метод описан через сопротивление.",
+   "fix": "Метод возник с кривой проводимости, но она сейчас редко выводится на планшет; описывается через сопротивление.",
+   "page_pdf": 130,
+   "quote": "the conductivity curve is now rarely presented on log displays"
+  },
+  {
+   "target": "C037",
+   "category": "wrong_mechanism",
+   "severity": "significant",
+   "problem": "Rxo/Rt падает из-за роста Rt, а не падения Rxo.",
+   "fix": "Отношение Rxo/Rt уменьшается из-за роста Rt и расходится с ПС.",
+   "page_pdf": 129,
+   "quote": "the $R_{xo}/R_t$ ratio decreases (because of increasing $R_t$)"
+  },
+  {
+   "target": "C039",
+   "category": "wrong_mechanism",
+   "severity": "significant",
+   "problem": "Вода удерживается капиллярным давлением на зёрнах, а не глинистой коркой.",
+   "fix": "При неснижаемой насыщенности вода неподвижна, так как удерживается на зёрнах капиллярным давлением.",
+   "page_pdf": 131,
+   "quote": "does not move because it is held on grains by capillary pressure"
+  },
+  {
+   "target": "C046",
+   "category": "lost_condition",
+   "severity": "significant",
+   "problem": "Линия прямая только при правильном значении матрицы; при неверном (высоком/низком) она изогнута.",
+   "fix": "Линия прямая при диапазоне пористостей и правильно выбранной матрице; иначе искривлена.",
+   "page_pdf": 133,
+   "quote": "if the matrix value is chosen correctly, the line is straight"
+  },
+  {
+   "target": "C054",
+   "category": "overgeneralization",
+   "severity": "significant",
+   "problem": "Формулы проницаемости по каротажу действительны только для пластов при неснижаемой водонасыщенности, а не для любого коллектора.",
+   "fix": "Формулы пригодны для оценки проницаемости только в пластах при неснижаемой (остаточной) водонасыщенности.",
+   "page_pdf": 134,
+   "quote": "Log-derived permeability formulas are only valid for estimating permeability in formations at irreducible water saturation (Schlumberger, 1977)."
+  },
+  {
+   "target": "C056",
+   "category": "wrong_scaling",
+   "severity": "significant",
+   "problem": "В формуле потеряна внешняя квадратная степень: K = (250·φ³/Swirr)², поэтому K растёт как φ⁶, а не как φ³.",
+   "fix": "K = (250·φ³/Swirr)² (нефть средней плотности), то есть K ~ φ⁶.",
+   "page_pdf": 135,
+   "quote": "K = \\left( 250 \\times \\frac{\\phi^3}{S_{\\text{wirr}}} \\right)^2 \\text{ (medium-gravity oils)}"
+  },
+  {
+   "target": "C061",
+   "category": "overgeneralization",
+   "severity": "significant",
+   "problem": "У Hilchie глина заметно влияет на Sw только при содержании выше 10–15 %, а не при любом содержании.",
+   "fix": "По Hilchie, сланец заметно искажает Sw по каротажу, если его содержание больше 10–15 %.",
+   "page_pdf": 136,
+   "quote": "shale content must be greater than 10 to 15%"
+  },
+  {
+   "target": "A02",
+   "category": "lost_condition",
+   "severity": "significant",
+   "problem": "Граница аналогии снята: каротажную проницаемость нельзя сравнивать между любыми пластами при любой водонасыщенности; формулы верны только при неснижаемой водонасыщенности, а ценность дают сопоставления между скважинами, не абсолютное значение.",
+   "fix": "Аналогия с скором ломается там, что формулы проницаемости применимы только к пластам при неснижаемой водонасыщенности; вне этого условия сравнение некорректно.",
+   "page_pdf": 134,
+   "quote": "Log-derived permeability formulas are only valid for estimating permeability in formations at irreducible water saturation (Schlumberger, 1977)."
+  },
+  {
+   "target": "L06",
+   "category": "sign_flip",
+   "severity": "significant",
+   "problem": "Перевёрнута замена: для Sxo вместо Rw берут Rmf (фильтрат), а вместо Rt берут Rxo (мелкое); в реплике наоборот.",
+   "fix": "Только вместо сопротивления пластовой воды берут сопротивление фильтрата, а вместо глубокого сопротивления — мелкое.",
+   "page_pdf": 127,
+   "quote": "mud filtrate resistivity ($R_{mf}$) in place of formation water resistivity ($R_w$)"
+  },
+  {
+   "target": "S03",
+   "category": "sign_flip",
+   "severity": "significant",
+   "problem": "Значения перепутаны: у нефтяного пласта Sw = 0,25, Sxo = 0,6 (Rt=20, Rxo=34,7 это дают); у ствола воды больше, не меньше.",
+   "fix": "Нефтяной пласт задан с Sw = 0,25 и Sxo = 0,6: у ствола воды больше, чем в нетронутой зоне.",
+   "page_pdf": 127,
+   "quote": "if the value of $S_{xo}$ is much larger than $S_w$, then hydrocarbons in the flushed zone have probably been moved"
+  },
+  {
+   "target": "F04",
+   "category": "frame_error",
+   "severity": "significant",
+   "problem": "Кадр помечен «реальные данные», но это симуляция по условным числам спецификации (Rw, Rmf, Арчи заданы допущениями, в главе их нет); соседние кадры — «симуляция».",
+   "fix": "Метка «симуляция».",
+   "page_pdf": 127,
+   "quote": "Water saturation of a formation's flushed zone ($S_{xo}$) is also based on the Archie equation"
+  },
+  {
+   "target": "F02",
+   "category": "missing_caveat",
+   "severity": "minor",
+   "problem": "На кадре показаны корка и зона проникновения (условно шире реальных), но плашка о преувеличении отсутствует, хотя спецификация и соседние кадры её имеют.",
+   "fix": "Добавить плашку «не в масштабе: ствол и зона проникновения шире».",
+   "page_pdf": 127,
+   "quote": "if the value of $S_{xo}$ is much larger than $S_w$"
+  },
+  {
+   "target": "F09",
+   "category": "frame_error",
+   "severity": "significant",
+   "problem": "В описании кадра значения кривых нефтяного пласта поменяны местами: глубокий зонд ~35, мелкий ~20. По спецификации глубокий (RES)=20 Ом·м, мелкий (RES_SHALLOW)=34,7 Ом·м, так что мелкий зонд правее глубокого. Это противоречит и формуле Rxo>Rt для Sxo>Sw.",
+   "fix": "В нефтяном пласте кривая мелкого зонда (около 35 Ом·м) правее кривой глубокого (около 20 Ом·м).",
+   "page_pdf": 127,
+   "quote": "$R_{xo} =$ shallow resistivity from a very shallow reading device"
+  }
+ ]
+}
