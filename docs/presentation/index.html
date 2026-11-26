@@ -32,7 +32,7 @@ code{font-family:"JetBrains Mono",Consolas,"DejaVu Sans Mono",monospace;backgrou
 .shots{align-items:start}.shots .bwin img{height:calc(var(--u)*26);object-fit:cover;object-position:left top}.foot{color:var(--mut);margin:calc(var(--u)*2) 0 0;font-size:calc(var(--u)*1.7);max-width:calc(var(--u)*85)}
 .left h2{font-size:calc(var(--u)*3.5)}.mini{color:var(--mut);margin:calc(var(--u)*1.4) 0 calc(var(--u)*.6)}
 .seq{margin:calc(var(--u)*1) 0}.sl{display:block;color:var(--mut);font-size:calc(var(--u)*1.55);margin-bottom:calc(var(--u)*.5)}.pl{display:flex;align-items:center}.ar2{flex:none;display:inline-block;font-size:0;width:calc(var(--u)*2);height:2px;background:var(--line);margin:0 calc(var(--u)*.3)}
-.pill{flex:none;display:inline-flex;width:calc(var(--u)*3.8);height:calc(var(--u)*3.8);align-items:center;justify-content:center;border-radius:50%;background:#fff;border:2px solid var(--h);color:var(--h);font-family:var(--serif);font-weight:700;font-size:calc(var(--u)*2.2)}.pill.z{background:var(--teal);border-color:var(--teal);color:#fff}
+.pill{font-family:var(--sans)!important;flex:none;display:inline-flex;width:calc(var(--u)*3.8);height:calc(var(--u)*3.8);align-items:center;justify-content:center;border-radius:50%;background:#fff;border:2px solid var(--h);color:var(--h);font-family:var(--serif);font-weight:700;font-size:calc(var(--u)*2.2)}.pill.z{background:var(--teal);border-color:var(--teal);color:#fff}
 .quote{background:var(--card);border:1px solid var(--line);border-left:calc(var(--u)*.6) solid var(--h);border-radius:calc(var(--u)*1.2);padding:calc(var(--u)*2.4);line-height:1.55;font-family:var(--serif);font-size:calc(var(--u)*2.1);box-shadow:0 calc(var(--u)*.3) calc(var(--u)*2) rgba(60,50,20,.08)}.quote.sm{font-size:calc(var(--u)*1.8);margin-top:calc(var(--u)*2);font-family:var(--sans)}.qh{display:block;font-family:var(--sans);font-size:calc(var(--u)*1.35);letter-spacing:.14em;text-transform:uppercase;color:var(--h);font-weight:700;margin-bottom:calc(var(--u)*.8)}
 .reel{display:flex;gap:calc(var(--u)*2.4);align-items:flex-start}.ph{margin:0;width:calc(var(--u)*12)}.pwin{border:calc(var(--u)*.55) solid #1a2133;border-radius:calc(var(--u)*2);overflow:hidden;background:#000;box-shadow:0 calc(var(--u)*1) calc(var(--u)*3) rgba(40,35,20,.28)}.pwin img{display:block;width:100%}
 .wides{display:flex;flex-direction:column;gap:calc(var(--u)*1.6);flex:1}.fr{margin:0}.fwin{border-radius:calc(var(--u)*1);overflow:hidden;border:1px solid #1a2133;box-shadow:0 calc(var(--u)*.8) calc(var(--u)*2.6) rgba(40,35,20,.25)}.fwin img{display:block;width:100%}.wides .fr{display:grid;grid-template-columns:calc(var(--u)*29) 1fr;gap:calc(var(--u)*1.6);align-items:center}.wides figcaption{text-align:left;margin:0;font-size:calc(var(--u)*1.7)}
@@ -52,6 +52,9 @@ code{font-family:"JetBrains Mono",Consolas,"DejaVu Sans Mono",monospace;backgrou
 .gfix{grid-column:3 / 6;grid-row:2;display:flex;align-items:center;gap:calc(var(--u)*1.2);margin-top:calc(var(--u)*.8)}.no{color:var(--h);font-weight:700;font-size:calc(var(--u)*1.8)}
 .gn.fix{border-top-color:var(--h);min-height:0;flex:1;display:block}
 .rounds{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:calc(var(--u)*2)}.rcard{background:var(--card);border:1px solid var(--line);border-radius:calc(var(--u)*1.2);padding:calc(var(--u)*1.6) calc(var(--u)*1.8)}.rcard .sl{margin-bottom:calc(var(--u)*.6);font-size:calc(var(--u)*1.4)}.rcard .seq{margin:0}.rcard .sl:empty{display:none}
+.gsvg{display:block;width:100%;height:auto;margin:calc(var(--u)*.2) 0 calc(var(--u)*1.6)}
+.rtab{background:var(--card);border:1px solid var(--line);border-radius:calc(var(--u)*1.2);padding:calc(var(--u)*1.2) calc(var(--u)*2)}.rhead{color:var(--mut);font-size:calc(var(--u)*1.4);letter-spacing:.1em;text-transform:uppercase;font-weight:600;margin-bottom:calc(var(--u)*.4)}
+.seq.row{display:flex;align-items:center;gap:calc(var(--u)*2);margin:calc(var(--u)*.5) 0}.seq.row .sl{width:calc(var(--u)*21);margin:0;font-size:calc(var(--u)*1.8);color:var(--ink);font-weight:600}.seq.row .pill{width:calc(var(--u)*3.4);height:calc(var(--u)*3.4);font-size:calc(var(--u)*1.9)}
 .hud{position:fixed;left:0;right:0;bottom:0;height:calc(var(--u)*.5);background:rgba(16,24,40,.08)}.hud i{display:block;height:100%;width:0;background:var(--acc);transition:width .25s}
 .pg{position:fixed;right:calc(var(--u)*2);bottom:calc(var(--u)*1.2);color:var(--mut);font-size:calc(var(--u)*1.3);font-family:var(--serif)}
 .help{position:fixed;left:calc(var(--u)*2);bottom:calc(var(--u)*1.2);color:rgba(16,24,40,.38);font-size:calc(var(--u)*1.3)}
@@ -114,22 +117,37 @@ code{font-family:"JetBrains Mono",Consolas,"DejaVu Sans Mono",monospace;backgrou
 <section class="slide">
   <div class="eyebrow">Проверка качества</div>
   <h2>Шлюз перед рендером</h2>
-  <div class="gate">
-    <div class="gn g1"><b>1</b><h4>Сценарий</h4><p>агент пишет по узлу слоя</p></div>
-    <div class="ga g1a">→</div>
-    <div class="gn g2"><b>2</b><h4>Верификатор</h4><p>читает сканы страниц, сверяет цитаты, числа, причинность</p></div>
-    <div class="ga g2a">→</div>
-    <div class="gd"><span>критических 0<br>существенных 0?</span></div>
-    <div class="ga g3a yes">да →</div>
-    <div class="gn g4"><b>3</b><h4>Озвучка, кадры, mp4</h4><p>и проверки дорожки</p></div>
-    <div class="gfix"><span class="no">нет</span><div class="gn fix"><h4>Правка по отчёту</h4><p>и снова к верификатору, до 6 кругов</p></div></div>
+  <svg class="gsvg" viewBox="0 0 1000 240" role="img" aria-label="Схема проверки перед рендером">
+    <defs>
+      <marker id="ah" markerUnits="userSpaceOnUse" markerWidth="16" markerHeight="16" refX="14" refY="8" orient="auto"><path d="M2,2 L14,8 L2,14 z" fill="#5d667a"/></marker>
+      <marker id="ao" markerUnits="userSpaceOnUse" markerWidth="16" markerHeight="16" refX="14" refY="8" orient="auto"><path d="M2,2 L14,8 L2,14 z" fill="#b45309"/></marker>
+      <marker id="at" markerUnits="userSpaceOnUse" markerWidth="16" markerHeight="16" refX="14" refY="8" orient="auto"><path d="M2,2 L14,8 L2,14 z" fill="#0f766e"/></marker>
+    </defs>
+    <g font-family="Inter,'Segoe UI',Arial,sans-serif">
+      <rect x="2" y="8" width="213" height="124" rx="14" fill="#fffdf8" stroke="#dcd7cb" stroke-width="2"/><rect x="2" y="8" width="213" height="7" rx="3" fill="#1c3f94"/>
+      <text x="22" y="54" font-size="22" font-weight="700" fill="#1c3f94">1</text><text x="46" y="54" font-size="23" font-weight="700" fill="#101828">Сценарий</text>
+      <text x="22" y="88" font-size="16" fill="#5d667a">агент пишет</text><text x="22" y="110" font-size="16" fill="#5d667a">по узлу слоя</text>
+      <line x1="221" y1="70" x2="256" y2="70" stroke="#5d667a" stroke-width="3" marker-end="url(#ah)"/>
+      <rect x="262" y="8" width="250" height="124" rx="14" fill="#fffdf8" stroke="#dcd7cb" stroke-width="2"/><rect x="262" y="8" width="250" height="7" rx="3" fill="#1c3f94"/>
+      <text x="282" y="54" font-size="22" font-weight="700" fill="#1c3f94">2</text><text x="306" y="54" font-size="23" font-weight="700" fill="#101828">Верификатор</text>
+      <text x="282" y="82" font-size="16" fill="#5d667a">читает сканы страниц,</text><text x="282" y="102" font-size="16" fill="#5d667a">сверяет цитаты, числа,</text><text x="282" y="122" font-size="16" fill="#5d667a">причинность</text>
+      <line x1="518" y1="70" x2="553" y2="70" stroke="#5d667a" stroke-width="3" marker-end="url(#ah)"/>
+      <rect x="559" y="8" width="214" height="124" rx="62" fill="#fff6e6" stroke="#b45309" stroke-width="3"/>
+      <text x="666" y="64" font-size="18" font-weight="700" fill="#b45309" text-anchor="middle">Критических: 0,</text><text x="666" y="90" font-size="18" font-weight="700" fill="#b45309" text-anchor="middle">существенных: 0?</text>
+      <line x1="779" y1="70" x2="810" y2="70" stroke="#0f766e" stroke-width="3" marker-end="url(#at)"/><text x="795" y="56" font-size="17" font-weight="700" fill="#0f766e" text-anchor="middle">да</text>
+      <rect x="816" y="8" width="182" height="124" rx="14" fill="#fffdf8" stroke="#dcd7cb" stroke-width="2"/><rect x="816" y="8" width="182" height="7" rx="3" fill="#0f766e"/>
+      <text x="832" y="54" font-size="22" font-weight="700" fill="#0f766e">3</text><text x="856" y="54" font-size="21" font-weight="700" fill="#101828">Озвучка,</text>
+      <text x="832" y="82" font-size="21" font-weight="700" fill="#101828">кадры, mp4</text><text x="832" y="112" font-size="15" fill="#5d667a">и проверки дорожки</text>
+      <path d="M666,138 L666,188 L387,188 L387,140" fill="none" stroke="#b45309" stroke-width="3" stroke-dasharray="9 6" marker-end="url(#ao)"/>
+      <text x="526" y="222" font-size="18" font-weight="700" fill="#b45309" text-anchor="middle">нет: правка по отчёту и снова к верификатору, до 6 кругов</text>
+    </g>
+  </svg>
+  <div class="rtab">
+    <div class="rhead">Существенных замечаний верификатора на каждом круге</div>
+    <div class="seq row"><span class="sl">Slatt, разбор</span><span class="pl"><span class="pill">2</span><span class="ar2">—</span><span class="pill">2</span><span class="ar2">—</span><span class="pill">3</span><span class="ar2">—</span><span class="pill">1</span><span class="ar2">—</span><span class="pill">1</span><span class="ar2">—</span><span class="pill z">0</span></span></div>
+    <div class="seq row"><span class="sl">Барабошкин, разбор</span><span class="pl"><span class="pill">4</span><span class="ar2">—</span><span class="pill">2</span><span class="ar2">—</span><span class="pill">1</span><span class="ar2">—</span><span class="pill z">0</span></span></div>
+    <div class="seq row"><span class="sl">Басарыгин, шортс</span><span class="pl"><span class="pill">3</span><span class="ar2">—</span><span class="pill">1</span><span class="ar2">—</span><span class="pill z">0</span></span></div>
   </div>
-  <div class="rounds">
-    <div class="rcard"><span class="sl">Slatt · 6 кругов</span><div class="seq"><span class="sl"></span><span class="pl"><span class="pill">2</span><span class="ar2">—</span><span class="pill">2</span><span class="ar2">—</span><span class="pill">3</span><span class="ar2">—</span><span class="pill">1</span><span class="ar2">—</span><span class="pill">1</span><span class="ar2">—</span><span class="pill z">0</span></span></div></div>
-    <div class="rcard"><span class="sl">Барабошкин · 4 круга</span><div class="seq"><span class="sl"></span><span class="pl"><span class="pill">4</span><span class="ar2">—</span><span class="pill">2</span><span class="ar2">—</span><span class="pill">1</span><span class="ar2">—</span><span class="pill z">0</span></span></div></div>
-    <div class="rcard"><span class="sl">Басарыгин · 3 круга</span><div class="seq"><span class="sl"></span><span class="pl"><span class="pill">3</span><span class="ar2">—</span><span class="pill">1</span><span class="ar2">—</span><span class="pill z">0</span></span></div></div>
-  </div>
-  <p class="foot">В кружках: число существенных замечаний на каждом круге проверки.</p>
 </section>
 <section class="slide">
   <div class="eyebrow">Ролики</div>
