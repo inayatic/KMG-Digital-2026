@@ -29,6 +29,7 @@ button:hover{border-color:var(--acc)}button[disabled]{opacity:.5}
 .tw{overflow-x:auto;max-width:100%;border:1px solid var(--line);border-radius:6px}
 table{border-collapse:collapse;min-width:100%}td,th{border:1px solid var(--line);padding:.35rem .6rem;text-align:left}
 .fig{margin:.5rem 0}.fig svg{width:100%;height:auto;max-width:100%;background:var(--card);border:1px solid var(--line);border-radius:8px}
+.fig img{width:100%;height:auto;max-width:100%;border:1px solid var(--line);border-radius:8px;background:#fff}
 .fig figcaption{color:var(--mut);font-size:1rem}
 svg .t{fill:var(--fg);font:12px system-ui,sans-serif}svg .sm{font-size:10px;fill:var(--mut)}
 svg .ax{stroke:var(--fg);stroke-width:1.5;fill:none}svg .grid{stroke:var(--line);stroke-width:1;stroke-dasharray:3 3}
