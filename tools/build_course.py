@@ -58,7 +58,7 @@ GREEK = {"rho": "ρ", "Delta": "Δ", "delta": "δ", "phi": "φ", "varphi": "φ",
          "xi": "ξ", "omega": "ω", "Omega": "Ω", "psi": "ψ", "chi": "χ", "zeta": "ζ", "cdot": "·", "times": "×", "div": "÷", "le": "≤", "leq": "≤", "ge": "≥", "geq": "≥",
          "approx": "≈", "sim": "∼", "ne": "≠", "pm": "±", "infty": "∞", "to": "→", "rightarrow": "→", "Rightarrow": "⇒", "partial": "∂", "circ": "°", "prime": "′",
          "ldots": "…", "quad": " ", "qquad": " ", "left": "", "right": "",
-         **{k: k for k in ("max", "min", "ln", "lg", "log", "exp", "sin", "cos", "tg", "ctg", "arctg", "lim", "const")}, "tan": "tg", "sum": "Σ", "int": "∫", "cdots": "…", "dots": "…", "mathrm": "", "boldsymbol": ""}
+         **{k: k for k in ("max", "min", "ln", "lg", "log", "exp", "sin", "cos", "tg", "ctg", "arctg", "lim", "const")}, "tan": "tg", "sum": "Σ", "int": "∫", "cdots": "…", "dots": "…", "mathrm": "", "boldsymbol": "", **{k: v for k, v in {"neq": "≠", "ne": "≠", "partial": "∂", "varkappa": "ϰ", "Delta": "Δ", "nabla": "∇", "approx": "≈", "leq": "≤", "geq": "≥", "cdot": "·", "infty": "∞"}.items()}}
 SUP = {"0": "⁰", "1": "¹", "2": "²", "3": "³", "4": "⁴", "5": "⁵", "6": "⁶", "7": "⁷", "8": "⁸", "9": "⁹", "-": "⁻", "+": "⁺"}
 
 
@@ -67,6 +67,9 @@ def tex2txt(t):
     t = t.strip()
     t = re.sub(r"^\$\$|\$\$$|^\\\(|\\\)$|^\\\[|\\\]$", "", t).strip()
     t = re.sub(r"\$\$|\\\(|\\\)", " ", t)
+    t = re.sub(r"(\\[A-Za-z]+)\s+(?=\{)", r"\1", t)  # OCR: «\operatorname {grad}», «\tag {I.2}»
+    t = re.sub(r"\}\s+\{", "}{", t)  # «\frac { 1 } { K }»
+    t = re.sub(r"([\^_])\s*\{([^{}]*)\}", lambda m: m.group(1) + "{" + re.sub(r"(?<=\d)\s+(?=\d)|\s*(?=[+\-])|(?<=[+\-])\s*", "", m.group(2).strip()) + "}", t)  # «^ { - 3 }» -> «^{-3}»
     tag = re.search(r"\\tag\{([^}]*)\}", t); t = re.sub(r"\\tag\{[^}]*\}", "", t)
     t = re.sub(r"\\begin\{[^}]*\}(\{[^}]*\})?|\\end\{[^}]*\}", "", t).replace("\\\\", "; ").replace("&", " ")
     for _ in range(6):
@@ -517,6 +520,10 @@ class Build:
             if ans and len(ans) > 3 and t["type"] in ("single", "blank") and nrm(ans) in nrm(t["q"]): ok = False
             if not ok: s.warn.append(f"ЗАДАНИЕ {t['id']}: ответ не найден в {key}"); s.dropped = getattr(s, "dropped", 0) + 1
             if ok or not s.cfg.get("drop_bad"): out.append(dict(t, node=nid, claim=key))
+        import hashlib  # позиция верного варианта не должна быть подсказкой: детерминированное перемешивание (seed = id задания)
+        for t in out:
+            if t.get("type") in ("single", "multi") and t.get("options"):
+                t["options"] = sorted(t["options"], key=lambda o: hashlib.sha1(f"{t.get('id')}|{o}".encode()).hexdigest())
         return out
 
 
