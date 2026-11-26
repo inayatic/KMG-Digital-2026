@@ -2,13 +2,33 @@
 """Курс целой главы: build_course_all.py <chapter>. Пишет out/<ch>/index.html (оглавление) и out/<ch>/<раздел>/index.html на каждый раздел.
 Конфиг строится из слоя (разделы = части, заголовки шагов = заголовки узлов). Задания: build/<ch>/course/tasks-<раздел>.json (агент), проверяются как в build_course.py.
 Без сервера и внешних запросов. Разделы без заданий собираются, но с предупреждением."""
-import copy, html, json, re, sys
+import base64, copy, html, json, re, subprocess, sys
 from pathlib import Path
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 import build_course as bc
 
 ROOT = bc.ROOT
 esc = html.escape
+
+def page_images(ch, pages):
+    """JPEG-сканы страниц (номер = PDF-страница, части книги идут подряд) -> {стр: data-URI}; кэш build/<ch>/course/pages/. Нет PDF или ошибка: пусто."""
+    pdfs = sorted((ROOT / "chapters" / ch).glob("*.pdf"), key=lambda p: [int(x) for x in re.findall(r"\d+", p.stem)])
+    cache = ROOT / "build" / ch / "course" / "pages"; cache.mkdir(parents=True, exist_ok=True); out = {}
+    spans, start = [], 1
+    for p in pdfs:
+        r = subprocess.run(["pdfinfo", str(p)], capture_output=True, text=True); m = re.search(r"Pages:\s+(\d+)", r.stdout)
+        if not m: return {}
+        spans.append((start, start + int(m.group(1)) - 1, p)); start += int(m.group(1))
+    for n in sorted(pages):
+        f = cache / f"{n}.jpg"
+        if not f.exists():
+            sp = next((x for x in spans if x[0] <= n <= x[1]), None)
+            if not sp: continue
+            loc = n - sp[0] + 1; base = cache / f"_{n}"
+            subprocess.run(["pdftoppm", "-f", str(loc), "-l", str(loc), "-r", "75", "-jpeg", "-jpegopt", "quality=55", "-singlefile", str(sp[2]), str(base)], capture_output=True)
+            if (base.with_suffix(".jpg")).exists(): base.with_suffix(".jpg").rename(f)
+        if f.exists(): out[n] = "data:image/jpeg;base64," + base64.b64encode(f.read_bytes()).decode()
+    return out
 
 def main(ch):
     B = ROOT / "build" / ch
@@ -39,6 +59,8 @@ def main(ch):
         keys = [n["id"].split(".")[-1][:2] for n in ns]
         cfg = {"book": book, "parts": [{"title": title, "nodes": keys}], "short_titles": {}, "illustrations": {}, "tasks": tasks,
                "no_default_fig": True, "drop_bad": True, "public": True, "home": '<a href="../index.html">Оглавление главы</a>', "title": f"Курс: {title}"}
+        fp = {u["page"] for u in units if u["type"] in ("caption", "figure_desc") and any(u["id"] in n["unit_ids"] for n in ns)}
+        cfg["page_images"] = page_images(ch, fp)
         b = bc.Build(ns, units, cfg, f"{ch}.{key}")
         page = b.render(); d = out / key; d.mkdir(exist_ok=True); (d / "index.html").write_text(page, encoding="utf-8")
         # вход для проверки заданий: только прошедшие сборку, с утверждениями-основаниями

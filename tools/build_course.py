@@ -382,6 +382,11 @@ class Build:
             fgh = s.fig(n, short)
             if n.get("figure_note") and not s.cfg.get("public"): fgh += f"<details class='meta'><summary>Примечание к рисунку книги</summary>{esc(clean_note(n['figure_note']))}</details>"
             blocks.append(("fg", "Иллюстрации", fgh))
+        pi = s.cfg.get("page_images") or {}  # сканы страниц с рисунками книги (build_course_all кладёт data-URI)
+        pgs = sorted({s.U[u]["page"] for u in n["unit_ids"] if s.U[u]["type"] in ("caption", "figure_desc") and s.U[u]["page"] in pi})
+        if pgs:
+            blocks.append(("pg", "Рисунок книги (скан страницы)", "".join(
+                f'<figure class="fig"><img src="{pi[p]}" alt="Скан страницы {p} PDF с рисунком книги" loading="lazy"><figcaption>Скан страницы {p} PDF: рисунок и подпись книги как есть.</figcaption></figure>' for p in pgs)))
         allc = "".join(P(s.cl(f"{n['id']}#{c['id']}", c["text"]) + f" <span class='meta'>стр. {c['page']} PDF, {esc(c['author'])}</span>") for c in n["claims"])
         blocks.append(("src", "Источник: все утверждения шага", allc))
         blocks.append(("tk", "Проверьте себя", f'<div class="tasks" data-node="{esc(n["id"])}"></div>'))
