@@ -1,0 +1,20 @@
+[
+ {
+  "key": "ch_s00fronta",
+  "units": 114,
+  "pages": [
+   9,
+   23
+  ],
+  "chars": 53777
+ },
+ {
+  "key": "ch_s00frontb",
+  "units": 80,
+  "pages": [
+   24,
+   30
+  ],
+  "chars": 37750
+ }
+]

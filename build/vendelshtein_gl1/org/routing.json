@@ -1,0 +1,574 @@
+{
+ "chapter": "vendelshtein_gl1_full",
+ "routes": [
+  {
+   "node_id": "ven.ch_s00fronta.01-repeat-resistivity-logs",
+   "format": "интерактив",
+   "video_scores": {
+    "time": 2,
+    "invisible": 1,
+    "scale": 0,
+    "counterintuitive": 0,
+    "cause_effect": 1
+   },
+   "template": null,
+   "why": "Тип Пр: работа идёт по шагам (масштаб, аппаратура, наложение, поиск расхождений). Время 2, поэтому интерактив с наложением двух замеров; практикум на кривых рис. 6 закрепляет.",
+   "scored": true,
+   "secondary_format": "практикум на данных"
+  },
+  {
+   "node_id": "ven.ch_s00fronta.02-nonfiltering-mud-limit",
+   "format": "шортс",
+   "video_scores": {
+    "time": 0,
+    "invisible": 1,
+    "scale": 0,
+    "counterintuitive": 1,
+    "cause_effect": 2
+   },
+   "template": null,
+   "why": "Главное здесь — механизм «нет фильтрации, значит нет зоны проникновения и нет признака». Цепочка причина → следствие короткая и немного неожиданная, ей хватит шортса; карточка закрепит ограничение.",
+   "scored": true,
+   "secondary_format": "карточки"
+  },
+  {
+   "node_id": "ven.ch_s00fronta.03-quantitative-criteria",
+   "format": "карточки",
+   "video_scores": {
+    "time": 0,
+    "invisible": 0,
+    "scale": 0,
+    "counterintuitive": 0,
+    "cause_effect": 1
+   },
+   "template": null,
+   "why": "Узел вводит рамку: решение «коллектор или нет» принимается по порогу (тип Н). Видеоёмкость низкая, поэтому карточки с тремя группами параметров и короткий текст-ориентир.",
+   "scored": true,
+   "secondary_format": "текст"
+  },
+  {
+   "node_id": "ven.ch_s00fronta.04-kpr-cutoff-from-rate",
+   "format": "длинное видео",
+   "video_scores": {
+    "time": 1,
+    "invisible": 0,
+    "scale": 1,
+    "counterintuitive": 2,
+    "cause_effect": 2
+   },
+   "template": null,
+   "why": "Ф: нужно понять, что меняется в формулах (1.1)–(1.2) и к чему это ведёт. Контринтуитивность (не 1 мД) и причина → следствие дают длинное видео, а интерактив с ползунками Q*, Δp, hэф, μ показывает, как сдвигается порог.",
+   "scored": true,
+   "secondary_format": "интерактив"
+  },
+  {
+   "node_id": "ven.ch_s00fronta.05-cutoffs-by-regression",
+   "format": "интерактив",
+   "video_scores": {
+    "time": 0,
+    "invisible": 1,
+    "scale": 0,
+    "counterintuitive": 0,
+    "cause_effect": 1
+   },
+   "template": null,
+   "why": "Пр: порядок «связь → регрессия → порог → диапазон». Интерактив на облаке точек рис. 7 с подвижной линией K*пр; практикум на собственных данных закрепляет.",
+   "scored": true,
+   "secondary_format": "практикум на данных"
+  },
+  {
+   "node_id": "ven.ch_s00fronta.06-porosity-log-cutoff",
+   "format": "интерактив",
+   "video_scores": {
+    "time": 0,
+    "invisible": 1,
+    "scale": 0,
+    "counterintuitive": 1,
+    "cause_effect": 1
+   },
+   "template": null,
+   "why": "И: цепочка «показание → пористость → порог». Интерактив с линией порога на кривой (рис. 8) и сменой метода показывает разный знак неравенства; практикум — разметка на реальной диаграмме.",
+   "scored": true,
+   "secondary_format": "практикум на данных"
+  },
+  {
+   "node_id": "ven.ch_s00fronta.07-sp-and-eta-clay",
+   "format": "длинное видео",
+   "video_scores": {
+    "time": 1,
+    "invisible": 1,
+    "scale": 0,
+    "counterintuitive": 1,
+    "cause_effect": 2
+   },
+   "template": null,
+   "why": "Ф: смысл формулы (1.3) и почему комбинация точнее отдельных параметров. Причина → следствие (контраст вод и глинистости → аномалия) — для длинного видео; веер линий ηгл на рис. 9 — для интерактива.",
+   "scored": true,
+   "secondary_format": "интерактив"
+  },
+  {
+   "node_id": "ven.ch_s00fronta.08-alpha-sp-cutoff",
+   "format": "практикум на данных",
+   "video_scores": {
+    "time": 0,
+    "invisible": 0,
+    "scale": 0,
+    "counterintuitive": 1,
+    "cause_effect": 1
+   },
+   "template": null,
+   "why": "Ф/Пр: понять нормировку и пройти три пути к порогу. Лучше всего работает практикум на данных испытаний; интерактив помогает понять, как форма кривой (рис. 10) зависит от минерализации.",
+   "scored": true,
+   "secondary_format": "интерактив"
+  },
+  {
+   "node_id": "ven.ch_s00fronta.09-sp-anomaly-not-sign",
+   "format": "шортс",
+   "video_scores": {
+    "time": 0,
+    "invisible": 1,
+    "scale": 0,
+    "counterintuitive": 2,
+    "cause_effect": 1
+   },
+   "template": null,
+   "why": "Р: узнать на кривой ложный признак. Узел сильно контринтуитивен, поэтому шортс «аномалия есть — коллектора нет», а карточки и фото-квизы закрепляют распознавание.",
+   "scored": true,
+   "secondary_format": "карточки"
+  },
+  {
+   "node_id": "ven.ch_s00fronta.10-gamma-cutoff",
+   "format": "практикум на данных",
+   "video_scores": {
+    "time": 0,
+    "invisible": 1,
+    "scale": 0,
+    "counterintuitive": 0,
+    "cause_effect": 1
+   },
+   "template": null,
+   "why": "Ф/Пр: смысл нормировки (1.5) и выбор пути к порогу. Практикум на диаграмме ГМ с отсчётом Iγmin/Iγmax; интерактив для сравнения с СП.",
+   "scored": true,
+   "secondary_format": "интерактив"
+  },
+  {
+   "node_id": "ven.ch_s00fronta.11-gamma-limits",
+   "format": "шортс",
+   "video_scores": {
+    "time": 1,
+    "invisible": 1,
+    "scale": 0,
+    "counterintuitive": 2,
+    "cause_effect": 2
+   },
+   "template": null,
+   "why": "Р: узнать ситуации, где кривая ГМ обманывает. Механизм у каждой ловушки свой и неожиданный, поэтому шортс; карточки «разрез → риск ошибки» закрепляют.",
+   "scored": true,
+   "secondary_format": "карточки"
+  },
+  {
+   "node_id": "ven.ch_s00fronta.12-complex-interpretation",
+   "format": "текст",
+   "video_scores": {
+    "time": 0,
+    "invisible": 0,
+    "scale": 1,
+    "counterintuitive": 0,
+    "cause_effect": 1
+   },
+   "template": null,
+   "why": "Н: решение по нескольким неполным источникам и границы применимости. Видеоёмкость низкая, поэтому текст-сводка; карточки на границы применимости.",
+   "scored": true,
+   "secondary_format": "карточки"
+  },
+  {
+   "node_id": "ven.ch_s00fronta.13-nmr-free-fluid",
+   "format": "длинное видео",
+   "video_scores": {
+    "time": 1,
+    "invisible": 2,
+    "scale": 1,
+    "counterintuitive": 2,
+    "cause_effect": 1
+   },
+   "template": null,
+   "why": "И: от сигнала ядер водорода к ИСФ и коллектору. Невидимое становится видимым, есть парадокс (лучшие коллекторы при кольматации не видны) — длинное видео; шортс на парадокс.",
+   "scored": true,
+   "secondary_format": "шортс"
+  },
+  {
+   "node_id": "ven.ch_s00fronta.14-activated-mud-timelapse",
+   "format": "текст",
+   "video_scores": {
+    "time": 2,
+    "invisible": 1,
+    "scale": 0,
+    "counterintuitive": 0,
+    "cause_effect": 1
+   },
+   "template": null,
+   "why": "Пр с ценой ошибки и затрат, а описание в разделе фрагментарно, поэтому текст; карточки на пороги Kп эф и условия применения.",
+   "scored": true,
+   "secondary_format": "карточки"
+  },
+  {
+   "node_id": "ven.ch_s00fronta.15-saturation-electrometry",
+   "format": "длинное видео",
+   "video_scores": {
+    "time": 0,
+    "invisible": 1,
+    "scale": 0,
+    "counterintuitive": 1,
+    "cause_effect": 2
+   },
+   "template": null,
+   "why": "И/Н: цепочка «зонды → ρп → Pн → решение о колонне» и цена ошибки. Причина → следствие (глубокое проникновение → неоднозначность) — для длинного видео; интерактив на глубину проникновения против глубины исследования.",
+   "scored": true,
+   "secondary_format": "интерактив"
+  },
+  {
+   "node_id": "ven.ch_s00fronta.16-rho-cutoff-statistics",
+   "format": "интерактив",
+   "video_scores": {
+    "time": 0,
+    "invisible": 0,
+    "scale": 0,
+    "counterintuitive": 0,
+    "cause_effect": 1
+   },
+   "template": null,
+   "why": "Н: порог как компромисс двух перекрывающихся распределений. Интерактив, где двигают порог и видят ошибки обоих классов (рис. 22); практикум на таблице испытаний.",
+   "scored": true,
+   "secondary_format": "практикум на данных"
+  },
+  {
+   "node_id": "ven.ch_s00fronta.17-relperm-sw-cutoff",
+   "format": "длинное видео",
+   "video_scores": {
+    "time": 0,
+    "invisible": 2,
+    "scale": 1,
+    "counterintuitive": 1,
+    "cause_effect": 2
+   },
+   "template": null,
+   "why": "М: механизм двухфазной фильтрации и почему вода не течёт ниже K*в. Невидимое (поток в порах) и причина → следствие — длинное видео; интерактив по кривым рис. 23.",
+   "scored": true,
+   "secondary_format": "интерактив"
+  },
+  {
+   "node_id": "ven.ch_s00fronta.18-sp-vs-resistivity-ratio",
+   "format": "практикум на данных",
+   "video_scores": {
+    "time": 0,
+    "invisible": 1,
+    "scale": 0,
+    "counterintuitive": 1,
+    "cause_effect": 1
+   },
+   "template": null,
+   "why": "Пр: порядок расчёта и построения бланка с точками выбора (какие пласты считать водоносными). Ведущий формат — практикум на данных, интерактив с бланком рис. 24 помогает.",
+   "scored": true,
+   "secondary_format": "интерактив"
+  },
+  {
+   "node_id": "ven.ch_s00fronta.19-rho-vs-porosity-carbonate",
+   "format": "интерактив",
+   "video_scores": {
+    "time": 0,
+    "invisible": 1,
+    "scale": 0,
+    "counterintuitive": 2,
+    "cause_effect": 2
+   },
+   "template": null,
+   "why": "И/Н: связь двух косвенных измерений и ложный отскок. Интерактив на бланке рис. 25 с изменением глубины проникновения; практикум на данных.",
+   "scored": true,
+   "secondary_format": "практикум на данных"
+  },
+  {
+   "node_id": "ven.ch_s00fronta.20-resistivity-timelapse-saturation",
+   "format": "интерактив",
+   "video_scores": {
+    "time": 2,
+    "invisible": 1,
+    "scale": 0,
+    "counterintuitive": 1,
+    "cause_effect": 1
+   },
+   "template": null,
+   "why": "И: изменение сигнала во времени как признак насыщения. Время 2, поэтому интерактив с замерами до и после испытания; шортс «кривая после испытания».",
+   "scored": true,
+   "secondary_format": "шортс"
+  },
+  {
+   "node_id": "ven.ch_s00fronta.21-neutron-timelapse-physics",
+   "format": "длинное видео",
+   "video_scores": {
+    "time": 2,
+    "invisible": 2,
+    "scale": 0,
+    "counterintuitive": 2,
+    "cause_effect": 2
+   },
+   "template": null,
+   "why": "И: от нейтронных свойств флюида к различимости по кривой, и ответ зависит от условий. Время, невидимое и контринтуитивность (нефть и пресная вода неразличимы) — длинное видео; интерактив на пороги минерализации.",
+   "scored": true,
+   "secondary_format": "интерактив"
+  },
+  {
+   "node_id": "ven.ch_s00fronta.22-neutron-timelapse-protocol",
+   "format": "практикум на данных",
+   "video_scores": {
+    "time": 2,
+    "invisible": 1,
+    "scale": 0,
+    "counterintuitive": 0,
+    "cause_effect": 1
+   },
+   "template": null,
+   "why": "Пр: расписание замеров, контроль аппаратуры, обработка и точки выбора. Ведущий формат — практикум на данных (график рис. 26 и регрессия); интерактив на выбор опорных пластов.",
+   "scored": true,
+   "secondary_format": "интерактив"
+  },
+  {
+   "node_id": "ven.ch_s00frontb.01-time-lapse-band",
+   "format": "интерактив",
+   "video_scores": {
+    "time": 2,
+    "invisible": 1,
+    "scale": 0,
+    "counterintuitive": 1,
+    "cause_effect": 2
+   },
+   "template": null,
+   "why": "Тип И: сигнал «до/после» нужно перевести в смену флюида. В интерактиве можно двигать точки относительно полосы ±2σ и видеть, как меняется знак (причина и следствие, изменение во времени). Правило знаков удобно закрепить карточками.",
+   "scored": true,
+   "secondary_format": "карточки"
+  },
+  {
+   "node_id": "ven.ch_s00frontb.02-inm-kv",
+   "format": "шортс",
+   "video_scores": {
+    "time": 0,
+    "invisible": 2,
+    "scale": 0,
+    "counterintuitive": 1,
+    "cause_effect": 1
+   },
+   "template": null,
+   "why": "Тип И с распознаванием: невидимый вид флюида проявляется как расхождение двух кривых (рис. 27), это одна контринтуитивная мысль на короткий ролик. Отличать нефть от пресной зоны проникновения удобно на карточках.",
+   "scored": true,
+   "secondary_format": "карточки"
+  },
+  {
+   "node_id": "ven.ch_s00frontb.03-acoustic-cased",
+   "format": "карточки",
+   "video_scores": {
+    "time": 0,
+    "invisible": 1,
+    "scale": 0,
+    "counterintuitive": 1,
+    "cause_effect": 1
+   },
+   "template": null,
+   "why": "Тип И/Р: нужно запомнить пару признаков αP↓ αS↑ и условие применимости. Динамики во времени нет, видеоёмкость низкая, поэтому хватает карточек.",
+   "scored": true
+  },
+  {
+   "node_id": "ven.ch_s00frontb.04-gas-logging",
+   "format": "карточки",
+   "video_scores": {
+    "time": 0,
+    "invisible": 0,
+    "scale": 0,
+    "counterintuitive": 2,
+    "cause_effect": 1
+   },
+   "template": null,
+   "why": "Тип И/Н: каждая сигнатура имеет известные ложноположительные и ложноотрицательные случаи, поэтому их лучше заучивать парами на карточках. Контринтуитивность высокая, но показывать в динамике почти нечего.",
+   "scored": true,
+   "secondary_format": "текст"
+  },
+  {
+   "node_id": "ven.ch_s00frontb.05-formation-testers",
+   "format": "текст",
+   "video_scores": {
+    "time": 1,
+    "invisible": 0,
+    "scale": 0,
+    "counterintuitive": 1,
+    "cause_effect": 1
+   },
+   "template": null,
+   "why": "Тип Пр: порядок действий (выбор объекта по ГИС, испытание, совместный анализ) и условия, при которых испытание теряет смысл. Видеоёмкость низкая, поэтому подходит текст.",
+   "scored": true,
+   "secondary_format": "карточки"
+  },
+  {
+   "node_id": "ven.ch_s00frontb.06-h-eff-homogeneous",
+   "format": "длинное видео",
+   "video_scores": {
+    "time": 0,
+    "invisible": 1,
+    "scale": 2,
+    "counterintuitive": 1,
+    "cause_effect": 1
+   },
+   "template": null,
+   "why": "Тип Пр/И: скачок масштаба (тонкий пласт «размазывается» прибором) и шесть методов на рис. 29 требуют длинного разбора. Переход h_ф → h по палетке стоит отработать в практикуме.",
+   "scored": true,
+   "secondary_format": "практикум на данных"
+  },
+  {
+   "node_id": "ven.ch_s00frontb.07-h-eff-heterogeneous",
+   "format": "практикум на данных",
+   "video_scores": {
+    "time": 0,
+    "invisible": 1,
+    "scale": 1,
+    "counterintuitive": 0,
+    "cause_effect": 1
+   },
+   "template": null,
+   "why": "Тип Пр/Ф: нужно посчитать H_эф по площади СП и проверить условие линейности, это работа на данных. Видеоёмкость средняя, поэтому формат практикума оставлен.",
+   "scored": true,
+   "secondary_format": "интерактив"
+  },
+  {
+   "node_id": "ven.ch_s00frontb.08-transition-zone",
+   "format": "длинное видео",
+   "video_scores": {
+    "time": 0,
+    "invisible": 2,
+    "scale": 1,
+    "counterintuitive": 2,
+    "cause_effect": 2
+   },
+   "template": null,
+   "why": "Тип М/П: невидимое капиллярное распределение воды становится видимым как градиент ρп по глубине (рис. 32). Механизм, контринтуитивный разрыв «зеркало воды ≠ ВНК» и масштаб в метрах хорошо ложатся в длинное видео.",
+   "scored": true,
+   "secondary_format": "интерактив"
+  },
+  {
+   "node_id": "ven.ch_s00frontb.09-owc-by-resistivity",
+   "format": "интерактив",
+   "video_scores": {
+    "time": 0,
+    "invisible": 1,
+    "scale": 0,
+    "counterintuitive": 2,
+    "cause_effect": 2
+   },
+   "template": null,
+   "why": "Тип Пр/Н: пошаговая процедура с точкой выбора (порог ρ*п). В интерактиве видно, как сдвиг порога смещает ВНК и h_эф (причина и следствие). Пороговая идея: контакт задаётся притоком, а не физикой.",
+   "scored": true,
+   "secondary_format": "практикум на данных"
+  },
+  {
+   "node_id": "ven.ch_s00frontb.10-false-owc-gravity",
+   "format": "шортс",
+   "video_scores": {
+    "time": 2,
+    "invisible": 2,
+    "scale": 0,
+    "counterintuitive": 2,
+    "cause_effect": 2
+   },
+   "template": null,
+   "why": "Тип М/Р: как фильтрат стекает вниз со временем, показать в динамике (изменение во времени, невидимое, причина и следствие). Контринтуитивный ложный ВНК — сильный сюжет для шортса, а распознавание на рис. 33 можно разобрать в длинном видео.",
+   "scored": true,
+   "secondary_format": "длинное видео"
+  },
+  {
+   "node_id": "ven.ch_s00frontb.11-neutron-cased-owc-conditions",
+   "format": "карточки",
+   "video_scores": {
+    "time": 1,
+    "invisible": 1,
+    "scale": 0,
+    "counterintuitive": 1,
+    "cause_effect": 1
+   },
+   "template": null,
+   "why": "Тип И/Пр: косвенное измерение с жёсткими предусловиями (минерализация, Kп, расформирование). Это набор порогов для самопроверки, поэтому карточки, видеоёмкость низкая.",
+   "scored": true,
+   "secondary_format": "текст"
+  },
+  {
+   "node_id": "ven.ch_s00frontb.12-lambda-threshold-stats",
+   "format": "интерактив",
+   "video_scores": {
+    "time": 0,
+    "invisible": 1,
+    "scale": 0,
+    "counterintuitive": 2,
+    "cause_effect": 2
+   },
+   "template": null,
+   "why": "Тип Н/Ф: решение — порог с ценой ошибок, а не число. Интерактив, где λ* двигается по распределениям и меняется баланс ошибок, показывает это прямо. Пороговая идея для интерпретации.",
+   "scored": true,
+   "secondary_format": "практикум на данных"
+  },
+  {
+   "node_id": "ven.ch_s00frontb.13-lambda-crossplot-corrections",
+   "format": "практикум на данных",
+   "video_scores": {
+    "time": 0,
+    "invisible": 1,
+    "scale": 0,
+    "counterintuitive": 1,
+    "cause_effect": 1
+   },
+   "template": null,
+   "why": "Тип Ф/И: смысл поправок и «приведения» λ к K̲п лучше всего понять, посчитав их на наборе пластов и построив кросс-плот. Видеоёмкость низкая.",
+   "scored": true,
+   "secondary_format": "интерактив"
+  },
+  {
+   "node_id": "ven.ch_s00frontb.14-light-oil-flowing-shutin",
+   "format": "шортс",
+   "video_scores": {
+    "time": 2,
+    "invisible": 2,
+    "scale": 0,
+    "counterintuitive": 2,
+    "cause_effect": 2
+   },
+   "template": null,
+   "why": "Тип М/Пр: изменение во времени и цепочка причин (давление упало → выделился газ → показания выросли → скважину остановили, приращение пропало) дают яркий короткий сюжет.",
+   "scored": true,
+   "secondary_format": "текст"
+  },
+  {
+   "node_id": "ven.ch_s00frontb.15-gas-contact-neutron",
+   "format": "текст",
+   "video_scores": {
+    "time": 0,
+    "invisible": 1,
+    "scale": 0,
+    "counterintuitive": 1,
+    "cause_effect": 1
+   },
+   "template": null,
+   "why": "Тип И/Ф: условия по давлению и формула смешения (I.10) требуют спокойного чтения с выкладкой. Видеоёмкость низкая, поэтому текст, а пороги давления можно закрепить карточками.",
+   "scored": true,
+   "secondary_format": "карточки"
+  },
+  {
+   "node_id": "ven.ch_s00frontb.16-stationary-neutron-gas-corrections",
+   "format": "практикум на данных",
+   "video_scores": {
+    "time": 0,
+    "invisible": 1,
+    "scale": 0,
+    "counterintuitive": 1,
+    "cause_effect": 1
+   },
+   "template": null,
+   "why": "Тип Ф/Н: формулы поправок и выбор критического K*пп по опробованию осваиваются расчётом на наборе пластов. Видеоёмкость низкая, поэтому практикум.",
+   "scored": true,
+   "secondary_format": "интерактив"
+  }
+ ]
+}

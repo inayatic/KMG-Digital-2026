@@ -34,16 +34,23 @@ def per_section(ch, stage, agent, prompt, done, keys=None):
     if keys == ["_all"]: root = root / "x"  # один вызов на всю главу
     todo = [k for k in keys if FORCE or not done(root / "sections" / k)]
     print(f"{stage}: {len(todo)} из {len(keys)} разделов к запуску")
+    def safe(k):
+        try: return llm(ch, k, agent, prompt, stage)
+        except SystemExit as e: return e
     with ThreadPoolExecutor(int(os.environ.get("JOBS", 4))) as ex:
-        res = list(ex.map(lambda k: llm(ch, k, agent, prompt, stage), todo))
+        res = list(ex.map(safe, todo))
+    err = [r for r in res if isinstance(r, SystemExit)]; res = [r for r in res if not isinstance(r, SystemExit)]
+    if err:  # ошибка агента (например, лимит API): метрика уже отработавших разделов не теряется, повторный запуск доделает остальные
+        metric(ch, stage + "_partial", "", sum(r[0] for r in res), sum(r[1] for r in res), sum(r[2] for r in res))
+        sys.exit(str(err[0].code))
     return len(todo), sum(r[0] for r in res), sum(r[1] for r in res), sum(r[2] for r in res)
 
-def metric(ch, stage, nodes, tin, tout, usd):
+def metric(ch, stage, nodes, tin, tout, usd, video_seconds=""):
     new = not MET.exists(); MET.parent.mkdir(exist_ok=True)
     with MET.open("a", newline="") as f:
         w = csv.writer(f)
         if new: w.writerow(HEAD)
-        w.writerow([ch, stage, nodes, tin, tout, round(usd, 4), "", "", "", ""])
+        w.writerow([ch, stage, nodes, tin, tout, round(usd, 4), "", "", video_seconds, ""])
 
 def repair_cov(ch, rounds=2):
     """Автоматический ремонт покрытия и целостности: check_cov -> агент по каждому проблемному разделу (до `rounds` раундов)."""

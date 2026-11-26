@@ -61,6 +61,7 @@ function route(){
  else if(hs==="#/map")view=$("#v-map");else if(hs==="#/glossary")view=$("#v-glossary");
  else{view=$("#v-path");path()}
  view.hidden=false;view.classList.add("printing");$("#ev").hidden=true;window.scrollTo(0,0);prog();
+ $$(".nav a").forEach(function(a){if(a.getAttribute("href")===(m?"#/path":hs))a.setAttribute("aria-current","page");else a.removeAttribute("aria-current")});
  var h=$("h2",view);if(h)h.focus({preventScroll:true});
 }
 var gs=document.getElementById("gsearch");if(gs)gs.oninput=function(){var gn=function(x){return x.toLowerCase().replace(/[_\s]/g,"")};var q=gn(gs.value);$$("#v-glossary tbody tr").forEach(function(r){var tx=q.length<=2?gn(r.cells[0].textContent):gn(r.textContent);r.hidden=q&&tx.indexOf(q)<0})};

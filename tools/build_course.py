@@ -58,7 +58,7 @@ GREEK = {"rho": "ρ", "Delta": "Δ", "delta": "δ", "phi": "φ", "varphi": "φ",
          "xi": "ξ", "omega": "ω", "Omega": "Ω", "psi": "ψ", "chi": "χ", "zeta": "ζ", "cdot": "·", "times": "×", "div": "÷", "le": "≤", "leq": "≤", "ge": "≥", "geq": "≥",
          "approx": "≈", "sim": "∼", "ne": "≠", "pm": "±", "infty": "∞", "to": "→", "rightarrow": "→", "Rightarrow": "⇒", "partial": "∂", "circ": "°", "prime": "′",
          "ldots": "…", "quad": " ", "qquad": " ", "left": "", "right": "",
-         **{k: k for k in ("max", "min", "ln", "lg", "log", "exp", "sin", "cos", "tg", "ctg", "arctg", "lim", "const")}, "tan": "tg", "sum": "Σ", "int": "∫", "cdots": "…", "dots": "…", "mathrm": "", "boldsymbol": ""}
+         **{k: k for k in ("max", "min", "ln", "lg", "log", "exp", "sin", "cos", "tg", "ctg", "arctg", "lim", "const")}, "tan": "tg", "sum": "Σ", "int": "∫", "cdots": "…", "dots": "…", "mathrm": "", "boldsymbol": "", **{k: v for k, v in {"neq": "≠", "ne": "≠", "partial": "∂", "varkappa": "ϰ", "Delta": "Δ", "nabla": "∇", "approx": "≈", "leq": "≤", "geq": "≥", "cdot": "·", "infty": "∞"}.items()}}
 SUP = {"0": "⁰", "1": "¹", "2": "²", "3": "³", "4": "⁴", "5": "⁵", "6": "⁶", "7": "⁷", "8": "⁸", "9": "⁹", "-": "⁻", "+": "⁺"}
 
 
@@ -67,6 +67,9 @@ def tex2txt(t):
     t = t.strip()
     t = re.sub(r"^\$\$|\$\$$|^\\\(|\\\)$|^\\\[|\\\]$", "", t).strip()
     t = re.sub(r"\$\$|\\\(|\\\)", " ", t)
+    t = re.sub(r"(\\[A-Za-z]+)\s+(?=\{)", r"\1", t)  # OCR: «\operatorname {grad}», «\tag {I.2}»
+    t = re.sub(r"\}\s+\{", "}{", t)  # «\frac { 1 } { K }»
+    t = re.sub(r"([\^_])\s*\{([^{}]*)\}", lambda m: m.group(1) + "{" + re.sub(r"(?<=\d)\s+(?=\d)|\s*(?=[+\-])|(?<=[+\-])\s*", "", m.group(2).strip()) + "}", t)  # «^ { - 3 }» -> «^{-3}»
     tag = re.search(r"\\tag\{([^}]*)\}", t); t = re.sub(r"\\tag\{[^}]*\}", "", t)
     t = re.sub(r"\\begin\{[^}]*\}(\{[^}]*\})?|\\end\{[^}]*\}", "", t).replace("\\\\", "; ").replace("&", " ")
     for _ in range(6):
@@ -147,6 +150,26 @@ def glossary_rows(path, maxpage, book="Лат"):
         if not line.startswith("|") or len(c) < 5 or c[0].startswith(("термин", "---", ":--")) or set(c[0]) <= set("-: "): continue
         pg = [int(x) for m in re.finditer(book + r"\s*([0-9][0-9,\s;–\-]*)", c[3]) for x in re.findall(r"\d+", m.group(1))]
         if pg and min(pg) <= maxpage: rows.append((c[0], gloss_clean(c[2]), c[3], min(pg)))
+    return sorted(rows, key=lambda r: (r[3], r[0].lower()))
+
+
+def layer_terms(ch, ids):
+    """Запасной словарь раздела: термины terms_introduced узлов из build/<ch>/org/layer.json; определение = утверждение автора
+    с этим термином (страница PDF), иначе главная мысль узла с пометкой «пересказ модели». Ничего не добавляет сверх слоя."""
+    f = ROOT / "build" / ch / "org" / "layer.json"
+    if not f.exists(): return []
+    rows, seen = [], set()
+    for n in json.load(open(f)).get("nodes", []):
+        if n.get("id") not in ids: continue
+        for term in n.get("terms_introduced") or []:
+            key = str(term).strip().lower()
+            if not key or key in seen: continue
+            stem = key[:max(4, len(key) - 2)]
+            c = next((c for c in n.get("claims", []) if c.get("author") == "автор" and stem in c.get("text", "").lower()), None)
+            if c: d, pg = c["text"], c.get("page")
+            else: d, pg = ((n.get("layers") or {}).get("main") or {}).get("text", "") + " (пересказ модели)", (n.get("pages") or [None])[0]
+            if not d.strip(" ()пересказмодели"): continue
+            seen.add(key); rows.append((str(term).strip(), gloss_clean(d), f"стр. {pg}" if pg else "", pg or 0))
     return sorted(rows, key=lambda r: (r[3], r[0].lower()))
 
 
@@ -430,12 +453,16 @@ class Build:
             (", ".join(f'<a href="#/step/{esc(l["to"])}">{sh[l["to"]]["num"]}</a>' for l in n["links"] if l["type"] == "предпосылка") or "ничего в разделе") +
             (" · примеры: " + ", ".join(f'<a href="#/step/{esc(l["to"])}">{sh[l["to"]]["num"]}</a>' for l in n["links"] if l["type"] == "пример") if any(l["type"] == "пример" for l in n["links"]) else "") + "</li>" for n in order) + "</ul>"
         maxp = max(c["page"] for n in s.nodes for c in n["claims"])
-        gl = glossary_rows(ROOT / cfg["book"].get("glossary", f"domain-pack/{os.environ.get('DOMAIN', 'geology')}/glossary.md"), maxp)
+        tag = cfg["book"].get("glossary_tag")  # метка книги в столбце страниц доменного глоссария («Лат»); без неё глоссарий другой книги не подмешиваем
+        gl = glossary_rows(ROOT / cfg["book"].get("glossary", f"domain-pack/{os.environ.get('DOMAIN', 'geology')}/glossary.md"), maxp, tag) if tag else []
+        from_layer = not gl
+        if not gl: gl = layer_terms(s.chapter.split(".")[0], {n["id"] for n in s.nodes})  # в доменном глоссарии нет этой книги: словарь из terms_introduced слоя
         if gl:
-            glh = ("<p class='meta'>Термины и обозначения книги, определённые до конца этого раздела (по глоссарию доменного пакета; определения по книге, стр. = PDF-страница). "
+            glh = (("<p class='meta'>Термины, введённые в шагах этого раздела (из учебного слоя; рядом утверждение автора с этим термином, стр. = PDF-страница; без утверждения — пересказ модели). " if from_layer else
+                    "<p class='meta'>Термины и обозначения книги, определённые до конца этого раздела (по глоссарию доменного пакета; определения по книге, стр. = PDF-страница). ") + (
                    f"Терминов: {len(gl)}.</p><p><label>Поиск: <input id='gsearch' type='search' autocomplete='off' aria-label='Поиск по словарю'></label></p>"
-                   "<div class='tw' tabindex='0' role='region' aria-label='Словарь, прокрутка'><table><thead><tr><th scope='col'>Термин</th><th scope='col'>Определение по книге</th><th scope='col'>Стр.</th></tr></thead><tbody>"
-                   + "".join(f"<tr><td>{esc(tex_inline(a))}</td><td>{esc(tex_inline(b))}</td><td>{esc(c)}</td></tr>" for a, b, c, _ in gl) + "</tbody></table></div>")
+                   "<div class='tw' tabindex='0' role='region' aria-label='Словарь, прокрутка'><table><thead><tr><th scope='col'>Термин</th><th scope='col'>" + ("Утверждение книги с термином" if from_layer else "Определение по книге") + "</th><th scope='col'>Стр.</th></tr></thead><tbody>"
+                   + "".join(f"<tr><td>{esc(tex_inline(a))}</td><td>{esc(tex_inline(b))}</td><td>{esc(c)}</td></tr>" for a, b, c, _ in gl) + "</tbody></table></div>"))
         else:
             glh = "<p class='meta'>Словарь для этого раздела не собран.</p>"
         data = {"id": s.chapter, "steps": meta, "parts": [p["title"] for p in cfg["parts"]], "ev": s.EV, "tasks": tasks, "dstep": s.dcalc}
@@ -517,6 +544,10 @@ class Build:
             if ans and len(ans) > 3 and t["type"] in ("single", "blank") and nrm(ans) in nrm(t["q"]): ok = False
             if not ok: s.warn.append(f"ЗАДАНИЕ {t['id']}: ответ не найден в {key}"); s.dropped = getattr(s, "dropped", 0) + 1
             if ok or not s.cfg.get("drop_bad"): out.append(dict(t, node=nid, claim=key))
+        import hashlib  # позиция верного варианта не должна быть подсказкой: детерминированное перемешивание (seed = id задания)
+        for t in out:
+            if t.get("type") in ("single", "multi") and t.get("options"):
+                t["options"] = sorted(t["options"], key=lambda o: hashlib.sha1(f"{t.get('id')}|{o}".encode()).hexdigest())
         return out
 
 
