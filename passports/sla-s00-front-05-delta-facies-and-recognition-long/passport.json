@@ -1,0 +1,552 @@
+{
+ "video_id": "sla-s00-front-05-delta-facies-and-recognition-long",
+ "node_id": "sla.s00-front.05-delta-facies-and-recognition",
+ "node_card": {
+  "id": "sla.s00-front.05-delta-facies-and-recognition",
+  "title": "Фации речной дельты и их узнавание по керну и каротажу",
+  "section": "9.4.1 Processes and Deposits",
+  "pages": [
+   411,
+   413,
+   414,
+   415
+  ],
+  "difficulty": {
+   "primary": "Р",
+   "secondary": "И"
+  },
+  "route": {
+   "format": "разбор 16:9",
+   "why": "Тип Р (распознавание): признаки одной среды видны на нескольких масштабах и в нескольких источниках (обнажение, керн, каротаж), нужны синхронные виды: профиль бара рядом с признаком от оси канала, наблюдение рядом с выводом. Для шортса слишком много шагов (3 признака, 2 фации, контрпример, честность об источнике). Вторичная трудность И: каротаж — косвенный сигнал, вывод «фация» отделён стрелкой."
+  },
+  "claims_used": [
+   "c1",
+   "c2",
+   "c3",
+   "c4",
+   "c5",
+   "c7",
+   "c8",
+   "c9"
+  ],
+  "misconception_countered": "гипотеза узла «вся дельта — коллектор» (по книге: заливы, болота, лагуны дают сланцевые барьеры); не закрепляется misc.log_is_rock (core): кривая каротажа названа наблюдением, фация — выводом",
+  "duration_s": 116.7
+ },
+ "script": [
+  {
+   "t_start": 0.0,
+   "t_end": 2.6,
+   "text": "Де́льта реки́ — э́то спло́шной песо́к?",
+   "claim_id": null,
+   "is_analogy": false,
+   "on_screen": "Дельта — сплошной песок?"
+  },
+  {
+   "t_start": 3.0,
+   "t_end": 7.4,
+   "text": "Кни́га пока́зывает схе́му совреме́нной де́льты Миссиси́пи — ти́па «пти́чья ла́па».",
+   "claim_id": "c5",
+   "is_analogy": false,
+   "on_screen": "Дельта Миссисипи: «птичья лапа»"
+  },
+  {
+   "t_start": 7.7,
+   "t_end": 10.3,
+   "text": "Скважи́на прошла́ сквозь таку́ю де́льту.",
+   "claim_id": null,
+   "is_analogy": false,
+   "on_screen": "Скважина проходит дельту"
+  },
+  {
+   "t_start": 10.7,
+   "t_end": 13.7,
+   "text": "Что из э́того да́ст песча́ный колле́ктор?",
+   "claim_id": null,
+   "is_analogy": false,
+   "on_screen": "Что даст песчаный коллектор?"
+  },
+  {
+   "t_start": 15.7,
+   "t_end": 20.1,
+   "text": "Песча́ные коллекто́рные фа́ции — отложе́ния распредели́тельных кана́лов и устьевы́х баро́в.",
+   "claim_id": "c1",
+   "is_analogy": false,
+   "on_screen": "Песок: каналы и устьевые бары"
+  },
+  {
+   "t_start": 20.4,
+   "t_end": 24.3,
+   "text": "Устьево́й бар — песча́ное те́ло; его́ профи́ль покажу́ ни́же.",
+   "claim_id": "c7",
+   "is_analogy": false,
+   "on_screen": "Устьевой бар — песчаное тело"
+  },
+  {
+   "t_start": 24.6,
+   "t_end": 28.1,
+   "text": "Межрусло́вые зали́вы, боло́та и лагу́ны разделя́ют песча́ные фа́ции.",
+   "claim_id": "c2",
+   "is_analogy": false,
+   "on_screen": "Межрусловые заливы, болота, лагуны разделяют песок"
+  },
+  {
+   "t_start": 28.4,
+   "t_end": 31.9,
+   "text": "Они́ даю́т сла́нцевые барье́ры в подзе́мных колле́кторах.",
+   "claim_id": "c2",
+   "is_analogy": false,
+   "on_screen": "Сланцевые барьеры"
+  },
+  {
+   "t_start": 32.2,
+   "t_end": 35.2,
+   "text": "Иногда́ они́ даю́т и поро́ды-исто́чники углеводоро́дов.",
+   "claim_id": "c2",
+   "is_analogy": false,
+   "on_screen": "Иногда — породы-источники"
+  },
+  {
+   "t_start": 35.5,
+   "t_end": 39.9,
+   "text": "Зна́чит, де́льта — не спло́шной колле́ктор: песо́к разделён сла́нцевыми барье́рами.",
+   "claim_id": "c1+c2",
+   "is_analogy": false,
+   "on_screen": "Дельта — не сплошной коллектор"
+  },
+  {
+   "t_start": 40.2,
+   "t_end": 44.1,
+   "text": "В обнаже́нии фа́ции узнаю́т по соотноше́ниям ме́жду ни́ми.",
+   "claim_id": "c3",
+   "is_analogy": false,
+   "on_screen": "Обнажение: соотношения фаций"
+  },
+  {
+   "t_start": 44.4,
+   "t_end": 49.2,
+   "text": "И по огрубле́нию вверх: разме́р зёрен вверх по разре́зу растёт.",
+   "claim_id": "c3",
+   "is_analogy": false,
+   "on_screen": "Огрубление вверх"
+  },
+  {
+   "t_start": 49.5,
+   "t_end": 53.0,
+   "text": "К э́тому добавля́ется характе́рный набо́р осадо́чных те́кстур.",
+   "claim_id": "c3",
+   "is_analogy": false,
+   "on_screen": "Три признака в обнажении"
+  },
+  {
+   "t_start": 53.3,
+   "t_end": 57.7,
+   "text": "Профи́ль ба́ра чита́ем сни́зу вверх: я́русы — по рису́нку кни́ги.",
+   "claim_id": "c8",
+   "is_analogy": false,
+   "on_screen": "Профиль бара: снизу вверх"
+  },
+  {
+   "t_start": 58.0,
+   "t_end": 62.4,
+   "text": "Высоты́ я́русов и цвета́ усло́вны: то́лщин кни́га не даёт.",
+   "claim_id": "c8",
+   "is_analogy": false,
+   "on_screen": "Высоты и цвета условны"
+  },
+  {
+   "t_start": 62.7,
+   "t_end": 68.0,
+   "text": "В не́драх те же при́знаки ви́дны в ке́рне и на карота́же.",
+   "claim_id": "c4",
+   "is_analogy": false,
+   "on_screen": "В недрах: керн и каротаж"
+  },
+  {
+   "t_start": 68.3,
+   "t_end": 73.6,
+   "text": "Сюда́ вхо́дит карота́жный о́тклик, кото́рый утонча́ется и мельча́ет при удале́нии от оси́ кана́ла.",
+   "claim_id": "c4",
+   "is_analogy": false,
+   "on_screen": "Отклик утончается от оси канала"
+  },
+  {
+   "t_start": 73.9,
+   "t_end": 78.7,
+   "text": "На одно́м рису́нке кни́ги — и профи́ль ба́ра, и разре́зы кана́лов.",
+   "claim_id": "c9",
+   "is_analogy": false,
+   "on_screen": "Рис. 9.15: бар и каналы"
+  },
+  {
+   "t_start": 79.0,
+   "t_end": 83.4,
+   "text": "Отку́да дове́рие? Профи́ли карота́жа на рису́нке — по да́нным сква́жин.",
+   "claim_id": "c9",
+   "is_analogy": false,
+   "on_screen": "Профили — по данным скважин"
+  },
+  {
+   "t_start": 83.7,
+   "t_end": 87.7,
+   "text": "Э́то дельто́вая систе́ма Хо́лли-Спри́нгс: Уилко́кс, эоце́н, се́вер бассе́йна Галф-Кост.",
+   "claim_id": "c9",
+   "is_analogy": false,
+   "on_screen": "Холли-Спрингс, Уилкокс, эоцен"
+  },
+  {
+   "t_start": 88.0,
+   "t_end": 91.5,
+   "text": "Калибро́вку по ке́рну отры́вок кни́ги не опи́сывает.",
+   "claim_id": null,
+   "is_analogy": false,
+   "on_screen": "Калибровка: в отрывке нет"
+  },
+  {
+   "t_start": 91.8,
+   "t_end": 95.3,
+   "text": "Наблюде́ние: при́знаки в ке́рне и на карота́же.",
+   "claim_id": "c4",
+   "is_analogy": false,
+   "on_screen": "Наблюдение: керн и каротаж"
+  },
+  {
+   "t_start": 95.6,
+   "t_end": 100.0,
+   "text": "Вы́вод: фа́ция; песча́ная фа́ция — потенциа́льный колле́ктор, сла́нцевая — барье́р.",
+   "claim_id": "c1+c2",
+   "is_analogy": false,
+   "on_screen": "Фация → потенциальный коллектор / барьер"
+  },
+  {
+   "t_start": 100.3,
+   "t_end": 105.1,
+   "text": "Анало́гия: в ба́зе да́нных у интерва́ла скважи́ны есть по́ле «фа́ция».",
+   "claim_id": null,
+   "is_analogy": true,
+   "on_screen": "Аналогия: поле «фация»"
+  },
+  {
+   "t_start": 105.4,
+   "t_end": 108.9,
+   "text": "Но ме́тка в табли́це — не сама́ поро́да.",
+   "claim_id": null,
+   "is_analogy": true,
+   "on_screen": "Метка — не сама порода"
+  },
+  {
+   "t_start": 109.2,
+   "t_end": 112.7,
+   "text": "Как автоматиче́ски найти́ на карота́же огрубле́ние вверх?",
+   "claim_id": null,
+   "is_analogy": false,
+   "on_screen": "Как найти огрубление автоматически?"
+  }
+ ],
+ "sources": [
+  {
+   "claim_id": "c1",
+   "page_or_dataset": "slatt.pdf PDF-стр. 411 (печ. 410), скан сверен",
+   "quote": "Sandy reservoir facies are deposits of distributary channels and distributary mouth-bars."
+  },
+  {
+   "claim_id": "c2",
+   "page_or_dataset": "slatt.pdf PDF-стр. 411 (печ. 410), скан сверен",
+   "quote": "Interdistributary bays, marshes, and lagoons separate sandy facies and provide shale barriers in subsurface reservoirs, and sometimes, they provide hydrocarbon source rocks."
+  },
+  {
+   "claim_id": "c3",
+   "page_or_dataset": "slatt.pdf PDF-стр. 413 (печ. 412), скан сверен",
+   "quote": "facies can be recognized in outcrop by facies relationships and by a distinctive coarsening-upward grain size with a characteristic assemblage of sedimentary structures"
+  },
+  {
+   "claim_id": "c4",
+   "page_or_dataset": "slatt.pdf PDF-стр. 413 (печ. 412), скан сверен",
+   "quote": "In the subsurface, these same features can be identified in cores and on well logs, including a lateral thinning and fining log response away from the channel axis (Fig. 9.15)."
+  },
+  {
+   "claim_id": "c5",
+   "page_or_dataset": "slatt.pdf PDF-стр. 414 (рис. 9.14), скан сверен",
+   "quote": "Schematic illustration of the distribution of facies and environments in the modern Mississippi bird-foot delta."
+  },
+  {
+   "claim_id": "c7",
+   "page_or_dataset": "slatt.pdf PDF-стр. 415 (рис. 9.15 c), скан сверен",
+   "quote": "Generalized vertical profile through a channel-mouth-bar sand body."
+  },
+  {
+   "claim_id": "c8",
+   "page_or_dataset": "slatt.pdf PDF-стр. 415, рис. 9.15 панель (c), скан сверен на 300 dpi (в слое c8 была только модельная расшифровка)",
+   "quote": "подписи панели снизу вверх: Prodelta; Frontal splays – «turbidites,» slumps; Proximal mouth bar – troughs, deformed bedding; Bar crest – planar laminations; Subaqueous levee – ripple and climbing ripple laminations; Delta plan"
+  },
+  {
+   "claim_id": "c9",
+   "page_or_dataset": "slatt.pdf PDF-стр. 415 (подпись рис. 9.15 b), скан сверен",
+   "quote": "(b) Schematic facies cross-sections of a progradational channel mouth bar and distributary-channel-fill sand bodies of an elongate, fluvially dominated delta lobe. Well log profiles are from borehole data from the Wilcox (Eocene) Holly Springs delta system of the northern Gulf Coast Basin."
+  }
+ ],
+ "scene_spec": "passports/sla-s00-front-05-delta-facies-and-recognition-long/scene_spec.json",
+ "frames": [
+  {
+   "t": 0.0,
+   "class": "D",
+   "label": "схема",
+   "t_end": 3.0
+  },
+  {
+   "t": 3.0,
+   "class": "A",
+   "label": "схема",
+   "t_end": 7.7
+  },
+  {
+   "t": 7.7,
+   "class": "D",
+   "label": "схема",
+   "t_end": 10.7
+  },
+  {
+   "t": 10.7,
+   "class": "A",
+   "label": "схема",
+   "t_end": 15.7
+  },
+  {
+   "t": 15.7,
+   "class": "A",
+   "label": "схема",
+   "t_end": 20.4
+  },
+  {
+   "t": 20.4,
+   "class": "A",
+   "label": "схема",
+   "t_end": 24.6
+  },
+  {
+   "t": 24.6,
+   "class": "A",
+   "label": "схема",
+   "t_end": 28.4
+  },
+  {
+   "t": 28.4,
+   "class": "A",
+   "label": "схема",
+   "t_end": 32.2
+  },
+  {
+   "t": 32.2,
+   "class": "A",
+   "label": "схема",
+   "t_end": 35.5
+  },
+  {
+   "t": 35.5,
+   "class": "A",
+   "label": "схема",
+   "t_end": 40.2
+  },
+  {
+   "t": 40.2,
+   "class": "A",
+   "label": "схема",
+   "t_end": 44.4
+  },
+  {
+   "t": 44.4,
+   "class": "A",
+   "label": "схема",
+   "t_end": 49.5
+  },
+  {
+   "t": 49.5,
+   "class": "A",
+   "label": "схема",
+   "t_end": 53.3
+  },
+  {
+   "t": 53.3,
+   "class": "A",
+   "label": "схема",
+   "t_end": 58.0
+  },
+  {
+   "t": 58.0,
+   "class": "A",
+   "label": "схема",
+   "t_end": 62.7
+  },
+  {
+   "t": 62.7,
+   "class": "A",
+   "label": "схема",
+   "t_end": 68.3
+  },
+  {
+   "t": 68.3,
+   "class": "A",
+   "label": "схема",
+   "t_end": 73.9
+  },
+  {
+   "t": 73.9,
+   "class": "A",
+   "label": "схема",
+   "t_end": 79.0
+  },
+  {
+   "t": 79.0,
+   "class": "A",
+   "label": "схема",
+   "t_end": 83.7
+  },
+  {
+   "t": 83.7,
+   "class": "A",
+   "label": "схема",
+   "t_end": 88.0
+  },
+  {
+   "t": 88.0,
+   "class": "A",
+   "label": "схема",
+   "t_end": 91.8
+  },
+  {
+   "t": 91.8,
+   "class": "A",
+   "label": "схема",
+   "t_end": 95.6
+  },
+  {
+   "t": 95.6,
+   "class": "A",
+   "label": "схема",
+   "t_end": 100.3
+  },
+  {
+   "t": 100.3,
+   "class": "A",
+   "label": "схема",
+   "t_end": 105.4
+  },
+  {
+   "t": 105.4,
+   "class": "A",
+   "label": "схема",
+   "t_end": 109.2
+  },
+  {
+   "t": 109.2,
+   "class": "D",
+   "label": "схема",
+   "t_end": 116.7
+  }
+ ],
+ "exaggerations": [
+  "Колонка профиля бара: высоты ярусов одинаковы и цвета условны; толщин в книге нет (плашка «не в масштабе» на кадрах колонки)",
+  "Стрелка тренда «огрубление вверх» на колонке рис. 9.15 c не рисуется: на рисунке книги её нет (там стрелка «PRESERVED»); тренд — только по тексту стр. 412, плашка на кадрах",
+  "Карточки фаций (цвета песок/сланец) условны, расположения на дельте не показывают",
+  "Блок-диаграмма рис. 9.14 и разрезы рис. 9.15 (b) не воспроизводятся: названо только содержание подписей; ни одного числа книги в кадрах нет",
+  "Подпись верхнего яруса «Delta plan» оставлена как в книге; «plain» не домысливается",
+  "Поле «фация» в базе данных — аналогия, не утверждение книги",
+  "Пласта в истинном масштабе в ролике нет: книга не даёт толщин и вертикального преувеличения",
+  "Утонение/измельчение отклика от оси канала: книга ссылается на рис. 9.15 без указания панели; на кадре панель не называется"
+ ],
+ "prediction_question": "Скважина прошла сквозь дельту: какие из сред (распределительные каналы, устьевые бары, межрусловые заливы, болота, лагуны) дадут песчаный коллектор? Пауза 2,0 с, ответа на экране и в голосе до её конца нет.",
+ "transfer_question": "Как автоматически найти на каротаже огрубление вверх?",
+ "data_it_bridge": "Данные: керн и каротаж — наблюдение; «фация» — интерпретация интервала, её ставит специалист (стрелка «сигнал → вывод»). ИТ: фация — поле в таблице интервалов скважины (аналогия узла; ломается там, где метка принимается за саму породу, и в голосе названа границей аналогии). Следующий шаг автоматизации: распознать огрубление вверх на кривой и выдать кандидата фации с флагом «интерпретация, нужна проверка по керну»; критерий и порог книга не даёт.",
+ "physics_checklist": [
+  {
+   "item": "pc.layers_order",
+   "answer": "да",
+   "note": "колонка бара снизу вверх: продельта внизу, Delta plan вверху, порядок по подписям рис. 9.15 c, одинаков во всех кадрах"
+  },
+  {
+   "item": "pc.signal_vs_property",
+   "answer": "да",
+   "note": "кадры obs_to_conclusion, observation: наблюдение отделено от вывода стрелкой"
+  },
+  {
+   "item": "pc.applicability",
+   "answer": "да",
+   "note": "контрпример not_solid_reservoir: не вся дельта коллектор; рис. 9.15 c — про бар, признак от оси канала — про канал"
+  },
+  {
+   "item": "pc.exaggeration_named",
+   "answer": "да",
+   "note": "список exaggerations, плашки на кадрах"
+  },
+  {
+   "item": "pc.plausible_numbers",
+   "answer": "н/п",
+   "note": "числа книги в кадрах не используются (только номера рисунков)"
+  },
+  {
+   "item": "pc.label_matches",
+   "answer": "да",
+   "note": "все кадры «схема»: построены из текста и подписей книги, данных и симуляции нет"
+  },
+  {
+   "item": "pc.views_consistent",
+   "answer": "да",
+   "note": "split-кадры показывают один и тот же порядок ярусов"
+  },
+  {
+   "item": "pc.causality",
+   "answer": "н/п",
+   "note": "причинных механизмов в ролик не вынесено: книга в отрывке причин образования фаций не даёт"
+  },
+  {
+   "item": "pc.tool_mechanism",
+   "answer": "н/п",
+   "note": "приборы каротажа не показаны"
+  },
+  {
+   "item": "pc.modern_or_historic",
+   "answer": "н/п",
+   "note": "оборудования в кадре нет"
+  },
+  {
+   "item": "pc.depth_down",
+   "answer": "да",
+   "note": "колонка: глубина (древнее) вниз; кривых с осью глубины нет"
+  },
+  {
+   "item": "pc.true_scale",
+   "answer": "нет",
+   "note": "кадра в истинном масштабе нет: книга не даёт толщин; запрос в ask-mentor.md п. 4"
+  }
+ ],
+ "audio_check": {
+  "words": 224,
+  "duration_s": 116.7,
+  "pause_before_answer_s": 2.0,
+  "max_phrase_words": 13,
+  "planned_wpm": "115 на всё видео, 130 в речи (224 слов, голос 103.3 с; пересчёт после реальной озвучки); при TTS ~105 слов/мин рендер ускорит до ≤1,2",
+  "stress_marks": "U+0301; новые слова внесены в domain-pack/geology/stress_dictionary.md (раздел «Ролик sla-s00-front-05-delta-facies-and-recognition-long»)",
+  "subtitles": "обязательны, дублируют voiceover.txt",
+  "to_check_by_ear": [
+   "фа́ции, фа́ция",
+   "распредели́тельных",
+   "устьевы́х, устьево́й",
+   "огрубле́нию",
+   "обнаже́нии",
+   "осадо́чных",
+   "карота́же, карота́жного, отклика́",
+   "ке́рне, ке́рна",
+   "Хо́лли-Спри́нгс",
+   "эоце́н",
+   "дельто́вая",
+   "боково́е",
+   "автоматиче́ски",
+   "межрусло́вые",
+   "Уилко́кс",
+   "бассе́йна, Галф-Кост",
+   "потенциа́льный",
+   "мельча́ет",
+   "удале́нии"
+  ],
+  "verifier": "не запускался автором; запуск отдельным конвейером"
+ }
+}
