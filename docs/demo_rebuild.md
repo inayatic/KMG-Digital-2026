@@ -104,6 +104,11 @@ py -I -X utf8 tools/build_course_all.py barenblatt_gl1
 
 **На защите:**
 1. В VS Code или Блокноте откройте `build\barenblatt_gl1\nodes.json`. Через Ctrl+F найдите `экспериментально в 1856`. В строке `"text": …` замените 1856 на 1857, строку `"quote": …` не трогайте. Сохраните файл (Ctrl+S).
+   Вместо редактора можно одной командой в PowerShell. Она меняет только поле `text`, а `quote` не трогает:
+```bash
+py -I -X utf8 -c "import json;f='build/barenblatt_gl1/nodes.json';ns=json.load(open(f,encoding='utf-8'));c=[c for n in ns if n['id']=='bar.s03.04-darcy-dimensional' for c in n['claims'] if c['id']=='s03.04.c5'][0];c['text']=c['text'].replace('1856','1857');json.dump(ns,open(f,'w',encoding='utf-8'),ensure_ascii=False,indent=1);print('OK, 1857 in text:','1857' in c['text'])"
+```
+   Ожидаемый вывод: `OK, 1857 in text: True`. Чтобы вернуть число, выполните ту же команду, поменяв местами `'1856','1857'` в `replace`. Проверено: файл становится побайтно прежним.
 2. В PowerShell:
 ```bash
 py -I -X utf8 tools/build_course_all.py barenblatt_gl1
