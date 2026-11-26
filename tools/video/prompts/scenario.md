@@ -3,7 +3,7 @@
 ## Входы
 - Слой: build/$CHAPTER/org/layer.json (найди узел NODE: claims с цитатами и страницами, layers, misconception, data_meaning, it_analogy, terms_introduced). Если org-слоя нет, build/$CHAPTER/nodes.json.
 - Сканы: PDF в chapters/$CHAPTER/*.pdf. Каждую цитату, число и подпись, которые идут в ролик, сверь по скану страницы глазами (`pdftoppm -r 150 -f P -l P -png <pdf> /tmp/…`, затем прочитай PNG). Источник правды только книга. Чего нет в книге, того нет в ролике (в том числе «почему» и причины, если книга их не даёт). Непроверенное и спорное пиши в ask-mentor.md как «не подтверждено» и НЕ включай в голос, подписи и кадры.
-- Доменный пакет: domain-pack/geology/ (styleguide.json, misconceptions.json (core = критическая ошибка), physics_checklist.json, stress_dictionary.md, pronunciation.md). Не вводи заблуждений из списка.
+- Доменный пакет: domain-pack/DOMAIN/ (styleguide.json, misconceptions.json (core = критическая ошибка), physics_checklist.json, stress_dictionary.md, pronunciation.md). Не вводи заблуждений из списка.
 - Образец полностью готового паспорта: passports/lat-s01-13-short/ (формат файлов и scene_spec). Образцы подачи: reference/organizers/06_подача_и_референсы/ (стиль, не темы).
 - Каталог шаблонов кадров: tools/video/views.md. Используй ТОЛЬКО перечисленные view_type и их params: кадр рисует код, генерации картинок нет. Нужного шаблона нет — ближайший + запись в ask-mentor.md «нужен новый шаблон».
 
@@ -14,7 +14,7 @@
    Хронометраж с учётом TTS ~105 слов/мин при скорости 1,0 (рендер ускорит до 1,2 при необходимости): short ≤ ~120 слов, long 160–300 слов.
 3. `passport.json` — по схеме reference/organizers/01_схемы/passport.schema.json (образец: passports/lat-s01-13-short/passport.json): карточка узла с маршрутизацией, script[] (t_start,t_end,text,claim_id,is_analogy,on_screen), sources[] с цитатами и страницами (по скану), frames[], exaggerations[], prediction_question, transfer_question, data_it_bridge, physics_checklist[] (по physics_checklist.json), audio_check. Проверь: `python3 -c "import json,jsonschema;jsonschema.validate(json.load(open('PASSPORT_DIR/passport.json')),json.load(open('reference/organizers/01_схемы/passport.schema.json')))"`.
 4. `script.md` (сценарий с таймкодами и таблицей кадров, пауза, честность в кадрах, мост «данные и ИТ»), `sources.md` (утверждение → цитата → страница → фразы озвучки), `ask-mentor.md` (спорное, не подтверждённое, ударения «проверить на слух», недостающие шаблоны).
-5. Новые термины с неочевидным ударением допиши в domain-pack/geology/stress_dictionary.md (новый раздел с заголовком «Ролик VIDEO_ID», статус «проверить на слух») и при необходимости pronunciation.md.
+5. Новые термины с неочевидным ударением допиши в domain-pack/DOMAIN/stress_dictionary.md (новый раздел с заголовком «Ролик VIDEO_ID», статус «проверить на слух») и при необходимости pronunciation.md.
 
 ## Запреты
 Не генерируй рисунки керна, шлифов, схем недр; не используй факты вне узла и книги; не называй файлы чьим-либо именем (поля имени пустые); не меняй чужие файлы (tools/*.py кроме tools/video/, tools/prompts/, Makefile, слой). Верификатор запускает конвейер отдельно, не запускай его сам.

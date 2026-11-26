@@ -1,6 +1,8 @@
 # make course CHAPTER=latyshova   — полный прогон; правка входа пересобирает только зависимое
 # STAGE_CMD можно подменить (например, на `echo` для сухого прогона).
 CHAPTER ?=
+# доменный пакет domain-pack/$(DOMAIN)/ (для другого домена: make course CHAPTER=<гл> DOMAIN=<домен>)
+export DOMAIN ?= geology
 STAGE_CMD ?= python3 tools/stage.py
 B = build/$(CHAPTER)
 SRC = $(wildcard chapters/$(CHAPTER)/*)
