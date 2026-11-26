@@ -26,116 +26,116 @@
    "c6"
   ],
   "misconception_countered": "в списке домена нет; слоевая: «любой признак однозначно означает проявление» (misconception слоя); не закрепляется",
-  "duration_s": 73.7
+  "duration_s": 73.624
  },
  "script": [
   {
-   "t_start": 0.0,
-   "t_end": 4.9,
+   "t_start": 0.12,
+   "t_end": 4.34,
    "text": "Во́семь призна́ков прито́ка флюи́да: одина́ково ли они́ зна́чимы?",
    "claim_id": "c2",
    "is_analogy": false,
    "on_screen": "Восемь признаков притока"
   },
   {
-   "t_start": 4.9,
-   "t_end": 9.8,
+   "t_start": 4.86,
+   "t_end": 8.46,
    "text": "Прито́к меня́ет пото́к раство́ра и его́ сво́йства на вы́ходе.",
    "claim_id": "c1",
    "is_analogy": false,
    "on_screen": "Приток → сигнал на поверхности"
   },
   {
-   "t_start": 9.8,
-   "t_end": 15.2,
+   "t_start": 8.96,
+   "t_end": 15.4,
    "text": "Нет: зна́чимость зави́сит от информати́вности, вре́мени поступле́ния и интенси́вности прито́ка.",
    "claim_id": "c2",
    "is_analogy": false,
    "on_screen": "Значимость признаков разная"
   },
   {
-   "t_start": 15.2,
-   "t_end": 18.6,
+   "t_start": 15.88,
+   "t_end": 19.14,
    "text": "Пе́рвый: растёт объём раство́ра в ёмкостях.",
    "claim_id": "c3",
    "is_analogy": false,
    "on_screen": "1. Объём в ёмкостях растёт"
   },
   {
-   "t_start": 18.6,
-   "t_end": 23.0,
+   "t_start": 19.5,
+   "t_end": 23.84,
    "text": "Второ́й: растёт расхо́д на вы́ходе, пода́ча насо́сов неизме́нна.",
    "claim_id": "c3",
    "is_analogy": false,
    "on_screen": "2. Расход на выходе растёт"
   },
   {
-   "t_start": 23.0,
-   "t_end": 27.4,
+   "t_start": 24.4,
+   "t_end": 29.14,
    "text": "Тре́тий: при подъёме колонны недо́лив — доли́вают ме́ньше расчётного.",
    "claim_id": "c4",
    "is_analogy": false,
    "on_screen": "3. Подъём: недолив"
   },
   {
-   "t_start": 27.4,
-   "t_end": 32.3,
+   "t_start": 29.66,
+   "t_end": 34.36,
    "text": "Четвёртый: при спу́ске в приёмной ёмкости раство́ра бо́льше расчётного.",
    "claim_id": "c4",
    "is_analogy": false,
    "on_screen": "4. Спуск: больше в приёмной ёмкости"
   },
   {
-   "t_start": 32.3,
-   "t_end": 35.3,
+   "t_start": 34.92,
+   "t_end": 37.82,
    "text": "Пя́тый: растёт газосодержа́ние раство́ра.",
    "claim_id": "c5",
    "is_analogy": false,
    "on_screen": "5. Газосодержание растёт"
   },
   {
-   "t_start": 35.3,
-   "t_end": 40.2,
+   "t_start": 38.3,
+   "t_end": 43.34,
    "text": "Ещё три: механи́ческая ско́рость, сво́йства раство́ра, давле́ние на насо́сах.",
    "claim_id": "c5",
    "is_analogy": false,
    "on_screen": "Ещё три — все восемь"
   },
   {
-   "t_start": 40.2,
-   "t_end": 45.6,
+   "t_start": 43.82,
+   "t_end": 48.1,
    "text": "Каки́е призна́ки а́втор огова́ривает как возмо́жные и по други́м причи́нам?",
    "claim_id": null,
    "is_analogy": false,
    "on_screen": "Какие признаки автор оговаривает?"
   },
   {
-   "t_start": 47.6,
-   "t_end": 53.5,
+   "t_start": 50.47,
+   "t_end": 57.39,
    "text": "А́втор огова́ривает после́дние три: механи́ческая ско́рость, сво́йства раство́ра, давле́ние на насо́сах.",
    "claim_id": "c6",
    "is_analogy": false,
    "on_screen": "Автор оговаривает последние три"
   },
   {
-   "t_start": 53.5,
-   "t_end": 59.4,
+   "t_start": 57.93,
+   "t_end": 62.31,
    "text": "Они́ возмо́жны не то́лько при прито́ке, но и по други́м ко́свенным причи́нам.",
    "claim_id": "c6",
    "is_analogy": false,
    "on_screen": "Один сигнал — разные причины"
   },
   {
-   "t_start": 59.4,
-   "t_end": 64.3,
+   "t_start": 62.93,
+   "t_end": 66.449,
    "text": "Зна́чит, оди́н тако́й сигна́л мо́жет име́ть и другу́ю причи́ну.",
    "claim_id": "c6",
    "is_analogy": false,
    "on_screen": "Причины бывают и другие"
   },
   {
-   "t_start": 64.3,
-   "t_end": 69.7,
+   "t_start": 66.97,
+   "t_end": 71.77,
    "text": "Как автомати́чески отлича́ть прито́к от други́х причи́н по таки́м сигна́лам?",
    "claim_id": null,
    "is_analogy": false,
@@ -182,72 +182,72 @@
    "label": "схема"
   },
   {
-   "t": 4.9,
+   "t": 4.81,
    "class": "A",
    "label": "схема"
   },
   {
-   "t": 9.8,
+   "t": 8.91,
    "class": "A",
    "label": "схема"
   },
   {
-   "t": 15.2,
+   "t": 15.83,
    "class": "A",
    "label": "схема"
   },
   {
-   "t": 18.6,
+   "t": 19.45,
    "class": "A",
    "label": "схема"
   },
   {
-   "t": 23.0,
+   "t": 24.35,
    "class": "A",
    "label": "схема"
   },
   {
-   "t": 27.4,
+   "t": 29.61,
    "class": "A",
    "label": "схема"
   },
   {
-   "t": 32.3,
+   "t": 34.87,
    "class": "A",
    "label": "схема"
   },
   {
-   "t": 35.3,
+   "t": 38.25,
    "class": "A",
    "label": "схема"
   },
   {
-   "t": 40.2,
+   "t": 43.77,
    "class": "A",
    "label": "схема"
   },
   {
-   "t": 45.6,
+   "t": 48.39,
    "class": "A",
    "label": "схема"
   },
   {
-   "t": 47.6,
+   "t": 50.39,
    "class": "A",
    "label": "схема"
   },
   {
-   "t": 53.5,
+   "t": 57.88,
    "class": "A",
    "label": "схема"
   },
   {
-   "t": 59.4,
+   "t": 62.88,
    "class": "A",
    "label": "схема"
   },
   {
-   "t": 64.3,
+   "t": 66.92,
    "class": "A",
    "label": "схема"
   }
@@ -541,8 +541,8 @@
  ],
  "audio_check": {
   "words": 123,
-  "speech_seconds": 61.5,
-  "duration_s": 73.7,
+  "speech_seconds": 63.1,
+  "duration_s": 73.624,
   "wpm_total": 100,
   "pause_before_answer_s": 2.0,
   "max_phrase_words": 11,
@@ -570,7 +570,26 @@
    "причи́ну",
    "механи́ческая"
   ],
-  "estimate_note": "расчёт: 0,5 с на слово + 0,4 с, минимум 3,0 с на фразу; фактическое время — после TTS"
+  "estimate_note": "расчёт: 0,5 с на слово + 0,4 с, минимум 3,0 с на фразу; фактическое время — после TTS",
+  "tts": {
+   "service": "ElevenLabs",
+   "model": "eleven_multilingual_v2",
+   "voice": "Xb7hH8MSUJpSbSDYk0k2",
+   "speed": 1.05,
+   "stress_marks_sent": false
+  },
+  "stress_marks_note": "знаки ударения в voiceover.txt оставлены для чтения человеком; в синтез не отправлялись (по WER различия нет, на слух не проверено)",
+  "wer_tts_vs_text": 0.0,
+  "loudness_lufs": -16.1,
+  "true_peak_dbfs": -1.4,
+  "wer_final_track": 0.0,
+  "sync_max_s": 0.06,
+  "checks_pass": {
+   "loudness_-16±1": true,
+   "wer<=0.10": true,
+   "sync<=0.5s": true,
+   "duration_ok": true
+  }
  },
- "video_file": "out/video/bas-s00-front-02-signs-overview-short/bas-s00-front-02-signs-overview-short.mp4"
+ "video_file": "/home/user/KMG-Digital-2026/out/video/bas-s00-front-02-signs-overview-short/bas-s00-front-02-signs-overview-short.mp4"
 }
