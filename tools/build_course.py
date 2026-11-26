@@ -153,6 +153,26 @@ def glossary_rows(path, maxpage, book="Лат"):
     return sorted(rows, key=lambda r: (r[3], r[0].lower()))
 
 
+def layer_terms(ch, ids):
+    """Запасной словарь раздела: термины terms_introduced узлов из build/<ch>/org/layer.json; определение = утверждение автора
+    с этим термином (страница PDF), иначе главная мысль узла с пометкой «пересказ модели». Ничего не добавляет сверх слоя."""
+    f = ROOT / "build" / ch / "org" / "layer.json"
+    if not f.exists(): return []
+    rows, seen = [], set()
+    for n in json.load(open(f)).get("nodes", []):
+        if n.get("id") not in ids: continue
+        for term in n.get("terms_introduced") or []:
+            key = str(term).strip().lower()
+            if not key or key in seen: continue
+            stem = key[:max(4, len(key) - 2)]
+            c = next((c for c in n.get("claims", []) if c.get("author") == "автор" and stem in c.get("text", "").lower()), None)
+            if c: d, pg = c["text"], c.get("page")
+            else: d, pg = ((n.get("layers") or {}).get("main") or {}).get("text", "") + " (пересказ модели)", (n.get("pages") or [None])[0]
+            if not d.strip(" ()пересказмодели"): continue
+            seen.add(key); rows.append((str(term).strip(), gloss_clean(d), f"стр. {pg}" if pg else "", pg or 0))
+    return sorted(rows, key=lambda r: (r[3], r[0].lower()))
+
+
 class Build:
     def __init__(s, nodes, units, cfg, chapter):
         s.nodes, s.units, s.cfg, s.chapter = nodes, units, cfg, chapter
@@ -433,12 +453,16 @@ class Build:
             (", ".join(f'<a href="#/step/{esc(l["to"])}">{sh[l["to"]]["num"]}</a>' for l in n["links"] if l["type"] == "предпосылка") or "ничего в разделе") +
             (" · примеры: " + ", ".join(f'<a href="#/step/{esc(l["to"])}">{sh[l["to"]]["num"]}</a>' for l in n["links"] if l["type"] == "пример") if any(l["type"] == "пример" for l in n["links"]) else "") + "</li>" for n in order) + "</ul>"
         maxp = max(c["page"] for n in s.nodes for c in n["claims"])
-        gl = glossary_rows(ROOT / cfg["book"].get("glossary", f"domain-pack/{os.environ.get('DOMAIN', 'geology')}/glossary.md"), maxp)
+        tag = cfg["book"].get("glossary_tag")  # метка книги в столбце страниц доменного глоссария («Лат»); без неё глоссарий другой книги не подмешиваем
+        gl = glossary_rows(ROOT / cfg["book"].get("glossary", f"domain-pack/{os.environ.get('DOMAIN', 'geology')}/glossary.md"), maxp, tag) if tag else []
+        from_layer = not gl
+        if not gl: gl = layer_terms(s.chapter.split(".")[0], {n["id"] for n in s.nodes})  # в доменном глоссарии нет этой книги: словарь из terms_introduced слоя
         if gl:
-            glh = ("<p class='meta'>Термины и обозначения книги, определённые до конца этого раздела (по глоссарию доменного пакета; определения по книге, стр. = PDF-страница). "
+            glh = (("<p class='meta'>Термины, введённые в шагах этого раздела (из учебного слоя; рядом утверждение автора с этим термином, стр. = PDF-страница; без утверждения — пересказ модели). " if from_layer else
+                    "<p class='meta'>Термины и обозначения книги, определённые до конца этого раздела (по глоссарию доменного пакета; определения по книге, стр. = PDF-страница). ") + (
                    f"Терминов: {len(gl)}.</p><p><label>Поиск: <input id='gsearch' type='search' autocomplete='off' aria-label='Поиск по словарю'></label></p>"
-                   "<div class='tw' tabindex='0' role='region' aria-label='Словарь, прокрутка'><table><thead><tr><th scope='col'>Термин</th><th scope='col'>Определение по книге</th><th scope='col'>Стр.</th></tr></thead><tbody>"
-                   + "".join(f"<tr><td>{esc(tex_inline(a))}</td><td>{esc(tex_inline(b))}</td><td>{esc(c)}</td></tr>" for a, b, c, _ in gl) + "</tbody></table></div>")
+                   "<div class='tw' tabindex='0' role='region' aria-label='Словарь, прокрутка'><table><thead><tr><th scope='col'>Термин</th><th scope='col'>" + ("Утверждение книги с термином" if from_layer else "Определение по книге") + "</th><th scope='col'>Стр.</th></tr></thead><tbody>"
+                   + "".join(f"<tr><td>{esc(tex_inline(a))}</td><td>{esc(tex_inline(b))}</td><td>{esc(c)}</td></tr>" for a, b, c, _ in gl) + "</tbody></table></div>"))
         else:
             glh = "<p class='meta'>Словарь для этого раздела не собран.</p>"
         data = {"id": s.chapter, "steps": meta, "parts": [p["title"] for p in cfg["parts"]], "ev": s.EV, "tasks": tasks, "dstep": s.dcalc}
