@@ -1,0 +1,102 @@
+[
+ {
+  "node": "ven.ch_s00frontq.01-saline-mud-reformation",
+  "format": "карточки",
+  "why": "механизм сравнения до/после; мало визуального"
+ },
+ {
+  "node": "ven.ch_s00frontq.02-radioactive-bullets",
+  "format": "карточки",
+  "why": "короткий приём с одним признаком"
+ },
+ {
+  "node": "ven.ch_s00frontq.03-radiochemical-effect",
+  "format": "длинное видео",
+  "why": "невидимое становится видимым: радий во фронте воды и на цементе"
+ },
+ {
+  "node": "ven.ch_s00frontq.04-acoustic-dielectric",
+  "format": "текст",
+  "why": "набор условий и порогов частот"
+ },
+ {
+  "node": "ven.ch_s00frontq.05-neutron-inelastic-throttle",
+  "format": "карточки",
+  "why": "два способа с числами и ограничениями"
+ },
+ {
+  "node": "ven.ch_s00frontq.06-gas-contacts-neutron",
+  "format": "шортс",
+  "why": "контринтуитивно: газ повышает показания, но плотные породы тоже"
+ },
+ {
+  "node": "ven.ch_s00frontq.07-dense-vs-gas-two-probes",
+  "format": "интерактив",
+  "why": "сравнение двух зондов и двух замеров при подборе масштаба"
+ },
+ {
+  "node": "ven.ch_s00frontq.08-gas-contacts-pressure-limits",
+  "format": "интерактив",
+  "why": "влияние давления на плотность газа и аномалию"
+ },
+ {
+  "node": "ven.ch_s00frontq.09-other-methods-quantification",
+  "format": "текст",
+  "why": "перечень без нового механизма"
+ },
+ {
+  "node": "ven.ch_s00frontq.10-observation-wells-conditions",
+  "format": "карточки",
+  "why": "условия и время ожидания"
+ },
+ {
+  "node": "ven.ch_s00frontq.11-example-fig124-killed-vs-working",
+  "format": "практикум на данных",
+  "why": "сравнение двух диаграмм НГМ по глубине"
+ },
+ {
+  "node": "ven.ch_s00frontq.12-inflow-profile",
+  "format": "текст",
+  "why": "определения и цели"
+ },
+ {
+  "node": "ven.ch_s00frontq.13-integral-differential-debitogram",
+  "format": "интерактив",
+  "why": "интегральная ↔ дифференциальная кривая, cumsum/diff"
+ },
+ {
+  "node": "ven.ch_s00frontq.14-example-gazli-flowmeter",
+  "format": "практикум на данных",
+  "why": "чтение дебитограмм при разных режимах"
+ },
+ {
+  "node": "ven.ch_s00frontq.15-thermo-debitometer",
+  "format": "текст",
+  "why": "ограничения и градуировка"
+ },
+ {
+  "node": "ven.ch_s00frontq.16-thermo-forms-table16",
+  "format": "интерактив",
+  "why": "определение группы по соотношениям ΔT"
+ },
+ {
+  "node": "ven.ch_s00frontq.17-indicator-methods",
+  "format": "шортс",
+  "why": "метка в потоке: изменение во времени"
+ },
+ {
+  "node": "ven.ch_s00frontq.18-gas-thermometry-joule-thomson",
+  "format": "длинное видео",
+  "why": "причина и следствие: расширение газа → охлаждение"
+ },
+ {
+  "node": "ven.ch_s00frontq.19-gas-thermogram-flow-rates",
+  "format": "практикум на данных",
+  "why": "система уравнений по температурам и дебитам"
+ },
+ {
+  "node": "ven.ch_s00frontq.20-injection-well-thermometry",
+  "format": "длинное видео",
+  "why": "изменение температуры во времени после остановки"
+ }
+]

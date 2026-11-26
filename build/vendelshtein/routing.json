@@ -1,0 +1,1222 @@
+{
+ "ven.ch_s00fronta.01-geofizika-podschetnye-parametry": {
+  "format": "карточки",
+  "why": "Перечень параметров с оговорками — список для запоминания."
+ },
+ "ven.ch_s00fronta.02-geofizika-vs-kern": {
+  "format": "шортс",
+  "why": "Контринтуитивный тезис с оговорками: геофизика представительнее керна."
+ },
+ "ven.ch_s00fronta.03-rol-kerna": {
+  "format": "карточки",
+  "why": "Шесть условий — перечень."
+ },
+ "ven.ch_s00fronta.04-usloviya-gis-metodiki": {
+  "format": "шортс",
+  "why": "Причина-следствие: условия ГИС и модель определяют ошибку."
+ },
+ "ven.ch_s00fronta.05-avtory-istoriya": {
+  "format": "текст",
+  "why": "Историческая справка без механизма."
+ },
+ "ven.ch_s00fronta.06-effektivnaya-moschnost-zadacha": {
+  "format": "длинное видео",
+  "why": "Причинная цепочка от мощности до запасов, обзор плана главы."
+ },
+ "ven.ch_s00fronta.07-terrigennyj-razrez-priznaki": {
+  "format": "карточки",
+  "why": "Классификация признаков."
+ },
+ "ven.ch_s00fronta.08-glinistaya-korka": {
+  "format": "длинное видео",
+  "why": "Невидимое процесс фильтрации становится видимым; причина и следствие."
+ },
+ "ven.ch_s00fronta.09-mikrozondy-prirascheniya": {
+  "format": "интерактив",
+  "why": "Сравнение кривых микрозондов с переключением условий (корка, проницаемость)."
+ },
+ "ven.ch_s00fronta.10-radialnyj-gradient": {
+  "format": "длинное видео",
+  "why": "Невидимая радиальная структура пласта; три типа кривых."
+ },
+ "ven.ch_s00fronta.11-sopostavlenie-zondov": {
+  "format": "интерактив",
+  "why": "Кросс-плот ρ1–ρ2 с биссектрисой и областью неоднозначности."
+ },
+ "ven.ch_s00fronta.12-masshtab-i-etalonirovka": {
+  "format": "шортс",
+  "why": "Контринтуитивная ловушка: расхождение кривых может быть артефактом масштаба."
+ },
+ "ven.ch_s00fronta.13-povtornye-izmereniya": {
+  "format": "длинное видео",
+  "why": "Изменение во времени: зона проникновения формируется и расходятся кривые."
+ },
+ "ven.ch_s00fronta.14-kosvennye-kolichestvennye-kriterii": {
+  "format": "текст",
+  "why": "Определения и логика критерия."
+ },
+ "ven.ch_s00fronta.15-raschet-granichnogo-kpr": {
+  "format": "практикум на данных",
+  "why": "Расчёт по формулам с подстановкой чисел книги."
+ },
+ "ven.ch_s00fronta.16-granichnye-geofizicheskie-parametry": {
+  "format": "практикум на данных",
+  "why": "Построение регрессии и определение порога на кросс-плоте."
+ },
+ "ven.ch_s00frontb.01-pore-vs-clay-methods": {
+  "format": "карточки",
+  "why": "Типология «разрез → метод», нет динамики, подходит для сравнительной таблицы."
+ },
+ "ven.ch_s00frontb.02-sp-eta-gl": {
+  "format": "интерактив",
+  "why": "Сопоставление двух параметров с перемещаемой линией η_гл* делает невидимое разделение видимым."
+ },
+ "ven.ch_s00frontb.03-alpha-sp": {
+  "format": "интерактив",
+  "why": "Три формы кривой α_СП=f(η_гл) в зависимости от минерализации можно показать ползунком."
+ },
+ "ven.ch_s00frontb.04-sp-threshold-and-limits": {
+  "format": "практикум на данных",
+  "why": "Определение порога по пересечению распределений — расчёт на реальных данных опробования."
+ },
+ "ven.ch_s00frontb.05-gamma-method": {
+  "format": "длинное видео",
+  "why": "Контринтуитивно: низкоглинистый коллектор может быть радиоактивным; сравнение разных литотипов на одной шкале."
+ },
+ "ven.ch_s00frontb.06-complex-nmr-drilling": {
+  "format": "интерактив",
+  "why": "Три кривые U1–U3 по времени и порог помех — зависимость во времени."
+ },
+ "ven.ch_s00frontb.07-terrigenous-limits": {
+  "format": "карточки",
+  "why": "Справочная матрица «условие → какие методы работают»."
+ },
+ "ven.ch_s00frontb.08-carbonate-kn-limit": {
+  "format": "практикум на данных",
+  "why": "Регрессии K_ао–K_п и чтение порога — расчёт на данных керна."
+ },
+ "ven.ch_s00frontb.09-normalization": {
+  "format": "длинное видео",
+  "why": "Невидимое становится видимым: наложение двух кривых и расхождение как сигнал коллектора."
+ },
+ "ven.ch_s00frontb.10-clay-in-carbonates": {
+  "format": "шортс",
+  "why": "Контринтуитивное заблуждение с чётким опровержением."
+ },
+ "ven.ch_s00frontb.11-secondary-porosity": {
+  "format": "карточки",
+  "why": "Типология коллекторов, без динамики."
+ },
+ "ven.ch_s00frontb.12-fracture-signs": {
+  "format": "длинное видео",
+  "why": "Причина и следствие: каверны → расхождение пористостей, затухание, провалы инструмента."
+ },
+ "ven.ch_s00frontb.13-time-pressure-activators": {
+  "format": "длинное видео",
+  "why": "Изменение во времени: невидимое проникновение раствора проявляется между замерами."
+ },
+ "ven.ch_s00frontb.14-two-solutions-bk": {
+  "format": "практикум на данных",
+  "why": "Совмещение двух БК и расчёт K_пт — вычисление на данных."
+ },
+ "ven.ch_s00frontb.15-neutron-time-studies": {
+  "format": "карточки",
+  "why": "Числовые пороги концентраций и ограничения — справочная таблица."
+ },
+ "ven.ch_s00frontc.01-saturation-task": {
+  "format": "текст",
+  "why": "Короткая постановка без динамики и данных."
+ },
+ "ven.ch_s00frontc.02-resistivity-criteria": {
+  "format": "интерактив",
+  "why": "Причина и следствие: меняем глубину проникновения относительно глубины исследования и видим, когда ρп перестаёт быть ρп."
+ },
+ "ven.ch_s00frontc.03-critical-values": {
+  "format": "практикум на данных",
+  "why": "Построение двух распределений и порога пересечения на данных; видна роль перекрытия."
+ },
+ "ven.ch_s00frontc.04-crossplot-criteria": {
+  "format": "практикум на данных",
+  "why": "Кросс-плот с фоновой линией и отскоком — естественное упражнение на данных."
+ },
+ "ven.ch_s00frontc.05-repeat-resistivity": {
+  "format": "карточки",
+  "why": "Две короткие идеи, мало данных."
+ },
+ "ven.ch_s00frontc.06-neutron-timelapse-conditions": {
+  "format": "длинное видео",
+  "why": "Изменение во времени: расформирование зоны проникновения по сериям замеров."
+ },
+ "ven.ch_s00frontc.07-neutron-regression": {
+  "format": "практикум на данных",
+  "why": "Регрессия по неизменённым пластам и полоса ±2σ — задача на данных."
+ },
+ "ven.ch_s00frontc.08-inm-kv": {
+  "format": "интерактив",
+  "why": "Невидимое становится видимым: расхождение двух зондов как индикатор флюида."
+ },
+ "ven.ch_s00frontc.09-acoustic-direct": {
+  "format": "текст",
+  "why": "Перечень методов с условиями и ограничениями."
+ },
+ "ven.ch_s00frontc.10-effective-thickness": {
+  "format": "карточки",
+  "why": "Набор правил и палеток, мало динамики."
+ },
+ "ven.ch_s00frontc.11-vnk-transition-zone": {
+  "format": "длинное видео",
+  "why": "Скачок масштаба и невидимое: профиль насыщения с капиллярным переходом и ложный ВНК."
+ },
+ "ven.ch_s00frontc.12-neutron-vnk-gnk": {
+  "format": "практикум на данных",
+  "why": "Кривые распределения λ, пересечение F и 1−F, выбор λ* — работа с данными."
+ },
+ "ven.ch_s00frontc.13-neutron-corrections-gnk": {
+  "format": "практикум на данных",
+  "why": "Поправки и сопоставление λ с Kп на данных; наглядная двукратная диаграмма."
+ },
+ "ven.ch_s00frontd.01-neutron-gjk-correction": {
+  "format": "текст",
+  "why": "формулы I.10–I.12 и процедурные поправки без визуального процесса"
+ },
+ "ven.ch_s00frontd.02-porosity-types-definition": {
+  "format": "карточки",
+  "why": "определения трёх видов пористости и формула II.1"
+ },
+ "ven.ch_s00frontd.03-lab-porosity-kp-vs-kpo": {
+  "format": "шортс",
+  "why": "контринтуитивно: k_п > k_по объясняется недонасыщением образца, а не закрытыми порами"
+ },
+ "ven.ch_s00frontd.04-geophys-porosity-ways": {
+  "format": "карточки",
+  "why": "перечень методов и видов пористости, которые они дают"
+ },
+ "ven.ch_s00frontd.05-void-shape-components": {
+  "format": "карточки",
+  "why": "классификация пустот по форме и типу коллектора"
+ },
+ "ven.ch_s00frontd.06-effective-porosity": {
+  "format": "карточки",
+  "why": "определение и формула эффективной пористости"
+ },
+ "ven.ch_s00frontd.07-resistivity-porosity-parameter": {
+  "format": "интерактив",
+  "why": "P_п = a/k_п^m: слайдер m показывает рост наклона в двойном логарифмическом масштабе"
+ },
+ "ven.ch_s00frontd.08-clay-surface-conductivity-pi": {
+  "format": "интерактив",
+  "why": "П(ρ_ф) для разных α_сп: невидимая зависимость от минерализации становится видимой"
+ },
+ "ven.ch_s00frontd.09-clay-channel-resistivity": {
+  "format": "длинное видео",
+  "why": "причина и следствие: аномальный слой в канале, смена знака влияния около 0,4–0,6 Ом·м"
+ },
+ "ven.ch_s00frontd.10-thermobaric-conditions": {
+  "format": "шортс",
+  "why": "контринтуитивно: кривая образца под давлением уходит выше и круче"
+ },
+ "ven.ch_s00frontd.11-kp-from-resistivity-algorithm": {
+  "format": "текст",
+  "why": "последовательность из трёх операций и трёх вариантов ρ"
+ },
+ "ven.ch_s00frontd.12-choose-pp-kp-dependence": {
+  "format": "практикум на данных",
+  "why": "выбор зависимости, расчёт k_п по табл. 1 и поправке f на примерах"
+ },
+ "ven.ch_s00frontd.13-beyond-contour-overview": {
+  "format": "текст",
+  "why": "схема шагов I–II способа за контуром"
+ },
+ "ven.ch_s00frontd.14-brine-resistivity-from-chemistry": {
+  "format": "практикум на данных",
+  "why": "расчёт ρ_в по составу воды (пример 1) с формулой II.13"
+ },
+ "ven.ch_s00frontd.15-filtrate-resistivity-from-mud": {
+  "format": "текст",
+  "why": "чтение графиков и палеток для ρ_ф; визуального процесса нет"
+ },
+ "ven.ch_s00frontd.16-brine-resistivity-from-sp": {
+  "format": "практикум на данных",
+  "why": "решение (II.14)–(II.16), оценка E_sф по палеткам; ошибки занижения и завышения"
+ },
+ "ven.ch_s00frontd.17-beyond-contour-finish-errors": {
+  "format": "карточки",
+  "why": "перечень ошибок и их направления (завышение ρ_вп → занижение k_п)"
+ },
+ "ven.ch_s00frontd.18-washed-zone-method": {
+  "format": "длинное видео",
+  "why": "цепочка: промытая зона → ρ_пп → ρ_ф → P_п → k_п; допущения и условия"
+ },
+ "ven.ch_s00frontd.19-pi-by-palette-and-simplified": {
+  "format": "практикум на данных",
+  "why": "пример 2: пересчёт ρ_ф на 25 °C и снятие П с палетки"
+ },
+ "ven.ch_s00fronte.01-residual-oil-pno": {
+  "format": "карточки",
+  "why": "Тип П: набор условий и цифр (20—30%, 1,6—2), мало динамики."
+ },
+ "ven.ch_s00fronte.02-q-calibration-washed": {
+  "format": "интерактив",
+  "why": "Тип М: итерация (q→Pп→kп→q) наглядна как пошаговая процедура с ползунком q."
+ },
+ "ven.ch_s00fronte.03-invaded-zone-applicability": {
+  "format": "карточки",
+  "why": "Тип П: перечень условий применимости."
+ },
+ "ven.ch_s00fronte.04-rzp-measurement": {
+  "format": "карточки",
+  "why": "Тип Пр: перечень приёмов с условиями выбора."
+ },
+ "ven.ch_s00fronte.05-pn-from-rzp-formula": {
+  "format": "текст",
+  "why": "Тип Ф: формула с определением символов, нужна точная запись."
+ },
+ "ven.ch_s00fronte.06-mixture-factor-z": {
+  "format": "интерактив",
+  "why": "Тип Ф: зависимость ρпф от z и ρф/ρв удобно покрутить ползунками (аналог палетки)."
+ },
+ "ven.ch_s00fronte.07-z-vs-kno": {
+  "format": "шортс",
+  "why": "Контринтуитивность: две «доли воды» разные; короткий ролик с картинкой пор."
+ },
+ "ven.ch_s00fronte.08-zone-evolution": {
+  "format": "длинное видео",
+  "why": "Изменение во времени и невидимое видимым: радиальный профиль, рост и расформирование зоны."
+ },
+ "ven.ch_s00fronte.09-z-calibration-trap": {
+  "format": "шортс",
+  "why": "Контринтуитивность: «аккуратная» калибровка по воде не переносится."
+ },
+ "ven.ch_s00fronte.10-kno-z-vs-properties": {
+  "format": "карточки",
+  "why": "Тип В: сводка соотношений и диапазонов."
+ },
+ "ven.ch_s00fronte.11-q3-calibration": {
+  "format": "практикум на данных",
+  "why": "Тип М: калибровка по эталонам — удобная задача для расчёта на данных."
+ },
+ "ven.ch_s00fronte.12-example-3": {
+  "format": "практикум на данных",
+  "why": "Тип Пр: числа и шаги можно повторить в таблице расчётов."
+ },
+ "ven.ch_s00fronte.13-fracture-porosity-setup": {
+  "format": "длинное видео",
+  "why": "Невидимое становится видимым: схема пустот (поры, каверны, трещины) и путей тока."
+ },
+ "ven.ch_s00fronte.14-fracture-models-table": {
+  "format": "интерактив",
+  "why": "Тип Ф: варианты геометрии трещин и направление тока удобно показать интерактивной схемой."
+ },
+ "ven.ch_s00fronte.15-fracture-salt-mud": {
+  "format": "практикум на данных",
+  "why": "Тип М: расчётная цепочка с итерацией, можно повторить на данных."
+ },
+ "ven.ch_s00fronte.16-fracture-fresh-filtrate": {
+  "format": "длинное видео",
+  "why": "Причина и следствие: рост ρф стирает вклад трещин; удобно показать на семействах рис. 50."
+ },
+ "ven.ch_s00fronte.17-two-solutions": {
+  "format": "карточки",
+  "why": "Тип М: пара уравнений и три источника погрешности — карточками."
+ },
+ "ven.ch_s00fronte.18-vuggy-rock": {
+  "format": "интерактив",
+  "why": "Тип М: ползунки kп к и kп т на графике Pп(kп) показывают смещение кривых."
+ },
+ "ven.ch_s00fronte.19-fracture-vuggy": {
+  "format": "длинное видео",
+  "why": "Скачок масштаба и причина/следствие: трещины+каверны скрывают друг друга в ρ."
+ },
+ "ven.ch_s00frontf.01-fracture-vug-kpt": {
+  "format": "текст",
+  "why": "формульные ограничения без динамики"
+ },
+ "ven.ch_s00frontf.02-ex4-fracture-porosity": {
+  "format": "практикум на данных",
+  "why": "числовой разбор с рисунком 50 — пересчитать на своих данных"
+ },
+ "ven.ch_s00frontf.03-ex5-two-solutions": {
+  "format": "практикум на данных",
+  "why": "короткий расчёт по формуле (II.33)"
+ },
+ "ven.ch_s00frontf.04-sp-conditions": {
+  "format": "карточки",
+  "why": "перечень условий применимости"
+ },
+ "ven.ch_s00frontf.05-sp-procedure": {
+  "format": "длинное видео",
+  "why": "пошаговая процедура на диаграмме СП: линии глин и чистых пород, причина и следствие"
+ },
+ "ven.ch_s00frontf.06-sp-correlation-limits": {
+  "format": "интерактив",
+  "why": "выполаживание связи: контринтуитивно, невидимое становится видимым"
+ },
+ "ven.ch_s00frontf.07-sp-status": {
+  "format": "шортс",
+  "why": "контраст «широко применялось — сейчас сокращено»"
+ },
+ "ven.ch_s00frontf.08-neutron-intro": {
+  "format": "карточки",
+  "why": "номенклатура методов"
+ },
+ "ven.ch_s00frontf.09-hi-water": {
+  "format": "шортс",
+  "why": "невидимое становится видимым: водород как мера"
+ },
+ "ven.ch_s00frontf.10-hi-hydrocarbons": {
+  "format": "текст",
+  "why": "набор формул без текстового механизма"
+ },
+ "ven.ch_s00frontf.11-hi-formation": {
+  "format": "карточки",
+  "why": "формулы ВИ пласта по случаям"
+ },
+ "ven.ch_s00frontf.12-apparent-hi-corrections": {
+  "format": "карточки",
+  "why": "список поправок"
+ },
+ "ven.ch_s00frontf.13-neutron-measure-features": {
+  "format": "шортс",
+  "why": "скачок масштаба: радиус 15—20 см и неоднородности"
+ },
+ "ven.ch_s00frontf.14-neutron-pros-cons": {
+  "format": "карточки",
+  "why": "преимущества/недостатки"
+ },
+ "ven.ch_s00frontf.15-basic-paletki": {
+  "format": "интерактив",
+  "why": "чтение палетки в логарифмической шкале"
+ },
+ "ven.ch_s00frontf.16-delta-j": {
+  "format": "длинное видео",
+  "why": "двойное эталонирование: причина и следствие"
+ },
+ "ven.ch_s00frontf.17-diameter-correction": {
+  "format": "практикум на данных",
+  "why": "расчёт по формулам (II.53)–(II.55)"
+ },
+ "ven.ch_s00frontf.18-paletki-180": {
+  "format": "текст",
+  "why": "уточнение к рис. 54"
+ },
+ "ven.ch_s00frontf.19-mud-cake": {
+  "format": "интерактив",
+  "why": "чтение палетки поправки"
+ },
+ "ven.ch_s00frontf.20-salinity-correction": {
+  "format": "интерактив",
+  "why": "смена знака поправки около k*пп — контринтуитивно"
+ },
+ "ven.ch_s00frontf.21-mud-density": {
+  "format": "текст",
+  "why": "формула с коэффициентами"
+ },
+ "ven.ch_s00frontf.22-clay-correction": {
+  "format": "длинное видео",
+  "why": "два механизма: невидимое становится видимым"
+ },
+ "ven.ch_s00frontf.23-bound-water-consistency": {
+  "format": "карточки",
+  "why": "согласование определений"
+ },
+ "ven.ch_s00frontg.01-bound-water-clay-minerals": {
+  "format": "карточки",
+  "why": "Набор определений и табличных констант с формулами: удобно запоминать карточками, видеоёмкость низкая."
+ },
+ "ven.ch_s00frontg.02-clay-density-effect-fig57": {
+  "format": "интерактив",
+  "why": "Чтение номограммы по двум входам и кривым с разной минерализацией удобнее исследовать интерактивно."
+ },
+ "ven.ch_s00frontg.03-gas-saturation-correction": {
+  "format": "практикум на данных",
+  "why": "Итерация по k_г и Q_r и сложение поправок — вычислительная задача для практикума."
+ },
+ "ven.ch_s00frontg.04-skeleton-lithology-fig58": {
+  "format": "карточки",
+  "why": "Правила выбора кривой по паре «метод — порода» — справочная таблица, видеоёмкость низкая."
+ },
+ "ven.ch_s00frontg.05-thermobaric-correction-fig59": {
+  "format": "длинное видео",
+  "why": "Температура меняет плотность воды и длину диффузии — причинно-следственная цепочка и скачок до масштаба нейтрона."
+ },
+ "ven.ch_s00frontg.06-calibration-linear-relation": {
+  "format": "длинное видео",
+  "why": "Невидимая разница между приборами превращается в видимую при совмещении шкал по двум опорным точкам."
+ },
+ "ven.ch_s00frontg.07-reference-media-models-rocks": {
+  "format": "текст",
+  "why": "Перечень требований и числовых порогов; справочный материал без динамики."
+ },
+ "ven.ch_s00frontg.08-reference-media-clays-caverns-fig60": {
+  "format": "карточки",
+  "why": "Список из семи типов опорных сред и их условий — справочный материал."
+ },
+ "ven.ch_s00frontg.09-statistical-calibration": {
+  "format": "шортс",
+  "why": "Идея «нуль и единица берутся из статистики разреза» коротко объясняется одним примером."
+ },
+ "ven.ch_s00frontg.10-interpretation-order-steps-1-to-8": {
+  "format": "практикум на данных",
+  "why": "Последовательность из многих шагов с формулами удобно прогнать на данных по одной скважине."
+ },
+ "ven.ch_s00frontg.11-interpretation-order-steps-9-to-13": {
+  "format": "текст",
+  "why": "Продолжение процедурного списка; чтение справочное."
+ },
+ "ven.ch_s00frontg.12-single-reference-cased-holes": {
+  "format": "интерактив",
+  "why": "Перестройка шкалы палетки по одному опорному пласту — наглядная визуализация."
+ },
+ "ven.ch_s00frontg.13-two-probe-stationary": {
+  "format": "длинное видео",
+  "why": "Отношение двух детекторов как способ «сократить» мешающие факторы — причина и следствие, наглядно на схеме зондов."
+ },
+ "ven.ch_s00frontg.14-pulsed-neutron-porosity": {
+  "format": "практикум на данных",
+  "why": "Построение зависимостей M(w) и φ по конкретным скважинам — работа с данными."
+ },
+ "ven.ch_s00fronth.01-nk-lifetime-porosity": {
+  "format": "текст",
+  "why": "Процедурное правило с условиями применимости, визуальной динамики нет."
+ },
+ "ven.ch_s00fronth.02-ggm-basics": {
+  "format": "шортс",
+  "why": "Контринтуитивно: сигнал растёт при уменьшении плотности; удобная анимация."
+ },
+ "ven.ch_s00fronth.03-electron-density": {
+  "format": "карточки",
+  "why": "Формула и таблица значений, удобны карточки-справочник."
+ },
+ "ven.ch_s00fronth.04-ggm-porosity-formulas": {
+  "format": "текст",
+  "why": "Выводы и условия применимости, мало визуального."
+ },
+ "ven.ch_s00fronth.05-ggm-skeleton-variability": {
+  "format": "интерактив",
+  "why": "Можно показать чувствительность kп к доле минерала."
+ },
+ "ven.ch_s00fronth.06-ggm-calibration": {
+  "format": "карточки",
+  "why": "Список процедур и эталонов."
+ },
+ "ven.ch_s00fronth.07-ggm-palette-density": {
+  "format": "практикум на данных",
+  "why": "Ручная палетка с бланком — задача на практике, наложение точек."
+ },
+ "ven.ch_s00fronth.08-ggm-porosity-calc": {
+  "format": "текст",
+  "why": "Формулы и условия, мало визуальных эффектов."
+ },
+ "ven.ch_s00fronth.09-ggm-example8": {
+  "format": "текст",
+  "why": "Рабочий пример с числами автора."
+ },
+ "ven.ch_s00fronth.10-acoustic-intro": {
+  "format": "шортс",
+  "why": "ΔT=10^6/v и рост ΔT с пористостью — короткий контринтуитивный факт."
+ },
+ "ven.ch_s00fronth.11-time-average": {
+  "format": "интерактив",
+  "why": "Можно крутить kп и видеть ΔT."
+ },
+ "ven.ch_s00fronth.12-dtsk-table-caution": {
+  "format": "карточки",
+  "why": "Контринтуитивный вывод: табличная константа неприменима."
+ },
+ "ven.ch_s00fronth.13-dtzh-applicability": {
+  "format": "текст",
+  "why": "Значения и условия применимости."
+ },
+ "ven.ch_s00fronth.14-thermobaric": {
+  "format": "длинное видео",
+  "why": "Причина и следствие: глубина → давление/температура → ΔT."
+ },
+ "ven.ch_s00fronth.15-clay-correction": {
+  "format": "текст",
+  "why": "Серия формул с оговорками, малый визуальный эффект."
+ },
+ "ven.ch_s00fronth.16-dtgl-values": {
+  "format": "практикум на данных",
+  "why": "Подбор ΔTгл по таблице глубин — расчётное упражнение."
+ },
+ "ven.ch_s00fronti.01-acoustic-clay-correction": {
+  "format": "текст",
+  "why": "формульный разбор с условиями применимости, ролик не нужен"
+ },
+ "ven.ch_s00fronti.02-acoustic-saturation-and-pore-geometry": {
+  "format": "длинное видео",
+  "why": "скачок масштаба (пустоты vs длина волны) и контринтуитивность: ΔT не равен ни k_n, ни k_nмз"
+ },
+ "ven.ch_s00fronti.03-acoustic-quality-control": {
+  "format": "практикум на данных",
+  "why": "правила валидации легко проверить на реальной записи ΔT с порогами 1,5% и 3%"
+ },
+ "ven.ch_s00fronti.04-acoustic-bed-selection-ap-groups": {
+  "format": "карточки",
+  "why": "набор правил-исключений и признаков групп, без процесса во времени"
+ },
+ "ven.ch_s00fronti.05-acoustic-kp-procedure": {
+  "format": "практикум на данных",
+  "why": "регрессия ΔT против 1/ρ_эф и экстраполяция к k_n=0 хорошо делается на реальных парах кривых"
+ },
+ "ven.ch_s00fronti.06-acoustic-pros-cons": {
+  "format": "карточки",
+  "why": "короткий перечень «за/против» с оговорками"
+ },
+ "ven.ch_s00fronti.07-effective-porosity-concepts": {
+  "format": "длинное видео",
+  "why": "причина и следствие: как положение под ВНК меняет эффективную пористость"
+ },
+ "ven.ch_s00fronti.08-effective-porosity-terrigenous-dispersed": {
+  "format": "текст",
+  "why": "перечень альтернативных методов с условиями; формулы искажены OCR — ментору проверить"
+ },
+ "ven.ch_s00fronti.09-effective-porosity-layered-clay": {
+  "format": "карточки",
+  "why": "короткая последовательность шагов"
+ },
+ "ven.ch_s00fronti.10-effective-porosity-fracture-cavern": {
+  "format": "текст",
+  "why": "условия применимости формул (II.104)-(II.105) лучше читать, а не смотреть"
+ },
+ "ven.ch_s00fronti.11-saturation-basics": {
+  "format": "длинное видео",
+  "why": "невидимое становится видимым: что реально находится в порах и как делится вода"
+ },
+ "ven.ch_s00fronti.12-resistivity-saturation-parameter": {
+  "format": "интерактив",
+  "why": "меняя n (1,3…5), видно, как K_в «уезжает» при одном P_н — контринтуитивно"
+ },
+ "ven.ch_s00fronti.13-pn-kv-dependences": {
+  "format": "длинное видео",
+  "why": "видимое построение семейства кривых и огибающей (рис. 70–71)"
+ },
+ "ven.ch_s00fronti.14-productivity-criteria": {
+  "format": "интерактив",
+  "why": "пороговый классификатор «нефть/нефть+вода/вода» с ползунками P_н и K_в"
+ },
+ "ven.ch_s00fronti.15-productivity-example-bashkiria": {
+  "format": "практикум на данных",
+  "why": "расчёт порогов по двум опорным точкам и сверка с известными диапазонами"
+ },
+ "ven.ch_s00fronti.16-relative-resistance-po": {
+  "format": "длинное видео",
+  "why": "причина и следствие: исключение шага пористости сокращает цепочку и ошибки"
+ },
+ "ven.ch_s00fronti.17-salinity-and-carbonates": {
+  "format": "текст",
+  "why": "условия «когда влияет/не влияет» и несколько диапазонов n; визуальный процесс не выражен"
+ },
+ "ven.ch_s00fronti.18-fracture-cavern-resistivity": {
+  "format": "длинное видео",
+  "why": "контринтуитивно: нефть в трещинах не даёт бесконечного сопротивления; предельные случаи ориентации"
+ },
+ "ven.ch_s00frontj.01-carbonate-fracture": {
+  "format": "текст",
+  "why": "граница применимости, без динамики; нужен читаемый разбор"
+ },
+ "ven.ch_s00frontj.02-thermobaric": {
+  "format": "карточки",
+  "why": "короткие правила по типам коллекторов"
+ },
+ "ven.ch_s00frontj.03-kng-procedure": {
+  "format": "длинное видео",
+  "why": "процедура с причиной и следствием, три шага и три условия"
+ },
+ "ven.ch_s00frontj.04-invasion-errors": {
+  "format": "длинное видео",
+  "why": "невидимая зона проникновения становится видимой, четыре контринтуитивные ошибки"
+ },
+ "ven.ch_s00frontj.05-thin-beds-calibration": {
+  "format": "карточки",
+  "why": "набор условий и вывод об обязательности БЭЗ"
+ },
+ "ven.ch_s00frontj.06-pn-curve-choice": {
+  "format": "практикум на данных",
+  "why": "расчёт по шагам с выбором графика, нужны числа и номограммы"
+ },
+ "ven.ch_s00frontj.07-forecast-test": {
+  "format": "интерактив",
+  "why": "сравнение kв с порогами и исход опробования"
+ },
+ "ven.ch_s00frontj.08-oil-gas-mix": {
+  "format": "длинное видео",
+  "why": "раздельное определение kн и kг — причина и следствие по шагам"
+ },
+ "ven.ch_s00frontj.09-examples-oil-gas": {
+  "format": "практикум на данных",
+  "why": "числа автора для воспроизведения расчёта"
+ },
+ "ven.ch_s00frontj.10-layered-clay": {
+  "format": "интерактив",
+  "why": "изменение сопротивления пачки от доли глин, шунтирование"
+ },
+ "ven.ch_s00frontj.11-layered-dense": {
+  "format": "практикум на данных",
+  "why": "примеры 13 и 14 с числами; проверка арифметики"
+ },
+ "ven.ch_s00frontj.12-inm-basics": {
+  "format": "длинное видео",
+  "why": "затухание во времени, невидимое становится видимым"
+ },
+ "ven.ch_s00frontj.13-decrement-physics": {
+  "format": "текст",
+  "why": "формулы, нужен точный текст"
+ },
+ "ven.ch_s00frontj.14-decrement-fluids-tables": {
+  "format": "карточки",
+  "why": "формулы и справочные значения"
+ },
+ "ven.ch_s00frontj.15-decrement-rocks": {
+  "format": "текст",
+  "why": "формулы взвешенной суммы"
+ },
+ "ven.ch_s00frontj.16-apparent-corrections": {
+  "format": "интерактив",
+  "why": "влияние длины зонда и времени задержки на поправку"
+ },
+ "ven.ch_s00frontj.17-apparent-calibration": {
+  "format": "практикум на данных",
+  "why": "построение прямой по водоносным пластам"
+ },
+ "ven.ch_s00frontj.18-kn-by-innm": {
+  "format": "шортс",
+  "why": "контринтуитивное ограничение метода по минерализации"
+ },
+ "ven.ch_s00frontj.19-true-vs-apparent": {
+  "format": "карточки",
+  "why": "сравнение двух способов"
+ },
+ "ven.ch_s00frontj.20-clay-correction": {
+  "format": "практикум на данных",
+  "why": "построение графика поправки по пластам"
+ },
+ "ven.ch_s00frontj.21-graphic-palette": {
+  "format": "практикум на данных",
+  "why": "построение палетки по опорным пластам"
+ },
+ "ven.ch_s00frontk.01-oil-saturation-grid-apparent-porosity": {
+  "format": "интерактив",
+  "why": "Построение сетки и сдвиг точек на поправку — пошаговая графическая процедура"
+ },
+ "ven.ch_s00frontk.02-cement-salting-correction": {
+  "format": "текст",
+  "why": ""
+ },
+ "ven.ch_s00frontk.03-gas-saturation-by-pulsed-neutron": {
+  "format": "длинное видео",
+  "why": "Невидимое различие декрементов газа и воды и роль давления с минерализацией"
+ },
+ "ven.ch_s00frontk.04-gas-apparent-porosity-corrections": {
+  "format": "интерактив",
+  "why": "Сдвиг точек влево/вправо по знаку трёх поправок — вычислительная процедура"
+ },
+ "ven.ch_s00frontk.05-pulsed-and-stationary-complexing-limits": {
+  "format": "текст",
+  "why": ""
+ },
+ "ven.ch_s00frontk.06-stationary-neutron-basis": {
+  "format": "длинное видео",
+  "why": "Причина-следствие: давление → плотность газа → водородосодержание → точность"
+ },
+ "ven.ch_s00frontk.07-reference-layers-same-porosity": {
+  "format": "интерактив",
+  "why": "Графическая процедура нормировки показаний на опорный пласт"
+ },
+ "ven.ch_s00frontk.08-gas-and-clay-reference-layers": {
+  "format": "практикум на данных",
+  "why": "Палетки рис. 85 дают точное чтение по параметрам и условиям"
+ },
+ "ven.ch_s00frontk.09-clay-correction-fictitious-porosity": {
+  "format": "текст",
+  "why": ""
+ },
+ "ven.ch_s00frontk.10-hydrogen-index-method": {
+  "format": "текст",
+  "why": ""
+ },
+ "ven.ch_s00frontk.11-effective-moisture-method": {
+  "format": "интерактив",
+  "why": "Итерационный цикл: приближение → плотностной эффект → уточнение; удобно для пошагового просмотра"
+ },
+ "ven.ch_s00frontk.12-temperature-correction-gas": {
+  "format": "текст",
+  "why": ""
+ },
+ "ven.ch_s00frontk.13-implicit-porosity-clay-method": {
+  "format": "карточки",
+  "why": "Условия применимости и ограничения — набор правил для запоминания"
+ },
+ "ven.ch_s00frontk.14-implicit-method-from-core": {
+  "format": "текст",
+  "why": ""
+ },
+ "ven.ch_s00frontk.15-medvezhye-gas-palette": {
+  "format": "практикум на данных",
+  "why": "Пошаговое построение палетки и чтение по примеру рис. 89"
+ },
+ "ven.ch_s00frontk.16-example-15-gas-saturation-clean-sandstone": {
+  "format": "практикум на данных",
+  "why": "Разобранный пример с числами, можно повторить расчёт самому"
+ },
+ "ven.ch_s00frontk.17-example-16-gas-saturation-clayey-iterations": {
+  "format": "практикум на данных",
+  "why": "Длинная вычислительная цепочка, лучше как повторяемый расчёт"
+ },
+ "ven.ch_s00frontl.01-clay-params": {
+  "format": "карточки",
+  "why": "определения параметров"
+ },
+ "ven.ch_s00frontl.02-clay-types": {
+  "format": "карточки",
+  "why": "терминологическая классификация"
+ },
+ "ven.ch_s00frontl.03-why-clay": {
+  "format": "длинное видео",
+  "why": "невидимое: адсорбционная вода и физика влияния"
+ },
+ "ven.ch_s00frontl.04-lab-limits": {
+  "format": "текст",
+  "why": "критика метода"
+ },
+ "ven.ch_s00frontl.05-geo-params-scope": {
+  "format": "текст",
+  "why": "границы применимости"
+ },
+ "ven.ch_s00frontl.06-sp-dispersed": {
+  "format": "практикум на данных",
+  "why": "пошаговый расчёт по СП и пример 17"
+ },
+ "ven.ch_s00frontl.07-sp-carbonate": {
+  "format": "практикум на данных",
+  "why": "пример 18"
+ },
+ "ven.ch_s00frontl.08-sp-layered": {
+  "format": "интерактив",
+  "why": "палетка Доля, интерполяция"
+ },
+ "ven.ch_s00frontl.09-gamma-basis": {
+  "format": "длинное видео",
+  "why": "физика гамма-активности глин"
+ },
+ "ven.ch_s00frontl.10-gamma-corrections": {
+  "format": "интерактив",
+  "why": "поправки по палеткам, итерация"
+ },
+ "ven.ch_s00frontl.11-gamma-procedure": {
+  "format": "практикум на данных",
+  "why": "порядок обработки и опорные пласты"
+ },
+ "ven.ch_s00frontm.01-kompleksnost": {
+  "format": "текст",
+  "why": "базовая идея без динамики"
+ },
+ "ven.ch_s00frontm.02-evm-sistemy": {
+  "format": "текст",
+  "why": "принцип, без визуальной динамики"
+ },
+ "ven.ch_s00frontm.03-terrigen-sistema": {
+  "format": "карточки",
+  "why": "перечень компонентов и обозначений"
+ },
+ "ven.ch_s00frontm.04-karbonat-sistema": {
+  "format": "карточки",
+  "why": "перечень компонентов и допущений"
+ },
+ "ven.ch_s00frontm.05-svoystva-sistem": {
+  "format": "интерактив",
+  "why": "контринтуитивно: неизвестных больше уравнений"
+ },
+ "ven.ch_s00frontm.06-nepreryvnaya-obrabotka": {
+  "format": "длинное видео",
+  "why": "невидимое видимо: сплошные кривые по разрезу"
+ },
+ "ven.ch_s00frontm.07-sovetskie-programmy": {
+  "format": "текст",
+  "why": "историческая справка"
+ },
+ "ven.ch_s00frontm.08-petrofiz-obosnovanie": {
+  "format": "карточки",
+  "why": "типичные ошибки подбора модели"
+ },
+ "ven.ch_s00frontm.09-regressiya": {
+  "format": "шортс",
+  "why": "контринтуитивность регрессии"
+ },
+ "ven.ch_s00frontm.10-primer-21": {
+  "format": "практикум на данных",
+  "why": "разбор по диаграмме"
+ },
+ "ven.ch_s00frontm.11-primer-22": {
+  "format": "практикум на данных",
+  "why": "разбор по диаграмме"
+ },
+ "ven.ch_s00frontm.12-primer-23": {
+  "format": "практикум на данных",
+  "why": "разбор, но данные шумные"
+ },
+ "ven.ch_s00frontm.13-primer-24": {
+  "format": "практикум на данных",
+  "why": "сравнение с керном"
+ },
+ "ven.ch_s00frontm.14-obemnyj-metod": {
+  "format": "текст",
+  "why": "формулы"
+ },
+ "ven.ch_s00frontm.15-karta-soderzhaniya": {
+  "format": "длинное видео",
+  "why": "изменение во времени: от скважин к карте"
+ },
+ "ven.ch_s00frontm.16-neodnorodnye-plasty": {
+  "format": "шортс",
+  "why": "контринтуитивность завышения"
+ },
+ "ven.ch_s00frontn.01-two-groups-of-factors": {
+  "format": "текст",
+  "why": "Обзорный перечень условий и проверок; дальше идёт детализация."
+ },
+ "ven.ch_s00frontn.02-saturation-check-by-perforation": {
+  "format": "карточки",
+  "why": "Короткое правило «эталон — перфорация, но только надёжная»."
+ },
+ "ven.ch_s00frontn.03-perforation-mismatch-cases": {
+  "format": "интерактив",
+  "why": "Разветвлённое дерево решений «геофизика против перфорации» с условиями; хорошо идёт как интерактив."
+ },
+ "ven.ch_s00frontn.04-separation-efficiency": {
+  "format": "практикум на данных",
+  "why": "Можно посчитать доли ошибок и эффективность на массиве с известной характеристикой."
+ },
+ "ven.ch_s00frontn.05-saturation-assessment-procedure": {
+  "format": "карточки",
+  "why": "Короткий трёхпунктный алгоритм."
+ },
+ "ven.ch_s00frontn.06-porosity-core-check": {
+  "format": "практикум на данных",
+  "why": "Сопоставление графиков и кросс-плот с биссектрисой — естественная работа с данными."
+ },
+ "ven.ch_s00frontn.07-carbonate-secondary-porosity": {
+  "format": "длинное видео",
+  "why": "Наглядный сюжет: два одинаковых графика совпадают, затем расходятся там, где каверны; контринтуитивно, что «ошибка» становится сигналом."
+ },
+ "ven.ch_s00frontn.08-core-recovery-bias": {
+  "format": "шортс",
+  "why": "Контринтуитивный механизм: чем лучше коллектор, тем меньше его в керне; один образ, одна мысль."
+ },
+ "ven.ch_s00frontn.09-core-depth-matching": {
+  "format": "практикум на данных",
+  "why": "Сдвиг кернограммы и расчёт корреляции — прямое упражнение с данными."
+ },
+ "ven.ch_s00frontn.10-saturation-from-core": {
+  "format": "длинное видео",
+  "why": "Причина и следствие: перенос предельного насыщения на зону недонасыщения завышает запасы — наглядно на разрезе залежи."
+ },
+ "ven.ch_s00frontn.11-petrophysical-link-reliability": {
+  "format": "интерактив",
+  "why": "Можно крутить разброс и диапазон и смотреть значение критерия."
+ },
+ "ven.ch_s00frontn.12-reserves-error-propagation": {
+  "format": "карточки",
+  "why": "Короткий вывод «все параметры равнозначны по точности»."
+ },
+ "ven.ch_s00frontn.13-random-vs-systematic": {
+  "format": "длинное видео",
+  "why": "Изменение во времени: случайная часть тает с ростом n, систематическая остаётся — наглядно на графике."
+ },
+ "ven.ch_s00frontn.14-u12-assumptions": {
+  "format": "карточки",
+  "why": "Короткие условия применимости формулы."
+ },
+ "ven.ch_s00frontn.15-uniform-sampling": {
+  "format": "интерактив",
+  "why": "Слайдер «число образцов в одной скважине» показывает предел точности."
+ },
+ "ven.ch_s00frontn.16-geophysical-estimate-errors": {
+  "format": "текст",
+  "why": "Перечень источников погрешности; формулы не читаются."
+ },
+ "ven.ch_s00frontn.17-reserves-vs-production": {
+  "format": "длинное видео",
+  "why": "Причина и следствие, контринтуитивное ложное подтверждение при компенсации ошибок."
+ },
+ "ven.ch_s00frontn.18-pressure-drop-balance": {
+  "format": "карточки",
+  "why": "Короткое правило «независимая проверка, а не более точная оценка»."
+ },
+ "ven.ch_s00fronto.01-why-permeability": {
+  "format": "текст",
+  "why": "вводный контекст, без визуальной динамики"
+ },
+ "ven.ch_s00fronto.02-darcy-definition": {
+  "format": "карточки",
+  "why": "определение и формула — карточки"
+ },
+ "ven.ch_s00fronto.03-kozeny-ideal": {
+  "format": "длинное видео",
+  "why": "скачок от идеальной модели к реальной: поправки f и T"
+ },
+ "ven.ch_s00fronto.04-real-rock-kozeny": {
+  "format": "текст",
+  "why": "терминологический нюанс, достаточно текста"
+ },
+ "ven.ch_s00fronto.05-kozeny-karman-sands": {
+  "format": "карточки",
+  "why": "цепочка формул и подстановок — карточки"
+ },
+ "ven.ch_s00fronto.06-pn-theory": {
+  "format": "длинное видео",
+  "why": "причина и следствие: от (VI.9) к P_п, показывается как вывод"
+ },
+ "ven.ch_s00fronto.07-clay-collectors": {
+  "format": "карточки",
+  "why": "выбор метода по классу коллектора — карточки"
+ },
+ "ven.ch_s00fronto.08-nmr-vp-carbonates": {
+  "format": "текст",
+  "why": "обзор непромышленных методов — текст"
+ },
+ "ven.ch_s00fronto.09-phase-permeability": {
+  "format": "карточки",
+  "why": "определения и формулы — карточки"
+ },
+ "ven.ch_s00fronto.10-resistivity-empirical": {
+  "format": "практикум на данных",
+  "why": "подбор a, b на графике в двойном логарифмическом масштабе"
+ },
+ "ven.ch_s00fronto.11-complex-formulas": {
+  "format": "карточки",
+  "why": "сравнение формул — карточки"
+ },
+ "ven.ch_s00fronto.12-example-25": {
+  "format": "практикум на данных",
+  "why": "расчёт по шагам с числами автора на данных"
+ },
+ "ven.ch_s00fronto.13-class-method": {
+  "format": "текст",
+  "why": "описание методики по шагам — текст"
+ },
+ "ven.ch_s00fronto.14-resistivity-limits": {
+  "format": "шортс",
+  "why": "контринтуитивно: связь от другого объекта даёт систематическую ошибку"
+ },
+ "ven.ch_s00fronto.15-sp-clay-model": {
+  "format": "длинное видео",
+  "why": "невидимое становится видимым: глинистый слой в поровом канале"
+ },
+ "ven.ch_s00fronto.16-sp-correlation": {
+  "format": "практикум на данных",
+  "why": "корреляция с данными по таблице 15"
+ },
+ "ven.ch_s00fronto.17-sp-calibration": {
+  "format": "интерактив",
+  "why": "выбор способа калибровки как интерактивное дерево решений"
+ },
+ "ven.ch_s00fronto.18-sp-applicability": {
+  "format": "шортс",
+  "why": "контринтуитивная погрешность 20–100%"
+ },
+ "ven.ch_s00frontp.01-gm-permeability": {
+  "format": "текст",
+  "why": "Условия применимости и перечень ограничений: лучше читать, чем смотреть."
+ },
+ "ven.ch_s00frontp.02-sp-gm-complex": {
+  "format": "интерактив",
+  "why": "Вид зависимости и разброс 50% лучше показать на кросс-плоте Рис. 115 с ползунком параметра."
+ },
+ "ven.ch_s00frontp.03-opk-kii": {
+  "format": "длинное видео",
+  "why": "Причина→следствие: кривая притока/восстановления давления → проницаемость; сравнение интегрального и дифференциального результата."
+ },
+ "ven.ch_s00frontp.04-productivity": {
+  "format": "текст",
+  "why": "Определения и формулы VI.36-37; рис. 116 дан по подписи, панели из figure_desc не проверены."
+ },
+ "ven.ch_s00frontp.05-dev-design-maps": {
+  "format": "длинное видео",
+  "why": "Причина-следствие: без начального состояния нельзя сравнить текущее."
+ },
+ "ven.ch_s00frontp.06-perm-class-map": {
+  "format": "интерактив",
+  "why": "Карта: невидимое (неоднородность) становится видимым; можно переключать классы."
+ },
+ "ven.ch_s00frontp.07-oil-recovery": {
+  "format": "длинное видео",
+  "why": "Формула VI.38: из двух измерений Kнг и Kнго получается βn; хорошо для разбора шагов."
+ },
+ "ven.ch_s00frontp.08-geophys-dev-stage": {
+  "format": "карточки",
+  "why": "Перечень задач — удобно карточками."
+ },
+ "ven.ch_s00frontp.09-ch7-tasks": {
+  "format": "карточки",
+  "why": "Список из шести задач."
+ },
+ "ven.ch_s00frontp.10-sp-fresh-water": {
+  "format": "интерактив",
+  "why": "Форма кривой СП зависит от соотношения сопротивлений; параметрическая игра."
+ },
+ "ven.ch_s00frontp.11-electrical-limits": {
+  "format": "шортс",
+  "why": "Контринтуитивно: после обсадки электрика слепнет, остаются нейтроны."
+ },
+ "ven.ch_s00frontp.12-nm-woc-chlorine": {
+  "format": "длинное видео",
+  "why": "Скачок: два сигнала реагируют на хлор и водород по-разному; контакт движется во времени (1962→1964)."
+ },
+ "ven.ch_s00frontp.13-nm-normalize": {
+  "format": "практикум на данных",
+  "why": "Метод требует расчёта σ и полосы на двух кривых."
+ },
+ "ven.ch_s00frontp.14-innm-pulsed": {
+  "format": "интерактив",
+  "why": "Пересечение распределений и порог — наглядно на интерактивных гистограммах."
+ },
+ "ven.ch_s00frontp.15-inm-porosity": {
+  "format": "текст",
+  "why": "Формула и процедуры."
+ },
+ "ven.ch_s00frontp.16-innm-kv": {
+  "format": "длинное видео",
+  "why": "Невидимое (компенсация пористости) становится видимым на двух кривых."
+ },
+ "ven.ch_s00frontp.17-innm-false": {
+  "format": "карточки",
+  "why": "Три фактора — карточки «фактор → эффект»."
+ },
+ "ven.ch_s00frontp.18-innm-kv-example": {
+  "format": "практикум на данных",
+  "why": "Рис. 121 — реальный пример."
+ },
+ "ven.ch_s00frontp.19-fresh-limit": {
+  "format": "шортс",
+  "why": "Контринтуитивно: фронт осолоняется, сначала «соль», потом «пресная»."
+ },
+ "ven.ch_s00frontp.20-tracer": {
+  "format": "длинное видео",
+  "why": "Причина-следствие: фазовые проницаемости → поглощение метки."
+ },
+ "ven.ch_s00frontp.21-degassing": {
+  "format": "шортс",
+  "why": "Изменение во времени: газ выделяется, показания растут."
+ },
+ "ven.ch_s00frontq.01-saline-mud-reformation": {
+  "format": "карточки",
+  "why": "механизм сравнения до/после; мало визуального"
+ },
+ "ven.ch_s00frontq.02-radioactive-bullets": {
+  "format": "карточки",
+  "why": "короткий приём с одним признаком"
+ },
+ "ven.ch_s00frontq.03-radiochemical-effect": {
+  "format": "длинное видео",
+  "why": "невидимое становится видимым: радий во фронте воды и на цементе"
+ },
+ "ven.ch_s00frontq.04-acoustic-dielectric": {
+  "format": "текст",
+  "why": "набор условий и порогов частот"
+ },
+ "ven.ch_s00frontq.05-neutron-inelastic-throttle": {
+  "format": "карточки",
+  "why": "два способа с числами и ограничениями"
+ },
+ "ven.ch_s00frontq.06-gas-contacts-neutron": {
+  "format": "шортс",
+  "why": "контринтуитивно: газ повышает показания, но плотные породы тоже"
+ },
+ "ven.ch_s00frontq.07-dense-vs-gas-two-probes": {
+  "format": "интерактив",
+  "why": "сравнение двух зондов и двух замеров при подборе масштаба"
+ },
+ "ven.ch_s00frontq.08-gas-contacts-pressure-limits": {
+  "format": "интерактив",
+  "why": "влияние давления на плотность газа и аномалию"
+ },
+ "ven.ch_s00frontq.09-other-methods-quantification": {
+  "format": "текст",
+  "why": "перечень без нового механизма"
+ },
+ "ven.ch_s00frontq.10-observation-wells-conditions": {
+  "format": "карточки",
+  "why": "условия и время ожидания"
+ },
+ "ven.ch_s00frontq.11-example-fig124-killed-vs-working": {
+  "format": "практикум на данных",
+  "why": "сравнение двух диаграмм НГМ по глубине"
+ },
+ "ven.ch_s00frontq.12-inflow-profile": {
+  "format": "текст",
+  "why": "определения и цели"
+ },
+ "ven.ch_s00frontq.13-integral-differential-debitogram": {
+  "format": "интерактив",
+  "why": "интегральная ↔ дифференциальная кривая, cumsum/diff"
+ },
+ "ven.ch_s00frontq.14-example-gazli-flowmeter": {
+  "format": "практикум на данных",
+  "why": "чтение дебитограмм при разных режимах"
+ },
+ "ven.ch_s00frontq.15-thermo-debitometer": {
+  "format": "текст",
+  "why": "ограничения и градуировка"
+ },
+ "ven.ch_s00frontq.16-thermo-forms-table16": {
+  "format": "интерактив",
+  "why": "определение группы по соотношениям ΔT"
+ },
+ "ven.ch_s00frontq.17-indicator-methods": {
+  "format": "шортс",
+  "why": "метка в потоке: изменение во времени"
+ },
+ "ven.ch_s00frontq.18-gas-thermometry-joule-thomson": {
+  "format": "длинное видео",
+  "why": "причина и следствие: расширение газа → охлаждение"
+ },
+ "ven.ch_s00frontq.19-gas-thermogram-flow-rates": {
+  "format": "практикум на данных",
+  "why": "система уравнений по температурам и дебитам"
+ },
+ "ven.ch_s00frontq.20-injection-well-thermometry": {
+  "format": "длинное видео",
+  "why": "изменение температуры во времени после остановки"
+ },
+ "ven.ch_s00frontr.01-fluid-composition-wells": {
+  "format": "текст",
+  "why": "Один физический принцип (емкость конденсатора от диэлектрической проницаемости) и перечень искажений: достаточно структурированного текста/карточек."
+ },
+ "ven.ch_s00frontr.02-oxygen-and-density": {
+  "format": "карточки",
+  "why": "Два коротких независимых принципа измерения, сравнение приборов."
+ },
+ "ven.ch_s00frontr.03-fig129-structure": {
+  "format": "интерактив",
+  "why": "Рисунок с шестью дорожками: интерактив «наведи на кривую — получи подпись и шкалу»."
+ },
+ "ven.ch_s00frontr.04-fig129-reading": {
+  "format": "длинное видео",
+  "why": "Сопоставление шести дорожек по глубине с пошаговой подсветкой: невидимое (состав в стволе) становится видимым, причина–следствие."
+ },
+ "ven.ch_s00frontr.05-rate-water-balance": {
+  "format": "интерактив",
+  "why": "Формулы с входными числами: слайдеры Q1, Q2, B1, B2 показывают, как ошибки входов раздувают Q_в; числа вводит студент, не книга."
+ },
+ "ven.ch_s00frontr.06-report-geophysics-i-iii": {
+  "format": "текст",
+  "why": "Нормативный перечень требований без динамики и без чисел — текст/чек-лист."
+ },
+ "ven.ch_s00frontr.07-methods-table": {
+  "format": "карточки",
+  "why": "Справочная матрица «условие → метод»: карточки/таблица-фильтр, динамики нет."
+ },
+ "ven.ch_s00frontr.08-report-parameters-iv": {
+  "format": "текст",
+  "why": "Нормативный перечень без динамики; чек-лист."
+ },
+ "ven.ch_s00frontr.09-report-appendices-v": {
+  "format": "текст",
+  "why": "Нормативный перечень приложений и масштабов, чек-лист."
+ },
+ "ven.ch_s00frontr.10-fig130": {
+  "format": "текст",
+  "why": "Статичный пример планшета без пошагового разбора автором; достаточно рисунка с подписью."
+ }
+}
