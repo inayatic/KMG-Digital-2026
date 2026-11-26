@@ -403,7 +403,7 @@
   "wer_tts_vs_text": 0.0769,
   "loudness_lufs": -16.1,
   "true_peak_dbfs": -1.4,
-  "wer_final_track": 0.0629,
+  "wer_final_track": 0.049,
   "sync_max_s": 0.167,
   "checks_pass": {
    "loudness_-16±1": true,

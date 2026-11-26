@@ -146,10 +146,10 @@ const VIEWS = {
     textBlock(p.right_title, st.x + bw + 170, by + 20, bw - 40, 38, col.muted, { weight: 'normal' }); textBlock(p.right, st.x + bw + 170, by + 90, bw - 40, 54, col.text); ctx.globalAlpha = 1;
   },
   xy_plot(st, p, u) {
-    const col = C(), ax = st.x + 110, ay = st.y + st.h - 90, aw = st.w - 160, ah = st.h - 160, xs = p.xmax ?? 3.5, ys = p.ymax ?? 3.5;
+    const col = C(), ax = st.x + 110, ay = st.y + st.h - 90, aw = st.w - 160, ah = st.h - 230, xs = p.xmax ?? 3.5, ys = p.ymax ?? 3.5;
     ctx.strokeStyle = col.muted; ctx.lineWidth = 4; ctx.beginPath(); ctx.moveTo(ax, ay - ah); ctx.lineTo(ax, ay); ctx.lineTo(ax + aw, ay); ctx.stroke();
-    ctx.fillStyle = col.muted; ctx.font = `38px ${FONT}`; ctx.textAlign = 'center'; ctx.textBaseline = 'top'; ctx.fillText(p.xlabel || '', ax + aw / 2, ay + 24);
-    ctx.save(); ctx.translate(ax - 70, ay - ah / 2); ctx.rotate(-Math.PI / 2); ctx.fillText(p.ylabel || '', 0, 0); ctx.restore();
+    ctx.fillStyle = col.muted; ctx.font = `38px ${FONT}`; ctx.textAlign = 'center'; ctx.textBaseline = 'top'; ctx.fillText(p.xlabel || '', ax + aw / 2, ay + 52);
+    ctx.save(); ctx.translate(ax - 100, ay - ah / 2); ctx.rotate(-Math.PI / 2); ctx.fillText(p.ylabel || '', 0, 0); ctx.restore();
     if (p.ticks !== false) { ctx.fillStyle = col.muted; ctx.font = `34px ${FONT}`; for (let v = 0; v <= Math.floor(Math.min(xs, ys)); v++) { ctx.textAlign = 'center'; ctx.textBaseline = 'top'; ctx.fillText(String(v), ax + v / xs * aw, ay + 6); ctx.strokeStyle = col.muted; ctx.lineWidth = 3; ctx.beginPath(); ctx.moveTo(ax + v / xs * aw, ay); ctx.lineTo(ax + v / xs * aw, ay - 12); ctx.stroke(); if (v > 0) { ctx.textAlign = 'right'; ctx.textBaseline = 'middle'; ctx.fillText(String(v), ax - 10, ay - v / ys * ah); } } }
     const pts = (p.points === 'model_R' ? MODEL.rho_w.map((r, i) => [r, MODEL.R_rel[i]]) : p.points) || [];
     const X = x => ax + x / xs * aw, Y = y => ay - y / ys * ah;
@@ -234,14 +234,18 @@ const VIEWS = {
     ctx.textBaseline = 'top'; textBlock(p.label_flood || 'паводок: осадок оседает из суспензии', st.x + 10, st.y + 10, st.w - 20, 38, col.text, { weight: 'bold' });
     textBlock('разрез поймы', st.x + 10, st.y + st.h - 50, 400, 34, col.muted, { weight: 'normal' });
   },
-  conclusion(st, p, u) {
-    const col = C(), a = smooth(u / 0.5), b = smooth((u - 0.4) / 0.5), cy = st.y + 20;
-    ctx.globalAlpha = a; rrect(st.x, cy, st.w, 110, 18, col.panel, col.measurement, 4); textBlock(p.from, st.x + 20, cy + 26, st.w - 40, 52, col.text, { align: 'center' }); ctx.globalAlpha = 1;
-    ctx.globalAlpha = b; arrow(st.x + st.w / 2, cy + 120, st.x + st.w / 2, cy + 190, col.text, 10, 36);
-    rrect(st.x, cy + 200, st.w, 110, 18, col.panel, col.provenance['схема'], 4); textBlock(p.to, st.x + 20, cy + 226, st.w - 40, 52, col.text, { align: 'center' });
-    if (p.not) textBlock('не ' + p.not, st.x, cy + 330, st.w, 52, '#e57373', { align: 'center' });
+  conclusion(st, p, u) { // цепочка «из → в», «не X», плашка условия; высота блоков по тексту
+    const col = C(), a = smooth(u / 0.5), b = smooth((u - 0.4) / 0.5), px = st.w < 1000 ? 48 : (st.h < 600 ? 44 : 52), pad = 16, W2 = st.w - 40;
+    const bh = s => wrap(s, W2, `bold ${px}px ${FONT}`).length * px * 1.18 + 2 * pad, gap = st.h < 600 ? 10 : 22, ar = st.h < 600 ? 40 : 70;
+    const h1 = bh(p.from), h2 = bh(p.to), hn = p.not ? wrap('не ' + p.not, W2, `bold ${px}px ${FONT}`).length * px * 1.18 : 0;
+    let y = st.y + 6;
+    ctx.globalAlpha = a; rrect(st.x, y, st.w, h1, 18, col.panel, col.measurement, 4); textBlock(p.from, st.x + 20, y + pad, W2, px, col.text, { align: 'center' }); ctx.globalAlpha = 1; y += h1 + gap;
+    ctx.globalAlpha = b; arrow(st.x + st.w / 2, y, st.x + st.w / 2, y + ar, col.text, 10, 32); y += ar + gap;
+    rrect(st.x, y, st.w, h2, 18, col.panel, col.provenance['схема'], 4); textBlock(p.to, st.x + 20, y + pad, W2, px, col.text, { align: 'center' }); y += h2 + gap;
+    if (p.not) { textBlock('не ' + p.not, st.x, y, st.w, px, '#e57373', { align: 'center' }); y += hn + gap; }
     ctx.globalAlpha = 1;
-    if (p.condition) { const c = smooth((u - 0.2) / 0.4); ctx.globalAlpha = c; rrect(st.x, cy + 410, st.w, 190, 18, '#1A2129', col.measurement, 4); const h = textBlock(p.condition, st.x + 20, cy + 428, st.w - 40, 46, col.measurement, { align: 'center' }); if (p.condition_note) textBlock(p.condition_note, st.x + 20, cy + 428 + h + 10, st.w - 40, 36, col.muted, { align: 'center', weight: 'normal' }); ctx.globalAlpha = 1; }
+    if (p.condition) { const c = smooth((u - 0.2) / 0.4), cp = Math.round(px * 0.9), hc = bh(p.condition) + (p.condition_note ? 44 : 0); ctx.globalAlpha = c; rrect(st.x, y, st.w, hc, 18, '#1A2129', col.measurement, 4);
+      const hh = textBlock(p.condition, st.x + 20, y + pad, W2, cp, col.measurement, { align: 'center' }); if (p.condition_note) textBlock(p.condition_note, st.x + 20, y + pad + hh + 6, W2, 34, col.muted, { align: 'center', weight: 'normal' }); ctx.globalAlpha = 1; }
   },
   title_card(st, p, u) {
     const a = smooth(u / 0.5); ctx.globalAlpha = a; const h = textBlock(p.text, st.x + 20, st.y + st.h * 0.3, st.w - 40, p.px || 72, C().text, { align: 'center' });
