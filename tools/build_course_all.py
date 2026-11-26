@@ -15,7 +15,10 @@ def main(ch):
     nodes = json.load(open(B / "nodes.json")); units = json.load(open(B / "units.json"))
     secs = [s for s in json.load(open(B / "sections.json")) if not re.match(r"s00|s99", s["key"])]
     base = json.load(open(ROOT / f"tools/course_config/{ch}.json")) if (ROOT / f"tools/course_config/{ch}.json").exists() else {}
-    book = base.get("book") or {"author_unit": units[0]["id"], "title_unit": units[1]["id"]}
+    book = base.get("book")
+    if not book:  # титульных страниц нет (выдержка главы): автор пуст, заголовок — первый заголовок; иначе первая и вторая единицы как раньше
+        h = next((u for u in units if u["type"] == "heading"), units[0])
+        book = {"author_unit": units[0]["id"], "title_unit": units[1]["id"]} if units[0]["type"] == "heading" and units[1]["type"] in ("heading", "paragraph") and len(units[0]["text"]) < 60 else {"author_unit": None, "title_unit": h["id"]}
     out = ROOT / "out" / ch; out.mkdir(parents=True, exist_ok=True)
     rows, warn_total, missing, dropped, rejected = [], 0, [], 0, 0
     for s in secs:

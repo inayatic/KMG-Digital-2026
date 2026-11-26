@@ -391,7 +391,7 @@ class Build:
 
     def render(s):
         s.register(); cfg = s.cfg
-        A = s.U[cfg["book"]["author_unit"]]["text"]; T = re.sub(r"(?<=\w)-\s?(?=\w)", "", s.U[cfg["book"]["title_unit"]]["text"].lstrip("# ")).lower().capitalize()
+        A = s.U[cfg["book"]["author_unit"]]["text"] if cfg["book"].get("author_unit") else ""; T = re.sub(r"(?<=\w)-\s?(?=\w)", "", s.U[cfg["book"]["title_unit"]]["text"].lstrip("# ")).lower().capitalize()
         order = sorted(s.nodes, key=lambda n: n.get("order", {}).get("rank", 0))
         steps = []
         ds = cfg.get("data_step")
@@ -411,6 +411,7 @@ class Build:
                 short, toc, body = s.step(n, i); sid = n["id"]
                 words = len(re.sub(r"<[^>]+>", " ", body).split()); part = part_of.get(sid, "")
                 sec = n.get("section", "")
+                if sec == part: sec = ""  # раздел уже назван частью: не дублировать в хлебных крошках
                 di = n.get("data_implication", {})
                 cards += f'<article class="card" data-id="{esc(sid)}" hidden><h3>{esc(short)}</h3><div class="back" hidden>{"".join("<p>"+s.cl(f"{sid}#{c['id']}", c["text"])+"</p>" for c in sorted(n["claims"], key=lambda c: c["kind"] != "вывод")[:2])}</div></article>'
                 summary += (f'<section class="sumstep"><h3>{i}. {esc(short)} <span class="meta">{esc(sid)}</span></h3>'
@@ -422,8 +423,8 @@ class Build:
                 words = len(re.sub(r"<[^>]+>", " ", body).split())
             minutes = max(1, math.ceil(words / 140)) + ntasks.get(sid, 0)
             meta.append({"id": sid, "short": short, "part": part, "min": minutes, "num": i, "kind": kind})
-            pages += (f'<article class="view step" id="v-{esc(sid)}" data-step="{esc(sid)}" hidden><p class="crumb">{esc(part)} · шаг {i} из {len(steps)} · {esc(A)}{(", " + esc(sec or cfg["book"].get("section_label", ""))) if (sec or cfg["book"].get("section_label")) else ""} · <code class="idc">{esc(sid)}</code></p>'
-                      f'<h2 tabindex="-1">{esc(short)}</h2><p class="meta">{esc(A)}, «{esc(T)}»{(", " + esc(cfg["book"]["year"])) if cfg["book"].get("year") else ""} · ≈{minutes} мин (оценка)</p>'
+            pages += (f'<article class="view step" id="v-{esc(sid)}" data-step="{esc(sid)}" hidden><p class="crumb">{esc(part)} · шаг {i} из {len(steps)} · {esc(A) if A else ""}{((", " if A else "") + esc(sec or cfg["book"].get("section_label", ""))) if (sec or cfg["book"].get("section_label")) else ""}{" · " if (A or sec or cfg["book"].get("section_label")) else ""}<code class="idc">{esc(sid)}</code></p>'
+                      f'<h2 tabindex="-1">{esc(short)}</h2><p class="meta">{(esc(A) + ", ") if A else ""}«{esc(T)}»{(", " + esc(cfg["book"]["year"])) if cfg["book"].get("year") else ""} · ≈{minutes} мин (оценка)</p>'
                       f'<p class="legend" aria-label="Легенда">Нажмите на предложение, чтобы увидеть источник (стр. = номер страницы PDF-скана книги; незнакомый термин: <a href="#/glossary">Словарь</a>): <span class="lg ca">автор</span> <span class="lg cm">модель</span> <span class="lg ch">гипотеза</span> <sup class="vk">✓</sup> проверено.</p>'
                       f'<nav class="toc" aria-label="Оглавление страницы"><b>На странице</b><ul>{toc}</ul></nav>{body}'
                       f'<div class="pn"><button data-prev>← Назад</button><button data-done>Отметить пройденным</button><button data-next>Дальше →</button></div></article>')
